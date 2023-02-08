@@ -12,7 +12,7 @@
 1. What are the possible time durations of bouts.  
     1. 5-6-7-8 minutes  
 1. What is the point limit in bouts?
-    1. 5, 7
+    1. 5, 15
 1. How can the final score of a bout be 4:4, and how is it represented in the pool sheet?
     1. Drawing lots decides after an extra minute without scoring any hits. VN-DN
     1. Forfeiting one bout in pools Vn-DN VN-DN VN-Dn for the fencer who did not forfeit
