@@ -70,12 +70,12 @@
 
 1.  A – teljes vagy nem teljes – egyenes kieséses táblát a rangsor és az adott versenyszám vonatkozó szabályai szerint (lásd 2.-es ábra) kell létrehozni.
 
-2.  A verseny szervezői közzéteszik az egyenes kieséses mérkőzések tervezetét. Az egyenes kieséses mérkőzéseket 7 pont eléréséig, vagy az 1 perces szünettel elválasztott 2 * 3 perc vívóidő leteltéig vívják, 
+2.  A verseny szervezői közzéteszik az egyenes kieséses mérkőzések tervezetét. Az egyenes kieséses mérkőzéseket 15 pont eléréséig, vagy az 1 perces szünettel elválasztott 2 * 3 perc vívóidő leteltéig vívják, 
 
 3.  Az egyperces szünet alatt egy, a mérkőzés előtt kijelölt segéd vagy edző hozzáférhet a versenyzőhöz.
 
 4.  A mérkőzés akkor ér véget, ha
-    1. Az egyik versenyző elér 7 (hét) pontot; vagy
+    1. Az egyik versenyző elér 15 (tizenöt) pontot; vagy
     2. a 2×3 perc tényleges vívó idő letelik.
 5.  Az a versenyző lesz a nyertes, aki több pontot szerzett.
 
