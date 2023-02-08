@@ -74,7 +74,7 @@ videó felülvizsgálatot. A videó felülvizsgálat technikai feltételeit az e
 
 ## Egyéni egyenes kieséses mérkőzések
 
-1. Az egyéni egyenes kieséses mérkőzések ténylegesen vívással töltött 2 * 3 percig tartanak az első 3 perc után 1 perc pihenőidővel, vagy ameddig az egyik vívó el nem éri a 7 pontot.
+1. Az egyéni egyenes kieséses mérkőzések ténylegesen vívással töltött 2 * 3 percig tartanak az első 3 perc után 1 perc pihenőidővel, vagy ameddig az egyik vívó el nem éri a 15 pontot.
 
 2. Ha egy vívó az egyenes kiesés alatt lép vissza, az ellenfelet nyilvánítják győztesnek, de a visszalépő versenyző nem veszíti el a rangsorban szerzett helyét.
 
