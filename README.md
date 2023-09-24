@@ -23,7 +23,7 @@
 
 - [Szojegyzék](fuggelek/01-szojegyzek.md)
 - [Az egyezményes elsőbbségi szabályok magyarázata](fuggelek/02-elsobbseg.md)
-- [Szabálytalanságok és büntetések táblázatai](fuggelek/Vetsegek_tablazata.pdf)
+- [Szabálytalanságok és büntetések táblázatai](fuggelek/Buntetesek_tablazata.pdf)
 - [Bírói jelzések 1.](fuggelek/referee_signals_1.png)
 - [Bírói jelzések 2.](fuggelek/referee_signals_2.png)
 
