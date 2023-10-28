@@ -86,9 +86,11 @@
 1. What are the ways of scoring with grappling or wrestling actions?
 1. One of the fencers drops the weapon accidentally, while a simple attack of the opponent is already on the way. The hit arrives after the fencer drops the weapon. What is the call?
 1. One of the fencers drops the weapon accidentally, and the opponent, taking advantage of this, attacks the unarmed fencer. What is the call?
-1. One of the fencers drops the weapon accidentally, and no valid hits are made. The hit arrives after the fencer drops the weapon. What is the call?
-1. One of the fencers loses his balance and falls. What happens?
-1. One of the fencers is disarmed due to the opponent’s actions. The unarmed fencer does not engage in grappling immediately. How should the referee evaluate the action afterwards?
+1. One of the fencers drops the weapon accidentally, and no hits are made. What should the referee do?
+1. One of the fencers loses his balance and falls. What should the ref do?
+1. One of the fencers loses his balance and falls while the opponent's attack is already on the way. The opponent didn't intentionally cause the fall. What should the ref do?
+1. In a bout where both fencers agreed to grappling, one of the fencers is disarmed due to the opponent’s actions. The unarmed fencer does not engage in grappling immediately. How should the referee evaluate the action afterwards?
+1. One of the fencers intentionally disarms the opponent. What are the possible judgments the referee might make, depending on circumstances?
 1. One of the fencers is disarmed due to the opponent’s actions. The unarmed fencer commences grappling and controls the opponent’s blade, just as he is losing the weapon.. How should the referee evaluate the action afterwards?
 1. Two fencers engage in close quarter combat, they come close and their guards touch, then they disengage and hit each other at the same time. What is the call?
 1. The fencers come to close quarter combat, and after a while, they both fall to the ground. How long should the referee let the actions go on before halting the assault?
