@@ -120,6 +120,7 @@
 
 
 1. Ebben az első csoportban az első vétség SÁRGA LAP (figyelmeztetés)  büntetést von maga után. Ha ugyanazon a mérkőzésen a vívó ismételten elköveti ugyanazt vagy más, ebben a csoportban lévő szabálysértést, a Bíró minden alkalommal PIROS LAP-tal (büntető találat) bünteti. Ha a vétkes vívót az adott mérkőzésen már büntették PIROS LAPPAL a Második vagy Harmadik Csoportban felsorolt szabálysértés miatt, akkor az első csoportba tartozó első szabálysértéséért is további PIROS LAPOT kap.
+2. Csapatmérkőzéseken belül az első csoportba tartozó vétségek számítása az egyes meccsek kezdetével újraindul (minden egyes fordulóban az első vétségért SÁRGA LAP jár), kivéve a táblázatban megjelölt, egész csapatra vonatkozó figyemeztetések, amelyek után a mérkőzés hátralevő részében bármely, az első csoportba tartozó vétség elkövetése PIROS LAPpal büntetendő.
 
 ### A vétségek második csoportja
 
