@@ -27,6 +27,7 @@
 1. What should the referee do, when she hears the timekeeper announcing that the time has run out?
 1. What should the assistant do, when she hears the timekeeper announcing that the time has run out?
 1. The fencers have engaged in some action involving one or more hits that the referee feels he can not clearly evaluate. What should the referee do in this case, what kind of result should the referee suggest, and where should the fencers start the next assault?
+1. What are the referee's tasks before starting a pool?
 1. What is the referee’s task after his pool has been finished?
 1. What is the procedure, when at the equipment check by the referee, one of the fencers appears with a piece of equipment that does not conform to the rules?
 1. What should the assistant do, when she sees a valid hit clearly, but the referee does not halt the bout?
