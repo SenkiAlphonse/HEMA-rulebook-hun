@@ -78,142 +78,142 @@ point for opponent as well.
     1. Halt the assault. Consult the assistant. Admit he missed the action. Apologize. If assistant saw the action, propose a judgment. If not, the fencers may call a hit. If the fencers are clear on the call, make a call accordingly. Otherwise assign no point and recommence at On Guard line.
 1. What are the referee's tasks before starting a pool?
     1. call the fencers, make sure everyone is present on time
-    3. check equipment
-    4. apply penalties if necessary
-    5. brief the fencers if necessary (with regard that many competitors aren't familiar with the environment)
-    6. ask whether the competitors wish to allow grappling/wrestling in their bouts (this can be done before each bout if not everyone opts out completely)
-3. What is the referee’s task after his pool has been finished?
+    1. check equipment
+    1. apply penalties if necessary
+    1. brief the fencers if necessary (with regard that many competitors aren't familiar with the environment)
+    1. ask whether the competitors wish to allow grappling/wrestling in their bouts (this can be done before each bout if not everyone opts out completely)
+1. What is the referee’s task after his pool has been finished?
     1. Make sure every result is recorded, have the fencers sign their own records, forward the sheet to the org desk. Go drink coffee.
-4. What is the procedure, when at the equipment check by the referee, one of the fencers appears with equipment that does not conform to the rules?
+1. What is the procedure, when at the equipment check by the referee, one of the fencers appears with equipment that does not conform to the rules?
     1. Yellow card. Allow reasonable time to replace the equipment. If not, then remove fencer from competition. (Can consult the organising committee first)
-5. What should the assistant do, when she sees a valid hit clearly, but the referee does not halt the bout?
+1. What should the assistant do, when she sees a valid hit clearly, but the referee does not halt the bout?
     1. Signal with hand raised, and explain after the referee calls halt, even if more actions happened before Halt was given.
-6. In a longsword bout, one of the fencers starts a simple cut to the opponent's head. The opponent immediately thrusts at the opponent’s hand that is already accelerating toward him, and hits just before the cut to the head hits him (less than a period of fencing time passes between the two hits). What kind of points should be assigned?
+1. In a longsword bout, one of the fencers starts a simple cut to the opponent's head. The opponent immediately thrusts at the opponent’s hand that is already accelerating toward him, and hits just before the cut to the head hits him (less than a period of fencing time passes between the two hits). What kind of points should be assigned?
     1. Point for the attacker based on Vor.
-7. In a longsword bout, one of the fencers starts a simple cut to the opponent's head. The opponent retreats from the lunging opponent, while starting his own cut. Both cuts hit, with little difference. What kind of points should be assigned?
+1. In a longsword bout, one of the fencers starts a simple cut to the opponent's head. The opponent retreats from the lunging opponent, while starting his own cut. Both cuts hit, with little difference. What kind of points should be assigned?
     1. Point for the attacker based on Vor
-8. In a longsword bout, fencer 'A' performs a step-and-lunge continuously, and hits his opponent with a regular simple attack. The fencer 'B' sees the approaching opponent, and starts a lunge at the same time as 'A' lunges. Both hit. What is the call?
-    9. Point for the attack with step-lunge
-8. In a longsword bout, fencer 'A' and fencer 'B' perform attacks with step-and-lunge simultaneously without significant difference. Both hit. What is the call?
-    9. Simultaneous hit, point for both.
-8. In a longsword bout, fencer 'A' and fencer 'B' perform attacks with step-and-lunge simultaneously. 'A' is still looking for the right opening, and only extends their arm in the last moment, while B goes straight for a simple attack. Both hit. What is the call?
-    9. Attack on preparation, point for B.
-8. In a longsword bout, fencer 'A' starts an attack with step-and-lunge, but on seeing the opponent 'B's movement, get cautious in the midst of its execution, causing them to break the movement, lift their weapon back, and continue attacking afterward. The fencer 'B' retreats, stops to provoke 'A's attack and threaten with counter action, and when 'B' sees 'A' faltering, 'B' starts his own attack with a lunge. Both hit. What is the call?
+1. In a longsword bout, fencer 'A' performs a step-and-lunge continuously, and hits his opponent with a regular simple attack. The fencer 'B' sees the approaching opponent, and starts a lunge at the same time as 'A' lunges. Both hit. What is the call?
+    1. Point for the attack with step-lunge
+1. In a longsword bout, fencer 'A' and fencer 'B' perform attacks with step-and-lunge simultaneously without significant difference. Both hit. What is the call?
+    1. Simultaneous hit, point for both.
+1. In a longsword bout, fencer 'A' and fencer 'B' perform attacks with step-and-lunge simultaneously. 'A' is still looking for the right opening, and only extends their arm in the last moment, while B goes straight for a simple attack. Both hit. What is the call?
+    1. Attack on preparation, point for B.
+1. In a longsword bout, fencer 'A' starts an attack with step-and-lunge, but on seeing the opponent 'B's movement, get cautious in the midst of its execution, causing them to break the movement, lift their weapon back, and continue attacking afterward. The fencer 'B' retreats, stops to provoke 'A's attack and threaten with counter action, and when 'B' sees 'A' faltering, 'B' starts his own attack with a lunge. Both hit. What is the call?
     9. A's attack failed, point for B's attack.
-8. A fencer asks the referee to explain his judgment of the last assault. What should the referee do?
+1. A fencer asks the referee to explain his judgment of the last assault. What should the referee do?
     1. Explain the judgment clearly and calmly. If the fencer provides information that changes the picture, consider it, and give the final analysis. Ask fencer if they want a video check, if they insist.
-9. A coach asks the referee to explain his judgment of the last assault. What should the referee do?
+1. A coach asks the referee to explain his judgment of the last assault. What should the referee do?
     1. May explain in a short sentence, but does not have to. 
     1. Remind the coach politely that it’s the fencer who should address the referee. 
     1. Group 3 if necessary.
-10. A fencer asks the referee to explain his judgment of an assault before the last one. What should the referee do?
+1. A fencer asks the referee to explain his judgment of an assault before the last one. What should the referee do?
     1. Calls can not be contested after they have been established.
     1. Group one if necessary
-11. A fencer continually argues with the referee after having received the explanation of the referee’s judgment. What should a referee do?
+1. A fencer continually argues with the referee after having received the explanation of the referee’s judgment. What should a referee do?
     1. Verbal warning
     1. Group one / Group 3
-12. A fencer addresses his opponent in order to question the referee’s judgment. What should a referee do? 
+1. A fencer addresses his opponent in order to question the referee’s judgment. What should a referee do? 
     1. Verbal warning
     1. Group one / Group 3
-13. A fencer commits offences toward the referee’s authority. What should the assistant do? 
+1. A fencer commits offences toward the referee’s authority. What should the assistant do? 
     1. Nothing	
     1. May share their preference when they consult the referee next time.
-14. A fencer commits offences toward the assistant’s authority. What should the assistant do? 
+1. A fencer commits offences toward the assistant’s authority. What should the assistant do? 
     1. May share their preference when they consult the referee next time. ----?? ...assistant should be able to suggest penalty. Maybe not impose it by themselves
-15. A fencer commits offences toward the assistant’s authority. What should the referee do? 
+1. A fencer commits offences toward the assistant’s authority. What should the referee do? 
     1. Verbal warning
     1. Group one / Group 3
-16. The fencer can not hear what the referee is saying. What should the fencer do?
+1. The fencer can not hear what the referee is saying. What should the fencer do?
     1. Let the Referee know about the problem
     1. Signal with hand raised if they did not hear the ‘Fence’ command
-17. The fencer can not hear what the referee is saying. What should the referee do?
+1. The fencer can not hear what the referee is saying. What should the referee do?
     1. Speak louder
     1. Use hand signals
     1. Not call “Fence” or speak until the noise stops when there is some environmental disturbance
-18. A fencer is angry at his opponent and refuses to salute after the bout. What should the referee do?
+1. A fencer is angry at his opponent and refuses to salute after the bout. What should the referee do?
     1. 3rd group
-19. The fencer does not understand why the referee made a decision. What should she do?
+1. The fencer does not understand why the referee made a decision. What should she do?
     1. Address the referee asking for explanation.
     1. May ask the referee to consider some specific information
     1. Ask for video review
-20. A coach approaches his fencer, disturbing the bout. What should the referee do?
+1. A coach approaches his fencer, disturbing the bout. What should the referee do?
     1. Remind them that it is not allowed.
     1. 3rd Group if necessary
-21. A fencer threatens the referee or the assistant, or calls them names. What should the referee do?
+1. A fencer threatens the referee or the assistant, or calls them names. What should the referee do?
     1. 3rd group
-22. A referee manages the bout of a fencer of his own nationality, facing a fencer of a different nationality. The fencer addresses the referee in their mutual native tongue (apart from brief communication when asked by the referee). What should the referee do?
+1. A referee manages the bout of a fencer of his own nationality, facing a fencer of a different nationality. The fencer addresses the referee in their mutual native tongue (apart from brief communication when asked by the referee). What should the referee do?
     1. Remind the fencer to use English, or refrain from talking in a language the onlookers can’t understand.
     1. 1st group for refusal to obey the referee.
-23. A referee manages the bout of fencer(s) of different nationalities. One of the fencers questions the referee’s calls by loudly talking in a language that the referee does not speak. What should the referee do?
+1. A referee manages the bout of fencer(s) of different nationalities. One of the fencers questions the referee’s calls by loudly talking in a language that the referee does not speak. What should the referee do?
     1. Remind the fencer to use English, and limit it to the communication necessary for the bout.
     1. 1st group for refusal to obey the referee.
     1. Group 3 for disruptive behavior.
-24. A fencer questions the referee’s calls (and integrity) based on favouring the opponent. What should the referee do?
+1. A fencer questions the referee’s calls (and integrity) based on favouring the opponent. What should the referee do?
     1. Report to the head of refereeing committee, ask for supervision by an independent referee.
-25. A fencer questions the referee’s calls (and integrity) based on favouring the opponent. What should the fencer do?
+1. A fencer questions the referee’s calls (and integrity) based on favouring the opponent. What should the fencer do?
     1. Address the head of refereeing committee, ask for a replacement or supervision.
-26. A fencer talks to the referee angrily and loudly. What should the referee do?
+1. A fencer talks to the referee angrily and loudly. What should the referee do?
     1. Verbal warning, if the referee feels it sufficient.
     1. Group 1 or group 3 depending on the severity. Make it clear to the fencer.
-27. A fencer talks to the referee disrespectfully. What should the referee do?
+1. A fencer talks to the referee disrespectfully. What should the referee do?
     1. 1st group in mild cases
     1. 3rd group or 4th group in serious cases
-28. A fencer thinks that the referee is being unfair, or does not know the rules. What should the fencer do?
+1. A fencer thinks that the referee is being unfair, or does not know the rules. What should the fencer do?
     1. Address the head of refereeing committee, ask for a replacement or supervision.
-29. A fencer approaches the authorities to request that her referee be changed due to bad calls. What is the procedure?
+1. A fencer approaches the authorities to request that her referee be changed due to bad calls. What is the procedure?
     1. The refereeing committee should appoint a supervisor referee. 
     1. If possible review calls after the bout
     1. Provide feedback to the referee
-30. A fencer attacks the opponent after the command “Halt!” has been given. What is the procedure?
+1. A fencer attacks the opponent after the command “Halt!” has been given. What is the procedure?
     1. Group 1 for fencing after “Halt!”
     1. Group 3 for dishonest fencing
     1. Group 4 offence against sportsmanship
     1. It depends on the situation and the intent
-31. A fencer hits the opponent with a valid (single) hit, but by accident, he hits the ground with a continued motion. What are the possible outcomes of this assault?
+1. A fencer hits the opponent with a valid (single) hit, but by accident, he hits the ground with a continued motion. What are the possible outcomes of this assault?
     1. Award point for the hit
     1. Hitting the floor after a valid hit incurs no penalty
-32. A fencer hits the opponent with a valid (single) hit, but since his attack was exaggerated, he hits the ground with a continued motion, and immediately gets hit by the opponent. What is the evaluation of this assault?
+1. A fencer hits the opponent with a valid (single) hit, but since his attack was exaggerated, he hits the ground with a continued motion, and immediately gets hit by the opponent. What is the evaluation of this assault?
     1. Award point for the first hit, as in this case the hit should not be annulled by the penalty
     1. Group one for hitting the floor
-33. A fencer gets hit, then he angrily throws the weapon to the floor. What is the outcome?
+1. A fencer gets hit, then he angrily throws the weapon to the floor. What is the outcome?
     1. Evaluate the hit regularly
     1. 2nd group for dangerous behavior during the bout
     1. 3rd group for disturbing order in the arena, in serious cases.
-34. A fencer hits the opponent, then in celebration, throws his weapon away before the referee calls Halt.. What is the outcome?
+1. A fencer hits the opponent, then in celebration, throws his weapon away before the referee calls Halt.. What is the outcome?
     1. Annul hit??
     1. 2nd Group
-35. A fencer hits the opponent, then in celebration, throws his weapon away after the referee calls Halt.. What is the outcome?
+1. A fencer hits the opponent, then in celebration, throws his weapon away after the referee calls Halt.. What is the outcome?
     1. Annul hit?
     2. 2nd Group
-36. A fencer hits the opponent, then in celebration, throws his weapon away after the referee has given the point. What is the outcome?
+1. A fencer hits the opponent, then in celebration, throws his weapon away after the referee has given the point. What is the outcome?
     1. Annulling hit in retrospect is not possible.
     1. 2nd group during bout.
     1. 3dr group outside of bout (or if it was the winning hit in the bout)
-37. A fencer loses a bout, and after leaving the arena, violently throws his mask at the wall. What should the referee do?
+1. A fencer loses a bout, and after leaving the arena, violently throws his mask at the wall. What should the referee do?
     1. Group 3 if the referee thinks necessary
-38. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, and ripostes by taking a visible swing by lifting the weapon back up before riposting. The fencer renews his attack immediately after having been parried, resulting in a double hit. What is the outcome?
+1. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, and ripostes by taking a visible swing by lifting the weapon back up before riposting. The fencer renews his attack immediately after having been parried, resulting in a double hit. What is the outcome?
     1. Point for renewed attack, due to late riposte.
     2. Can cause dangerous situations, apply penalty if necessary.
-39. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, and ripostes straight and without delay. The fencer renews his attack immediately after having been parried, by immediately cutting around the parry, resulting in a double hit. What is the outcome?
+1. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, and ripostes straight and without delay. The fencer renews his attack immediately after having been parried, by immediately cutting around the parry, resulting in a double hit. What is the outcome?
     1. Point for riposte, because of the right to riposte after parry
-40. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, but due to the opponent’s pressure on the blade, is not able to riposte immediately. However, just as the fencer renews his cut (without pulling back his hand), he’s finally able to riposte. The result is a double hit. What is the referee’s call?
+1. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, but due to the opponent’s pressure on the blade, is not able to riposte immediately. However, just as the fencer renews his cut (without pulling back his hand), he’s finally able to riposte. The result is a double hit. What is the referee’s call?
     1. Point for the renewed attack, due to delayed riposte, when the situation is clear.
     1. Simultaneous hit (Point both) when both hesitated and none started clearly sooner.
     1. No points when there is doubt.
-41. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, and due to the opponent’s pressure on the blade, he ripostes immediately with opposition. The fencer disengages from the opposition, and renews his attack, resulting in a double hit. What is the referee’s call?
+1. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, and due to the opponent’s pressure on the blade, he ripostes immediately with opposition. The fencer disengages from the opposition, and renews his attack, resulting in a double hit. What is the referee’s call?
     1. Point for riposte due to the right to riposte after parry.
-42. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, and ripostes without delay and without pulling his hand back. The fencer renews his attack immediately after having been parried. Bot fencers get hit at the same time. What is the outcome?
+1. A fencer initiates an attack, but falls on the opponent’s parry. The opponent’s parry is technically correct, and ripostes without delay and without pulling his hand back. The fencer renews his attack immediately after having been parried. Bot fencers get hit at the same time. What is the outcome?
     1. Point for riposte, due to the right to riposte.
-43. A fencer initiates an attack with a thrust. The opponent parries and immediately ripostes, but does not manage to completely prevent the point of the initial (unchanged) thrust from hitting the valid target. Both fencers get hit with small difference in time. What is the call?
+1. A fencer initiates an attack with a thrust. The opponent parries and immediately ripostes, but does not manage to completely prevent the point of the initial (unchanged) thrust from hitting the valid target. Both fencers get hit with small difference in time. What is the call?
     2. attack, bad parry.
-44. A fencer initiates an attack with a thrust. The opponent parries and immediately ripostes. The attacking fencer notices the parry, and changes the angle of their thrust in order to still hit the valid target. Both fencers get hit with small difference in time. What is the call?
+1. A fencer initiates an attack with a thrust. The opponent parries and immediately ripostes. The attacking fencer notices the parry, and changes the angle of their thrust in order to still hit the valid target. Both fencers get hit with small difference in time. What is the call?
     2. Parry-riposte.
-45. What are the requirements of a successful parry?
+1. What are the requirements of a successful parry?
     1. blocks the line of the attack
     1. prevents the attacking edge/point from directly threatening the valid target area
-46. A fencer puts her weapon in langort position, and with several steps forward, approaches the opponent without ever moving her weapon from the line. The opponent starts an attack by a simple cut with lunge during one of her steps. What is the outcome?
+1. A fencer puts her weapon in langort position, and with several steps forward, approaches the opponent without ever moving her weapon from the line. The opponent starts an attack by a simple cut with lunge during one of her steps. What is the outcome?
     1.Point for the attack, langort can’t be used to actively gain Vor during preparation.
-47. A fencer is retreating from the advancing opponent for several steps, while continuously holding her weapon in the langort position, aiming at the valid target of the opponent. The opponent starts her attack, resulting in a double hit. What is the outcome?
+1. A fencer is retreating from the advancing opponent for several steps, while continuously holding her weapon in the langort position, aiming at the valid target of the opponent. The opponent starts her attack, resulting in a double hit. What is the outcome?
     1. Point for Langort, the  active opponent should have displaced it first.
 48. What are the requirements for the point in line defense to be considered successful?
     1. arms and weapon point straight at the valid target of the opponent.
@@ -221,97 +221,97 @@ point for opponent as well.
     3. the point does not leave the target area until the hit is made, even if it disengages an attempt to take the blade.
     4. the arms stay straightened until the hit is made
     5. lunging is allowed to deliver the actual hit with the point, but it's not necessary.
-49. A fencer is retreating from the advancing opponent for several steps, while holding her weapon in the langort position, aiming at the valid target of the opponent. However, as the opponent starts her attack, the fencer reacts to it by retracting her arms and weapon momentarily, but then goes back to langort, resulting in a double hit. What is the outcome?
+1. A fencer is retreating from the advancing opponent for several steps, while holding her weapon in the langort position, aiming at the valid target of the opponent. However, as the opponent starts her attack, the fencer reacts to it by retracting her arms and weapon momentarily, but then goes back to langort, resulting in a double hit. What is the outcome?
     1. Point for the attack, the line failed.
-50. A fencer is retreating from the advancing opponent for several steps, while holding her weapon in the langort position, aiming at the valid target of the opponent. However, as the opponent starts her attack, by first trying to take the blade and remove it from the line, the fencer reacts to it by a circular motion during which the tip does not threaten the valid target of the opponent; then goes back to langort, resulting in a double hit. What is the outcome?
+1. A fencer is retreating from the advancing opponent for several steps, while holding her weapon in the langort position, aiming at the valid target of the opponent. However, as the opponent starts her attack, by first trying to take the blade and remove it from the line, the fencer reacts to it by a circular motion during which the tip does not threaten the valid target of the opponent; then goes back to langort, resulting in a double hit. What is the outcome?
     1. Point for the attack, the line failed.
-51. A fencer (A) is retreating from the advancing opponent for several steps, while holding her weapon in the langort position, aiming at the valid target of the opponent (B) . However, as the ‘B’ starts her attack, by first trying to take the blade and remove it from the line, ‘A’ reacts to it by a motion during which the tip does not threaten the valid target of the opponent. However, while ‘B’ is in the process of the attempt to take the blade, ‘A’ starts her own attack. ‘B’ ends up starting the final move of their attack a moment later than ‘A’. What is the outcome?
+1. A fencer (A) is retreating from the advancing opponent for several steps, while holding her weapon in the langort position, aiming at the valid target of the opponent (B) . However, as the ‘B’ starts her attack, by first trying to take the blade and remove it from the line, ‘A’ reacts to it by a motion during which the tip does not threaten the valid target of the opponent. However, while ‘B’ is in the process of the attempt to take the blade, ‘A’ starts her own attack. ‘B’ ends up starting the final move of their attack a moment later than ‘A’. What is the outcome?
     1. Point for attack on preparation to A
-52. A fencer is retreating from the advancing opponent for several steps, while holding her weapon in the langort position, aiming at the valid target of the opponent. However, as the opponent starts her attack, by first trying to take the blade and remove it from the line, the fencer reacts to it by a disengagement, during which the weapon continuously threatens the valid target of the opponent; resulting in a double hit. What is the outcome?
+1. A fencer is retreating from the advancing opponent for several steps, while holding her weapon in the langort position, aiming at the valid target of the opponent. However, as the opponent starts her attack, by first trying to take the blade and remove it from the line, the fencer reacts to it by a disengagement, during which the weapon continuously threatens the valid target of the opponent; resulting in a double hit. What is the outcome?
     1. Point for the langort.
-```diff
-! 10. A fencer attacks by first taking the opponent's blade in a continuous compound action, with lunge. He touches the blade, but does not remove it from the line, and the opponent is able to start a single attack at the same time as the fencer’s own final cut starts. The result is a double hit. What is the referee’s decision?
-!    1. Simultaneous hit, point for both.
-```
+
+1. A fencer attacks by first taking the opponent's blade in a continuous compound action, with lunge. He touches the blade, but does not remove it from the line, and the opponent is able to start a single attack at the same time as the fencer’s own final cut starts. The result is a double hit. What is the referee’s decision?
+    1. Simultaneous hit, point for both.
+
 11. A fencer attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. He takes the blade at its weak part, removes it from the line by a beat or engagement, and hits with the attack in a continuous motion. The opponent starts an attack as he realises that his weapon has been taken. The result is a double hit. What is the referee’s decision?
     1. Point for the attack, with taking of the blade.
-12. Fencer 'A' attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. Fencer 'B' disengages, and hits with a continuous motion. The fencer 'A' continues his attack regardless of having missed the blade. The result is a double hit. What is the referee’s decision?
+1. Fencer 'A' attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. Fencer 'B' disengages, and hits with a continuous motion. The fencer 'A' continues his attack regardless of having missed the blade. The result is a double hit. What is the referee’s decision?
     1. Point for riposte by B
-13. 'A' attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. He takes the blade at its weak part, removes it from the line by a beat or engagement, and hits with an attack by first pulling back the weapon, for optimal power generation in the blow. 'B' does not retreat, and starts a simple and straight attack as soon as his taken blade becomes free. The result is a double hit. What is the referee’s decision?
+1. 'A' attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. He takes the blade at its weak part, removes it from the line by a beat or engagement, and hits with an attack by first pulling back the weapon, for optimal power generation in the blow. 'B' does not retreat, and starts a simple and straight attack as soon as his taken blade becomes free. The result is a double hit. What is the referee’s decision?
     1. Point to B.
 14. 'A' attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. He takes the blade at its weak part, removes it from the line by a beat or engagement, and hits with an attack by first pulling back the weapon, for optimal power generation in the blow. 'B' retreats, to perform a stop-hit. The result is a double hit. What is the referee’s decision?
     1. Point to A, because the opponent retreated, and so missed the opportunity to take over.
-15. A fencer attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. The opponent disengages, does not hit with the same motion, but starts an attack with a slight delay when the opponent has already continued his attack after the failed taking of the blade. The result is a double hit. What is the referee’s decision?
+1. A fencer attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. The opponent disengages, does not hit with the same motion, but starts an attack with a slight delay when the opponent has already continued his attack after the failed taking of the blade. The result is a double hit. What is the referee’s decision?
     1. Point for the attack, the riposte is late.
-16. A fencer attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. The opponent disengages, but hesitates before starting a simple attack. The fencer hesitates when he realises that he missed the blade, but seeing that the opponent’s hesitation, starts an attack anyway, at the same time the opponent ends up doing the same thing. The result is a double hit. What is the referee’s decision?
+1. A fencer attacks by first taking the opponent's blade in a compound action, with lunge or step-lunge or passing-step-lunge. The opponent disengages, but hesitates before starting a simple attack. The fencer hesitates when he realises that he missed the blade, but seeing that the opponent’s hesitation, starts an attack anyway, at the same time the opponent ends up doing the same thing. The result is a double hit. What is the referee’s decision?
     1. Simultaneous hit due to mutual hesitation
-17. A fencer initiates an offensive action that looks like an attack, but falls on the opponent's blade as if it’s ben parried. The opponent ripostes without hesitation and correctly, the fencer continues attacking. What is the call?
+1. A fencer initiates an offensive action that looks like an attack, but falls on the opponent's blade as if it’s ben parried. The opponent ripostes without hesitation and correctly, the fencer continues attacking. What is the call?
     1. riposte.
-18. What is a bad parry?
+1. What is a bad parry?
     1. An attempted parry does not prevent the attack to reach its target in its original line. It fails to remove the point of the thrust from threatening the target with its original line, or it fails to stop a cut before it hits its intended target (arrives late and/or in the wrong position).
 19. An attack is parried, but the blade bends and hits behind the parry. There is a valid riposte. What should be the result?
     1. Point for riposte, bending hits are not valid.
-20. After the fencers have come together to grapple or wrestle in longsword bouts, how should the referee use the rules of priority?
+1. After the fencers have come together to grapple or wrestle in longsword bouts, how should the referee use the rules of priority?
     1. They should not be used any more
     1. A double hit resulting from such an event is considered a simultaneous hit
     1. Halt the assault if the action becomes confusing
     1. If the fencers disengage by themselves completely without any hits having been made before, and before “Halt!” is given, the referee can apply priority rules again, 
-22. After the fencers have come together to grapple or wrestle in longsword bouts, when should the referee stop the bout?
+1. After the fencers have come together to grapple or wrestle in longsword bouts, when should the referee stop the bout?
     1. When there is a valid case of dominance
     1. Clear throw and the agent remains standing
     1. When the action becomes unclear
     1. When the action becomes dangerous
-23. What are the ways of scoring with grappling or wrestling actions?
+1. What are the ways of scoring with grappling or wrestling actions?
     1. Throws and take-downs if the agent remains standing
     1. controlling the opponent via grappling with or without the weapon, or until the Referee calls 'Halt!'
     1. take-downs and throws followed/accompanied by a simple and immediate hit with the weapon (within a period of fencing time)
-24. One of the fencers drops the weapon accidentally, while a simple attack of the opponent is already on the way. The hit arrives after the fencer drops the weapon. What is the call?
+1. One of the fencers drops the weapon accidentally, while a simple attack of the opponent is already on the way. The hit arrives after the fencer drops the weapon. What is the call?
     1. Point for the attack
-25. One of the fencers drops the weapon accidentally, and the opponent, taking advantage of this, attacks the unarmed fencer. What is the call?
+1. One of the fencers drops the weapon accidentally, and the opponent, taking advantage of this, attacks the unarmed fencer. What is the call?
     1. No point, Group 1
     1. In serious cases, consider group 3 Offence against sportsmanship
-26. One of the fencers drops the weapon accidentally, and no valid hits are made. What should the Referee do?
+1. One of the fencers drops the weapon accidentally, and no valid hits are made. What should the Referee do?
     1. Halt the assault
     1. Assign no points for accidental loss of weapon
-27. One of the fencers loses his balance and falls. What happens?
+1. One of the fencers loses his balance and falls. What happens?
     1. Halt the bout
     1. No points after the fall
     1. May award a point for an action that started before the fall, even if it lands after.
-28. One of the fencers is disarmed due to the opponent’s actions. The unarmed fencer does not engage in grappling immediately. How should the referee evaluate the action afterwards?
+1. One of the fencers is disarmed due to the opponent’s actions. The unarmed fencer does not engage in grappling immediately. How should the referee evaluate the action afterwards?
     1. Point for disarm
-29. One of the fencers is disarmed due to the opponent’s actions. The unarmed fencer commences grappling and controls the opponent’s blade, just as he is losing the weapon. How should the referee evaluate the action afterwards?
+1. One of the fencers is disarmed due to the opponent’s actions. The unarmed fencer commences grappling and controls the opponent’s blade, just as he is losing the weapon. How should the referee evaluate the action afterwards?
     1. Let the wrestling go on according to wrestling rules
-30. Two fencers engage in close quarter combat, they come close and their guards touch, then they free their blades and hit each other at the same time. What is the call?
+1. Two fencers engage in close quarter combat, they come close and their guards touch, then they free their blades and hit each other at the same time. What is the call?
     1. Simultaneous hit, point to both
-31. The fencers come to close quarter combat, and after a while, they both fall to the ground. How long should the referee let the actions go on before halting the assault?
+1. The fencers come to close quarter combat, and after a while, they both fall to the ground. How long should the referee let the actions go on before halting the assault?
     1. Halt immediately.
-32. The fencers engage their blades, and during the ensuing exchange, one of them briefly places their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules. After this, they disengage. Should the referee stop this assault? 
+1. The fencers engage their blades, and during the ensuing exchange, one of them briefly places their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules. After this, they disengage. Should the referee stop this assault? 
     1. No
-33. The fencers engage their blades, and during the ensuing exchange, one of them touches their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules. After this, they immediately disengage. Should the referee assign a point for this touch? 
+1. The fencers engage their blades, and during the ensuing exchange, one of them touches their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules. After this, they immediately disengage. Should the referee assign a point for this touch? 
     1. No
-34. The fencers engage their blades, and during the ensuing exchange, one of them places their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules. The opponent can move freely, and retreats to disengage. However, the fencer follows the retreating opponent, in order to prevent him from removing the weapon touching his target area.. During this, he gets hit with a valid action by the opponent. What is the call?
+1. The fencers engage their blades, and during the ensuing exchange, one of them places their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules. The opponent can move freely, and retreats to disengage. However, the fencer follows the retreating opponent, in order to prevent him from removing the weapon touching his target area.. During this, he gets hit with a valid action by the opponent. What is the call?
     1. Point for the hit made by the retreating opponent. Chasing an opponent to keep the weapon contact in hopes to summon a dominance rule, is not dominance, and no valuable fencing either
-35. The fencers engage their blades, and during the ensuing exchange, one of them places their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules, at the same time, controlling the opponent. The opponent is unable to break free from the weapon placed on him, but manage to hit the fencer nonetheless. What is the call?
+1. The fencers engage their blades, and during the ensuing exchange, one of them places their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules, at the same time, controlling the opponent. The opponent is unable to break free from the weapon placed on him, but manage to hit the fencer nonetheless. What is the call?
     1. Point for dominance.
-36. The fencers engage their blades, and during the ensuing exchange, one of them places their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules. The opponent can move freely, hits the fencer on a valid target, without attempting to remove the fencer’s passive blade. What is the call?
+1. The fencers engage their blades, and during the ensuing exchange, one of them places their weapon on the opponent’s valid target area without hitting him in a way that is described as vald in the rules. The opponent can move freely, hits the fencer on a valid target, without attempting to remove the fencer’s passive blade. What is the call?
     1. Point for dominance because the opponent did nothing to remove the blade
-37. One of the fencers starts a compound attack with a feint. The opponent reacts to the feint by attempting the parry, during which the fencer hits him. After the reacting parry, the opponent ripostes, despite the missed parry, resulting in a double hit. What’s the call?
+1. One of the fencers starts a compound attack with a feint. The opponent reacts to the feint by attempting the parry, during which the fencer hits him. After the reacting parry, the opponent ripostes, despite the missed parry, resulting in a double hit. What’s the call?
     1. Point for the attack.
-38. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, but starts an attack at the same time as the fencer’s final cut, resulting in a double hit. What is the call?
+1. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, but starts an attack at the same time as the fencer’s final cut, resulting in a double hit. What is the call?
     1. Simultaneous hit, point to both
-39. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, and starts a counterattack with a retreat at the same time as the fencer’s final cut, resulting in a double hit. What is the call?
+1. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, and starts a counterattack with a retreat at the same time as the fencer’s final cut, resulting in a double hit. What is the call?
     1. Point for the attack
-40. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, but starts a counterattack with a retreat into the fencer’s feint, hitting him during the feint. The fencer’s final attack also hits. What is the call?
+1. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, but starts a counterattack with a retreat into the fencer’s feint, hitting him during the feint. The fencer’s final attack also hits. What is the call?
     1. Point for the stop hit in time
-41. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, but starts an attack with lunge into the fencer’s feint, hitting him during the feint. The fencer’s final attack also hits. What is the call?
+1. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, but starts an attack with lunge into the fencer’s feint, hitting him during the feint. The fencer’s final attack also hits. What is the call?
    1. Point for the attack on preparation
-42. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, but starts a counterattack with a retreat, into the fencer’s feint, hitting his hand during the feint. The fencer’s final attack also hits. What is the call?
+1. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, but starts a counterattack with a retreat, into the fencer’s feint, hitting his hand during the feint. The fencer’s final attack also hits. What is the call?
     1. Point for the stop hit in time
-43. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, and starts an attack after the fencer’s final attack has started, resulting in a double hit. What is the call?
+1. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, and starts an attack after the fencer’s final attack has started, resulting in a double hit. What is the call?
     1. Point for the initial attack.
-44. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, and starts a counterattack while staying in place, after the fencer’s final attack has started. He hits the fencer’s hand a bit sooner than the attack hits him, with a quick move of the arms. The attack has been correctly carried out. What is the call?
+1. One of the fencers starts a compound attack with a feint. The opponent does not react to the feint, and starts a counterattack while staying in place, after the fencer’s final attack has started. He hits the fencer’s hand a bit sooner than the attack hits him, with a quick move of the arms. The attack has been correctly carried out. What is the call?
     1. Point for the attack.
-45. One of the fencers has a brilliant plan that would result in a spectacular, historically epic technique if successful. The referee anticipates this, and approves completely, this is what he himself would do in the same situation! However, due to just a little technical mistake in his footwork, falls on the opponent's blade, as if parried. The opponent immediately and faultlessly ripostes, while the fencer pulls off a historically correct move regardless of the humble parry-riposte received somewhere along the line. This makes the referee sad on multiple levels. What is the call? 
+1. One of the fencers has a brilliant plan that would result in a spectacular, historically epic technique if successful. The referee anticipates this, and approves completely, this is what he himself would do in the same situation! However, due to just a little technical mistake in his footwork, falls on the opponent's blade, as if parried. The opponent immediately and faultlessly ripostes, while the fencer pulls off a historically correct move regardless of the humble parry-riposte received somewhere along the line. This makes the referee sad on multiple levels. What is the call? 
 Point for riposte
 1. One of the fencers has a brilliant plan that would result in a spectacular, historically epic technique if successful. The referee anticipates this, and approves completely, this is what he himself would do in the same situation! However, due to just a little technical mistake, the fencer lunges too soon, does not really hit with their first move. The opponent immediately and faultlessly initiates his own attack, while the fencer renews attack and pulls off a historically correct move regardless of the fall-short somewhere along the line. The referee has been waiting his whole life to see this very action in a live bout. What is the call? 
 Point for riposte after the fall-short.
