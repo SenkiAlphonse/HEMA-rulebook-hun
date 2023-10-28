@@ -88,6 +88,7 @@
 1. One of the fencers drops the weapon accidentally, and the opponent, taking advantage of this, attacks the unarmed fencer. What is the call?
 1. One of the fencers drops the weapon accidentally, and no hits are made. What should the referee do?
 1. One of the fencers loses his balance and falls. What should the ref do?
+1. One of the fencers pushes the opponent or otherwise initiates wrestling/grappling actions while it is not agrred to within the bout, what is the call?
 1. One of the fencers loses his balance and falls while the opponent's attack is already on the way. The opponent didn't intentionally cause the fall. What should the ref do?
 1. In a bout where both fencers agreed to grappling, one of the fencers is disarmed due to the opponent’s actions. The unarmed fencer does not engage in grappling immediately. How should the referee evaluate the action afterwards?
 1. One of the fencers intentionally disarms the opponent. What are the possible judgments the referee might make, depending on circumstances?
