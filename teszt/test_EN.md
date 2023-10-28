@@ -32,7 +32,7 @@
 1. What is the procedure, when at the equipment check by the referee, one of the fencers appears with a piece of equipment that does not conform to the rules?
 1. What should the assistant do, when she sees a valid hit clearly, but the referee does not halt the bout?
 1. In a longsword bout, one of the fencers starts a simple cut to the opponent's head. The opponent immediately thrusts at the opponent’s hand that is accelerating toward him, and hits just before the cut to the head hits him (less than a period of fencing time passes between the two hits). What kind of points should be assigned?
-1. In a longsword bout, one of the fencers starts a simple cut to the opponent's head. The opponent retreats from the lunging opponent, while starting his own cut. Both cuts hit, with little difference. What kind of points should be assigned?
+1. In a longsword bout, fencer R starts a simple cut to the opponent's head. Fencer L makes a quick hit just before R finishes their move, then retreats from the lunging opponent. Both cuts hit, with little difference. What are the actions called and what is the call?
 1. A fencer asks the referee to explain his judgment of the last assault. What should the referee do?
 1. A coach asks the referee to explain his judgment of the last assault. What should the referee do?
 1. A fencer asks the referee to explain his judgment of an assault before the last one. Hat should the referee do?
