@@ -147,7 +147,7 @@
 
 2.  A szervező csapat vezetője felelős a verseny gördülékeny lebonyolításáért. A szervező csapat nyitott kérdésekre, reklamációkra, dicséretre, és javaslatokra a verseny előtt, közben és után.
 
-3.  A Főbíró felügyeli a bírók és segédbírók elhelyezését és teljesítményét. A bírói bizottsághoz a versenyzők vagy képviselőik személyesen fordulhatnak, ha bármikor kétség merül fel egy bíró vagy segédbíró teljesítménye kapcsán.
+3.  A Főbíró felügyeli a bírók és segédbírók elhelyezését és teljesítményét. Ha fellebbezés esetén a bíró kitart a véleménye mellett, a főbíró jogosult döntést hozni az ügyben. A főbíró jogosult személyesen, vagy az általa kijelölt delegált segítségével megfigyelni vagy felülvizsgálni egy bíró munkáját, oktatási vagy felügyeleti céllal.
 
 4.  A felszerelés ellenőrző csapat a verseny előtt elvégzi a védőfelszerelések és fegyverek ellenőrzését, és feljegyzi azon versenyzőket, akiknek a felszerelése megfelelőnek lett értékelve. Vezetőjük a Fegyvermester.
 
