@@ -145,7 +145,7 @@
 
 1.  Orvosi/mentős személyzet gondoskodik a versenyzők esetleges sérüléseinek, rosszullétének vizsgálatáról és ellátásáról a mérkőzések közben és után, és szakvéleményt ad annak közvetlen kimeneteléről.
 
-2.  A szervező csapat vezetője felelős a verseny gördülékeny lebonyolításáért. A szervező csapat nyitott kérdésekre, reklamációkra, dicséretre, és javaslatokra a verseny előtt, közben és után.
+2.  A szervező csapat vezetője felelős a verseny gördülékeny lebonyolításáért. Nem bírói ítéletre vonatkozó reklamációkkal (javasolt írásban, a helyszínen), dicsérettel, és javaslatokkal a verseny előtt, közben és után a szervező csapatot kell megkeresni.
 
 3.  A Főbíró felügyeli a bírók és segédbírók elhelyezését és teljesítményét. Ha fellebbezés esetén a bíró kitart a véleménye mellett, a főbíró jogosult döntést hozni az ügyben. A főbíró jogosult személyesen, vagy az általa kijelölt delegált segítségével megfigyelni vagy felülvizsgálni egy bíró munkáját, oktatási vagy felügyeleti céllal.
 
