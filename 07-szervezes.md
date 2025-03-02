@@ -20,6 +20,14 @@
 
 6. A bíró képes kell legyen a mérkőzések angol nyelvű vezetésére, beleértve a szabályok és az akciók interpretációját.
 
+7. A versenybíró az alábbi jelzéseket köteles használni:
+![image](https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03)
+
+![image](https://github.com/user-attachments/assets/f5fea300-ae41-43d0-9001-09729f524279)
+
+![image](https://github.com/user-attachments/assets/ca7d4e1b-529d-43da-9686-e92073b07353)
+
+
 ### A segédbíró
 
 1.  A bírót egy segédbíró segíti a pontok megítélésében és a találatok értékelésében.
