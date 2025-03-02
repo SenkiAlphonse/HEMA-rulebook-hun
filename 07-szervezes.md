@@ -1,4 +1,4 @@
-# A szervezés szabályai
+# Szervezés, a mérkőzés vezetése és a találatok elbírálása
 
 1.  A verseny 18. (különös esetekben 16.) életévüket betöltött személyek számára nyitott.
 
