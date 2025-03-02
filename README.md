@@ -10,13 +10,15 @@
 
 ## Szervezés és meccsvezetés
 
-- [A szervezés szabályai](07-szervezes.md)
+- [Szervezés, bíráskodás](07-szervezes.md)
 - [Vívó etikett és fegyelmi szabályzat](08-etikett_fegyelem.md)
 
 ## A vívásra vonatkozó szabályok
 
 - [Általánosan érvényes szabályok](03-altalanos.md)
-- [Hosszúkardvívás egyezményes szabályai](04-hosszukard.md)
+- [Hosszúkardvívás általánosan érvényes szabályai](04-hosszukard.md)
+- [Hosszúkardvívás VOR szabályai](04.a--hosszukard-VOR.md)
+- [Hosszúkardvívás COMBAT szabályai](04.b-hosszukard-COMBAT.md)
 - [Párnázott fegyverek szabályai](06-parnazott_fegyver.md)
 
 ## Függelék
