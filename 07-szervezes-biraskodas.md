@@ -8,11 +8,20 @@
 
 ### A Bíró
 
-1.  A bíró egy segéddel együtt dolgozik, vezeti a jegyzőkönyvet, és kezeli az időmérést (szükség esetén adminisztratív személyzet támogatásával).
+1. A bíró egy segéddel együtt dolgozik, vezeti a jegyzőkönyvet, és kezeli az időmérést (szükség esetén adminisztratív személyzet támogatásával).
 
-2.  A bíró adja ki a mérkőzés elkezdését, megállítását szolgáló jelzéseket, pontokat ítél meg, és interpretálja az asszó, vagy legalább az ítélet szempontjából releváns akciósor történéseit.
+1.  A versenybíró feladatai:  
+    1.1 szólítja és számba veszi a vívókat;  
+    1.2 vezeti a mérkőzést;  
+    1.3 minden mérkőzés előtt ellenőrzi a versenyzők fegyvereit, ruházatát és felszereléseit az előírásoknak megfelelően  
+    1.4 irányítja a segédbíró(ka)t, időmérőket, jegyzőkönyvvezetőket, stb.  
+    1.5 úgy helyezkedik, és úgy változtatja a helyét, hogy követhesse a mérkőzést  
+    1.6 bünteti a vétségeket;  
+    1.7 megítéli a találatokat;  
+    1.8 fenntartja a rendet;
+    1.9 ugyancsak ellenőriznie kell a pástok állapotát és gondoskodik arról, hogy a mérkőzés ne kezdődhessen el vagy ne folytatódhasson olyan páston, aminek felülete balesetveszélyes, vagy más okból nem alkalmasak a mérkőzés folytatására.
 
-3.  A harc megállítása után a bíró egyeztet a segédbíróval (kézjelekkel jelzi az akciót és a találatot, a segéd szükség esetén jelzi, ha az ő szemszögéből korábban is esett találat a bíró által interpretált akciók során; szükség esetén a bíró szóban is konzultálhat a segéddel), végül javasol egy ítéletet. Ha a vívók elfogadják az döntést (azaz nem kérnek felülvizsgálatot), a küzdelem a bíró által javasolt ítélettel folytatódik. Ha valamelyik vívó felülvizsgálatot kér, de az ellenfele nem ért vele egyet, a bíró megismételheti az asszót, vagy ha meggyőződéssel döntést tud hozni, ítélhet pontot a kérdéses akcióért.
+3.  A küzdelem megállítása után a bíró szükség esetén egyeztet a segédbíróval (kézjelekkel jelzi az akciót és a találatot, a segéd szükség esetén jelzi, ha a bíró szemszögéből nem látható találat is esett; szükség esetén a bíró szóban is konzultálhat a segéddel), végül javasol egy ítéletet. Ha a vívók elfogadják az döntést (azaz nem kérnek felülvizsgálatot), a küzdelem a bíró által javasolt ítélettel folytatódik. Ha valamelyik vívó felülvizsgálatot kér, de az ellenfele nem ért vele egyet, a bíró megismételheti az asszót, vagy ha meggyőződéssel döntést tud hozni, ítélhet pontot a kérdéses akcióért.
 
 4.  Ha a bíró valamiért nem tudja interpretálni a végrehajtott akciósort, annak okát ismertetnie kell. Ilyenkor megismételtetheti az asszót, és az esetleges hibájáért illendő elnézést kérnie.
 
@@ -35,6 +44,40 @@
 2.  Fő feladata a mérkőzés megfigyelése a bíróétól eltérő szögből (a vívók másik oldaláról). Miután a Bíró megállította a mérkőzést, a segédbíró szükség esetén hozzájárul az akció megítéléséhez.
 
 3.  A segédbíró nem felel a pontok megítéléséért, sem a mérkőzés végső kimeneteléért.
+
+### Videóbírók
+
+1. Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akiknek feladata hogy
+közvetlenül, élőben figyeljék a mérkőzést, majd ha szükséges ezután tekintsék meg azt a
+képernyőn is és egyeztessenek a versenybíróval.
+
+### A videóbíróhoz fordulás lehetősége
+1. Mind csapat, mind egyéni versenyeken csak a páston lévő vívó jogosult videó visszanézést
+kérvényezni.
+
+#### Video bíráskodás 
+
+1. A videó felülvizsgálat technikai feltételeit az egyenes kieséses mérkőzéseken a szervező köteles biztosítani.
+
+1. Az egyéni versenyen a páston lévő vívó  
+    1.1 csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a
+videóbíróhoz  
+    1.2 egyenes kieséses mérkőzés során két alkalommal
+
+1. Amennyiben a versenybíró a visszajátszást kérő versenyzővel egyetért, úgy a versenyző visszajátszáshoz való joga nem vész el.
+1. Csapatversenyeken váltásonként egy alkalommal van joguk a versenyzőknek a videóbíróhoz fordulni, és amennyiben a versenybíró egyetért a versenyzői indítvánnyal, úgy ez a jog továbbra is megmarad.
+1. Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges
+döntését.
+1. A versenybíró választása szerint valós-időben vagy lassított felvételen az általa választott sebességben nézi vissza az akciót.
+1. A versenybíró minden fegyvernemben bármikor dönthet úgy, hogy a döntése meghozatalát megelőzően megtekinti a képernyőjét.
+1. A mérkőzés végén, ha az állás egyenlő, a döntő találat megítélése előtt a versenybírónak kötelező alkalmaznia a video bíráskodást.
+1. A videóbíró bármikor kérheti a versenybírót, hogy alkalmazzon videóbíráskodást.
+1. Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy
+arra  
+    1.1 a versenybíró kezdeményezésére,  
+    1.2 a versenyző kérésére,  
+    1.3 a döntő találat előtti pontegyenlőségnél, vagy
+    1.4 a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.
 
 ## A versenyek szervezése és minősítése
 
@@ -74,7 +117,7 @@
 
 11. Ha egy versenyző egyetlen mérkőzést ad csak fel, vesztesnek kell nyilvánítani abban a mérkőzésben, de az addig rögzített pontokat nem törlik.
 
-## Egyéni egyenes kieséses mérkőzések
+### Egyéni egyenes kieséses mérkőzések
 
 1.  A – teljes vagy nem teljes – egyenes kieséses táblát a rangsor és az adott versenyszám vonatkozó szabályai szerint (lásd 2.-es ábra) kell létrehozni.
 
@@ -91,7 +134,7 @@
 
 7.  Visszalépés: Ha, bármilyen okból kifolyólag, az egyik versenyző nem képes folytatni a küzdelmet, vagy befejezni a mérkőzést, az ellenfelet nyilvánítják győztesnek. A visszalépő vívó nem veszti el helyezését az összesített rangsorban.
 
-## Csapatversenyek
+### Csapatversenyek
 
 1. A csapatok minden fegyvernem esetén három vívóból állnak, egy tartalékkal, vagy anélkül. Egy csapat csak akkor kezdhet el egy mérkőzést, ha minden tagja jelen van. 
 
