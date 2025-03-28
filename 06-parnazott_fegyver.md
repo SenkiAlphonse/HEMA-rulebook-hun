@@ -1,4 +1,4 @@
-# Párnázott fegyverek szabályai
+## Párnázott fegyverek szabályai
 
 1.  Minden olyan párnázott fegyver számban, ahol ezt külön a verseny szervezői nem engedélyezik, a párnázott fegyverrel szúrni szigorúan tilos.
 Szándékos szúrás párnázott fegyverrel a második csoportba tartozó vétségnek minősül, első alkalommal is piros lapot eredményez a vétkesnek.

@@ -1,6 +1,6 @@
-# Eszköz és felszerelés követelmények
+## Eszköz és felszerelés követelmények
 
-## I. Vívópást
+### I. Vívópást
 1. A vívópást (továbbiakban pást) mindkét vívó számára azonos feltételeket kell teremtsen. Ez elsősorban a fényviszonyokra és a talaj csúszósságára vonatkozik.
 
 2. A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi
@@ -11,19 +11,19 @@ akadály a pást határától minimum 1 méterre legyen.
 4. A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy azok
 legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 méteres távolságot hagyva a két vívó között az asszó kezdetekor.
 
-## II. Felszerelés
+### II. Felszerelés
 
 1. Minden vívó a saját felszereléséért felelős, és a kötelező elemek minden darabját köteles használni, amikor részt vesz a tornán. Ha a felszerelése egyik elemét a torna kezdetekor vagy a közben versenyzésre alkalmatlannak nyilvánítják, és azt a versenyző nem tudja azt megfelelő elemmel pótolni, akkor nem folytathatja, vagy kezdheti el a versenyzést.
 
-2. A kötelező felszerelést a tornán erre kijelölt személyzet ellenőrzi a torna megkezdése előtt. Továbbá minden egyes pást vezető bírója egy további ellenőrzést hajt végre a mérkőzések megkezdése előtt.[^1] A bíró kötelezheti bármelyik versenyzőt, hogy állítson a felszerelése valamely részein vagy cserélje le azt, erre legfeljebb 5 percnyi időt hagyhat. Ha a vívó nem tud eleget tenni a fenti időkereten belül az utasításnak, akkor fekete lapot kap és ezzel kizárásra kerül a tornáról.
+2. A kötelező felszerelést a tornán erre kijelölt személyzet ellenőrzi a torna megkezdése előtt. Továbbá minden egyes pást vezető bírója egy további ellenőrzést hajt végre a mérkőzések megkezdése előtt[^1]. A bíró kötelezheti bármelyik versenyzőt, hogy állítson a felszerelése valamely részein vagy cserélje le azt, erre legfeljebb 5 percnyi időt hagyhat. Ha a vívó nem tud eleget tenni a fenti időkereten belül az utasításnak, akkor fekete lapot kap és ezzel kizárásra kerül a tornáról.
 
 3. Ha olyan nem megfelelő felszerelés miatt sérülés következik be a tornán, amit a felszerelés ellenőrző személyzet vagy a bíró jóvá hagyott, akkor azon, hanyagságot elkövető felszerelés ellenőrző személyzet vagy a bíró tekinthető felelősnek, aki jóváhagyta a vívó pástra lépését. A felelős személyt vagy személyeket fegyelmi eljárás alá vonjuk, és a licenszük bevonásra kerülhet.
 
 4. A bíró kitilthat olyan felszereléseket, amik nem felelnek meg a követelményeknek.
 
-### Védőfelszerelés (fém fegyverek esetén) 
+#### Fém fegyverek esetén
 
-#### Fejvéd
+##### Fejvéd
 
 1. Sérülésmentes, FIE által jóváhagyott fejvéd (CE level 2, 1600N ellenállással), kötelező.
 
@@ -35,7 +35,7 @@ legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 mét
 
 5. Komplett fejvédelem (fejvéd, tarkóvédő, torokvédő) viselése esetén, ha a vívó a fejét bármilyen szokványos irányban elfordítja, nem maradhat takaratlan bőrfelülete a fején és a nyakán.
 
-#### Kéz-, kar- és testvédelem
+##### Kéz-, kar- és testvédelem
 
 1. Kizárólag olyan kesztyűk használata megengedett, amiket speciálisan HEMA versenyekhez fejlesztettek ki (pl. Sparring Gloves), vagy minden speciális követelményt kielégítenek. Tilos olyan kesztyűk használata, amelyek bármilyen fém alkatrészt tartalmaznak (kivéve a megerősítő szerelvényként, mint a
 Sparring Gloves kesztyűkön a gumiszalag átvezetésénél használt ringlik).
@@ -51,7 +51,7 @@ egy egyszerű textil kesztyű is.
 
 6. A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem.
 
-#### Lábvédelem
+##### Lábvédelem
 
 1. A lágyékvédelem minden férfi és női versenyző számára kötelező.
 
@@ -66,11 +66,11 @@ nadrágnak, vagy más jóváhagyott szúrás álló anyagnak kell borítania.
 5. A kabát és a nadrág között nem maradhat megfelelő védelemmel ellátatlan
 testfelület. Javasolt a derékig érő vívónadrágok használata.
 
-### Fegyverek
+##### Fegyverek
 
 Minden vívó a saját fegyveréért felelős. Azt a versenyen megfelelő állapotban, sorja és rozsdamentesen, a hegyéről minden korábbi bandázst eltávolítva kell prezentálnia. A fegyvereket a tornán erre kijelölt személyzet ellenőrzi az alábbiakban meghatározott feltételeknek megfelelően, megfelelőség esetén annak hegyét a torna erre kijelölt személyzet bebandázsolja. Az egyes pástok vezető bírói bármikor újra ellenőrizhetik a fegyvereket, azokat nagyobb sérülések esetén kitilthatják a versenyről. A vívó fegyverének kitiltása után a bíró legfeljebb 5 percnyi időt hagyhat annak cseréjére. Ha a vívó nem tud eleget tenni a fenti időkereten belül az utasításnak, akkor fekete lapot kap és ezzel kizárásra kerül a tornáról.
 
-#### Hosszúkard
+##### Hosszúkard
 
 1. Csakis egyenes pengéjű, európai típusú vívó/gyakorló kardok használata engedélyezett a tornán. A hosszúkardnak két élű pengéje, keresztvasa és markolatgombja kell legyen. A hosszúkardnak megfelelő minőségű acélból kell készülnie (fa, alumínium, műanyag kardok használata tilos), és az alábbi feltételeknek eleget kell tennie:
 
@@ -82,7 +82,7 @@ Minden vívó a saját fegyveréért felelős. Azt a versenyen megfelelő állap
 
 5. A markolatgomb sima felületű kell legyen, és nem lehetnek rajta hegyes szegecsek, tüskék.
 
-6. A penge rugalmasságát egy mérlegen végrehajtott kihajlás próbával ellenőrizzük. A penge rugalmasságának értékét a mérlegre állított és központosan nyomott penge által, a mérlegen maximálisan kijelzett kilogramm érték mutatja. A hosszúkard rugalmassága 9-18kg között kell mozogjon.[^2]
+6. A penge rugalmasságát egy mérlegen végrehajtott kihajlás próbával ellenőrizzük. A penge rugalmasságának értékét a mérlegre állított és központosan nyomott penge által, a mérlegen maximálisan kijelzett kilogramm érték mutatja. A hosszúkard rugalmassága 9-18kg között kell mozogjon[^2].
 
 7. A hegy minimum 1 cm széles kell legyen.
 
@@ -98,13 +98,20 @@ Minden vívó a saját fegyveréért felelős. Azt a versenyen megfelelő állap
 
 13. A kard teljes tömege női versenyszámban 1100-1600g között kell mozogjon. 
 
-#### Rapír
+##### Rapír
 Kidolgozás alatt.
 
-#### Kard és buckler
+##### Kard és buckler
 Kidolgozás alatt.
 
-### Védőfelszerelés párnázott fegyverek esetén
+[^1]: Mivel kis méretű szervező gárdával rendelkezünk, ezért elképzelhető, hogy a jelenlegi versenyen csak a bírók ellenőrzik a felszereléseket a mérkőzések megkezdése előtt.
+
+[^2]: Ideiglenes, még revízió alatt álló szabályozás, csak kirívó esetekben alkalmazandó, ahol a penge rugalmassága extrémen alacsony vagy magas.
+
+
+#### Párnázott fegyverek esetén
+
+##### Védőfelszerelés
 
 1. Sérülésmentes fejvéd (minimum CE level 1, 350N ellenállással), kötelező.
 
@@ -116,7 +123,7 @@ Kidolgozás alatt.
 
 5. Legalább hoki, lacrosse vagy Red Dragon típusú, vagy ahhoz hasonló védelemmel ellátott párnázott kesztyű viselése kötelező.
 
-### Párnázott fegyverek
+##### Párnázott fegyverek
 
 1. Sérülésmentes.
 
@@ -127,7 +134,3 @@ Kidolgozás alatt.
 4. Nem lehetnek rajta éles, sérülést okozó részek.
 
 5. Fém szerelékkel rendelkező fegyverek használata tilos!
- 
-[^1]: Mivel kis méretű szervező gárdával rendelkezünk, ezért elképzelhető, hogy a jelenlegi versenyen csak a bírók ellenőrzik a felszereléseket a mérkőzések megkezdése előtt.
-
-[^2]: Ideiglenes, még revízió alatt álló szabályozás, csak kirívó esetekben alkalmazandó, ahol a penge rugalmassága extrémen alacsony vagy magas.

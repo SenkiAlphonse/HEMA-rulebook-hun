@@ -1,6 +1,6 @@
-# Rapírvívás egyezményes szabályai
+## Rapírvívás egyezményes szabályai
  
-## A találatok beadásának módja
+### A találatok beadásának módja
  
 1. A rapír szúró- és vágófegyver.
  
@@ -8,7 +8,7 @@
  
 3. Pengén keresztül - amelyek egyidejüleg találják el a test érvényes találati felületét és az ellenfél fegyverét- érkező találatok érvényesek minden olyan alkalommal, amikor tisztán eltalálják az érvényes találati felületet.
  
-## Érvényes találati felület
+### Érvényes találati felület
  
 1. Csak azok a találatok érvényesek, amelyek az érvényes találati felületre esnek.
  
@@ -19,7 +19,7 @@
 4. A mérkőzést vezető bírónak büntetni kell azt a vívót, aki érvényes találati felületet érvénytelen találati
 felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, fegyelmi vétségek első csoportjának megfelelően.
  
-## A találatok megállapítása vagy érvénytelenítése
+### A találatok megállapítása vagy érvénytelenítése
  
 1. A találatok elbírálásának alapját a mérkőzést vezető, az akciót megfigyelő bíró és segédje észlelései képezik.
  
@@ -30,7 +30,7 @@ figyelembe a „rajta!” előtt és az „állj!” után adott találatokat
 
 4. Ha egy találat az érvényes találati felületen kívülre érkezik és nem számít találatnak.
  
-## A találatok érvényessége és elsőbbsége
+### A találatok érvényessége és elsőbbsége
  
 1.  A mérkőzést vezető bíró egyedül dönt a találat érvényességéről vagy elsőbbségéről az alábbi, a rapírvívásra vonatkozó egyezményes szabályok figyelembevételével.
  
@@ -72,11 +72,11 @@ figyelembe a „rajta!” előtt és az „állj!” után adott találatokat
 11.  Részletes példák és leírások a Függelék: Elsőbbség kifejtése részében.
 [Függelék: Elsőbbség](fuggelek/02-elsobbseg.md)
  
-## Közelharc
+### Közelharc
  
 1. Az elsőbbség megszűnik, amikor a fegyverek erős része találkozik (a kosarat is beleértve), és/vagy birkózó akciókban. Ha a pengék erős részének érintkezése után a vívók azonnal eltalálják egymást, akkor mindkettejük ellen pontot kell ítélni. Egyébként eltávolodhatnak, és folytathatják a vívást (a rapírvívás egyezményes szabályai szerint) vagy birkózásba mehetnek át (a birkózás szabályai szerint).
  
-## A találatok megítélése
+### A találatok megítélése
 1. Érvényes találatot olyan támadással lehet szerezni, amelynek a meginditásának pillanatában a vívó nem volt közvetlenül fenyegetve ellenfele által.
  
 2. Amikor egy vívómenetben mindkét vívó egyidejűleg ad találatot, az vagy együttes találat, vagy pedig kettős találat.
@@ -103,8 +103,8 @@ figyelembe a „rajta!” előtt és az „állj!” után adott találatokat
 5.  Közbetámadásnál, ha kételyek merülnek fel az időzítéssel kapcsolatban (az összetett támadás végső mozdulatához képest), a kettős találat lehet mindkét fél hibájának a következménye. Mivel ez nem egy taktikailag semleges/szimmetrikus helyzet (tehát nem egyidejű támadás eredménye), a bíró nem ítél pontot. (A támadó hibája lehet: határozatlanság, lassú végrehajtás, nem elég hatékony csel. A védekező hibája lehet: késlekedés vagy lassú végrehajtás)
 
 
-# Rapírvívás szabályai hárítótőrrel
+## Rapírvívás szabályai hárítótőrrel
 // TODO
 
-# Rapírvívás szabályai köpennyel 
+## Rapírvívás szabályai köpennyel 
 // TODO

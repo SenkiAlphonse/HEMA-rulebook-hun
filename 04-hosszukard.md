@@ -1,6 +1,6 @@
-# A Hosszúkardvívás általános szabályai
+## A Hosszúkardvívás általános szabályai
 
-## A találatadás módja
+### A találatadás módja
 
 1. A hosszúkard szúró- és vágófegyver.
  
@@ -10,7 +10,7 @@
  
 1. A markolatgombbal végrehajtott találatok érvényesek, ha az ellenfél maszkjának borítás nélküli rostélyát találják el jelzés értékűen -akár a gombot kesztyűvel eltakarva- és biztonságosan kivitelezve. A szükségtelen erővel végrehajtott markolatgomb akciók a szabálytalanságok második csoportjában foglaltak szerint büntetendő.
 
-## Érvényes találati felület
+### Érvényes találati felület
  
 1. Csak azok a találatok érvényesek, amelyek az érvényes találati felületre esnek.
  
@@ -21,7 +21,7 @@
 1. A mérkőzést vezető bírónak büntetni kell azt a vívót, aki érvényes találati felületet érvénytelen találati
 felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, fegyelmi vétségek első csoportjának megfelelően.
  
-## A találatok megállapítása vagy érvénytelenítése
+### A találatok megállapítása vagy érvénytelenítése
  
 1. A találatok elbírálásának alapját a mérkőzést vezető, az akciót megfigyelő bíró és segédje észlelései képezik.
 
