@@ -11,7 +11,7 @@ akadály a pást határától minimum 1 méterre legyen.
 4. A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy azok
 legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 méteres távolságot hagyva a két vívó között az asszó kezdetekor.
 
-## II. Felszerelés követelmények
+## II. Felszerelés
 
 1. Minden vívó a saját felszereléséért felelős, és a kötelező elemek minden darabját köteles használni, amikor részt vesz a tornán. Ha a felszerelése egyik elemét a torna kezdetekor vagy a közben versenyzésre alkalmatlannak nyilvánítják, és azt a versenyző nem tudja azt megfelelő elemmel pótolni, akkor nem folytathatja, vagy kezdheti el a versenyzést.
 
@@ -21,9 +21,9 @@ legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 mét
 
 4. A bíró kitilthat olyan felszereléseket, amik nem felelnek meg a követelményeknek.
 
-## III. Védőfelszerelés (fém fegyverek esetén) 
+### Védőfelszerelés (fém fegyverek esetén) 
 
-### Fejvéd
+#### Fejvéd
 
 1. Sérülésmentes, FIE által jóváhagyott fejvéd (CE level 2, 1600N ellenállással), kötelező.
 
@@ -35,7 +35,7 @@ legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 mét
 
 5. Komplett fejvédelem (fejvéd, tarkóvédő, torokvédő) viselése esetén, ha a vívó a fejét bármilyen szokványos irányban elfordítja, nem maradhat takaratlan bőrfelülete a fején és a nyakán.
 
-### Kéz-, kar- és testvédelem
+#### Kéz-, kar- és testvédelem
 
 1. Kizárólag olyan kesztyűk használata megengedett, amiket speciálisan HEMA versenyekhez fejlesztettek ki (pl. Sparring Gloves), vagy minden speciális követelményt kielégítenek. Tilos olyan kesztyűk használata, amelyek bármilyen fém alkatrészt tartalmaznak (kivéve a megerősítő szerelvényként, mint a
 Sparring Gloves kesztyűkön a gumiszalag átvezetésénél használt ringlik).
@@ -51,7 +51,7 @@ egy egyszerű textil kesztyű is.
 
 6. A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem.
 
-### Lábvédelem
+#### Lábvédelem
 
 1. A lágyékvédelem minden férfi és női versenyző számára kötelező.
 
@@ -66,11 +66,11 @@ nadrágnak, vagy más jóváhagyott szúrás álló anyagnak kell borítania.
 5. A kabát és a nadrág között nem maradhat megfelelő védelemmel ellátatlan
 testfelület. Javasolt a derékig érő vívónadrágok használata.
 
-## Fegyverek
+### Fegyverek
 
 Minden vívó a saját fegyveréért felelős. Azt a versenyen megfelelő állapotban, sorja és rozsdamentesen, a hegyéről minden korábbi bandázst eltávolítva kell prezentálnia. A fegyvereket a tornán erre kijelölt személyzet ellenőrzi az alábbiakban meghatározott feltételeknek megfelelően, megfelelőség esetén annak hegyét a torna erre kijelölt személyzet bebandázsolja. Az egyes pástok vezető bírói bármikor újra ellenőrizhetik a fegyvereket, azokat nagyobb sérülések esetén kitilthatják a versenyről. A vívó fegyverének kitiltása után a bíró legfeljebb 5 percnyi időt hagyhat annak cseréjére. Ha a vívó nem tud eleget tenni a fenti időkereten belül az utasításnak, akkor fekete lapot kap és ezzel kizárásra kerül a tornáról.
 
-### Hosszúkard
+#### Hosszúkard
 
 1. Csakis egyenes pengéjű, európai típusú vívó/gyakorló kardok használata engedélyezett a tornán. A hosszúkardnak két élű pengéje, keresztvasa és markolatgombja kell legyen. A hosszúkardnak megfelelő minőségű acélból kell készülnie (fa, alumínium, műanyag kardok használata tilos), és az alábbi feltételeknek eleget kell tennie:
 
@@ -98,13 +98,13 @@ Minden vívó a saját fegyveréért felelős. Azt a versenyen megfelelő állap
 
 13. A kard teljes tömege női versenyszámban 1100-1600g között kell mozogjon. 
 
-### Rapír
+#### Rapír
 Kidolgozás alatt.
 
-### Kard és buckler
+#### Kard és buckler
 Kidolgozás alatt.
 
-## Védőfelszerelés (párnázott fegyverek esetén)
+### Védőfelszerelés párnázott fegyverek esetén
 
 1. Sérülésmentes fejvéd (minimum CE level 1, 350N ellenállással), kötelező.
 
@@ -116,7 +116,7 @@ Kidolgozás alatt.
 
 5. Legalább hoki, lacrosse vagy Red Dragon típusú, vagy ahhoz hasonló védelemmel ellátott párnázott kesztyű viselése kötelező.
 
-## Párnázott fegyverek
+### Párnázott fegyverek
 
 1. Sérülésmentes.
 
