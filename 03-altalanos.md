@@ -20,14 +20,14 @@
 1.  A mérkőzések előtt a pástra hívott vívók üdvözlik a bírót és az ellenfelet. Az asszók megkezdése előtt a vívók a bíró ‘Állás!’ (‘On guard!’ / ‘En Garde!’) parancsára vívóállásba helyezkednek, és mozdulatlanul várják a mérkőzés indítását. A bíró ‘Kész/Ready/Pret’ kérdésére megerősítő válasz után, vagy negatív válasz hiányában a bíró elindítja az asszót a ’Rajt!’/ ‘Fence!’ / ‘Allez’ paranccsal.
 
 1.  Az asszó akkor fejeződik be amikor a bíró kiadja az ‘ Állj!’, ‘Halt’ vagy ‘Arrêt’ parancsot. A mérkőzés leállításának leggyakoribb okai:
-   1. Érvényes találat esett.
-   1. Érvénytelen találat esett, amely megnehezíti a további akciók megítélését.
-   1. Az egyik vívó mindkét lábával elhagyta a küzdőteret.
-   1. Lejárt az idő.
-   1. Veszélyes vagy zavaros vívás.
-   1. Felszerelés meghibásodása.
-   1. Sérülés.
-   1. Az egyik vívó kéri hogy állítsák meg az asszót.
+    1. Érvényes találat esett.
+    1. Érvénytelen találat esett, amely megnehezíti a további akciók megítélését.
+    1. Az egyik vívó mindkét lábával elhagyta a küzdőteret.
+    1. Lejárt az idő.
+    1. Veszélyes vagy zavaros vívás.
+    1. Felszerelés meghibásodása.
+    1. Sérülés.
+    1. Az egyik vívó kéri hogy állítsák meg az asszót.
 
 1.  a versenybírónak meg kell állítania a mérkőzést, ha a vívás zavarodottá válik, és annak menetét a továbbiakban nem képes követni még akkor is ha nem esett találat.
 
@@ -58,8 +58,8 @@
 1.  Ugyanakkor a határvonalat csak egy lábbal (másikkal nem vagy csak részben) átlépő vívó találata érvényes marad, ha az akció az „állj!” előtt kezdődött; akkor is, ha a vívó ezután teljesen elhagyta a küzdőteret.
 
 1.  Ha az egyik vívó mindkét lábával elhagyja a küzdőteret anélkül hogy a kilépés előtt érvényes találatot adott volna le, a bíró a következőképpen jár el:
-   1. Az első kilépésnél a vívó figyelmeztetést kap
-   1. Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát túlhaladó versenyző egy találattal büntetendő (ellenfele egy pontot kap).
+    1. Az első kilépésnél a vívó figyelmeztetést kap
+    1. Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát túlhaladó versenyző egy találattal büntetendő (ellenfele egy pontot kap).
 
 #### Vétlen lelépés
 
@@ -80,13 +80,13 @@ szándékosan bármilyen váratlan esemény, baleset (például lökés) követk
 
 A csoportforduló során a mérkőzés véget ér ha:  
 1.  Valamelyik vívó 5 találatot elért.  
-    1.1  Ebben az esetben a jegyzőkönyvön rögzített eredmény a mérkőzés végeredménye (V – n, ahol n = a vesztes vívó által adott találatok száma)  
-    1.2  Ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok (hosszúkard/VOR esetben az együttes találatok, hosszúkard/COMBAT esetben a kettős találatok) nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak).
+    1. Ebben az esetben a jegyzőkönyvön rögzített eredmény a mérkőzés végeredménye (V – n, ahol n = a vesztes vívó által adott találatok száma)  
+    1. Ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok (hosszúkard/VOR esetben az együttes találatok, hosszúkard/COMBAT esetben a kettős találatok) nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak).
 
-1.  Három percnyi tényleges vívóidő eltelt.  
-    1.1 Ha az idő lejártakor legalább egy találatnyi különbség van a két versenyző pontjai között, a több pontot elért versenyzőt kell győztesnek kihirdetni. A jegyzőkönyvön a mérkőzésen ténylegesen elért találatokat kell rögzíteni (VN – n, ahol N = a győztes vívó által adott találatok száma, és n = a vesztes vívó által adott találatok száma.  
-    1.2 Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.  
-    1.3 Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni: VN – n ha döntő találat esett az időkereten belül; V4 – 4 vagy V3 – 3 vagy V2 – 2 vagy V1 – 1 vagy V0 – 0 ha sorsolás alapján kerül ki győztes.  
+1.  Három percnyi tényleges vívóidő eltelt.
+    1. Ha az idő lejártakor legalább egy találatnyi különbség van a két versenyző pontjai között, a több pontot elért versenyzőt kell győztesnek kihirdetni. A jegyzőkönyvön a mérkőzésen ténylegesen elért találatokat kell rögzíteni (VN – n, ahol N = a győztes vívó által adott találatok száma, és n = a vesztes vívó által adott találatok száma.  
+    1. Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.  
+    1. Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni: VN – n ha döntő találat esett az időkereten belül; V4 – 4 vagy V3 – 3 vagy V2 – 2 vagy V1 – 1 vagy V0 – 0 ha sorsolás alapján kerül ki győztes.  
 
 1.  abban az esetben, ha egy vívó a csoportban egyetlen mérkőzéstől lép vissza felszerelés meghibásodás vagy sérülés miatt, de a többi mérkőzését be tudja fejezni, a visszalépő versenyző ellenfelét kell győztesként regisztrálni Vn – DN, VN – Dn, habár a szerzett pontok nem kerülnek törlésre.
 
@@ -97,14 +97,14 @@ A csoportforduló során a mérkőzés véget ér ha:
 #### Egyéni egyenes kieséses mérkőzések
 
 1.  Az egyenes kieséses mérkőzések 15 találatig, vagy  
-    1.1 Hosszúkard/Combat esetében három, egyperces pihenőidőkkel elválasztott három perces harmad lejártáig tartanak.  
-    1.2 Hosszúkard/VOR esetén kivételesen két, háromperces periódus lejártáig tartanak, az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 8 találatot el nem ér.
+    1. Hosszúkard/Combat esetében három, egyperces pihenőidőkkel elválasztott három perces harmad lejártáig tartanak.  
+    1. Hosszúkard/VOR esetén kivételesen két, háromperces periódus lejártáig tartanak, az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 8 találatot el nem ér.
 
 1.  Az egyperces pihenőidő alatt, egy, a mérkőzés előtt megnevezett személy mehet a versenyző közvetlen közelébe.
 
 1. A mérkőzés véget ér ha:  
-    1.1 Valamelyik vívó 15 találatot ért el; vagy  
-    1.2 9 percnyi tényleges vívóidő eltelt
+    1. Valamelyik vívó 15 találatot ért el; vagy  
+    1. 9 percnyi tényleges vívóidő eltelt
 
 1. A több találatot elért vívót kell győztesnek kihirdetni.
 
@@ -128,16 +128,16 @@ A csoportforduló során a mérkőzés véget ér ha:
 1.  Abban az esetben, ha az adott tempón belül csak egy érvényes találat született, a bíró 1 pontot ítél meg a találatot elszenvedő vívó ellen, függetlenül annak helyétől, erősségétől vagy kivitelezésének módjától.
 
 1.  Abban az esetben, ha mind a két vívó érvényes találatot ér el, mielőtt a bíró kiadja az 'Állj!' vezényszót, a szabályoknak megfelelően három különböző taktikai helyzet határozható meg:
-   1. Együttes (szimultán) találat/akció abban az esetben, ha egy semleges helyzetben mindkét vívó ugyanakkor indította meg a támadását, és egyik sem tekinthető egyedüli kezdeményezőnek. Ebben az esetben mind a két vívó kap 1 pontot.
-   1. Kettős találat abban az esetben, ha mindkét vívó talál egy tempón belül, de ezek nem együttes/szimultán akciók. Ezek megítélése az adott fegyvernek megfelelő szabályok szerint történik.
-   1. Az után-akcióból (találat utáni akcióból) származó találat, ahol a vívó a találat kapás pillanatában, vagy azután kezd meg egy támadó akciót. Az után-akciókért nem jár pont, és nem teszik semmissé a kapott találatot. További vonatkozó szabályokért lásd: 04.b--hosszukard-COMBAT fejezet. 
+    1. Együttes (szimultán) találat/akció abban az esetben, ha egy semleges helyzetben mindkét vívó ugyanakkor indította meg a támadását, és egyik sem tekinthető egyedüli kezdeményezőnek. Ebben az esetben mind a két vívó kap 1 pontot.
+    1. Kettős találat abban az esetben, ha mindkét vívó talál egy tempón belül, de ezek nem együttes/szimultán akciók. Ezek megítélése az adott fegyvernek megfelelő szabályok szerint történik.
+    1. Az után-akcióból (találat utáni akcióból) származó találat, ahol a vívó a találat kapás pillanatában, vagy azután kezd meg egy támadó akciót. Az után-akciókért nem jár pont, és nem teszik semmissé a kapott találatot. További vonatkozó szabályokért lásd: 04.b--hosszukard-COMBAT fejezet. 
 
 1.  Találatokat a következő módokon lehet kivitelezni:
-   1. Ütés - A fegyver élével vagy lapjával végrehajtott támadás, ami sérülést okozna az adott területen.
-   1. Szúrás - A fegyver hegyével végrehajtott támadás. A szúrás akkor érvényes, ha egyértelműen megállapítható, pl a találat megülése során a penge hajlásából.
-   1. Vágás - A fegyver élével, érvényes találati felületen végrehajtott, egyértelműen felismerhető toló vagy húzó mozdulat.
-   1. Ütés markolatgombbal - A fegyver markolatgombjával mért ütés, kizárólag a maszk rostély részére.
-   1. A bíró megítélhet pontot egy olyan akcióért amikor a fegyverrel végrehajtott akció következtében az egyik vívó mozgását, szabadulását passzívan megakadályozó helyzetbe kerül, amelyből jelentős ideig képtelen kitörni. Ilyen helyzet előállhat fegyverrel vagy anélkül végrehajtott birkózófogásokból, amelyek a fegyver mozgását  megakadályozzák, és ezt a helyzetet jelentős ideig - addig, amikor a bíró saját hatáskörében úgy ítéli, hogy a dominancia követelményei teljesültek, és elhangzik az ‘Állj!’ parancs - fenn is tartják. Dominancia ítélet nem alkalmazható olyan helyzetekre, ahol az ellenfél ki tud törni a fogásból, és érvényes akciókat tud kezdeményezni, akkor sem, ha valamilyen aktív erőfeszítés eredményeképp a dominálni szándékozó fegyver továbbra is érinti az ellenfél találati felületét. A domináló akciók érvényességét a bíró saját hatáskörében ítéli meg.
+    1. Ütés - A fegyver élével vagy lapjával végrehajtott támadás, ami sérülést okozna az adott területen.
+    1. Szúrás - A fegyver hegyével végrehajtott támadás. A szúrás akkor érvényes, ha egyértelműen megállapítható, pl a találat megülése során a penge hajlásából.
+    1. Vágás - A fegyver élével, érvényes találati felületen végrehajtott, egyértelműen felismerhető toló vagy húzó mozdulat.
+    1. Ütés markolatgombbal - A fegyver markolatgombjával mért ütés, kizárólag a maszk rostély részére.
+    1. A bíró megítélhet pontot egy olyan akcióért amikor a fegyverrel végrehajtott akció következtében az egyik vívó mozgását, szabadulását passzívan megakadályozó helyzetbe kerül, amelyből jelentős ideig képtelen kitörni. Ilyen helyzet előállhat fegyverrel vagy anélkül végrehajtott birkózófogásokból, amelyek a fegyver mozgását  megakadályozzák, és ezt a helyzetet jelentős ideig - addig, amikor a bíró saját hatáskörében úgy ítéli, hogy a dominancia követelményei teljesültek, és elhangzik az ‘Állj!’ parancs - fenn is tartják. Dominancia ítélet nem alkalmazható olyan helyzetekre, ahol az ellenfél ki tud törni a fogásból, és érvényes akciókat tud kezdeményezni, akkor sem, ha valamilyen aktív erőfeszítés eredményeképp a dominálni szándékozó fegyver továbbra is érinti az ellenfél találati felületét. A domináló akciók érvényességét a bíró saját hatáskörében ítéli meg.
  
 ### A közelharc szabályai
 
@@ -151,8 +151,8 @@ Amennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, 
 Az ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedett. Akkor ítélhető pont, ha a penge kézzeli megfogása futólagos, és azt azonnal követi egy fegyverrel adott találat. Ha a penge kézzeli megfogása következtében nem sikerül találatot elérni, a bíró megállítja az asszót, és nem ítél pontot. Ha a birkózást kezdeményező fél az ellenfél fegyverét előbb nem hatástalanítja, és találatot kap, az ellenfélnek kell pontot ítélni.
 
 1.  Pontszerző birkózó akciók:
-   1.  Földrevitelek és dobások után/során (tempón belül) egyszerű és azonnali támadás a fegyverrel
-   1.  Birkózásban fegyverrel vagy fegyver nélkül addig kontrollálva az ellenfelet, amíg a bíró ‘Állj’-t nem mond.
+    1. Földrevitelek és dobások után/során (tempón belül) egyszerű és azonnali támadás a fegyverrel
+    1. Birkózásban fegyverrel vagy fegyver nélkül addig kontrollálva az ellenfelet, amíg a bíró ‘Állj’-t nem mond.
 
 1. A földrevitel után további küzdelem nem engedélyezett. A bíró ‘Állj’-t mond, ha valamelyik vívó a földre kerül, vagy a bíró nem tudja megítélni az akciót, vagy a dominancia megszerzése huzamosabb ideig sem sikerül (ezt a bíró saját hatáskörében ítéli meg).
 
