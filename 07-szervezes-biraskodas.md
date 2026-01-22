@@ -23,13 +23,13 @@
 
 3.  A küzdelem megállítása után a bíró szükség esetén egyeztet a segédbíróval (kézjelekkel jelzi az akciót és a találatot, a segéd szükség esetén jelzi, ha a bíró szemszögéből nem látható találat is esett; szükség esetén a bíró szóban is konzultálhat a segéddel), végül javasol egy ítéletet. Ha a vívók elfogadják az döntést (azaz nem kérnek felülvizsgálatot), a küzdelem a bíró által javasolt ítélettel folytatódik. Ha valamelyik vívó felülvizsgálatot kér, de az ellenfele nem ért vele egyet, a bíró megismételheti az asszót, vagy ha meggyőződéssel döntést tud hozni, ítélhet pontot a kérdéses akcióért.
 
-4.  Ha a bíró valamiért nem tudja interpretálni a végrehajtott akciósort, annak okát ismertetnie kell. Ilyenkor megismételtetheti az asszót, és az esetleges hibájáért illendő elnézést kérnie.
+4.  A bíró akkor is meg kell indokolja a döntését, ha nem tudja megítélni a végrehajtott akciót (bírói hiba esetén illendő azt elismernie).
 
 5.  A bírói ítéletei a mérkőzés végeztével visszamenőleg nem képezik vita tárgyát.
 
-6. A bíró képes kell legyen a mérkőzések angol nyelvű vezetésére, beleértve a szabályok és az akciók interpretációját.
+6.  A bíró képes kell legyen a mérkőzések angol nyelvű vezetésére, beleértve a szabályok és az akciók interpretációját.
 
-7. A versenybíró az alábbi jelzéseket köteles használni:
+7.  A versenybíró az alábbi jelzéseket köteles használni:
 
 ![image](https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03)
 

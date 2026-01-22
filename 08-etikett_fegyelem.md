@@ -1,41 +1,181 @@
-## Vívó etikett és fegyelmi szabályzat
+## A VERSENYEK FEGYELMI SZABÁLYZATA
+## 1. Fejezet - HATÁLY
 
-### Rend és Fegyelem
+1. Ezen rész előírásai a vívóversenyen részt vevő és jelenlévő valamennyi személyre vonatkoznak, beleértve a nézőket is.
+1. Az alábbi szakaszokban a „vívók” megnevezés alatt az összes ilyen személy értendő.
 
-1. Minden résztvevő és jelenlévő, beleértve a nézőket is, szigorúan be kell tartsa az adott verseny szabályait, az udvariasság és becsületesség hagyományait, a tisztviselők utasításait. Különösképpen, rendezett, fegyelmezett, és sportszerű módon alávetik magukat az alábbi rendelkezéseknek; melyek bárminemű megszegése a fegyelmi hatóság által kiszabott büntetést vonhat maga után, előzetes figyelmeztetéssel, vagy anélkül, figyelembe véve a tényeket és körülményeket.
+### A rend és fegyelem fenntartása
 
-1. Minden, a versenyen résztvevő és jelenlévő köteles fegyelmezett magatartást tanúsítani, és nem megzavarni a verseny gördülékeny lebonyolítását. A mérkőzések közben senki nem közelítheti meg a küzdőteret, hogy tanácsokat adjon a vívóknak, kritizálja a bírót vagy a segédjét, hogy sértegesse, vagy befolyásolni próbálja őket bármilyen módon. A vívó segédje köteles a számára kijelölt helyen maradni. A bíró köteles haladéktalanul leállítani minden tevékenységet, amely megzavarja az általa vezetett mérkőzést.
+1. A vívóknak pontosan és becsületesen be kell tartaniuk az MHSZ versenyszabályait és alapszabályát, az adott versenyre vonatkozó külön szabályokat, az udvariasság és tisztesség hagyományos szokásait, valamint a hivatalos személyek utasítását.
 
-1. Bármely személy, aki bármilyen indokkal sérteget vagy fenyeget egy tisztviselőt, azonnal diszkvalifikálható / kiutasítható a helyiségből.
+1. Kifejezetten alávetik magukat a rend, a fegyelem és a sportszerűség elveinek alapulvételével az alábbi előírásoknak. Ezek megsértése esetén, a tényállástól és a körülményektől függően az illetékes fegyelmi hatóság figyelmeztetést követően, vagy akár anélkül is az előírt büntetéseket alkalmazza.
 
-1. A bíró, és/vagy szervező csapat saját jogkörükben dönthetnek minden olyan személy a verseny területéről való kiutasításáról, aki a gesztusaival, magatartásával vagy nyelvhasználatával megzavarja a verseny zavartalan lebonyolítását.
+1. A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHSZ Alapszabályát, ide értve de nem kizárólagosan a MHSZ Etikai Kódexet. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a vívót segédjének vagy a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a "Versenyzők / Személyes hozzáállás / A csapatkapitány" szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. "2. fejezet / A versenybíró"). Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a 4. csoportba tartozó vétséget követ el, és a 4. Fejezetben "A negyedik csoportba tartozó vétségek"-ben foglaltak szerint büntetendő. Ha a jelenlévők közül bárki az MHSZ Etikai Szabályzatának megsértését észleli, köteles ezt az MHSZ ellenőrnek vagy a DT-nek jelezni.
+
+1. A verseny helyszínéül szolgáló termekben tilos dohányozni. A dohányzás a verseny rendje megzavarásának tekintendő (Vö. a következő bekezdéssel). Ezen szabályok megsértése a harmadik csoportba tartozó vétségként büntetendő.
+
+1. A versenybíró és/vagy a DT [szervező csapat?] hivatalból, vagy az MHSZ hivatalos kiküldöttének vagy a szervező bizottság tagjának kérésére figyelmeztetés után vagy anélkül dönthet annak a személynek a verseny színhelyéről való kitiltásáról, aki gesztikulációjával, magatartásával, nyelvezetével zavarja a verseny rendjét vagy gördülékeny lebonyolítását.
 
 ### A versenyzők
 
-1. A versenyen való puszta részvételükkel a vívók becsületükre megfogadják, hogy betartják a szabályokat, és alávetik magukat a tisztviselők döntéseinek és utasításainak, hogy tisztelettel bánnak a bírókkal (bírókkal és segédbírókkal) és lelkiismeretesen végrehajtják az utasításaikat és rendelkezéseiket.
+Becsületbeli elköteleződés
+1. A versenyre való nevezés tényével a versenyző becsületbeli elköteleződését fejezi ki arra vonatkozóan, hogy a szabályokat és a hivatalos személyek döntéseit betartja, tisztelettel viseltetik a versenybírók és oldalbírók iránt, valamint lelkiismeretesen aláveti magát a versenybíró utasításainak és vezényszavainak (Vö. t.158-163, t.169, t.170).
 
-1. A vívó nem vehet részt a versenyen, ha nem hajlandó kiállni egy, a versenyre szabályosan nevezett versenytársa ellen. Ezen szabály megsértése esetén a fegyelmi vétségek 4. csoportjában meghatározott büntetést kell kiszabni.
+Az ellenféllel való megmérkőzés megtagadása
+1. Az MHSZ vívója (egyéni vagy csapat) nem vehet részt a hivatalos versenyeken, amennyiben másik szabályosan benevezett vívóval (egyéniben vagy csapatban)
+való megmérkőzést megtagadja. Ennek a szabálynak a megsértése esetén a vívót a 4. csoportba tartozó vétségekre vonatkozó szankciókkal kell büntetni (Vö. t.158-163, t.169, t.170).
 
-1. A vívók kötelesek megjelenni teljes, a szabályoknak mindenben megfelelő felszerelésben, és vívásra készen az adott csoportkör, mérkőzés vagy egyenes kieséses mérkőzés meghatározott helyén és idején, illetve a felszerelés ellenőrzésre kijelölt időpontban a mérkőzésük előtt, valamint a verseny során bármikor, amikor a bíró erre őket felszólítja.
+Pontos megjelenés
+1. A vívóknak a szabályzat előírásainak megfelelő felszereléssel (Vö. t.64-t.70) teljesen felszerelve és vívásra készen kell a kijelölt helyen és időben megjelenniük a csoportmérkőzés vagy az egyenes kieséses mérkőzés kezdetén, vagy a mérkőzés előtt a felszerelés ellenőrzésére előírt időpontban (Vö. t.64-66) és a verseny folyamán bármikor a versenybíró kérésének megfelelően.
 
-1. Amikor egy mérkőzés megkezdéséhez jelentkeznek, a vívóknak teljesen vívásra kész állapotban kell megjelenniük a küzdőtéren – szabályos öltözetben, zárt kabátban, felvett kesztyűben és fegyverrel a kézben.
+1. A mérkőzésre jelentkezéskor a vívónak a páston vívásra teljesen készen kell megjelennie: szabályos vívóruhában, zárt vívókabátban, kesztyűben, fegyverrel és maszkkal a kézben.
+
+1. A mérkőzés kezdete előtt a vívók haját a vívóruhán- és/vagy a maszkon belül kell rögzíteni oly módon, hogy:
+    1. az ne takarja el a vívó nevét és nemzetiségét
+    1. azt ne kelljen a mérkőzés során megigazítani, és ezáltal a küzdelmet megszakítani. 
+    
+    A szabály megszegése esetén a versenybíró az 1. csoportba tartozó (t.158, t.162, t.165, t.170) büntetéseket alkalmazza.
+
+1. A csoportmérkőzés, a csapatmérkőzés, az egyenes kieséses mérkőzés (egyéni vagy csapat) kezdete előtt:
+    1. Ha a csoportmérkőzés, csapatmérkőzés vagy közvetlen kieséses mérkőzés megkezdésére (Vö. t.66.1) kijelölt időpont előtt 10 perccel a versenybíró első felszólítására a vívó vagy teljes csapat nem jelentkezik, a vívót vagy csapatot versenyből kizárják.
+    2. A csapat akkor tekinthető teljesnek, ha legalább három tagja jelen van.
+    3. A csapatmérkőzésen csak azok a csapattagok (vívók, a csapatkapitány és egy edző, Vö. t.132.1) vehetnek részt, akik a versenybíró első felszólítására a mérkőzésre kijelölt kezdési időpont előtt 10 perccel jelen vannak.
+
+1. Az egyéni- vagy csapatversenyen ha egy vívó nem jelentkezik a páston vívásra készen a versenybíró felszólítására:
+    1. A vívó vagy csapattag sárga lapos figyelmeztetést kap;
+    2. Egy perccel az első felszólítás utáni második felszólításra, a nem jelentkező vívó vagy csapattag piros lapos büntetést kap.
+    3. A harmadik és utolsó felszólításra, egy perccel a második felszólítás után a nem jelentkező vívót (egyéni versenyen), csapatversenyen a teljes csapatot kizárják a versenyből.
 
 1. A verseny során, ha egy vívó nem jelenik meg a küzdőtéren amikor a bíró szólítja:
     1. A nem megjelent vívó sárga lapot kap;
     1. Az első hívást követő egy perc elteltével másodszor is szólítják, ha ekkor sem jelenik meg, az érintett vívó piros lapot kap;
     1. A második hívást követő egy perc elteltével egy harmadik és utolsó hívást kap, melyet távolmaradás esetén a versenyszámból való kizárás követ.
 
-1. Mérkőzések közben és után, akkor is, ha a vívó már elhagyta a küzdőteret, minden olyan cselekedet, ami megsérti a sportszerűség elvét, például a sisak (vagy bármely más felszerelés) veszélyt okozó elhajítása büntetést von maga után.
-
-1. A vívó, mind a küzdőtéren és azon kívül, köteles viselnie a maszkját egészen addig, amíg a bíró „Állj-t” (Halt!) nem mond. Semmilyen körülmények között sem szólíthatja meg a bírót, ameddig a bíró a döntését meg nem hozta.
-
-1. A versenyzőknek a lehető legjobb helyezés elérése érdekében a verseny végéig sportszerűen kell vívniuk a legjobb tudásuk szerint, anélkül, hogy eladnának találatokat, vagy arra törekednének, hogy egy ellenfél őket előnyben részesítse előnybe találatok beengedésével. 
+1. Ha a vívó a pást elhagyásával félbeszakítja a mérkőzést (vö.: t.23.6), a t.158-162, t.165, t.170 szerinti, az első csoportba tartozó vétségekre vonatkozó büntetést kell alkalmazni.
 
 ### Vívó etikett
 
-1. Minden mérkőzésnek meg kell őriznie az udvarias és nyílt összecsapás szellemiségét. Minden rendhagyó cselekedet (például: az ellenfél erőszakos fellökése, fegyelmezetlen vívás, szabálytalan mozdulatok a küzdőtéren, erőszakkal megszerzett találatok, keresztvassal végrehajtott csapások, véletlen esés közben vagy után bevitt találatok, veszélyes technikák végrehajtása, düh kitöltése a berendezésen vagy a helyszín felszerelésein) vagy sportszerűtlen viselkedés szigorúan tilos. Ilyen vétség esetén bármilyen találat, amit az elkövető az érintett asszóban szerzett,  megsemmisítendő.
+1. 
+    1. A versenyzőknek becsületesen, jelen szabályzat előírásait szigorúan betartva kell vívniuk. Ezen szabályok bárminemű megsértése az itt rögzített büntetéseket vonja maga után (Vö. t.158-162, t.170.).
 
-1. A vívók minden mérkőzés előtt kötelesek vívói tiszteletadással illetni ellenfelüket, a bírót, és lehetőség szerint a közönséget. Ugyanígy, a végső találat megszerzése után a mérkőzés addig nem ér véget, ameddig a vívók nem adták tiszteletüket egymásnak (kézfogással vagy azzal egyenértékű gesztussal), a bírónak, és lehetőség szerint a közönségnek. Ennek érdekében a vívóknak a küzdőtéren kell maradniuk, ameddig a bíró meghozza döntését. A döntés után visszatérnek az alapvonalra, tisztelegnek, majd kezet fognak ellenfelükkel. Ha bármely vagy mindkét vívó ellentmond ezeknek a szabályoknak, a bíró a fegyelmi vétségek 4. csoportjának megfelelő büntetést szab ki.
+    2. Minden mérkőzésnek udvarias és becsületes jellegűnek kell maradnia. Kifejezetten tiltott minden rendellenes akció (az ellenfél lökésével végződő lerohanás, zavaros/fegyelmezetlen vívásmód, rendellenes helyváltoztatások, erőszakkal bevitt találatok, veszélyes technikák alkalmazása, kosárral/keresztvassal végrehajtott vágás/ütés, szándékos elesés a találat elkerülése érdekében) vagy sportszerűtlen magatartás (Vö. t. 158- 162, t.170). Ilyen vétség felmerülésekor a vétkes vívó által esetlegesen adott találatot meg kell semmisíteni.
+
+
+1. A mérkőzés kezdete előtt a két vívó vívó-tisztelgéssel üdvözöli az ellenfelét, a versenybírót és a közönséget a t.1 pontban írtak szerint. Az utolsó találat beadása után a versenybíró döntésétz nyugodtan meg kell várniuk a felállási vonalon.
+Utána vívó-tisztelgést (vö.: t.1) hajtanak végre, üdvözölve az ellenfelet, a versenybírót és a közönséget, és kezet fognak ellenfelükkel.
+A mérkőzés ezt követően ér véget
+Ha az egyik vagy mindkét vívó ezt a szabályt megszegi, a versenybíró a vétkessel/vétkesekkel szemben a 4. csoportba tartozó vétségekre vonatkozó büntetést alkalmazza (Vö. t.158-162, t.169, t.170).
+
+1. Mérkőzés közben vagy azt követően, akár a pást elhagyása után is tilos mindennemű sportszerűtlen magatartás tanúsítása, mint például a maszk vagy más felszerelés erőszakos vagy veszélyes elhajítása, vagy düh kitöltése a berendezésen vagy a helyszín felszerelésein, és a t.169 (Vö. t.108.1, 2 and t.109.) szerint a negyedik csoportba tartozó vétségként büntetendő.
+
+1. A vívó a páston vagy a páston kívül, a versenybíró „állj!” vezényszaváig köteles a maszkot a fején tartani. A versenybírót döntése meghozatala előtt semmilyen körülmények között nem szólíthatja meg. (Vö. t.158- 162, t.165, t.170). A szabály megsértőjét az első csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani.
+
+1. A mérkőzés végén a versenybíró, magához rendeli a két vívót, hogy közölje velük a végeredményt, amelyet a Directoire Technique felé továbbít. Érthetően ki kell hirdetnie: "X győzött Y ellen, ... pontszámmal".
+
+### Személyes hozzáállás
+1. A vívóknak a verseny végéig sportszerűen, legjobb képességeik szerint kell vívniuk, hogy minél jobb helyezést érjenek el, anélkül, hogy bárkinek találatot ajándékoznának, vagy bárkitől ajándék találatot várnának el (Vö. t.158-162, t.169, t.170). A szabály megsértőjét a negyedik csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani.
+
+### A csapatkapitány
+1. Csapatversenyeken kizárólag a csapatkapitány jogosult a versenybíróhoz vagy a versenybírói bizottság kiküldöttéhez fordulni mindenfajta technikai kérdés tisztázása vagy panasz előterjesztése érdekében. A panaszokra vonatkozó eljárását a t.172-175 szakaszok szabályozzák.
+
+Azok a csapattagok, akik pontosan betartották a csapatkapitány rendelkezéseit, nem vonhatóak felelősségre az arra egyébként illetékes szervek által. Ugyanakkor személyesen felelősek minden tettükért amelyekről nem a csapatkapitány rendelkezett és minden általuk elkövetett vétségért, amellyel megsértették jelen szabályzat rendelkezéseit.
+
+### Edzők és kísérő személyzet
+1. 
+    1. Az egyéni versenyek egyenes kieséses szakaszában a versenyző edzője, az egészségügyi és technikai személyzet tagjai nem tartózkodhatnak a versenyző mellett; az edzők a szervező által kijelölt, a versenytér közelében lévő helyen tartózkodhatnak.
+
+    1. A versenybíró szükség esetén feljogosíthat egy személyt arra, hogy pillanatnyi segítséget nyújtson egy vívónak.
+
+1. A csapatmérkőzések során ki kell jelölni a csapatok részére fenntartott helyet. Csak a csapatkapitánynak és egy edzőnek van joga a csapattagok részére kijelölt zónában tartózkodni, amely helyet egyértelműen kell kijelölni.
+
+    1. A csapatmérkőzés során az éppen nem vívó csapattagoknak a csapatuk számára kijelölt zónán belül kell tartózkodniuk.
+    1. A csapatversenyek során a versenybíró engedélye nélkül senki nem léphet be a csapattagok részére kijelölt zónába. Ilyen vétség elkövetése esetén a versenybíró a vétkes csapatot a t.158-162, t.165, t.170. szakaszokban szereplő (az első csoportba tartozó vétségekre vonatkozó) büntetésekkel sújtja. A csapatra kirótt figyelmeztetés érvényes a teljes csapatmérkőzésen. Ha egy vívó ugyanazon találkozó során az első csoportba tartozó újabb vétséget követ el, a versenybíró minden esetben piros lapot ad neki.
+
+### Nézőközönség
+
+1. A nézők nem zavarhatják a versenyek rendjét és semmi olyat nem tehetnek, amellyel befolyásolnák a vívókat vagy a versenybírót. Tiszteletben kell tartaniuk a versenybíró döntéseit még akkor is, ha azokkal nem értenek egyet. Követniük kell a versenybíró által szükségesnek tartott, részükre adott utasításokat (Vö. t.109-110, t.167-168, t.170, a harmadik csoportba tartozó vétségek).
+
+
+## 2. Fejezet - FEGYELMI HATÓSÁGOK ÉS AZOK JOGKÖRE
+
+### Preambulum
+
+1. A következő szakaszok csak a verseny helyszínére vonatkozó fegyelmet szabályozzák. A megállapított vétségek súlyától függően nem zárják ki a FIE Fegyelmi Kódex alkalmazását (a FIE Alapszabály VII. fejezetét), amely kiegészíti vagy adott esetben felülírja az alábbi szakaszok rendelkezéseit.
+
+### Jogkörrel bíró szervek, személyek
+1. A következők bírnak fegyelmi hatáskörrel:
+    1. a versenybíró (Vö. t.137)
+    1. A Versenybírói Bizottság küldöttei
+    1. a Directoire Technique (Vö. t.139, o.15 to o.22)
+    1. a FIE ellenőr;
+    1. a Nemzetközi Olimpiai Bizottság Végrehajtó Bizottsága az Olimpiai Játékokon (Vö. t.142)
+    1. a FIE Irodája (Vö. t.143.1/4, o.12)
+    1. a FIE Végrehajtó Bizottsága (Vö. t.143.5).
+    1. a FIE Fegyelmi Bizottsága és Választottbírósága
+    1.  a Sportdöntőbíróság és Sport Ítélő Tábla
+
+Lásd még a FIE Fegyelmi Szabályzatát (a FIE Alapszabály VII. fejezet)
+
+### Az eljárás elvei
+1. 
+    1. Bármelyik hatóság hozta a döntést, az ellen lehetőség van fellebbezésre egy magasabb fórumnál, de csak egy alkalommal.
+    1. A fellebbezés tárgya nem lehet ténykérdés vizsgálata.
+    1. A fellebbezésnek csak akkor van a döntés végrehajtására halasztó hatálya, ha az nyomban elbírálható.
+
+### A versenybíró
+1. 
+    1. A versenybíró nem csak a mérkőzést vezeti, a találatokat bírálja el és a felszerelést ellenőrzi, hanem felelős az általa irányított mérkőzések rendjéért is (Vö. t.47.2.i).
+    1. Amikor a versenybíró a mérkőzéseket vezeti, a találatokat elbírálja, a szabályok szerint a vívókat vétségeik miatt megbüntetheti a körülmények figyelembevételével előzetes figyelmeztetés után vagy anélkül a ténylegesen adott találat érvénytelenítésével, találat odaítélésével valamelyik vívó terhére amikor találat ténylegesen nem esett, valamint a versenyző adott versenyből való kizárásával. Ezek során a ténymegállapítást tartalmazó döntése nem változtatható meg (Vö. t.172).
+    1. A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a Directoire Technique-nél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt (Vö. t.158-162, t.167, t.168, t.170).
+    1. A versenybíró javasolhat a DT-nek további megfelelőnek tartott, büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. t.139.3).
+
+1. A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte,
+vagy a FIE ellenőr (ha nincs küldött).
+
+1. segédbíró???
+
+### A Directoire Technique a FIE hivatalos versenyein (vö.: o.15-22)
+1. 
+    1. A DT-nek, a Versenyíró Bizottság küldötteinek illetve a FIE ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen.
+
+    1. Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat.
+    
+    1. A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják.
+    1. A DT köteles a FIE központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket.
+    1. A DT felel a kiszabott büntetések végrehajtásáért, ha azok ellen fellebbezésnek nincs helye, vagy annak a végrehajtásra nincs halasztó hatálya. (Vö. t.136).
+
+1. A DT, a Versenyíró Bizottság küldötte, illetve a FIE ellenőr spontán módon hozott, vagy (elsőfokú hatóságként) saját jogon hozott fegyelmi döntése ellen a FIE Fegyelmi Bizottságához lehet fellebbezni.
+
+1. A DT, a Versenyíró Bizottság küldötte, illetve a FIE ellenőr minden döntése azonnal végrehajtható. A verseny során semmilyen fellebbezésnek nincs halasztó hatálya a döntés végrehajtására.
+
+### A FIE Központi Iroda, Fegyelmi Bizottság, Végrehajtó Bizottság, Sportdöntőbíróság
+1. 
+    1. A nemzeti szövetségnek, a DT-nek vagy más hatáskörrel rendelkező szervnek minden hivatalos FIE versenyen felmerült fegyelmi üggyel kapcsolatosan a FIE Központi Irodáját kell megcímeznie. Ez átteszi az ügyet az illetékes szervhez.
+    
+    2. A FIE Fegyelmi Bizottsága a FIE ítélkező szerve: eldönti a FIE hatáskörét nem meghaladó valamennyi a FIE-nek megküldött fegyelmi ügyet és elbírálja a Directoire Technique, a Versenybíró Bizottság hivatalos kiküldötte, vagy a FIE ellenőr (ha nincs kiküldött) határozatai ellen benyújtott valamennyi fellebbezést.
+    
+    3. A lausanne-i Sportdöntőbíróság – „TAS”-, bírál el minden fellebbezést, amelyet a Fegyelmi Bizottság valamelyik tanácsának határozata ellen benyújtottak.
+    
+    4. Sürgős esetben a FIE Irodája tehet adminisztratív lépéseket, hogy a Fegyelmi Szabályzattal összhangban, a vétkes versenyzési engedélyét (licencét) felfüggesszék.
+    
+    5. A Végrehajtó Bizottság felel a Fegyelmi Bizottság határozatainak tiszteletben tartásáért  és végrehajtásáért.
+    
+    Lásd a FIE Fegyelmi Kódexét (FIE Alapszabály VII. fejezet).
+
+## 3. Fejezet - BÜNTETÉSEK
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 1. A büntetendő cselekedetek szóbeli figyelmeztetést, figyelmeztetést (sárga lap), ellenfélnek adott pontot (piros lap), a versenyszámból vagy a helyszínről való kizárást (fekete lap) vonhatnak maguk után, figyelembe véve azok súlyosságát és ismétlődését, a szabályokban foglaltaknak megfelelően. (Lásd még a Függelékben a Fegyelmi Vétségek Táblázatát)
 
