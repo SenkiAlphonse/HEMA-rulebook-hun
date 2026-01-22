@@ -16,10 +16,9 @@
  
 1. Találati felület a vívó teljes teste, beleértve a fegyver markolatát, a ruházatot és a védőfelszerelést, kivéve a fej hátulja, a gerinc, a lábfejek és a térdek hátsó része.
  
-1. Érvénytelen találati felületre érkező vágások és szúrások erősségének megítélése a mérkőzést vezető bíró feladata amitől függően a találatot bevivő vívót köteles a bíró megfelelően büntetni a szabálytalanságok második csoportjában foglaltak szerint.
+1. Érvénytelen találati felületre érkező vágások és szúrások erősségének megítélése a mérkőzést vezető bíró feladata. A súlyosság függvényében a bíró a szabálytalanságot elkövető vívót a második, harmadik, vagy negyedik csoportba tartozó vétségekre vonatkozó büntetéssel sújtja.
  
-1. A mérkőzést vezető bírónak büntetni kell azt a vívót, aki érvényes találati felületet érvénytelen találati
-felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, fegyelmi vétségek első csoportjának megfelelően.
+1. Ha a vívó annak elfedésével vagy rendellenes mozdulattal érvényes találati felületét érvénytelennel helyettesíti, őt a versenybíró az első csoportba tartozó vétségekre vonatkozó büntetésekkel sújtja és az általa esetlegesen bevitt találatot megsemmisíti.
  
 ### A találatok megállapítása vagy érvénytelenítése
  
