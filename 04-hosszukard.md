@@ -25,7 +25,7 @@ felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, f
  
 1. A találatok elbírálásának alapját a mérkőzést vezető, az akciót megfigyelő bíró és segédje észlelései képezik.
 
-1. Egyedül a versenybíró hatáskörébe tartozik a találat tényének (objektív találatjelző gép hiányában), érvényességének vagy elsőbbségének megítélése, a fegyvernemre vonatkozó szabályok alapján. A versenybíró az általa észlelt események tekintetében tett ténymegállapításai nem kérdőjelezhetők meg.
+1. Egyedül a versenybíró hatáskörébe tartozik a találat érvényességének megítélése, a fegyvernemre vonatkozó szabályok alapján. A versenybíró az általa észlelt események tekintetében tett ténymegállapításai nem kérdőjelezhetők meg.
 
 1. A vívó a szabályoknak megfelelően kérhet magyarázatot, videóbíráskodást, és végső esetben felügyeletet, de egy bírói döntés a meghozatala után végleges, nem megkérdőjelezhető.
  

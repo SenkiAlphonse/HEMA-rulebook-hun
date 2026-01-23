@@ -31,7 +31,7 @@
 
 1. a versenybírónak meg kell állítania a mérkőzést, ha a vívás zavarodottá válik, és annak menetét a továbbiakban nem képes követni még akkor is ha nem esett találat.
 
-1. A vívók kérhetik az asszó megállítását a kezük felemelésével. Ezt bármilyen érvényes indokkal megtehetik (pl felszerelés meghibásodás, sérülés, stb.). Az asszó csak akkor tekinthető megállítottnak, amikor a bíró kiadta az ‘Állj!’/’Halt’/’Arret’ parancsot.
+1. A vívók kérhetik az asszó megállítását a kezük felemelésével. Ezt bármilyen érvényes indokkal megtehetik (pl felszerelés meghibásodás, sérülés, stb.). Az asszó csak akkor tekinthető megállítottnak, amikor a bíró kiadta az ‘Állj!’/’Halt’/’Arrêt’ parancsot.
 
 1. Az asszó kezdetét jelző parancs előtt vagy annak befejezését jelző parancs után indított akciók nem tekinthetők érvényesnek. Az asszó indító parancs kiadása előtti, vagy az asszót megállító parancs kiadása utáni akcióindítás a fegyelmi vétségek első csoportjába tartozik.
 
@@ -151,12 +151,12 @@ Amennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, 
 Az ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedett. Akkor ítélhető pont, ha a penge kézzeli megfogása futólagos, és azt azonnal követi egy fegyverrel adott találat. Ha a penge kézzeli megfogása következtében nem sikerül találatot elérni, a bíró megállítja az asszót, és nem ítél pontot. Ha a birkózást kezdeményező fél az ellenfél fegyverét előbb nem hatástalanítja, és találatot kap, az ellenfélnek kell pontot ítélni.
 
 1. Pontszerző birkózó akciók:
-    1. Földrevitelek és dobások után/során (tempón belül) egyszerű és azonnali támadás a fegyverrel
+    1. Földrevitelek és dobások után/során egyszerű és azonnali támadás a fegyverrel
     1. Birkózásban fegyverrel vagy fegyver nélkül addig kontrollálva az ellenfelet, amíg a bíró ‘Állj’-t nem mond.
 
 1. A földrevitel után további küzdelem nem engedélyezett. A bíró ‘Állj’-t mond, ha valamelyik vívó a földre kerül, vagy a bíró nem tudja megítélni az akciót, vagy a dominancia megszerzése huzamosabb ideig sem sikerül (ezt a bíró saját hatáskörében ítéli meg).
 
-1. A lefegyverzés érvényes pontszerzési mód, kivéve ha a lefegyverzett vívó azonnal (a bírói ‘Állj’ előtt) kontrolállja az ellenfél pengéjét és birkózásba megy át.
+1. A lefegyverzés (mely során az egyik vívó szándékosan elveszi az ellenfele fegyverét, akkor is, ha utána elejti azt) érvényes pontszerzési mód, kivéve ha a lefegyverzett vívó azonnal (a bírói ‘Állj’ előtt) kontrolállja az ellenfél pengéjét és birkózásba megy át.
 
 1. Ha a vívó az ellenfél beavatkozása nélkül elejti a fegyverét vagy elesik, a bíró ‘ Állj’-t mond. Azt az (egyszerű, vagy az összetett akciót befejező mozdulattal) elért találatot, ami még azelőtt indult, hogy az ellenfél nyilvánvalóan elveszítette a fegyverét vagy elesett, érvényesnek kell minősíteni akkor is, ha csak azután érkezik be. A sportszerűség jegyében illetlenség új támadást kezdeményezni a fegyverét vesztett vagy földre került ellenféllel szemben, így ezért nem adható pont.
 
@@ -166,7 +166,7 @@ Az ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedet
 
 1. Tilos a túlzott erőkifejtés, brutalitás és a szükségtelen erőszak.
 
-1. Tilos eltalálni  a fej hátulját, a gerincet, a térdhajlatot és a lábfejet.
+1. Tilos eltalálni a fej hátulját, a gerincet, a térdhajlatot és a lábfejet.
 
 1. A fej elfordítása, vagy más érvényes találati felület eltakarása egy érvénytelen felülettel a fegyelmi vétségek első csoportjába tartozó szabálytalanság.
 
