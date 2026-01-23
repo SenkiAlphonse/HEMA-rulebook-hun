@@ -4,9 +4,9 @@
 
 1. A hosszúkard szúró- és vágófegyver.
  
-1. A penge lapjával, hosszú és rövid élével végrehajtott minden vágás találatnak számít.
+1. A penge lapjával, hosszú és rövid élével, illetve hegyével végrehajtott minden vágás illetve a szúrás megfelelő, amennyiben úgy hajtják végre, hogy az, éles fegyvert feltételezve, egy védőruházat nélküli ellenfélnek sérülést okozna. A lappal végrehajtott találat érvényesnek tekinthetők, ha koordinált és hatásos akció eredménye.
 
-1. Pengén keresztül - amelyek egyidejüleg találják el a test érvényes találati felületét és az ellenfél fegyverét- érkező találatok érvényesek minden olyan alkalommal, amikor tisztán eltalálják az érvényes találati felületet.
+1. A pengén keresztül történő vágások, amelyek egyidejűleg találják a test érvényes találati felületét és az ellenfél fegyverét, érvényesek olyankor amikor tisztán az érvényes találati felületre érkeznek.
  
 1. A markolatgombbal végrehajtott találatok érvényesek, ha az ellenfél maszkjának borítás nélküli rostélyát találják el jelzés értékűen -akár a gombot kesztyűvel eltakarva- és biztonságosan kivitelezve. A szükségtelen erővel végrehajtott markolatgomb akciók a szabálytalanságok második csoportjában foglaltak szerint büntetendő.
 
@@ -25,7 +25,7 @@ felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, f
  
 1. A találatok elbírálásának alapját a mérkőzést vezető, az akciót megfigyelő bíró és segédje észlelései képezik.
 
-1. A találatok megtörténtének, érvényességének megítélése a versenybíró legjobb belátására van bízva (objektív találatjelző gép hiányában). A bíró az általa észlelt információk tekintetében nem kérdőjelezhető meg.
+1. Egyedül a versenybíró hatáskörébe tartozik a találat tényének (objektív találatjelző gép hiányában), érvényességének vagy elsőbbségének megítélése, a fegyvernemre vonatkozó szabályok alapján. A versenybíró az általa észlelt események tekintetében tett ténymegállapításai nem kérdőjelezhetők meg.
 
 1. A vívó a szabályoknak megfelelően kérhet magyarázatot, videóbíráskodást, és végső esetben felügyeletet, de egy bírói döntés a meghozatala után végleges, nem megkérdőjelezhető.
  
