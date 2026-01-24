@@ -120,7 +120,7 @@
 
 1. Minden figyelmeztetést (SÁRGA LAP), büntetést (PIROS LAP), és kizárást (FEKETE LAP) csoportjával együtt fel kell tüntetni a pontozó lapon vagy a csoportmérkőzés lapján. 
 
-1. Minden figyelmeztetést (SÁRGA LAP), büntetőütést (PIROS LAP) és kizárást (FEKETE LAP) fel kell jegyezni a mérkőzés, vagy a körmérkőzés pontozólapjára, a fegyelmi csoporttal együtt, amelyhez tartoznak.
+1. Minden figyelmeztetést (SÁRGA LAP), büntető találatot (PIROS LAP) és kizárást (FEKETE LAP) fel kell jegyezni a mérkőzés, vagy a körmérkőzés pontozólapjára, a fegyelmi csoporttal együtt, amelyhez tartoznak.
 
 #### A vétségek első csoportja
 
