@@ -33,7 +33,7 @@
 
 ### Vívó etikett
 
-1. Minden mérkőzésnek meg kell őriznie az udvarias és nyílt összecsapás szellemiségét. Minden rendhagyó cselekedet (például: az ellenfél erőszakos fellökése, fegyelmezetlen vívás, szabálytalan mozdulatok a küzdőtéren, erőszakkal megszerzett találatok, keresztvassal végrehajtott csapások, véletlen esés közben vagy után bevitt találatok, veszélyes technikák végrehajtása, düh kitöltése a berendezésen vagy a helyszín felszerelésein) vagy sportszerűtlen viselkedés szigorúan tilos. Ilyen vétség esetén bármilyen találat, amit az elkövető az érintett asszóban szerzett,  megsemmisítendő.
+1. Minden mérkőzésnek meg kell őriznie az udvarias és nyílt összecsapás szellemiségét. Minden rendhagyó cselekedet (például: az ellenfél erőszakos fellökése, fegyelmezetlen vívás, szabálytalan mozdulatok a küzdőtéren, erőszakkal megszerzett találatok, keresztvassal végrehajtott csapások, véletlen esés közben vagy után bevitt találatok, veszélyes technikák végrehajtása, düh kitöltése a berendezésen vagy a helyszín felszerelésein) vagy sportszerűtlen viselkedés szigorúan tilos.
 
 1. A vívók minden mérkőzés előtt kötelesek vívói tiszteletadással illetni ellenfelüket, a bírót, és lehetőség szerint a közönséget. Ugyanígy, a végső találat megszerzése után a mérkőzés addig nem ér véget, ameddig a vívók nem adták tiszteletüket egymásnak (kézfogással vagy azzal egyenértékű gesztussal), a bírónak, és lehetőség szerint a közönségnek. Ennek érdekében a vívóknak a küzdőtéren kell maradniuk, ameddig a bíró meghozza döntését. A döntés után visszatérnek az alapvonalra, tisztelegnek, majd kezet fognak ellenfelükkel. Ha bármely vagy mindkét vívó ellentmond ezeknek a szabályoknak, a bíró a fegyelmi vétségek 4. csoportjának megfelelő büntetést szab ki.
 
@@ -88,9 +88,9 @@
 
 #### A vívással kapcsolatos büntetések
 
-1. Szerzett találat jutalmazásának megtagadása. Bár a versenyző ténylegesen eltalálta ellenfele érvényes találati felületét, ezt a találatot meg lehet tagadni, vagy azért, mert nem a vívás megengedett időtartama alatt érkezett meg, vagy azért, mert a versenyző átlépte a küzdőtér határait, vagy mert a találatot erőszakosan szerezte, vagy a szabályzatban meghatározott egyéb okok miatt.
+1. Szerzett találat jutalmazásának megtagadása. Bár a versenyző ténylegesen eltalálta ellenfele érvényes találati felületét, ezt a találatot meg lehet tagadni, vagy azért, mert nem a vívás megengedett időtartama alatt érkezett meg, vagy azért, mert a versenyző átlépte a küzdőtér határait, vagy mert a találatot erőszakosan szerezte vagy más szabálysértést követett el a találat megszerzése közben, vagy a szabályzatban meghatározott egyéb okok miatt.
 
-1. Meg nem történt találat odaítélése. A versenyző ellen olyan találatot ítélhetnek meg, amelyet valójában nem kapott; vagy azért, mert átlépte az aréna határát, vagy azért, mert olyan szabálysértést követett el, amely megakadályozta ellenfelét a vívásban.
+1. Meg nem történt találat odaítélése. A versenyző ellen olyan találatot ítélhetnek meg, amelyet valójában nem kapott; vagy azért, mert átlépte a küzdőtér határát, vagy azért, mert olyan szabálysértést követett el, amely megakadályozta ellenfelét a vívásban.
 
 1. Kizárható a versenyből az a versenyző, aki vívás közben bizonyos erőszakos vagy bosszúálló cselekményeket követ el ellenfelével szemben, vagy aki nem a legjobb tudása szerint vív, vagy az ellenfelével kötött csalárd megállapodásból profitál. Az a versenyző, akit kizárnak egy versenyből, nem vehet részt a verseny további részében, még akkor sem, ha már kvalifikálta magát a következő fordulóba jutásra. Elveszíti az egyéni rangsorban szerzett helyét, és a kizárt vívó után rangsorolt összes vívó egy hellyel feljebb lép a ranglistában.
 
@@ -124,7 +124,6 @@
 
 #### A vétségek első csoportja
 
-
 1. Ebben az első csoportban az első vétség SÁRGA LAP (figyelmeztetés)  büntetést von maga után. Ha ugyanazon a mérkőzésen a vívó ismételten elköveti ugyanazt vagy más, ebben a csoportban lévő szabálysértést, a Bíró minden alkalommal PIROS LAP-tal (büntető találat) bünteti. Ha a vétkes vívót az adott mérkőzésen már büntették PIROS LAPPAL a Második vagy Harmadik Csoportban felsorolt szabálysértés miatt, akkor az első csoportba tartozó első szabálysértéséért is további PIROS LAPOT kap.
 1. Csapatmérkőzéseken belül az első csoportba tartozó vétségek számítása az egyes meccsek kezdetével újraindul (minden egyes fordulóban az első vétségért SÁRGA LAP jár), kivéve a táblázatban megjelölt, egész csapatra vonatkozó figyemeztetések, amelyek után a mérkőzés hátralevő részében bármely, az első csoportba tartozó vétség elkövetése PIROS LAPpal büntetendő.
 
@@ -149,3 +148,14 @@
 1. A negyedik csoportban az első vétséget FEKETE LAPPAL  (a versenyből való kizárással) büntetik.
 
 1. A vívó megtartja a kizárás pillanatáig elért helyezését (kivéve, ha még nem készült rangsor a csoportmérkőzések alapján) A büntetett vívó megtartja a kizárás pillanatáig megszerzett helyezését a ranglistán (kivéve, ha a rangsort még nem állították fel a csoportmérkőzések útján).
+
+#### Találat megsemmisítése szabályszegés miatt
+
+1. Egy találatot meg kell semmisíteni, ha a versenybíró megállapítja, hogy a találatot olyan szabályszegés útján érték el, amely közvetlenül és oksági kapcsolatban állt a találathoz vezető vívóakcióval.
+
+1. Egy szabályszegés akkor tekinthető közvetlen és oksági kapcsolatban állónak, ha a versenybíró megítélése szerint a találat azonos módon vagy azonos időpillanatban nem jöhetett volna létre a szabályszegés elkövetése nélkül.
+
+1. Egy találat nem semmisíthető meg pusztán amiatt, hogy szabályszegés történt, ha:
+
+    1. a szabályszegés nem vett közvetlenül részt a pontszerző akció végrehajtásában (a szabálytalanság elkövetése és a találat közt a vívószerepek újraértékelődtek); 
+    1. a szabályszegés nem állt összefüggésben azokkal a taktikai vagy fizikai feltételekkel, amelyek a találat létrejöttét lehetővé tették.
