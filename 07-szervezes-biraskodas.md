@@ -106,7 +106,7 @@ arra
             1. Valamelyik vívó **5 találatot elért**, illetve
             1. ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
         1. Afterblow 
-            1. Valamelyik vívó **legalább 7 PONTOT elért**,
+            1. Valamelyik vívó **legalább 5 PONTOT elért**,
                 1. a súlyozás miatt a 7 pontot meg lehet haladni.
                 1. Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal), 
                     1. amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;

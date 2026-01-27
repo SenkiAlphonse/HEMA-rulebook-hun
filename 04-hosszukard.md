@@ -13,9 +13,13 @@
 ### Érvényes találati felület
  
 1. Csak azok a találatok érvényesek, amelyek az érvényes találati felületre esnek.
- 
-1. Találati felület a vívó teljes teste, beleértve a fegyver markolatát, a ruházatot és a védőfelszerelést, kivéve a fej hátulja, a gerinc, a lábfejek és a térdek hátsó része.
- 
+
+1. Érvényes találati felület magában foglalja a vívó egész testét, beleértve a fegyver markolatát, a ruházatot és a védőfelszerelést, kivéve a fej hátulja, a gerinc, a lábfejek és a térdek hátsó része.
+
+  <p align="center">
+    <img width="75%" height="75%" alt="TARGET_BLUE" align="center" src="https://github.com/user-attachments/assets/e8d25cdc-2721-4e82-84b3-8c7c0673c9b1" />
+  </p>
+  
 1. Érvénytelen találati felületre érkező vágások és szúrások erősségének megítélése a mérkőzést vezető bíró feladata amitől függően a találatot bevivő vívót köteles a bíró megfelelően büntetni a szabálytalanságok második csoportjában foglaltak szerint.
  
 1. A mérkőzést vezető bírónak büntetni kell azt a vívót, aki érvényes találati felületet érvénytelen találati
