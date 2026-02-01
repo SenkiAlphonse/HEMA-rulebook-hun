@@ -34,10 +34,6 @@
     1. Akkor is “állj!”-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók), vagy ha kilép a pástról.
     1. Kivételes körülményektől eltekintve a versenybíró nem adhat engedélyt a vívónak a pást elhagyására. Ha a vívó ezt engedély nélkül megteszi, akkor vele szemben az első csoportba tartozó vétségekre vonatkozó büntető rendelkezéseket kell alkalmazni.
 
-1. Az idő leteltét az Időmérő (személyzet) jelzi a bíró számára.
-
-<!--
-
 1. A vívók kérhetik az asszó megállítását a kezük felemelésével. Ezt bármilyen érvényes indokkal megtehetik (pl felszerelés meghibásodás, sérülés, stb.). Az asszó csak akkor tekinthető megállítottnak, amikor a bíró kiadta az ‘Állj!’/’Halt’/’Arrêt’ parancsot.
 
 1. Az asszó kezdetét jelző parancs előtt vagy annak befejezését jelző parancs után indított akciók nem tekinthetők érvényesnek. Az asszó indító parancs kiadása előtti, vagy az asszót megállító parancs kiadása utáni akcióindítás a fegyelmi vétségek első csoportjába tartozik.
@@ -46,15 +42,9 @@
 
 1. Abban az esetben, mikor a bíró úgy állítja meg az asszót, hogy egy találatot érvénytelennek hitt és figyelmen kívül hagyott a megállítást kiváltó akció végrehajtását megelőzően, viszont később kiderül, hogy a korábbi találat érvényes volt, akkor a bírónak, ha lehetséges, az első érvényes találatot figyelembe véve kell döntést hoznia, akkor is, ha ennek eredményeképpen érvényteleníteni kell más, később esett találatokat.
 
-1. Minden érvényes találat után, vagy ha az asszót más okból megállítják (zavart vívás, meghibásodás, sikertelen birkózási kísérlet, stb.), a mérkőzés a felállási vonalról folytatódik, vívóállásból.
-
-1. A mérkőzések után a bíró kihirdeti a győztest, és a végső pontszámokat. A vívók tisztelegnek a bíróknak és az ellenfélnek, majd kezet fognak az ellenféllel. A kézfogás elutasítása a fegyelmi vétségek harmadik csoportjába tartozik.
-
 1. A vívók a körmérkőzések, és minden egyenes kieséses mérkőzés végén, a küzdőtér elhagyása előtt ellenőrzik, és aláírják a pontvezető lapot, melyet a bíró vagy a kisegítő személyzet vezet a mérkőzés alatt. Csapatmérkőzések végén ez a csapatkapitányok feladata.
 
-1. Felszerelés mérkőzés közbeni meghibásodása esetén a bíró 5 perc szünetet engedélyezhet (amely akkor kezdődik, amikor a bíró megbizonyosodott a meghibásodásról). Ez az idő felhasználható az érintett felszerelés kijavítására, vagy cseréjére és ellenőriztetésére. Ha a versenyző nem tudja folytatni a mérkőzést a szünet végéig, a bíró kizárhatja a versenyzőt az adott mérkőzésből. Vö 06-szervezés/Csapatversenyek/3/6
-
-1. A mérkőzés során esett sérülés vagy izomgörcs esetén a bíró maximum 10 percig tartó szünetet rendelhet el a sérülés kezelésére (az idő mérése attól kezdődik, amikor a szakképzett személyzet felállította a diagnózist). Ezt az időtartamot a sérülés vagy izomgörcs kezelésére kell fordítani. További megszakítás nem engedélyezhető ugyanazon sérülés miatt az adott mérkőzésen belül. Ha a szakképzett személyzet a 10 perces szünet közben vagy végén a vívót a mérkőzés biztonságos folytatására alkalmatlannak ítéli, visszaléptetheti őt a mérkőzéstől, vagy a versenytől. -->
+1. Felszerelés mérkőzés közbeni meghibásodása esetén a bíró 5 perc szünetet engedélyezhet (amely akkor kezdődik, amikor a bíró megbizonyosodott a meghibásodásról). Ez az idő felhasználható az érintett felszerelés kijavítására, vagy cseréjére és ellenőriztetésére. Ha a versenyző nem tudja folytatni a mérkőzést a szünet végéig, a bíró kizárhatja a versenyzőt az adott mérkőzésből. Vö 07-szervezés/Csapatversenyek/3/6
 
 ### A határvonalak átlépése
 

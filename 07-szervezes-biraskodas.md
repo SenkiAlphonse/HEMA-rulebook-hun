@@ -184,9 +184,8 @@ arra
 1.  Az általános rangsort a következők szerint kell felállítani:
     1. Első: Az első helyért vívott mérkőzés győztese
     1. Második: az első helyért vívott mérkőzés vesztese.
-    1. A harmadik és negyedik helyért az elődöntők két vesztese vív.
+    1. A harmadik és negyedik helyért az elődöntők két vesztese vív (kivéve ha egyenes kieséses rendszerben bonyolítják le a döntőt, akkor mindketten harmadik helyezettnek).
     1. A többi versenyző helyezése minden egyes körben az egyenes kiesés során elért helyükkel egyezik meg.
-
 
 ### Versenyszemélyzet
 
