@@ -84,47 +84,9 @@ arra
 
 ### A versenyek szervezése és minősítése
 
-#### A mérkőzések időtartama
-
-1. A küzdelem időtartamán a tényleges küzdelem idejét, tehát a „rajta!” és „állj!” közötti időközök összességét kell érteni.
-
-1. A küzdelem időtartamát a versenybíró vagy egy időmérő méri. A hivatalos versenyek döntőin, valamint minden olyan mérkőzésen, amelyen a nézők számára látható az időmérés, az időmérő órát úgy kell elhelyezni, hogy azt a páston levő két vívó és a versenybíró is láthassa.
-
-1. A vívók a viadal megszakításakor minden alkalommal megkérdezhetik, mennyi idejük maradt a vívásra.
-
-1. Minden olyan vívót, aki szabálytalanul megpróbálja megszakítani a viadalt, vagy a megszakítást meghosszabbítani, a '07-etikett_fegyelem'/'Büntetések' vonatkozó bekezdései és a 'Függelék'/Büntetések táblázata szerint büntetik.
-
 #### Egyéni csoportmérkőzések
 
 1. Minden versenyszámban, amelynek részét képezi csoportmérkőzés, a csoportok 7 versenyzőből állnak, amennyiben a versenyzők száma osztható 7-tel. Egyébként 7 és 6 fős csoportokat kell hirdetni.
-
-1. A csoportmérkőzések során egy mérkőzés akkor ér véget, ha:
-    1. 
-        1. Vor
-            1. Valamelyik vívó **5 találatot elért**. 
-        1. Combat
-            1. Valamelyik vívó **5 találatot elért**, illetve
-            1. ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
-        1. Afterblow 
-            1. Valamelyik vívó **legalább 5 PONTOT elért**,
-                1. a súlyozás miatt a 7 pontot meg lehet haladni.
-                1. Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal), 
-                    1. amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;
-                    1. ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
-        1. Ebben az esetben a pontozó lapon feltüntetett pont az összecsapás végső pontszáma (V5-Dn, ahol ‘n’ a vesztes vívó által szerzett  pontok száma)
-    
-    1. Három percnyi tényleges vívóidő eltelt (Nincs figyelmeztetés az utolsó percnél)
-        1. Ha az idő lejártakor legalább egy találatnyi különbség van a két versenyző pontjai között, a több pontot elért versenyzőt kell győztesnek kihirdetni. A jegyzőkönyvön a mérkőzésen ténylegesen elért találatokat kell rögzíteni (VN – Dn, ahol N= a győztes vívó által szerzett pontok száma és n= a vesztes vívó által szerzett pontok száma).
-
-        1. Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.
-        
-        1. Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni: 
-            1. VN – Dn, ha döntő találat esett az időkereten belül;
-            1. V6 – D6 vagy V4 – D4 vagy V2 – D2 vagy V1 – D1 vagy V0 – D0 ha sorsolás alapján kerül ki győztes.
-
-1. Visszalépés és kizárás: 
-    1. ha egy vívó a csoportban egyetlen mérkőzéstől lép vissza felszerelés meghibásodás vagy sérülés miatt, de a többi mérkőzését be tudja fejezni minden esetben a visszalépő versenyző ellenfelét kell győztesként regisztrálni, habár a szerzett pontok nem kerülnek törlésre. Jegyzőkönyv: Vn – DN, VN – Dn.
-    1. ha az egyik vívó visszavonul vagy kizárásra kerül a versenyszámból, így győztesnek nyilvánítva az ellenfelet, a csoportkörben a versenyzéstől visszalépő vívó mérkőzésein regisztrált pontszámok törlésre kerülnek: V0 – D0.
 
 1. A versenyszámok kezdete előtt a Szervező Csapat eldönti és kihirdeti hány versenyző esik ki a felállított rangsor alapján (0-40%).
 
@@ -155,37 +117,23 @@ arra
 
 #### Egyéni egyenes kieséses mérkőzések
 
-1. A – teljes vagy nem teljes – egyenes kieséses táblát a rangsor és az adott versenyszám vonatkozó szabályai szerint (lásd 2.-es ábra) kell létrehozni.
+1. A – teljes vagy nem teljes – egyenes kieséses táblát a rangsor és az adott versenyszám vonatkozó szabályai szerint (Lásd pl: Függelék/IndDE64.pdf) kell létrehozni.
 
-1. A verseny szervezői közzéteszik az egyenes kieséses mérkőzések tervezetét. Az egyenes kieséses mérkőzéseket 15 pont eléréséig, vagy az 1 perces szünettel elválasztott 2 * 3 perc vívóidő leteltéig vívják, 
+1. A verseny szervezői közzéteszik az egyenes kieséses mérkőzések tervezetét. 
 
-1. A mérkőzés akkor ér véget, ha
-    1. 
-        1. Vor
-            1. az egyik versenyző **elér 15 találatot**; vagy
-        1. Combat
-            1. az egyik versenyző **elér 15 találatot**; vagy
-        1. Afterblow
-            1. az egyik versenyző **elér legalább 11 PONTOT**; 
-                1. a súlyozás miatt a 11 pontot meg lehet haladni.
-                1. Ha mindkét versenyző egyszerre éri el vagy haladja meg a 11 pontot (egyidejű találatokkal), 
-                    1. amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;
-                    1. ha az állás ekkor döntetlen lett, döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
-    
-    1. vagy a három, egyperces pihenőidőkkel elválasztott három perces harmad (9 percnyi tényleges vívóidő) eltelt. Vor esetén kivételesen az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 8 találatot el nem ér.
-        1. Az egyperces pihenőidő alatt, egy, a mérkőzés előtt megnevezett személy mehet a versenyző közvetlen közelébe.
-        1. Ha a szabályokban foglalt idő leteltekor a pontszámok egyenlőek, a vívók győztes pontért küzdenek, maximum egy percig. Az összecsapás kezdete előtt a bíró kisorsolja (pénzfeldobással), ki lesz a győztes abban az esetben, ha a pontok a plusz egy perc leteltével még mindig egyenlőek. A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen megszerzett pontszámok.
-
-1. Az a versenyző lesz a nyertes, aki több pontot szerzett. A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen megszerzett pontszámok.
 1. Ha egy vívó az egyenes kiesés alatt lép vissza, az ellenfelet nyilvánítják győztesnek, de a visszalépő versenyző nem veszíti el a rangsorban szerzett helyét.
 
 1. Visszalépés: Ha, bármilyen okból kifolyólag, az egyik versenyző nem képes folytatni a küzdelmet, vagy befejezni a mérkőzést, az ellenfelet nyilvánítják győztesnek. A visszalépő vívó "Did not finish"/"Visszalépett" megjegyzéssel megtartja a helyezését az összesített rangsorban.
 
 1. Kizárás:ha egy vívót kizárnak, el kell távolítani az egyenes kieséses tábláról, és az eredményeit m eg kell semmisíteni, mintha nem vett volna részt a versenyen. A kizárt vívót a végső rangsor végén "Excluded"/"Kizárva" megjegyzéssel kell adminisztrálni.
 
-#### Csapatversenyek
+1.  A mérkőzések sorrendje: az egyenes kieséses tábla minden fordulójában (256, 128, 64, 32, 16, 8, 4) a mérkőzéseket mindig a táblázat szerint fentről lefelé haladva hirdetik ki.
 
-<!-- TODO Afterblow váltások -->
+1. A döntő
+    1. A döntő vagy egyenes kieséses rendszerben, vagy minden helyért vívással kerül lebonyolításra, és lehetőség szerint 4 vívóból áll.
+    1. Az azonos fegyvernemben megrendezett női és férfi versenyszámok döntőit lehetőség szerint ugyanazon a napon kell lebonyolítani.
+
+#### Csapatversenyek
 
 1. A csapatok minden fegyvernem esetén három vívóból állnak, egy tartalékkal, vagy anélkül. Egy csapat csak akkor kezdhet el egy mérkőzést, ha minden tagja jelen van. 
 
@@ -197,17 +145,6 @@ arra
         1. A HEMARatinggel nem rendelkező csapattagokat egységesen a fegyvernemnek megfelelő kategória legrosszabb weightedRatingjét felezve számított értékkel kell figyelembe venni (vegyes csapatoknál a 'Mixed/Men'-t, nemtől függetlenül).
         1. Ha két csapat így számított indexe egyforma, sorrendjüket sorsolással kell meghatározni.
     1. A táblán az első 16 helyen minden helyezésért vívni kell. A 17. helytől lefelé a csapatok helyezését a táblán elfoglalt eredeti helyük alapján kell megállapítani.
-
-#### Csapatmérkőzések
-
-1. A váltómérkőzés minden váltása 5 találatból áll (5, 10, 15, 20, stb.). Kivételesen egy váltás végződhet többel mint 5, 10, 15 stb., ha a vívó érvényes találatot ad a váltás végén és további büntetőtalálatot is jóváírnak neki: ebben az esetben mindkettőt figyelembe kell venni; a maximális idő egy-egy találkozóra 2 perc.
-10 Az első két ellenfél addig vív, amíg egyikük 5 találatot el nem ér, a két perces időhatáron belül. A következő két versenyző a két perces időkeretben addig vív, amíg valamelyikük el nem éri a 10 találatot, majd így tovább minden további találkozónál váltásonként öt találatot hozzáadva.
-
-1. Ha a két perc elteltével a fordulóra előírt pontszámot nem érték el, a következő két versenyző olyan állásnál folytatja a mérkőzést amilyennél az abbamaradt, és a fordulóra előírt maximális pontszámig vívnak a két perces időkeretben.
-
-1. A győztes csapat az, amelyik eléri a maximális 45 találatot, vagy amelyik több találatot ért el az idő lejártakor.
-
-1. Ha az utolsó fordulóra irányadó idő lejártakor pontegyenlőség áll fenn, az utolsó fordulót vívó versenyzők legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.
 
 1. A versenyt a következőképp kell lebonyolítani:
     1. A váltások módja minden fegyvernemre érvényes. 
@@ -232,19 +169,15 @@ arra
 
     1. 
         1. Ha mind a vívó, mind a tartalék (ha van ilyen) kénytelen visszalépni, és ezért a csapat nem teljes, akkor elveszti a mérkőzést, és vissza kell lépnie a versenytől. A csapat megőrzi helyét a végső rangsorban. 
-        1. Ha egy vívót csapatmérkőzés közben kizárnak, akkor csapata elvesztette a mérkőzést, és a csapatot végső helyezés nélkül kizárják a versenyből. Vö. '07-etikett_fegyelem'/'Büntetések'/'A büntetések típusai (csoportjai)'/3
+        1. Ha egy vívót csapatmérkőzés közben kizárnak, akkor csapata elvesztette a mérkőzést, és a csapatot végső helyezés nélkül kizárják a versenyből. Vö. '08-etikett_fegyelem'/'Büntetések'/'A büntetések típusai (csoportjai)'/3
 
     1. Ha egy csapat bármilyen okból nem fejezi be azt az eseményt, amelyen részt vesz, a Szervezőcsapat azokra a versenyzőkre vonatkozó szabályokat alkalmazza, akik nem teljesítenek egy eseményt egyéni versenyen, minden csapatot teljes egészében úgy kezelve, mintha egyetlen versenyző lenne. Vö. 'Függelék'/'Büntetések táblázata'
 
     1. Ha egy csapat nem jelenik meg egy másik csapat ellen, akkor a következőként kell eljárni:
-        1. Ha már vívott egy másik csapat ellen, úgy kell kezelni, mintha nem fejezte volna be a versenyt, amelyen részt vesz (vö. '06-szervezés'/'Egyenes kieséses mérkőzések'/7);
+        1. Ha már vívott egy másik csapat ellen, úgy kell kezelni, mintha nem fejezte volna be a versenyt, amelyen részt vesz (vö. Egyenes kieséses mérkőzések/Visszalépés);
         1. ha az első mérkőzésén nem jelenik meg, úgy kell kezelni, mintha egyáltalán nem venne részt a versenyen. 
 
 1. A csapatversenyek idő és pontszám kereteire vonatkozó szabályokat lásd: '03-általános'/'Csapatmérkőzések'
-
-#### A mérkőzések sorrendje
-
-1.  Az egyenes kieséses tábla minden fordulójában (256, 128, 64, 32, 16, 8, 4) a mérkőzéseket mindig a táblázat szerint fentről lefelé haladva hirdetik ki.
 
 #### Értékelés
 

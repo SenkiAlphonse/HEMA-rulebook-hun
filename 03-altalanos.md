@@ -28,25 +28,15 @@
 1. 
     1. A mérkőzés megkezdése előtt a bíró felkéri az ellenfeleket, hogy egyezzenek meg a mérkőzésük során a test test elleni küzdelem során birkózó fogások használatáról. Ezt a pontozólapon fel kell jegyezni.
     1. A küzdelem kezdetét a “rajta!” vezényszó jelzi. A vezényszó előtt végrehajtott vagy indított mozdulat nem vehető figyelembe.
-    1. A mérkőzés az “állj!” vezényszóra áll meg, kivéve az olyan különleges helyzeteket, amelyek a mérkőzés szabályos és szokványos feltételeit megváltoztatják (Vö. t.44.1/2 is).
-    1. Az “állj!” vezényszó elhangzása után a vívó nem kezdhet új akciót; csak a már elindított mozdulat marad érvényes. Minden, ami ezután történik, teljesen érvénytelen (de t.44.1/2).
+    1. A mérkőzés az “állj!” vezényszóra áll meg, kivéve az olyan különleges helyzeteket, amelyek a mérkőzés szabályos és szokványos feltételeit megváltoztatják (Vö. Időmérés 1/1, 1/2 is).
+    1. Az “állj!” vezényszó elhangzása után a vívó nem kezdhet új akciót; csak a már elindított mozdulat marad érvényes. Minden, ami ezután történik, teljesen érvénytelen (de Időmérés 1/1, 1/2).
     1. Ha valamelyik vívó az “állj!” vezényszó előtt megáll, és találatot kap, az a találat érvényes.
     1. Akkor is “állj!”-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók), vagy ha kilép a pástról.
     1. Kivételes körülményektől eltekintve a versenybíró nem adhat engedélyt a vívónak a pást elhagyására. Ha a vívó ezt engedély nélkül megteszi, akkor vele szemben az első csoportba tartozó vétségekre vonatkozó büntető rendelkezéseket kell alkalmazni.
 
 1. Az idő leteltét az Időmérő (személyzet) jelzi a bíró számára.
 
-<!-- 1. A küzdelem akkor fejeződik be amikor a bíró kiadja az ‘ Állj!’, ‘Halt’ vagy ‘Arrêt’ parancsot. A mérkőzés leállításának leggyakoribb okai:
-    1. Érvényes találat esett.
-    1. Érvénytelen találat esett, amely megnehezíti a további akciók megítélését.
-    1. Az egyik vívó mindkét lábával elhagyta a küzdőteret.
-    1. Lejárt az idő.
-    1. Veszélyes vagy zavaros vívás.
-    1. Felszerelés meghibásodása.
-    1. Sérülés.
-    1. Az egyik vívó kézfeltartással kéri hogy állítsák meg az asszót.
-
-1. a versenybírónak meg kell állítania a mérkőzést, ha a vívás zavarodottá válik, és annak menetét a továbbiakban nem képes követni még akkor is ha nem esett találat.
+<!--
 
 1. A vívók kérhetik az asszó megállítását a kezük felemelésével. Ezt bármilyen érvényes indokkal megtehetik (pl felszerelés meghibásodás, sérülés, stb.). Az asszó csak akkor tekinthető megállítottnak, amikor a bíró kiadta az ‘Állj!’/’Halt’/’Arrêt’ parancsot.
 
@@ -66,27 +56,118 @@
 
 1. A mérkőzés során esett sérülés vagy izomgörcs esetén a bíró maximum 10 percig tartó szünetet rendelhet el a sérülés kezelésére (az idő mérése attól kezdődik, amikor a szakképzett személyzet felállította a diagnózist). Ezt az időtartamot a sérülés vagy izomgörcs kezelésére kell fordítani. További megszakítás nem engedélyezhető ugyanazon sérülés miatt az adott mérkőzésen belül. Ha a szakképzett személyzet a 10 perces szünet közben vagy végén a vívót a mérkőzés biztonságos folytatására alkalmatlannak ítéli, visszaléptetheti őt a mérkőzéstől, vagy a versenytől. -->
 
-### A küzdőtér határvonala
+### A határvonalak átlépése
 
-1. Ha az egyik vívó mindkét lábával túlhaladja a küzdőtér határvonalát, a bírónak azonnal meg kell állítania a küzedelmet.
+1. Ha az egyik versenyző egyik vagy mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát, a versenybírónak azonnal “állj!”-t kell kiáltania. 
 
-1. Ha az egyik vívó mindkét lábával túlhaladta a küzdőtér határvonalát, a bíró érvénytelenít minden olyan akciót, amit a vívók küzdőtér elhagyása után indítottak.
+1. Ha a vívó mindkét lábbal kilép a pástról, meg kell semmisíteni mindent, ami a határvonal átlépése után történt.
 
 1. Ugyanakkor a határvonalat csak egy lábbal (másikkal nem vagy csak részben) átlépő vívó találata érvényes marad, ha az akció az „állj!” előtt kezdődött; akkor is, ha a vívó ezután teljesen elhagyta a küzdőteret.
 
-1. Ha az egyik vívó mindkét lábával elhagyja a küzdőteret anélkül hogy a kilépés előtt érvényes találatot adott volna le, a bíró a következőképpen jár el:
+1. Ha az egyik vívó a pást valmelyik határvona teljesen, tehát mindkét lábbal kilép a pástról, akkor csak azt a találatot lehet megítélni, amelyet a páston legalább egy lábbal belül maradó vívó adott, és csakis Hosszúkard--Combat és --Afterblow esetén, még egyidejű találat esetében is. Hosszúkard--Vor esetén a konvenció szabályai irányadóak.
+
+1. Ha a vívó valamelyik határvonalat teljesen, tehát mindkét lábbal túlhaladja (anélkül hogy a kilépés előtt érvényes találatot adott volna), a versenybíró a következőképpen jár el:
+    <!-- TODO a figyelmeztetés elhagyható, ha a pást mérete hosszabb távon rögzül -->
+    <!-- TODO ha a jövőben hosszabb pástokat használunk, a hátsó vonal vs oldalvonal megkülönböztetés is relevánssá válhat majd -->
     1. Az első kilépésnél a vívó figyelmeztetést kap
     1. Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát túlhaladó versenyző egy találattal büntetendő (ellenfele egy pontot kap).
 
 #### Vétlen lelépés
-
-1. Semmilyen büntetéssel nem büntetendő az a vívó, aki valamelyik határvonalon nem szándékosan, hanem bármilyen váratlan esemény, baleset vagy lökés következtében lép le.
+1. Semmilyen büntetéssel nem büntetendő az a vívó, aki valamelyik határvonalon nem szándékosan bármilyen váratlan esemény, baleset (például lökés) következtében kilép.
 
 ### Nyert vagy vesztett terület
 1. Az “állj!” vezényszó elhangzásakor a nyert területet megszerezettnek kell tekinteni mindaddig, amíg nincs megítélt találat. Ha nincs megítélt találat, a vívóállásba való új felállításkor a két vívónak egyforma mértékben kell hátrálnia, hogy a megfelelő vívótávolságot felvegyék.
 
 1. Ugyanakkor, ha a mérkőzés testérintkezés miatt szakadt meg (és a közelharc nem engedélyezett), a vívókat úgy kell visszaállítani vívóállásba, hogy a testérintkezést elszenvedő vívó azon a helyen maradjon, ahol korábban állt; ez vonatkozik arra is, ha az ellenfél lerohanó támadást hajtott végre akár testérintkezés nélkül.
- 
+
+### A küzdelem időtartama
+1. 
+    1. A küzdelem időtartamán a tényleges küzdelem idejét, tehát a „rajta!” és „állj!” közötti időközök összességét kell érteni.
+    1. A küzdelem időtartamát a versenybíró vagy egy időmérő méri. A hivatalos versenyek döntőin, valamint minden olyan mérkőzésen, amelyen a nézők számára látható az időmérés, az időmérő órát úgy kell elhelyezni, hogy azt a páston levő két vívó és a versenybíró is láthassa.
+    1. A befejezett mérkőzés vagy váltás nem kezdhető újra, még akkor sem, ha formális hiba történt. (V.ö.: 08-etikett-fegyelem/vívó etikett/2.)
+
+#### Egyéni csoportmérkőzések
+
+1. A csoportmérkőzések során egy mérkőzés akkor ér véget, ha:
+    1. 
+        1. Vor
+            1. Valamelyik vívó **5 találatot elért**. 
+        1. Combat
+            1. Valamelyik vívó **5 találatot elért**, illetve
+            1. ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
+        1. Afterblow 
+            1. Valamelyik vívó **legalább 5 PONTOT elért**,
+                1. a súlyozás miatt a 7 pontot meg lehet haladni.
+                1. Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal), 
+                    1. amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;
+                    1. ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
+        1. Ebben az esetben a pontozó lapon feltüntetett pont az összecsapás végső pontszáma (V5-Dn, ahol ‘n’ a vesztes vívó által szerzett  pontok száma)
+    
+    1. Három percnyi tényleges vívóidő eltelt (Nincs figyelmeztetés az utolsó percnél)
+        1. Ha az idő lejártakor legalább egy találatnyi különbség van a két versenyző pontjai között, a több pontot elért versenyzőt kell győztesnek kihirdetni. A jegyzőkönyvön a mérkőzésen ténylegesen elért találatokat kell rögzíteni (VN – Dn, ahol N= a győztes vívó által szerzett pontok száma és n= a vesztes vívó által szerzett pontok száma).
+
+        1. Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.
+        
+        1. Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni: 
+            1. VN – Dn, ha döntő találat esett az időkereten belül;
+            1. V6 – D6 vagy V4 – D4 vagy V2 – D2 vagy V1 – D1 vagy V0 – D0 ha sorsolás alapján kerül ki győztes.
+
+#### Egyéni egyenes kieséses mérkőzések
+
+1. A mérkőzés akkor ér véget, ha
+    1. 
+        1. Vor
+            1. az egyik versenyző **elér 15 találatot**; vagy
+        1. Combat
+            1. az egyik versenyző **elér 15 találatot**; vagy
+        1. Afterblow
+            1. az egyik versenyző **elér legalább 11 PONTOT**; 
+                1. a súlyozás miatt a 11 pontot meg lehet haladni.
+                1. Ha mindkét versenyző egyszerre éri el vagy haladja meg a 11 pontot (egyidejű találatokkal), 
+                    1. amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;
+                    1. ha az állás ekkor döntetlen lett, döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
+    
+    1. vagy a meghatározott tényleges vívóidő eltelt:
+        <!-- ezeket az időket harmonizálni kell középtávon, és esetleges más fegyverek felvétele esetén is érvényesek kell maradjanak -->
+        1. Combat és Vor esetén a három, egyperces pihenőidőkkel elválasztott három perces harmad (9 percnyi tényleges vívóidő) eltelt. Vor esetén az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 8 találatot el nem ér. 
+        1. Afterblow esetében két, egyperces pihenőidőkkel elválasztott három perces periódus (6 perc tényleges vívóidő) eltelt.
+
+    1. Az egyperces pihenőidő alatt egy, a mérkőzés előtt megnevezett személy mehet a versenyző közvetlen közelébe.
+    1. Ha a szabályokban foglalt idő leteltekor a pontszámok egyenlőek, a vívók győztes pontért küzdenek, maximum egy percig. Az összecsapás kezdete előtt a bíró kisorsolja (pénzfeldobással), ki lesz a győztes abban az esetben, ha a pontok a plusz egy perc leteltével még mindig egyenlőek. A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen megszerzett pontszámok.
+
+1. Az a versenyző lesz a nyertes, aki több pontot szerzett. A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen megszerzett pontszámok.
+
+#### Csapatmérkőzések
+<!-- TODO Afterblow -->
+
+1. A váltómérkőzés minden váltása 5 találatból áll (5, 10, 15, 20, stb.). Kivételesen egy váltás végződhet többel mint 5, 10, 15 stb., ha a vívó érvényes találatot ad a váltás végén és további büntetőtalálatot is jóváírnak neki: ebben az esetben mindkettőt figyelembe kell venni; a maximális idő egy-egy találkozóra 2 perc.
+10 Az első két ellenfél addig vív, amíg egyikük 5 találatot el nem ér, a két perces időhatáron belül. A következő két versenyző a két perces időkeretben addig vív, amíg valamelyikük el nem éri a 10 találatot, majd így tovább minden további találkozónál váltásonként öt találatot hozzáadva.
+
+1. Ha a két perc elteltével a fordulóra előírt pontszámot nem érték el, a következő két versenyző olyan állásnál folytatja a mérkőzést amilyennél az abbamaradt, és a fordulóra előírt maximális pontszámig vívnak a két perces időkeretben.
+
+1. A győztes csapat az, amelyik eléri a maximális 45 találatot, vagy amelyik több találatot ért el az idő lejártakor.
+
+1. Ha az utolsó fordulóra irányadó idő lejártakor pontegyenlőség áll fenn, az utolsó fordulót vívó versenyzők legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.
+
+#### Időmérés
+1. 
+    1. Minden alkalommal amikor a küzdelem megszakad, a vívóknak lehetőségük van megkérdezni, hogy mennyi idejük maradt még vívni.
+    1. Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétségként büntetendő.
+1. 
+    1. A szabályos idő letelte után, az időmérőnek "állj!"-t kell kiáltania (vagy hangjelzést kell működtetnie), amellyel a küzdelmet megállítja és a már elindított, de az idő lejárta után esett találat sem érvényes.
+    1. A versenybírónak a mérkőzés során végig feladata az időmérés. Az időmérő óra meghibásodása esetén a versenybíró állapítja meg a hátralevő vívóidőt. 
+
+#### Sérülés vagy más egészségügyi ok, a versenyző visszalépése
+1. 
+    1. Ha a küzdelem folyamán sérülés vagy más egészségügyi ok merül fel és azt az ügyeletes orvos és/vagy egészségügyi szolgáltató igazolja, a versenybíró egy legfeljebb 5 perces szünetet engedélyezhet. Kizárólag az orvos vagy ügyeletes egészségügyi szolgáltató határozhatja meg az ellátáshoz szükséges idő hosszát ha orvosi időkérés esetén. Az időt onnantól kezdve kell számítani, hogy a versenyorvos a véleményét megadta. A szünet kizárólag a szükséges ellátásra van fenntartva. Ha az ügyeletes orvos az öt perces szünet letelte előtt megállapítja, hogy a versenyző nem képes a verseny folytatására, úgy dönthet a versenyző visszalépéséről (egyéni verseny) vagy lecseréléséről ha lehetséges (csapatverseny). Minden egészségügyi szünetet fel kell tüntetni a mérkőzés vagy a csoportmérkőzés jegyzőkönyvén.
+    <!-- Ha a versenyző visszalép és orvosi visszalépés kerül megállapításra, az ügyeletes orvos vagy egészségügyi szolgáltató köteles kitölteni és a DT-hez benyújtani a FIE Orvosi Visszalépés nyomtatványt a FIE ellenőr végső jelentésébe történő feltüntetés céljából. -->
+    <!-- Csapattag lecserélés: (Vö. o.99.6. a/b) -->
+    1. Ugyanazon a napon újabb megszakítást ugyanannak a vívónak csak akkor lehet engedélyezni, ha az egy másik sérülés vagy másik egyéb egészségügyi ok miatt válik szükségessé.
+    1. Amennyiben a vívó megszakításra irányuló kérelme az orvos megállapítása szerint megalapozatlan, a versenybíró a vétkes vívót a második csoportba tartozó vétségként bünteti.
+    1. A csapatversenyeken az a versenyző, aki az ügyeletes orvos véleménye alapján nem folytathatta a mérkőzést, ugyanazon orvos véleménye alapján ugyanazon a napon, későbbi csapatmérkőzéseken ismét versenyezhet.
+    1. A szervező a verseny hatékony lebonyolítása érdekében a csoportfordulóban megváltoztathatja a mérkőzések sorrendjét 
+    <!-- eredetileg DT, és (Vö. o.71.1). -->
+
 ### A közelharc szabályai
 
 A közelharc és a birkózás az alábbi szabályokkal folytatható:
