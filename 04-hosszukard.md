@@ -4,11 +4,15 @@
 
 1. A hosszúkard szúró- és vágófegyver.
  
-1. A penge lapjával, hosszú és rövid élével, illetve hegyével végrehajtott minden vágás illetve a szúrás megfelelő, amennyiben úgy hajtják végre, hogy az, éles fegyvert feltételezve, egy védőruházat nélküli ellenfélnek sérülést okozna. A lappal végrehajtott találat érvényesnek tekinthetők, ha koordinált és hatásos akció eredménye.
+1. A penge lapjával, hosszú és rövid élével, illetve hegyével végrehajtott minden vágás illetve a szúrás megfelelő, amennyiben úgy hajtják végre, hogy az, éles fegyvert feltételezve, egy védőruházat nélküli ellenfélnek sérülést okozna. A lappal végrehajtott találat érvényesnek tekinthető, ha koordinált és hatásos akció eredménye.
 
 1. A pengén keresztül történő vágások, amelyek egyidejűleg találják a test érvényes találati felületét és az ellenfél fegyverét, érvényesek olyankor amikor tisztán az érvényes találati felületre érkeznek.
  
 1. A markolatgombbal végrehajtott találatok érvényesek, ha az ellenfél maszkjának borítás nélküli rostélyát találják el jelzés értékűen -akár a gombot kesztyűvel eltakarva- és biztonságosan kivitelezve. A szükségtelen erővel végrehajtott markolatgomb akciók a szabálytalanságok második csoportjában foglaltak szerint büntetendő.
+
+1. Mindhárom fegyvernemben kizárólag a fegyverrel lehet végrehajtani védekező akciót, kivéve, ha a felek a fogásos és birkózó akciókat engedélyezték (V.ö.:03-altalanos/A közelharc szabályai).
+
+1. A fegyvert nem lehet – állandóan vagy ideiglenesen, láthatóan vagy leplezve – hajítófegyverként használni. A fegyvert úgy kell kezelni, hogy legalább egy kéz folytonosan a markolaton legyen.
 
 ### Érvényes találati felület
  

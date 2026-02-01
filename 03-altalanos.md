@@ -1,9 +1,8 @@
-## Általánosan érvényes szabályok
+## Vívásra általánosan érvényes szabályok
 
 ### A mérkőzések menete
 
-1. Minden mérkőzés meghatározott ideig vagy meghatározott számú találatig tart. Ez
-    különálló, független asszók sorozatán keresztül valósul meg. 
+1. Minden mérkőzés meghatározott ideig vagy meghatározott számú találatig (Afterblos esetben meghatározott számú pontig) tart. Ez különálló, független asszók sorozatán keresztül valósul meg. 
 
 1. A versenyzők a bíró hívására a szabályos felszerelésben, vívásra készen jelennek meg a küzdőtérnél, minden egyes körmérkőzés vagy egyenes kieséses mérkőzés előtt.
 
@@ -11,15 +10,33 @@
 
 1. Vívónként/csapatonként egy személy segítő/edző, tartózkodhat a pást mellett. Ez a személy beszélhet a vívóval szünetek alatt, de nem zavarhatja meg a mérkőzést szóbeli vagy fizikai jelzésekkel. A bírót a versenyző szólíthatja meg segítség- vagy magyarázat- vagy felülvizsgálati kéréssel, a segítő személyek a vívók szünetekbeni tanáccsal való ellátására kell szorítkozzanak.
 
-1. Az először szólított vívó foglalja el a bírótól jobbra lévő helyet, a felállási vonal mögött.
+#### Felállás kezdőállásba és a vívók helye
+1. 
+    1. Az elsőként szólított vívónak a versenybíró jobb oldalán kell állnia, kivéve a jobb- és balkezes vívók közötti mérkőzést, amikor a balkezes vívót szólították elsőként.
+    1. A versenybíró jobb oldalára annak a csapatnak kell felállnia, amelyikben több a jobbkezes vívó. Amennyiben egyenlő számú jobb- és balkezes vívó van a csapatokban, úgy az elsőnek szólított csapat áll fel a versenybíró jobb oldalára.
+    1. A versenybíró a két versenyzőt úgy állítja fel (egymással szemben), hogy elöl levő lábuk közvetlenül a felállási vonal mögött legyen.
+    1. A mérkőzés kezdetén, valamint az azt követően is a vívókat mindig a pást középtengelyében kell felállítani.
+    1. A mérkőzés közbeni újra felállásnál a vívók közötti távolságnak akkorának kell lennie, hogy vívóállásban nyújtott karral, vonal helyzetben tartott pengéknél a szúróhegyek ne érintkezhessenek.
+    1. Érvényes találat után a versenyzőket a pást közepén kell felállítani.
+    1. Ha nincs megítélt találat, akkor azon a helyen kell őket újra felállítani, amelyet a küzdelem megszakításakor elfoglaltak. A megfelelő távolságba történő visszaállítás nem eredményezheti azt, hogy a küzdelem megszakításának pillanatában a hátsó határvonalon belül álló versenyzőt hátrafelé leléptesse. Ha egy lábbal a hátsó határvonalon belül állt, akkor újrafelállításkor ugyanazon a helyen marad.
+    1. (Egyenes kieséses mérkőzésen) minden periódus és esetleges 1 perces hosszabbítás kezdetén a vívókat a pást közepén kell felállítani.
+    1. A vívók a versenybíró “állás!” vezényszavára vívóállásba felállnak. Ezután a versenybíró megkérdezi: “készen?”; igenlő válasz esetén vagy nemleges válasz hiányában megadja a jelt a küzdelem megkezdésére: “rajta!” vezényszóval.
+    1. A versenybíró “rajta!” vezényszaváig a vívók kötelesek megfelelő vívóállásban állni és teljes mozdulatlanságban maradni.
+    1. Vor szabály/fegyvernem alkalmazásakor a felállás nem történhet vonal helyzetben.
 
-1. A mérkőzés megkezdése előtt a bíró felkéri az ellenfeleket, hogy egyezzenek meg a mérkőzésük során a test test elleni küzdelem során birkózó fogások használatáról.
+#### A küzdelem megkezdése, megállítása és újrakezdése
+1. 
+    1. A mérkőzés megkezdése előtt a bíró felkéri az ellenfeleket, hogy egyezzenek meg a mérkőzésük során a test test elleni küzdelem során birkózó fogások használatáról. Ezt a pontozólapon fel kell jegyezni.
+    1. A küzdelem kezdetét a “rajta!” vezényszó jelzi. A vezényszó előtt végrehajtott vagy indított mozdulat nem vehető figyelembe.
+    1. A mérkőzés az “állj!” vezényszóra áll meg, kivéve az olyan különleges helyzeteket, amelyek a mérkőzés szabályos és szokványos feltételeit megváltoztatják (Vö. t.44.1/2 is).
+    1. Az “állj!” vezényszó elhangzása után a vívó nem kezdhet új akciót; csak a már elindított mozdulat marad érvényes. Minden, ami ezután történik, teljesen érvénytelen (de t.44.1/2).
+    1. Ha valamelyik vívó az “állj!” vezényszó előtt megáll, és találatot kap, az a találat érvényes.
+    1. Akkor is “állj!”-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók), vagy ha kilép a pástról.
+    1. Kivételes körülményektől eltekintve a versenybíró nem adhat engedélyt a vívónak a pást elhagyására. Ha a vívó ezt engedély nélkül megteszi, akkor vele szemben az első csoportba tartozó vétségekre vonatkozó büntető rendelkezéseket kell alkalmazni.
 
-1. Az idő leteltét az Időmérő (személyzet) jelzi a bíró számára, de csak a bíró állíthatja meg a mérkőzést.
+1. Az idő leteltét az Időmérő (személyzet) jelzi a bíró számára.
 
-1. A mérkőzések előtt a pástra hívott vívók üdvözlik a bírót és az ellenfelet. Az asszók megkezdése előtt a vívók a bíró ‘Állás!’ (‘On guard!’ / ‘En Garde!’) parancsára vívóállásba helyezkednek, és mozdulatlanul várják a mérkőzés indítását. A bíró ‘Kész/Ready/Pret’ kérdésére megerősítő válasz után, vagy negatív válasz hiányában a bíró elindítja az asszót a ’Rajt!’/ ‘Fence!’ / ‘Allez’ paranccsal.
-
-1. Az asszó akkor fejeződik be amikor a bíró kiadja az ‘ Állj!’, ‘Halt’ vagy ‘Arrêt’ parancsot. A mérkőzés leállításának leggyakoribb okai:
+<!-- 1. A küzdelem akkor fejeződik be amikor a bíró kiadja az ‘ Állj!’, ‘Halt’ vagy ‘Arrêt’ parancsot. A mérkőzés leállításának leggyakoribb okai:
     1. Érvényes találat esett.
     1. Érvénytelen találat esett, amely megnehezíti a további akciók megítélését.
     1. Az egyik vívó mindkét lábával elhagyta a küzdőteret.
@@ -27,7 +44,7 @@
     1. Veszélyes vagy zavaros vívás.
     1. Felszerelés meghibásodása.
     1. Sérülés.
-    1. Az egyik vívó kéri hogy állítsák meg az asszót.
+    1. Az egyik vívó kézfeltartással kéri hogy állítsák meg az asszót.
 
 1. a versenybírónak meg kell állítania a mérkőzést, ha a vívás zavarodottá válik, és annak menetét a továbbiakban nem képes követni még akkor is ha nem esett találat.
 
@@ -47,7 +64,7 @@
 
 1. Felszerelés mérkőzés közbeni meghibásodása esetén a bíró 5 perc szünetet engedélyezhet (amely akkor kezdődik, amikor a bíró megbizonyosodott a meghibásodásról). Ez az idő felhasználható az érintett felszerelés kijavítására, vagy cseréjére és ellenőriztetésére. Ha a versenyző nem tudja folytatni a mérkőzést a szünet végéig, a bíró kizárhatja a versenyzőt az adott mérkőzésből. Vö 06-szervezés/Csapatversenyek/3/6
 
-1. A mérkőzés során esett sérülés vagy izomgörcs esetén a bíró maximum 10 percig tartó szünetet rendelhet el a sérülés kezelésére (az idő mérése attól kezdődik, amikor a szakképzett személyzet felállította a diagnózist). Ezt az időtartamot a sérülés vagy izomgörcs kezelésére kell fordítani. További megszakítás nem engedélyezhető ugyanazon sérülés miatt az adott mérkőzésen belül. Ha a szakképzett személyzet a 10 perces szünet közben vagy végén a vívót a mérkőzés biztonságos folytatására alkalmatlannak ítéli, visszaléptetheti őt a mérkőzéstől, vagy a versenytől.
+1. A mérkőzés során esett sérülés vagy izomgörcs esetén a bíró maximum 10 percig tartó szünetet rendelhet el a sérülés kezelésére (az idő mérése attól kezdődik, amikor a szakképzett személyzet felállította a diagnózist). Ezt az időtartamot a sérülés vagy izomgörcs kezelésére kell fordítani. További megszakítás nem engedélyezhető ugyanazon sérülés miatt az adott mérkőzésen belül. Ha a szakképzett személyzet a 10 perces szünet közben vagy végén a vívót a mérkőzés biztonságos folytatására alkalmatlannak ítéli, visszaléptetheti őt a mérkőzéstől, vagy a versenytől. -->
 
 ### A küzdőtér határvonala
 
@@ -63,12 +80,41 @@
 
 #### Vétlen lelépés
 
-1. Semmilyen büntetéssel nem büntetendő az a vívó, aki valamelyik határvonalon nem szándékosan, hanem bármilyen váratlan esemény, baleset (például lökés) következtében kilép
+1. Semmilyen büntetéssel nem büntetendő az a vívó, aki valamelyik határvonalon nem szándékosan, hanem bármilyen váratlan esemény, baleset vagy lökés következtében lép le.
+
+### Nyert vagy vesztett terület
+1. Az “állj!” vezényszó elhangzásakor a nyert területet megszerezettnek kell tekinteni mindaddig, amíg nincs megítélt találat. Ha nincs megítélt találat, a vívóállásba való új felállításkor a két vívónak egyforma mértékben kell hátrálnia, hogy a megfelelő vívótávolságot felvegyék.
+
+1. Ugyanakkor, ha a mérkőzés testérintkezés miatt szakadt meg (és a közelharc nem engedélyezett), a vívókat úgy kell visszaállítani vívóállásba, hogy a testérintkezést elszenvedő vívó azon a helyen maradjon, ahol korábban állt; ez vonatkozik arra is, ha az ellenfél lerohanó támadást hajtott végre akár testérintkezés nélkül.
  
 ### A közelharc szabályai
 
 A közelharc és a birkózás az alábbi szabályokkal folytatható:
-1. Birkózás egy mérkőzésen belül csak abban az esetben engedhető meg, ha abba mindkét fél beleegyezett a mérkőzés megkezdése előtt. Amennyiben az egyik fél nem vállalja a birkózást, annak okára nem kell magyarázatot adnia. Csapatmérkőzéseken a csapattagok egyénileg dönthetnek arról, hogy az adott ellenféllel vállalják-e a birkózást.
+
+1. A közelharc megengedhető mindaddig, amíg a vívók fegyverüket szabályosan tudják használni és a versenybíró követni tudja az akciót.
+
+#### Testérintkezés
+
+1. Tilos szándékosan testérintkezést okozni találat elkerülése vagy az ellenfél fellökése céljából, kivéve abban az esetben, amikor a felek a meccs előtt a fogásos és birkózó akciók használatát jóváhagyták. Ilyen vétség esetén a versenybíró az első csoportba tartozó vétségekre vonatkozó büntetéseket alkalmazza és a vétkes vívó által esetleg adott találatot megsemmisíti.
+
+1. Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést
+idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: Nyert vagy vesztett terület)
+
+#### Testérintkezés és lerohanás (fless)
+
+1. A jelen szakaszban hivatkozott rendszeresen testérintkezéssel végződő fless támadás nem összetévesztendő az ellenfelet meglökő összeütközést eredményező fless támadással amely szándékos brutalitásként értékelendő, és ekként is büntetendő a második csoportba tartozó vétség minden fegyvernemben.
+
+1. Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar „Állj”-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást oldalhatárát, találatot kapottnak tekintendő (V.ö.: A küzdőtér határvonala).
+
+#### A találati felület elmozdítása
+
+1. A helyváltoztatás és elhajlás megengedett, beleértve az az esetet is, amikor a fegyvertelen kéz vagy a hátul lévő láb térde a földdel érintkezésbe kerül.
+    
+1. Tilos az ellenfélnek hátat fordítani a küzdelem alatt. Ilyen vétség esetén a versenybíró az első csoportba tartozó vétségekre vonatkozó büntetéseket alkalmazza és a vétkes vívó által esetleg adott találatot megsemmisíti.
+
+#### Fogásos és birkózó akciók
+
+1. Fogásos küzdelem és birkózás (megfogás/kontroll/dobás/földrevitel) egy mérkőzésen belül csak abban az esetben engedhető meg, **ha abba mindkét fél beleegyezett a mérkőzés megkezdése előtt**. Amennyiben az egyik fél nem vállalja a birkózást, annak okára nem kell magyarázatot adnia. Csapatmérkőzéseken a csapattagok egyénileg dönthetnek arról, hogy az adott ellenféllel vállalják-e a birkózást.
 
 1. Birkózó akciónak számít minden közelharci akció, amit nem fegyverrel hajtanak végre (kézzel/lábbal/fejjel/stb. végzett technikák, fogások, lefegyverzések, ütések), illetve amik fegyverrel a közvetlen találatadás helyett az ellenfél testrészeinek manipulálását szolgálják.
 Amennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, úgy bármilyen birkózó akció kezdeményezője a fegyelmi vétségek első csoportjába tartozó szabálytalanságot követ el.
@@ -78,7 +124,7 @@ Az ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedet
 
 1. Pontszerző birkózó akciók:
     1. Földrevitelek és dobások után/során egyszerű és azonnali támadás a fegyverrel
-    1. Birkózásban fegyverrel vagy fegyver nélkül kontrollálva az ellenfelet: a bíró megítélhet pontot egy olyan akcióért amikor a fegyverrel végrehajtott akció következtében az egyik vívó mozgását, szabadulását passzívan megakadályozó helyzetbe kerül, amelyből jelentős ideig képtelen kitörni. Ilyen helyzet előállhat fegyverrel vagy anélkül végrehajtott birkózófogásokból, amelyek a fegyver mozgását  megakadályozzák, és ezt a helyzetet jelentős ideig - addig, amikor a bíró saját hatáskörében úgy ítéli, hogy a dominancia követelményei teljesültek, és elhangzik az ‘Állj!’ parancs - fenn is tartják. Dominancia ítélet nem alkalmazható olyan helyzetekre, ahol az ellenfél ki tud törni a fogásból, és érvényes akciókat tud kezdeményezni, akkor sem, ha valamilyen aktív erőfeszítés eredményeképp a dominálni szándékozó fegyver továbbra is érinti az ellenfél találati felületét. A domináló akciók érvényességét a bíró saját hatáskörében ítéli meg.
+    1. Birkózásban fegyverrel vagy fegyver nélkül kontrollálva az ellenfelet: a bíró megítélhet pontot egy olyan akcióért amikor a fegyverrel végrehajtott akció következtében az egyik vívó mozgását, szabadulását passzívan megakadályozó helyzetbe kerül, amelyből jelentős ideig képtelen kitörni. Ilyen helyzet előállhat fegyverrel vagy anélkül végrehajtott birkózófogásokból, amelyek a vívó mozgását megakadályozzák, és ezt a helyzetet jelentős ideig - addig, amikor a bíró saját hatáskörében úgy ítéli, hogy a dominancia követelményei teljesültek, és elhangzik az ‘Állj!’ parancs - fenn is tartják. Dominancia ítélet nem alkalmazható olyan helyzetekre, ahol az ellenfél ki tud törni a fogásból, és érvényes akciókat tud kezdeményezni, akkor sem, ha valamilyen aktív erőfeszítés eredményeképp a dominálni szándékozó fegyver továbbra is érinti az ellenfél találati felületét. A domináló akciók érvényességét a bíró saját hatáskörében ítéli meg.
 
 1. A földrevitel után további küzdelem nem engedélyezett. A bíró ‘Állj’-t mond, ha valamelyik vívó a földre kerül, vagy a bíró nem tudja megítélni az akciót, vagy a dominancia megszerzése huzamosabb ideig sem sikerül (ezt a bíró saját hatáskörében ítéli meg).
 
