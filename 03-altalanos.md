@@ -48,7 +48,7 @@
 
 ### A határvonalak átlépése
 
-1. Ha az egyik versenyző egyik vagy mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát, a versenybírónak azonnal “állj!”-t kell kiáltania. 
+1. Ha az egyik versenyző mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát, a versenybírónak azonnal “állj!”-t kell kiáltania. 
 
 1. Ha a vívó mindkét lábbal kilép a pástról, meg kell semmisíteni mindent, ami a határvonal átlépése után történt.
 
@@ -60,7 +60,7 @@
     <!-- TODO a figyelmeztetés elhagyható, ha a pást mérete hosszabb távon rögzül -->
     <!-- TODO ha a jövőben hosszabb pástokat használunk, a hátsó vonal vs oldalvonal megkülönböztetés is relevánssá válhat majd -->
     1. Az első kilépésnél a vívó figyelmeztetést kap
-    1. Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát túlhaladó versenyző egy találattal büntetendő (ellenfele egy pontot kap).
+    1. Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát túlhaladó versenyző egy találattal büntetendő (ellenfele egy pontot kap), akkor is ha ténylegesen nem találták el.
 
 #### Vétlen lelépés
 1. Semmilyen büntetéssel nem büntetendő az a vívó, aki valamelyik határvonalon nem szándékosan bármilyen váratlan esemény, baleset (például lökés) következtében kilép.
@@ -73,7 +73,7 @@
 ### A küzdelem időtartama
 1. 
     1. A küzdelem időtartamán a tényleges küzdelem idejét, tehát a „rajta!” és „állj!” közötti időközök összességét kell érteni.
-    1. A küzdelem időtartamát a versenybíró vagy egy időmérő méri. A hivatalos versenyek döntőin, valamint minden olyan mérkőzésen, amelyen a nézők számára látható az időmérés, az időmérő órát úgy kell elhelyezni, hogy azt a páston levő két vívó és a versenybíró is láthassa.
+    1. A küzdelem időtartamát a versenybíró vagy egy időmérő méri. Minden olyan mérkőzésen (a hivatalos versenyek döntőin kiemelten javasolt), amelyen a nézők számára látható az időmérés, az időmérő órát úgy kell elhelyezni, hogy azt a páston levő két vívó és a versenybíró is láthassa.
     1. A befejezett mérkőzés vagy váltás nem kezdhető újra, még akkor sem, ha formális hiba történt. (V.ö.: 08-etikett-fegyelem/vívó etikett/2.)
 
 #### Egyéni csoportmérkőzések
@@ -86,14 +86,14 @@
             1. Valamelyik vívó **5 találatot elért**, illetve
             1. ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
         1. Afterblow 
-            1. Valamelyik vívó **legalább 5 PONTOT elért**,
+            1. Valamelyik vívó **legalább 7 PONTOT elért**,
                 1. a súlyozás miatt a 7 pontot meg lehet haladni.
                 1. Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal), 
                     1. amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;
                     1. ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)
         1. Ebben az esetben a pontozó lapon feltüntetett pont az összecsapás végső pontszáma (V5-Dn, ahol ‘n’ a vesztes vívó által szerzett  pontok száma)
     
-    1. Három percnyi tényleges vívóidő eltelt (Nincs figyelmeztetés az utolsó percnél)
+    1. Három percnyi tényleges vívóidő eltelt
         1. Ha az idő lejártakor legalább egy találatnyi különbség van a két versenyző pontjai között, a több pontot elért versenyzőt kell győztesnek kihirdetni. A jegyzőkönyvön a mérkőzésen ténylegesen elért találatokat kell rögzíteni (VN – Dn, ahol N= a győztes vívó által szerzett pontok száma és n= a vesztes vívó által szerzett pontok száma).
 
         1. Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.
@@ -107,9 +107,9 @@
 1. A mérkőzés akkor ér véget, ha
     1. 
         1. Vor
-            1. az egyik versenyző **elér 15 találatot**; vagy
+            1. az egyik versenyző **elér 10 találatot**; vagy
         1. Combat
-            1. az egyik versenyző **elér 15 találatot**; vagy
+            1. az egyik versenyző **elér 10 találatot**; vagy
         1. Afterblow
             1. az egyik versenyző **elér legalább 11 PONTOT**; 
                 1. a súlyozás miatt a 11 pontot meg lehet haladni.
@@ -119,8 +119,8 @@
     
     1. vagy a meghatározott tényleges vívóidő eltelt:
         <!-- ezeket az időket harmonizálni kell középtávon, és esetleges más fegyverek felvétele esetén is érvényesek kell maradjanak -->
-        1. Combat és Vor esetén a három, egyperces pihenőidőkkel elválasztott három perces harmad (9 percnyi tényleges vívóidő) eltelt. Vor esetén az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 8 találatot el nem ér. 
-        1. Afterblow esetében két, egyperces pihenőidőkkel elválasztott három perces periódus (6 perc tényleges vívóidő) eltelt.
+        1. A két, egyperces pihenőidőkkel elválasztott három perces periódus (6 percnyi tényleges vívóidő) eltelt. 
+        1. Vor esetén az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 5 találatot el nem ér. 
 
     1. Az egyperces pihenőidő alatt egy, a mérkőzés előtt megnevezett személy mehet a versenyző közvetlen közelébe.
     1. Ha a szabályokban foglalt idő leteltekor a pontszámok egyenlőek, a vívók győztes pontért küzdenek, maximum egy percig. Az összecsapás kezdete előtt a bíró kisorsolja (pénzfeldobással), ki lesz a győztes abban az esetben, ha a pontok a plusz egy perc leteltével még mindig egyenlőek. A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen megszerzett pontszámok.
@@ -145,6 +145,7 @@
     1. Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétségként büntetendő.
 1. 
     1. A szabályos idő letelte után, az időmérőnek "állj!"-t kell kiáltania (vagy hangjelzést kell működtetnie), amellyel a küzdelmet megállítja és a már elindított, de az idő lejárta után esett találat sem érvényes.
+    1. Ha a mérkőzésen nem biztosított a vívók által is látható időmérés (kijelző), az időmérőnek 60 másodperccel a vége előtt "Egy perc!" figyelmeztést kell kiáltania (vagy hangjelzést kell működtetnie)--a küzdelmet ilyenkor nem kell megállítani. 
     1. A versenybírónak a mérkőzés során végig feladata az időmérés. Az időmérő óra meghibásodása esetén a versenybíró állapítja meg a hátralevő vívóidőt. 
 
 #### Sérülés vagy más egészségügyi ok, a versenyző visszalépése
