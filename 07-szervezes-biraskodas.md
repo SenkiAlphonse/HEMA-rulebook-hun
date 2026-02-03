@@ -109,6 +109,7 @@ arra
 1. Visszalépés: 
     1. abban az esetben, ha egy vívó a csoportban egyetlen mérkőzéstől lép vissza felszerelés meghibásodás vagy sérülés miatt, de a többi mérkőzését be tudja fejezni, a visszalépő versenyző ellenfelét kell győztesként regisztrálni Vn – DN, VN – Dn, habár a szerzett pontok nem kerülnek törlésre.
 
+    <!-- TODO a hemarating farmingot meg lehet itt fontolni, HA akarjuk  -->
     1. Abban az esetben, ha valaki a csoportmérkőzések alatt visszalép a versenyszámtól, az addig elért eredményeit meg kell semmisíteni, és az ellenfeleit kell V0-D0 győztesnek nyilvánítani a körmérkőzés összes mérkőzésében, az addig elért eredmények figyelmen kívül hagyásával. A körmérkőzés során visszalépett vívó nem szerepel az egyenes kieséses rangsor megállapításánál. A végső rangsorban "Did not finish"/"Visszalépett" megjegyzéssel regisztrálandó.
 
     1. Ha egy vívó az utolsó küzdelmétől lépne vissza a csoportmérkőzések során, az eredményeket aszerint kell kezelni, mintha csak egy mérkőzéstől lépett volna vissza (lásd fentebb), de az egyenes kiesés rangsorban már nem vesz részt. A végső rangsorban "Did not finish"/"Visszalépett" megjegyzéssel regisztrálandó.
@@ -125,8 +126,9 @@ arra
 
 1. Visszalépés: Ha, bármilyen okból kifolyólag, az egyik versenyző nem képes folytatni a küzdelmet, vagy befejezni a mérkőzést, az ellenfelet nyilvánítják győztesnek. A visszalépő vívó "Did not finish"/"Visszalépett" megjegyzéssel megtartja a helyezését az összesített rangsorban.
 
-1. Kizárás:ha egy vívót kizárnak, el kell távolítani az egyenes kieséses tábláról, és az eredményeit m eg kell semmisíteni, mintha nem vett volna részt a versenyen. A kizárt vívót a végső rangsor végén "Excluded"/"Kizárva" megjegyzéssel kell adminisztrálni.
+1. Kizárás: ha egy vívót kizárnak, el kell távolítani az egyenes kieséses tábláról, és az eredményeit meg kell semmisíteni, mintha nem vett volna részt a versenyen. A kizárt vívót a végső rangsor végén "Excluded"/"Kizárva" megjegyzéssel kell adminisztrálni.
 
+<!-- TODO a rendezési szabályzatot is meg kell írni teljeskörűen -->
 1.  A mérkőzések sorrendje: az egyenes kieséses tábla minden fordulójában (256, 128, 64, 32, 16, 8, 4) a mérkőzéseket mindig a táblázat szerint fentről lefelé haladva hirdetik ki.
 
 1. A döntő
@@ -184,7 +186,7 @@ arra
 1.  Az általános rangsort a következők szerint kell felállítani:
     1. Első: Az első helyért vívott mérkőzés győztese
     1. Második: az első helyért vívott mérkőzés vesztese.
-    1. A harmadik és negyedik helyért az elődöntők két vesztese vív (kivéve ha egyenes kieséses rendszerben bonyolítják le a döntőt, akkor mindketten harmadik helyezettnek).
+    1. A harmadik és negyedik helyért az elődöntők két vesztese vív (kivéve ha egyenes kieséses rendszerben bonyolítják le a döntőt, akkor mindketten harmadik helyezettek).
     1. A többi versenyző helyezése minden egyes körben az egyenes kiesés során elért helyükkel egyezik meg.
 
 ### Versenyszemélyzet

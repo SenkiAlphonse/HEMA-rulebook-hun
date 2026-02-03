@@ -48,9 +48,9 @@
 
 ### A határvonalak átlépése
 
-1. Ha az egyik versenyző mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát, a versenybírónak azonnal “állj!”-t kell kiáltania. 
-
-1. Ha a vívó mindkét lábbal kilép a pástról, meg kell semmisíteni mindent, ami a határvonal átlépése után történt.
+1. Ha az egyik versenyző mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát, 
+    1. a versenybírónak azonnal “állj!”-t kell kiáltania, és
+    1. meg kell semmisíteni mindent, ami a határvonal átlépése után történt.
 
 1. Ugyanakkor a határvonalat csak egy lábbal (másikkal nem vagy csak részben) átlépő vívó találata érvényes marad, ha az akció az „állj!” előtt kezdődött; akkor is, ha a vívó ezután teljesen elhagyta a küzdőteret.
 
