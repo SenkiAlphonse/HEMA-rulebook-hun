@@ -1,90 +1,21 @@
-## Szervezés, a mérkőzés vezetése és a találatok elbírálása
+# A verseny szervezése
+<span id="ORG"></span>
+
+## Részvétel
+<span id="ORG-1"></span>
+
+### Feltételek
+<span id="ORG-1.1"></span>
 
 1.  A verseny 18. (különös esetekben 16.) életévüket betöltött személyek számára nyitott.
 
-2.  Tilos a versenyen való részvétel alkohol, illetve teljesítményfokozó drogok befolyása alatt (beleértve a rekreációs és orvos által felírt készítményeket is).
+2.  Tilos a versenyen való részvétel alkohol, illetve teljesítményfokozó drogok befolyása alatt (beleértve a rekreációs és orvos által felírt készítményeket is).s
 
-### A bíráskodás rendszere
+## A versenyek szervezése és minősítése
+<span id="ORG-2"></span>
 
-#### A Bíró
-
-1. A bíró egy segéddel együtt dolgozik, vezeti a jegyzőkönyvet, és kezeli az időmérést (szükség esetén adminisztratív személyzet támogatásával).
-
-1.  A versenybíró feladatai:  
-    1. szólítja és számba veszi a vívókat;  
-    1. vezeti a mérkőzést;  
-    1. minden mérkőzés előtt ellenőrzi a versenyzők fegyvereit, ruházatát és felszereléseit az előírásoknak megfelelően  
-    1. irányítja a segédbíró(ka)t, időmérőket, jegyzőkönyvvezetőket, stb.  
-    1. úgy helyezkedik, és úgy változtatja a helyét, hogy követhesse a mérkőzést  
-    1. bünteti a vétségeket;  
-    1. megítéli a találatokat;  
-    1. fenntartja a rendet;
-    1. ugyancsak ellenőriznie kell a pástok állapotát és gondoskodik arról, hogy a mérkőzés ne kezdődhessen el vagy ne folytatódhasson olyan páston, aminek felülete balesetveszélyes, vagy más okból nem alkalmasak a mérkőzés folytatására.
-
-3.  A küzdelem megállítása után a bíró szükség esetén egyeztet a segédbíróval (kézjelekkel jelzi az akciót és a találatot, a segéd szükség esetén jelzi, ha a bíró szemszögéből nem látható találat is esett; szükség esetén a bíró szóban is konzultálhat a segéddel), végül javasol egy ítéletet. Ha a vívók elfogadják az döntést (azaz nem kérnek felülvizsgálatot), a küzdelem a bíró által javasolt ítélettel folytatódik. Ha valamelyik vívó felülvizsgálatot kér, de az ellenfele nem ért vele egyet, a bíró megismételheti az asszót, vagy ha meggyőződéssel döntést tud hozni, ítélhet pontot a kérdéses akcióért.
-
-4.  Ha a bíró valamiért nem tudja interpretálni a végrehajtott akciósort, annak okát ismertetnie kell. Ilyenkor megismételtetheti az asszót, és az esetleges hibájáért illendő elnézést kérnie.
-
-5.  A bírói ítéletei a mérkőzés végeztével visszamenőleg nem képezik vita tárgyát.
-
-6. A bíró képes kell legyen a mérkőzések angol nyelvű vezetésére, beleértve a szabályok és az akciók interpretációját.
-
-7. A versenybíró az alábbi jelzéseket köteles használni:
-
-![image](https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03)
-
-![image](https://github.com/user-attachments/assets/f5fea300-ae41-43d0-9001-09729f524279)
-
-![image](https://github.com/user-attachments/assets/ca7d4e1b-529d-43da-9686-e92073b07353)
-
-<div style="page-break-after: always;"></div>
-
-#### A segédbíró
-
-1.  A bírót egy segédbíró segíti a pontok megítélésében és a találatok értékelésében.
-
-2.  Fő feladata a mérkőzés megfigyelése a bíróétól eltérő szögből (a vívók másik oldaláról). Miután a Bíró megállította a mérkőzést, a segédbíró szükség esetén hozzájárul az akció megítéléséhez.
-
-3.  A segédbíró nem felel a pontok megítéléséért, sem a mérkőzés végső kimeneteléért.
-
-#### Videóbírók
-
-1. Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akiknek feladata hogy
-közvetlenül, élőben figyeljék a mérkőzést, majd ha szükséges ezután tekintsék meg azt a
-képernyőn is és egyeztessenek a versenybíróval.
-
-#### A videóbíróhoz fordulás lehetősége
-1. Mind csapat, mind egyéni versenyeken csak a páston lévő vívó jogosult videó visszanézést
-kérvényezni.
-
-#### Video bíráskodás 
-
-1. A videó felülvizsgálat technikai feltételeit az egyenes kieséses mérkőzéseken a szervező köteles biztosítani.
-
-1. Az egyéni versenyen a páston lévő vívó  
-    1.1 csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a
-videóbíróhoz  
-    1.2 egyenes kieséses mérkőzés során két alkalommal
-
-1. Amennyiben a versenybíró a visszajátszást kérő versenyzővel egyetért, úgy a versenyző visszajátszáshoz való joga nem vész el.
-1. Csapatversenyeken váltásonként egy alkalommal van joguk a versenyzőknek a videóbíróhoz fordulni, és amennyiben a versenybíró egyetért a versenyzői indítvánnyal, úgy ez a jog továbbra is megmarad.
-1. Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges
-döntését.
-1. A versenybíró választása szerint valós-időben vagy lassított felvételen az általa választott sebességben nézi vissza az akciót.
-1. A versenybíró minden fegyvernemben bármikor dönthet úgy, hogy a döntése meghozatalát megelőzően megtekinti a képernyőjét.
-1. A mérkőzés végén, ha az állás egyenlő, a döntő találat megítélése előtt a versenybírónak kötelező alkalmaznia a video bíráskodást.
-1. A videóbíró bármikor kérheti a versenybírót, hogy alkalmazzon videóbíráskodást.
-1. Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy
-arra  
-    1. a versenybíró kezdeményezésére,  
-    1. a versenyző kérésére,  
-    1. a döntő találat előtti pontegyenlőségnél, vagy
-    1. a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.
-
-
-### A versenyek szervezése és minősítése
-
-#### Egyéni csoportmérkőzések
+### Egyéni csoportmérkőzések
+<span id="ORG-2.1"></span>
 
 1. Minden versenyszámban, amelynek részét képezi csoportmérkőzés, a csoportok 7 versenyzőből állnak, amennyiben a versenyzők száma osztható 7-tel. Egyébként 7 és 6 fős csoportokat kell hirdetni.
 
@@ -116,7 +47,8 @@ arra
 
 1. Kizárás: az a vívó, aki a csoportkör során kizárásra kerül, törlendő a csoportból, az eredményeit meg kell semmisíteni, mintha nem vett volna részt. A végső rangsor végén helyezés nélkül, "Excluded" megjegyzéssel regisztrálandó.
 
-#### Egyéni egyenes kieséses mérkőzések
+### Egyéni egyenes kieséses mérkőzések
+<span id="ORG-2.2"></span>
 
 1. A – teljes vagy nem teljes – egyenes kieséses táblát a rangsor és az adott versenyszám vonatkozó szabályai szerint (Lásd pl: Függelék/IndDE64.pdf) kell létrehozni.
 
@@ -135,7 +67,8 @@ arra
     1. A döntő vagy egyenes kieséses rendszerben, vagy minden helyért vívással kerül lebonyolításra, és lehetőség szerint 4 vívóból áll.
     1. Az azonos fegyvernemben megrendezett női és férfi versenyszámok döntőit lehetőség szerint ugyanazon a napon kell lebonyolítani.
 
-#### Csapatversenyek
+### Csapatversenyek
+<span id="ORG-2.3"></span>
 
 1. A csapatok minden fegyvernem esetén három vívóból állnak, egy tartalékkal, vagy anélkül. Egy csapat csak akkor kezdhet el egy mérkőzést, ha minden tagja jelen van. 
 
@@ -181,7 +114,8 @@ arra
 
 1. A csapatversenyek idő és pontszám kereteire vonatkozó szabályokat lásd: '03-általános'/'Csapatmérkőzések'
 
-#### Értékelés
+### Értékelés
+<span id="ORG-2.4"></span>
 
 1.  Az általános rangsort a következők szerint kell felállítani:
     1. Első: Az első helyért vívott mérkőzés győztese
@@ -189,14 +123,23 @@ arra
     1. A harmadik és negyedik helyért az elődöntők két vesztese vív (kivéve ha egyenes kieséses rendszerben bonyolítják le a döntőt, akkor mindketten harmadik helyezettek).
     1. A többi versenyző helyezése minden egyes körben az egyenes kiesés során elért helyükkel egyezik meg.
 
-### Versenyszemélyzet
+## Versenyszemélyzet
+<span id="ORG-3"></span>
+<!-- TODO implement properly -->
 
-1.  Orvosi/mentős személyzet gondoskodik a versenyzők esetleges sérüléseinek, rosszullétének vizsgálatáról és ellátásáról a mérkőzések közben és után, és szakvéleményt ad annak közvetlen kimeneteléről.
+<span id="ORG-3.1"></span>
 
-2.  A szervező csapat vezetője felelős a verseny gördülékeny lebonyolításáért. Nem bírói ítéletre vonatkozó reklamációkkal (javasolt írásban, a helyszínen), dicsérettel, és javaslatokkal a verseny előtt, közben és után a szervező csapatot kell megkeresni.
+**ORG-3.1.1** 
+Orvosi/mentős személyzet gondoskodik a versenyzők esetleges sérüléseinek, rosszullétének vizsgálatáról és ellátásáról a mérkőzések közben és után, és szakvéleményt ad annak közvetlen kimeneteléről.
 
-3.  A Főbíró felügyeli a bírók és segédbírók elhelyezését és teljesítményét. Ha fellebbezés esetén a bíró kitart a véleménye mellett, a főbíró jogosult döntést hozni az ügyben. A főbíró jogosult személyesen, vagy az általa kijelölt delegált segítségével megfigyelni vagy felülvizsgálni egy bíró munkáját, oktatási vagy felügyeleti céllal.
+**ORG-3.1.2** 
+A szervező csapat vezetője felelős a verseny gördülékeny lebonyolításáért. Nem bírói ítéletre vonatkozó reklamációkkal (javasolt írásban, a helyszínen), dicsérettel, és javaslatokkal a verseny előtt, közben és után a szervező csapatot kell megkeresni.
 
-4.  A felszerelés ellenőrző csapat a verseny előtt elvégzi a védőfelszerelések és fegyverek ellenőrzését, és feljegyzi azon versenyzőket, akiknek a felszerelése megfelelőnek lett értékelve. Vezetőjük a Fegyvermester.
+**ORG-3.1.3** 
+A Főbíró felügyeli a bírók és segédbírók elhelyezését és teljesítményét. Ha fellebbezés esetén a bíró kitart a véleménye mellett, a főbíró jogosult döntést hozni az ügyben. A főbíró jogosult személyesen, vagy az általa kijelölt delegált segítségével megfigyelni vagy felülvizsgálni egy bíró munkáját, oktatási vagy felügyeleti céllal.
 
-6.  A technikai csapat kezeli a verseny technikai infrastruktúráját, beleértve a versenyszervezéshez használt szoftvert, gondoskodik az események megfelelő dokumentálásáról, tárolásáról és megjelenítéséről.
+**ORG-3.1.4** 
+A felszerelés ellenőrző csapat a verseny előtt elvégzi a védőfelszerelések és fegyverek ellenőrzését, és feljegyzi azon versenyzőket, akiknek a felszerelése megfelelőnek lett értékelve. Vezetőjük a Fegyvermester.
+
+**ORG-3.1.5** 
+A technikai csapat kezeli a verseny technikai infrastruktúráját, beleértve a versenyszervezéshez használt szoftvert, gondoskodik az események megfelelő dokumentálásáról, tárolásáról és megjelenítéséről.

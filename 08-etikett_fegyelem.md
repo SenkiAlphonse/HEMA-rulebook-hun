@@ -1,6 +1,11 @@
-## Vívó etikett és fegyelmi szabályzat
+# A versenyek fegyelmi szabályzata
 
-### Rend és Fegyelem
+## Hatály
+
+### A szabályok személyi hatálya
+<!-- TODO -->
+
+### Rend és Fegyelem fenntartása
 
 1. Minden résztvevő és jelenlévő, beleértve a nézőket is, szigorúan be kell tartsa az adott verseny szabályait, az udvariasság és becsületesség hagyományait, a tisztviselők utasításait. Különösképpen, rendezett, fegyelmezett, és sportszerű módon alávetik magukat az alábbi rendelkezéseknek; melyek bárminemű megszegése a fegyelmi hatóság által kiszabott büntetést vonhat maga után, előzetes figyelmeztetéssel, vagy anélkül, figyelembe véve a tényeket és körülményeket.
 
@@ -31,7 +36,7 @@
 
 1. A versenyzőknek a lehető legjobb helyezés elérése érdekében a verseny végéig sportszerűen kell vívniuk a legjobb tudásuk szerint, anélkül, hogy eladnának találatokat, vagy arra törekednének, hogy egy ellenfél őket előnyben részesítse előnybe találatok beengedésével. 
 
-### Vívó etikett
+#### Vívó etikett
 
 1. Minden mérkőzésnek meg kell őriznie az udvarias és nyílt összecsapás szellemiségét. Minden rendhagyó cselekedet (például: az ellenfél erőszakos fellökése, fegyelmezetlen vívás, szabálytalan mozdulatok a küzdőtéren, erőszakkal megszerzett találatok, keresztvassal végrehajtott csapások, véletlen esés közben vagy után bevitt találatok, veszélyes technikák végrehajtása, düh kitöltése a berendezésen vagy a helyszín felszerelésein) vagy sportszerűtlen viselkedés szigorúan tilos.
 
@@ -41,9 +46,15 @@
 
 1. A nézők kötelesek tartózkodni a verseny rendjének megzavarásától, cselekedeteikkel nem befolyásolhatják sem a vívókat, sem a bírót, és az utóbbi döntéseit akkor is tiszteletben kell tartaniuk, ha azzal nem értenek egyet. Minden rájuk vonatkozó utasításnak engedelmeskedniük kell, amik kiadását a bíró szükségesnek ítéli.
 
-### A fegyelmi testület és hatáskörük
+### Edzők és kísérő személyzet
+<!-- TODO -->
 
-#### A Bíró
+### Nézőközönség
+<!-- TODO -->
+
+## A fegyelmi hatóságok és hatáskörük
+
+### A Versenybíró
 
 1. A bírói vagy segédbírói szerep vállalásával az adott személy megfogadja, hogy tiszteletben tartja, és betartatja a verseny szabályait, és a legszigorúbb pártatlansággal és odafigyeléssel látja el feladatait.
 
@@ -63,12 +74,12 @@
 
 1.  Végezetül, javasolhat a Szervező Csapatnak minden egyéb, általa megfelelőnek ítélt büntetést (versenyszámból való kizárás, eltiltás vagy felfüggesztés). A Főbíró illetékes a bíró döntéseire vonatkozó fellebbezések elbírálására.
 
-#### A szervező csapat és a Főbíró
+### A szervező csapat és a Főbíró
 
 1.  A szervező csapat és a Főbíró jogkörrel illetékes minden olyan vívó felett, aki részt vesz vagy jelen van az általuk rendezett versenyen. Szükség esetén minden vitába beavatkozhatnak. Felelősek a versenyek alatti rend és fegyelem megőrzéséért is, és alkalmazhatják a Szabályzatban meghatározott büntetéseket.
 2.  A Szervező Csapat vagy a Főbíró minden döntése azonnal végrehajtható. A határozat ellen lehet fellebbezni, de a fellebbezés nem függeszti fel a döntést a verseny ideje alatt.
 
-### Büntetések
+## Büntetések
 
 1.  Különféle büntetés-kategóriák vonatkoznak a különféle vétségekre.
 
@@ -86,7 +97,7 @@
 
 1. Mindezeket a büntetéseket a versenyen illetékes hatóságok – a Bíró, a Főbíró és a szervezőcsapat – alkalmazhatják.
 
-#### A vívással kapcsolatos büntetések
+### A vívással kapcsolatos büntetések
 
 1. Szerzett találat jutalmazásának megtagadása. Bár a versenyző ténylegesen eltalálta ellenfele érvényes találati felületét, ezt a találatot meg lehet tagadni, vagy azért, mert nem a vívás megengedett időtartama alatt érkezett meg, vagy azért, mert a versenyző átlépte a küzdőtér határait, vagy mert a találatot erőszakosan szerezte vagy más szabálysértést követett el a találat megszerzése közben, vagy a szabályzatban meghatározott egyéb okok miatt.
 
@@ -94,7 +105,7 @@
 
 1. Kizárható a versenyből az a versenyző, aki vívás közben bizonyos erőszakos vagy bosszúálló cselekményeket követ el ellenfelével szemben, vagy aki nem a legjobb tudása szerint vív, vagy az ellenfelével kötött csalárd megállapodásból profitál. Az a versenyző, akit kizárnak egy versenyből, nem vehet részt a verseny további részében, még akkor sem, ha már kvalifikálta magát a következő fordulóba jutásra. Elveszíti az egyéni rangsorban szerzett helyét, és a kizárt vívó után rangsorolt összes vívó egy hellyel feljebb lép a ranglistában.
 
-#### Fegyelmi büntetések
+### Fegyelmi büntetések
 
 1. A versenyszámból való kizárás. Fegyelmi büntetésként is kiszabható (a küzdőtérnél való meg- nem jelenés, fegyver nem felel meg az előírásoknak, szabályszegő magatartás illetékes személlyel szemben, stb.). Az ilyen jellegű kizárás következményei megegyeznek a fentebb leírtakkal. Kizárás a Versenyből. Fegyelmi vétség miatt is kiszabható (a küzdőtéren nem megfelelő megjelenés, nem a szabályoknak megfelelő fegyverek, tisztségviselővel szembeni kifogásolható magatartás stb.). Az ilyen kizárás következményei a versenyzőre nézve megegyeznek a fenti cikkben (A vívással kapcsolatos büntetések/3) leírtakkal.
 
@@ -102,7 +113,9 @@
     1. Az a versenyző, akit kizárnak egy versenyből, a továbbiakban nem vehet részt semmilyen versenyszámban a verseny alatt, semmilyen fegyvernemben.
     1. Minden, a helyszínen lévő versenyző vagy résztvevő (beleértve az oktatók, edzők, segédek, technikusok, szurkolók, hivatalos személyek, nézők) kizárható a helyszínről. Az ilyen jellegű kizárás megtiltja számukra a belépést a helyszínre a verseny vagy versenyszám időtartamára. E büntetés kiszabása semmilyen körülmények között nem ad okot jogorvoslatra.
 
-#### A büntetések típusai (csoportjai)
+## BÜNTETÉSEK ÉS A KISZABÁSRA JOGOSULT SZERVEK
+<!-- TODO -->
+### A büntetések típusai (csoportjai)
 
 1. Függelékben található Szabálytalanságok és Büntetések Táblázatában megjelölt esetekre háromféle büntetés alkalmazható. Ha a bírónak olyan vívót kell büntetnie, aki egyszerre több vétséget is elkövetett, először a legkevésbé súlyos vétséget kell büntetnie.
 
@@ -122,16 +135,16 @@
 
 1. Minden figyelmeztetést (SÁRGA LAP), büntető találatot (PIROS LAP) és kizárást (FEKETE LAP) fel kell jegyezni a mérkőzés, vagy a körmérkőzés pontozólapjára, a fegyelmi csoporttal együtt, amelyhez tartoznak.
 
-#### A vétségek első csoportja
+### A vétségek első csoportja
 
 1. Ebben az első csoportban az első vétség SÁRGA LAP (figyelmeztetés)  büntetést von maga után. Ha ugyanazon a mérkőzésen a vívó ismételten elköveti ugyanazt vagy más, ebben a csoportban lévő szabálysértést, a Bíró minden alkalommal PIROS LAP-tal (büntető találat) bünteti. Ha a vétkes vívót az adott mérkőzésen már büntették PIROS LAPPAL a Második vagy Harmadik Csoportban felsorolt szabálysértés miatt, akkor az első csoportba tartozó első szabálysértéséért is további PIROS LAPOT kap.
 1. Csapatmérkőzéseken belül az első csoportba tartozó vétségek számítása az egyes meccsek kezdetével újraindul (minden egyes fordulóban az első vétségért SÁRGA LAP jár), kivéve a táblázatban megjelölt, egész csapatra vonatkozó figyemeztetések, amelyek után a mérkőzés hátralevő részében bármely, az első csoportba tartozó vétség elkövetése PIROS LAPpal büntetendő.
 
-#### A vétségek második csoportja
+### A vétségek második csoportja
 
 1. A második csoportba tartozó minden szabálysértés, beleértve az első szabálysértést is, PIROS KÁRTYÁVAL (büntető találattal) büntetendő.
 
-#### A vétségek harmadik csoportja
+### A vétségek harmadik csoportja
 
 1. A Harmadik csoportban az első szabálysértést PIROS LAPPAL (büntető találattal) büntetik, akkor is, ha a vétkes vívó az első vagy a második csoportban elkövetett szabálysértések miatt már kapott PIROS LAPOT.
 
@@ -143,13 +156,13 @@
     1. Ugyanazon versenyszámban elkövetett második vétségnél FEKETE LAPOT.
     1. Az arénában vagy azon kívüli rendzavarás legsúlyosabb eseteiben a Bíró azonnal kizárhatja vagy kiutasíthatja a vétkes személyt.
 
-#### A vétségek negyedik csoportja
+### A vétségek negyedik csoportja
 
 1. A negyedik csoportban az első vétséget FEKETE LAPPAL  (a versenyből való kizárással) büntetik.
 
 1. A vívó megtartja a kizárás pillanatáig elért helyezését (kivéve, ha még nem készült rangsor a csoportmérkőzések alapján) A büntetett vívó megtartja a kizárás pillanatáig megszerzett helyezését a ranglistán (kivéve, ha a rangsort még nem állították fel a csoportmérkőzések útján).
 
-#### Találat megsemmisítése szabályszegés miatt
+### Találat megsemmisítése szabályszegés miatt
 
 1. Egy találatot meg kell semmisíteni, ha a versenybíró megállapítja, hogy a találatot olyan szabályszegés útján érték el, amely közvetlenül és oksági kapcsolatban állt a találathoz vezető vívóakcióval.
 
@@ -159,3 +172,6 @@
 
     1. a szabályszegés nem vett közvetlenül részt a pontszerző akció végrehajtásában (a szabálytalanság elkövetése és a találat közt a vívószerepek újraértékelődtek); 
     1. a szabályszegés nem állt összefüggésben azokkal a taktikai vagy fizikai feltételekkel, amelyek a találat létrejöttét lehetővé tették.
+
+## ELJÁRÁSI SZABÁLYOK
+<!-- TODO -->

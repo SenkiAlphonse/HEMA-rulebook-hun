@@ -1,0 +1,17 @@
+# Python dependencies for HEMA Q&A tools
+
+# Core dependencies
+dataclasses; python_version < '3.7'
+
+# Optional: For future semantic search enhancement
+# sentence-transformers>=2.0.0
+# faiss-cpu>=1.7.0
+# chromadb>=0.4.0
+
+# Optional: For web interface
+# fastapi>=0.100.0
+# uvicorn>=0.23.0
+
+# Optional: For advanced NLP
+# spacy>=3.0.0
+# transformers>=4.30.0

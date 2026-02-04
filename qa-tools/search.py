@@ -1,0 +1,224 @@
+"""
+HEMA Rulebook Search Engine
+Simple keyword-based search over indexed rules
+"""
+
+import json
+import re
+from pathlib import Path
+from typing import List, Dict, Any
+from dataclasses import dataclass
+
+
+@dataclass
+class SearchResult:
+    """Represents a search result"""
+    rule_id: str
+    text: str
+    section: str
+    subsection: str
+    document: str
+    weapon_type: str
+    variant: str
+    score: float  # Relevance score
+
+
+class RulebookSearch:
+    """Search engine for HEMA rulebook"""
+    
+    def __init__(self, index_path: str):
+        self.index_path = Path(index_path)
+        self.rules = []
+        self.load_index()
+    
+    def load_index(self):
+        """Load the rules index from JSON"""
+        if not self.index_path.exists():
+            raise FileNotFoundError(f"Index file not found: {self.index_path}")
+        
+        with open(self.index_path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            self.rules = data['rules']
+        
+        print(f"Loaded {len(self.rules)} rules from index")
+    
+    def search(self, query: str, max_results: int = 5, 
+               weapon_filter: str = None, variant_filter: str = None) -> List[SearchResult]:
+        """
+        Search for rules matching the query
+        
+        Args:
+            query: Search query (keywords or natural language)
+            max_results: Maximum number of results to return
+            weapon_filter: Filter by weapon type (e.g., "longsword")
+            variant_filter: Filter by variant (e.g., "VOR", "COMBAT")
+        
+        Returns:
+            List of SearchResult objects, sorted by relevance
+        """
+        query_lower = query.lower()
+        query_terms = self._extract_terms(query_lower)
+        
+        results = []
+        
+        for rule in self.rules:
+            # Apply filters
+            if weapon_filter and rule.get('weapon_type') != weapon_filter:
+                continue
+            if variant_filter and rule.get('variant') != variant_filter:
+                continue
+            
+            # Calculate relevance score
+            score = self._calculate_score(rule, query_lower, query_terms)
+            
+            if score > 0:
+                results.append(SearchResult(
+                    rule_id=rule['rule_id'],
+                    text=rule['text'],
+                    section=rule['section'],
+                    subsection=rule['subsection'],
+                    document=rule['document'],
+                    weapon_type=rule.get('weapon_type', ''),
+                    variant=rule.get('variant', ''),
+                    score=score
+                ))
+        
+        # Sort by score (descending) and return top results
+        results.sort(key=lambda x: x.score, reverse=True)
+        return results[:max_results]
+    
+    def _extract_terms(self, query: str) -> List[str]:
+        """Extract search terms from query"""
+        # Remove Hungarian stop words and punctuation
+        stop_words = {'a', 'az', 'és', 'vagy', 'de', 'ha', 'hogy', 'mi', 'van', 'volt'}
+        terms = re.findall(r'\w+', query)
+        return [t for t in terms if t not in stop_words and len(t) > 2]
+    
+    def _calculate_score(self, rule: Dict[str, Any], query: str, terms: List[str]) -> float:
+        """Calculate relevance score for a rule"""
+        score = 0.0
+        
+        # Combine searchable text
+        text_lower = rule['text'].lower()
+        section_lower = rule['section'].lower()
+        subsection_lower = rule['subsection'].lower()
+        rule_id_lower = rule['rule_id'].lower()
+        
+        # Exact rule ID match (highest priority)
+        if rule_id_lower in query:
+            score += 100.0
+        
+        # Exact phrase match in text
+        if query in text_lower:
+            score += 50.0
+        
+        # Exact phrase match in section/subsection
+        if query in section_lower or query in subsection_lower:
+            score += 30.0
+        
+        # Term frequency in text
+        for term in terms:
+            count_in_text = text_lower.count(term)
+            score += count_in_text * 10.0
+            
+            # Bonus for terms in section/subsection
+            if term in section_lower or term in subsection_lower:
+                score += 5.0
+        
+        # Bonus for specific weapon rules if relevant
+        if any(weapon_term in query for weapon_term in ['hosszúkard', 'longsword', 'rapir', 'rapier']):
+            if rule.get('weapon_type') != 'general':
+                score += 10.0
+        
+        return score
+    
+    def get_rule_by_id(self, rule_id: str) -> Dict[str, Any]:
+        """Get a specific rule by its ID"""
+        for rule in self.rules:
+            if rule['rule_id'].lower() == rule_id.lower():
+                return rule
+        return None
+    
+    def get_rules_by_section(self, section_name: str) -> List[Dict[str, Any]]:
+        """Get all rules in a specific section"""
+        return [rule for rule in self.rules 
+                if section_name.lower() in rule['section'].lower()]
+
+
+def format_result(result: SearchResult, show_context: bool = True) -> str:
+    """Format a search result for display"""
+    output = []
+    output.append(f"\n{'='*70}")
+    output.append(f"Rule ID: {result.rule_id}")
+    output.append(f"Document: {result.document}")
+    
+    if result.weapon_type:
+        output.append(f"Weapon: {result.weapon_type}" + 
+                     (f" ({result.variant})" if result.variant else ""))
+    
+    if show_context:
+        output.append(f"\nSection: {result.section}")
+        if result.subsection:
+            output.append(f"Subsection: {result.subsection}")
+    
+    output.append(f"\nText:\n{result.text}")
+    output.append(f"\n[Relevance Score: {result.score:.1f}]")
+    
+    return "\n".join(output)
+
+
+def main():
+    """Interactive search CLI"""
+    import sys
+    
+    # Get the index path
+    current_dir = Path(__file__).parent
+    index_path = current_dir / "rules_index.json"
+    
+    if not index_path.exists():
+        print("Error: Index not found. Please run parser.py first to create the index.")
+        sys.exit(1)
+    
+    # Initialize search engine
+    search_engine = RulebookSearch(index_path)
+    
+    print("\n" + "="*70)
+    print("HEMA Rulebook Search Engine")
+    print("="*70)
+    print("\nEnter your query (or 'quit' to exit)")
+    print("Example queries:")
+    print("  - találati felület")
+    print("  - valid target areas")
+    print("  - GEN-1.1.1")
+    print("  - hosszúkard vágás")
+    print("-"*70)
+    
+    while True:
+        try:
+            query = input("\nQuery: ").strip()
+            
+            if not query or query.lower() in ['quit', 'exit', 'q']:
+                print("Goodbye!")
+                break
+            
+            # Search
+            results = search_engine.search(query, max_results=5)
+            
+            if not results:
+                print("\nNo results found. Try different keywords.")
+                continue
+            
+            print(f"\nFound {len(results)} results:")
+            
+            for i, result in enumerate(results, 1):
+                print(format_result(result))
+            
+        except KeyboardInterrupt:
+            print("\n\nGoodbye!")
+            break
+        except Exception as e:
+            print(f"\nError: {e}")
+
+
+if __name__ == "__main__":
+    main()
