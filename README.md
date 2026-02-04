@@ -19,6 +19,7 @@
 - [Hosszúkardvívás általánosan érvényes szabályai](04-hosszukard.md)
 - [Hosszúkardvívás VOR szabályai](04.a--hosszukard-VOR.md)
 - [Hosszúkardvívás COMBAT szabályai](04.b-hosszukard-COMBAT.md)
+- [Hosszúkardvívás AFTERBLOW szabályai](04.c-hosszukard-AFTERBLOW.md)
 - [Párnázott fegyverek szabályai](06-parnazott_fegyver.md)
 
 ## Függelék

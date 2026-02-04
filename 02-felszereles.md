@@ -3,12 +3,13 @@
 ### I. Vívópást
 1. A vívópást (továbbiakban pást) mindkét vívó számára azonos feltételeket kell teremtsen. Ez elsősorban a fényviszonyokra és a talaj csúszósságára vonatkozik.
 
-2. A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi
+<!-- TODO össze kell hangolni a FEBUs szabállyal, és figyelembe kell venni, ogy nem mindig adott a lehetőség, kisebb méretet is me kell engedni, de a szervezőnek kommunikálnia kéne előre mekkora várható -->
+1. A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi
 akadály a pást határától minimum 1 méterre legyen.
 
-3. A pást közepe megjelölhető.
+1. A pást közepe megjelölhető.
 
-4. A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy azok
+1. A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy azok
 legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 méteres távolságot hagyva a két vívó között az asszó kezdetekor.
 
 ### II. Felszerelés
