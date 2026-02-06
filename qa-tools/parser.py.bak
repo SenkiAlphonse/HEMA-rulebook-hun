@@ -22,7 +22,7 @@ class Rule:
     anchor_id: str  # HTML anchor ID for cross-referencing
     line_number: int  # Starting line in source file
     weapon_type: str = ""  # e.g., "longsword", "rapier", or "general"
-    formatum: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
+    variant: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
 
 
 @dataclass
@@ -43,10 +43,9 @@ class RulebookParser:
         self.sections: List[Section] = []
         
         # Patterns
-        self.rule_id_pattern = re.compile(r'\*\*([A-Z]+(?:-[A-Z]+)*-[\d.]+)\*\*')
+        self.rule_id_pattern = re.compile(r'\*\*([A-Z]+-[\d.]+)\*\*')
         self.anchor_pattern = re.compile(r'<span id="([^"]+)"></span>')
         self.heading_pattern = re.compile(r'^(#{1,6})\s+(.+)$')
-        self.comment_pattern = re.compile(r'<!--.*?-->', re.DOTALL)
         
     def parse_all(self) -> Dict[str, Any]:
         """Parse all markdown files in the rulebook directory"""
@@ -71,9 +70,9 @@ class RulebookParser:
         with open(filepath, 'r', encoding='utf-8') as f:
             lines = f.readlines()
         
-        # Extract weapon type and formatum from filename
-        weapon_type, formatum = self._extract_weapon_info(filepath.name)
-
+        # Extract weapon type and variant from filename
+        weapon_type, variant = self._extract_weapon_info(filepath.name)
+        
         current_section = ""
         current_subsection = ""
         current_anchor = ""
@@ -90,7 +89,7 @@ class RulebookParser:
                     self._save_rule(
                         current_rule_id, rule_text_lines, current_section,
                         current_subsection, filepath.name, current_anchor,
-                        rule_start_line, weapon_type, formatum
+                        rule_start_line, weapon_type, variant
                     )
                     current_rule_id = ""
                     rule_text_lines = []
@@ -122,9 +121,9 @@ class RulebookParser:
                     self._save_rule(
                         current_rule_id, rule_text_lines, current_section,
                         current_subsection, filepath.name, current_anchor,
-                        rule_start_line, weapon_type, formatum
+                        rule_start_line, weapon_type, variant
                     )
-
+                
                 # Start new rule
                 current_rule_id = rule_id_match.group(1)
                 rule_text_lines = []
@@ -135,22 +134,19 @@ class RulebookParser:
             if current_rule_id:
                 stripped = line.strip()
                 if stripped and not stripped.startswith('---'):
-                    # Remove HTML comments
-                    cleaned = self.comment_pattern.sub('', stripped).strip()
-                    if cleaned:  # Only add if there's content after removing comments
-                        rule_text_lines.append(cleaned)
+                    rule_text_lines.append(stripped)
         
         # Save last rule if exists
         if current_rule_id and rule_text_lines:
             self._save_rule(
                 current_rule_id, rule_text_lines, current_section,
                 current_subsection, filepath.name, current_anchor,
-                rule_start_line, weapon_type, formatum
+                rule_start_line, weapon_type, variant
             )
     
     def _save_rule(self, rule_id: str, text_lines: List[str], section: str,
                    subsection: str, document: str, anchor: str, line_num: int,
-                   weapon_type: str, formatum: str):
+                   weapon_type: str, variant: str):
         """Save a parsed rule"""
         text = " ".join(text_lines).strip()
         if text:
@@ -163,30 +159,30 @@ class RulebookParser:
                 anchor_id=anchor,
                 line_number=line_num,
                 weapon_type=weapon_type,
-                formatum=formatum
+                variant=variant
             )
             self.rules.append(rule)
     
     def _extract_weapon_info(self, filename: str) -> tuple:
-        """Extract weapon type and formatum from filename"""
+        """Extract weapon type and variant from filename"""
         weapon_type = "general"
-        formatum = ""
-
+        variant = ""
+        
         if "hosszukard" in filename.lower():
             weapon_type = "longsword"
             if "VOR" in filename:
-                formatum = "VOR"
+                variant = "VOR"
             elif "COMBAT" in filename:
-                formatum = "COMBAT"
+                variant = "COMBAT"
             elif "AFTERBLOW" in filename:
-                formatum = "AFTERBLOW"
+                variant = "AFTERBLOW"
         elif "rapir" in filename.lower():
             weapon_type = "rapier"
         elif "parnazott" in filename.lower():
             weapon_type = "padded_weapons"
-
-        return weapon_type, formatum
-
+        
+        return weapon_type, variant
+    
     def save_index(self, output_path: str):
         """Save parsed rules to JSON index"""
         index_data = self.parse_all()

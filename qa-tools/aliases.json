@@ -1,0 +1,76 @@
+{
+  "variants": {
+    "VOR": [
+      "right of way",
+      "row",
+      "right-of-way",
+      "priority",
+      "prio",
+      "vor"
+    ],
+    "COMBAT": [
+      "free fencing",
+      "combat",
+      "cf",
+      "free-fencing"
+    ],
+    "AFTERBLOW": [
+      "afterblow",
+      "after-blow",
+      "ab",
+      "after blow"
+    ]
+  },
+  "weapons": {
+    "longsword": [
+      "sword",
+      "ls",
+      "long sword",
+      "longsword",
+      "hosszúkard"
+    ],
+    "rapier": [
+      "rapier",
+      "rp",
+      "rapira",
+      "rapier sword"
+    ],
+    "padded_weapons": [
+      "padded",
+      "padded weapons",
+      "padded weapon",
+      "párnázott"
+    ]
+  },
+  "concepts": {
+    "target": [
+      "target area",
+      "target areas",
+      "valid target",
+      "valid targets",
+      "finding",
+      "találati felület"
+    ],
+    "penalty": [
+      "penalty",
+      "penalties",
+      "punishment",
+      "büntetés",
+      "sanctioned"
+    ],
+    "equipment": [
+      "equipment",
+      "gear",
+      "felszerelés",
+      "protective gear",
+      "protection"
+    ],
+    "illegal": [
+      "illegal",
+      "forbidden",
+      "not allowed",
+      "prohibited",
+      "tilos"
+    ]
+  }
+}

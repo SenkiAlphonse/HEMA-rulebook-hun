@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMA Rulebook Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .search-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+
+        .search-form {
+            display: grid;
+            gap: 15px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr auto;
+            gap: 10px;
+            align-items: end;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #333;
+            font-size: 0.9em;
+        }
+
+        .form-group input,
+        .form-group select {
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-search {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 30px;
+        }
+
+        .btn-search:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-search:active {
+            transform: translateY(0);
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            color: #667eea;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .stat-number {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+
+        .results {
+            margin-top: 30px;
+        }
+
+        .result-item {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .result-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .result-id {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #667eea;
+            font-family: monospace;
+        }
+
+        .result-score {
+            background: #f0f0f0;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .result-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e8eaf6;
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .tag.weapon {
+            background: #f3e5f5;
+            color: #764ba2;
+        }
+
+        .tag.format {
+            background: #e0f2f1;
+            color: #00796b;
+        }
+
+        .result-text {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .result-meta {
+            font-size: 0.85em;
+            color: #999;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 10px;
+        }
+
+        .section-info {
+            margin: 8px 0;
+        }
+
+        .section-label {
+            font-weight: 600;
+            color: #666;
+        }
+
+        .error-message {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            color: #c62828;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 20px 0;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px 20px;
+            color: #999;
+        }
+
+        .no-results-icon {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚔️ HEMA Rulebook Search</h1>
+            <p>Hungarian Historical European Martial Arts - Quick Rule Lookup</p>
+        </div>
+
+        <div class="search-card">
+            <form class="search-form" id="searchForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="query">Search Query</label>
+                        <input 
+                            type="text" 
+                            id="query" 
+                            name="query" 
+                            placeholder="e.g., 'right of way target', 'longsword strike'"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="formatum">Format</label>
+                        <select id="formatum" name="formatum">
+                            <option value="">All Formats</option>
+                            <option value="VOR">VOR (Right of Way)</option>
+                            <option value="COMBAT">COMBAT (Free Fencing)</option>
+                            <option value="AFTERBLOW">AFTERBLOW</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="weapon">Weapon</label>
+                        <select id="weapon" name="weapon">
+                            <option value="">All Weapons</option>
+                            <option value="longsword">Longsword</option>
+                            <option value="rapier">Rapier</option>
+                            <option value="padded_weapons">Padded Weapons</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-search">Search</button>
+                </div>
+            </form>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Searching rulebook...</p>
+            </div>
+
+            <div class="stats" id="stats"></div>
+        </div>
+
+        <div class="results" id="results"></div>
+
+        <footer>
+            <p>HEMA Rulebook Search | Powered by Flask + AI | <a href="#" style="color: white;">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script>
+        const form = document.getElementById('searchForm');
+        const queryInput = document.getElementById('query');
+        const resultsDiv = document.getElementById('results');
+        const loadingDiv = document.getElementById('loading');
+
+        // Load stats on page load
+        async function loadStats() {
+            try {
+                const response = await fetch('/api/stats');
+                const data = await response.json();
+                
+                const statsDiv = document.getElementById('stats');
+                statsDiv.innerHTML = `
+                    <div class="stat-item">
+                        <div class="stat-number">${data.total_rules}</div>
+                        <div class="stat-label">Total Rules</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">${data.vor_rules}</div>
+                        <div class="stat-label">VOR Rules</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">${data.combat_rules}</div>
+                        <div class="stat-label">Combat Rules</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">${data.afterblow_rules}</div>
+                        <div class="stat-label">Afterblow Rules</div>
+                    </div>
+                `;
+            } catch (error) {
+                console.error('Error loading stats:', error);
+            }
+        }
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await search();
+        });
+
+        async function search() {
+            const query = queryInput.value.trim();
+            const formatum = document.getElementById('formatum').value;
+            const weapon = document.getElementById('weapon').value;
+
+            if (!query) {
+                resultsDiv.innerHTML = '<div class="error-message">Please enter a search query</div>';
+                return;
+            }
+
+            loadingDiv.classList.add('show');
+            resultsDiv.innerHTML = '';
+
+            try {
+                const response = await fetch('/api/search', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        formatum_filter: formatum || null,
+                        weapon_filter: weapon || null,
+                        max_results: 10
+                    })
+                });
+
+                const data = await response.json();
+                loadingDiv.classList.remove('show');
+
+                if (!response.ok) {
+                    resultsDiv.innerHTML = `<div class="error-message">Error: ${data.error}</div>`;
+                    return;
+                }
+
+                if (data.count === 0) {
+                    resultsDiv.innerHTML = `
+                        <div class="no-results">
+                            <div class="no-results-icon">🔍</div>
+                            <p>No rules found matching your search.</p>
+                            <p style="font-size: 0.9em; margin-top: 10px;">Try different keywords or remove filters.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                let html = `<h2 style="color: #333; margin-bottom: 20px;">Results (${data.count})</h2>`;
+                
+                data.results.forEach(result => {
+                    const formatLabel = result.formatum === 'general' ? 'All Formats' : result.formatum;
+                    const weaponLabel = result.weapon_type === 'general' ? 'General' : result.weapon_type;
+                    
+                    html += `
+                        <div class="result-item">
+                            <div class="result-header">
+                                <span class="result-id">${result.rule_id}</span>
+                                <span class="result-score">Score: ${result.score.toFixed(1)}</span>
+                            </div>
+                            <div class="result-tags">
+                                <span class="tag weapon">${weaponLabel}</span>
+                                <span class="tag format">${formatLabel}</span>
+                            </div>
+                            <div class="result-text">${escapeHtml(result.text)}</div>
+                            <div class="result-meta">
+                                <div class="section-info">
+                                    <span class="section-label">Document:</span> ${escapeHtml(result.document)}
+                                </div>
+                                ${result.section ? `<div class="section-info"><span class="section-label">Section:</span> ${escapeHtml(result.section)}</div>` : ''}
+                                ${result.subsection ? `<div class="section-info"><span class="section-label">Subsection:</span> ${escapeHtml(result.subsection)}</div>` : ''}
+                            </div>
+                        </div>
+                    `;
+                });
+
+                resultsDiv.innerHTML = html;
+            } catch (error) {
+                loadingDiv.classList.remove('show');
+                resultsDiv.innerHTML = `<div class="error-message">Error: ${error.message}</div>`;
+            }
+        }
+
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Load stats on page load
+        loadStats();
+
+        // Allow Enter key to search from any field
+        document.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+                e.preventDefault();
+                search();
+            }
+        });
+    </script>
+</body>
+</html>

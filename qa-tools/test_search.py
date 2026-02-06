@@ -1,66 +1,21 @@
-"""
-Simple search test - demonstrates the Q&A capabilities
-"""
-import json
-from pathlib import Path
+from search_aliases import AliasAwareSearch
 
-# Load index
-with open('qa-tools/rules_index.json', encoding='utf-8') as f:
-    data = json.load(f)
+search = AliasAwareSearch('rules_index.json', 'aliases.json')
 
-rules = data['rules']
+print('=== Test 1: Search "right of way target" ===')
+results = search.search('right of way target', max_results=5)
+for r in results:
+    print(f'  {r.rule_id} (score={r.score}): {r.text[:80]}...')
 
-def search_rules(query):
-    """Simple search function"""
-    query_lower = query.lower()
-    results = []
-    
-    for rule in rules:
-        score = 0
-        text_lower = rule['text'].lower()
-        section_lower = rule['section'].lower()
-        
-        # Score based on matches
-        if query_lower in text_lower:
-            score += 10
-        if query_lower in section_lower:
-            score += 5
-        if query_lower in rule['rule_id'].lower():
-            score += 20
-            
-        if score > 0:
-            results.append((score, rule))
-    
-    # Sort by score
-    results.sort(reverse=True, key=lambda x: x[0])
-    return [r[1] for r in results[:3]]
+print('\n=== Test 2: Search "longsword strike" ===')
+results = search.search('longsword strike', max_results=5)
+for r in results:
+    print(f'  {r.rule_id} (score={r.score}, formatum={r.formatum or \"general\"}): {r.text[:60]}...')
 
-# Test queries
-test_queries = [
-    "találati felület",
-    "hosszúkard",
-    "GEN-1.1.1",
-    "felszerelés"
-]
-
-print("="*70)
-print("HEMA RULEBOOK Q&A - DEMO")
-print("="*70)
-
-for query in test_queries:
-    print(f"\n🔍 Query: '{query}'")
-    print("-"*70)
-    
-    results = search_rules(query)
-    
-    if not results:
-        print("No results found.")
-        continue
-    
-    for i, rule in enumerate(results[:2], 1):
-        print(f"\n{i}. [{rule['rule_id']}] {rule['document']}")
-        print(f"   Section: {rule['section']}")
-        if rule['weapon_type'] != 'general':
-            print(f"   Weapon: {rule['weapon_type']}" + 
-                  (f" ({rule['variant']})" if rule['variant'] else ""))
-        print(f"   Text: {rule['text'][:200]}...")
+print('\n=== Test 3: Search with VOR filter "target" ===')
+results = search.search('target', max_results=5, formatum_filter='VOR')
+print(f'Found {len(results)} results (should include general + weapon-general + VOR-specific)')
+for r in results:
+    weapon_label = r.weapon_type if r.weapon_type != 'general' else 'general'
+    format_label = r.formatum if r.formatum else 'weapon-general'
+    print(f'  {r.rule_id} [{weapon_label}/{format_label}] (score={r.score})')
