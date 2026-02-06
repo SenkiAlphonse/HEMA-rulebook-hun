@@ -2,3 +2,5 @@
 **/.idea
 **/.idea/**
 *.ini
+__pycache__/
+*.pyc
