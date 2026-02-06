@@ -5,7 +5,7 @@ Enhanced HEMA Rulebook Search Engine with Alias Support
 import json
 import re
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Tuple
 from dataclasses import dataclass
 
 
@@ -24,18 +24,20 @@ class SearchResult:
 
 class AliasAwareSearch:
     """Search engine with alias support for HEMA rulebook"""
-    
+
     def __init__(self, index_path: str, aliases_path: str = None):
         self.index_path = Path(index_path)
         self.rules = []
         self.aliases = {}
-        
+        self.alias_to_key = {}  # Reverse lookup: alias -> (category, key)
+
         if aliases_path is None:
             aliases_path = self.index_path.parent / "aliases.json"
-        
+
         self.load_aliases(aliases_path)
         self.load_index()
-    
+        self._build_alias_lookup()
+
     def load_aliases(self, aliases_path: str):
         """Load aliases from JSON"""
         try:
@@ -44,7 +46,24 @@ class AliasAwareSearch:
         except FileNotFoundError:
             print(f"Warning: Aliases file not found at {aliases_path}")
             self.aliases = {"variants": {}, "weapons": {}, "concepts": {}}
-    
+
+    def _build_alias_lookup(self):
+        """Build reverse lookup from alias to its category and key"""
+        # Map format aliases
+        for key, aliases in self.aliases.get('variants', {}).items():
+            for alias in aliases:
+                self.alias_to_key[alias.lower()] = ('formatum', key)
+        
+        # Map weapon aliases
+        for key, aliases in self.aliases.get('weapons', {}).items():
+            for alias in aliases:
+                self.alias_to_key[alias.lower()] = ('weapon', key)
+        
+        # Map concept aliases - store all aliases in concept group
+        for concept_key, aliases in self.aliases.get('concepts', {}).items():
+            for alias in aliases:
+                self.alias_to_key[alias.lower()] = ('concept', concept_key)
+
     def load_index(self):
         """Load the rules index"""
         if not self.index_path.exists():
@@ -55,21 +74,67 @@ class AliasAwareSearch:
             self.rules = data['rules']
         
         print(f"Loaded {len(self.rules)} rules with alias support")
-    
-    def search(self, query: str, max_results: int = 5, 
+
+    def _expand_query(self, query: str) -> Tuple[str, str, str, List[str]]:
+        """
+        Expand query based on aliases
+        
+        Returns: (expanded_query, formatum_filter, weapon_filter, concept_terms)
+        """
+        query_lower = query.lower()
+        formatum_filter = None
+        weapon_filter = None
+        concept_terms = []
+        remaining_terms = []
+        
+        # Split query into words
+        words = re.findall(r'\w+', query_lower)
+        
+        for word in words:
+            if word in self.alias_to_key:
+                category, key = self.alias_to_key[word]
+                
+                if category == 'formatum':
+                    formatum_filter = key
+                elif category == 'weapon':
+                    weapon_filter = key
+                elif category == 'concept':
+                    # Add all aliases from this concept to search terms
+                    concept_terms.extend(self.aliases['concepts'][key])
+            else:
+                remaining_terms.append(word)
+        
+        # Build expanded query
+        expanded_query = ' '.join(remaining_terms)
+        if concept_terms:
+            # Add concept terms to search
+            expanded_query = expanded_query + ' ' + ' '.join(concept_terms)
+        
+        return expanded_query.strip(), formatum_filter, weapon_filter, concept_terms
+
+    def search(self, query: str, max_results: int = 5,
                formatum_filter: str = None, weapon_filter: str = None) -> List[SearchResult]:
         """
-        Search with alias awareness
-        
+        Search with alias awareness and query expansion
+
         Args:
             query: Search query
             max_results: Max results to return
-            formatum_filter: Filter by format (VOR, COMBAT, AFTERBLOW)
-            weapon_filter: Filter by weapon (longsword, rapier, etc.)
+            formatum_filter: Filter by format (VOR, COMBAT, AFTERBLOW) - can be overridden by query
+            weapon_filter: Filter by weapon (longsword, rapier, etc.) - can be overridden by query
         """
-        query_lower = query.lower()
-        query_terms = self._extract_terms(query_lower)
+        # Expand query based on aliases
+        expanded_query, detected_formatum, detected_weapon, concept_terms = self._expand_query(query)
         
+        # Use detected filters if not explicitly provided
+        if not formatum_filter and detected_formatum:
+            formatum_filter = detected_formatum
+        if not weapon_filter and detected_weapon:
+            weapon_filter = detected_weapon
+        
+        query_lower = expanded_query.lower() if expanded_query else query.lower()
+        query_terms = self._extract_terms(query_lower)
+
         results = []
         
         for rule in self.rules:
@@ -94,8 +159,8 @@ class AliasAwareSearch:
                     continue
 
             # Calculate score including aliases
-            score = self._calculate_score_with_aliases(rule, query_lower, query_terms)
-            
+            score = self._calculate_score_with_aliases(rule, query_lower, query_terms, concept_terms)
+
             if score > 0:
                 results.append(SearchResult(
                     rule_id=rule['rule_id'],
@@ -118,56 +183,55 @@ class AliasAwareSearch:
         terms = re.findall(r'\w+', query)
         return [t for t in terms if t not in stop_words and len(t) > 2]
     
-    def _calculate_score_with_aliases(self, rule: Dict[str, Any], 
-                                      query: str, terms: List[str]) -> float:
+    def _calculate_score_with_aliases(self, rule: Dict[str, Any],
+                                      query: str, terms: List[str], 
+                                      concept_terms: List[str] = None) -> float:
         """Calculate score including alias matches"""
         score = 0.0
-        
+
         text_lower = rule['text'].lower()
         section_lower = rule.get('section', '').lower()
         subsection_lower = rule.get('subsection', '').lower()
         rule_id_lower = rule['rule_id'].lower()
-        
+
         # Direct rule ID match (highest priority)
         if rule_id_lower in query:
             score += 100.0
-        
+
         # Exact phrase in text
         if query in text_lower:
             score += 50.0
-        
+
         # Exact phrase in section
         if query in section_lower or query in subsection_lower:
             score += 30.0
-        
+
         # Term frequency in text
         for term in terms:
             count_in_text = text_lower.count(term)
             score += count_in_text * 10.0
-            
+
             if term in section_lower or term in subsection_lower:
                 score += 5.0
-        
-        # Check formatum aliases
+
+        # Check concept terms (from alias expansion)
+        if concept_terms:
+            for concept_term in concept_terms:
+                if concept_term.lower() in text_lower:
+                    score += 15.0
+
+        # Check formatum aliases (legacy scoring for non-expanded queries)
         if rule.get('formatum'):
             for alias in rule.get('formatum_aliases', []):
                 if alias in query:
                     score += 40.0
-        
-        # Check weapon aliases
+
+        # Check weapon aliases (legacy scoring for non-expanded queries)
         for alias in rule.get('weapon_aliases', []):
             if alias in query:
                 score += 20.0
-        
-        # Check concept aliases
-        for concept_aliases in self.aliases.get('concepts', {}).values():
-            for alias in concept_aliases:
-                if alias in query and alias in text_lower:
-                    score += 15.0
-        
+
         return score
-
-
     def get_rule_by_id(self, rule_id: str) -> dict:
         """Get a rule by its ID"""
         for rule in self.rules:

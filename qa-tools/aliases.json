@@ -39,7 +39,11 @@
       "padded",
       "padded weapons",
       "padded weapon",
-      "párnázott"
+      "párnázott",
+      "párnázott fegyverek",
+      "párnázott fegyver",
+      "plüsi",
+      "plüsskard"
     ]
   },
   "concepts": {
@@ -70,7 +74,8 @@
       "forbidden",
       "not allowed",
       "prohibited",
-      "tilos"
+      "tilos",
+      "tiltott"
     ]
   }
 }
