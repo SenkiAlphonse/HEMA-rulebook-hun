@@ -1,4 +1,4 @@
-## Rapírvívás egyezményes szabályai
+<!-- ## Rapírvívás egyezményes szabályai
  
 ### A találatok beadásának módja
  
@@ -107,4 +107,4 @@ figyelembe a „rajta!” előtt és az „állj!” után adott találatokat
 // TODO
 
 ## Rapírvívás szabályai köpennyel 
-// TODO
+// TODO -->

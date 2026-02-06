@@ -37,13 +37,22 @@ Csak azok a találatok érvényesek, amelyek az érvényes találati felületre 
   <p align="center">
     <img width="75%" height="75%" alt="TARGET_BLUE" align="center" src="https://github.com/user-attachments/assets/e8d25cdc-2721-4e82-84b3-8c7c0673c9b1" />
   </p>
-  
+
 **LS-1.2.3** 
-Érvénytelen találati felületre érkező vágások és szúrások erősségének megítélése a mérkőzést vezető bíró feladata amitől függően a találatot bevivő vívót köteles a bíró megfelelően büntetni a szabálytalanságok második csoportjában foglaltak szerint.
- 
+tilos a találati felület védése vagy a test másik részével való helyettesítése elfedéssel<!-- (vö.: t.158-162, t.165, t.170)  -->; a vétkes vívó által adott találat megsemmisítendő.
+- Ha a vívómenet során valamelyik vívó az érvényes találati felületét fedi vagy érvénytelennel helyettesíti, őt az első csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani 
+<!-- (vö.t.29.) -->
+- Ha a vívómenet során egy megfelelően beadott találat fedés vagy helyettesítés miatt érvénytelenként talál, a vétkes vívót az első csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani és a találatot meg kell adni.
+ <!-- (vö.: t 158, t.165, t.170) -->
+
+**LS-1.2.3** 
+Ha egy találat az érvényes találati felületen kívülre érkezik, nem számít találatnak; nem állítja meg a vívómenetet és nem semmisíti meg a későbbi találatokat. Ugyanakkor a találat amelyet vívóhibát követően<!-- illetve a pást határának két lábbal történő átlépését követően--> adtak be, nem számít érvényes találatnak, azonban megállítja a vívómenetet és megsemmisít minden azt követő találatot.
+
 **LS-1.2.4** 
-A mérkőzést vezető bírónak büntetni kell azt a vívót, aki érvényes találati felületet érvénytelen találati
-felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, fegyelmi vétségek első csoportjának megfelelően.
+Érvénytelen találati felületre érkező vágások és szúrások erősségének megítélése és a szükséges büntetések kiszabása a versenybíró feladata.
+ 
+**LS-1.2.5** 
+A mérkőzést vezető bírónak büntetni kell azt a vívót, aki érvényes találati felületet érvénytelen találati felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, fegyelmi vétségek első csoportjának megfelelően.
  
 ### A találatok megállapítása vagy érvénytelenítése
  <span id="LS-1.3"></span>
@@ -61,9 +70,20 @@ A vívó a szabályoknak megfelelően kérhet magyarázatot, videóbíráskodás
 Minden szabálytalanság érvényteleníti a vétkes vívó által adott találatot, ha a szabálytalanság a találatszerzéshez hozzájárult.
  
 **LS-1.3.5** 
-A találat ténylegességének elbírálásában kizárólag a mérkőzést vezető bíró hozhat végső döntést. Nem veheti
-figyelembe a „rajta!” előtt és az „állj!” után adott találatokat
+A találat ténylegességének elbírálásában kizárólag a mérkőzést vezető bíró hozhat végső döntést. Nem veheti figyelembe a „rajta!” előtt és az „állj!” után adott találatokat
 
 **LS-1.3.6** 
 Ha egy találat az érvényes találati felületen kívülre érkezik, nem számít érvényes találatnak.
  
+## A Hosszúkardvívás versenyformátumai
+A hosszúkard versenyeket az alábbi három formátumok egyikében kell szervezni, ezt a versenykiírásban egyértelmáen fel kell tüntetni!
+
+- VOR
+<span id="LS-VOR-1"></span>
+[05.a-hosszukard-VOR.md](05.a-hosszukard-VOR.md)
+- COMBAT
+<span id="LS-COMBAT-1"></span>
+[05.b-hosszukard-COMBAT.md](05.b-hosszukard-COMBAT.mdd)
+- AFTERBLOW
+<span id="LS-AB"></span>
+[05.c-hosszukard-AFTERBLOW.md](05.c-hosszukard-AFTERBLOW.md)

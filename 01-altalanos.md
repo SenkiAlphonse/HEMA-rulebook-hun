@@ -19,14 +19,17 @@ Az egyik alapelv, amely mindenek felett áll, a sportszerűség elve. Mindegyik 
 
 ## Szakkifejezések magyarázata
 <span id="GEN-3"></span>
+[02-szojegyzek.md](02-szojegyzek.md)
 <!-- TODO -->
 
 ## A küzdőtér
 <span id="GEN-4"></span>
+[03-felszereles.md](03-felszereles.md)
 <!-- TODO -->
 
 ## A vívók felszerelése
 <span id="GEN-5"></span>
+[03-felszereles.md](03-felszereles.md)
 <!-- TODO -->
 
 ## Vívás
@@ -331,4 +334,5 @@ A szervező a verseny hatékony lebonyolítása érdekében a csoportfordulóban
 - Tilos a keresztvassal ütni.
 
 ##  A mérkőzés vezetése és a találatok elbírálása
-<span id="GEN-6"></span>
+<span id="GEN-7"></span>
+[04-biraskodas.md](04-biraskodas.md)

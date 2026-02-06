@@ -1,25 +1,23 @@
-## I. A küzdőtér
+## A küzdőtér
 <span id="GEN-4"></span>
 <!-- TODO -->
-### Mérete
-<span id="GEN-4.1"></span>
 
-**GEN-4.1.1** 
-A vívópást (továbbiakban pást) mindkét vívó számára azonos feltételeket kell teremtsen. Ez elsősorban a fényviszonyokra és a talaj csúszósságára vonatkozik.
+**GEN-4.1** 
+A küzdőtér felülete egyenletes, vízszintes. Ne biztosítson előnyt vagy okozzon hátrányt egyik
+vívó részére sem, különösen a fények vonatkozásában.
 
 <!-- TODO össze kell hangolni a FEBUS szabállyal, és figyelembe kell venni, ogy nem mindig adott a lehetőség, kisebb méretet is me kell engedni, de a szervezőnek kommunikálnia kéne előre mekkora várható -->
-**GEN-4.1.2** 
+**GEN-4.2** 
 A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi
 akadály a pást határától minimum 1 méterre legyen.
 
-**GEN-4.1.3** 
+**GEN-4.3** 
 A pást közepe megjelölhető.
 
-**GEN-4.1.4** 
-A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy azok
-legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 méteres távolságot hagyva a két vívó között az asszó kezdetekor.
+**GEN-4.4** 
+A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy azok legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 méteres távolságot hagyva a két vívó között az asszó kezdetekor.
 
-## II. Felszerelés
+## Felszerelés
 <span id="GEN-5"></span>
 
 ### Megfelelőség
@@ -80,6 +78,9 @@ Amennyiben a kabát önmagában nem ad elegendő védelmet a könyöknek és az 
 
 **GEN-5.2.2.6** 
 A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem.
+
+<!-- **GEN-5.2.2.7** 
+hónaljvédő TODO -->
 
 **GEN-5.2.3** 
 #### Lábvédelem
