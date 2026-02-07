@@ -5,14 +5,17 @@ Flask application for searching the HEMA rulebook
 
 import json
 import os
+import sys
 from pathlib import Path
 from flask import Flask, render_template, request, jsonify
-from qa_tools.search_aliases import AliasAwareSearch
+
+qa_dir = Path(__file__).parent / "qa-tools"
+sys.path.insert(0, str(qa_dir))
+from search_aliases import AliasAwareSearch
 
 app = Flask(__name__)
 
 # Load search engine
-qa_dir = Path(__file__).parent / "qa-tools"
 search_engine = AliasAwareSearch(
     str(qa_dir / "rules_index.json"),
     str(qa_dir / "aliases.json")
