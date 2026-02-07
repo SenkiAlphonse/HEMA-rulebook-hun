@@ -231,6 +231,14 @@ class AliasAwareSearch:
             if alias in query:
                 score += 20.0
 
+        # Apply length penalty for very long rules (e.g., large tables)
+        # Rules >2000 chars get progressively lower scores to push them down rankings
+        text_length = len(rule['text'])
+        if text_length > 2000:
+            # Exponential penalty: 2000 chars = 1.5x, 4000 = 3x, 8000 = 9x
+            length_penalty = (text_length / 2000.0) ** 1.5
+            score = score / length_penalty
+
         return score
     def get_rule_by_id(self, rule_id: str) -> dict:
         """Get a rule by its ID"""
