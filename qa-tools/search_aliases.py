@@ -4,6 +4,7 @@ Enhanced HEMA Rulebook Search Engine with Alias Support
 
 import json
 import re
+import unicodedata
 from pathlib import Path
 from typing import List, Dict, Any, Tuple
 from dataclasses import dataclass
@@ -113,6 +114,12 @@ class AliasAwareSearch:
         
         return expanded_query.strip(), formatum_filter, weapon_filter, concept_terms, base_query.strip()
 
+    def _normalize_text(self, text: str) -> str:
+        if not text:
+            return ""
+        normalized = unicodedata.normalize("NFKD", text)
+        return "".join(ch for ch in normalized if not unicodedata.combining(ch)).lower()
+
     def search(self, query: str, max_results: int = 5,
                formatum_filter: str = None, weapon_filter: str = None) -> List[SearchResult]:
         """
@@ -134,8 +141,9 @@ class AliasAwareSearch:
             weapon_filter = detected_weapon
         
         query_lower = expanded_query.lower() if expanded_query else query.lower()
-        query_terms = self._extract_terms(query_lower)
-        required_terms = self._extract_terms(base_query) if base_query else []
+        query_norm = self._normalize_text(query_lower)
+        query_terms = self._extract_terms(query_norm)
+        required_terms = self._extract_terms(self._normalize_text(base_query)) if base_query else []
 
         results = []
         
@@ -166,12 +174,13 @@ class AliasAwareSearch:
                     rule.get('text', ''),
                     rule.get('section', ''),
                     rule.get('subsection', '')
-                ]).lower()
-                if any(term not in combined_text for term in required_terms):
+                ])
+                combined_norm = self._normalize_text(combined_text)
+                if any(term not in combined_norm for term in required_terms):
                     continue
 
             # Calculate score including aliases
-            score = self._calculate_score_with_aliases(rule, query_lower, query_terms, concept_terms)
+            score = self._calculate_score_with_aliases(rule, query_lower, query_norm, query_terms, concept_terms)
 
             if score > 0:
                 results.append(SearchResult(
@@ -196,7 +205,7 @@ class AliasAwareSearch:
         return [t for t in terms if t not in stop_words and len(t) > 2]
     
     def _calculate_score_with_aliases(self, rule: Dict[str, Any],
-                                      query: str, terms: List[str], 
+                                      query: str, query_norm: str, terms: List[str],
                                       concept_terms: List[str] = None) -> float:
         """Calculate score including alias matches"""
         score = 0.0
@@ -206,30 +215,34 @@ class AliasAwareSearch:
         subsection_lower = rule.get('subsection', '').lower()
         rule_id_lower = rule['rule_id'].lower()
 
+        text_norm = self._normalize_text(text_lower)
+        section_norm = self._normalize_text(section_lower)
+        subsection_norm = self._normalize_text(subsection_lower)
+
         # Direct rule ID match (highest priority)
         if rule_id_lower in query:
             score += 100.0
 
         # Exact phrase in text
-        if query in text_lower:
+        if query_norm and query_norm in text_norm:
             score += 50.0
 
         # Exact phrase in section
-        if query in section_lower or query in subsection_lower:
+        if query_norm and (query_norm in section_norm or query_norm in subsection_norm):
             score += 30.0
 
         # Term frequency in text
         for term in terms:
-            count_in_text = text_lower.count(term)
+            count_in_text = text_norm.count(term)
             score += count_in_text * 10.0
 
-            if term in section_lower or term in subsection_lower:
+            if term in section_norm or term in subsection_norm:
                 score += 5.0
 
         # Check concept terms (from alias expansion)
         if concept_terms:
             for concept_term in concept_terms:
-                if concept_term.lower() in text_lower:
+                if self._normalize_text(concept_term) in text_norm:
                     score += 15.0
 
         # Check formatum aliases (legacy scoring for non-expanded queries)
