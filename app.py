@@ -39,7 +39,7 @@ def _get_gemini_model():
     if genai is None:
         raise RuntimeError("google-generativeai is not installed")
     genai.configure(api_key=api_key)
-    model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+    model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash-latest")
     return genai.GenerativeModel(model_name)
 
 

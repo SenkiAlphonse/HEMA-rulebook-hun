@@ -34,5 +34,5 @@
 
 - Start: `python app.py`
 - AI summaries (Gemini) require `GEMINI_API_KEY`
-- Optional: `GEMINI_MODEL` (default: `gemini-1.5-flash`)
+- Optional: `GEMINI_MODEL` (default: `gemini-1.5-flash-latest`)
 
