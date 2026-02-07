@@ -7,7 +7,7 @@ import json
 import os
 import sys
 from pathlib import Path
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, Response
 
 qa_dir = Path(__file__).parent / "qa-tools"
 sys.path.insert(0, str(qa_dir))
@@ -24,6 +24,91 @@ search_engine = AliasAwareSearch(
 # Cache for format and weapon options
 FORMATS = ["VOR", "COMBAT", "AFTERBLOW"]
 WEAPONS = ["longsword", "rapier", "padded_weapons"]
+
+
+def _normalize_filter(value, allowed):
+    if value and value in allowed:
+        return value
+    return None
+
+
+def _build_document_order(rules):
+    order = {}
+    next_index = 0
+    for rule in rules:
+        doc = rule.get("document", "")
+        if doc and doc not in order:
+            order[doc] = next_index
+            next_index += 1
+    return order
+
+
+def _filter_rules_for_extract(rules, weapon_filter, formatum_filter):
+    filtered = []
+    for rule in rules:
+        rule_weapon = rule.get("weapon_type", "general")
+        rule_formatum = rule.get("formatum") or ""
+
+        if weapon_filter and rule_weapon not in ["general", weapon_filter]:
+            continue
+
+        if formatum_filter and rule_formatum not in ["", formatum_filter]:
+            continue
+
+        filtered.append(rule)
+    return filtered
+
+
+def _format_extract_text(rules, weapon_filter, formatum_filter):
+    title_parts = ["Rulebook Extract"]
+    if weapon_filter:
+        title_parts.append(f"Weapon: {weapon_filter}")
+    if formatum_filter:
+        title_parts.append(f"Format: {formatum_filter}")
+
+    doc_order = _build_document_order(rules)
+    sorted_rules = sorted(
+        rules,
+        key=lambda r: (
+            doc_order.get(r.get("document", ""), 9999),
+            int(r.get("line_number", 0)),
+            r.get("rule_id", "")
+        )
+    )
+
+    output_lines = []
+    output_lines.append("# " + " | ".join(title_parts))
+    output_lines.append("")
+
+    current_doc = None
+    current_section = None
+    current_subsection = None
+
+    for rule in sorted_rules:
+        doc = rule.get("document", "")
+        section = rule.get("section", "")
+        subsection = rule.get("subsection", "")
+
+        if doc != current_doc:
+            output_lines.append(f"\n## Document: {doc}")
+            current_doc = doc
+            current_section = None
+            current_subsection = None
+
+        if section and section != current_section:
+            output_lines.append(f"\n### {section}")
+            current_section = section
+            current_subsection = None
+
+        if subsection and subsection != current_subsection:
+            output_lines.append(f"\n#### {subsection}")
+            current_subsection = subsection
+
+        output_lines.append(f"\n**{rule.get('rule_id', '')}**")
+        output_lines.append(rule.get("text", "").strip())
+
+    output_lines.append("")
+    return "\n".join(output_lines)
 
 
 @app.route("/")
@@ -101,6 +186,39 @@ def api_stats():
         "afterblow_rules": ab_rules,
         "longsword_rules": longsword_rules
     })
+
+
+@app.route("/api/extract", methods=["POST"])
+def api_extract():
+    """Generate a rulebook extract by weapon/format filters"""
+    try:
+        data = request.get_json()
+        weapon_filter = _normalize_filter(data.get("weapon_filter"), WEAPONS)
+        formatum_filter = _normalize_filter(data.get("formatum_filter"), FORMATS)
+
+        filtered_rules = _filter_rules_for_extract(
+            search_engine.rules,
+            weapon_filter,
+            formatum_filter
+        )
+
+        extract_text = _format_extract_text(
+            filtered_rules,
+            weapon_filter,
+            formatum_filter
+        )
+
+        weapon_label = weapon_filter or "all-weapons"
+        format_label = formatum_filter or "all-formats"
+        filename = f"rulebook-extract_{weapon_label}_{format_label}.md"
+
+        return Response(
+            extract_text,
+            mimetype="text/markdown; charset=utf-8",
+            headers={"Content-Disposition": f"attachment; filename={filename}"}
+        )
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route("/api/rule/<rule_id>", methods=["GET"])

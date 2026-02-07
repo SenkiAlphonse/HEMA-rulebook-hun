@@ -342,6 +342,35 @@
             <div class="stats" id="stats"></div>
         </div>
 
+        <div class="search-card" style="margin-top: 25px;">
+            <form class="search-form" id="extractForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="extractFormatum">Extract Format</label>
+                        <select id="extractFormatum" name="extractFormatum">
+                            <option value="">All Formats</option>
+                            <option value="VOR">VOR (Right of Way)</option>
+                            <option value="COMBAT">COMBAT (Free Fencing)</option>
+                            <option value="AFTERBLOW">AFTERBLOW</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="extractWeapon">Extract Weapon</label>
+                        <select id="extractWeapon" name="extractWeapon">
+                            <option value="">All Weapons</option>
+                            <option value="longsword">Longsword</option>
+                            <option value="rapier">Rapier</option>
+                            <option value="padded_weapons">Padded Weapons</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-search">Download Extract</button>
+                </div>
+                <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                    Includes all general rules plus matching weapon/format rules, ordered by document and rule index.
+                </p>
+            </form>
+        </div>
+
         <div class="results" id="results"></div>
 
         <footer>
@@ -351,6 +380,7 @@
 
     <script>
         const form = document.getElementById('searchForm');
+        const extractForm = document.getElementById('extractForm');
         const queryInput = document.getElementById('query');
         const resultsDiv = document.getElementById('results');
         const loadingDiv = document.getElementById('loading');
@@ -392,6 +422,11 @@
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
             await search();
+        });
+
+        extractForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            await downloadExtract();
         });
 
         async function search() {
@@ -447,6 +482,44 @@
             } catch (error) {
                 loadingDiv.classList.remove('show');
                 resultsDiv.innerHTML = `<div class="error-message">Error: ${error.message}</div>`;
+            }
+        }
+
+        async function downloadExtract() {
+            const formatum = document.getElementById('extractFormatum').value;
+            const weapon = document.getElementById('extractWeapon').value;
+
+            try {
+                const response = await fetch('/api/extract', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        formatum_filter: formatum || null,
+                        weapon_filter: weapon || null
+                    })
+                });
+
+                if (!response.ok) {
+                    const data = await response.json();
+                    alert(`Error: ${data.error || 'Failed to generate extract'}`);
+                    return;
+                }
+
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                const weaponLabel = weapon || 'all-weapons';
+                const formatLabel = formatum || 'all-formats';
+                a.download = `rulebook-extract_${weaponLabel}_${formatLabel}.md`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                window.URL.revokeObjectURL(url);
+            } catch (error) {
+                alert(`Error: ${error.message}`);
             }
         }
 
