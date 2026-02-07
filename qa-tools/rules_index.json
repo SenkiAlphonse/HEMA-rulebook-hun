@@ -9,9 +9,7 @@
       "anchor_id": "GEN-1",
       "line_number": 9,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-1.1.2",
@@ -22,9 +20,7 @@
       "anchor_id": "GEN-1",
       "line_number": 13,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.1",
@@ -35,9 +31,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 41,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.2",
@@ -48,9 +42,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 44,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.3",
@@ -61,9 +53,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 47,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.4",
@@ -74,9 +64,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 50,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.5",
@@ -87,9 +75,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 53,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.6",
@@ -100,9 +86,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 56,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.7",
@@ -113,9 +97,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 59,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.8",
@@ -126,9 +108,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 64,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.9",
@@ -139,9 +119,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 67,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.10",
@@ -152,9 +130,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 70,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.1.11",
@@ -165,9 +141,7 @@
       "anchor_id": "GEN-6.1",
       "line_number": 73,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.1",
@@ -178,9 +152,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 81,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.2",
@@ -191,9 +163,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 84,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.4",
@@ -204,9 +174,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 90,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.5",
@@ -217,9 +185,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 93,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.6",
@@ -230,9 +196,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 96,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.7",
@@ -243,9 +207,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 99,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.8",
@@ -256,9 +218,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 102,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.9",
@@ -269,9 +229,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 105,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.10",
@@ -282,9 +240,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 108,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.11",
@@ -295,9 +251,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 111,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.12",
@@ -308,9 +262,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 114,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.2.13",
@@ -321,9 +273,7 @@
       "anchor_id": "GEN-6.2",
       "line_number": 117,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.3.1",
@@ -334,9 +284,7 @@
       "anchor_id": "GEN-6.3",
       "line_number": 123,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.4.1",
@@ -347,9 +295,7 @@
       "anchor_id": "GEN-6.4",
       "line_number": 129,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.4.2",
@@ -360,9 +306,7 @@
       "anchor_id": "GEN-6.4",
       "line_number": 132,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.5.1",
@@ -373,9 +317,7 @@
       "anchor_id": "GEN-6.5",
       "line_number": 139,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.5.2",
@@ -386,9 +328,7 @@
       "anchor_id": "GEN-6.5",
       "line_number": 141,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.6.1",
@@ -399,9 +339,7 @@
       "anchor_id": "GEN-6.6",
       "line_number": 147,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.6.2",
@@ -412,9 +350,7 @@
       "anchor_id": "GEN-6.6",
       "line_number": 150,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.7.1",
@@ -425,9 +361,7 @@
       "anchor_id": "GEN-6.7",
       "line_number": 156,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.7.2",
@@ -438,9 +372,7 @@
       "anchor_id": "GEN-6.7",
       "line_number": 159,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.7.3",
@@ -451,22 +383,51 @@
       "anchor_id": "GEN-6.7",
       "line_number": 163,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.7.4",
-      "text": "Pontszerző birkózó akciók: - Földrevitelek és dobások után/során egyszerű és azonnali támadás a fegyverrel - Birkózásban fegyverrel vagy fegyver nélkül kontrollálva az ellenfelet: a bíró megítélhet pontot egy olyan akcióért amikor a fegyverrel végrehajtott akció következtében az egyik vívó mozgását, szabadulását passzívan megakadályozó helyzetbe kerül, amelyből jelentős ideig képtelen kitörni. Ilyen helyzet előállhat fegyverrel vagy anélkül végrehajtott birkózófogásokból, amelyek a vívó mozgását megakadályozzák, és ezt a helyzetet jelentős ideig - addig, amikor a bíró saját hatáskörében úgy ítéli, hogy a dominancia követelményei teljesültek, és elhangzik az ‘Állj!’ parancs - fenn is tartják. Dominancia ítélet nem alkalmazható olyan helyzetekre, ahol az ellenfél ki tud törni a fogásból, és érvényes akciókat tud kezdeményezni, akkor sem, ha valamilyen aktív erőfeszítés eredményeképp a dominálni szándékozó fegyver továbbra is érinti az ellenfél találati felületét. A domináló akciók érvényességét a bíró saját hatáskörében ítéli meg.",
+      "text": "Pontszerző birkózó akciók:",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "Fogásos és birkózó akciók",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.7",
       "line_number": 167,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.7.4.1",
+      "text": "Földrevitelek és dobások után/során egyszerű és azonnali támadás a fegyverrel",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "Fogásos és birkózó akciók",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.7",
+      "line_number": 169,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.7.4.2",
+      "text": "Birkózásban fegyverrel vagy fegyver nélkül kontrollálva az ellenfelet: a bíró megítélhet pontot egy olyan akcióért amikor a fegyverrel végrehajtott akció következtében az egyik vívó mozgását, szabadulását passzívan megakadályozó helyzetbe kerül, amelyből jelentős ideig képtelen kitörni. Ilyen helyzet előállhat fegyverrel vagy anélkül végrehajtott birkózófogásokból, amelyek a vívó mozgását megakadályozzák, és ezt a helyzetet jelentős ideig - addig, amikor a bíró saját hatáskörében úgy ítéli, hogy a dominancia követelményei teljesültek, és elhangzik az ‘Állj!’ parancs - fenn is tartják.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "Fogásos és birkózó akciók",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.7",
+      "line_number": 171,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.7.4.3",
+      "text": "Dominancia/kontrollálás ítélet nem alkalmazható olyan helyzetekre, ahol az ellenfél ki tud törni a fogásból, és érvényes akciókat tud kezdeményezni, akkor sem, ha valamilyen aktív erőfeszítés eredményeképp a dominálni szándékozó fegyver továbbra is érinti az ellenfél találati felületét. A domináló akciók érvényességét a bíró saját hatáskörében ítéli meg.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "Fogásos és birkózó akciók",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.7",
+      "line_number": 174,
+      "weapon_type": "general",
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.7.5",
@@ -475,11 +436,9 @@
       "subsection": "Fogásos és birkózó akciók",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.7",
-      "line_number": 172,
+      "line_number": 177,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.7.6",
@@ -488,11 +447,9 @@
       "subsection": "Fogásos és birkózó akciók",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.7",
-      "line_number": 175,
+      "line_number": 180,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.7.7",
@@ -501,11 +458,9 @@
       "subsection": "Fogásos és birkózó akciók",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.7",
-      "line_number": 178,
+      "line_number": 183,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.8.1",
@@ -514,11 +469,9 @@
       "subsection": "Nyert vagy vesztett terület",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.8",
-      "line_number": 184,
+      "line_number": 189,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.8.2",
@@ -527,24 +480,42 @@
       "subsection": "Nyert vagy vesztett terület",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.8",
-      "line_number": 187,
+      "line_number": 192,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.9.1",
-      "text": "Ha az egyik versenyző mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát, - a versenybírónak azonnal “állj!”-t kell kiáltania, és - meg kell semmisíteni mindent, ami a határvonal átlépése után történt.",
+      "text": "Ha az egyik versenyző mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát,",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "A határvonalak átlépése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.9",
-      "line_number": 193,
+      "line_number": 198,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.9.1.1",
+      "text": "a versenybírónak azonnal “állj!”-t kell kiáltania, és",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A határvonalak átlépése",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.9",
+      "line_number": 200,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.9.1.2",
+      "text": "meg kell semmisíteni mindent, ami a határvonal átlépése után történt.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A határvonalak átlépése",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.9",
+      "line_number": 202,
+      "weapon_type": "general",
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.9.2",
@@ -553,11 +524,9 @@
       "subsection": "A határvonalak átlépése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.9",
-      "line_number": 198,
+      "line_number": 205,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.9.3",
@@ -566,24 +535,42 @@
       "subsection": "A határvonalak átlépése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.9",
-      "line_number": 201,
+      "line_number": 208,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.9.4",
-      "text": "Ha a vívó valamelyik határvonalat teljesen, tehát mindkét lábbal túlhaladja (anélkül hogy a kilépés előtt érvényes találatot adott volna), a versenybíró a következőképpen jár el: - Az első kilépésnél a vívó figyelmeztetést kap - Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát túlhaladó versenyző egy találattal büntetendő (ellenfele egy pontot kap), akkor is ha ténylegesen nem találták el.",
+      "text": "Ha a vívó valamelyik határvonalat teljesen, tehát mindkét lábbal túlhaladja (anélkül hogy a kilépés előtt érvényes találatot adott volna), a versenybíró a következőképpen jár el:",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "A határvonalak átlépése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.9",
-      "line_number": 204,
+      "line_number": 211,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.9.4.1",
+      "text": "Az első kilépésnél a vívó figyelmeztetést kap",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A határvonalak átlépése",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.9",
+      "line_number": 215,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.9.4.2",
+      "text": "Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát túlhaladó versenyző egy találattal büntetendő (ellenfele egy pontot kap), akkor is ha ténylegesen nem találták el.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A határvonalak átlépése",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.9",
+      "line_number": 217,
+      "weapon_type": "general",
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.9.5",
@@ -592,11 +579,9 @@
       "subsection": "A határvonalak átlépése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.9",
-      "line_number": 211,
+      "line_number": 220,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.1",
@@ -605,11 +590,9 @@
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 217,
+      "line_number": 226,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.2",
@@ -618,11 +601,9 @@
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 220,
+      "line_number": 229,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.3",
@@ -631,37 +612,229 @@
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 223,
+      "line_number": 232,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.4",
-      "text": "Az egyéni csoportmérkőzések során egy mérkőzés akkor ér véget, ha a következő feltételek valamelyike teljesül: - az egyik vívó elérte a meghatározott találatszámot (afterblow esetében pontszámot): - **Vor**: Valamelyik vívó **5 találatot elért**. - **Combat:** - Valamelyik vívó **5 találatot elért**, illetve - ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak) - **Afterblow:** - Valamelyik vívó **legalább 7 PONTOT elért**, - a súlyozás miatt a 7 pontot meg lehet haladni. - Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal), - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér; - ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak) - A pontozó lapra a végső pontszám kerül (VN–Dn, N = a győztes pontjai, n = vesztes pontjai) - Vagy három percnyi tényleges vívóidő eltelt: - Ha az idő lejártakor legalább egy találatnyi különbség van a két versenyző pontjai között, a több pontot elért versenyzőt kell győztesnek kihirdetni. A jegyzőkönyvön a mérkőzésen ténylegesen elért találatokat kell rögzíteni (VN – Dn, ahol N= a győztes vívó által szerzett pontok száma és n= a vesztes vívó által szerzett pontok száma). - Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. **A vívás újrakezdése előtt** a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn. - Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni: - VN – Dn, ha döntő találat esett az időkereten belül; - V6 – D6 vagy V4 – D4 vagy V2 – D2 vagy V1 – D1 vagy V0 – D0 ha sorsolás alapján kerül ki győztes.",
+      "text": "Az egyéni csoportmérkőzések során egy mérkőzés akkor ér véget, ha a következő feltételek valamelyike teljesül:",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 227,
+      "line_number": 236,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-6.10.5",
-      "text": "Az egyéni egyenes kieséses mérkőzés akkor ér véget, ha a következő feltételek valamelyike teljesül: - az egyik vívó elérte a meghatározott találatszámot (afterblow esetében pontszámot): - **Vor:** az egyik versenyző **elér 10 találatot** - **Combat:** - az egyik versenyző **elér 10 találatot** - Ha mindkét versenyző egyszerre éri el a 10 pontot (egyidejű találatokkal), döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak) - **Afterblow:** - az egyik versenyző **elér legalább 11 PONTOT**; - a súlyozás miatt a 11 pontot meg lehet haladni. - Ha mindkét versenyző egyszerre éri el vagy haladja meg a 11 pontot (egyidejű találatokkal), - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér; - ha az állás ekkor döntetlen lett, döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak) - vagy a meghatározott tényleges vívóidő eltelt: - A két, egyperces pihenőidőkkel elválasztott három perces periódus (6 percnyi tényleges vívóidő) eltelt. - **Vor** esetén az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 5 találatot el nem ér. - Ha a szabályokban foglalt idő leteltekor a pontszámok egyenlőek, a vívók győztes pontért küzdenek, maximum egy percig. **A vívás újrakezdése előtt** a bíró kisorsolja (pénzfeldobással), ki lesz a győztes abban az esetben, ha a pontok a plusz egy perc leteltével még mindig egyenlőek. - Az egyperces pihenőidő alatt egy, a mérkőzés előtt megnevezett személy mehet a versenyző közvetlen közelébe. - A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen megszerzett pontszámok.",
+      "rule_id": "GEN-6.10.4.1",
+      "text": "az egyik vívó elérte a meghatározott találatszámot (afterblow esetében pontszámot):",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 238,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.4.1.1",
+      "text": "**Vor**: Valamelyik vívó **5 találatot elért**.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 240,
+      "weapon_type": "general",
+      "formatum": "VOR"
+    },
+    {
+      "rule_id": "GEN-6.10.4.1.2",
+      "text": "**Combat**: - Valamelyik vívó **5 találatot elért**, illetve - ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 242,
+      "weapon_type": "general",
+      "formatum": "COMBAT"
+    },
+    {
+      "rule_id": "GEN-6.10.4.1.3",
+      "text": "**Afterblow**: - Valamelyik vívó **legalább 7 PONTOT elért**, - a súlyozás miatt a 7 pontot meg lehet haladni. - Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal), - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér; - ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 246,
+      "weapon_type": "general",
+      "formatum": "AFTERBLOW"
+    },
+    {
+      "rule_id": "GEN-6.10.4.1.4",
+      "text": "A pontozólapra a végső pontszám kerül (VN–Dn, N = a győztes pontjai, n = vesztes pontjai)",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
       "line_number": 253,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.4.5",
+      "text": "Vagy három percnyi tényleges vívóidő eltelt:",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 256,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.4.5.1",
+      "text": "Ha az idő lejártakor legalább egy találatnyi különbség van a két versenyző pontjai között, a több pontot elért versenyzőt kell győztesnek kihirdetni. A jegyzőkönyvön a mérkőzésen ténylegesen elért találatokat kell rögzíteni (VN – Dn, ahol N= a győztes vívó által szerzett pontok száma és n= a vesztes vívó által szerzett pontok száma).",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 258,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.4.5.2",
+      "text": "Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. **A vívás újrakezdése előtt** a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 261,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.4.5.3",
+      "text": "Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni: - VN – Dn, ha döntő találat esett az időkereten belül; - V6 – D6 vagy V4 – D4 vagy V2 – D2 vagy V1 – D1 vagy V0 – D0 ha sorsolás alapján kerül ki győztes.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 264,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.5",
+      "text": "Az egyéni egyenes kieséses mérkőzés akkor ér véget, ha a következő feltételek valamelyike teljesül:",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 271,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.5.1",
+      "text": "az egyik vívó elérte a meghatározott találatszámot (afterblow esetében pontszámot):",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 273,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.5.1.1",
+      "text": "**Vor**: az egyik versenyző **elér 10 találatot**",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 275,
+      "weapon_type": "general",
+      "formatum": "VOR"
+    },
+    {
+      "rule_id": "GEN-6.10.5.2",
+      "text": "**Combat**: - az egyik versenyző **elér 10 találatot** - Ha mindkét versenyző egyszerre éri el a 10 pontot (egyidejű találatokkal), döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 277,
+      "weapon_type": "general",
+      "formatum": "COMBAT"
+    },
+    {
+      "rule_id": "GEN-6.10.5.3",
+      "text": "**Afterblow**: - az egyik versenyző **elér legalább 11 PONTOT**; - a súlyozás miatt a 11 pontot meg lehet haladni. - Ha mindkét versenyző egyszerre éri el vagy haladja meg a 11 pontot (egyidejű találatokkal), - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér; - ha az állás ekkor döntetlen lett, döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 281,
+      "weapon_type": "general",
+      "formatum": "AFTERBLOW"
+    },
+    {
+      "rule_id": "GEN-6.10.5.2",
+      "text": "vagy a meghatározott tényleges vívóidő eltelt: A két, egyperces pihenőidőkkel elválasztott három perces periódus (6 percnyi tényleges vívóidő) eltelt.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 289,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.5.2.1",
+      "text": "**Vor** esetén az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 5 találatot el nem ér.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 293,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.5.2.1",
+      "text": "Ha a szabályokban foglalt idő leteltekor a pontszámok egyenlőek, a vívók győztes pontért küzdenek, maximum egy percig. **A vívás újrakezdése előtt** a bíró kisorsolja (pénzfeldobással), ki lesz a győztes abban az esetben, ha a pontok a plusz egy perc leteltével még mindig egyenlőek.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 295,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.5.3",
+      "text": "Az egyperces pihenőidő alatt egy, a mérkőzés előtt megnevezett személy mehet a versenyző közvetlen közelébe.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 298,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.5.4",
+      "text": "A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen megszerzett pontszámok.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 300,
+      "weapon_type": "general",
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.6.1",
@@ -670,11 +843,9 @@
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 280,
+      "line_number": 307,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.6.2",
@@ -683,11 +854,9 @@
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 284,
+      "line_number": 311,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.6.3",
@@ -696,11 +865,9 @@
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 287,
+      "line_number": 314,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.6.4",
@@ -709,141 +876,185 @@
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 290,
+      "line_number": 317,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.7",
-      "text": "A küzdelem megszakítása - Minden alkalommal amikor a küzdelem megszakad, a vívóknak lehetőségük van megkérdezni, hogy mennyi idejük maradt még vívni. - Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétségként büntetendő.",
+      "text": "A küzdelem megszakítása",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 294,
+      "line_number": 321,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.7",
+      "text": "Minden alkalommal amikor a küzdelem megszakad, a vívóknak lehetőségük van megkérdezni, hogy mennyi idejük maradt még vívni.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 323,
+      "weapon_type": "general",
+      "formatum": ""
     },
     {
       "rule_id": "GEN-6.10.8",
+      "text": "Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétségként büntetendő.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "A mérkőzés időtartama",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.10",
+      "line_number": 325,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.10.9",
       "text": "A szabályos idő letelte után, az időmérőnek \"állj!\"-t kell kiáltania (vagy hangjelzést kell működtetnie), amellyel a küzdelmet megállítja és a már elindított, de az idő lejárta után esett találat sem érvényes.",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 299,
+      "line_number": 328,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-6.10.8",
+      "rule_id": "GEN-6.10.10",
       "text": "Ha a mérkőzésen nem biztosított a vívók által is látható időmérés (kijelző), az időmérőnek 60 másodperccel a vége előtt \"Egy perc!\" figyelmeztést kell kiáltania (vagy hangjelzést kell működtetnie)--a küzdelmet ilyenkor nem kell megállítani.",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 302,
+      "line_number": 331,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-6.10.9",
+      "rule_id": "GEN-6.10.11",
       "text": "A versenybírónak a mérkőzés során végig feladata az időmérés. Az időmérő óra meghibásodása esetén a versenybíró állapítja meg a hátralevő vívóidőt.",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.10",
-      "line_number": 305,
+      "line_number": 334,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-2.7.8.1",
+      "rule_id": "GEN-6.11.1",
       "text": "Ha a küzdelem folyamán sérülés vagy más egészségügyi ok merül fel és azt az ügyeletes orvos és/vagy egészségügyi szolgáltató igazolja, a versenybíró egy legfeljebb 5 perces szünetet engedélyezhet. Kizárólag az orvos vagy ügyeletes egészségügyi szolgáltató határozhatja meg az ellátáshoz szükséges idő hosszát ha orvosi időkérés esetén. Az időt onnantól kezdve kell számítani, hogy a versenyorvos a véleményét megadta. A szünet kizárólag a szükséges ellátásra van fenntartva. Ha az ügyeletes orvos az öt perces szünet letelte előtt megállapítja, hogy a versenyző nem képes a verseny folytatására, úgy dönthet a versenyző visszalépéséről (egyéni verseny) vagy lecseréléséről ha lehetséges (csapatverseny). Minden egészségügyi szünetet fel kell tüntetni a mérkőzés vagy a csoportmérkőzés jegyzőkönyvén.",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "Sérülés vagy más egészségügyi ok, a versenyző visszalépése",
       "document": "01-altalanos.md",
-      "anchor_id": "GEN-6.10",
-      "line_number": 309,
+      "anchor_id": "GEN-6.11",
+      "line_number": 340,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-6.10.8.2",
+      "rule_id": "GEN-6.11.2",
       "text": "Ugyanazon a napon újabb megszakítást ugyanannak a vívónak csak akkor lehet engedélyezni, ha az egy másik sérülés vagy másik egyéb egészségügyi ok miatt válik szükségessé.",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "Sérülés vagy más egészségügyi ok, a versenyző visszalépése",
       "document": "01-altalanos.md",
-      "anchor_id": "GEN-6.10",
-      "line_number": 314,
+      "anchor_id": "GEN-6.11",
+      "line_number": 345,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-6.10.8.3",
+      "rule_id": "GEN-6.11.3",
       "text": "Amennyiben a vívó megszakításra irányuló kérelme az orvos megállapítása szerint megalapozatlan, a versenybíró a vétkes vívót a második csoportba tartozó vétségként bünteti.",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "Sérülés vagy más egészségügyi ok, a versenyző visszalépése",
       "document": "01-altalanos.md",
-      "anchor_id": "GEN-6.10",
-      "line_number": 317,
+      "anchor_id": "GEN-6.11",
+      "line_number": 348,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-6.10.8.4",
+      "rule_id": "GEN-6.11.4",
       "text": "A csapatversenyeken az a versenyző, aki az ügyeletes orvos véleménye alapján nem folytathatta a mérkőzést, ugyanazon orvos véleménye alapján ugyanazon a napon, későbbi csapatmérkőzéseken ismét versenyezhet.",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "Sérülés vagy más egészségügyi ok, a versenyző visszalépése",
       "document": "01-altalanos.md",
-      "anchor_id": "GEN-6.10",
-      "line_number": 320,
+      "anchor_id": "GEN-6.11",
+      "line_number": 351,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-6.10.8.5",
+      "rule_id": "GEN-6.11.5",
       "text": "A szervező a verseny hatékony lebonyolítása érdekében a csoportfordulóban megváltoztathatja a mérkőzések sorrendjét",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "Sérülés vagy más egészségügyi ok, a versenyző visszalépése",
       "document": "01-altalanos.md",
-      "anchor_id": "GEN-6.10",
-      "line_number": 323,
+      "anchor_id": "GEN-6.11",
+      "line_number": 354,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
-      "rule_id": "GEN-6.7.6",
-      "text": "- Nyakcsavarás, ellenfél felemelése, teljes ízület feszítés, kisízület feszítés, nagyívű dobások és más potenciálisan veszélyes birkózó technikák, ütések, rúgások, erőszakos lökések valamint a fegyver dobása szigorúan tiltott. - Tilos a túlzott erőkifejtés, brutalitás és a szükségtelen erőszak. - Tilos eltalálni a fej hátulját, a gerincet, a térdhajlatot és a lábfejet. - A távolság vagy a mozdulat szükséges mértékének helytelen felmérése miatt a padló eltalálása első csoportba tartozó szabálytalanság (a bíró figyelmen kívül hagyhatja az ellenfél akciója következtében, az ellenfél eltalálása után, vagy véletlenül eső könnyed padló érintéseket). - Tilos a keresztvassal ütni.",
+      "rule_id": "GEN-6.11.1",
+      "text": "Nyakcsavarás, ellenfél felemelése, teljes ízület feszítés, kisízület feszítés, nagyívű dobások és más potenciálisan veszélyes birkózó technikák, ütések, rúgások, erőszakos lökések valamint a fegyver dobása szigorúan tiltott.",
       "section": "Vívásra általánosan érvényes szabályok",
       "subsection": "Tiltott akciók",
       "document": "01-altalanos.md",
-      "anchor_id": "GEN-6.10",
-      "line_number": 329,
+      "anchor_id": "GEN-6.11",
+      "line_number": 361,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.11.2",
+      "text": "Tilos a túlzott erőkifejtés, brutalitás és a szükségtelen erőszak.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "Tiltott akciók",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.11",
+      "line_number": 363,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.11.3",
+      "text": "Tilos eltalálni a fej hátulját, a gerincet, a térdhajlatot és a lábfejet.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "Tiltott akciók",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.11",
+      "line_number": 365,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.11.4",
+      "text": "A távolság vagy a mozdulat szükséges mértékének helytelen felmérése miatt a padló eltalálása első csoportba tartozó szabálytalanság (a bíró figyelmen kívül hagyhatja az ellenfél akciója következtében, az ellenfél eltalálása után, vagy véletlenül eső könnyed padló érintéseket).",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "Tiltott akciók",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.11",
+      "line_number": 367,
+      "weapon_type": "general",
+      "formatum": ""
+    },
+    {
+      "rule_id": "GEN-6.11.5",
+      "text": "Tilos a keresztvassal ütni.",
+      "section": "Vívásra általánosan érvényes szabályok",
+      "subsection": "Tiltott akciók",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-6.11",
+      "line_number": 369,
+      "weapon_type": "general",
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.1",
@@ -854,9 +1065,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 19,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.2",
@@ -867,9 +1076,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 25,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.3",
@@ -880,9 +1087,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 32,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.3.1",
@@ -893,9 +1098,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 34,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.3.2",
@@ -906,9 +1109,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 38,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.4",
@@ -919,9 +1120,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 41,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.4.1",
@@ -932,9 +1131,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 45,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.4.2",
@@ -945,9 +1142,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 49,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.4.2",
@@ -958,9 +1153,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 53,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.5",
@@ -971,9 +1164,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 58,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.5.1",
@@ -984,9 +1175,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 63,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.5.2",
@@ -997,9 +1186,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 65,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.5.3",
@@ -1010,9 +1197,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 68,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.6",
@@ -1023,9 +1208,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 72,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.6.1",
@@ -1036,9 +1219,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 74,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.6.2",
@@ -1049,9 +1230,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 76,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.6.3",
@@ -1062,9 +1241,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 78,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.6.4",
@@ -1075,9 +1252,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 80,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.7",
@@ -1088,9 +1263,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 85,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-3.1.8",
@@ -1101,9 +1274,7 @@
       "anchor_id": "GEN-3.2",
       "line_number": 91,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-4.1",
@@ -1114,9 +1285,7 @@
       "anchor_id": "GEN-4",
       "line_number": 5,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-4.2",
@@ -1127,9 +1296,7 @@
       "anchor_id": "GEN-4",
       "line_number": 10,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-4.3",
@@ -1140,9 +1307,7 @@
       "anchor_id": "GEN-4",
       "line_number": 14,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-4.4",
@@ -1153,9 +1318,7 @@
       "anchor_id": "GEN-4",
       "line_number": 17,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.1.1",
@@ -1166,9 +1329,7 @@
       "anchor_id": "GEN-5.1",
       "line_number": 26,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.1.2",
@@ -1179,9 +1340,7 @@
       "anchor_id": "GEN-5.1",
       "line_number": 30,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.1.3",
@@ -1192,9 +1351,7 @@
       "anchor_id": "GEN-5.1",
       "line_number": 33,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.1.4",
@@ -1205,9 +1362,7 @@
       "anchor_id": "GEN-5.1",
       "line_number": 36,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.1.5",
@@ -1218,9 +1373,7 @@
       "anchor_id": "GEN-5.1",
       "line_number": 39,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.1.1",
@@ -1231,9 +1384,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 48,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.1.2",
@@ -1244,9 +1395,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 50,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.1.3",
@@ -1257,9 +1406,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 52,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.1.4",
@@ -1270,9 +1417,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 54,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.1.5",
@@ -1283,9 +1428,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 56,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.2.1",
@@ -1296,9 +1439,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 62,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.2.2",
@@ -1309,9 +1450,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 66,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.2.3",
@@ -1322,9 +1461,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 70,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.2.4",
@@ -1335,9 +1472,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 73,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.2.5",
@@ -1348,9 +1483,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 76,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.2.6",
@@ -1361,9 +1494,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 79,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.2.7",
@@ -1374,9 +1505,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 82,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.3.1",
@@ -1387,9 +1516,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 88,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.3.2",
@@ -1400,9 +1527,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 91,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.3.3",
@@ -1413,9 +1538,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 94,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.3.4",
@@ -1426,9 +1549,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 98,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.3.5",
@@ -1439,9 +1560,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 102,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.4",
@@ -1452,9 +1571,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 106,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.1",
@@ -1465,9 +1582,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 113,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.2",
@@ -1478,9 +1593,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 116,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.3",
@@ -1491,9 +1604,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 119,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.4",
@@ -1504,9 +1615,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 122,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.5",
@@ -1517,9 +1626,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 125,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.6",
@@ -1530,9 +1637,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 128,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.7",
@@ -1543,9 +1648,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 131,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.8",
@@ -1556,9 +1659,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 134,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.9",
@@ -1569,9 +1670,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 137,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.10",
@@ -1582,9 +1681,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 140,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.11",
@@ -1595,9 +1692,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 143,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.12",
@@ -1608,9 +1703,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 146,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.5.13",
@@ -1621,9 +1714,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 149,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.6",
@@ -1634,9 +1725,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 152,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.2.7",
@@ -1647,9 +1736,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 156,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.1.1",
@@ -1660,9 +1747,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 166,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.1.2",
@@ -1673,9 +1758,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 168,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.1.3",
@@ -1686,9 +1769,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 170,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.1.4",
@@ -1699,9 +1780,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 172,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.1.5",
@@ -1712,9 +1791,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 174,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.2.1",
@@ -1725,9 +1802,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 180,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.2.2",
@@ -1738,9 +1813,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 182,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.2.3",
@@ -1751,9 +1824,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 184,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.2.4",
@@ -1764,9 +1835,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 186,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-5.3.2.5",
@@ -1777,9 +1846,7 @@
       "anchor_id": "GEN-5.2",
       "line_number": 188,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.1.1",
@@ -1790,9 +1857,7 @@
       "anchor_id": "GEN-7.1",
       "line_number": 7,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.1.2",
@@ -1803,9 +1868,7 @@
       "anchor_id": "GEN-7.1",
       "line_number": 10,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.1.3",
@@ -1816,9 +1879,7 @@
       "anchor_id": "GEN-7.1",
       "line_number": 22,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.1.4",
@@ -1829,9 +1890,7 @@
       "anchor_id": "GEN-7.1",
       "line_number": 25,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.1.5",
@@ -1842,9 +1901,7 @@
       "anchor_id": "GEN-7.1",
       "line_number": 28,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.1.6",
@@ -1855,9 +1912,7 @@
       "anchor_id": "GEN-7.1",
       "line_number": 31,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.2.1",
@@ -1868,9 +1923,7 @@
       "anchor_id": "GEN-7.2",
       "line_number": 37,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.2.2",
@@ -1881,9 +1934,7 @@
       "anchor_id": "GEN-7.2",
       "line_number": 40,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.2.3",
@@ -1894,9 +1945,7 @@
       "anchor_id": "GEN-7.2",
       "line_number": 43,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.3.1",
@@ -1907,9 +1956,7 @@
       "anchor_id": "GEN-7.3",
       "line_number": 51,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.1",
@@ -1920,9 +1967,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 66,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.2",
@@ -1933,9 +1978,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 69,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.3",
@@ -1946,9 +1989,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 73,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.4",
@@ -1959,9 +2000,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 79,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.5",
@@ -1972,9 +2011,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 82,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.6",
@@ -1985,9 +2022,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 85,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.7",
@@ -1998,9 +2033,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 89,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.8",
@@ -2011,9 +2044,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 92,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.9",
@@ -2024,9 +2055,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 95,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.10",
@@ -2037,9 +2066,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 98,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.11",
@@ -2050,9 +2077,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 101,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.6.12",
@@ -2063,9 +2088,7 @@
       "anchor_id": "GEN-7.5",
       "line_number": 110,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.7.1",
@@ -2076,9 +2099,7 @@
       "anchor_id": "GEN-7.7",
       "line_number": 125,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.7.2",
@@ -2089,9 +2110,7 @@
       "anchor_id": "GEN-7.7",
       "line_number": 128,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.7.3",
@@ -2102,9 +2121,7 @@
       "anchor_id": "GEN-7.7",
       "line_number": 137,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.7.4",
@@ -2115,9 +2132,7 @@
       "anchor_id": "GEN-7.7",
       "line_number": 142,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.7.5",
@@ -2128,9 +2143,7 @@
       "anchor_id": "GEN-7.7",
       "line_number": 146,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.8.1",
@@ -2141,9 +2154,7 @@
       "anchor_id": "GEN-7.8",
       "line_number": 153,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "GEN-7.8.2",
@@ -2154,9 +2165,7 @@
       "anchor_id": "GEN-7.8",
       "line_number": 156,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.1.1",
@@ -2167,15 +2176,7 @@
       "anchor_id": "LS-1.1",
       "line_number": 10,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.1.2",
@@ -2186,15 +2187,7 @@
       "anchor_id": "LS-1.1",
       "line_number": 13,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.1.3",
@@ -2205,15 +2198,7 @@
       "anchor_id": "LS-1.1",
       "line_number": 16,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.1.3",
@@ -2224,15 +2209,7 @@
       "anchor_id": "LS-1.1",
       "line_number": 19,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.1.4",
@@ -2243,15 +2220,7 @@
       "anchor_id": "LS-1.1",
       "line_number": 22,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.1.5",
@@ -2262,15 +2231,7 @@
       "anchor_id": "LS-1.1",
       "line_number": 25,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.2.1",
@@ -2281,15 +2242,7 @@
       "anchor_id": "LS-1.2",
       "line_number": 31,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.2.2",
@@ -2300,15 +2253,7 @@
       "anchor_id": "LS-1.2",
       "line_number": 34,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.2.3",
@@ -2319,15 +2264,7 @@
       "anchor_id": "LS-1.2",
       "line_number": 41,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.2.3",
@@ -2338,15 +2275,7 @@
       "anchor_id": "LS-1.2",
       "line_number": 48,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.2.4",
@@ -2357,15 +2286,7 @@
       "anchor_id": "LS-1.2",
       "line_number": 51,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.2.5",
@@ -2376,15 +2297,7 @@
       "anchor_id": "LS-1.2",
       "line_number": 54,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.3.1",
@@ -2395,15 +2308,7 @@
       "anchor_id": "LS-1.3",
       "line_number": 60,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.3.2",
@@ -2414,15 +2319,7 @@
       "anchor_id": "LS-1.3",
       "line_number": 63,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.3.3",
@@ -2433,15 +2330,7 @@
       "anchor_id": "LS-1.3",
       "line_number": 66,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.3.4",
@@ -2452,15 +2341,7 @@
       "anchor_id": "LS-1.3",
       "line_number": 69,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.3.5",
@@ -2471,15 +2352,7 @@
       "anchor_id": "LS-1.3",
       "line_number": 72,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-1.3.6",
@@ -2490,15 +2363,7 @@
       "anchor_id": "LS-1.3",
       "line_number": 75,
       "weapon_type": "longsword",
-      "formatum": "",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "LS-VOR-1.1.1",
@@ -2509,22 +2374,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 9,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.2",
@@ -2535,22 +2385,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 14,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3",
@@ -2561,22 +2396,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 17,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3.1",
@@ -2587,22 +2407,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 19,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3.2",
@@ -2613,22 +2418,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 21,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3.3",
@@ -2639,22 +2429,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 23,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3.4",
@@ -2665,22 +2440,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 25,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.2",
@@ -2691,22 +2451,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 31,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.2.1",
@@ -2717,22 +2462,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 33,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.2.2",
@@ -2743,22 +2473,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 35,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.2.3",
@@ -2769,22 +2484,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 37,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.2.4",
@@ -2795,22 +2495,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 39,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3",
@@ -2821,22 +2506,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 42,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3.1",
@@ -2847,22 +2517,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 44,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3.2",
@@ -2873,22 +2528,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 46,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3.3",
@@ -2899,22 +2539,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 48,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.3.3",
@@ -2925,22 +2550,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 50,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.4",
@@ -2951,22 +2561,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 53,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.4.1",
@@ -2977,22 +2572,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 55,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.4.2",
@@ -3003,22 +2583,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 57,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.5",
@@ -3029,22 +2594,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 60,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.5.1",
@@ -3055,22 +2605,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 62,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.5.2",
@@ -3081,22 +2616,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 64,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.1.5.3",
@@ -3107,22 +2627,7 @@
       "anchor_id": "LS-VOR-1.1",
       "line_number": 66,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.2.1",
@@ -3133,22 +2638,7 @@
       "anchor_id": "LS-VOR-1.2",
       "line_number": 74,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.3.2",
@@ -3159,22 +2649,7 @@
       "anchor_id": "LS-VOR-1.3",
       "line_number": 81,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.3.3",
@@ -3185,22 +2660,7 @@
       "anchor_id": "LS-VOR-1.3",
       "line_number": 84,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.3.4",
@@ -3211,22 +2671,7 @@
       "anchor_id": "LS-VOR-1.3",
       "line_number": 87,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.3.5",
@@ -3237,22 +2682,7 @@
       "anchor_id": "LS-VOR-1.3",
       "line_number": 90,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.3.5.1",
@@ -3263,22 +2693,7 @@
       "anchor_id": "LS-VOR-1.3",
       "line_number": 94,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.3.5.2",
@@ -3289,22 +2704,7 @@
       "anchor_id": "LS-VOR-1.3",
       "line_number": 103,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.3.5.3",
@@ -3315,22 +2715,7 @@
       "anchor_id": "LS-VOR-1.3",
       "line_number": 113,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-VOR-1.3.6",
@@ -3341,22 +2726,7 @@
       "anchor_id": "LS-VOR-1.3",
       "line_number": 116,
       "weapon_type": "longsword",
-      "formatum": "VOR",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "right of way",
-        "row",
-        "right-of-way",
-        "priority",
-        "prio",
-        "vor"
-      ]
+      "formatum": "VOR"
     },
     {
       "rule_id": "LS-COMBAT-1.1.1",
@@ -3367,20 +2737,7 @@
       "anchor_id": "LS-COMBAT-1.1",
       "line_number": 7,
       "weapon_type": "longsword",
-      "formatum": "COMBAT",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "free fencing",
-        "combat",
-        "cf",
-        "free-fencing"
-      ]
+      "formatum": "COMBAT"
     },
     {
       "rule_id": "LS-COMBAT-1.1.2",
@@ -3391,20 +2748,7 @@
       "anchor_id": "LS-COMBAT-1.1",
       "line_number": 10,
       "weapon_type": "longsword",
-      "formatum": "COMBAT",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "free fencing",
-        "combat",
-        "cf",
-        "free-fencing"
-      ]
+      "formatum": "COMBAT"
     },
     {
       "rule_id": "LS-COMBAT-1.1.3",
@@ -3415,20 +2759,7 @@
       "anchor_id": "LS-COMBAT-1.1",
       "line_number": 13,
       "weapon_type": "longsword",
-      "formatum": "COMBAT",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "free fencing",
-        "combat",
-        "cf",
-        "free-fencing"
-      ]
+      "formatum": "COMBAT"
     },
     {
       "rule_id": "LS-COMBAT-1.1.4",
@@ -3439,20 +2770,7 @@
       "anchor_id": "LS-COMBAT-1.1",
       "line_number": 17,
       "weapon_type": "longsword",
-      "formatum": "COMBAT",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "free fencing",
-        "combat",
-        "cf",
-        "free-fencing"
-      ]
+      "formatum": "COMBAT"
     },
     {
       "rule_id": "LS-COMBAT-1.1.5",
@@ -3463,20 +2781,7 @@
       "anchor_id": "LS-COMBAT-1.1",
       "line_number": 21,
       "weapon_type": "longsword",
-      "formatum": "COMBAT",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "free fencing",
-        "combat",
-        "cf",
-        "free-fencing"
-      ]
+      "formatum": "COMBAT"
     },
     {
       "rule_id": "LS-COMBAT-1.1.6",
@@ -3487,20 +2792,7 @@
       "anchor_id": "LS-COMBAT-1.1",
       "line_number": 24,
       "weapon_type": "longsword",
-      "formatum": "COMBAT",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "free fencing",
-        "combat",
-        "cf",
-        "free-fencing"
-      ]
+      "formatum": "COMBAT"
     },
     {
       "rule_id": "LS-COMBAT-1.2.1",
@@ -3511,20 +2803,7 @@
       "anchor_id": "LS-COMBAT-1.2",
       "line_number": 32,
       "weapon_type": "longsword",
-      "formatum": "COMBAT",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "free fencing",
-        "combat",
-        "cf",
-        "free-fencing"
-      ]
+      "formatum": "COMBAT"
     },
     {
       "rule_id": "LS-COMBAT-1.2.2",
@@ -3535,20 +2814,7 @@
       "anchor_id": "LS-COMBAT-1.2",
       "line_number": 40,
       "weapon_type": "longsword",
-      "formatum": "COMBAT",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "free fencing",
-        "combat",
-        "cf",
-        "free-fencing"
-      ]
+      "formatum": "COMBAT"
     },
     {
       "rule_id": "LS-AB-1.1.1",
@@ -3559,20 +2825,7 @@
       "anchor_id": "LS-AB-1.1",
       "line_number": 7,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.1.1",
@@ -3583,20 +2836,7 @@
       "anchor_id": "LS-AB-1.1",
       "line_number": 10,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.1",
@@ -3607,20 +2847,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 20,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.2",
@@ -3631,20 +2858,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 23,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.3",
@@ -3655,20 +2869,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 26,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.4",
@@ -3679,20 +2880,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 35,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.5",
@@ -3703,20 +2891,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 38,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.5.1",
@@ -3727,20 +2902,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 41,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.5.2",
@@ -3751,20 +2913,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 50,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.6",
@@ -3775,20 +2924,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 58,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.7",
@@ -3799,20 +2935,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 64,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.8",
@@ -3823,20 +2946,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 67,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.9",
@@ -3847,20 +2957,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 72,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.10",
@@ -3871,20 +2968,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 77,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.10.1",
@@ -3895,20 +2979,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 79,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.10.2",
@@ -3919,20 +2990,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 84,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.10.3",
@@ -3943,20 +3001,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 87,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.10.4",
@@ -3967,20 +3012,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 90,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.11",
@@ -3991,20 +3023,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 96,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.12",
@@ -4015,20 +3034,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 99,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.13",
@@ -4039,20 +3045,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 102,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "LS-AB-1.2.11",
@@ -4063,20 +3056,7 @@
       "anchor_id": "LS-AB-1.2",
       "line_number": 105,
       "weapon_type": "longsword",
-      "formatum": "AFTERBLOW",
-      "weapon_aliases": [
-        "sword",
-        "ls",
-        "long sword",
-        "longsword",
-        "hosszúkard"
-      ],
-      "formatum_aliases": [
-        "afterblow",
-        "after-blow",
-        "ab",
-        "after blow"
-      ]
+      "formatum": "AFTERBLOW"
     },
     {
       "rule_id": "DIS-1.2.1",
@@ -4087,9 +3067,7 @@
       "anchor_id": "DIS-1.2",
       "line_number": 14,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.2.2",
@@ -4100,9 +3078,7 @@
       "anchor_id": "DIS-1.2",
       "line_number": 17,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.2.3",
@@ -4113,9 +3089,7 @@
       "anchor_id": "DIS-1.2",
       "line_number": 20,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.2.4",
@@ -4126,9 +3100,7 @@
       "anchor_id": "DIS-1.2",
       "line_number": 23,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.1",
@@ -4139,9 +3111,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 31,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.2",
@@ -4152,9 +3122,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 36,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.3",
@@ -4165,9 +3133,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 41,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.4",
@@ -4178,9 +3144,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 44,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.5",
@@ -4191,9 +3155,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 47,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.6",
@@ -4204,9 +3166,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 55,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.7",
@@ -4217,9 +3177,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 58,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.8",
@@ -4230,9 +3188,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 61,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.9",
@@ -4243,9 +3199,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 64,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.10",
@@ -4256,9 +3210,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 67,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.11",
@@ -4269,9 +3221,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 70,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-1.3.12",
@@ -4282,9 +3232,7 @@
       "anchor_id": "DIS-1.3",
       "line_number": 75,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-2.1.1",
@@ -4295,9 +3243,7 @@
       "anchor_id": "DIS-2.1",
       "line_number": 95,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-2.1.2",
@@ -4308,9 +3254,7 @@
       "anchor_id": "DIS-2.1",
       "line_number": 98,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-2.1.3",
@@ -4321,9 +3265,7 @@
       "anchor_id": "DIS-2.1",
       "line_number": 101,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-2.1.4",
@@ -4334,9 +3276,7 @@
       "anchor_id": "DIS-2.1",
       "line_number": 110,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-2.1.5",
@@ -4347,9 +3287,7 @@
       "anchor_id": "DIS-2.1",
       "line_number": 113,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-2.1.6",
@@ -4360,9 +3298,7 @@
       "anchor_id": "DIS-2.1",
       "line_number": 116,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-2.1.7",
@@ -4373,9 +3309,7 @@
       "anchor_id": "DIS-2.1",
       "line_number": 121,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-2.1.8",
@@ -4386,9 +3320,7 @@
       "anchor_id": "DIS-2.1",
       "line_number": 124,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.1.1",
@@ -4399,9 +3331,7 @@
       "anchor_id": "DIS-3.1",
       "line_number": 133,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.1.2",
@@ -4412,9 +3342,7 @@
       "anchor_id": "DIS-3.1",
       "line_number": 149,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.2.1",
@@ -4425,9 +3353,7 @@
       "anchor_id": "DIS-3.2",
       "line_number": 158,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.2.2",
@@ -4438,9 +3364,7 @@
       "anchor_id": "DIS-3.2",
       "line_number": 163,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.2.3",
@@ -4451,9 +3375,7 @@
       "anchor_id": "DIS-3.2",
       "line_number": 168,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.1",
@@ -4464,9 +3386,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 176,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.2",
@@ -4477,9 +3397,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 181,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.3",
@@ -4490,9 +3408,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 186,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.4",
@@ -4503,9 +3419,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 192,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.5",
@@ -4516,9 +3430,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 197,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.6",
@@ -4529,9 +3441,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 201,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.7",
@@ -4542,9 +3452,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 207,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.8",
@@ -4555,9 +3463,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 213,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.3.9",
@@ -4568,9 +3474,7 @@
       "anchor_id": "DIS-3.3",
       "line_number": 218,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-3.4.1",
@@ -4581,9 +3485,7 @@
       "anchor_id": "DIS-3.4",
       "line_number": 225,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.1",
@@ -4594,9 +3496,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 236,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.2",
@@ -4607,9 +3507,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 239,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.3",
@@ -4620,9 +3518,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 243,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.4",
@@ -4633,9 +3529,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 248,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.5",
@@ -4646,9 +3540,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 252,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.6",
@@ -4659,9 +3551,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 261,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.7",
@@ -4672,9 +3562,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 264,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.8",
@@ -4685,9 +3573,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 269,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.1.9",
@@ -4698,9 +3584,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 275,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.10",
@@ -4711,9 +3595,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 278,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.11",
@@ -4724,9 +3606,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 283,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.12",
@@ -4737,9 +3617,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 288,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.13",
@@ -4750,9 +3628,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 291,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.14",
@@ -4763,9 +3639,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 295,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.15",
@@ -4776,9 +3650,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 303,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.16",
@@ -4789,9 +3661,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 306,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.17",
@@ -4802,9 +3672,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 312,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.18",
@@ -4815,9 +3683,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 315,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.19",
@@ -4828,9 +3694,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 318,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-4.3.20",
@@ -4841,9 +3705,7 @@
       "anchor_id": "DIS-4.1",
       "line_number": 323,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-5.1.1",
@@ -4854,9 +3716,7 @@
       "anchor_id": "DIS-5.1",
       "line_number": 809,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-5.2.1",
@@ -4867,9 +3727,7 @@
       "anchor_id": "DIS-5.2",
       "line_number": 817,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-5.2.1",
@@ -4880,9 +3738,7 @@
       "anchor_id": "DIS-5.2",
       "line_number": 823,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-5.2.3",
@@ -4893,9 +3749,7 @@
       "anchor_id": "DIS-5.2",
       "line_number": 835,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-5.2.4",
@@ -4906,9 +3760,7 @@
       "anchor_id": "DIS-5.2",
       "line_number": 838,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-5.2.5",
@@ -4919,9 +3771,7 @@
       "anchor_id": "DIS-5.2",
       "line_number": 842,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "DIS-5.3.1",
@@ -4932,9 +3782,7 @@
       "anchor_id": "DIS-5.3",
       "line_number": 849,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-1.1.1",
@@ -4945,9 +3793,7 @@
       "anchor_id": "ORG-1.1",
       "line_number": 11,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-1.1.1",
@@ -4958,9 +3804,7 @@
       "anchor_id": "ORG-1.1",
       "line_number": 14,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.1",
@@ -4971,9 +3815,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 23,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.2",
@@ -4984,9 +3826,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 26,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.3",
@@ -4997,9 +3837,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 29,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.4",
@@ -5010,9 +3848,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 32,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.5",
@@ -5023,9 +3859,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 41,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.6",
@@ -5036,9 +3870,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 44,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.7",
@@ -5049,9 +3881,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 47,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.8",
@@ -5062,9 +3892,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 51,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.9",
@@ -5075,9 +3903,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 55,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.10",
@@ -5088,9 +3914,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 58,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.1.11",
@@ -5101,9 +3925,7 @@
       "anchor_id": "ORG-2.1",
       "line_number": 61,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.2.1",
@@ -5114,9 +3936,7 @@
       "anchor_id": "ORG-2.2",
       "line_number": 67,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.2.2",
@@ -5127,9 +3947,7 @@
       "anchor_id": "ORG-2.2",
       "line_number": 70,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.2.3",
@@ -5140,9 +3958,7 @@
       "anchor_id": "ORG-2.2",
       "line_number": 73,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.2.4",
@@ -5153,9 +3969,7 @@
       "anchor_id": "ORG-2.2",
       "line_number": 76,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.2.5",
@@ -5166,9 +3980,7 @@
       "anchor_id": "ORG-2.2",
       "line_number": 79,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.2.6",
@@ -5179,9 +3991,7 @@
       "anchor_id": "ORG-2.2",
       "line_number": 82,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.2.7",
@@ -5192,9 +4002,7 @@
       "anchor_id": "ORG-2.2",
       "line_number": 86,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.2.8",
@@ -5205,9 +4013,7 @@
       "anchor_id": "ORG-2.2",
       "line_number": 88,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.1",
@@ -5218,9 +4024,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 94,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.2",
@@ -5231,9 +4035,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 97,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.3",
@@ -5244,9 +4046,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 100,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.4",
@@ -5257,9 +4057,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 106,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.5",
@@ -5270,9 +4068,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 110,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.6",
@@ -5283,9 +4079,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 112,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.7",
@@ -5296,9 +4090,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 114,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.8",
@@ -5309,9 +4101,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 121,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.9",
@@ -5322,9 +4112,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 125,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.10",
@@ -5335,9 +4123,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 127,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.11",
@@ -5348,9 +4134,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 129,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.12",
@@ -5361,9 +4145,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 134,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.13",
@@ -5374,9 +4156,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 136,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.14",
@@ -5387,9 +4167,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 138,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.15",
@@ -5400,9 +4178,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 141,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.16",
@@ -5413,9 +4189,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 143,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.17",
@@ -5426,9 +4200,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 146,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.18",
@@ -5439,9 +4211,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 149,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.3.19",
@@ -5452,9 +4222,7 @@
       "anchor_id": "ORG-2.3",
       "line_number": 154,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-2.4.1",
@@ -5465,9 +4233,7 @@
       "anchor_id": "ORG-2.4",
       "line_number": 160,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-3.1",
@@ -5478,9 +4244,7 @@
       "anchor_id": "ORG-3",
       "line_number": 171,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-3.2",
@@ -5491,9 +4255,7 @@
       "anchor_id": "ORG-3",
       "line_number": 174,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-3.3",
@@ -5504,9 +4266,7 @@
       "anchor_id": "ORG-3",
       "line_number": 177,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-3.4",
@@ -5517,9 +4277,7 @@
       "anchor_id": "ORG-3",
       "line_number": 180,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
     },
     {
       "rule_id": "ORG-3.5",
@@ -5530,22 +4288,43 @@
       "anchor_id": "ORG-3",
       "line_number": 183,
       "weapon_type": "general",
-      "formatum": "",
-      "weapon_aliases": [],
-      "formatum_aliases": []
+      "formatum": ""
+    },
+    {
+      "rule_id": "PLS-1.1",
+      "text": "Minden olyan párnázott fegyver számban, ahol ezt külön a verseny szervezői nem engedélyezik, a párnázott fegyverrel szúrni szigorúan tilos, és a második csoportba tartozó vétségnek minősül.",
+      "section": "",
+      "subsection": "",
+      "document": "07-parnazott_fegyver.md",
+      "anchor_id": "PLS",
+      "line_number": 4,
+      "weapon_type": "padded_weapons",
+      "formatum": ""
+    },
+    {
+      "rule_id": "PLS-1.2",
+      "text": "A VOR szabály.formátum esetében a vonallal (eg. Langort) védekezés nem részesül előnyben, ilyen akciókból eredő találatok is az 1. pontban meghatározott büntetést vonják maguk után.",
+      "section": "",
+      "subsection": "",
+      "document": "07-parnazott_fegyver.md",
+      "anchor_id": "PLS",
+      "line_number": 7,
+      "weapon_type": "padded_weapons",
+      "formatum": ""
     }
   ],
-  "total_rules": 359,
+  "total_rules": 392,
   "documents": [
-    "08-etikett_fegyelem.md",
-    "05.b-hosszukard-COMBAT.md",
-    "05.c-hosszukard-AFTERBLOW.md",
-    "05-hosszukard.md",
     "03-felszereles.md",
     "04-biraskodas.md",
-    "09-szervezes.md",
-    "01-altalanos.md",
+    "08-etikett_fegyelem.md",
     "02-szojegyzek.md",
-    "05.a-hosszukard-VOR.md"
+    "09-szervezes.md",
+    "07-parnazott_fegyver.md",
+    "05.c-hosszukard-AFTERBLOW.md",
+    "01-altalanos.md",
+    "05-hosszukard.md",
+    "05.a-hosszukard-VOR.md",
+    "05.b-hosszukard-COMBAT.md"
   ]
 }

@@ -151,9 +151,14 @@ class RulebookParser:
     def _save_rule(self, rule_id: str, text_lines: List[str], section: str,
                    subsection: str, document: str, anchor: str, line_num: int,
                    weapon_type: str, formatum: str):
-        """Save a parsed rule"""
+        """Save a parsed rule, detecting variant from text if present"""
         text = " ".join(text_lines).strip()
         if text:
+            # Extract formatum from rule text if it starts with **Vor**:, **Combat**:, **Afterblow**:
+            detected_formatum = self._detect_formatum_in_rule_text(text)
+            if detected_formatum:
+                formatum = detected_formatum
+            
             rule = Rule(
                 rule_id=rule_id,
                 text=text,
@@ -166,6 +171,107 @@ class RulebookParser:
                 formatum=formatum
             )
             self.rules.append(rule)
+    
+    def _detect_formatum_in_rule_text(self, text: str) -> str:
+        """
+        Detect formatum (VOR, COMBAT, AFTERBLOW) from rule text.
+        Checks if text starts with **Vor**:, **Combat**:, **Afterblow**:
+        Note: The colon can be inside or outside the asterisks.
+        """
+        text_strip = text.strip()
+        
+        # Pattern: **Word**: at the start (handles both **Word**: and **Word:**)
+        variant_start_pattern = re.compile(r'^\*\*(Vor|Combat|Afterblow)\*\*:?', re.IGNORECASE)
+        match = variant_start_pattern.match(text_strip)
+        
+        if match:
+            variant_name = match.group(1).upper()
+            # Normalize variant names
+            if variant_name == 'VOR':
+                return 'VOR'
+            elif variant_name == 'COMBAT':
+                return 'COMBAT'
+            elif variant_name == 'AFTERBLOW':
+                return 'AFTERBLOW'
+        
+        return ''
+    
+    def _detect_formatum_in_rule_text(self, text: str) -> str:
+        """
+        Detect formatum (VOR, COMBAT, AFTERBLOW) from rule text.
+        Checks if text starts with **Vor**: or **Combat**: or **Afterblow**:
+        (with colon OUTSIDE the bold markers)
+        """
+        text_strip = text.strip()
+        
+        # Pattern: **Word**: with colon outside the asterisks
+        variant_start_pattern = re.compile(r'^\*\*(vor|combat|afterblow)\*\*:', re.IGNORECASE)
+        match = variant_start_pattern.match(text_strip)
+        
+        if match:
+            variant_name = match.group(1).upper()
+            # Normalize variant names
+            if variant_name == 'VOR':
+                return 'VOR'
+            elif variant_name == 'COMBAT':
+                return 'COMBAT'
+            elif variant_name == 'AFTERBLOW':
+                return 'AFTERBLOW'
+        
+        return ''
+    
+    def _extract_variant_subrules(self, parent_rule_id: str, text: str, section: str,
+                                   subsection: str, document: str, anchor: str, line_num: int,
+                                   weapon_type: str) -> List[Rule]:
+        """
+        Extract variant-specific sub-rules from text containing Vor/Combat/Afterblow sections.
+        Returns a list of extracted sub-rules, or empty list if no variants found.
+        """
+        # Pattern to detect variant headers: **Vor**:, **Combat:**:, **Afterblow**:
+        variant_pattern = re.compile(r'\*\*(Vor|Combat|Afterblow)\*\*:?\s*(.+?)(?=\*\*(?:Vor|Combat|Afterblow)\*\*|$)', 
+                                    re.IGNORECASE | re.DOTALL)
+        
+        matches = list(variant_pattern.finditer(text))
+        
+        # Only proceed if we find multiple variants (indicating variant-split content)
+        if len(matches) < 2:
+            return []
+        
+        extracted_rules = []
+        
+        for match in matches:
+            variant_name = match.group(1).upper()
+            variant_text = match.group(2).strip()
+            
+            if not variant_text:
+                continue
+            
+            # Create a sub-rule ID for this variant (e.g., GEN-6.10.4.1 for Vor)
+            variant_subrule_id = f"{parent_rule_id}.{self._variant_to_subrule_index(variant_name)}"
+            
+            rule = Rule(
+                rule_id=variant_subrule_id,
+                text=f"**{variant_name}**: {variant_text}",
+                section=section,
+                subsection=subsection,
+                document=document,
+                anchor_id=anchor,
+                line_number=line_num,
+                weapon_type=weapon_type,
+                formatum=variant_name
+            )
+            extracted_rules.append(rule)
+        
+        return extracted_rules
+    
+    def _variant_to_subrule_index(self, variant: str) -> str:
+        """Map variant name to subrule index (1=Vor, 2=Combat, 3=Afterblow)"""
+        mapping = {
+            "VOR": "1",
+            "COMBAT": "2", 
+            "AFTERBLOW": "3"
+        }
+        return mapping.get(variant.upper(), "0")
     
     def _extract_weapon_info(self, filename: str) -> tuple:
         """Extract weapon type and formatum from filename"""
