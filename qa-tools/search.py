@@ -64,17 +64,12 @@ class RulebookSearch:
         
         results = []
         
+        effective_formatum_filter = (formatum_filter or detected_formatum)
+
         for rule in self.rules:
             # Apply filters
-            if weapon_filter and rule.get('weapon_type') != weapon_filter:
+            if not self._passes_filters(rule, weapon_filter, effective_formatum_filter):
                 continue
-            
-            # Use explicit filter or detected from query
-            effective_formatum_filter = formatum_filter or detected_formatum
-            if effective_formatum_filter:
-                rule_formatum = rule.get('formatum', '').upper()
-                if rule_formatum and rule_formatum != effective_formatum_filter.upper():
-                    continue
             
             # Calculate relevance score
             score = self._calculate_score(rule, query_lower, query_terms)
@@ -91,9 +86,135 @@ class RulebookSearch:
                     score=score
                 ))
         
-        # Sort by score (descending) and return top results
+        # Sort by score (descending) and keep top results
         results.sort(key=lambda x: x.score, reverse=True)
-        return results[:max_results]
+        top_results = results[:max_results]
+
+        # Expand with hierarchical parent/child rules when appropriate
+        expanded_results = self._expand_hierarchy(
+            top_results,
+            query_lower,
+            query_terms,
+            weapon_filter,
+            effective_formatum_filter
+        )
+
+        return expanded_results
+
+    def _passes_filters(self, rule: Dict[str, Any], weapon_filter: str,
+                        formatum_filter: str) -> bool:
+        """Check if a rule passes weapon/format filters."""
+        if weapon_filter and rule.get('weapon_type') != weapon_filter:
+            return False
+
+        if formatum_filter:
+            rule_formatum = rule.get('formatum', '').upper()
+            if rule_formatum != formatum_filter.upper():
+                return False
+
+        return True
+
+    def _split_rule_id(self, rule_id: str) -> tuple:
+        """Split rule ID into prefix and numeric parts."""
+        match = re.match(r'^([A-Z]+(?:-[A-Z]+)*)-(\d+(?:\.\d+)*)$', rule_id)
+        if not match:
+            return None, None
+        prefix = match.group(1)
+        numbers = [int(part) for part in match.group(2).split('.')]
+        return prefix, numbers
+
+    def _make_rule_id(self, prefix: str, numbers: List[int]) -> str:
+        """Reconstruct rule ID from prefix and numeric parts."""
+        return f"{prefix}-" + ".".join(str(part) for part in numbers)
+
+    def _expand_hierarchy(self, base_results: List[SearchResult], query_lower: str,
+                          query_terms: List[str], weapon_filter: str,
+                          formatum_filter: str) -> List[SearchResult]:
+        """Include parent/child rules and keep them grouped in order."""
+        rule_by_id = {rule['rule_id']: rule for rule in self.rules}
+        expanded = []
+        seen = set()
+
+        def add_rule(rule: Dict[str, Any], fallback_score: float) -> None:
+            if rule['rule_id'] in seen:
+                return
+            score = self._calculate_score(rule, query_lower, query_terms)
+            if score <= 0:
+                score = fallback_score
+            expanded.append(SearchResult(
+                rule_id=rule['rule_id'],
+                text=rule['text'],
+                section=rule['section'],
+                subsection=rule['subsection'],
+                document=rule['document'],
+                weapon_type=rule.get('weapon_type', ''),
+                variant=rule.get('formatum', ''),
+                score=score
+            ))
+            seen.add(rule['rule_id'])
+
+        def iter_children(prefix: str, numbers: List[int], child_level: int) -> List[Dict[str, Any]]:
+            children = []
+            for rule in self.rules:
+                child_prefix, child_numbers = self._split_rule_id(rule['rule_id'])
+                if child_prefix != prefix or not child_numbers:
+                    continue
+                if len(child_numbers) == child_level and child_numbers[:len(numbers)] == numbers:
+                    if not self._passes_filters(rule, weapon_filter, formatum_filter):
+                        continue
+                    children.append(rule)
+            children.sort(key=lambda r: self._split_rule_id(r['rule_id'])[1])
+            return children
+
+        for result in base_results:
+            prefix, numbers = self._split_rule_id(result.rule_id)
+            if not prefix or not numbers:
+                if result.rule_id not in seen:
+                    expanded.append(result)
+                    seen.add(result.rule_id)
+                continue
+
+            level = len(numbers)
+
+            # Level 3: include parent first, then level 4 children
+            if level == 3:
+                parent_rule = rule_by_id.get(result.rule_id)
+                if parent_rule and self._passes_filters(parent_rule, weapon_filter, formatum_filter):
+                    add_rule(parent_rule, result.score)
+                for child in iter_children(prefix, numbers, 4):
+                    add_rule(child, result.score - 0.1)
+                continue
+
+            # Level 4: include parent (level 3), self, then level 5 children
+            if level == 4:
+                parent_id = self._make_rule_id(prefix, numbers[:3])
+                parent_rule = rule_by_id.get(parent_id)
+                if parent_rule and self._passes_filters(parent_rule, weapon_filter, formatum_filter):
+                    add_rule(parent_rule, result.score)
+                current_rule = rule_by_id.get(result.rule_id)
+                if current_rule and self._passes_filters(current_rule, weapon_filter, formatum_filter):
+                    add_rule(current_rule, result.score)
+                for child in iter_children(prefix, numbers, 5):
+                    add_rule(child, result.score - 0.1)
+                continue
+
+            # Level 5: include parent (level 4), self
+            if level == 5:
+                parent_id = self._make_rule_id(prefix, numbers[:4])
+                parent_rule = rule_by_id.get(parent_id)
+                if parent_rule and self._passes_filters(parent_rule, weapon_filter, formatum_filter):
+                    add_rule(parent_rule, result.score)
+                current_rule = rule_by_id.get(result.rule_id)
+                if current_rule and self._passes_filters(current_rule, weapon_filter, formatum_filter):
+                    add_rule(current_rule, result.score)
+                continue
+
+            # Default: add as-is
+            if result.rule_id not in seen:
+                expanded.append(result)
+                seen.add(result.rule_id)
+
+        return expanded
     
     def _extract_terms(self, query: str) -> List[str]:
         """Extract search terms from query"""
