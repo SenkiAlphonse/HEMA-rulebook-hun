@@ -71,10 +71,9 @@ A videóbíróhoz fordulás lehetősége: mind csapat, mind egyéni versenyeken 
 kérvényezni.
 
 **GEN-7.6.3** 
-Az egyéni versenyen a páston lévő vívó  
-- csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a
-videóbíróhoz  
-- egyenes kieséses mérkőzés során két alkalommal
+Az egyéni versenyen a páston lévő vívó 
+  - csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a videóbíróhoz  
+  - egyenes kieséses mérkőzés során két alkalommal
 
 **GEN-7.6.4** 
 Amennyiben a versenybíró a visszajátszást kérő versenyzővel egyetért, úgy a versenyző visszajátszáshoz való joga nem vész el.
@@ -100,10 +99,10 @@ A videóbíró bármikor kérheti a versenybírót, hogy alkalmazzon videóbír�
 
 **GEN-7.6.11** 
 Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy arra  
-- a versenybíró kezdeményezésére,  
-- a versenyző kérésére,  
-- a döntő találat előtti pontegyenlőségnél, vagy
-- a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.
+  - a versenybíró kezdeményezésére,  
+  - a versenyző kérésére,  
+  - a döntő találat előtti pontegyenlőségnél, vagy
+  - a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.
 
 #### A versenybíró kézjelei
 
@@ -127,23 +126,23 @@ A bíró minden forduló előtt röviden ellenőrzi a felszerelésre és fegyver
 
 **GEN-7.7.2**  
 Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket: <!--(Vö.t.47.2.)--> 
-- minden fegyvernemben a vívók felszerelésén a szabályos <!--FIE --> 350N jelzés meglétét (ruha, fejvéd).
+  - minden fegyvernemben a vívók felszerelésén a szabályos <!--FIE --> 350N jelzés meglétét (ruha, fejvéd).
 <!-- TODO lvl 2 legyen kötelező -->
-- hogy mindenki szabályszerű vívókabátot visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.
+  - hogy mindenki szabályszerű vívókabátot visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.
 <!-- TODO - minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá. -->
-- A fegyvereken fegyverellenőrzés jelzés meglétét.
-- Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.
+  - A fegyvereken fegyverellenőrzés jelzés meglétét.
+  - Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.
 
 **GEN-7.7.3**
-- A csoportmérkőzések során ezt az ellenőrzést a vívók gyülekezésre szólításakor kell elvégezni.
-- Az egyenes kieséses mérkőzések és a döntők előtt az ellenőrzést a gyülekező területen végzik
-el.
-
+A csoportmérkőzések során a versenybíró általi fegyverellenőrzést a vívók gyülekezésre szólításakor kell elvégezni.
 **GEN-7.7.4**
+Az egyenes kieséses mérkőzések és a döntők előtt a versenybíró általi fegyverellenőrzést a gyülekező területen végzik el.
+
+**GEN-7.7.5**
 A fenti ellenőrzéseken túlmenően, a mérkőzést vezető bíró, saját elhatározásából, vagy a vívó, vagy a csapatkapitány kérésére, bármikor ellenőrzést végezhet, továbbá ellenőrizheti a már elvégzett hitelesítést vagy újabb ellenőrzéseket végezhet illetve végeztethet. 
 <!-- (Vö. t.47) -->
 
-**GEN-7.7.5**
+**GEN-7.7.6**
 A leellenőrzött tartalék felszereléseket a versenybíró a mérkőzés kezdetén a pást mellé
 helyezi a megfelelő vívó oldalára.
 
@@ -155,7 +154,7 @@ Bármely helyzetben, ha egy versenyző (a Felszerelés Szabályzat értelmében)
 
 **GEN-7.8.2**
 Ha a vívó a páston:
-- hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy
+  - hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy
 <!-- - hónaljvédő nélkül (Vö. t.64.5.), vagy -->
-- a szabályoknak nem megfelelő ruhában
+  - a szabályoknak nem megfelelő ruhában
 jelenik meg, a versenybíró <!-- a t.158-162, t.165, t.170 szakaszokban előírt,--> az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.

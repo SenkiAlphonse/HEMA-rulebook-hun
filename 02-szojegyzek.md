@@ -18,13 +18,16 @@ A vívóidő egy egyszerű akció kivitelezésének időtartama.
 
 **GEN-3.1.1**  
 Támadó akciók (a támadás, a riposzt (visszaszúrás/visszavágás) és a kontrariposzt)
-- **Támadás** - az a kitörést vagy a lerohanást, vagy más fegyverspecifikus támadó lábmunka megindítását megelőző, kezdeményező támadó akció, amelyet a kar nyújtásával és az ellenfél érvényes találati felületének állandó fenyegetésével hajtanak végre. Nem minősül a támadás részének az előkészítő akciók és a kéz-, vagy fegyver olyan mozgásai, amelyek nem fenyegetik állandóan a találati felületet.
-- **Riposzt (visszaszúrás, -vágás)** - annak a vívónak támadó akciója, aki a támadást kivédte.
-- **Kontrariposzt (ellen-visszaszúrás, -vágás)** - annak a vívónak a támadó akciója, aki a visszatámadást kivédte.
+**GEN-3.1.1.1**  
+**Támadás** - az a kitörést vagy a lerohanást, vagy más fegyverspecifikus támadó lábmunka megindítását megelőző, kezdeményező támadó akció, amelyet a kar nyújtásával és az ellenfél érvényes találati felületének állandó fenyegetésével hajtanak végre. Nem minősül a támadás részének az előkészítő akciók és a kéz-, vagy fegyver olyan mozgásai, amelyek nem fenyegetik állandóan a találati felületet.
+**GEN-3.1.1.2**  
+**Riposzt (visszaszúrás, -vágás)** - annak a vívónak támadó akciója, aki a támadást kivédte.
+**GEN-3.1.1.3**  
+**Kontrariposzt (ellen-visszaszúrás, -vágás)** - annak a vívónak a támadó akciója, aki a visszatámadást kivédte.
 
 **GEN-3.1.2**  
 A **védekező** akciókat védéseknek (parád) nevezzük.
-- A védés (parád) fegyverrel végrehajtott védekező akció annak megakadályozására, hogy a támadó akció találjon.
+  - A védés (parád) fegyverrel végrehajtott védekező akció annak megakadályozására, hogy a támadó akció találjon.
 
 #### Magyarázatok
 ##### Támadó akciók
@@ -33,27 +36,26 @@ A **védekező** akciókat védéseknek (parád) nevezzük.
 **Támadás**
 **GEN-3.1.3.1**  
 **Egyszerű** az akció, ha azt egyetlen mozdulattal végzik;
-- akár **közvetlenül** (ugyanabban a vonalban),
-- akár **közvetve** (másik vonalban).
+  - akár **közvetlenül** (ugyanabban a vonalban),
+  - akár **közvetve** (másik vonalban).
 **GEN-3.1.3.2**  
 **Összetett** az akció, ha azt több mozdulattal hajtják végre
 
 **GEN-3.1.4**  
 **Riposzt** (visszaszúrás, -vágás) 
 A visszaszúrás (-vágás) lehet **azonnali** vagy **késleltetett**, amely az akció jellegétől és sebességétől függ. A riposzt lehet:
-
 **GEN-3.1.4.1**  
-- **Egyszerű, közvetlen (direkt)**
-- **Direkt riposzt**: anélkül találja el az ellenfelet, hogy azt a vonalat elhagyná, amelyben a védés történt.
-- **Kötött riposzt**: a védés után, a pengén végigcsúszva találja el az ellenfelet.
+  - **Egyszerű, közvetlen (direkt)**
+  - **Direkt riposzt**: anélkül találja el az ellenfelet, hogy azt a vonalat elhagyná, amelyben a védés történt.
+  - **Kötött riposzt**: a védés után, a pengén végigcsúszva találja el az ellenfelet.
 **GEN-3.1.4.2**  
 **Egyszerű közvetett (indirekt)**
-- **Kerülő  visszaszúrás (-vágás)**: az ellenfelet az ellenkező vonalban találja el, mint amelyben védett. (Megkerülve az ellenfél pengéjét alul, ha a felső vonalban, illetve felül, ha az alsó vonalban védett.)
-- **Dobott riposzt (coupé)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett (a pengével minden esetben megkerülve az ellenfél pengéjének hegyét).
+  - **Kerülő  visszaszúrás (-vágás)**: az ellenfelet az ellenkező vonalban találja el, mint amelyben védett. (Megkerülve az ellenfél pengéjét alul, ha a felső vonalban, illetve felül, ha az alsó vonalban védett.)
+  - **Dobott riposzt (coupé)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett (a pengével minden esetben megkerülve az ellenfél pengéjének hegyét).
 **GEN-3.1.4.2**  
 **Összetett riposzt**
-- **A körző-riposzt (en doublant)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett, de az ellenfél pengéje körül leírt teljes körvonal elvégzése után.
-- **Riposzt "egy-kettő"-vel**: az ellenfelet ugyanabban a vonalban találja, amelyben az védett, de csak azt követően, hogy az ellenkező vonalban is volt, az ellenfél pengéjét megkerülve; 
+  - **A körző-riposzt (en doublant)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett, de az ellenfél pengéje körül leírt teljes körvonal elvégzése után.
+  - **Riposzt "egy-kettő"-vel**: az ellenfelet ugyanabban a vonalban találja, amelyben az védett, de csak azt követően, hogy az ellenkező vonalban is volt, az ellenfél pengéjét megkerülve; 
 
 **GEN-3.1.5**  
 Ellentámadások

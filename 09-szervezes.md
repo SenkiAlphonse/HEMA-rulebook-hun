@@ -31,12 +31,12 @@ A csoportmérkőzések után a jegyzőkönyv alapján felállítják a résztvev
 
 **ORG-2.1.4** 
 Az összegzett rangsor tábla a következő módon alakul ki:
-- A csoportkör összefoglaló tábláán szereplő értékek összegzésével ki kell számítani a két szükséges indexet (V/M, HS-HR).
-- Az kezdeti besoroláshoz szükséges első index a győzelmek számának a mérkőzések számával való osztásával kerül meghatározásra, a V/M egyenlet alapján.
-- A legmagasabb (maximum 1) indexszel rendelkező vívó kerül a tábla első helyére.
-- Az esetben, ha az első index értéke valamely vívók esetén megegyezik, az egyenlő indexű vívók rangsorolásához egy másodlagos index kerül meghatározásra, a HS – HR képlet alapján, az adott (Hits Scored) és a kapott (Hits Received) találatok számának különbsége.
-- Ha valamely vívók mindkét indexe (V / M és HS – HR) megegyezik, a több találatot adott versenyző kerül előrébb a rangsorban.
-- Kettő vagy több vívó közti abszolút egyenlőség esetén a sorrend sorshúzással kerül meghatározásra.
+  - A csoportkör összefoglaló tábláán szereplő értékek összegzésével ki kell számítani a két szükséges indexet (V/M, HS-HR).
+  - Az kezdeti besoroláshoz szükséges első index a győzelmek számának a mérkőzések számával való osztásával kerül meghatározásra, a V/M egyenlet alapján.
+  - A legmagasabb (maximum 1) indexszel rendelkező vívó kerül a tábla első helyére.
+  - Az esetben, ha az első index értéke valamely vívók esetén megegyezik, az egyenlő indexű vívók rangsorolásához egy másodlagos index kerül meghatározásra, a HS – HR képlet alapján, az adott (Hits Scored) és a kapott (Hits Received) találatok számának különbsége.
+  - Ha valamely vívók mindkét indexe (V / M és HS – HR) megegyezik, a több találatot adott versenyző kerül előrébb a rangsorban.
+  - Kettő vagy több vívó közti abszolút egyenlőség esetén a sorrend sorshúzással kerül meghatározásra.
 
 **ORG-2.1.5** 
 Ha az utolsó helyen kvalifikált versenyzők között abszolút egyenlőség áll fenn, minden megegyező pontszámú versenyző továbbjut, akkor is, ha a számuk meghaladja az előre meghatározott továbbjutók számát.
@@ -99,10 +99,10 @@ A csapatversenyt egyenes kieséses táblával kell lebonyolítani, amelyben lehe
 
 **ORG-2.3.3** 
 Az egyenes kiesés táblán a ragnsort a következőképp kell megállapítani: 
-- A csapat tagjainak HEMARatingsen szereplő, aktuális weightedRating-jeiből számolt átlagot kell figyelembe venni (a relativeRating-ek összegét elosztva a csapattagok számával).
-- Ha egy vívónak mind a 'Mixed/Men' és a 'Women' kategóriában is van eredménye, a magasabb weightedRating számít. 
-- A HEMARatinggel nem rendelkező csapattagokat egységesen a fegyvernemnek megfelelő kategória legrosszabb weightedRatingjét felezve számított értékkel kell figyelembe venni (vegyes csapatoknál a 'Mixed/Men'-t, nemtől függetlenül).
-- Ha két csapat így számított indexe egyforma, sorrendjüket sorsolással kell meghatározni.
+  - A csapat tagjainak HEMARatingsen szereplő, aktuális weightedRating-jeiből számolt átlagot kell figyelembe venni (a relativeRating-ek összegét elosztva a csapattagok számával).
+  - Ha egy vívónak mind a 'Mixed/Men' és a 'Women' kategóriában is van eredménye, a magasabb weightedRating számít. 
+  - A HEMARatinggel nem rendelkező csapattagokat egységesen a fegyvernemnek megfelelő kategória legrosszabb weightedRatingjét felezve számított értékkel kell figyelembe venni (vegyes csapatoknál a 'Mixed/Men'-t, nemtől függetlenül).
+  - Ha két csapat így számított indexe egyforma, sorrendjüket sorsolással kell meghatározni.
 **ORG-2.3.4** 
 A táblán az első 16 helyen minden helyezésért vívni kell. A 17. helytől lefelé a csapatok helyezését a táblán elfoglalt eredeti helyük alapján kell megállapítani.
 
@@ -148,8 +148,8 @@ Ha egy csapat bármilyen okból nem fejezi be azt az eseményt, amelyen részt v
 
 **ORG-2.3.18** 
 Ha egy csapat nem jelenik meg egy másik csapat ellen, akkor a következőként kell eljárni:
-- Ha már vívott egy másik csapat ellen, úgy kell kezelni, mintha nem fejezte volna be a versenyt, amelyen részt vesz (vö. Egyenes kieséses mérkőzések/Visszalépés);
-- ha az első mérkőzésén nem jelenik meg, úgy kell kezelni, mintha egyáltalán nem venne részt a versenyen. 
+  - Ha már vívott egy másik csapat ellen, úgy kell kezelni, mintha nem fejezte volna be a versenyt, amelyen részt vesz (vö. Egyenes kieséses mérkőzések/Visszalépés);
+  - ha az első mérkőzésén nem jelenik meg, úgy kell kezelni, mintha egyáltalán nem venne részt a versenyen. 
 
 **ORG-2.3.19** 
 A csapatversenyek idő és pontszám kereteire vonatkozó szabályokat lásd: '03-általános'/'Csapatmérkőzések'
@@ -159,10 +159,10 @@ A csapatversenyek idő és pontszám kereteire vonatkozó szabályokat lásd: '0
 
 **ORG-2.4.1** 
 Az általános rangsort a következők szerint kell felállítani:
-- Első: Az első helyért vívott mérkőzés győztese
-- Második: az első helyért vívott mérkőzés vesztese.
-- A harmadik és negyedik helyért az elődöntők két vesztese vív (kivéve ha egyenes kieséses rendszerben bonyolítják le a döntőt, akkor mindketten harmadik helyezettek).
-- A többi versenyző helyezése minden egyes körben az egyenes kiesés során elért helyükkel egyezik meg.
+  - Első: Az első helyért vívott mérkőzés győztese
+  - Második: az első helyért vívott mérkőzés vesztese.
+  - A harmadik és negyedik helyért az elődöntők két vesztese vív (kivéve ha egyenes kieséses rendszerben bonyolítják le a döntőt, akkor mindketten harmadik helyezettek).
+  - A többi versenyző helyezése minden egyes körben az egyenes kiesés során elért helyükkel egyezik meg.
 
 ## Versenyszemélyzet
 <span id="ORG-3"></span>

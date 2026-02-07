@@ -40,9 +40,11 @@ Csak azok a találatok érvényesek, amelyek az érvényes találati felületre 
 
 **LS-1.2.3** 
 tilos a találati felület védése vagy a test másik részével való helyettesítése elfedéssel<!-- (vö.: t.158-162, t.165, t.170)  -->; a vétkes vívó által adott találat megsemmisítendő.
-- Ha a vívómenet során valamelyik vívó az érvényes találati felületét fedi vagy érvénytelennel helyettesíti, őt az első csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani 
+**LS-1.2.3.1** 
+Ha a vívómenet során valamelyik vívó az érvényes találati felületét fedi vagy érvénytelennel helyettesíti, őt az első csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani 
 <!-- (vö.t.29.) -->
-- Ha a vívómenet során egy megfelelően beadott találat fedés vagy helyettesítés miatt érvénytelenként talál, a vétkes vívót az első csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani és a találatot meg kell adni.
+**LS-1.2.3.2** 
+Ha a vívómenet során egy megfelelően beadott találat fedés vagy helyettesítés miatt érvénytelenként talál, a vétkes vívót az első csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani és a találatot meg kell adni.
  <!-- (vö.: t 158, t.165, t.170) -->
 
 **LS-1.2.3** 
@@ -76,14 +78,14 @@ A találat ténylegességének elbírálásában kizárólag a mérkőzést veze
 Ha egy találat az érvényes találati felületen kívülre érkezik, nem számít érvényes találatnak.
  
 ## A Hosszúkardvívás versenyformátumai
-A hosszúkard versenyeket az alábbi három formátumok egyikében kell szervezni, ezt a versenykiírásban egyértelmáen fel kell tüntetni!
+A hosszúkard versenyeket az alábbi három formátumok egyikében kell szervezni, ezt a versenykiírásban egyértelműen fel kell tüntetni!
 
-- VOR
-<span id="LS-VOR-1"></span>
-[05.a-hosszukard-VOR.md](05.a-hosszukard-VOR.md)
-- COMBAT
-<span id="LS-COMBAT-1"></span>
-[05.b-hosszukard-COMBAT.md](05.b-hosszukard-COMBAT.mdd)
-- AFTERBLOW
-<span id="LS-AB"></span>
-[05.c-hosszukard-AFTERBLOW.md](05.c-hosszukard-AFTERBLOW.md)
+  - VOR
+  <span id="LS-VOR-1"></span>
+  [05.a-hosszukard-VOR.md](05.a-hosszukard-VOR.md)
+  - COMBAT
+  <span id="LS-COMBAT-1"></span>
+  [05.b-hosszukard-COMBAT.md](05.b-hosszukard-COMBAT.mdd)
+  - AFTERBLOW
+  <span id="LS-AB"></span>
+  [05.c-hosszukard-AFTERBLOW.md](05.c-hosszukard-AFTERBLOW.md)

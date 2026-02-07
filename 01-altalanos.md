@@ -7,8 +7,8 @@
 <span id="GEN-1"></span>
 
 **GEN-1.1.1**  
-A rendezvény célja a vívás biztonságos és barátságos értékelése a „találni úgy, hogy közben nem ér találat” elv alapján. A történelmi szabályrendszerekhez hasonlóan a verseny kifejezetten absztrahált képességek tesztje, nem pedig egy szabályozatlan, végsőkig folytatott harc szimulációja – ebben
-értelmében minden egyes pontot külön „párbajnak” tekintünk az alábbi szabályok keretei között, amelyek elvesztését egy, a vesztes vívó ellen ítélt pont jelzi. Célunk az, hogy meghatározzuk a relatív rangsort, és a versenyzők közül az versenynapok alatt legjobbnak bizonyuló vívót taktikai, technikai és atlétikai képességek terén.
+A rendezvény célja a vívás biztonságos és barátságos értékelése a "találni úgy, hogy közben nem ér találat" elv alapján. A történelmi szabályrendszerekhez hasonlóan a verseny kifejezetten absztrahált képességek tesztje, nem pedig egy szabályozatlan, végsőkig folytatott harc szimulációja – ebben
+értelmében minden egyes pontot külön "párbajnak" tekintünk az alábbi szabályok keretei között, amelyek elvesztését egy, a vesztes vívó ellen ítélt pont jelzi. Célunk az, hogy meghatározzuk a relatív rangsort, és a versenyzők közül az versenynapok alatt legjobbnak bizonyuló vívót taktikai, technikai és atlétikai képességek terén.
 
 **GEN-1.1.2**  
 Az egyik alapelv, amely mindenek felett áll, a sportszerűség elve. Mindegyik működőképes szabályrendszernek hatékonynak kell lennie abban, hogy egyenlő esélyeket biztosítson minden versenyen résztvevő számára.
@@ -65,10 +65,10 @@ Ha egy lábbal a hátsó határvonalon belül állt, akkor újrafelállításkor
 (Egyenes kieséses mérkőzésen) minden periódus és esetleges 1 perces hosszabbítás kezdetén a vívókat a pást közepén kell felállítani.
 
 **GEN-6.1.9**  
-A vívók a versenybíró “állás!” vezényszavára vívóállásba felállnak. Ezután a versenybíró megkérdezi: “készen?”; igenlő válasz esetén vagy nemleges válasz hiányában megadja a jelet a küzdelem megkezdésére: “rajta!” vezényszóval.
+A vívók a versenybíró "állás!" vezényszavára vívóállásba felállnak. Ezután a versenybíró megkérdezi: "készen?"; igenlő válasz esetén vagy nemleges válasz hiányában megadja a jelet a küzdelem megkezdésére: "rajta!" vezényszóval.
 
 **GEN-6.1.10**  
-A versenybíró “rajta!” vezényszaváig a vívók kötelesek megfelelő vívóállásban állni és teljes mozdulatlanságban maradni.
+A versenybíró "rajta!" vezényszaváig a vívók kötelesek megfelelő vívóállásban állni és teljes mozdulatlanságban maradni.
 
 **GEN-6.1.11**  
 Vor szabály/fegyvernem alkalmazásakor a felállás nem történhet vonal helyzetben.
@@ -82,19 +82,19 @@ Vor szabály/fegyvernem alkalmazásakor a felállás nem történhet vonal helyz
 A mérkőzés megkezdése előtt a bíró felkéri az ellenfeleket, hogy egyezzenek meg a mérkőzésük során a test test elleni küzdelem során birkózó fogások használatáról. Ezt a pontozólapon fel kell jegyezni.
 
 **GEN-6.2.2**  
-A küzdelem kezdetét a “rajta!” vezényszó jelzi. A vezényszó előtt végrehajtott vagy indított mozdulat nem vehető figyelembe.
+A küzdelem kezdetét a "rajta!" vezényszó jelzi. A vezényszó előtt végrehajtott vagy indított mozdulat nem vehető figyelembe.
 
 **GEN-6.2.3**  
-A mérkőzés az “állj!” vezényszóra áll meg, kivéve az olyan különleges helyzeteket, amelyek a mérkőzés szabályos és szokványos feltételeit megváltoztatják (Vö. Időmérés 1/1, 1/2 is). (v.ö.: **GEN-6.2.4**,**GEN-6.2.5**, **GEN-6.2.6**, **GEN-6.2.7**)
+A mérkőzés az "állj!" vezényszóra áll meg, kivéve az olyan különleges helyzeteket, amelyek a mérkőzés szabályos és szokványos feltételeit megváltoztatják (Vö. Időmérés 1/1, 1/2 is). (v.ö.: **GEN-6.2.4**,**GEN-6.2.5**, **GEN-6.2.6**, **GEN-6.2.7**)
 
 **GEN-6.2.4**  
-Az “állj!” vezényszó elhangzása után a vívó nem kezdhet új akciót; csak a már elindított mozdulat marad érvényes. Minden, ami ezután történik, teljesen érvénytelen (de Időmérés 1/1, 1/2).
+Az "állj!" vezényszó elhangzása után a vívó nem kezdhet új akciót; csak a már elindított mozdulat marad érvényes. Minden, ami ezután történik, teljesen érvénytelen (de Időmérés 1/1, 1/2).
 
 **GEN-6.2.5**  
-Ha valamelyik vívó az “állj!” vezényszó előtt megáll, és találatot kap, az a találat érvényes.
+Ha valamelyik vívó az "állj!" vezényszó előtt megáll, és találatot kap, az a találat érvényes.
 
 **GEN-6.2.6**  
-Akkor is “állj!”-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók), vagy ha kilép a pástról.
+Akkor is "állj!"-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók), vagy ha kilép a pástról.
 
 **GEN-6.2.7**  
 Kivételes körülményektől eltekintve a versenybíró nem adhat engedélyt a vívónak a pást elhagyására. Ha a vívó ezt engedély nélkül megteszi, akkor vele szemben az első csoportba tartozó vétségekre vonatkozó büntető rendelkezéseket kell alkalmazni.
@@ -139,7 +139,7 @@ idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: Nyert vagy vesztett ter�
 **GEN-6.5.1** 
 A jelen szakaszban hivatkozott rendszeresen testérintkezéssel végződő fless támadás nem összetévesztendő az ellenfelet meglökő összeütközést eredményező fless támadással amely szándékos brutalitásként értékelendő, és ekként is büntetendő a második csoportba tartozó vétség minden fegyvernemben.
 **GEN-6.5.2** 
-Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar „Állj”-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást oldalhatárát, találatot kapottnak tekintendő (V.ö.: A küzdőtér határvonala).
+Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar "Állj"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást oldalhatárát, találatot kapottnak tekintendő (V.ö.: A küzdőtér határvonala).
 
 ### Elhajlás (a találati felület áthelyezése) és túlhaladás
 <span id="GEN-6.6"></span>
@@ -187,7 +187,7 @@ Ha a vívó az ellenfél beavatkozása nélkül elejti a fegyverét vagy elesik,
 <span id="GEN-6.8"></span>
 
 **GEN-6.8.1**  
-Az “állj!” vezényszó elhangzásakor a nyert területet megszerezettnek kell tekinteni mindaddig, amíg nincs megítélt találat. Ha nincs megítélt találat, a vívóállásba való új felállításkor a két vívónak egyforma mértékben kell hátrálnia, hogy a megfelelő vívótávolságot felvegyék.
+Az "állj!" vezényszó elhangzásakor a nyert területet megszerezettnek kell tekinteni mindaddig, amíg nincs megítélt találat. Ha nincs megítélt találat, a vívóállásba való új felállításkor a két vívónak egyforma mértékben kell hátrálnia, hogy a megfelelő vívótávolságot felvegyék.
 
 **GEN-6.8.2**  
 Ugyanakkor, ha a mérkőzés testérintkezés miatt szakadt meg (és a közelharc nem engedélyezett), a vívókat úgy kell visszaállítani vívóállásba, hogy a testérintkezést elszenvedő vívó azon a helyen maradjon, ahol korábban állt; ez vonatkozik arra is, ha az ellenfél lerohanó támadást hajtott végre akár testérintkezés nélkül.
@@ -198,12 +198,12 @@ Ugyanakkor, ha a mérkőzés testérintkezés miatt szakadt meg (és a közelhar
 **GEN-6.9.1**  
 Ha az egyik versenyző mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát, 
 **GEN-6.9.1.1**  
-a versenybírónak azonnal “állj!”-t kell kiáltania, és
+a versenybírónak azonnal "állj!"-t kell kiáltania, és
 **GEN-6.9.1.2**  
 meg kell semmisíteni mindent, ami a határvonal átlépése után történt.
 
 **GEN-6.9.2**  
-Ugyanakkor a határvonalat csak egy lábbal (másikkal nem vagy csak részben) átlépő vívó találata érvényes marad, ha az akció az „állj!” előtt kezdődött; akkor is, ha a vívó ezután teljesen elhagyta a küzdőteret.
+Ugyanakkor a határvonalat csak egy lábbal (másikkal nem vagy csak részben) átlépő vívó találata érvényes marad, ha az akció az "állj!" előtt kezdődött; akkor is, ha a vívó ezután teljesen elhagyta a küzdőteret.
 
 **GEN-6.9.3**  
 Ha az egyik vívó a pást valmelyik határvona teljesen, tehát mindkét lábbal kilép a pástról, akkor csak azt a találatot lehet megítélni, amelyet a páston legalább egy lábbal belül maradó vívó adott, és csakis Hosszúkard--Combat és --Afterblow esetén, még egyidejű találat esetében is. Hosszúkard--Vor esetén a konvenció szabályai irányadóak.
@@ -224,7 +224,7 @@ Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát t�
 <span id="GEN-6.10"></span>
 
 **GEN-6.10.1**  
-A küzdelem időtartamán a tényleges küzdelem idejét, tehát a „rajta!” és „állj!” közötti időközök összességét kell érteni.
+A küzdelem időtartamán a tényleges küzdelem idejét, tehát a "rajta!" és "állj!" közötti időközök összességét kell érteni.
 
 **GEN-6.10.2**  
 A küzdelem időtartamát a versenybíró vagy egy időmérő méri. Minden olyan mérkőzésen (a hivatalos versenyek döntőin kiemelten javasolt), amelyen a nézők számára látható az időmérés, az időmérő órát úgy kell elhelyezni, hogy azt a páston levő két vívó és a versenybíró is láthassa.

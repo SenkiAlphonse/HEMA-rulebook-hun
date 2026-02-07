@@ -46,9 +46,9 @@ Amikor egy mérkőzés megkezdéséhez jelentkeznek, a vívóknak teljesen vív�
 
 **DIS-1.3.5** 
 A verseny során, ha egy vívó nem jelenik meg a küzdőtéren amikor a bíró szólítja:
-- A nem megjelent vívó sárga lapot kap;
-- Az első hívást követő egy perc elteltével másodszor is szólítják, ha ekkor sem jelenik meg, az érintett vívó piros lapot kap;
-- A második hívást követő egy perc elteltével egy harmadik és utolsó hívást kap, melyet távolmaradás esetén a versenyszámból való kizárás követ.
+  - A nem megjelent vívó sárga lapot kap;
+  - Az első hívást követő egy perc elteltével másodszor is szólítják, ha ekkor sem jelenik meg, az érintett vívó piros lapot kap;
+  - A második hívást követő egy perc elteltével egy harmadik és utolsó hívást kap, melyet távolmaradás esetén a versenyszámból való kizárás követ.
 
 #### Vívó etikett
 
@@ -102,8 +102,8 @@ A bíró nem csak a mérkőzések levezényléséért, a találatok megítélés
 A bíró megszakíthatja a mérkőzést, ha az zavarossá, veszélyessé válik, vagy már nem tudja egyértelműen megítélni az akciókat. Objektív találatjelző berendezés hiányában a menetek elbírálásának alapját az akciót megfigyelő bíró és segédje észlelései képezik. A vívók a végső döntés meghozatala előtt fordulhatnak a bíróhoz pontosításért vagy felülvizsgálatért. Ténymegállapítások kapcsán a bírók ítéletét a versenyzők nem kérdőjelezhetik meg, (kivéve a videobíráskodás eseteit), és ha egy vívó ezt az elvet megszegi, az 1. csoportba tartozó vétséget követ el. Ténymegállapításnak számít - nem kizárólagosan - az arénában történtek megítélése és elemzése, találatok érvényessége és prioritása, az arénából kilépés tényének megállapítása, egy vívó viselkedésének 3. vagy 4. csoportba sorolása, stb. De ha egy bíró egyértelműen nem ismer vagy félreért meghatározott szabály(oka)t, vagy azokat szabályokba ütköző módon alkalmazza, a versenyzők személyesen felülvizsgálatot kérhetnek.
 
 A felülvizsgálatot kérheti:
-- egyéni versenyszámban a vívó,
-- csapat versenyszámban a vívónak vagy a csapatkapitány;
+  - egyéni versenyszámban a vívó,
+  - csapat versenyszámban a vívónak vagy a csapatkapitány;
 
 udvariasan, formalitás nélkül, azonnal szóban a bírótól, mielőtt bármilyen a kérdéses helyzet után esett találattal kapcsolatban döntés születne. Ha a bíró kitart a véleménye mellett, a főbíró jár el az ügyben, aki döntést hozhat, illetve felügyeletet biztosíthat a mérkőzés további részében. Egy ilyen kérelem megalapozatlansága esetén a vívó a fegyelmi vétségek 1. csoportjára vonatkozó szabályok szerint büntetendő.
 
@@ -133,18 +133,19 @@ A Szervező Csapat vagy a Főbíró minden döntése azonnal végrehajtható. A 
 **DIS-3.1.1** 
 A különböző vétségeket különböző fajtájú büntetésekkel kell büntetni 
 <!-- (vö.: .t158ss.) -->
-- Víváshoz kötődő büntetések, amelyek a vívás közben elkövetett vétségek esetén alkalmazhatóak:
-    - területvesztés
-    - a ténylegesen elért találat meg nem adása,
-    - a ténylegesen nem kapott találat megítélése,
-    - a versenyszámból való kizárás.
-
--  Fegyelmi büntetések, amelyek a rend, a fegyelem és a sportszellem ellen elkövetett vétségek esetén alkalmazhatóak:
-    - Ténylegesen nem kapott találat odaítélése
-    - versenyszámból való kizárás
-    - A teljes bajnokságból való kizárás
-    - A verseny helyszínéről való kiutasítás
-    - a Szövetség vagy az adott Szervezőcsapat által szervezett rendezvényekről meghatározott időre történő kizárás
+**DIS-3.1.1.1** 
+Víváshoz kötődő büntetések, amelyek a vívás közben elkövetett vétségek esetén alkalmazhatóak:
+  - területvesztés
+  - a ténylegesen elért találat meg nem adása,
+  - a ténylegesen nem kapott találat megítélése,
+  - a versenyszámból való kizárás.
+**DIS-3.1.2** 
+Fegyelmi büntetések, amelyek a rend, a fegyelem és a sportszellem ellen elkövetett vétségek esetén alkalmazhatóak:
+  - Ténylegesen nem kapott találat odaítélése
+  - versenyszámból való kizárás
+  - A teljes bajnokságból való kizárás
+  - A verseny helyszínéről való kiutasítás
+  - a Szövetség vagy az adott Szervezőcsapat által szervezett rendezvényekről meghatározott időre történő kizárás
 
 **DIS-3.1.2** 
 A felsorolt büntetések mindegyikét –a végleges eltiltást kivéve— alkalmazhatják a
@@ -179,43 +180,45 @@ A versenyszámból való kizárás. Fegyelmi büntetésként is kiszabható (a k
 #### Kitiltás a verseny helyszínéről, kizárás a versenyből
 
 **DIS-3.3.2** 
-- A versenyző, akit az egész versenyből kizártak, a továbbiakban nem vehet részt ezen a versenyen semmilyen versenyszámban sem ugyanabban, sem más fegyvernemben.
-- Ha ez a büntetés egy egész csapatra vonatkozik, külön-külön kell megvizsgálni a csapat minden egyes tagjának az esetét és büntetésük a körülmények alapján különböző lehet
+A versenyző, akit az egész versenyből kizártak, a továbbiakban nem vehet részt ezen a versenyen semmilyen versenyszámban sem ugyanabban, sem más fegyvernemben.
+**DIS-3.3.3** 
+Ha a kizárás egy egész csapatra vonatkozik, külön-külön kell megvizsgálni a csapat minden egyes tagjának az esetét és büntetésük a körülmények alapján különböző lehet
 <!-- (Vö. t.130). -->
 
-**DIS-3.3.3** 
+**DIS-3.3.4** 
 Minden résztvevőt vagy nem vívó kísérőt, aki részt vesz vagy jelen van a versenyen (edzőt, technikust, szurkolót, hivatalos személyt, nézőt stb.) ki lehet utasítani. A kiutasítás azzal jár, hogy a verseny vagy a versenyszám időtartama alatt annak helyszínén a kiutasított személy nem tartózkodhat. Ez az intézkedés semmilyen körülmények között nem fellebbezhető.
 <!-- (Vö. t.133, t.137.3, t.170) -->
 
 #### Diszkvalifikálás
 
-**DIS-3.3.4** 
+**DIS-3.3.5** 
 Egy vívó diszkvalifikálása jóhiszeműsége esetén nem szükségszerűen jár határozott vagy
 végleges eltiltásával; csalárd szándék esetén ugyanakkor további büntetés kiszabása
 kérhető ellene.
 
-**DIS-3.3.5** 
+**DIS-3.3.6** 
 Az a csapat, amely olyan versenyzővel állt ki, akit diszkvalifikáltak, maga is a vívó
 sorsára jut és diszkvalifikálják.
 
-**DIS-3.3.6** 
+**DIS-3.3.7** 
 A kizárásra vonatkozó következményeket megfelelően alkalmazni kell a diszkvalifikálásra
 is (ld.: t.149. szakasz)
 
 #### Megrovás
 
-**DIS-3.3.7** 
+**DIS-3.3.8** 
 Ha súlyosabb büntetés kiszabása nem indokolt, a vívót vagy a hivatalos személyt
 megrovásban kell részesíteni.
 
 #### Határozott idejű eltiltás
 
-**DIS-3.3.8**
-- Az eltiltott versenyző a határozott idejű eltiltás tartama alatt nem vehet részt a FIE hivatalos versenyein.
-- Az egyéb eltiltott személyek nem gyakorolhatják hivatásukat az eltiltás területi hatálya és időtartama alatt.
+**DIS-3.3.9**
+Az eltiltott versenyző a határozott idejű eltiltás tartama alatt nem vehet részt a FIE hivatalos versenyein.
+**DIS-3.3.10**
+Az egyéb (nem versenyző) eltiltott személyek nem gyakorolhatják hivatásukat az eltiltás területi hatálya és időtartama alatt.
 
 #### Végleges eltiltás
-**DIS-3.3.9** 
+**DIS-3.3.11** 
 A végleges eltiltás következményei megegyeznek a határozott idejű eltiltás következményeivel, de határozatlan ideig tartanak.
 
 ### A büntetések kihirdetése
@@ -251,11 +254,15 @@ Bizonyos vétségek maguk után vonhatják a vétkes vívó által adott talála
 
 **DIS-4.1.5** 
 A büntetések a következők:
-- a figyelmeztetés, melyet a versenybíró SÁRGA LAP felmutatásával fejez ki, megjelölve a vétkes vívót. A vétkes vívó tudomásul veszi, hogy részéről bármilyen újabb vétség elkövetése büntető találatot von maga után.
-- a büntető találat, melyet PIROS LAP felmutatásával fejez ki a versenybíró, megjelölve a vétkes vívót. Ebben az esetben az ellenfél adott találataihoz egy találatot hozzá kell adni, ami ha az utolsó találatról van szó maga után vonhatja a mérkőzés elvesztését. Ezen felül minden PIROS LAP felmutatását csak újabb PIROS LAP vagy FEKETE LAP követheti a második vétség természetétől függően
-- a versenyszámból való kizárás, felfüggesztés a verseny további részéből <!-- és 60 napos eltiltás az aktív vívóévadból, --> melyet a FEKETE LAP felmutatásával fejez ki a versenybíró, megjelölve a vétkes vívót.
+**DIS-4.1.5.1** 
+a figyelmeztetés, melyet a versenybíró SÁRGA LAP felmutatásával fejez ki, megjelölve a vétkes vívót. A vétkes vívó tudomásul veszi, hogy részéről bármilyen újabb vétség elkövetése büntető találatot von maga után.
+**DIS-4.1.5.2** 
+a büntető találat, melyet PIROS LAP felmutatásával fejez ki a versenybíró, megjelölve a vétkes vívót. Ebben az esetben az ellenfél adott találataihoz egy találatot hozzá kell adni, ami ha az utolsó találatról van szó maga után vonhatja a mérkőzés elvesztését. Ezen felül minden PIROS LAP felmutatását csak újabb PIROS LAP vagy FEKETE LAP követheti a második vétség természetétől függően
+**DIS-4.1.5.3** 
+a versenyszámból való kizárás, felfüggesztés a verseny további részéből <!-- és 60 napos eltiltás az aktív vívóévadból, --> melyet a FEKETE LAP felmutatásával fejez ki a versenybíró, megjelölve a vétkes vívót.
 <!-- (Vö. t.170). -->
-- a verseny helyszínéről való kitiltás (bármely, a verseny rendjét zavaró személy ellen
+**DIS-4.1.5.4** 
+a verseny helyszínéről való kitiltás (bármely, a verseny rendjét zavaró személy ellen
 alkalmazható)
 
 **DIS-4.1.6** 
@@ -294,9 +301,9 @@ Ha a vívó ugyanazon mérkőzés során ismételten a harmadik a csoportba tart
 
 **DIS-4.3.14** 
 A páston kívüli személy rendzavarása esetén:
-- első alkalommal SÁRGA LAPOS figyelmeztetés jár, amely a verseny egészére vonatkozik. Ezt a mérkőzés jegyzőkönyvén fel kell tüntetni, és a szervező teamnek <!--DT-nek --> rögzítenie kell.
-- A verseny ideje alatt második elkövetéskor FEKETE LAP a büntetés.
-- A páston vagy a páston kívül elkövetett különösen jelentős súlyú rendzavarás esetén a versenybíró a vétkes személyt azonnal kizárhatja vagy kitilthatja.
+  - első alkalommal SÁRGA LAPOS figyelmeztetés jár, amely a verseny egészére vonatkozik. Ezt a mérkőzés jegyzőkönyvén fel kell tüntetni, és a szervező teamnek <!--DT-nek --> rögzítenie kell.
+  - A verseny ideje alatt második elkövetéskor FEKETE LAP a büntetés.
+  - A páston vagy a páston kívül elkövetett különösen jelentős súlyú rendzavarás esetén a versenybíró a vétkes személyt azonnal kizárhatja vagy kitilthatja.
 
 #### A negyedik csoportba tartozó vétségek
 
@@ -317,8 +324,8 @@ Egy szabályszegés akkor tekinthető közvetlen és oksági kapcsolatban álló
 
 **DIS-4.3.19** 
 Egy találat nem semmisíthető meg pusztán amiatt, hogy szabályszegés történt, ha:
-- a szabályszegés nem vett közvetlenül részt a pontszerző akció végrehajtásában (a szabálytalanság elkövetése és a találat közt a vívószerepek újraértékelődtek); 
-- a szabályszegés nem állt összefüggésben azokkal a taktikai vagy fizikai feltételekkel, amelyek a találat létrejöttét lehetővé tették.
+  - a szabályszegés nem vett közvetlenül részt a pontszerző akció végrehajtásában (a szabálytalanság elkövetése és a találat közt a vívószerepek újraértékelődtek); 
+  - a szabályszegés nem állt összefüggésben azokkal a taktikai vagy fizikai feltételekkel, amelyek a találat létrejöttét lehetővé tették.
 
 **DIS-4.3.20** 
 ### Vétségek és büntetések táblázata.
@@ -815,31 +822,31 @@ Az egyes büntetések kiszabása az arra illetékes hatóságok feladata, akik m
 
 #### A versenybíró döntése ellen
 **DIS-5.2.1** 
-- A versenybíró ténykérdésben hozott döntése ellen nincs helye fellebbezésnek, kivéve a <!-- z o.105. és t.60-63. szerinti --> megengedett esetekben videóbíráskodás esetén.
+A versenybíró ténykérdésben hozott döntése ellen nincs helye fellebbezésnek, kivéve a <!-- z o.105. és t.60-63. szerinti --> megengedett esetekben videóbíráskodás esetén.
 <!-- (vö. t.136.1/2, t.137.2) -->
-- Ha a vívó ezt az alapelvet megsérti, és a mérkőzés során kétségbe vonja a versenybíró ténykérdésben hozott döntését, a szabályzat szerint, az első csoportba tartozó vétségként büntetendő <!-- (Vö. t.158-162, t.165, t.170) -->. Ha azonban a versenybíró a konkrét szabályozás rendelkezését figyelmen kívül hagyja, félreértelmezi vagy azt nem a szabályzattal összhangban alkalmazza, az ügyben fellebbezés terjeszthető elő. Ténymegállapítás különösen, de nem kizárólagosan a versenybíró megállapítása a páston történtekről, úgy mint a találat érvényességének vagy elsőbbségének kérdése, hogy a vívó elhagyta-e a pástot <!-- oldalt vagy hátul -->vagy hogy valakinek a viselkedése harmadik vagy negyedik csoportba tartozó vétség-e. 
-
 **DIS-5.2.2** 
-Ilyen (ref: **DIS-5.2.1**) fellebbezés előterjesztésére
-- egyéni versenyszámban a versenyző,
-- csapat versenyszámban a versenyző vagy a csapatkapitány jogosult.
-
-A fellebbezés nincs alakszerűséghez kötve, az azonnali és udvarias formában, szóban terjeszthető a versenybíró elé a soron következő találatra vonatkozó döntés meghozatalát megelőzően.
+Ha a vívó ezt az alapelvet megsérti, és a mérkőzés során kétségbe vonja a versenybíró ténykérdésben hozott döntését, a szabályzat szerint, az első csoportba tartozó vétségként büntetendő <!-- (Vö. t.158-162, t.165, t.170) -->. Ha azonban a versenybíró a konkrét szabályozás rendelkezését figyelmen kívül hagyja, félreértelmezi vagy azt nem a szabályzattal összhangban alkalmazza, az ügyben fellebbezés terjeszthető elő. Ténymegállapítás különösen, de nem kizárólagosan a versenybíró megállapítása a páston történtekről, úgy mint a találat érvényességének vagy elsőbbségének kérdése, hogy a vívó elhagyta-e a pástot <!-- oldalt vagy hátul -->vagy hogy valakinek a viselkedése harmadik vagy negyedik csoportba tartozó vétség-e. 
 
 **DIS-5.2.3** 
+Ilyen (ref: **DIS-5.2.1**) fellebbezés előterjesztésére
+  - egyéni versenyszámban a versenyző,
+  - csapat versenyszámban a versenyző vagy a csapatkapitány jogosult.
+A fellebbezés nincs alakszerűséghez kötve, az azonnali és udvarias formában, szóban terjeszthető a versenybíró elé a soron következő találatra vonatkozó döntés meghozatalát megelőzően.
+
+**DIS-5.2.4** 
 <!-- TODO -->
 Amennyiben a versenybíró fenntartja álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHSz ellenőr jogosult a fellebbezés elbírálására <!-- (vö. t.141)-->. Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a **DIS-4.1.1** 
 -**DIS-4.1.5**, **DIS-4.1.9**-**DIS-4.1.10**, **DIS-4.3.20** szakaszokkal összhangban büntetendő.
  
 #### Egyéb óvás és fellebbezés
-**DIS-5.2.3** 
+**DIS-5.2.5** 
 Azok a panaszok és óvások, amelyek nem a versenybíró döntésével kapcsolatosak, haladéktalanul írásban, a <!--DT-nek -->szervező teamnek címezve terjeszthetők elő.
 
-**DIS-5.2.4** 
+**DIS-5.2.6** 
 Ha a panasz vagy óvás a <!--Directoire Technique vagy a hivatalos FIE küldött--> szervező team vagy a hivatalos MHSz küldött döntését vonja kétségbe, azt az MHSz Irodájának kell címezni<!-- az Alapszabály 7.2 és a t.140 szakaszokkal összhangban-->.
 
 #### A döntéshozatal módja
-**DIS-5.2.5** 
+**DIS-5.2.7** 
 A döntéshozó hatóság döntéseit testületként, egyszerű szótöbbséggel hozza. Szavazategyenlőség esetén az elnök szavazata dönt.
 
 
@@ -847,8 +854,9 @@ A döntéshozó hatóság döntéseit testületként, egyszerű szótöbbséggel
 <span id="DIS-5.3"></span>
 
 **DIS-5.3.1** 
-- A sportszellem, a rend vagy a fegyelem ellen elkövetett vétségek esetében ismétlődés áll elő, ha a vívót előzőleg megrovással, kizárással, diszkvalifikálással, eltiltással sújtották és a vívó két éven belül újabb vétséget követ el, amely nem küzdelmi vétség.
-- Ismétlődő vétkesség esetében a kiszabni rendelt büntetés a következő:
-    - Versenyszámból való kizárás, ha a korábbi büntetés megrovás volt.
-    - Diszkvalifikálás a teljes versenyből, ha a korábbi büntetés versenyszámból való diszkvalifikálás vagy kizárás volt.
+A sportszellem, a rend vagy a fegyelem ellen elkövetett vétségek esetében ismétlődés áll elő, ha a vívót előzőleg megrovással, kizárással, diszkvalifikálással, eltiltással sújtották és a vívó két éven belül újabb vétséget követ el, amely nem küzdelmi vétség.
+**DIS-5.3.2** 
+Ismétlődő vétkesség esetében a kiszabni rendelt büntetés a következő:
+  - Versenyszámból való kizárás, ha a korábbi büntetés megrovás volt.
+  - Diszkvalifikálás a teljes versenyből, ha a korábbi büntetés versenyszámból való diszkvalifikálás vagy kizárás volt.
 <!-- Lásd még a MHSz Fegyelmi Szabályzatát (MHSz Alapszabály VII. fejezet). -->
