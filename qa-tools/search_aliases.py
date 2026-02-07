@@ -75,7 +75,7 @@ class AliasAwareSearch:
         
         print(f"Loaded {len(self.rules)} rules with alias support")
 
-    def _expand_query(self, query: str) -> Tuple[str, str, str, List[str]]:
+    def _expand_query(self, query: str) -> Tuple[str, str, str, List[str], str]:
         """
         Expand query based on aliases
         
@@ -105,12 +105,13 @@ class AliasAwareSearch:
                 remaining_terms.append(word)
         
         # Build expanded query
-        expanded_query = ' '.join(remaining_terms)
+        base_query = ' '.join(remaining_terms)
+        expanded_query = base_query
         if concept_terms:
             # Add concept terms to search
             expanded_query = expanded_query + ' ' + ' '.join(concept_terms)
         
-        return expanded_query.strip(), formatum_filter, weapon_filter, concept_terms
+        return expanded_query.strip(), formatum_filter, weapon_filter, concept_terms, base_query.strip()
 
     def search(self, query: str, max_results: int = 5,
                formatum_filter: str = None, weapon_filter: str = None) -> List[SearchResult]:
@@ -124,7 +125,7 @@ class AliasAwareSearch:
             weapon_filter: Filter by weapon (longsword, rapier, etc.) - can be overridden by query
         """
         # Expand query based on aliases
-        expanded_query, detected_formatum, detected_weapon, concept_terms = self._expand_query(query)
+        expanded_query, detected_formatum, detected_weapon, concept_terms, base_query = self._expand_query(query)
         
         # Use detected filters if not explicitly provided
         if not formatum_filter and detected_formatum:
@@ -134,6 +135,7 @@ class AliasAwareSearch:
         
         query_lower = expanded_query.lower() if expanded_query else query.lower()
         query_terms = self._extract_terms(query_lower)
+        required_terms = self._extract_terms(base_query) if base_query else []
 
         results = []
         
@@ -156,6 +158,16 @@ class AliasAwareSearch:
             if formatum_filter:
                 # Include if: rule is general, OR rule is weapon-general, OR rule matches the format
                 if rule_weapon != 'general' and rule_formatum and rule_formatum != formatum_filter:
+                    continue
+
+            # Require all base query terms to appear somewhere
+            if required_terms:
+                combined_text = " ".join([
+                    rule.get('text', ''),
+                    rule.get('section', ''),
+                    rule.get('subsection', '')
+                ]).lower()
+                if any(term not in combined_text for term in required_terms):
                     continue
 
             # Calculate score including aliases
