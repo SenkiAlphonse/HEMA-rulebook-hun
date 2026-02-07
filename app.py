@@ -38,7 +38,7 @@ def api_search():
     try:
         data = request.get_json()
         query = data.get("query", "").strip()
-        max_results = min(int(data.get("max_results", 10)), 50)  # Cap at 50
+        max_results = min(int(data.get("max_results", 100)), 100)  # Cap at 100
         formatum_filter = data.get("formatum_filter")
         weapon_filter = data.get("weapon_filter")
 

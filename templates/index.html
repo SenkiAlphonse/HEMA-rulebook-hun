@@ -355,6 +355,10 @@
         const resultsDiv = document.getElementById('results');
         const loadingDiv = document.getElementById('loading');
 
+        let allResults = [];
+        let displayedCount = 0;
+        const RESULTS_PER_PAGE = 10;
+
         // Load stats on page load
         async function loadStats() {
             try {
@@ -413,7 +417,7 @@
                         query: query,
                         formatum_filter: formatum || null,
                         weapon_filter: weapon || null,
-                        max_results: 10
+                        max_results: 100
                     })
                 });
 
@@ -436,38 +440,90 @@
                     return;
                 }
 
-                let html = `<h2 style="color: #333; margin-bottom: 20px;">Results (${data.count})</h2>`;
-                
-                data.results.forEach(result => {
-                    const formatLabel = result.formatum === 'general' ? 'All Formats' : result.formatum;
-                    const weaponLabel = result.weapon_type === 'general' ? 'General' : result.weapon_type;
-                    
-                    html += `
-                        <div class="result-item">
-                            <div class="result-header">
-                                <span class="result-id">${result.rule_id}</span>
-                                <span class="result-score">Score: ${result.score.toFixed(1)}</span>
-                            </div>
-                            <div class="result-tags">
-                                <span class="tag weapon">${weaponLabel}</span>
-                                <span class="tag format">${formatLabel}</span>
-                            </div>
-                            <div class="result-text">${escapeHtml(result.text)}</div>
-                            <div class="result-meta">
-                                <div class="section-info">
-                                    <span class="section-label">Document:</span> ${escapeHtml(result.document)}
-                                </div>
-                                ${result.section ? `<div class="section-info"><span class="section-label">Section:</span> ${escapeHtml(result.section)}</div>` : ''}
-                                ${result.subsection ? `<div class="section-info"><span class="section-label">Subsection:</span> ${escapeHtml(result.subsection)}</div>` : ''}
-                            </div>
-                        </div>
-                    `;
-                });
-
-                resultsDiv.innerHTML = html;
+                allResults = data.results;
+                displayedCount = 0;
+                resultsDiv.innerHTML = `<h2 style="color: #333; margin-bottom: 20px;">Results (${data.count})</h2>`;
+                displayResults();
             } catch (error) {
                 loadingDiv.classList.remove('show');
                 resultsDiv.innerHTML = `<div class="error-message">Error: ${error.message}</div>`;
+            }
+        }
+
+        function displayResults() {
+            const endIndex = Math.min(displayedCount + RESULTS_PER_PAGE, allResults.length);
+            const resultsToShow = allResults.slice(displayedCount, endIndex);
+
+            let html = '';
+            resultsToShow.forEach(result => {
+                const formatLabel = result.formatum === 'general' ? 'All Formats' : result.formatum;
+                const weaponLabel = result.weapon_type === 'general' ? 'General' : result.weapon_type;
+
+                html += `
+                    <div class="result-item">
+                        <div class="result-header">
+                            <span class="result-id">${result.rule_id}</span>
+                            <span class="result-score">Score: ${result.score.toFixed(1)}</span>
+                        </div>
+                        <div class="result-tags">
+                            <span class="tag weapon">${weaponLabel}</span>
+                            <span class="tag format">${formatLabel}</span>
+                        </div>
+                        <div class="result-text">${escapeHtml(result.text)}</div>
+                        <div class="result-meta">
+                            <div class="section-info">
+                                <span class="section-label">Document:</span> ${escapeHtml(result.document)}
+                            </div>
+                            ${result.section ? `<div class="section-info"><span class="section-label">Section:</span> ${escapeHtml(result.section)}</div>` : ''}
+                            ${result.subsection ? `<div class="section-info"><span class="section-label">Subsection:</span> ${escapeHtml(result.subsection)}</div>` : ''}
+                        </div>
+                    </div>
+                `;
+            });
+
+            // Append new results
+            const headerElement = resultsDiv.querySelector('h2');
+            if (headerElement) {
+                headerElement.insertAdjacentHTML('afterend', html);
+            } else {
+                resultsDiv.innerHTML = html;
+            }
+
+            displayedCount = endIndex;
+
+            // Add or update Load More button
+            const existingButton = document.getElementById('loadMoreBtn');
+            if (existingButton) {
+                existingButton.remove();
+            }
+
+            if (displayedCount < allResults.length) {
+                const loadMoreBtn = document.createElement('button');
+                loadMoreBtn.id = 'loadMoreBtn';
+                loadMoreBtn.textContent = `Load More (${allResults.length - displayedCount} remaining)`;
+                loadMoreBtn.style.cssText = `
+                    display: block;
+                    margin: 20px auto;
+                    padding: 12px 30px;
+                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                    color: white;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 1em;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: transform 0.2s, box-shadow 0.2s;
+                `;
+                loadMoreBtn.onmouseover = () => {
+                    loadMoreBtn.style.transform = 'translateY(-2px)';
+                    loadMoreBtn.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.4)';
+                };
+                loadMoreBtn.onmouseout = () => {
+                    loadMoreBtn.style.transform = 'translateY(0)';
+                    loadMoreBtn.style.boxShadow = 'none';
+                };
+                loadMoreBtn.onclick = displayResults;
+                resultsDiv.appendChild(loadMoreBtn);
             }
         }
 
