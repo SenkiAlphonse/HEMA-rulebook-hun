@@ -9,6 +9,11 @@ import sys
 from pathlib import Path
 from flask import Flask, render_template, request, jsonify, Response
 
+try:
+    import google.generativeai as genai
+except Exception:  # pragma: no cover - optional dependency
+    genai = None
+
 qa_dir = Path(__file__).parent / "qa-tools"
 sys.path.insert(0, str(qa_dir))
 from search_aliases import AliasAwareSearch
@@ -24,6 +29,85 @@ search_engine = AliasAwareSearch(
 # Cache for format and weapon options
 FORMATS = ["VOR", "COMBAT", "AFTERBLOW"]
 WEAPONS = ["longsword", "rapier", "padded_weapons"]
+SUMMARY_LANGUAGES = ["HU", "EN"]
+
+
+def _get_gemini_model():
+    api_key = os.environ.get("GEMINI_API_KEY", "").strip()
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY is not set")
+    if genai is None:
+        raise RuntimeError("google-generativeai is not installed")
+    genai.configure(api_key=api_key)
+    model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash")
+    return genai.GenerativeModel(model_name)
+
+
+def _split_text_for_summary(text, max_chars=6000):
+    chunks = []
+    current = []
+    current_len = 0
+    for line in text.splitlines():
+        line_len = len(line) + 1
+        if current_len + line_len > max_chars and current:
+            chunks.append("\n".join(current))
+            current = [line]
+            current_len = line_len
+        else:
+            current.append(line)
+            current_len += line_len
+    if current:
+        chunks.append("\n".join(current))
+    return chunks
+
+
+def _build_rules_text_for_summary(rules):
+    doc_order = _build_document_order(rules)
+    sorted_rules = sorted(
+        rules,
+        key=lambda r: (
+            doc_order.get(r.get("document", ""), 9999),
+            int(r.get("line_number", 0)),
+            r.get("rule_id", "")
+        )
+    )
+    parts = []
+    for rule in sorted_rules:
+        parts.append(f"[{rule.get('rule_id','')}] {rule.get('text','').strip()}")
+    return "\n".join(parts)
+
+
+def _summarize_with_gemini(text, language):
+    model = _get_gemini_model()
+    target_language = "Hungarian" if language == "HU" else "English"
+    system_prompt = (
+        f"You are summarizing fencing competition rules. "
+        f"Write a clean, concise, professional summary in {target_language}. "
+        "Use short paragraphs or bullet points. Preserve key constraints, penalties, and exceptions. "
+        "Do not invent rules."
+    )
+
+    chunks = _split_text_for_summary(text)
+    summaries = []
+    for chunk in chunks:
+        response = model.generate_content([
+            system_prompt,
+            "Rules to summarize:\n" + chunk
+        ])
+        summaries.append(response.text.strip())
+
+    if len(summaries) == 1:
+        return summaries[0]
+
+    merge_prompt = (
+        f"Combine the summaries into a single cohesive summary in {target_language}. "
+        "Avoid repetition. Keep it compact and structured."
+    )
+    response = model.generate_content([
+        merge_prompt,
+        "Summaries:\n" + "\n\n".join(summaries)
+    ])
+    return response.text.strip()
 
 
 def _normalize_filter(value, allowed):
@@ -217,6 +301,51 @@ def api_extract():
             mimetype="text/markdown; charset=utf-8",
             headers={"Content-Disposition": f"attachment; filename={filename}"}
         )
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/api/summarize", methods=["POST"])
+def api_summarize():
+    """Summarize rules using Gemini (all matching rules, no cap)."""
+    try:
+        data = request.get_json()
+        mode = data.get("mode", "search")
+        language = _normalize_filter(data.get("language"), SUMMARY_LANGUAGES) or "EN"
+
+        if mode == "extract":
+            weapon_filter = _normalize_filter(data.get("weapon_filter"), WEAPONS)
+            formatum_filter = _normalize_filter(data.get("formatum_filter"), FORMATS)
+            rules = _filter_rules_for_extract(
+                search_engine.rules,
+                weapon_filter,
+                formatum_filter
+            )
+        else:
+            query = data.get("query", "").strip()
+            if not query:
+                return jsonify({"error": "Query cannot be empty"}), 400
+            formatum_filter = _normalize_filter(data.get("formatum_filter"), FORMATS)
+            weapon_filter = _normalize_filter(data.get("weapon_filter"), WEAPONS)
+            rules = search_engine.search(
+                query,
+                max_results=len(search_engine.rules),
+                formatum_filter=formatum_filter,
+                weapon_filter=weapon_filter
+            )
+            rules = [r.__dict__ for r in rules]
+
+        if not rules:
+            return jsonify({"error": "No matching rules to summarize"}), 400
+
+        summary_input = _build_rules_text_for_summary(rules)
+        summary = _summarize_with_gemini(summary_input, language)
+
+        return jsonify({
+            "success": True,
+            "language": language,
+            "summary": summary
+        })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

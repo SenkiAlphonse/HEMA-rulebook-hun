@@ -371,6 +371,26 @@
             </form>
         </div>
 
+        <div class="search-card" style="margin-top: 25px;">
+            <form class="search-form" id="summaryForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="summaryLanguage">Summary Language</label>
+                        <select id="summaryLanguage" name="summaryLanguage">
+                            <option value="EN">English</option>
+                            <option value="HU">Hungarian</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-search" id="summarizeSearchBtn">Summarize Search</button>
+                    <button type="button" class="btn btn-search" id="summarizeExtractBtn">Summarize Extract</button>
+                </div>
+                <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                    Generates a concise summary from all matching rules (not capped).
+                </p>
+            </form>
+            <div id="summaryOutput" style="margin-top: 15px;"></div>
+        </div>
+
         <div class="results" id="results"></div>
 
         <footer>
@@ -381,6 +401,9 @@
     <script>
         const form = document.getElementById('searchForm');
         const extractForm = document.getElementById('extractForm');
+        const summaryOutput = document.getElementById('summaryOutput');
+        const summarizeSearchBtn = document.getElementById('summarizeSearchBtn');
+        const summarizeExtractBtn = document.getElementById('summarizeExtractBtn');
         const queryInput = document.getElementById('query');
         const resultsDiv = document.getElementById('results');
         const loadingDiv = document.getElementById('loading');
@@ -427,6 +450,14 @@
         extractForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             await downloadExtract();
+        });
+
+        summarizeSearchBtn.addEventListener('click', async () => {
+            await summarize('search');
+        });
+
+        summarizeExtractBtn.addEventListener('click', async () => {
+            await summarize('extract');
         });
 
         async function search() {
@@ -520,6 +551,62 @@
                 window.URL.revokeObjectURL(url);
             } catch (error) {
                 alert(`Error: ${error.message}`);
+            }
+        }
+
+        async function summarize(mode) {
+            const language = document.getElementById('summaryLanguage').value;
+            const formatum = document.getElementById('formatum').value;
+            const weapon = document.getElementById('weapon').value;
+            const extractFormatum = document.getElementById('extractFormatum').value;
+            const extractWeapon = document.getElementById('extractWeapon').value;
+
+            summaryOutput.innerHTML = '<div class="loading show"><div class="spinner"></div><p>Summarizing...</p></div>';
+
+            const payload = {
+                mode: mode,
+                language: language
+            };
+
+            if (mode === 'search') {
+                const query = queryInput.value.trim();
+                if (!query) {
+                    summaryOutput.innerHTML = '<div class="error-message">Please enter a search query first.</div>';
+                    return;
+                }
+                payload.query = query;
+                payload.formatum_filter = formatum || null;
+                payload.weapon_filter = weapon || null;
+            } else {
+                payload.formatum_filter = extractFormatum || null;
+                payload.weapon_filter = extractWeapon || null;
+            }
+
+            try {
+                const response = await fetch('/api/summarize', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+                if (!response.ok) {
+                    summaryOutput.innerHTML = `<div class="error-message">Error: ${data.error}</div>`;
+                    return;
+                }
+
+                summaryOutput.innerHTML = `
+                    <div class="result-item">
+                        <div class="result-header">
+                            <span class="result-id">Summary (${data.language})</span>
+                        </div>
+                        <div class="result-text">${escapeHtml(data.summary).replace(/\n/g, '<br>')}</div>
+                    </div>
+                `;
+            } catch (error) {
+                summaryOutput.innerHTML = `<div class="error-message">Error: ${error.message}</div>`;
             }
         }
 

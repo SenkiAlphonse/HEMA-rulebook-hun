@@ -30,3 +30,9 @@
 - [Bírói jelzések 1.](fuggelek/referee_signals_1.png)
 - [Bírói jelzések 2.](fuggelek/referee_signals_2.png)
 
+## Web App
+
+- Start: `python app.py`
+- AI summaries (Gemini) require `GEMINI_API_KEY`
+- Optional: `GEMINI_MODEL` (default: `gemini-1.5-flash`)
+
