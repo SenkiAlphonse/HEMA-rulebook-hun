@@ -44,8 +44,17 @@ def _get_gemini_model():
     if genai is None:
         raise RuntimeError("google-generativeai is not installed")
     genai.configure(api_key=api_key)
-    model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash-latest")
-    return genai.GenerativeModel(model_name)
+    model_name = os.environ.get("GEMINI_MODEL", "").strip()
+    if model_name:
+        return genai.GenerativeModel(model_name)
+
+    for candidate in ["gemini-2.5-flash", "gemini-2.5-flash-lite"]:
+        try:
+            return genai.GenerativeModel(candidate)
+        except Exception:
+            continue
+
+    raise RuntimeError("No available Gemini model found. Set GEMINI_MODEL explicitly.")
 
 
 def _check_rate_limit(client_key: str) -> bool:
