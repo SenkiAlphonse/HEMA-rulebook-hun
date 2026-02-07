@@ -6,6 +6,7 @@ Flask application for searching the HEMA rulebook
 import json
 import os
 import sys
+import time
 from pathlib import Path
 from flask import Flask, render_template, request, jsonify, Response
 
@@ -30,6 +31,10 @@ search_engine = AliasAwareSearch(
 FORMATS = ["VOR", "COMBAT", "AFTERBLOW"]
 WEAPONS = ["longsword", "rapier", "padded_weapons"]
 SUMMARY_LANGUAGES = ["HU", "EN"]
+SUMMARY_RATE_LIMIT_WINDOW_SEC = int(os.environ.get("SUMMARY_RATE_LIMIT_WINDOW_SEC", 3600))
+SUMMARY_RATE_LIMIT_MAX = int(os.environ.get("SUMMARY_RATE_LIMIT_MAX", 10))
+SUMMARY_SHARED_TOKEN = os.environ.get("SUMMARY_SHARED_TOKEN", "").strip()
+_summary_requests = {}
 
 
 def _get_gemini_model():
@@ -41,6 +46,19 @@ def _get_gemini_model():
     genai.configure(api_key=api_key)
     model_name = os.environ.get("GEMINI_MODEL", "gemini-1.5-flash-latest")
     return genai.GenerativeModel(model_name)
+
+
+def _check_rate_limit(client_key: str) -> bool:
+    now = time.time()
+    window_start = now - SUMMARY_RATE_LIMIT_WINDOW_SEC
+    timestamps = _summary_requests.get(client_key, [])
+    timestamps = [ts for ts in timestamps if ts >= window_start]
+    if len(timestamps) >= SUMMARY_RATE_LIMIT_MAX:
+        _summary_requests[client_key] = timestamps
+        return False
+    timestamps.append(now)
+    _summary_requests[client_key] = timestamps
+    return True
 
 
 def _split_text_for_summary(text, max_chars=6000):
@@ -309,6 +327,15 @@ def api_extract():
 def api_summarize():
     """Summarize rules using Gemini (all matching rules, no cap)."""
     try:
+        client_key = request.headers.get("X-Forwarded-For", request.remote_addr or "unknown")
+        if SUMMARY_SHARED_TOKEN:
+            provided = request.headers.get("X-Summary-Token", "").strip()
+            if provided != SUMMARY_SHARED_TOKEN:
+                return jsonify({"error": "Unauthorized"}), 401
+
+        if not _check_rate_limit(client_key):
+            return jsonify({"error": "Rate limit exceeded. Try again later."}), 429
+
         data = request.get_json()
         mode = data.get("mode", "search")
         language = _normalize_filter(data.get("language"), SUMMARY_LANGUAGES) or "EN"

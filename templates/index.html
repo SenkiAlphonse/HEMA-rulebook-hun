@@ -381,6 +381,15 @@
                             <option value="HU">Hungarian</option>
                         </select>
                     </div>
+                    <div class="form-group">
+                        <label for="summaryAccessCode">Summary Access Code</label>
+                        <input
+                            type="password"
+                            id="summaryAccessCode"
+                            name="summaryAccessCode"
+                            placeholder="Optional"
+                        >
+                    </div>
                     <button type="button" class="btn btn-search" id="summarizeSearchBtn">Summarize Search</button>
                     <button type="button" class="btn btn-search" id="summarizeExtractBtn">Summarize Extract</button>
                 </div>
@@ -388,6 +397,10 @@
                     Generates a concise summary from all matching rules (not capped).
                 </p>
             </form>
+            <div id="summaryControls" style="margin-top: 10px; display: none; gap: 10px;">
+                <button type="button" class="btn btn-search" id="copySummaryBtn">Copy Summary</button>
+                <button type="button" class="btn btn-search" id="downloadSummaryBtn">Download Summary (.txt)</button>
+            </div>
             <div id="summaryOutput" style="margin-top: 15px;"></div>
         </div>
 
@@ -402,11 +415,16 @@
         const form = document.getElementById('searchForm');
         const extractForm = document.getElementById('extractForm');
         const summaryOutput = document.getElementById('summaryOutput');
+        const summaryControls = document.getElementById('summaryControls');
+        const copySummaryBtn = document.getElementById('copySummaryBtn');
+        const downloadSummaryBtn = document.getElementById('downloadSummaryBtn');
         const summarizeSearchBtn = document.getElementById('summarizeSearchBtn');
         const summarizeExtractBtn = document.getElementById('summarizeExtractBtn');
         const queryInput = document.getElementById('query');
         const resultsDiv = document.getElementById('results');
         const loadingDiv = document.getElementById('loading');
+
+        let lastSummaryText = '';
 
         let allResults = [];
         let displayedCount = 0;
@@ -458,6 +476,24 @@
 
         summarizeExtractBtn.addEventListener('click', async () => {
             await summarize('extract');
+        });
+
+        copySummaryBtn.addEventListener('click', async () => {
+            if (!lastSummaryText) return;
+            await navigator.clipboard.writeText(lastSummaryText);
+        });
+
+        downloadSummaryBtn.addEventListener('click', () => {
+            if (!lastSummaryText) return;
+            const blob = new Blob([lastSummaryText], { type: 'text/plain;charset=utf-8' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'summary.txt';
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            window.URL.revokeObjectURL(url);
         });
 
         async function search() {
@@ -556,12 +592,15 @@
 
         async function summarize(mode) {
             const language = document.getElementById('summaryLanguage').value;
+            const accessCode = document.getElementById('summaryAccessCode').value.trim();
             const formatum = document.getElementById('formatum').value;
             const weapon = document.getElementById('weapon').value;
             const extractFormatum = document.getElementById('extractFormatum').value;
             const extractWeapon = document.getElementById('extractWeapon').value;
 
             summaryOutput.innerHTML = '<div class="loading show"><div class="spinner"></div><p>Summarizing...</p></div>';
+            summaryControls.style.display = 'none';
+            lastSummaryText = '';
 
             const payload = {
                 mode: mode,
@@ -587,6 +626,7 @@
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        ...(accessCode ? { 'X-Summary-Token': accessCode } : {})
                     },
                     body: JSON.stringify(payload)
                 });
@@ -605,6 +645,8 @@
                         <div class="result-text">${escapeHtml(data.summary).replace(/\n/g, '<br>')}</div>
                     </div>
                 `;
+                lastSummaryText = data.summary;
+                summaryControls.style.display = 'flex';
             } catch (error) {
                 summaryOutput.innerHTML = `<div class="error-message">Error: ${error.message}</div>`;
             }
