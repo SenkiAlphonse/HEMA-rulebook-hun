@@ -6,7 +6,10 @@
       "right-of-way",
       "priority",
       "prio",
-      "vor"
+      "vor",
+      "előny",
+      "előny szabály",
+      "támadási jog"
     ],
     "COMBAT": [
       "free fencing",
@@ -18,12 +21,15 @@
       "afterblow",
       "after-blow",
       "ab",
-      "after blow"
+      "after blow",
+      "után-vágás",
+      "utánvágás",
+      "után-akció",
+      "utánakció"
     ]
   },
   "weapons": {
     "longsword": [
-      "sword",
       "ls",
       "long sword",
       "longsword",
@@ -32,15 +38,13 @@
     "rapier": [
       "rapier",
       "rp",
-      "rapira",
-      "rapier sword"
+      "rapier sword",
+      "rapír"
     ],
     "padded_weapons": [
       "padded",
-      "padded weapons",
       "padded weapon",
       "párnázott",
-      "párnázott fegyverek",
       "párnázott fegyver",
       "plüsi",
       "plüsskard"
@@ -53,7 +57,8 @@
       "valid target",
       "valid targets",
       "finding",
-      "találati felület"
+      "találati felület",
+      "érvényes találati felület"
     ],
     "penalty": [
       "penalty",
@@ -66,6 +71,7 @@
       "equipment",
       "gear",
       "felszerelés",
+      "védőfelszerelés",
       "protective gear",
       "protection"
     ],
@@ -75,7 +81,8 @@
       "not allowed",
       "prohibited",
       "tilos",
-      "tiltott"
+      "tiltott",
+      "nem szabad"
     ]
   }
 }
