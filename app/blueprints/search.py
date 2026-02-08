@@ -12,7 +12,11 @@ search_bp = Blueprint('search', __name__, url_prefix='/api')
 
 @search_bp.route('/search', methods=['POST'])
 def api_search():
-    """Search for rules by keyword"""
+    """Search for rules by keyword
+    
+    For level 4-5 rules, returns grouped results with parent context and child rules.
+    Each result includes a depth indicator and group_root for hierarchical organization.
+    """
     try:
         data = request.get_json()
         query = data.get("query", "").strip()
@@ -37,9 +41,24 @@ def api_search():
             weapon_filter=weapon_filter
         )
 
-        # Convert results to JSON
-        results_data = [
-            {
+        # Convert results to JSON with depth and grouping info
+        results_data = []
+        current_group = None
+        
+        for r in results:
+            depth = current_app.search_engine._get_rule_depth(r.rule_id)
+            
+            # Determine group root for hierarchy visualization
+            if depth >= 4:
+                # For level 4-5 rules, find the main parent (depth 2)
+                lineage = current_app.search_engine._get_rule_lineage(r.rule_id)
+                # Take the second element if it exists (first is the prefix like "GEN")
+                current_group = lineage[1] if len(lineage) > 1 else r.rule_id
+            else:
+                # For levels 1-3, the rule itself is a group anchor
+                current_group = r.rule_id
+            
+            results_data.append({
                 "rule_id": r.rule_id,
                 "text": r.text,
                 "section": r.section,
@@ -47,16 +66,17 @@ def api_search():
                 "document": r.document,
                 "weapon_type": r.weapon_type,
                 "formatum": r.formatum or "general",
-                "score": r.score
-            }
-            for r in results
-        ]
+                "score": r.score,
+                "depth": depth,
+                "group_root": current_group
+            })
 
         return jsonify({
             "success": True,
             "query": query,
             "count": len(results_data),
-            "results": results_data
+            "results": results_data,
+            "note": "Results grouped by rule hierarchy. Level 4-5 rules include parent rules (up to level 3) and direct child rules."
         })
 
     except Exception as e:

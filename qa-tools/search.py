@@ -45,16 +45,17 @@ class RulebookSearch:
     def search(self, query: str, max_results: int = 5, 
                weapon_filter: str = None, formatum_filter: str = None) -> List[SearchResult]:
         """
-        Search for rules matching the query
+        Search for rules matching the query.
+        For level 4-5 rules, includes parent rules (up to level 3) and direct children.
         
         Args:
             query: Search query (keywords, natural language, or rule ID)
-            max_results: Maximum number of results to return
+            max_results: Maximum number of result groups to return
             weapon_filter: Filter by weapon type (e.g., "longsword")
             formatum_filter: Filter by format/variant (e.g., "VOR", "COMBAT", "AFTERBLOW")
         
         Returns:
-            List of SearchResult objects, sorted by relevance
+            List of SearchResult objects, grouped by rule lineage and sorted by relevance
         """
         query_lower = query.lower()
         query_terms = self._extract_terms(query_lower)
@@ -91,9 +92,43 @@ class RulebookSearch:
                     score=score
                 ))
         
-        # Sort by score (descending) and return top results
+        # Sort by score (descending)
         results.sort(key=lambda x: x.score, reverse=True)
-        return results[:max_results]
+        
+        # Group results: for level 4-5 rules, include parents and children
+        grouped_results = []
+        seen_root_ids = set()  # Track which root rules we've already processed
+        
+        for result in results:
+            depth = self._get_rule_depth(result.rule_id)
+            
+            # For level 4-5 rules, find the root of the hierarchy (level 1 or 2)
+            if depth >= 4:
+                lineage = self._get_rule_lineage(result.rule_id)
+                # Root is the smallest parent that's not just the prefix
+                root_id = lineage[1] if len(lineage) > 1 else result.rule_id
+                
+                if root_id not in seen_root_ids:
+                    seen_root_ids.add(root_id)
+                    
+                    # Collect all related rules: parents + matched rule + children
+                    related_ids = set(lineage) | {result.rule_id} | set(self._get_children_rules(result.rule_id))
+                    
+                    # Find all matching results that are in this family
+                    family_results = [r for r in results if r.rule_id in related_ids]
+                    family_results.sort(key=lambda x: (
+                        self._get_rule_depth(x.rule_id),  # Sort by depth
+                        results.index(x)  # Then by original order
+                    ))
+                    
+                    grouped_results.extend(family_results)
+            else:
+                # For level 1-3 rules, just add them if not already added as part of a family
+                rule_in_group = any(r.rule_id == result.rule_id for r in grouped_results)
+                if not rule_in_group:
+                    grouped_results.append(result)
+        
+        return grouped_results[:max_results]
     
     def _extract_terms(self, query: str) -> List[str]:
         """Extract search terms from query"""
@@ -183,6 +218,42 @@ class RulebookSearch:
         """Get all rules in a specific section"""
         return [rule for rule in self.rules 
                 if section_name.lower() in rule['section'].lower()]
+    
+    def _get_rule_depth(self, rule_id: str) -> int:
+        """Get depth of rule from its ID (e.g., GEN-6.7.4.2 → depth 4)"""
+        if not rule_id or '-' not in rule_id:
+            return 0
+        numeric_part = rule_id.split('-')[1]
+        return numeric_part.count('.') + 1
+    
+    def _get_rule_lineage(self, rule_id: str) -> List[str]:
+        """Get list of parent rule IDs for a given rule (e.g., GEN-6.7.4.2 → [GEN, GEN-6, GEN-6.7, GEN-6.7.4])"""
+        if not rule_id or '-' not in rule_id:
+            return []
+        
+        prefix, numeric = rule_id.split('-', 1)
+        parts = numeric.split('.')
+        lineage = [prefix]  # Start with just prefix (e.g., GEN)
+        
+        # Build each parent level
+        for i in range(len(parts) - 1):  # -1 because we don't include the full rule ID
+            parent_numeric = '.'.join(parts[:i+1])
+            lineage.append(f"{prefix}-{parent_numeric}")
+        
+        return lineage
+    
+    def _get_children_rules(self, rule_id: str) -> List[str]:
+        """Get rule IDs of direct children of a given rule"""
+        depth = self._get_rule_depth(rule_id)
+        children = []
+        
+        # Find rules with depth = current depth + 1
+        for rule in self.rules:
+            rule_depth = self._get_rule_depth(rule['rule_id'])
+            if rule_depth == depth + 1 and rule['rule_id'].startswith(rule_id + '.'):
+                children.append(rule['rule_id'])
+        
+        return sorted(children)
 
 
 def format_result(result: SearchResult, show_context: bool = True) -> str:
