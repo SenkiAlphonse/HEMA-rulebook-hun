@@ -277,11 +277,11 @@ Az egyéni egyenes kieséses mérkőzés akkor ér véget, ha a következő felt
 az egyik vívó elérte a meghatározott találatszámot (afterblow esetében pontszámot):  
 **GEN-6.10.5.1.1**  
 **Vor**: az egyik versenyző **elér 10 találatot**  
-**GEN-6.10.5.2**  
+**GEN-6.10.5.1.2**  
 **Combat**:   
     - az egyik versenyző **elér 10 találatot**  
     - Ha mindkét versenyző egyszerre éri el a 10 pontot (egyidejű találatokkal), döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)  
-**GEN-6.10.5.3**  
+**GEN-6.10.5.1.3**  
 **Afterblow**:  
     - az egyik versenyző **elér legalább 11 PONTOT**;   
         - a súlyozás miatt a 11 pontot meg lehet haladni.  
@@ -297,7 +297,7 @@ A két, egyperces pihenőidőkkel elválasztott három perces periódus (6 percn
 **GEN-6.10.5.2.1**  
 **Vor** esetén az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 5 találatot el nem ér.   
 
-**GEN-6.10.5.2.1**  
+**GEN-6.10.5.2.2**  
 Ha a szabályokban foglalt idő leteltekor a pontszámok egyenlőek, a vívók győztes pontért küzdenek, maximum egy percig. **A vívás újrakezdése előtt** a bíró kisorsolja (pénzfeldobással), ki lesz a győztes abban az esetben, ha a pontok a plusz egy perc leteltével még mindig egyenlőek.   
 
 **GEN-6.10.5.3**  
@@ -328,7 +328,7 @@ A küzdelem megszakítása
 **GEN-6.10.7**   
 Minden alkalommal amikor a küzdelem megszakad, a vívóknak lehetőségük van megkérdezni, hogy mennyi idejük maradt még vívni.  
 
-**GEN-6.10.7.1"**  
+**GEN-6.10.8**  
 Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétségként büntetendő.  
 
 **GEN-6.10.9**  

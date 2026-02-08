@@ -52,7 +52,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         # Regular paragraph
         return f'<p>{text}</p>\n'
     
-    def list(self, text, ordered, level, start=None):
+    def list(self, text, ordered, level, start=None, **kwargs):
         """Override list rendering to add bullet-list CSS class"""
         if ordered:
             tag = 'ol'
