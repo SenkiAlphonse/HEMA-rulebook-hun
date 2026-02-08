@@ -57,12 +57,7 @@ def build_rulebook():
             if md_file.name not in ["README.md"]:
                 md_files.append(md_file.name)
         
-        # Append appendices from fuggelek directory
-        appendix_dir = rulebook_dir / "fuggelek"
-        if appendix_dir.exists():
-            appendix_files = sorted(appendix_dir.glob("*.md"))
-            # Skip README files in appendix too
-            md_files.extend([f"fuggelek/{f.name}" for f in appendix_files if f.name != "README.md"])
+        # NOTE: Appendix (fuggelek/) files excluded - only root directory files included
         
         # Concatenate all markdown
         content = ""
