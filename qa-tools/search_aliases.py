@@ -265,6 +265,37 @@ class AliasAwareSearch:
             score = score / length_penalty
 
         return score
+
+    def _get_rule_depth(self, rule_id: str) -> int:
+        """Get depth of rule from its ID (e.g., GEN-6.7.4.2 → depth 4, LS-AB-1.2.10.2 → depth 4)"""
+        if not rule_id or '-' not in rule_id:
+            return 0
+        # The numeric part is always the last part after splitting by '-'
+        numeric_part = rule_id.split('-')[-1]
+        return numeric_part.count('.') + 1
+    
+    def _get_rule_lineage(self, rule_id: str) -> List[str]:
+        """Get list of parent rule IDs for a given rule (e.g., GEN-6.7.4.2 → [GEN, GEN-6, GEN-6.7, GEN-6.7.4])"""
+        if not rule_id or '-' not in rule_id:
+            return []
+        
+        # Split to get prefix and numeric parts
+        parts = rule_id.split('-')
+        # Prefix could be multi-part (e.g., LS-AB)
+        prefix = '-'.join(parts[:-1])
+        numeric = parts[-1]
+        numeric_parts = numeric.split('.')
+        
+        lineage = [prefix]  # Start with just the prefix (e.g., "GEN" or "LS-AB")
+        
+        # Build up the hierarchy
+        for i in range(len(numeric_parts)):
+            parent_numeric = '.'.join(numeric_parts[:i+1])
+            lineage.append(f"{prefix}-{parent_numeric}")
+        
+        # Remove the rule itself from lineage (we only want parents)
+        return lineage[:-1]
+    
     def get_rule_by_id(self, rule_id: str) -> dict:
         """Get a rule by its ID"""
         for rule in self.rules:
