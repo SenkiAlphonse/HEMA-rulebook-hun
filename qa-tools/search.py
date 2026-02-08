@@ -220,10 +220,11 @@ class RulebookSearch:
                 if section_name.lower() in rule['section'].lower()]
     
     def _get_rule_depth(self, rule_id: str) -> int:
-        """Get depth of rule from its ID (e.g., GEN-6.7.4.2 → depth 4)"""
+        """Get depth of rule from its ID (e.g., GEN-6.7.4.2 → depth 4, LS-AB-1.2.10.2 → depth 4)"""
         if not rule_id or '-' not in rule_id:
             return 0
-        numeric_part = rule_id.split('-')[1]
+        # The numeric part is always the last part after splitting by '-'
+        numeric_part = rule_id.split('-')[-1]
         return numeric_part.count('.') + 1
     
     def _get_rule_lineage(self, rule_id: str) -> List[str]:
