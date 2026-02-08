@@ -48,32 +48,31 @@ def build_rulebook():
         
         # Read all markdown files
         rulebook_dir = project_root
-        md_files = [
-            "01-altalanos.md",
-            "02-hosszukard.md",
-            "02.a-hosszukard-VOR.md",
-            "02.b-hosszukard-COMBAT.md",
-            "02.c-hosszukard-AFTERBLOW.md",
-            "03-etikett_fegyelem.md",
-            "04-szervezes.md",
-        ]
         
-        # Append appendices
+        # Automatically detect all numbered markdown files in the root directory
+        # Pattern: NN-*.md or NN.x-*.md (where NN is 01-99)
+        md_files = []
+        for md_file in sorted(rulebook_dir.glob("[0-9][0-9]*.md")):
+            # Exclude non-rulebook files
+            if md_file.name not in ["README.md"]:
+                md_files.append(md_file.name)
+        
+        # Append appendices from fuggelek directory
         appendix_dir = rulebook_dir / "fuggelek"
         if appendix_dir.exists():
             appendix_files = sorted(appendix_dir.glob("*.md"))
-            md_files.extend([f.name for f in appendix_files])
+            # Skip README files in appendix too
+            md_files.extend([f"fuggelek/{f.name}" for f in appendix_files if f.name != "README.md"])
         
         # Concatenate all markdown
         content = ""
         for md_file in md_files:
             file_path = rulebook_dir / md_file
-            if not file_path.exists():
-                file_path = rulebook_dir / "fuggelek" / md_file
             
             if file_path.exists():
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content += f.read() + "\n\n---\n\n"
+                print(f"  ✓ Loaded {md_file}")
         
         # Convert to HTML
         md = create_mistune_markdown()
