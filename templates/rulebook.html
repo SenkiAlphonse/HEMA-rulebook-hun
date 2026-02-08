@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEMA Rulebook - Magyar Hosszúkardvívó Sportszövetség</title>
+    <title>HEMA Rulebook - Kard Rendje</title>
     <style>
         * {
             margin: 0;
@@ -13,9 +13,11 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f5f5f5;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: #333;
             line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
         }
 
         .container {
@@ -23,15 +25,17 @@
             margin: 0 auto;
             background: white;
             min-height: 100vh;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
         }
 
         .header {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 2rem;
             text-align: center;
-            border-bottom: 3px solid #e74c3c;
+            border-bottom: none;
         }
 
         .header h1 {
@@ -66,8 +70,8 @@
         }
 
         .rule-id {
-            background-color: #ecf0f1;
-            color: #2c3e50;
+            background-color: #e8eaf6;
+            color: #667eea;
             padding: 0.3rem 0.6rem;
             border-radius: 3px;
             font-weight: bold;
@@ -80,7 +84,7 @@
         }
 
         .rule-id:hover {
-            background-color: #bdc3c7;
+            background-color: #d1d5f7;
             text-decoration: underline;
         }
 
@@ -94,9 +98,11 @@
 
         .meta-badge {
             display: inline-block;
-            background-color: #ecf0f1;
+            background-color: #e8eaf6;
+            color: #667eea;
             padding: 0.2rem 0.5rem;
             border-radius: 2px;
+            font-weight: 500;
         }
 
         .rule-text {
@@ -279,15 +285,17 @@
         }
 
         .reference-item {
-            background-color: #ecf0f1;
+            background-color: #e8eaf6;
+            color: #667eea;
             padding: 0.3rem 0.6rem;
             border-radius: 3px;
             cursor: pointer;
             transition: all 0.2s ease;
+            font-weight: 500;
         }
 
         .reference-item:hover {
-            background-color: #bdc3c7;
+            background-color: #d1d5f7;
             text-decoration: underline;
         }
 
@@ -296,7 +304,7 @@
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background-color: #e74c3c;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
             padding: 0.8rem 1rem;
@@ -307,15 +315,15 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
             font-size: 1.5rem;
             transition: all 0.3s ease;
             z-index: 1000;
         }
 
         .back-to-top:hover {
-            background-color: #c0392b;
-            transform: scale(1.1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
         }
 
         .back-to-top.show {
@@ -385,17 +393,18 @@
 
         .search-box button {
             padding: 0.7rem 1.5rem;
-            background-color: #e74c3c;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.2s ease;
+            transition: all 0.3s;
         }
 
         .search-box button:hover {
-            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
         }
 
         .nav-buttons {
@@ -405,23 +414,24 @@
 
         .nav-btn {
             padding: 0.7rem 1.5rem;
-            background-color: #3498db;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-weight: 600;
-            transition: all 0.2s ease;
+            transition: all 0.3s;
         }
 
         .nav-btn:hover {
-            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
         }
 
         /* Table of Contents */
         .toc-container {
-            background-color: #f9f9f9;
-            border-left: 4px solid #e74c3c;
+            background-color: #f3f3f9;
+            border-left: 4px solid #667eea;
             padding: 1.5rem 2rem;
             margin-bottom: 2rem;
             border-radius: 4px;
@@ -430,7 +440,7 @@
         .toc-container h2 {
             margin-top: 0;
             border: none;
-            color: #2c3e50;
+            color: #667eea;
             font-size: 1.3rem;
         }
 
@@ -459,14 +469,14 @@
         }
 
         .toc-item a {
-            color: #3498db;
+            color: #667eea;
             text-decoration: none;
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
         .toc-item a:hover {
-            color: #2980b9;
+            color: #764ba2;
             text-decoration: underline;
         }
 
@@ -538,296 +548,70 @@
         </div>
 
         <div class="content" id="ruleContent">
-            <div class="loading">
-                <div class="spinner"></div>
-                <p>Loading rulebook...</p>
-            </div>
+            {{ markdown_content|safe }}
         </div>
     </div>
 
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
 
     <script>
-        let allRules = [];
-        let originalHTML = '';
-
-        // Load and render rulebook on page load
-        window.addEventListener('load', async () => {
-            try {
-                const response = await fetch('/api/rulebook');
-                const data = await response.json();
-                allRules = data.rules;
-                renderRulebook();
-            } catch (error) {
-                console.error('Error loading rulebook:', error);
-                document.getElementById('ruleContent').innerHTML = 
-                    '<p style="color: red; text-align: center;">Error loading rulebook. Please try again later.</p>';
-            }
-        });
-
-        function renderRulebook() {
-            const contentDiv = document.getElementById('ruleContent');
-            let html = '';
-            let toc = [];
-
-            for (const rule of allRules) {
-                const ruleHTML = renderRule(rule);
-                html += ruleHTML;
-                
-                // Extract headings for TOC
-                const section = rule.section || '';
-                const subsection = rule.subsection || '';
-                
-                if (section && !toc.some(item => item.text === section && item.level === 1)) {
-                    toc.push({ text: section, level: 1, id: generateId(section) });
-                }
-                if (subsection && !toc.some(item => item.text === subsection && item.level === 2)) {
-                    toc.push({ text: subsection, level: 2, id: generateId(subsection) });
-                }
-            }
-
-            // Build TOC HTML
-            let tocHTML = '<div class="toc-container"><h2>📖 Table of Contents</h2><ul class="toc-list">';
-            for (const item of toc) {
-                const className = `toc-item level-${item.level}`;
-                tocHTML += `<li class="${className}"><a onclick="scrollToSection('${item.id}')">${item.text}</a></li>`;
-            }
-            tocHTML += '</ul></div>';
-
-            contentDiv.innerHTML = tocHTML + html;
-            originalHTML = html;
-            attachEventListeners();
-        }
-
-        function generateId(text) {
-            return text.toLowerCase()
-                .replace(/[^\w\s-]/g, '')
-                .replace(/\s+/g, '-')
-                .substring(0, 50);
-        }
-
-        function scrollToSection(id) {
-            const elements = document.querySelectorAll('[data-section-id]');
-            for (const el of elements) {
-                if (el.getAttribute('data-section-id') === id) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    el.classList.add('highlight');
-                    setTimeout(() => el.classList.remove('highlight'), 2000);
-                    return;
-                }
-            }
-        }
-
-        function renderRule(rule) {
-            const ruleId = rule.rule_id || 'UNKNOWN';
-            const text = rule.text || '';
-            const section = rule.section || '';
-            const subsection = rule.subsection || '';
-            const document = rule.document || '';
-            const weapon = rule.weapon_type || '';
-            const format = rule.formatum || '';
-
-            // Convert markdown to HTML
-            let htmlText = markdownToHtml(text);
-
-            // Add reference links styling
-            htmlText = htmlText.replace(/\[([A-Z]+-[\d.]+)\]/g, 
-                '<a class="ref-link" onclick="jumpToRule(\'$1\')" title="Jump to rule $1">[$1]</a>');
-
-            let metadata = [];
-            if (document) metadata.push(`<span class="meta-badge">📄 ${document}</span>`);
-            if (weapon) metadata.push(`<span class="meta-badge">⚔️ ${weapon}</span>`);
-            if (format) metadata.push(`<span class="meta-badge">🏷️ ${format}</span>`);
-
-            let referencesHTML = '';
-            if (rule.references_to && rule.references_to.length > 0) {
-                const refLinks = rule.references_to.map(ref => 
-                    `<span class="reference-item" onclick="jumpToRule('${ref}')" title="Jump to ${ref}">${ref}</span>`
-                ).join('');
-                referencesHTML += `<div class="references-section"><strong>References:</strong><div class="reference-list">${refLinks}</div></div>`;
-            }
-
-            if (rule.references_from && rule.references_from.length > 0) {
-                const refLinks = rule.references_from.map(ref => 
-                    `<span class="reference-item" onclick="jumpToRule('${ref}')" title="Jump to ${ref}">${ref}</span>`
-                ).join('');
-                referencesHTML += `<div class="references-section"><strong>Referenced by:</strong><div class="reference-list">${refLinks}</div></div>`;
-            }
-
-            // Build heading HTML if this is the first rule in a section/subsection
-            let headingHTML = '';
-            const currentSectionId = generateId(section);
-            const currentSubsectionId = generateId(subsection);
-            
-            // Add section heading if new
-            if (section) {
-                headingHTML += `<div class="section-heading" data-section-id="${currentSectionId}"><h1>${section}</h1></div>`;
-            }
-            
-            // Add subsection heading if new
-            if (subsection) {
-                headingHTML += `<div class="section-heading" data-section-id="${currentSubsectionId}"><h2>${subsection}</h2></div>`;
-            }
-
-            return `
-                ${headingHTML}
-                <div class="rule" id="rule-${ruleId}">
-                    <div class="rule-header">
-                        <span class="rule-id" onclick="copyToClipboard('${ruleId}')" title="Click to copy ID">${ruleId}</span>
-                    </div>
-                    ${metadata.length > 0 ? `<div class="rule-metadata">${metadata.join('')}</div>` : ''}
-                    <div class="rule-text">${htmlText}</div>
-                    ${referencesHTML}
-                </div>
-            `;
-        }
-
-        function markdownToHtml(text) {
-            if (!text) return '';
-
-            // Escape HTML entities first
-            text = text.replace(/&/g, '&amp;')
-                       .replace(/</g, '&lt;')
-                       .replace(/>/g, '&gt;');
-
-            // Process code blocks (triple backticks)
-            text = text.replace(/```[\s\S]*?```/g, (match) => {
-                const code = match.replace(/```/g, '').trim();
-                return `<pre><code>${code}</code></pre>`;
-            });
-
-            // Process inline code (backticks)
-            text = text.replace(/`([^`]+)`/g, '<code style="background: #f0f0f0; padding: 0.2rem 0.4rem; border-radius: 2px;">$1</code>');
-
-            // Process images ![alt](url)
-            text = text.replace(/!\[([^\]]*)\]\(([^\)]+)\)/g, (match, alt, url) => {
-                // Handle GitHub raw image URLs
-                if (url.includes('github.com') && !url.includes('raw.githubusercontent.com')) {
-                    url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
-                }
-                return `<img src="${url}" alt="${alt}">`;
-            });
-
-            // Process links [text](url)
-            text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
-
-            // Process bold **text**
-            text = text.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
-
-            // Process italic *text*
-            text = text.replace(/\*([^\*]+)\*/g, '<em>$1</em>');
-
-            // Process headings
-            text = text.replace(/^### (.*?)$/gm, '<h3>$1</h3>');
-            text = text.replace(/^## (.*?)$/gm, '<h2>$1</h2>');
-            text = text.replace(/^# (.*?)$/gm, '<h1>$1</h1>');
-
-            // Process unordered lists
-            text = text.replace(/^\s*- (.*?)$/gm, '<li>$1</li>');
-            text = text.replace(/(<li>.*<\/li>)/s, (match) => `<ul>${match}</ul>`);
-
-            // Process ordered lists
-            text = text.replace(/^\s*\d+\. (.*?)$/gm, '<li>$1</li>');
-
-            // Process paragraphs
-            const lines = text.split('\n');
-            let inList = false;
-            let inTable = false;
-            let result = [];
-
-            for (let line of lines) {
-                const trimmed = line.trim();
-
-                if (trimmed.startsWith('<table') || trimmed.startsWith('<tr') || trimmed.startsWith('<td') || trimmed.startsWith('<th')) {
-                    inTable = true;
-                    result.push(line);
-                } else if (trimmed.endsWith('</table>')) {
-                    result.push(line);
-                    inTable = false;
-                } else if (inTable) {
-                    result.push(line);
-                } else if (trimmed.startsWith('<ul') || trimmed.startsWith('<li')) {
-                    inList = true;
-                    result.push(line);
-                } else if (trimmed.startsWith('</ul>')) {
-                    result.push(line);
-                    inList = false;
-                } else if (inList && trimmed === '') {
-                    inList = false;
-                    result.push('</ul>');
-                } else if (trimmed && !inList && !trimmed.startsWith('<h') && !trimmed.startsWith('<pre') && !trimmed.startsWith('<img') && !trimmed.startsWith('<table')) {
-                    result.push(`<p>${trimmed}</p>`);
-                } else if (trimmed) {
-                    result.push(line);
-                }
-            }
-
-            return result.join('\n');
-        }
-
-        function jumpToRule(ruleId = null) {
-            if (!ruleId) {
-                ruleId = document.getElementById('searchInput').value.trim().toUpperCase();
-            }
-
-            if (!ruleId) {
-                alert('Please enter a rule ID');
+        function jumpToRule() {
+            const query = document.getElementById('searchInput').value.trim().toUpperCase();
+            if (!query) {
+                alert('Please enter a rule ID (e.g., GEN-6.2.3)');
                 return;
             }
 
-            const element = document.getElementById(`rule-${ruleId}`);
-            if (element) {
-                // Remove previous highlight
-                document.querySelectorAll('.rule.highlight').forEach(el => el.classList.remove('highlight'));
-
-                // Add highlight to target
-                element.classList.add('highlight');
-
-                // Scroll into view
-                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-                // Update search box
-                document.getElementById('searchInput').value = ruleId;
-            } else {
-                alert(`Rule ${ruleId} not found`);
-            }
-        }
-
-        function clearHighlight() {
-            document.querySelectorAll('.rule.highlight').forEach(el => el.classList.remove('highlight'));
-            document.getElementById('searchInput').value = '';
-        }
-
-        function copyToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                // Show brief feedback
-                const btn = event.target;
-                const originalText = btn.textContent;
-                btn.textContent = '✓ Copied!';
-                setTimeout(() => btn.textContent = originalText, 1500);
-            });
-        }
-
-        function attachEventListeners() {
-            // Search on Enter key
-            document.getElementById('searchInput').addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') jumpToRule();
-            });
-
-            // Scroll to top button visibility
-            window.addEventListener('scroll', () => {
-                const btn = document.getElementById('backToTop');
-                if (window.scrollY > 300) {
-                    btn.classList.add('show');
-                } else {
-                    btn.classList.remove('show');
+            // Search for bold text matching the rule ID
+            const content = document.getElementById('ruleContent').innerHTML;
+            const regex = new RegExp(`<strong>${query}</strong>`, 'i');
+            
+            if (regex.test(content)) {
+                // Create temporary marker
+                const originalHTML = document.getElementById('ruleContent').innerHTML;
+                const replacedHTML = originalHTML.replace(
+                    new RegExp(`(<strong>${query}</strong>)`, 'i'),
+                    '<span id="found-rule">$1</span>'
+                );
+                document.getElementById('ruleContent').innerHTML = replacedHTML;
+                
+                const element = document.getElementById('found-rule');
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    element.style.backgroundColor = '#fffacd';
+                    element.style.padding = '0.2rem';
+                    element.style.borderRadius = '2px';
+                    
+                    setTimeout(() => {
+                        element.style.backgroundColor = '';
+                        element.style.padding = '';
+                        element.style.borderRadius = '';
+                        element.removeAttribute('id');
+                    }, 2000);
                 }
-            });
+            } else {
+                alert(`Rule ${query} not found in the rulebook`);
+            }
         }
 
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Show/hide back-to-top button
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+
+        // Search on Enter
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') jumpToRule();
+        });
     </script>
 </body>
 </html>

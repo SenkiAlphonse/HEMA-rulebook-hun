@@ -5,6 +5,7 @@ Flask application for searching the HEMA rulebook
 
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -137,10 +138,195 @@ def _summarize_with_gemini(text, language):
     return response.text.strip()
 
 
+def _markdown_to_html(text):
+    """Convert markdown to HTML while preserving HTML blocks (tables, divs, spans)"""
+    if not text:
+        return ""
+    
+    lines = text.split('\n')
+    result = []
+    i = 0
+    in_html_block = False
+    html_block_content = []
+    
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+        
+        # Detect HTML blocks (tables, div, span with attributes, comments)
+        if any(stripped.startswith(tag) for tag in ['<table', '<div', '<span', '<!--']):
+            in_html_block = True
+            html_block_content = [line]
+        elif in_html_block:
+            html_block_content.append(line)
+            # Check for end of HTML block
+            if any(stripped.endswith(end) for end in ['</table>', '</div>', '</span>', '-->']):
+                in_html_block = False
+                result.append('\n'.join(html_block_content))
+                html_block_content = []
+        else:
+            # Process regular markdown
+            if stripped == '':
+                result.append('')
+            elif stripped.startswith('#####'):
+                result.append(f'<h5>{stripped[5:].strip()}</h5>')
+            elif stripped.startswith('####'):
+                result.append(f'<h4>{stripped[4:].strip()}</h4>')
+            elif stripped.startswith('###'):
+                result.append(f'<h3>{stripped[3:].strip()}</h3>')
+            elif stripped.startswith('##'):
+                result.append(f'<h2>{stripped[2:].strip()}</h2>')
+            elif stripped.startswith('#'):
+                result.append(f'<h1>{stripped[1:].strip()}</h1>')
+            elif stripped.startswith('---'):
+                result.append('<hr>')
+            elif stripped.startswith('- '):
+                # Unordered list item
+                result.append(f'<li>{stripped[2:].strip()}</li>')
+            elif re.match(r'^\d+\.\s', stripped):
+                # Ordered list item
+                result.append(f'<li>{re.sub(r"^\d+\.\s", "", stripped)}</li>')
+            else:
+                # Regular paragraph - apply inline markdown formatting
+                content = stripped
+                # Preserve line breaks within content
+                if content:
+                    # Convert markdown formatting
+                    content = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', content)
+                    content = re.sub(r'\*(.+?)\*', r'<em>\1</em>', content)
+                    content = re.sub(r'!\[([^\]]*)\]\(([^\)]+)\)', r'<img src="\2" alt="\1">', content)
+                    content = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', r'<a href="\2" target="_blank">\1</a>', content)
+                    content = re.sub(r'`([^`]+)`', r'<code>\1</code>', content)
+                    result.append(f'<p>{content}</p>')
+        
+        i += 1
+    
+    # Join with newlines to preserve structure
+    html = '\n'.join(result)
+    
+    # Wrap consecutive list items in ul/ol tags
+    html = re.sub(r'(<li>.*?</li>)', lambda m: m.group(0), html)
+    
+    return html
+
+
 def _normalize_filter(value, allowed):
     if value and value in allowed:
         return value
     return None
+
+
+def _markdown_to_html(markdown_text):
+    """Convert markdown to HTML while preserving HTML blocks (tables, divs, spans)"""
+    if not markdown_text:
+        return ""
+    
+    lines = markdown_text.split('\n')
+    html_lines = []
+    in_code_block = False
+    in_html_block = False
+    code_buffer = []
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        stripped = line.strip()
+        
+        # Handle code blocks (triple backticks)
+        if stripped.startswith('```'):
+            if not in_code_block:
+                in_code_block = True
+                code_buffer = []
+            else:
+                in_code_block = False
+                code_content = '\n'.join(code_buffer)
+                html_lines.append(f'<pre><code>{re.escape(code_content)}</code></pre>')
+                code_buffer = []
+            i += 1
+            continue
+        
+        if in_code_block:
+            code_buffer.append(line)
+            i += 1
+            continue
+        
+        # Detect HTML blocks (tables, divs, spans with id, comments)
+        if any(stripped.startswith(tag) for tag in ['<table', '<div', '<span id=', '<!--']):
+            in_html_block = True
+        
+        if in_html_block:
+            html_lines.append(line)
+            if any(stripped.endswith(tag) for tag in ['</table>', '</div>', '-->']):
+                in_html_block = False
+            i += 1
+            continue
+        
+        # Skip empty lines and horizontal rules
+        if not stripped:
+            if html_lines and html_lines[-1] != '':
+                html_lines.append('')
+            i += 1
+            continue
+        
+        if stripped == '---':
+            html_lines.append('<hr>')
+            i += 1
+            continue
+        
+        # Handle headings
+        if stripped.startswith('# '):
+            level = len(stripped) - len(stripped.lstrip('#'))
+            title = stripped[level:].strip()
+            html_lines.append(f'<h{level}>{title}</h{level}>')
+            i += 1
+            continue
+        
+        # Handle unordered lists
+        if stripped.startswith('- '):
+            # Collect consecutive list items
+            list_items = []
+            while i < len(lines) and lines[i].strip().startswith('- '):
+                item_text = lines[i].strip()[2:]
+                list_items.append(f'<li>{_inline_markdown(item_text)}</li>')
+                i += 1
+            html_lines.append('<ul>' + ''.join(list_items) + '</ul>')
+            continue
+        
+        # Handle ordered lists
+        if re.match(r'^\d+\.\s', stripped):
+            list_items = []
+            while i < len(lines) and re.match(r'^\d+\.\s', lines[i].strip()):
+                item_text = re.sub(r'^\d+\.\s', '', lines[i].strip())
+                list_items.append(f'<li>{_inline_markdown(item_text)}</li>')
+                i += 1
+            html_lines.append('<ol>' + ''.join(list_items) + '</ol>')
+            continue
+        
+        # Regular paragraph
+        html_lines.append(f'<p>{_inline_markdown(stripped)}</p>')
+        i += 1
+    
+    return '\n'.join(html_lines)
+
+
+def _inline_markdown(text):
+    """Convert inline markdown (bold, italic, links, images) to HTML"""
+    # Images ![alt](url)
+    text = re.sub(r'!\[([^\]]*)\]\(([^\)]+)\)', lambda m: f'<img src="{m.group(2)}" alt="{m.group(1)}">', text)
+    
+    # Links [text](url)
+    text = re.sub(r'\[([^\]]+)\]\(([^\)]+)\)', lambda m: f'<a href="{m.group(2)}" target="_blank">{m.group(1)}</a>', text)
+    
+    # Bold **text**
+    text = re.sub(r'\*\*([^\*]+)\*\*', r'<strong>\1</strong>', text)
+    
+    # Italic *text*
+    text = re.sub(r'\*([^\*]+)\*', r'<em>\1</em>', text)
+    
+    # Inline code `text`
+    text = re.sub(r'`([^`]+)`', r'<code>\1</code>', text)
+    
+    return text
 
 
 def _build_document_order(rules):
@@ -409,9 +595,42 @@ def api_rule(rule_id):
 
 @app.route("/rulebook")
 def rulebook():
-    """Display the entire rulebook with proper formatting"""
-    rules = search_engine.rules
-    return render_template("rulebook.html", rules=rules)
+    """Display the entire rulebook by rendering markdown files directly"""
+    from pathlib import Path
+    
+    rulebook_dir = Path(__file__).parent
+    md_files = [
+        "01-altalanos.md",
+        "02-szojegyzek.md",
+        "03-felszereles.md",
+        "04-biraskodas.md",
+        "05-hosszukard.md",
+        "05.a-hosszukard-VOR.md",
+        "05.b-hosszukard-COMBAT.md",
+        "05.c-hosszukard-AFTERBLOW.md",
+        "08-etikett_fegyelem.md",
+        "09-szervezes.md",
+    ]
+    
+    # Append appendices
+    appendix_files = list((rulebook_dir / "fuggelek").glob("*.md"))
+    md_files.extend([f.name for f in sorted(appendix_files)])
+    
+    content = ""
+    for md_file in md_files:
+        file_path = rulebook_dir / md_file
+        if not file_path.exists():
+            file_path = rulebook_dir / "fuggelek" / md_file
+        
+        if file_path.exists():
+            with open(file_path, 'r', encoding='utf-8') as f:
+                content += f.read() + "\n\n---\n\n"
+    
+    # Convert markdown to HTML
+    html_content = _markdown_to_html(content)
+    
+    return render_template("rulebook.html", markdown_content=html_content)
+
 
 
 @app.route("/api/rulebook")
