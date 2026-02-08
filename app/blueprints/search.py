@@ -3,6 +3,7 @@ Search blueprint - handles search, stats, and rule lookup endpoints
 """
 
 import logging
+from typing import Any
 from flask import Blueprint, request, jsonify, current_app, Response
 from app.utils import (
     normalize_filter, build_document_order, filter_rules_for_extract, format_extract_text
@@ -18,7 +19,7 @@ search_bp = Blueprint('search', __name__, url_prefix='/api')
 
 
 @search_bp.route('/search', methods=['POST'])
-def api_search():
+def api_search() -> Any:
     """Search for rules by keyword
     
     For level 4-5 rules, returns grouped results with parent context and child rules.
@@ -116,7 +117,7 @@ def api_search():
 
 
 @search_bp.route('/stats', methods=['GET'])
-def api_stats():
+def api_stats() -> Any:
     """Get rulebook statistics"""
     try:
         total_rules = len(current_app.search_engine.rules)
@@ -138,7 +139,7 @@ def api_stats():
 
 
 @search_bp.route('/extract', methods=['POST'])
-def api_extract():
+def api_extract() -> Any:
     """Generate rulebook extract filtered by weapon and format"""
     try:
         data = request.get_json()
@@ -178,7 +179,7 @@ def api_extract():
 
 
 @search_bp.route('/rule/<rule_id>', methods=['GET'])
-def api_rule(rule_id):
+def api_rule(rule_id: str) -> Any:
     """Get a specific rule by ID"""
     try:
         # Validate rule ID format

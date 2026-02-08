@@ -167,8 +167,8 @@ class RulebookParser:
     
     def _save_rule(self, rule_id: str, text_lines: List[str], section: str,
                    subsection: str, document: str, anchor: str, line_num: int,
-                   weapon_type: str, formatum: str):
-        """Save a parsed rule, detecting variant from text if present"""
+                   weapon_type: str, formatum: str) -> None:
+        """Save a parsed rule, detecting formatum from text if present"""
         # Join text lines preserving structure:
         # - Lines starting with "- " (bullets) keep newlines
         # - Other lines are joined with newlines to preserve paragraph breaks
@@ -211,75 +211,75 @@ class RulebookParser:
         text_strip = text.strip()
         
         # Pattern: **Word**: at the start (handles both **Word**: and **Word:**)
-        variant_start_pattern = re.compile(r'^\*\*(Vor|Combat|Afterblow)\*\*:?', re.IGNORECASE)
-        match = variant_start_pattern.match(text_strip)
+        formatum_start_pattern = re.compile(r'^\*\*(Vor|Combat|Afterblow)\*\*:?', re.IGNORECASE)
+        match = formatum_start_pattern.match(text_strip)
         
         if match:
-            variant_name = match.group(1).upper()
-            # Normalize variant names
-            if variant_name == 'VOR':
+            formatum_name = match.group(1).upper()
+            # Normalize formatum names
+            if formatum_name == 'VOR':
                 return 'VOR'
-            elif variant_name == 'COMBAT':
+            elif formatum_name == 'COMBAT':
                 return 'COMBAT'
-            elif variant_name == 'AFTERBLOW':
+            elif formatum_name == 'AFTERBLOW':
                 return 'AFTERBLOW'
         
         return ''
     
-    def _extract_variant_subrules(self, parent_rule_id: str, text: str, section: str,
+    def _extract_formatum_subrules(self, parent_rule_id: str, text: str, section: str,
                                    subsection: str, document: str, anchor: str, line_num: int,
                                    weapon_type: str) -> List[Rule]:
         """
-        Extract variant-specific sub-rules from text containing Vor/Combat/Afterblow sections.
-        Returns a list of extracted sub-rules, or empty list if no variants found.
+        Extract formatum-specific sub-rules from text containing Vor/Combat/Afterblow sections.
+        Returns a list of extracted sub-rules, or empty list if no formats found.
         """
-        # Pattern to detect variant headers: **Vor**:, **Combat:**:, **Afterblow**:
-        variant_pattern = re.compile(r'\*\*(Vor|Combat|Afterblow)\*\*:?\s*(.+?)(?=\*\*(?:Vor|Combat|Afterblow)\*\*|$)', 
+        # Pattern to detect formatum headers: **Vor**:, **Combat**:, **Afterblow**:
+        formatum_pattern = re.compile(r'\*\*(Vor|Combat|Afterblow)\*\*:?s*(.+?)(?=\*\*(?:Vor|Combat|Afterblow)\*\*|$)', 
                                     re.IGNORECASE | re.DOTALL)
         
-        matches = list(variant_pattern.finditer(text))
+        matches = list(formatum_pattern.finditer(text))
         
-        # Only proceed if we find multiple variants (indicating variant-split content)
+        # Only proceed if we find multiple formats (indicating formatum-split content)
         if len(matches) < 2:
             return []
         
         extracted_rules = []
         
         for match in matches:
-            variant_name = match.group(1).upper()
-            variant_text = match.group(2).strip()
+            formatum_name = match.group(1).upper()
+            formatum_text = match.group(2).strip()
             
-            if not variant_text:
+            if not formatum_text:
                 continue
             
-            # Create a sub-rule ID for this variant (e.g., GEN-6.10.4.1 for Vor)
-            variant_subrule_id = f"{parent_rule_id}.{self._variant_to_subrule_index(variant_name)}"
+            # Create a sub-rule ID for this formatum (e.g., GEN-6.10.4.1 for Vor)
+            formatum_subrule_id = f"{parent_rule_id}.{self._formatum_to_subrule_index(formatum_name)}"
             
             rule = Rule(
-                rule_id=variant_subrule_id,
-                text=f"**{variant_name}**: {variant_text}",
+                rule_id=formatum_subrule_id,
+                text=f"**{formatum_name}**: {formatum_text}",
                 section=section,
                 subsection=subsection,
                 document=document,
                 anchor_id=anchor,
                 line_number=line_num,
                 weapon_type=weapon_type,
-                formatum=variant_name
+                formatum=formatum_name
             )
             extracted_rules.append(rule)
         
         return extracted_rules
     
-    def _variant_to_subrule_index(self, variant: str) -> str:
-        """Map variant name to subrule index (1=Vor, 2=Combat, 3=Afterblow)"""
+    def _formatum_to_subrule_index(self, formatum: str) -> str:
+        """Map formatum name to subrule index (1=Vor, 2=Combat, 3=Afterblow)"""
         mapping = {
             "VOR": "1",
             "COMBAT": "2", 
             "AFTERBLOW": "3"
         }
-        return mapping.get(variant.upper(), "0")
+        return mapping.get(formatum.upper(), "0")
     
-    def _extract_weapon_info(self, filename: str) -> tuple:
+    def _extract_weapon_info(self, filename: str) -> tuple:  # tuple[str, str]
         """Extract weapon type and formatum from filename"""
         weapon_type = "general"
         formatum = ""
@@ -299,7 +299,7 @@ class RulebookParser:
 
         return weapon_type, formatum
 
-    def _build_cross_references(self):
+    def _build_cross_references(self) -> None:
         """Build cross-reference index by scanning rule text for references"""
         # First pass: extract all references each rule makes
         for rule in self.rules:
@@ -324,7 +324,7 @@ class RulebookParser:
         for rule in self.rules:
             rule.references_from = sorted(list(set(rule.references_from)))
     
-    def save_index(self, output_path: Path):
+    def save_index(self, output_path: Path) -> None:
         """Save parsed rules to JSON index"""
         index_data = self.parse_all()
         
@@ -337,7 +337,7 @@ class RulebookParser:
 
 
 
-def main():
+def main() -> None:
     """Main entry point"""
     # Get the rulebook directory (parent of qa-tools)
     current_dir = Path(__file__).parent.parent

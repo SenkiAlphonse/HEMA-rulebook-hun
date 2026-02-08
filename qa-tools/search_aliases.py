@@ -73,7 +73,7 @@ class AliasAwareSearch:
             for alias in aliases:
                 self.alias_to_key[alias.lower()] = ('concept', concept_key)
 
-    def load_index(self):
+    def load_index(self) -> None:
         """Load the rules index"""
         if not self.index_path.exists():
             raise FileNotFoundError(f"Index not found: {self.index_path}")
@@ -357,7 +357,7 @@ class AliasAwareSearch:
         """Get direct child rule IDs (delegated to search_utils)"""
         return get_children_rules(rule_id, self.rules)
     
-    def get_rule_by_id(self, rule_id: str) -> dict:
+    def get_rule_by_id(self, rule_id: str) -> Optional[Dict[str, Any]]:
         """Get a rule by its ID"""
         for rule in self.rules:
             if rule.get('rule_id') == rule_id:
@@ -389,7 +389,7 @@ def format_result(result: SearchResult) -> str:
     return "\n".join(output)
 
 
-def main():
+def main() -> None:
     """Interactive search CLI"""
     current_dir = Path(__file__).parent
     index_path = current_dir / "rules_index.json"

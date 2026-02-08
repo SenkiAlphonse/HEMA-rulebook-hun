@@ -114,11 +114,12 @@ Egyéb támadó akciók - A kezdeti támadást követő újabb támadó akció.
 **Megismételt támadás (reprise d’attaque)**: Új támadás, amelyet azonnal a vívóállásba való visszatérés után hajtanak végre.  
 
 **GEN-3.2.6.4**  
- **Kontratempó (contre temps)**: A támadó által az ellenfél közbetámadása ellen végrehajtott akció.  
+**Kontratempó (contre temps)**: A támadó által az ellenfél közbetámadása ellen végrehajtott akció.  
 
 #### Védekező akciók  
 
-**GEN-3.2.7**  
+**GEN-3.2.7** 
+A hárítás 
 - **A hárítás egyszerű**, közvetlen, ha ugyanabban a vonalban hajtják végre, mint a támadást.  
 - **A körző hárítást** ezzel szemben a támadással ellenkező vonalban hajtják végre.  
 

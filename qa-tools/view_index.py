@@ -17,6 +17,6 @@ for i, rule in enumerate(data['rules'][:5], 1):
     print(f"   Section: {rule['section']}")
     if rule['weapon_type']:
         print(f"   Weapon: {rule['weapon_type']}" + 
-              (f" ({rule['variant']})" if rule['variant'] else ""))
+              (f" ({rule['formatum']})" if rule['formatum'] else ""))
     print(f"   Text: {rule['text'][:150]}...")
     print("-"*70)

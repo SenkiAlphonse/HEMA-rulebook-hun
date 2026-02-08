@@ -5,6 +5,7 @@ Shared utilities for HEMA rulebook app
 import re
 import sys
 from pathlib import Path
+from typing import Any, Dict, List, Optional
 import mistune
 
 # Add qa-tools to path for imports
@@ -12,7 +13,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / 'qa-tools'))
 from search_utils import get_rule_depth
 
 
-def preprocess_rulebook_markdown(text):
+def preprocess_rulebook_markdown(text: str) -> str:
     """
     Preprocess markdown before Mistune conversion to handle:
     1. HTML comments removal
@@ -53,7 +54,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         super().__init__(*args, **kwargs)
         self.last_rule_depth = 0  # Track the depth of the last rule ID encountered
     
-    def paragraph(self, text):
+    def paragraph(self, text: str) -> str:
         """Override paragraph rendering to detect and style rule IDs"""
         # Match paragraphs that start with a rule ID
         # Supports multi-part prefixes like LS-VOR-1.1.3, LS-COMBAT-1.2.1.1
@@ -83,7 +84,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         # Regular paragraph without indentation
         return f'<p>{text}</p>\n'
     
-    def list(self, text, ordered, **kwargs):
+    def list(self, text: str, ordered: bool, **kwargs) -> str:
         """Override list rendering to add bullet-list CSS class"""
         # Extract known parameters, ignore others
         start = kwargs.get('start', None)
@@ -96,7 +97,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
             extra = ' class="bullet-list"'
         return f'<{tag}{extra}>\n{text}</{tag}>\n'
     
-    def block_html(self, text):
+    def block_html(self, text: str) -> str:
         """Override block HTML to filter out comments and anchor spans"""
         stripped = text.strip()
         if stripped.startswith('<!--'):
@@ -105,7 +106,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
             return ''
         return text
     
-    def inline_html(self, html):
+    def inline_html(self, html: str) -> str:
         """Override inline HTML to preserve rule reference links but filter comments and spans"""
         # Filter out HTML comments
         if html.strip().startswith('<!--'):
@@ -117,7 +118,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         return html
 
 
-def create_mistune_markdown():
+def create_mistune_markdown() -> mistune.Markdown:
     """Create a Mistune markdown instance with HTML preservation and custom renderer"""
     return mistune.create_markdown(
         renderer=RuleIDRenderer(),
@@ -126,14 +127,14 @@ def create_mistune_markdown():
     )
 
 
-def normalize_filter(value, allowed):
+def normalize_filter(value: Optional[str], allowed: List[str]) -> Optional[str]:
     """Validate and normalize filter values"""
     if value and value in allowed:
         return value
     return None
 
 
-def build_document_order(rules):
+def build_document_order(rules: List[Dict[str, Any]]) -> Dict[str, int]:
     """Build a mapping of document names to sequence index for sorting"""
     order = {}
     next_index = 0
@@ -145,7 +146,7 @@ def build_document_order(rules):
     return order
 
 
-def get_rulebook_markdown_files_util():
+def get_rulebook_markdown_files_util() -> List[Path]:
     """
     Get all numbered markdown rulebook files from root directory.
     Shared utility to avoid duplication between build.py and rulebook.py
@@ -178,7 +179,11 @@ def read_rulebook_markdown_content() -> str:
     return content
 
 
-def filter_rules_for_extract(rules, weapon_filter, formatum_filter):
+def filter_rules_for_extract(
+    rules: List[Dict[str, Any]],
+    weapon_filter: Optional[str],
+    formatum_filter: Optional[str]
+) -> List[Dict[str, Any]]:
     """Filter rules by weapon type and format"""
     filtered = []
     for rule in rules:
@@ -195,7 +200,11 @@ def filter_rules_for_extract(rules, weapon_filter, formatum_filter):
     return filtered
 
 
-def format_extract_text(rules, weapon_filter, formatum_filter):
+def format_extract_text(
+    rules: List[Dict[str, Any]],
+    weapon_filter: Optional[str],
+    formatum_filter: Optional[str]
+) -> str:
     """Format filtered rules into markdown extract"""
     title_parts = ["Rulebook Extract"]
     if weapon_filter:
