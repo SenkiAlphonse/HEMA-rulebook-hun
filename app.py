@@ -138,8 +138,19 @@ def _summarize_with_gemini(text, language):
     return response.text.strip()
 
 
+def _get_rule_depth(rule_id):
+    """Calculate indentation depth from rule ID (e.g., GEN-6.10.4.1 = depth 4)"""
+    if not rule_id:
+        return 0
+    parts = rule_id.split('-')
+    if len(parts) < 2:
+        return 0
+    numeric_part = parts[1]
+    return numeric_part.count('.') + 1
+
+
 def _markdown_to_html(text):
-    """Convert markdown to HTML while preserving HTML blocks (tables, divs, spans)"""
+    """Convert markdown to HTML with depth-aware indentation for rule IDs"""
     if not text:
         return ""
     
@@ -181,11 +192,29 @@ def _markdown_to_html(text):
             elif stripped.startswith('---'):
                 result.append('<hr>')
             elif stripped.startswith('- '):
-                # Unordered list item
-                result.append(f'<li>{stripped[2:].strip()}</li>')
+                # Unordered list - collect all consecutive items
+                list_items = []
+                while i < len(lines) and lines[i].strip().startswith('- '):
+                    item_text = lines[i].strip()[2:].strip()
+                    list_items.append(f'<li>{item_text}</li>')
+                    i += 1
+                result.append('<ul class="bullet-list">' + ''.join(list_items) + '</ul>')
+                continue
             elif re.match(r'^\d+\.\s', stripped):
-                # Ordered list item
-                result.append(f'<li>{re.sub(r"^\d+\.\s", "", stripped)}</li>')
+                # Ordered list - collect all consecutive items
+                list_items = []
+                while i < len(lines) and re.match(r'^\d+\.\s', lines[i].strip()):
+                    item_text = re.sub(r"^\d+\.\s", "", lines[i].strip())
+                    list_items.append(f'<li>{item_text}</li>')
+                    i += 1
+                result.append('<ol>' + ''.join(list_items) + '</ol>')
+                continue
+            elif stripped.startswith('**') and stripped.endswith('**'):
+                # Rule ID line - extract depth for indentation
+                rule_id = stripped.strip('*')
+                depth = _get_rule_depth(rule_id)
+                indent_class = f'rule-depth-{depth}' if depth > 0 else ''
+                result.append(f'<p class="rule-id {indent_class}"><strong>{rule_id}</strong></p>')
             else:
                 # Regular paragraph - apply inline markdown formatting
                 content = stripped

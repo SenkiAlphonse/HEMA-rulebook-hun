@@ -178,6 +178,52 @@
             border-radius: 4px;
         }
 
+        /* Rule ID indentation based on depth */
+        .rule-id {
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .rule-id.rule-depth-1 {
+            margin-left: 0;
+        }
+
+        .rule-id.rule-depth-2 {
+            margin-left: 20px;
+        }
+
+        .rule-id.rule-depth-3 {
+            margin-left: 40px;
+        }
+
+        .rule-id.rule-depth-4 {
+            margin-left: 60px;
+        }
+
+        .rule-id.rule-depth-5 {
+            margin-left: 80px;
+        }
+
+        .rule-id strong {
+            color: #667eea;
+            font-family: "Courier New", monospace;
+            background-color: #f0f0f9;
+            padding: 4px 8px;
+            border-radius: 3px;
+            border-left: 3px solid #667eea;
+            display: inline-block;
+        }
+
+        /* Bullet list styling */
+        .bullet-list {
+            list-style-type: disc;
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            line-height: 1.6;
+        }
+
         /* Table styling */
         .rule-text table {
             width: 100%;
