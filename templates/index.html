@@ -703,7 +703,7 @@
                             <span class="tag weapon">${weaponLabel}</span>
                             <span class="tag format">${formatLabel}</span>
                         </div>
-                        <div class="result-text">${escapeHtml(result.text)}</div>
+                        <div class="result-text">${renderMarkdownText(result.text)}</div>
                         <div class="result-meta">
                             <div class="section-info">
                                 <span class="section-label">Document:</span> ${escapeHtml(result.document)}
@@ -765,6 +765,25 @@
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
+        }
+
+        function renderMarkdownText(text) {
+            // Basic markdown rendering for search results
+            let html = escapeHtml(text);
+            
+            // Convert newlines to <br>
+            html = html.replace(/\n/g, '<br>');
+            
+            // Convert **bold** to <strong>
+            html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+            
+            // Convert *italic* to <em>
+            html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+            
+            // Convert bullet points (- item)
+            html = html.replace(/^- (.+)$/gm, '• $1');
+            
+            return html;
         }
 
         // Load stats on page load

@@ -3,7 +3,13 @@ Shared utilities for HEMA rulebook app
 """
 
 import re
+import sys
+from pathlib import Path
 import mistune
+
+# Add qa-tools to path for imports
+sys.path.insert(0, str(Path(__file__).parent.parent / 'qa-tools'))
+from search_utils import get_rule_depth
 
 
 def preprocess_rulebook_markdown(text):
@@ -35,16 +41,7 @@ def preprocess_rulebook_markdown(text):
     return text
 
 
-def get_rule_depth(rule_id):
-    """Calculate indentation depth from rule ID (e.g., GEN-6.10.4.1 = depth 4, LS-AB-1.2.10.2 = depth 4)"""
-    if not rule_id:
-        return 0
-    parts = rule_id.split('-')
-    if len(parts) < 2:
-        return 0
-    # The numeric part is always the last part after splitting by '-'
-    numeric_part = parts[-1]
-    return numeric_part.count('.') + 1
+# Note: get_rule_depth is now imported from search_utils
 
 
 class RuleIDRenderer(mistune.HTMLRenderer):

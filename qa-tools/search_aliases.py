@@ -8,6 +8,7 @@ import unicodedata
 from pathlib import Path
 from typing import List, Dict, Any, Tuple
 from dataclasses import dataclass
+from search_utils import get_rule_depth, get_rule_lineage, get_children_rules
 
 
 @dataclass
@@ -195,7 +196,74 @@ class AliasAwareSearch:
                 ))
         
         results.sort(key=lambda x: x.score, reverse=True)
-        return results[:max_results]
+        
+        # Group level 4-5 results with their parents and children
+        grouped_results = []
+        seen_root_ids = set()
+        
+        for result in results[:max_results]:
+            depth = self._get_rule_depth(result.rule_id)
+            
+            # For level 4-5 rules, include parents (up to level 3) and children
+            if depth >= 4:
+                lineage = self._get_rule_lineage(result.rule_id)
+                
+                # Determine the root of this group (the level 2 parent if it exists)
+                root_id = lineage[1] if len(lineage) > 1 else lineage[0] if lineage else result.rule_id
+                
+                # Skip if we've already processed this family
+                if root_id in seen_root_ids:
+                    continue
+                seen_root_ids.add(root_id)
+                
+                # Collect the family: parents + matched rule + children
+                family = []
+                
+                # Add parents (up to level 3)
+                for parent_id in lineage:
+                    parent_depth = self._get_rule_depth(parent_id)
+                    if parent_depth <= 3:
+                        parent_rule = self.get_rule_by_id(parent_id)
+                        if parent_rule:
+                            family.append(SearchResult(
+                                rule_id=parent_rule['rule_id'],
+                                text=parent_rule['text'],
+                                section=parent_rule.get('section', ''),
+                                subsection=parent_rule.get('subsection', ''),
+                                document=parent_rule.get('document', ''),
+                                weapon_type=parent_rule.get('weapon_type', ''),
+                                formatum=parent_rule.get('formatum', ''),
+                                score=result.score  # Inherit score from matched rule
+                            ))
+                
+                # Add the matched rule itself
+                family.append(result)
+                
+                # Add children (level 5 if we're at level 4, nothing if we're at level 5)
+                if depth == 4:
+                    children = self._get_children_rules(result.rule_id)
+                    for child_id in children:
+                        child_rule = self.get_rule_by_id(child_id)
+                        if child_rule:
+                            family.append(SearchResult(
+                                rule_id=child_rule['rule_id'],
+                                text=child_rule['text'],
+                                section=child_rule.get('section', ''),
+                                subsection=child_rule.get('subsection', ''),
+                                document=child_rule.get('document', ''),
+                                weapon_type=child_rule.get('weapon_type', ''),
+                                formatum=child_rule.get('formatum', ''),
+                                score=result.score  # Inherit score
+                            ))
+                
+                # Sort family by depth and add to results
+                family.sort(key=lambda x: self._get_rule_depth(x.rule_id))
+                grouped_results.extend(family)
+            else:
+                # Level 1-3 rules: just add them directly
+                grouped_results.append(result)
+        
+        return grouped_results[:max_results * 3]  # Allow more results due to grouping
     
     def _extract_terms(self, query: str) -> List[str]:
         """Extract search terms"""
@@ -267,34 +335,16 @@ class AliasAwareSearch:
         return score
 
     def _get_rule_depth(self, rule_id: str) -> int:
-        """Get depth of rule from its ID (e.g., GEN-6.7.4.2 → depth 4, LS-AB-1.2.10.2 → depth 4)"""
-        if not rule_id or '-' not in rule_id:
-            return 0
-        # The numeric part is always the last part after splitting by '-'
-        numeric_part = rule_id.split('-')[-1]
-        return numeric_part.count('.') + 1
+        """Get depth of rule from its ID (delegated to search_utils)"""
+        return get_rule_depth(rule_id)
     
     def _get_rule_lineage(self, rule_id: str) -> List[str]:
-        """Get list of parent rule IDs for a given rule (e.g., GEN-6.7.4.2 → [GEN, GEN-6, GEN-6.7, GEN-6.7.4])"""
-        if not rule_id or '-' not in rule_id:
-            return []
-        
-        # Split to get prefix and numeric parts
-        parts = rule_id.split('-')
-        # Prefix could be multi-part (e.g., LS-AB)
-        prefix = '-'.join(parts[:-1])
-        numeric = parts[-1]
-        numeric_parts = numeric.split('.')
-        
-        lineage = [prefix]  # Start with just the prefix (e.g., "GEN" or "LS-AB")
-        
-        # Build up the hierarchy
-        for i in range(len(numeric_parts)):
-            parent_numeric = '.'.join(numeric_parts[:i+1])
-            lineage.append(f"{prefix}-{parent_numeric}")
-        
-        # Remove the rule itself from lineage (we only want parents)
-        return lineage[:-1]
+        """Get list of parent rule IDs (delegated to search_utils)"""
+        return get_rule_lineage(rule_id)
+    
+    def _get_children_rules(self, rule_id: str) -> List[str]:
+        """Get direct child rule IDs (delegated to search_utils)"""
+        return get_children_rules(rule_id, self.rules)
     
     def get_rule_by_id(self, rule_id: str) -> dict:
         """Get a rule by its ID"""

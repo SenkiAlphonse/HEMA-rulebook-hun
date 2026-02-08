@@ -8,6 +8,7 @@ import re
 from pathlib import Path
 from typing import List, Dict, Any
 from dataclasses import dataclass
+from search_utils import get_rule_depth, get_rule_lineage, get_children_rules
 
 
 @dataclass
@@ -220,41 +221,16 @@ class RulebookSearch:
                 if section_name.lower() in rule['section'].lower()]
     
     def _get_rule_depth(self, rule_id: str) -> int:
-        """Get depth of rule from its ID (e.g., GEN-6.7.4.2 → depth 4, LS-AB-1.2.10.2 → depth 4)"""
-        if not rule_id or '-' not in rule_id:
-            return 0
-        # The numeric part is always the last part after splitting by '-'
-        numeric_part = rule_id.split('-')[-1]
-        return numeric_part.count('.') + 1
+        """Get depth of rule from its ID (delegated to search_utils)"""
+        return get_rule_depth(rule_id)
     
     def _get_rule_lineage(self, rule_id: str) -> List[str]:
-        """Get list of parent rule IDs for a given rule (e.g., GEN-6.7.4.2 → [GEN, GEN-6, GEN-6.7, GEN-6.7.4])"""
-        if not rule_id or '-' not in rule_id:
-            return []
-        
-        prefix, numeric = rule_id.split('-', 1)
-        parts = numeric.split('.')
-        lineage = [prefix]  # Start with just prefix (e.g., GEN)
-        
-        # Build each parent level
-        for i in range(len(parts) - 1):  # -1 because we don't include the full rule ID
-            parent_numeric = '.'.join(parts[:i+1])
-            lineage.append(f"{prefix}-{parent_numeric}")
-        
-        return lineage
+        """Get list of parent rule IDs (delegated to search_utils)"""
+        return get_rule_lineage(rule_id)
     
     def _get_children_rules(self, rule_id: str) -> List[str]:
-        """Get rule IDs of direct children of a given rule"""
-        depth = self._get_rule_depth(rule_id)
-        children = []
-        
-        # Find rules with depth = current depth + 1
-        for rule in self.rules:
-            rule_depth = self._get_rule_depth(rule['rule_id'])
-            if rule_depth == depth + 1 and rule['rule_id'].startswith(rule_id + '.'):
-                children.append(rule['rule_id'])
-        
-        return sorted(children)
+        """Get direct child rule IDs (delegated to search_utils)"""
+        return get_children_rules(rule_id, self.rules)
 
 
 def format_result(result: SearchResult, show_context: bool = True) -> str:
