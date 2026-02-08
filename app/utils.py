@@ -62,17 +62,25 @@ class RuleIDRenderer(mistune.HTMLRenderer):
             if '-' in rule_id and rule_id.split('-')[0].isalpha():
                 depth = get_rule_depth(rule_id)
                 self.last_rule_depth = depth  # Remember this depth for following paragraphs
+                
+                # Apply indent class for depth 4 and 5
                 indent_class = f'rule-depth-{depth}' if depth >= 4 else ''
+                class_attr = f'rule-id {indent_class}' if indent_class else 'rule-id'
+                
                 # Reset tracking if we encounter a shallower rule (parent/sibling level)
                 if depth < 4:
                     self.last_rule_depth = 0
+                
                 # Add an anchor ID for navigation
-                return f'<p class="rule-id {indent_class}" id="{rule_id}">{text}</p>\n'
+                return f'<p class="{class_attr}" id="{rule_id}">{text}</p>\n'
 
         # Regular paragraph following a rule ID should inherit its indentation if depth >= 4
         if self.last_rule_depth >= 4:
             indent_class = f'rule-depth-{self.last_rule_depth}'
             return f'<p class="{indent_class}">{text}</p>\n'
+        
+        # Regular paragraph without indentation
+        return f'<p>{text}</p>\n'
         
         # Regular paragraph without indentation
         return f'<p>{text}</p>\n'
