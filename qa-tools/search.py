@@ -45,6 +45,8 @@ class RulebookSearch:
         self.index_path = Path(index_path)
         self.rules = []
         self.rule_id_index = {}  # O(1) lookup: rule_id -> rule_data
+        self.parent_child_index = {}  # O(1) lookup: parent_id -> [child_ids]
+        self.result_index_map = {}  # O(1) lookup: rule_id -> index in results (for sorting)
         self.load_index()
     
     def load_index(self):
@@ -59,7 +61,23 @@ class RulebookSearch:
         # Build O(1) rule ID index for fast lookups
         self.rule_id_index = {rule['rule_id'].lower(): rule for rule in self.rules}
         
+        # Build parent-child index for O(n) rule grouping instead of O(n²)
+        self._build_parent_child_index()
+        
         logger.info(f"Loaded {len(self.rules)} rules from index")
+    
+    def _build_parent_child_index(self):
+        """Build index mapping parent rules to their direct children for O(1) lookup"""
+        for rule in self.rules:
+            rule_id = rule['rule_id']
+            lineage = get_rule_lineage(rule_id)
+            
+            # Add this rule as a child to its direct parent
+            if len(lineage) > 0:
+                parent_id = lineage[-1]  # Last element is direct parent
+                if parent_id not in self.parent_child_index:
+                    self.parent_child_index[parent_id] = []
+                self.parent_child_index[parent_id].append(rule_id)
     
     def search(self, query: str, max_results: int = 5, 
                weapon_filter: str = None, formatum_filter: str = None) -> List[SearchResult]:
@@ -114,7 +132,10 @@ class RulebookSearch:
         # Sort by score (descending)
         results.sort(key=lambda x: x.score, reverse=True)
         
-        # Group results: for level 4-5 rules, include parents and children
+        # Build result index for O(1) lookups during grouping
+        result_index_map = {r.rule_id: idx for idx, r in enumerate(results)}
+        
+        # Group results: for level 4-5 rules, include parents and children (O(n) instead of O(n²))
         grouped_results = []
         seen_root_ids = set()  # Track which root rules we've already processed
         
@@ -130,14 +151,16 @@ class RulebookSearch:
                 if root_id not in seen_root_ids:
                     seen_root_ids.add(root_id)
                     
-                    # Collect all related rules: parents + matched rule + children
-                    related_ids = set(lineage) | {result.rule_id} | set(self._get_children_rules(result.rule_id))
+                    # Collect all related rules: parents + matched rule + children (O(1) lookups)
+                    related_ids = set(lineage) | {result.rule_id} | set(
+                        self.parent_child_index.get(result.rule_id, [])
+                    )
                     
-                    # Find all matching results that are in this family
+                    # Find matching results that are in this family (O(n) scan with set lookups)
                     family_results = [r for r in results if r.rule_id in related_ids]
                     family_results.sort(key=lambda x: (
                         self._get_rule_depth(x.rule_id),  # Sort by depth
-                        results.index(x)  # Then by original order
+                        result_index_map.get(x.rule_id, float('inf'))  # Then by original order (O(1) lookup)
                     ))
                     
                     grouped_results.extend(family_results)

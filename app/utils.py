@@ -157,6 +157,27 @@ def get_rulebook_markdown_files_util():
     return get_rulebook_markdown_files()
 
 
+def read_rulebook_markdown_content() -> str:
+    """
+    Read and concatenate all rulebook markdown files.
+    Shared utility to eliminate duplication between build.py and rulebook.py
+    
+    Returns:
+        Concatenated markdown content with separator sections
+    """
+    from app.config import get_rulebook_markdown_files
+    
+    md_files = get_rulebook_markdown_files()
+    content = ""
+    
+    for md_file in md_files:
+        if md_file.exists():
+            with open(md_file, 'r', encoding='utf-8') as f:
+                content += f.read() + "\n\n---\n\n"
+    
+    return content
+
+
 def filter_rules_for_extract(rules, weapon_filter, formatum_filter):
     """Filter rules by weapon type and format"""
     filtered = []

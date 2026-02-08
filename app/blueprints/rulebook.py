@@ -4,23 +4,15 @@ Rulebook blueprint - handles full rulebook display and API endpoints
 
 from pathlib import Path
 from flask import Blueprint, render_template, jsonify, current_app, send_file
-from app.utils import create_mistune_markdown, preprocess_rulebook_markdown
-from app.config import get_rulebook_markdown_files, get_prerendered_rulebook_path
+from app.utils import create_mistune_markdown, preprocess_rulebook_markdown, read_rulebook_markdown_content
+from app.config import get_prerendered_rulebook_path
 
 rulebook_bp = Blueprint('rulebook', __name__)
 
 
 def _get_rulebook_markdown_content():
-    """Read and concatenate all rulebook markdown files"""
-    md_files = get_rulebook_markdown_files()
-    
-    content = ""
-    for md_file in md_files:
-        if md_file.exists():
-            with open(md_file, 'r', encoding='utf-8') as f:
-                content += f.read() + "\n\n---\n\n"
-    
-    return content
+    """Read and concatenate all rulebook markdown files (shared utility)"""
+    return read_rulebook_markdown_content()
 
 
 def _render_rulebook_html():

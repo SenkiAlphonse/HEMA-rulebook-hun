@@ -11,7 +11,7 @@ import subprocess
 import logging
 from app.config import (
     get_project_root, get_qa_tools_dir, get_dist_dir, 
-    get_rulebook_markdown_files, get_prerendered_rulebook_path
+    get_prerendered_rulebook_path
 )
 
 # Configure logging
@@ -48,27 +48,19 @@ def build_search_index():
 def build_rulebook():
     """Generate pre-rendered rulebook HTML"""
     try:
-        # Import Mistune (will be available after pip install)
-        from app.utils import create_mistune_markdown, preprocess_rulebook_markdown
+        # Import shared utilities
+        from app.utils import create_mistune_markdown, preprocess_rulebook_markdown, read_rulebook_markdown_content
         
         # Create dist directory
         dist_dir = get_dist_dir()
         dist_dir.mkdir(exist_ok=True)
         
-        # Get markdown files
-        md_files = get_rulebook_markdown_files()
+        # Read all markdown using shared utility
+        content = read_rulebook_markdown_content()
         
-        if not md_files:
-            logger.warning("⚠ No markdown files found for rulebook")
+        if not content:
+            logger.warning("⚠ No markdown content found for rulebook")
             return False
-        
-        # Concatenate all markdown
-        content = ""
-        for md_file in md_files:
-            if md_file.exists():
-                with open(md_file, 'r', encoding='utf-8') as f:
-                    content += f.read() + "\n\n---\n\n"
-                logger.info(f"  ✓ Loaded {md_file.name}")
         
         # Convert to HTML
         md = create_mistune_markdown()
