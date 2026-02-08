@@ -407,6 +407,24 @@ def api_rule(rule_id):
     return jsonify({"error": "Rule not found"}), 404
 
 
+@app.route("/rulebook")
+def rulebook():
+    """Display the entire rulebook with proper formatting"""
+    rules = search_engine.rules
+    return render_template("rulebook.html", rules=rules)
+
+
+@app.route("/api/rulebook")
+def api_rulebook():
+    """API endpoint to get all rules for the rulebook viewer"""
+    rules = search_engine.rules
+    return jsonify({
+        "success": True,
+        "rules": rules,
+        "total": len(rules)
+    })
+
+
 if __name__ == "__main__":
     # Get port from environment or use 5000 for local development
     port = int(os.environ.get("PORT", 5000))

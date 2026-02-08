@@ -290,6 +290,35 @@
             border-top: 1px solid rgba(255,255,255,0.2);
             font-size: 0.9em;
         }
+
+        .header-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+
+        .btn-rulebook {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-rulebook:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -297,6 +326,9 @@
         <div class="header">
             <h1>⚔️ HEMA Rulebook Search</h1>
             <p>Hungarian Historical European Martial Arts - Quick Rule Lookup</p>
+            <div class="header-buttons">
+                <a href="/rulebook" class="btn-rulebook">📖 Full Rulebook</a>
+            </div>
         </div>
 
         <div class="search-card">

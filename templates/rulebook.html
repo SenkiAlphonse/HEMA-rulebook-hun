@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEMA Rulebook - Kard Rendje</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #e74c3c;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .rule {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .rule:last-child {
+            border-bottom: none;
+        }
+
+        .rule-header {
+            display: flex;
+            align-items: baseline;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .rule-id {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+            padding: 0.3rem 0.6rem;
+            border-radius: 3px;
+            font-weight: bold;
+            font-family: "Courier New", monospace;
+            font-size: 0.95rem;
+            min-width: fit-content;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .rule-id:hover {
+            background-color: #bdc3c7;
+            text-decoration: underline;
+        }
+
+        .rule-metadata {
+            font-size: 0.85rem;
+            color: #7f8c8d;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-badge {
+            display: inline-block;
+            background-color: #ecf0f1;
+            padding: 0.2rem 0.5rem;
+            border-radius: 2px;
+        }
+
+        .rule-text {
+            margin-top: 0.8rem;
+            line-height: 1.8;
+            color: #2c3e50;
+        }
+
+        .rule-text p {
+            margin-bottom: 0.8rem;
+        }
+
+        .rule-text ul,
+        .rule-text ol {
+            margin-left: 2rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .rule-text li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Nested lists indentation */
+        .rule-text ul ul,
+        .rule-text ol ol,
+        .rule-text ul ol,
+        .rule-text ol ul {
+            margin-left: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        .rule-text strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .rule-text em {
+            font-style: italic;
+            color: #34495e;
+        }
+
+        .rule-text a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px dotted #3498db;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .rule-text a:hover {
+            background-color: #ecf0f1;
+            color: #2980b9;
+        }
+
+        /* Reference links styling */
+        .ref-link {
+            background-color: #fff3cd;
+            padding: 0.2rem 0.4rem;
+            border-radius: 2px;
+            font-weight: 500;
+            border-bottom: 2px solid #ffc107;
+        }
+
+        .ref-link:hover {
+            background-color: #ffc107;
+        }
+
+        .rule-text img {
+            max-width: 100%;
+            height: auto;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        /* Table styling */
+        .rule-text table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .rule-text table thead {
+            background-color: #34495e;
+            color: white;
+        }
+
+        .rule-text table th {
+            padding: 0.8rem;
+            text-align: left;
+            font-weight: 600;
+            border: 1px solid #ddd;
+        }
+
+        .rule-text table td {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+        }
+
+        .rule-text table tbody tr:nth-child(even) {
+            background-color: #f5f5f5;
+        }
+
+        .rule-text table tbody tr:hover {
+            background-color: #ecf0f1;
+        }
+
+        /* Colored table cells */
+        .rule-text table [bgcolor] {
+            background-color: attr(bgcolor) !important;
+            color: white;
+            font-weight: 600;
+        }
+
+        .rule-text table [bgcolor="#E3D059"] {
+            background-color: #ffc107 !important;
+            color: #333 !important;
+        }
+
+        .rule-text table [bgcolor="#E36159"] {
+            background-color: #e74c3c !important;
+            color: white !important;
+        }
+
+        .rule-text table [bgcolor="#787878"] {
+            background-color: #7f8c8d !important;
+            color: white !important;
+        }
+
+        .rule-text table sup {
+            font-size: 0.8rem;
+        }
+
+        /* Section headings */
+        h1 {
+            color: #2c3e50;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 0.5rem;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 1.2rem;
+            margin-bottom: 0.4rem;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 0.3rem;
+        }
+
+        h3 {
+            color: #7f8c8d;
+            margin-top: 1rem;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+        }
+
+        /* References section */
+        .references-section {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e0e0e0;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        .references-section strong {
+            color: #2c3e50;
+        }
+
+        .reference-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.3rem;
+        }
+
+        .reference-item {
+            background-color: #ecf0f1;
+            padding: 0.3rem 0.6rem;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .reference-item:hover {
+            background-color: #bdc3c7;
+            text-decoration: underline;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            padding: 0.8rem 1rem;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top:hover {
+            background-color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        /* Loading spinner */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+            color: #7f8c8d;
+        }
+
+        .spinner {
+            border: 4px solid #ecf0f1;
+            border-top: 4px solid #e74c3c;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Anchor highlight */
+        .rule.highlight {
+            background-color: #fffacd;
+            padding: 1rem;
+            border-radius: 4px;
+            box-shadow: 0 0 10px rgba(255, 250, 205, 0.5);
+            animation: highlightFade 2s ease-out;
+        }
+
+        @keyframes highlightFade {
+            0% {
+                background-color: #ffff00;
+                box-shadow: 0 0 20px rgba(255, 255, 0, 0.8);
+            }
+            100% {
+                background-color: #fffacd;
+                box-shadow: 0 0 10px rgba(255, 250, 205, 0.5);
+            }
+        }
+
+        .search-box {
+            position: sticky;
+            top: 0;
+            background: white;
+            padding: 1rem 2rem;
+            border-bottom: 2px solid #e0e0e0;
+            z-index: 100;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .search-box input {
+            flex: 1;
+            padding: 0.7rem;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .search-box button {
+            padding: 0.7rem 1.5rem;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .search-box button:hover {
+            background-color: #c0392b;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .nav-btn {
+            padding: 0.7rem 1.5rem;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background-color: #2980b9;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+            }
+
+            .header {
+                padding: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-box input,
+            .search-box button {
+                width: 100%;
+            }
+
+            .rule-header {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HEMA Rulebook</h1>
+            <p>Kard Rendje - Complete Rulebook Viewer</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search rules... (e.g., GEN-6.2.3 or DIS-5.2.1)">
+            <div class="nav-buttons">
+                <button class="nav-btn" onclick="jumpToRule()">Jump to Rule</button>
+                <button class="nav-btn" onclick="clearHighlight()">Clear Highlight</button>
+            </div>
+        </div>
+
+        <div class="content" id="ruleContent">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading rulebook...</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        let allRules = [];
+        let originalHTML = '';
+
+        // Load and render rulebook on page load
+        window.addEventListener('load', async () => {
+            try {
+                const response = await fetch('/api/rulebook');
+                const data = await response.json();
+                allRules = data.rules;
+                renderRulebook();
+            } catch (error) {
+                console.error('Error loading rulebook:', error);
+                document.getElementById('ruleContent').innerHTML = 
+                    '<p style="color: red; text-align: center;">Error loading rulebook. Please try again later.</p>';
+            }
+        });
+
+        function renderRulebook() {
+            const contentDiv = document.getElementById('ruleContent');
+            let html = '';
+
+            for (const rule of allRules) {
+                const ruleHTML = renderRule(rule);
+                html += ruleHTML;
+            }
+
+            contentDiv.innerHTML = html;
+            originalHTML = html;
+            attachEventListeners();
+        }
+
+        function renderRule(rule) {
+            const ruleId = rule.rule_id || 'UNKNOWN';
+            const text = rule.text || '';
+            const section = rule.section || '';
+            const subsection = rule.subsection || '';
+            const document = rule.document || '';
+            const weapon = rule.weapon_type || '';
+            const format = rule.formatum || '';
+
+            // Convert markdown to HTML
+            let htmlText = markdownToHtml(text);
+
+            // Add reference links styling
+            htmlText = htmlText.replace(/\[([A-Z]+-[\d.]+)\]/g, 
+                '<a class="ref-link" onclick="jumpToRule(\'$1\')" title="Jump to rule $1">[$1]</a>');
+
+            let metadata = [];
+            if (document) metadata.push(`<span class="meta-badge">📄 ${document}</span>`);
+            if (weapon) metadata.push(`<span class="meta-badge">⚔️ ${weapon}</span>`);
+            if (format) metadata.push(`<span class="meta-badge">🏷️ ${format}</span>`);
+
+            let referencesHTML = '';
+            if (rule.references_to && rule.references_to.length > 0) {
+                const refLinks = rule.references_to.map(ref => 
+                    `<span class="reference-item" onclick="jumpToRule('${ref}')" title="Jump to ${ref}">${ref}</span>`
+                ).join('');
+                referencesHTML += `<div class="references-section"><strong>References:</strong><div class="reference-list">${refLinks}</div></div>`;
+            }
+
+            if (rule.references_from && rule.references_from.length > 0) {
+                const refLinks = rule.references_from.map(ref => 
+                    `<span class="reference-item" onclick="jumpToRule('${ref}')" title="Jump to ${ref}">${ref}</span>`
+                ).join('');
+                referencesHTML += `<div class="references-section"><strong>Referenced by:</strong><div class="reference-list">${refLinks}</div></div>`;
+            }
+
+            return `
+                <div class="rule" id="rule-${ruleId}">
+                    <div class="rule-header">
+                        <span class="rule-id" onclick="copyToClipboard('${ruleId}')" title="Click to copy ID">${ruleId}</span>
+                    </div>
+                    ${metadata.length > 0 ? `<div class="rule-metadata">${metadata.join('')}</div>` : ''}
+                    <div class="rule-text">${htmlText}</div>
+                    ${referencesHTML}
+                </div>
+            `;
+        }
+
+        function markdownToHtml(text) {
+            if (!text) return '';
+
+            // Escape HTML entities first
+            text = text.replace(/&/g, '&amp;')
+                       .replace(/</g, '&lt;')
+                       .replace(/>/g, '&gt;');
+
+            // Process code blocks (triple backticks)
+            text = text.replace(/```[\s\S]*?```/g, (match) => {
+                const code = match.replace(/```/g, '').trim();
+                return `<pre><code>${code}</code></pre>`;
+            });
+
+            // Process inline code (backticks)
+            text = text.replace(/`([^`]+)`/g, '<code style="background: #f0f0f0; padding: 0.2rem 0.4rem; border-radius: 2px;">$1</code>');
+
+            // Process images ![alt](url)
+            text = text.replace(/!\[([^\]]*)\]\(([^\)]+)\)/g, (match, alt, url) => {
+                // Handle GitHub raw image URLs
+                if (url.includes('github.com') && !url.includes('raw.githubusercontent.com')) {
+                    url = url.replace('github.com', 'raw.githubusercontent.com').replace('/blob/', '/');
+                }
+                return `<img src="${url}" alt="${alt}">`;
+            });
+
+            // Process links [text](url)
+            text = text.replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a href="$2" target="_blank">$1</a>');
+
+            // Process bold **text**
+            text = text.replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>');
+
+            // Process italic *text*
+            text = text.replace(/\*([^\*]+)\*/g, '<em>$1</em>');
+
+            // Process headings
+            text = text.replace(/^### (.*?)$/gm, '<h3>$1</h3>');
+            text = text.replace(/^## (.*?)$/gm, '<h2>$1</h2>');
+            text = text.replace(/^# (.*?)$/gm, '<h1>$1</h1>');
+
+            // Process unordered lists
+            text = text.replace(/^\s*- (.*?)$/gm, '<li>$1</li>');
+            text = text.replace(/(<li>.*<\/li>)/s, (match) => `<ul>${match}</ul>`);
+
+            // Process ordered lists
+            text = text.replace(/^\s*\d+\. (.*?)$/gm, '<li>$1</li>');
+
+            // Process paragraphs
+            const lines = text.split('\n');
+            let inList = false;
+            let inTable = false;
+            let result = [];
+
+            for (let line of lines) {
+                const trimmed = line.trim();
+
+                if (trimmed.startsWith('<table') || trimmed.startsWith('<tr') || trimmed.startsWith('<td') || trimmed.startsWith('<th')) {
+                    inTable = true;
+                    result.push(line);
+                } else if (trimmed.endsWith('</table>')) {
+                    result.push(line);
+                    inTable = false;
+                } else if (inTable) {
+                    result.push(line);
+                } else if (trimmed.startsWith('<ul') || trimmed.startsWith('<li')) {
+                    inList = true;
+                    result.push(line);
+                } else if (trimmed.startsWith('</ul>')) {
+                    result.push(line);
+                    inList = false;
+                } else if (inList && trimmed === '') {
+                    inList = false;
+                    result.push('</ul>');
+                } else if (trimmed && !inList && !trimmed.startsWith('<h') && !trimmed.startsWith('<pre') && !trimmed.startsWith('<img') && !trimmed.startsWith('<table')) {
+                    result.push(`<p>${trimmed}</p>`);
+                } else if (trimmed) {
+                    result.push(line);
+                }
+            }
+
+            return result.join('\n');
+        }
+
+        function jumpToRule(ruleId = null) {
+            if (!ruleId) {
+                ruleId = document.getElementById('searchInput').value.trim().toUpperCase();
+            }
+
+            if (!ruleId) {
+                alert('Please enter a rule ID');
+                return;
+            }
+
+            const element = document.getElementById(`rule-${ruleId}`);
+            if (element) {
+                // Remove previous highlight
+                document.querySelectorAll('.rule.highlight').forEach(el => el.classList.remove('highlight'));
+
+                // Add highlight to target
+                element.classList.add('highlight');
+
+                // Scroll into view
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                // Update search box
+                document.getElementById('searchInput').value = ruleId;
+            } else {
+                alert(`Rule ${ruleId} not found`);
+            }
+        }
+
+        function clearHighlight() {
+            document.querySelectorAll('.rule.highlight').forEach(el => el.classList.remove('highlight'));
+            document.getElementById('searchInput').value = '';
+        }
+
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                // Show brief feedback
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => btn.textContent = originalText, 1500);
+            });
+        }
+
+        function attachEventListeners() {
+            // Search on Enter key
+            document.getElementById('searchInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') jumpToRule();
+            });
+
+            // Scroll to top button visibility
+            window.addEventListener('scroll', () => {
+                const btn = document.getElementById('backToTop');
+                if (window.scrollY > 300) {
+                    btn.classList.add('show');
+                } else {
+                    btn.classList.remove('show');
+                }
+            });
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
