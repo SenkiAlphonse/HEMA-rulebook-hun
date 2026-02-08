@@ -109,8 +109,14 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         return text
     
     def inline_html(self, html):
-        """Override inline HTML to preserve rule reference links"""
-        # Allow inline HTML to pass through unescaped
+        """Override inline HTML to preserve rule reference links but filter comments and spans"""
+        # Filter out HTML comments
+        if html.strip().startswith('<!--'):
+            return ''
+        # Filter out anchor spans
+        if html.strip().startswith('<span') and 'id=' in html:
+            return ''
+        # Allow other inline HTML (like rule reference <a> tags) to pass through
         return html
 
 
