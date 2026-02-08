@@ -15,9 +15,9 @@ def preprocess_rulebook_markdown(text):
     # Remove HTML comments (<!-- ... -->)
     text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
     
-    # Convert rule ID hard breaks to double newlines
-    # Pattern: **RULE-ID**  \n (two trailing spaces + newline) → **RULE-ID**\n\n
-    text = re.sub(r'(\*\*[A-Z]+-[\d\.]+\*\*)  \n', r'\1\n\n', text)
+    # Keep rule ID and its paragraph together by inserting an explicit <br>
+    # Pattern: **RULE-ID**␠␠\n → **RULE-ID**<br>\n
+    text = re.sub(r'(\*\*[A-Z]+-[\d\.]+\*\*)  \r?\n', r'\1<br>\n', text)
     
     return text
 
@@ -38,17 +38,15 @@ class RuleIDRenderer(mistune.HTMLRenderer):
     
     def paragraph(self, text):
         """Override paragraph rendering to detect and style rule IDs"""
-        # Check if this is a rule ID line: <strong>GEN-X.X.X</strong>
-        if text.startswith('<strong>') and text.endswith('</strong>'):
-            # Extract rule ID from <strong> tags
-            rule_id = text.replace('<strong>', '').replace('</strong>', '').strip()
-            
-            # Validate it looks like a rule ID (PREFIX-numeric.numeric.numeric...)
+        # Match paragraphs that start with a rule ID
+        match = re.match(r'^<strong>([A-Z]+-[\d\.]+)</strong>(?:<br\s*/?>)?', text)
+        if match:
+            rule_id = match.group(1)
             if '-' in rule_id and rule_id.split('-')[0].isalpha():
                 depth = get_rule_depth(rule_id)
-                indent_class = f'rule-depth-{depth}' if depth > 0 else ''
+                indent_class = f'rule-depth-{depth}' if depth >= 4 else ''
                 return f'<p class="rule-id {indent_class}">{text}</p>\n'
-        
+
         # Regular paragraph
         return f'<p>{text}</p>\n'
     
@@ -66,9 +64,11 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         return f'<{tag}{extra}>\n{text}</{tag}>\n'
     
     def block_html(self, text):
-        """Override block HTML to filter out comments while preserving other HTML"""
-        # Filter HTML comments but keep other HTML blocks like <span id="...">
-        if text.strip().startswith('<!--'):
+        """Override block HTML to filter out comments and anchor spans"""
+        stripped = text.strip()
+        if stripped.startswith('<!--'):
+            return ''
+        if stripped.startswith('<span') and 'id=' in stripped:
             return ''
         return text
 

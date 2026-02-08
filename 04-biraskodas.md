@@ -70,9 +70,9 @@ A találat ténylegességét a versenybíró állapítja meg, szükség esetén 
 
 **GEN-7.5.2**  
 A versenybíró figyelmen kívül hagyja az olyan akciókból származó találatokat:  
-  - amelyeket a „Rajta!” vezényszó előtt vagy az „Állj!” vezényszó után indítottak el  
+- amelyeket a „Rajta!” vezényszó előtt vagy az „Állj!” vezényszó után indítottak el  
   <!-- (Vö.: t.23. 1/3) -->  
-  - amelyek az ellenfél vagy annak felszerelésén kívüli tárgyon estek.  
+- amelyek az ellenfél vagy annak felszerelésén kívüli tárgyon estek.  
 
 **GEN-7.5.3**  
 Az esés közben vagy után adott találatot meg kell semmisíteni.  
@@ -104,8 +104,8 @@ A videóbíróhoz fordulás lehetősége: mind csapat, mind egyéni versenyeken 
 **GEN-7.5.7**  
 Az egyéni versenyen a páston lévő vívó  
 
-  - csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a videóbíróhoz  
-  - egyenes kieséses mérkőzés során két alkalommal  
+- csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a videóbíróhoz  
+- egyenes kieséses mérkőzés során két alkalommal  
 
 **GEN-7.5.8**  
 Amennyiben a versenybíró a visszajátszást kérő versenyzővel egyetért, úgy a versenyző visszajátszáshoz való joga nem vész el.  
@@ -132,21 +132,27 @@ A videóbíró bármikor kérheti a versenybírót, hogy alkalmazzon videóbír�
 **GEN-7.5.15**  
 Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy arra  
 
-  - a versenybíró kezdeményezésére,  
-  - a versenyző kérésére,  
-  - a döntő találat előtti pontegyenlőségnél, vagy  
-  - a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.  
+- a versenybíró kezdeményezésére,  
+- a versenyző kérésére,  
+- a döntő találat előtti pontegyenlőségnél, vagy  
+- a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.  
 
 #### A versenybíró kézjelei  
 
 **GEN-7.5.16**  
 A versenybíró az alábbi jelzéseket köteles használni:  
 
-![image](https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03)  
+  <p align="center">  
+    <img width="75%" height="75%" alt="KEZJELEK_1" align="center" src="https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03" />  
+  </p>  
 
-![image](https://github.com/user-attachments/assets/f5fea300-ae41-43d0-9001-09729f524279)  
+  <p align="center">  
+  <img width="75%" height="75%" alt="KEZJELEK_2" align="center" src="https://github.com/user-attachments/assets/f5fea300-ae41-43d0-9001-09729f524279" />  
+  </p>  
 
-![image](https://github.com/user-attachments/assets/ca7d4e1b-529d-43da-9686-e92073b07353)  
+  <p align="center">  
+  <img width="75%" height="75%" alt="KEZJELEK_3" align="center" src="https://github.com/user-attachments/assets/ca7d4e1b-529d-43da-9686-e92073b07353" />  
+  </p>  
 
 <div style="page-break-after: always;"></div>  
 
@@ -160,12 +166,12 @@ A bíró minden forduló előtt röviden ellenőrzi a felszerelésre és fegyver
 **GEN-7.6.2**  
 Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket: <!--(Vö.t.47.2.)-->  
 
-  - minden fegyvernemben a vívók felszerelésén a szabályos <!--FIE --> 350N jelzés meglétét (ruha, fejvéd).  
+- minden fegyvernemben a vívók felszerelésén a szabályos <!--FIE --> 350N jelzés meglétét (ruha, fejvéd).  
 <!-- TODO lvl 2 legyen kötelező -->  
-  - hogy mindenki szabályszerű vívókabátot visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.  
+- hogy mindenki szabályszerű vívókabátot visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.  
 <!-- TODO - minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá. -->  
-  - A fegyvereken fegyverellenőrzés jelzés meglétét.  
-  - Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.  
+- A fegyvereken fegyverellenőrzés jelzés meglétét.  
+- Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.  
 
 **GEN-7.6.3**  
 A csoportmérkőzések során a versenybíró általi fegyverellenőrzést a vívók gyülekezésre szólításakor kell elvégezni.  
@@ -189,7 +195,7 @@ Bármely helyzetben, ha egy versenyző (a Felszerelés Szabályzat értelmében)
 
 **GEN-7.7.2**  
 Ha a vívó a páston:  
-  - hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy  
+- hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy  
 <!-- - hónaljvédő nélkül (Vö. t.64.5.), vagy -->  
-  - a szabályoknak nem megfelelő ruhában  
+- a szabályoknak nem megfelelő ruhában  
 jelenik meg, a versenybíró <!-- a t.158-162, t.165, t.170 szakaszokban előírt,--> az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  

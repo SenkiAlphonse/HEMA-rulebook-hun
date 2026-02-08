@@ -70,22 +70,18 @@
         }
 
         .rule-id {
-            background-color: #e8eaf6;
-            color: #667eea;
-            padding: 0.3rem 0.6rem;
-            border-radius: 3px;
-            font-weight: bold;
-            font-family: "Courier New", monospace;
-            font-size: 0.95rem;
-            min-width: fit-content;
-            flex-shrink: 0;
-            cursor: pointer;
-            transition: all 0.2s ease;
+            background: none;
+            color: inherit;
+            padding: 0;
+            border-radius: 0;
+            font-weight: 600;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: default;
         }
 
         .rule-id:hover {
-            background-color: #d1d5f7;
-            text-decoration: underline;
+            text-decoration: none;
         }
 
         .rule-metadata {
@@ -184,41 +180,40 @@
             border-radius: 4px;
         }
 
-        /* Rule ID indentation based on depth */
+        /* Rule indentation based on depth */
         .rule-id {
             display: block;
-            margin-top: 1rem;
-            margin-bottom: 0.5rem;
+            margin-top: 0;
+            margin-bottom: 0.6rem;
+            line-height: 1.6;
         }
 
-        .rule-id.rule-depth-1 {
+        .rule-id br {
+            line-height: 1.2;
+        }
+
+        .rule-id.rule-depth-1,
+        .rule-id.rule-depth-2,
+        .rule-id.rule-depth-3 {
             margin-left: 0;
         }
 
-        .rule-id.rule-depth-2 {
-            margin-left: 20px;
-        }
-
-        .rule-id.rule-depth-3 {
-            margin-left: 40px;
-        }
-
         .rule-id.rule-depth-4 {
-            margin-left: 60px;
+            margin-left: 2rem;
         }
 
         .rule-id.rule-depth-5 {
-            margin-left: 80px;
+            margin-left: 4rem;
         }
 
         .rule-id strong {
-            color: #667eea;
-            font-family: "Courier New", monospace;
-            background-color: #f0f0f9;
-            padding: 4px 8px;
-            border-radius: 3px;
-            border-left: 3px solid #667eea;
-            display: inline-block;
+            color: inherit;
+            font-family: inherit;
+            background: none;
+            padding: 0;
+            border: none;
+            display: inline;
+            font-weight: 700;
         }
 
         /* Bullet list styling */
