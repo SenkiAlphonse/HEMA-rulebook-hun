@@ -23,6 +23,14 @@ class Rule:
     line_number: int  # Starting line in source file
     weapon_type: str = ""  # e.g., "longsword", "rapier", or "general"
     formatum: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
+    references_to: List[str] = None  # Rule IDs referenced BY this rule
+    references_from: List[str] = None  # Rule IDs that reference THIS rule
+    
+    def __post_init__(self):
+        if self.references_to is None:
+            self.references_to = []
+        if self.references_from is None:
+            self.references_from = []
 
 
 @dataclass
@@ -47,6 +55,10 @@ class RulebookParser:
         self.anchor_pattern = re.compile(r'<span id="([^"]+)"></span>')
         self.heading_pattern = re.compile(r'^(#{1,6})\s+(.+)$')
         self.comment_pattern = re.compile(r'<!--.*?-->', re.DOTALL)
+        # Pattern to find rule references in text (e.g., [GEN-6.2.4], [DIS-3.3.9])
+        # Matches: [PREFIX-NUM] or [PREFIX-NUM.NUM] or [PREFIX-NUM.NUM.NUM], etc.
+        self.reference_pattern = re.compile(r'\[([A-Z]+(?:-[A-Z]+)*(?:-\d+(?:\.\d+)*)?)\]')
+        
         
     def parse_all(self) -> Dict[str, Any]:
         """Parse all markdown files in the rulebook directory"""
@@ -59,6 +71,10 @@ class RulebookParser:
         for md_file in md_files:
             print(f"Parsing {md_file.name}...")
             self.parse_file(md_file)
+        
+        # Build cross-reference index
+        print("Building cross-reference index...")
+        self._build_cross_references()
         
         return {
             "rules": [asdict(rule) for rule in self.rules],
@@ -114,8 +130,9 @@ class RulebookParser:
                 current_anchor = anchor_match.group(1)
                 continue
             
-            # Check for rule ID
-            rule_id_match = self.rule_id_pattern.search(line)
+            # Check for rule ID (only at start of line after stripping)
+            stripped_line = line.strip()
+            rule_id_match = self.rule_id_pattern.match(stripped_line)  # Use match() to require start of string
             if rule_id_match:
                 # Save previous rule if exists
                 if current_rule_id and rule_text_lines:
@@ -293,7 +310,32 @@ class RulebookParser:
 
         return weapon_type, formatum
 
-    def save_index(self, output_path: str):
+    def _build_cross_references(self):
+        """Build cross-reference index by scanning rule text for references"""
+        # First pass: extract all references each rule makes
+        for rule in self.rules:
+            # Find all rule IDs in bold (**GEN-...**) mentioned in this rule's text
+            matches = self.reference_pattern.findall(rule.text)
+            # Remove duplicates and self-references
+            references = set(m for m in matches if m != rule.rule_id)
+            rule.references_to = sorted(list(references))
+        
+        # Second pass: build reverse references (references_from)
+        rule_by_id = {rule.rule_id: rule for rule in self.rules}
+        
+        for rule in self.rules:
+            rule.references_from = []
+        
+        for rule in self.rules:
+            for referenced_id in rule.references_to:
+                if referenced_id in rule_by_id:
+                    rule_by_id[referenced_id].references_from.append(rule.rule_id)
+        
+        # Remove duplicates and sort
+        for rule in self.rules:
+            rule.references_from = sorted(list(set(rule.references_from)))
+    
+    def save_index(self, output_path: Path):
         """Save parsed rules to JSON index"""
         index_data = self.parse_all()
         
@@ -303,6 +345,7 @@ class RulebookParser:
         print(f"\nIndex saved to {output_path}")
         print(f"Total rules indexed: {index_data['total_rules']}")
         print(f"Documents processed: {len(index_data['documents'])}")
+
 
 
 def main():
