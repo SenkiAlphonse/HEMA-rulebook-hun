@@ -2,7 +2,7 @@
   "rules": [
     {
       "rule_id": "GEN-1.1",
-      "text": "A rendezvény célja a vívás biztonságos és barátságos értékelése a \"találni úgy, hogy közben nem ér találat\" elv alapján. A történelmi szabályrendszerekhez hasonlóan a verseny kifejezetten absztrahált képességek tesztje, nem pedig egy szabályozatlan, végsőkig folytatott harc szimulációja – ebben értelmében minden egyes pontot külön \"párbajnak\" tekintünk az alábbi szabályok keretei között, amelyek elvesztését egy, a vesztes vívó ellen ítélt pont jelzi. Célunk az, hogy meghatározzuk a relatív rangsort, és a versenyzők közül az versenynapok alatt legjobbnak bizonyuló vívót taktikai, technikai és atlétikai képességek terén.",
+      "text": "A rendezvény célja a vívás biztonságos és barátságos értékelése a \"találni úgy, hogy közben nem ér találat\" elv alapján. A történelmi szabályrendszerekhez hasonlóan a verseny kifejezetten absztrahált képességek tesztje, nem pedig egy szabályozatlan, végsőkig folytatott harc szimulációja – ebben\nértelmében minden egyes pontot külön \"párbajnak\" tekintünk az alábbi szabályok keretei között, amelyek elvesztését egy, a vesztes vívó ellen ítélt pont jelzi. Célunk az, hogy meghatározzuk a relatív rangsort, és a versenyzők közül az versenynapok alatt legjobbnak bizonyuló vívót taktikai, technikai és atlétikai képességek terén.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Bevezetés",
       "document": "01-altalanos.md",
@@ -80,7 +80,7 @@
     },
     {
       "rule_id": "GEN-3.2.2",
-      "text": "A **védekező** akciókat védéseknek (parád) nevezzük. - A védés (parád) fegyverrel végrehajtott védekező akció annak megakadályozására, hogy a támadó akció találjon.",
+      "text": "A **védekező** akciókat védéseknek (parád) nevezzük.\n- A védés (parád) fegyverrel végrehajtott védekező akció annak megakadályozására, hogy a támadó akció találjon.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Támadó és védekező akciók",
       "document": "01-altalanos.md",
@@ -106,7 +106,7 @@
     },
     {
       "rule_id": "GEN-3.2.3.1",
-      "text": "**Egyszerű** az akció, ha azt egyetlen mozdulattal végzik; - akár **közvetlenül** (ugyanabban a vonalban), - akár **közvetve** (másik vonalban).",
+      "text": "**Egyszerű** az akció, ha azt egyetlen mozdulattal végzik;\n- akár **közvetlenül** (ugyanabban a vonalban),\n- akár **közvetve** (másik vonalban).",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Támadó és védekező akciók",
       "document": "01-altalanos.md",
@@ -132,7 +132,7 @@
     },
     {
       "rule_id": "GEN-3.2.4",
-      "text": "**Riposzt** (visszaszúrás, -vágás) A visszaszúrás (-vágás) lehet **azonnali** vagy **késleltetett**, amely az akció jellegétől és sebességétől függ. A riposzt lehet:",
+      "text": "**Riposzt** (visszaszúrás, -vágás)\nA visszaszúrás (-vágás) lehet **azonnali** vagy **késleltetett**, amely az akció jellegétől és sebességétől függ. A riposzt lehet:",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Támadó és védekező akciók",
       "document": "01-altalanos.md",
@@ -145,7 +145,7 @@
     },
     {
       "rule_id": "GEN-3.2.4.1",
-      "text": "- **Egyszerű, közvetlen (direkt)** - **Direkt riposzt**: anélkül találja el az ellenfelet, hogy azt a vonalat elhagyná, amelyben a védés történt. - **Kötött riposzt**: a védés után, a pengén végigcsúszva találja el az ellenfelet.",
+      "text": "- **Egyszerű, közvetlen (direkt)**\n- **Direkt riposzt**: anélkül találja el az ellenfelet, hogy azt a vonalat elhagyná, amelyben a védés történt.\n- **Kötött riposzt**: a védés után, a pengén végigcsúszva találja el az ellenfelet.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Támadó és védekező akciók",
       "document": "01-altalanos.md",
@@ -158,7 +158,7 @@
     },
     {
       "rule_id": "GEN-3.2.4.2",
-      "text": "**Egyszerű közvetett (indirekt)** - **Kerülő  visszaszúrás (-vágás)**: az ellenfelet az ellenkező vonalban találja el, mint amelyben védett. (Megkerülve az ellenfél pengéjét alul, ha a felső vonalban, illetve felül, ha az alsó vonalban védett.) - **Dobott riposzt (coupé)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett (a pengével minden esetben megkerülve az ellenfél pengéjének hegyét).",
+      "text": "**Egyszerű közvetett (indirekt)**\n- **Kerülő  visszaszúrás (-vágás)**: az ellenfelet az ellenkező vonalban találja el, mint amelyben védett. (Megkerülve az ellenfél pengéjét alul, ha a felső vonalban, illetve felül, ha az alsó vonalban védett.)\n- **Dobott riposzt (coupé)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett (a pengével minden esetben megkerülve az ellenfél pengéjének hegyét).",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Támadó és védekező akciók",
       "document": "01-altalanos.md",
@@ -171,7 +171,7 @@
     },
     {
       "rule_id": "GEN-3.2.4.3",
-      "text": "**Összetett riposzt** - **A körző-riposzt (en doublant)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett, de az ellenfél pengéje körül leírt teljes körvonal elvégzése után. - **Riposzt \"egy-kettő\"-vel**: az ellenfelet ugyanabban a vonalban találja, amelyben az védett, de csak azt követően, hogy az ellenkező vonalban is volt, az ellenfél pengéjét megkerülve;",
+      "text": "**Összetett riposzt**\n- **A körző-riposzt (en doublant)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett, de az ellenfél pengéje körül leírt teljes körvonal elvégzése után.\n- **Riposzt \"egy-kettő\"-vel**: az ellenfelet ugyanabban a vonalban találja, amelyben az védett, de csak azt követően, hogy az ellenkező vonalban is volt, az ellenfél pengéjét megkerülve;",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Támadó és védekező akciók",
       "document": "01-altalanos.md",
@@ -184,7 +184,7 @@
     },
     {
       "rule_id": "GEN-3.2.5",
-      "text": "Ellentámadások Az ellentámadások támadó vagy támadó-védekező akciók, amelyeket az ellenfél támadádó akciója közben hajtanak végre.",
+      "text": "Ellentámadások\nAz ellentámadások támadó vagy támadó-védekező akciók, amelyeket az ellenfél támadádó\nakciója közben hajtanak végre.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Támadó és védekező akciók",
       "document": "01-altalanos.md",
@@ -301,7 +301,7 @@
     },
     {
       "rule_id": "GEN-3.2.7",
-      "text": "**A hárítás egyszerű**, közvetlen, ha ugyanabban a vonalban hajtják végre, mint a támadást. **A körző hárítást** ezzel szemben a támadással ellenkező vonalban hajtják végre.",
+      "text": "**A hárítás egyszerű**, közvetlen, ha ugyanabban a vonalban hajtják végre, mint a támadást.\n**A körző hárítást** ezzel szemben a támadással ellenkező vonalban hajtják végre.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Támadó és védekező akciók",
       "document": "01-altalanos.md",
@@ -340,7 +340,7 @@
     },
     {
       "rule_id": "GEN-4.2",
-      "text": "A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi akadály a pást határától minimum 1 méterre legyen.",
+      "text": "A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi\nakadály a pást határától minimum 1 méterre legyen.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A küzdőtér",
       "document": "01-altalanos.md",
@@ -379,7 +379,7 @@
     },
     {
       "rule_id": "GEN-5.1.1",
-      "text": "A vívók saját felelősségükre és kockázatukra fegyverkeznek és szerelkeznek fel, öltözködnek és vívnak.",
+      "text": "A vívók saját felelősségükre és kockázatukra fegyverkeznek és szerelkeznek fel,\nöltözködnek és vívnak.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Megfelelőség",
       "document": "01-altalanos.md",
@@ -509,7 +509,7 @@
     },
     {
       "rule_id": "GEN-5.2.2.1",
-      "text": "Kizárólag olyan kesztyűk használata megengedett, amiket speciálisan HEMA versenyekhez fejlesztettek ki (pl. Sparring Gloves), vagy minden speciális követelményt kielégítenek. Tilos olyan kesztyűk használata, amelyek bármilyen fém alkatrészt tartalmaznak (kivéve a megerősítő szerelvényként, mint a Sparring Gloves kesztyűkön a gumiszalag átvezetésénél használt ringlik).",
+      "text": "Kizárólag olyan kesztyűk használata megengedett, amiket speciálisan HEMA versenyekhez fejlesztettek ki (pl. Sparring Gloves), vagy minden speciális követelményt kielégítenek. Tilos olyan kesztyűk használata, amelyek bármilyen fém alkatrészt tartalmaznak (kivéve a megerősítő szerelvényként, mint a\nSparring Gloves kesztyűkön a gumiszalag átvezetésénél használt ringlik).",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fém fegyverek esetén",
       "document": "01-altalanos.md",
@@ -522,7 +522,7 @@
     },
     {
       "rule_id": "GEN-5.2.2.2",
-      "text": "A versenyen használt kesztyűk esetében a tenyeret nem kell, hogy megerősített réteg borítsa, de a teljes tenyér fedett kell legyen, erre elégséges egy egyszerű textil kesztyű is.",
+      "text": "A versenyen használt kesztyűk esetében a tenyeret nem kell, hogy megerősített réteg borítsa, de a teljes tenyér fedett kell legyen, erre elégséges\negy egyszerű textil kesztyű is.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fém fegyverek esetén",
       "document": "01-altalanos.md",
@@ -574,7 +574,7 @@
     },
     {
       "rule_id": "GEN-5.2.2.6",
-      "text": "A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem. <!-- **GEN-5.2.2.7** hónaljvédő TODO -->",
+      "text": "A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem.\n<!-- **GEN-5.2.2.7**\nhónaljvédő TODO -->",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fém fegyverek esetén",
       "document": "01-altalanos.md",
@@ -613,7 +613,7 @@
     },
     {
       "rule_id": "GEN-5.2.3.3",
-      "text": "A csípőt a vívókabátnak, külön csípővédelemnek (pl. bélelt szoknya) vagy bélelt nadrágnak kell védenie.",
+      "text": "A csípőt a vívókabátnak, külön csípővédelemnek (pl. bélelt szoknya) vagy bélelt\nnadrágnak kell védenie.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fém fegyverek esetén",
       "document": "01-altalanos.md",
@@ -626,7 +626,7 @@
     },
     {
       "rule_id": "GEN-5.2.3.4",
-      "text": "A combokat, a lágyékot és a csípőt legalább CE Level 1 (350N) minősítésű nadrágnak, vagy más jóváhagyott szúrás álló anyagnak kell borítania.",
+      "text": "A combokat, a lágyékot és a csípőt legalább CE Level 1 (350N) minősítésű\nnadrágnak, vagy más jóváhagyott szúrás álló anyagnak kell borítania.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fém fegyverek esetén",
       "document": "01-altalanos.md",
@@ -639,7 +639,7 @@
     },
     {
       "rule_id": "GEN-5.2.3.5",
-      "text": "A kabát és a nadrág között nem maradhat megfelelő védelemmel ellátatlan testfelület. Javasolt a derékig érő vívónadrágok használata.",
+      "text": "A kabát és a nadrág között nem maradhat megfelelő védelemmel ellátatlan\ntestfelület. Javasolt a derékig érő vívónadrágok használata.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fém fegyverek esetén",
       "document": "01-altalanos.md",
@@ -1068,7 +1068,7 @@
     },
     {
       "rule_id": "GEN-6.1.7",
-      "text": "Ha nincs megítélt találat, akkor azon a helyen kell őket újra felállítani, amelyet a küzdelem megszakításakor elfoglaltak. A megfelelő távolságba történő visszaállítás nem eredményezheti azt, hogy a küzdelem megszakításának pillanatában a hátsó határvonalon belül álló versenyzőt hátrafelé leléptesse. Ha egy lábbal a hátsó határvonalon belül állt, akkor újrafelállításkor ugyanazon a helyen marad.",
+      "text": "Ha nincs megítélt találat, akkor azon a helyen kell őket újra felállítani, amelyet a küzdelem megszakításakor elfoglaltak.\nA megfelelő távolságba történő visszaállítás nem eredményezheti azt, hogy a küzdelem megszakításának pillanatában a hátsó határvonalon belül álló versenyzőt hátrafelé leléptesse.\nHa egy lábbal a hátsó határvonalon belül állt, akkor újrafelállításkor ugyanazon a helyen marad.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Felállás kezdőállásba és a vívók helye",
       "document": "01-altalanos.md",
@@ -1341,7 +1341,7 @@
     },
     {
       "rule_id": "GEN-6.4.2",
-      "text": "Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: Nyert vagy vesztett terület)",
+      "text": "Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést\nidéz elő (erőszak vagy brutalitás nélkül) (V.ö.: Nyert vagy vesztett terület)",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Testérintkezés",
       "document": "01-altalanos.md",
@@ -1419,7 +1419,7 @@
     },
     {
       "rule_id": "GEN-6.7.2",
-      "text": "Birkózó akciónak számít minden közelharci akció, amit nem fegyverrel hajtanak végre (kézzel/lábbal/fejjel/stb. végzett technikák, fogások, lefegyverzések, ütések), illetve amik fegyverrel a közvetlen találatadás helyett az ellenfél testrészeinek manipulálását szolgálják. Amennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, úgy bármilyen birkózó akció kezdeményezője a fegyelmi vétségek első csoportjába tartozó szabálytalanságot követ el.",
+      "text": "Birkózó akciónak számít minden közelharci akció, amit nem fegyverrel hajtanak végre (kézzel/lábbal/fejjel/stb. végzett technikák, fogások, lefegyverzések, ütések), illetve amik fegyverrel a közvetlen találatadás helyett az ellenfél testrészeinek manipulálását szolgálják.\nAmennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, úgy bármilyen birkózó akció kezdeményezője a fegyelmi vétségek első csoportjába tartozó szabálytalanságot követ el.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fogásos és birkózó akciók",
       "document": "01-altalanos.md",
@@ -1432,7 +1432,7 @@
     },
     {
       "rule_id": "GEN-6.7.3",
-      "text": "A bíró megállíthatja a mérkőzést huzamosabb idejű sikertelen közelharc vagy birkózás után (ezt a bíró saját hatáskörében ítéli meg). Az ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedett. Akkor ítélhető pont, ha a penge kézzeli megfogása futólagos, és azt azonnal követi egy fegyverrel adott találat. Ha a penge kézzeli megfogása következtében nem sikerül találatot elérni, a bíró megállítja az asszót, és nem ítél pontot. Ha a birkózást kezdeményező fél az ellenfél fegyverét előbb nem hatástalanítja, és találatot kap, az ellenfélnek kell pontot ítélni.",
+      "text": "A bíró megállíthatja a mérkőzést huzamosabb idejű sikertelen közelharc vagy birkózás után (ezt a bíró saját hatáskörében ítéli meg).\nAz ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedett. Akkor ítélhető pont, ha a penge kézzeli megfogása futólagos, és azt azonnal követi egy fegyverrel adott találat. Ha a penge kézzeli megfogása következtében nem sikerül találatot elérni, a bíró megállítja az asszót, és nem ítél pontot. Ha a birkózást kezdeményező fél az ellenfél fegyverét előbb nem hatástalanítja, és találatot kap, az ellenfélnek kell pontot ítélni.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fogásos és birkózó akciók",
       "document": "01-altalanos.md",
@@ -1471,7 +1471,7 @@
     },
     {
       "rule_id": "GEN-6.7.4.2",
-      "text": "Birkózásban fegyverrel vagy fegyver nélkül kontrollálva az ellenfelet: a bíró megítélhet pontot egy olyan akcióért amikor a fegyverrel végrehajtott akció következtében az egyik vívó mozgását, szabadulását passzívan megakadályozó helyzetbe kerül, amelyből jelentős ideig képtelen kitörni. Ilyen helyzet előállhat fegyverrel vagy anélkül végrehajtott birkózófogásokból, amelyek a vívó mozgását megakadályozzák, és ezt a helyzetet jelentős ideig - addig, amikor a bíró saját hatáskörében úgy ítéli, hogy a dominancia követelményei teljesültek, és elhangzik az ‘Állj!’ parancs - fenn is tartják.",
+      "text": "Birkózásban fegyverrel vagy fegyver nélkül kontrollálva az ellenfelet: a bíró megítélhet pontot egy olyan akcióért amikor a fegyverrel végrehajtott akció következtében az egyik vívó mozgását, szabadulását passzívan megakadályozó helyzetbe kerül, amelyből jelentős ideig képtelen kitörni.\nIlyen helyzet előállhat fegyverrel vagy anélkül végrehajtott birkózófogásokból, amelyek a vívó mozgását megakadályozzák, és ezt a helyzetet jelentős ideig - addig, amikor a bíró saját hatáskörében úgy ítéli, hogy a dominancia követelményei teljesültek, és elhangzik az ‘Állj!’ parancs - fenn is tartják.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Fogásos és birkózó akciók",
       "document": "01-altalanos.md",
@@ -1757,7 +1757,7 @@
     },
     {
       "rule_id": "GEN-6.10.4.1.2",
-      "text": "**Combat**: - Valamelyik vívó **5 találatot elért**, illetve - ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
+      "text": "**Combat**:\n- Valamelyik vívó **5 találatot elért**, illetve\n- ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
@@ -1770,7 +1770,7 @@
     },
     {
       "rule_id": "GEN-6.10.4.1.3",
-      "text": "**Afterblow**: - Valamelyik vívó **legalább 7 PONTOT elért**, - a súlyozás miatt a 7 pontot meg lehet haladni. - Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal), - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér; - ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
+      "text": "**Afterblow**:\n- Valamelyik vívó **legalább 7 PONTOT elért**,\n- a súlyozás miatt a 7 pontot meg lehet haladni.\n- Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal),\n- amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;\n- ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
@@ -1837,7 +1837,7 @@
     },
     {
       "rule_id": "GEN-6.10.4.5.3",
-      "text": "Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni: - VN – Dn, ha döntő találat esett az időkereten belül; - V6 – D6 vagy V4 – D4 vagy V2 – D2 vagy V1 – D1 vagy V0 – D0 ha sorsolás alapján kerül ki győztes.",
+      "text": "Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni:\n- VN – Dn, ha döntő találat esett az időkereten belül;\n- V6 – D6 vagy V4 – D4 vagy V2 – D2 vagy V1 – D1 vagy V0 – D0 ha sorsolás alapján kerül ki győztes.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
@@ -1889,7 +1889,7 @@
     },
     {
       "rule_id": "GEN-6.10.5.1.2",
-      "text": "**Combat**: - az egyik versenyző **elér 10 találatot** - Ha mindkét versenyző egyszerre éri el a 10 pontot (egyidejű találatokkal), döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
+      "text": "**Combat**:\n- az egyik versenyző **elér 10 találatot**\n- Ha mindkét versenyző egyszerre éri el a 10 pontot (egyidejű találatokkal), döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
@@ -1902,7 +1902,7 @@
     },
     {
       "rule_id": "GEN-6.10.5.1.3",
-      "text": "**Afterblow**: - az egyik versenyző **elér legalább 11 PONTOT**; - a súlyozás miatt a 11 pontot meg lehet haladni. - Ha mindkét versenyző egyszerre éri el vagy haladja meg a 11 pontot (egyidejű találatokkal), - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér; - ha az állás ekkor döntetlen lett, döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
+      "text": "**Afterblow**:\n- az egyik versenyző **elér legalább 11 PONTOT**;\n- a súlyozás miatt a 11 pontot meg lehet haladni.\n- Ha mindkét versenyző egyszerre éri el vagy haladja meg a 11 pontot (egyidejű találatokkal),\n- amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;\n- ha az állás ekkor döntetlen lett, döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
@@ -1915,7 +1915,7 @@
     },
     {
       "rule_id": "GEN-6.10.5.2",
-      "text": "vagy a meghatározott tényleges vívóidő eltelt: A két, egyperces pihenőidőkkel elválasztott három perces periódus (6 percnyi tényleges vívóidő) eltelt.",
+      "text": "vagy a meghatározott tényleges vívóidő eltelt:\nA két, egyperces pihenőidőkkel elválasztott három perces periódus (6 percnyi tényleges vívóidő) eltelt.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A mérkőzés időtartama",
       "document": "01-altalanos.md",
@@ -2253,7 +2253,7 @@
     },
     {
       "rule_id": "GEN-7.1.2",
-      "text": "A versenybíró feladatai: - szólítja és számba veszi a vívókat; - vezeti a mérkőzést; - minden mérkőzés előtt ellenőrzi a versenyzők fegyvereit, ruházatát és felszereléseit az előírásoknak megfelelően - irányítja a segédbíró(ka)t, időmérőket, jegyzőkönyvvezetőket, stb. - úgy helyezkedik, és úgy változtatja a helyét, hogy követhesse a mérkőzést - bünteti a vétségeket; - megítéli a találatokat; - fenntartja a rendet; - ugyancsak ellenőriznie kell a pástok állapotát és gondoskodik arról, hogy a mérkőzés ne kezdődhessen el vagy ne folytatódhasson olyan páston, aminek felülete balesetveszélyes, vagy más okból nem alkalmasak a mérkőzés folytatására.",
+      "text": "A versenybíró feladatai:\n- szólítja és számba veszi a vívókat;\n- vezeti a mérkőzést;\n- minden mérkőzés előtt ellenőrzi a versenyzők fegyvereit, ruházatát és felszereléseit az előírásoknak megfelelően\n- irányítja a segédbíró(ka)t, időmérőket, jegyzőkönyvvezetőket, stb.\n- úgy helyezkedik, és úgy változtatja a helyét, hogy követhesse a mérkőzést\n- bünteti a vétségeket;\n- megítéli a találatokat;\n- fenntartja a rendet;\n- ugyancsak ellenőriznie kell a pástok állapotát és gondoskodik arról, hogy a mérkőzés ne kezdődhessen el vagy ne folytatódhasson olyan páston, aminek felülete balesetveszélyes, vagy más okból nem alkalmasak a mérkőzés folytatására.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A Versenybíró",
       "document": "01-altalanos.md",
@@ -2383,7 +2383,7 @@
     },
     {
       "rule_id": "GEN-7.5.2",
-      "text": "A versenybíró figyelmen kívül hagyja az olyan akciókból származó találatokat: - amelyeket a „Rajta!” vezényszó előtt vagy az „Állj!” vezényszó után indítottak el - amelyek az ellenfél vagy annak felszerelésén kívüli tárgyon estek.",
+      "text": "A versenybíró figyelmen kívül hagyja az olyan akciókból származó találatokat:\n- amelyeket a „Rajta!” vezényszó előtt vagy az „Állj!” vezényszó után indítottak el\n- amelyek az ellenfél vagy annak felszerelésén kívüli tárgyon estek.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
@@ -2474,7 +2474,7 @@
     },
     {
       "rule_id": "GEN-7.5.7",
-      "text": "Az egyéni versenyen a páston lévő vívó - csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a videóbíróhoz - egyenes kieséses mérkőzés során két alkalommal",
+      "text": "Az egyéni versenyen a páston lévő vívó\n- csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a videóbíróhoz\n- egyenes kieséses mérkőzés során két alkalommal",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
@@ -2513,7 +2513,7 @@
     },
     {
       "rule_id": "GEN-7.5.10",
-      "text": "Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges döntését.",
+      "text": "Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges\ndöntését.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
@@ -2578,7 +2578,7 @@
     },
     {
       "rule_id": "GEN-7.5.15",
-      "text": "Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy arra - a versenybíró kezdeményezésére, - a versenyző kérésére, - a döntő találat előtti pontegyenlőségnél, vagy - a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.",
+      "text": "Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy arra\n- a versenybíró kezdeményezésére,\n- a versenyző kérésére,\n- a döntő találat előtti pontegyenlőségnél, vagy\n- a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
@@ -2591,7 +2591,7 @@
     },
     {
       "rule_id": "GEN-7.5.16",
-      "text": "A versenybíró az alábbi jelzéseket köteles használni: <p align=\"center\"> <img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_1\" align=\"center\" src=\"https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03\" /> </p> <p align=\"center\"> <img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_2\" align=\"center\" src=\"https://github.com/user-attachments/assets/f5fea300-ae41-43d0-9001-09729f524279\" /> </p> <p align=\"center\"> <img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_3\" align=\"center\" src=\"https://github.com/user-attachments/assets/ca7d4e1b-529d-43da-9686-e92073b07353\" /> </p> <div style=\"page-break-after: always;\"></div>",
+      "text": "A versenybíró az alábbi jelzéseket köteles használni:\n<p align=\"center\">\n<img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_1\" align=\"center\" src=\"https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03\" />\n</p>\n<p align=\"center\">\n<img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_2\" align=\"center\" src=\"https://github.com/user-attachments/assets/f5fea300-ae41-43d0-9001-09729f524279\" />\n</p>\n<p align=\"center\">\n<img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_3\" align=\"center\" src=\"https://github.com/user-attachments/assets/ca7d4e1b-529d-43da-9686-e92073b07353\" />\n</p>\n<div style=\"page-break-after: always;\"></div>",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
@@ -2617,7 +2617,7 @@
     },
     {
       "rule_id": "GEN-7.6.2",
-      "text": "Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket: - minden fegyvernemben a vívók felszerelésén a szabályos  350N jelzés meglétét (ruha, fejvéd). - hogy mindenki szabályszerű vívókabátot visel-e.. - A fegyvereken fegyverellenőrzés jelzés meglétét. - Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.",
+      "text": "Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket:\n- minden fegyvernemben a vívók felszerelésén a szabályos  350N jelzés meglétét (ruha, fejvéd).\n- hogy mindenki szabályszerű vívókabátot visel-e..\n- A fegyvereken fegyverellenőrzés jelzés meglétét.\n- Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "01-altalanos.md",
@@ -2669,7 +2669,7 @@
     },
     {
       "rule_id": "GEN-7.6.6",
-      "text": "A leellenőrzött tartalék felszereléseket a versenybíró a mérkőzés kezdetén a pást mellé helyezi a megfelelő vívó oldalára.",
+      "text": "A leellenőrzött tartalék felszereléseket a versenybíró a mérkőzés kezdetén a pást mellé\nhelyezi a megfelelő vívó oldalára.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "01-altalanos.md",
@@ -2695,7 +2695,7 @@
     },
     {
       "rule_id": "GEN-7.7.2",
-      "text": "Ha a vívó a páston: - hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy - a szabályoknak nem megfelelő ruhában jelenik meg, a versenybíró  az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.",
+      "text": "Ha a vívó a páston:\n- hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy\n- a szabályoknak nem megfelelő ruhában\njelenik meg, a versenybíró  az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Szabálytalan felszerelés",
       "document": "01-altalanos.md",
@@ -2799,7 +2799,7 @@
     },
     {
       "rule_id": "LS-1.2.2",
-      "text": "Érvényes találati felület magában foglalja a vívó egész testét, beleértve a fegyver markolatát, a ruházatot és a védőfelszerelést, kivéve a fej hátulja, a gerinc, a lábfejek és a térdek hátsó része. <p align=\"center\"> <img width=\"75%\" height=\"75%\" alt=\"TARGET_BLUE\" align=\"center\" src=\"https://github.com/user-attachments/assets/e8d25cdc-2721-4e82-84b3-8c7c0673c9b1\" /> </p>",
+      "text": "Érvényes találati felület magában foglalja a vívó egész testét, beleértve a fegyver markolatát, a ruházatot és a védőfelszerelést, kivéve a fej hátulja, a gerinc, a lábfejek és a térdek hátsó része.\n<p align=\"center\">\n<img width=\"75%\" height=\"75%\" alt=\"TARGET_BLUE\" align=\"center\" src=\"https://github.com/user-attachments/assets/e8d25cdc-2721-4e82-84b3-8c7c0673c9b1\" />\n</p>",
       "section": "Hosszúkard",
       "subsection": "Érvényes találati felület",
       "document": "02-hosszukard.md",
@@ -3267,7 +3267,7 @@
     },
     {
       "rule_id": "LS-VOR-1.1.5.3",
-      "text": "A vágások elleni védésnek az a célja, hogy megakadályozza a találat beérkezését arra a találati felületre, amely ellen az ellenfél vágása irányul. - a védés végrehajtása akkor helyes, amikor a támadó akció befejezése előtt meggátolja az ellenfél találatának beérkezését, lezárva azt a vonalat, amelyben a támadás befejeződne; - ha egy védést helyesen hajtottak végre, az ellenfél támadását kivédettnek kell minősíteni és ekként kell megítélni még akkor is, ha a támadó pengéjének hajlékonysága miatt annak hegye eléri a találati felületet.",
+      "text": "A vágások elleni védésnek az a célja, hogy megakadályozza a találat beérkezését arra a találati felületre, amely ellen az ellenfél vágása irányul.\n- a védés végrehajtása akkor helyes, amikor a támadó akció befejezése előtt meggátolja az ellenfél találatának beérkezését, lezárva azt a vonalat, amelyben a támadás befejeződne;\n- ha egy védést helyesen hajtottak végre, az ellenfél támadását kivédettnek kell minősíteni és ekként kell megítélni még akkor is, ha a támadó pengéjének hajlékonysága miatt annak hegye eléri a találati felületet.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
       "document": "02.a-hosszukard-VOR.md",
@@ -3332,7 +3332,7 @@
     },
     {
       "rule_id": "LS-VOR-1.3.5",
-      "text": "A kettős találat, ezzel szemben, az egyik vívó hibás akciójának a következménye. Így tehát ha nincs egy vívóidőnyi különbség a két találat között:",
+      "text": "A kettős találat, ezzel szemben, az egyik vívó hibás akciójának a következménye.\nÍgy tehát ha nincs egy vívóidőnyi különbség a két találat között:",
       "section": "",
       "subsection": "A találatok megítélése",
       "document": "02.a-hosszukard-VOR.md",
@@ -3345,7 +3345,7 @@
     },
     {
       "rule_id": "LS-VOR-1.3.5.1",
-      "text": "Csak a megtámadott terhére kell ítélni a találatot: - ha egy egyszerű támadásba **közbetámad**; - ha védés helyett megkísérli a támadás elkerülését, de ez nem sikerül; - ha sikeres védés után pillanatnyi szünetet tart, és ez az ellenfélnek időt ad arra, hogymegismételje támadását (kettőzés, rimessza, megismételt támadás); - ha összetett támadásba nem megfelelő időben közbetámad; - ha vonalhelyzetben (hosszúhegy/langort)  az ellenfél pengeütéssel vagy kötéssel kitérítette és ezután támad, vagy vonalba visszatér ahelyett, hogy a támadó közvetlenül végrehajtott találatát védené.",
+      "text": "Csak a megtámadott terhére kell ítélni a találatot:\n- ha egy egyszerű támadásba **közbetámad**;\n- ha védés helyett megkísérli a támadás elkerülését, de ez nem sikerül;\n- ha sikeres védés után pillanatnyi szünetet tart, és ez az ellenfélnek időt ad arra, hogymegismételje támadását (kettőzés, rimessza, megismételt támadás);\n- ha összetett támadásba nem megfelelő időben közbetámad;\n- ha vonalhelyzetben (hosszúhegy/langort)  az ellenfél pengeütéssel vagy kötéssel kitérítette és ezután támad, vagy vonalba visszatér ahelyett, hogy a támadó közvetlenül végrehajtott találatát védené.",
       "section": "",
       "subsection": "A találatok megítélése",
       "document": "02.a-hosszukard-VOR.md",
@@ -3358,7 +3358,7 @@
     },
     {
       "rule_id": "LS-VOR-1.3.5.2",
-      "text": "A támadó terhére kell ítélni a találatot: - ha az ellenfél vonal helyzetben lévő (hosszúhegy/langort) pengéjének kitérítése nélkül támad. A versenybírónak biztosítania kell, hogy a pengék puszta érintkezése önmagában nem tekinthető elégségesnek a penge eltérítése tekintetében; - ha pengét keres, de nem talál (mert ellenfele kitért) és folytatja támadását; - ha egy összetett támadás során ellenfele pengét fogott, a támadó folytatja támadását, míg ellenfele azonnal riposztozik; - ha egy összetett támadás során behajlítja karját vagy pillanatnyi szünetet tart, és ezalatt ellenfele közbetámad, miközben a támadó folytatja támadását; - ha egy összetett támadás során a támadás utolsó mozdulatát egy vívóidővel megelőző közbetámadást kap. - ha eredeti támadását kivédték és ő rimesszával, kettőzéssel vagy megismételt támadással talál, amikor az ellenfél riposztja azonnali, egyszerű és a kar visszahúzása nélkül egy vívóidő alatt végrehajtott.",
+      "text": "A támadó terhére kell ítélni a találatot:\n- ha az ellenfél vonal helyzetben lévő (hosszúhegy/langort) pengéjének kitérítése nélkül támad. A versenybírónak biztosítania kell, hogy a pengék puszta érintkezése önmagában nem tekinthető elégségesnek a penge eltérítése tekintetében;\n- ha pengét keres, de nem talál (mert ellenfele kitért) és folytatja támadását;\n- ha egy összetett támadás során ellenfele pengét fogott, a támadó folytatja támadását, míg ellenfele azonnal riposztozik;\n- ha egy összetett támadás során behajlítja karját vagy pillanatnyi szünetet tart, és ezalatt ellenfele közbetámad, miközben a támadó folytatja támadását;\n- ha egy összetett támadás során a támadás utolsó mozdulatát egy vívóidővel megelőző közbetámadást kap.\n- ha eredeti támadását kivédték és ő rimesszával, kettőzéssel vagy megismételt támadással talál, amikor az ellenfél riposztja azonnali, egyszerű és a kar visszahúzása nélkül egy vívóidő alatt végrehajtott.",
       "section": "",
       "subsection": "A találatok megítélése",
       "document": "02.a-hosszukard-VOR.md",
@@ -3423,7 +3423,7 @@
     },
     {
       "rule_id": "LS-COMBAT-1.1.3",
-      "text": "Amennyiben a küzdelem megállításáig (az 'Állj!' vezényszó elhangzásáig) mindkét vívót eltalálják és a a bíró úgy ítéli, hogy a két találat nem egy időben esett (kettős találat), az időben először eltalált vívó számít eltaláltnak (**az időben előbb érkezett találat tiszta találatnak minősül**). **A találatot adó vívó egy pontot kap**.",
+      "text": "Amennyiben a küzdelem megállításáig (az 'Állj!' vezényszó elhangzásáig)\nmindkét vívót eltalálják és a a bíró úgy ítéli, hogy a két találat nem egy időben esett (kettős találat), az időben először eltalált vívó számít eltaláltnak (**az időben előbb érkezett találat tiszta találatnak minősül**). **A találatot adó vívó egy pontot kap**.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.b-hosszukard-COMBAT.md",
@@ -3436,7 +3436,7 @@
     },
     {
       "rule_id": "LS-COMBAT-1.1.4",
-      "text": "Amennyiben a küzdelem megállításáig (az 'Állj!' vezényszó elhangzásáig) mindkét vívót eltalálják és a a bíró úgy ítéli, hogy a két találat közt nem telt el idő (időben ténylegesen egyszerre esett a két találat), **egyidejű találat van**, tehát mindkét vívó találatot kap. **Mindkét vívó 1 pontot kap**.",
+      "text": "Amennyiben a küzdelem megállításáig (az 'Állj!' vezényszó elhangzásáig)\nmindkét vívót eltalálják és a a bíró úgy ítéli, hogy a két találat közt nem telt el idő (időben ténylegesen egyszerre esett a két találat), **egyidejű találat van**, tehát mindkét vívó találatot kap. **Mindkét vívó 1 pontot kap**.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.b-hosszukard-COMBAT.md",
@@ -3488,7 +3488,7 @@
     },
     {
       "rule_id": "LS-COMBAT-1.2.1.1",
-      "text": "Amennyiben egy **egyenes kieséses mérkőzésen EGYMÁST KÖVETŐEN 5 egyidejű találat esett** - a bíró sorshúzással (pénzfeldobással) kiválasztja azt a vívót, aki a következő asszóban kedvezményezett - ha a következő asszó eredménye egyidejű találat, csak a kedvezményezett vívó kap egy pontot, ellenfelének a találatát érvényteleníteni kell. - a kedvezményezett személye asszónként változik, függetlenül az előző asszó kimenetelétől, a mérkőzés végéig. - Ha az idő lejártakor pontegyenlőség áll fenn, ezt a kedvezményezettséget el kell törölni, és az általános szabályokban foglaltak szerint kell eljárni (vö.: [GEN-6.10.4.5.2]) - csoportmérkőzéseken ez a szabály nem alkalmazandó.",
+      "text": "Amennyiben egy **egyenes kieséses mérkőzésen EGYMÁST KÖVETŐEN 5 egyidejű találat esett**\n- a bíró sorshúzással (pénzfeldobással) kiválasztja azt a vívót, aki a következő asszóban kedvezményezett\n- ha a következő asszó eredménye egyidejű találat, csak a kedvezményezett vívó kap egy pontot, ellenfelének a találatát érvényteleníteni kell.\n- a kedvezményezett személye asszónként változik, függetlenül az előző asszó kimenetelétől, a mérkőzés végéig.\n- Ha az idő lejártakor pontegyenlőség áll fenn, ezt a kedvezményezettséget el kell törölni, és az általános szabályokban foglaltak szerint kell eljárni (vö.: [GEN-6.10.4.5.2])\n- csoportmérkőzéseken ez a szabály nem alkalmazandó.",
       "section": "",
       "subsection": "Opcionális szabályok",
       "document": "02.b-hosszukard-COMBAT.md",
@@ -3503,7 +3503,7 @@
     },
     {
       "rule_id": "LS-COMBAT-1.2.1.2",
-      "text": "Ha valaki a **kapott érvényes találat után rávág/szúr a találatot elért ellenfelére**, ellenfele ezt védi és újra érvényesen megvágja vagy megszúrja, terhére két találat számítandó - **ellenfele két pontot kap** - Azonnali akcióra/után-akcióra alkalmazandó: - a támadás talál, a védekező fél sikertelen (korai/késői/tévesztett) hárítás vagy sikertelen távolsággal védekezés után azonnal riposztozik --> ezt a találatot elért vívó védi, és kontrariposztot ad - közbetámadás talál, a támadó viszont még befejezi a megindított egyszerű vagy összetett támadást --> ezt a közbetámadással találó vívó védi, és riposztozik - A versenybírónak nem szabad túl hamar „Állj”-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. A szabály célja az, hogy az eredeti vívófrázishoz és találathoz képest még releváns akciók védését jutalmazza. - Kizárólag egyetlen (után)vágásra/szúrásra alkalmazható, minden további akciót figyelmen kívül kell hagyni. - Ha ez az 'után-riposzt' nem talál vagy nem érvényes, nem jár a második pont. - Az 'Állj!' vezényszó elhangzása utáni akcióindítás az általános szabályoknak megfelelően (03-Általános) a fegyelmi vétségek első csoportjába tartozik. - _(Lásd: Lovag Arlow Gusztáv - A Kardvívás, XVI. fejezet 48. A mérkőzés szabályai, 18.)_",
+      "text": "Ha valaki a **kapott érvényes találat után rávág/szúr a találatot elért ellenfelére**, ellenfele ezt védi és újra érvényesen megvágja vagy megszúrja, terhére két találat számítandó - **ellenfele két pontot kap**\n- Azonnali akcióra/után-akcióra alkalmazandó:\n- a támadás talál, a védekező fél sikertelen (korai/késői/tévesztett) hárítás vagy sikertelen távolsággal védekezés után azonnal riposztozik --> ezt a találatot elért vívó védi, és kontrariposztot ad\n- közbetámadás talál, a támadó viszont még befejezi a megindított egyszerű vagy összetett támadást --> ezt a közbetámadással találó vívó védi, és riposztozik\n- A versenybírónak nem szabad túl hamar „Állj”-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. A szabály célja az, hogy az eredeti vívófrázishoz és találathoz képest még releváns akciók védését jutalmazza.\n- Kizárólag egyetlen (után)vágásra/szúrásra alkalmazható, minden további akciót figyelmen kívül kell hagyni.\n- Ha ez az 'után-riposzt' nem talál vagy nem érvényes, nem jár a második pont.\n- Az 'Állj!' vezényszó elhangzása utáni akcióindítás az általános szabályoknak megfelelően (03-Általános) a fegyelmi vétségek első csoportjába tartozik.\n- _(Lásd: Lovag Arlow Gusztáv - A Kardvívás, XVI. fejezet 48. A mérkőzés szabályai, 18.)_",
       "section": "",
       "subsection": "Opcionális szabályok",
       "document": "02.b-hosszukard-COMBAT.md",
@@ -3529,7 +3529,7 @@
     },
     {
       "rule_id": "LS-AB-1.1.1",
-      "text": "A találatok helyességének elbírálásánál a következőket kell figyelembe venni: - A szabályosan (két kézzel) fogott fegyverrel adott találat 2 pontot ér, - Egy kézzel fogott fegyverrel adott találat 1 pontot ér.",
+      "text": "A találatok helyességének elbírálásánál a következőket kell figyelembe venni:\n- A szabályosan (két kézzel) fogott fegyverrel adott találat 2 pontot ér,\n- Egy kézzel fogott fegyverrel adott találat 1 pontot ér.",
       "section": "",
       "subsection": "A találat érvényessége és súlyozása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3568,7 +3568,7 @@
     },
     {
       "rule_id": "LS-AB-1.2.3",
-      "text": "A találatokat kettősnek kell tekinteni, amikor - mindkét találat ugyanabban a vívófrázisban esik, - nincs egy vívóidőnyi különbség a két találat közt, tehát - a versenybíró nem tudja egyértelműen megállapítani, hogy az egyik találat befejezése megelőzte volna a másik találatot közvetlenül elérő mozdulat megkezdését. - A találatot közvetlenül elérő mozdulat lehet pl. egyszerű (direkt vagy indirekt) támadás/közbetámadás/riposzt; vagy összetett támadás/közbetámadás/riposzt esetén az utolsó mozzanat, ami a találat végső célpontjára irányul - Példák (nem akció-prioritást, hanem akció-időzítést vizsgálva): közbetámadás egyszerű támadásba, vagy összetett támadás utolsó mozzanatába, ahol mindkét akció talál.",
+      "text": "A találatokat kettősnek kell tekinteni, amikor\n- mindkét találat ugyanabban a vívófrázisban esik,\n- nincs egy vívóidőnyi különbség a két találat közt, tehát\n- a versenybíró nem tudja egyértelműen megállapítani, hogy az egyik találat befejezése megelőzte volna a másik találatot közvetlenül elérő mozdulat megkezdését.\n- A találatot közvetlenül elérő mozdulat lehet pl. egyszerű (direkt vagy indirekt) támadás/közbetámadás/riposzt; vagy összetett támadás/közbetámadás/riposzt esetén az utolsó mozzanat, ami a találat végső célpontjára irányul\n- Példák (nem akció-prioritást, hanem akció-időzítést vizsgálva): közbetámadás egyszerű támadásba, vagy összetett támadás utolsó mozzanatába, ahol mindkét akció talál.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3607,7 +3607,7 @@
     },
     {
       "rule_id": "LS-AB-1.2.5.1",
-      "text": "Egy találat után-találatnak minősül, és csökkenti az eredeti találat értékét (súlyosságát), ha a következőképp hajtják végre: - **miután valaki érvényes találatot kapott**, - azonnali, **egyszerű**, határozatlanság vagy késedelem nélkül végrehajtott után-akcióval találatot ér el; - anélkül, hogy a vívásban egyértelműen érzékelhető megszakítás, szétválás vagy a vívószerepek újraértékelődése következne be. - Példák (nem akció-prioritást, hanem akció-időzítést vizsgálva): - közbetámadásból találat esik cseles támadás közben, **mielőtt a támadás végső mozzanatát megkezdték**, de a támadó befejezi a támadást (a támadás vívóidőn kívül talál, így után-találatnak minősül); - **sikertelen védés (kapott találat) utáni egyszerű riposztta**l elért után-találat",
+      "text": "Egy találat után-találatnak minősül, és csökkenti az eredeti találat értékét (súlyosságát), ha a következőképp hajtják végre:\n- **miután valaki érvényes találatot kapott**,\n- azonnali, **egyszerű**, határozatlanság vagy késedelem nélkül végrehajtott után-akcióval találatot ér el;\n- anélkül, hogy a vívásban egyértelműen érzékelhető megszakítás, szétválás vagy a vívószerepek újraértékelődése következne be.\n- Példák (nem akció-prioritást, hanem akció-időzítést vizsgálva):\n- közbetámadásból találat esik cseles támadás közben, **mielőtt a támadás végső mozzanatát megkezdték**, de a támadó befejezi a támadást (a támadás vívóidőn kívül talál, így után-találatnak minősül);\n- **sikertelen védés (kapott találat) utáni egyszerű riposztta**l elért után-találat",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3620,7 +3620,7 @@
     },
     {
       "rule_id": "LS-AB-1.2.5.2",
-      "text": "A szabályalkalmazás egységessége érdekében a vezetőbíró az alábbi, megfigyelhető események alapján állapíthatja meg a vívófrázis jól érzékelhető megszakadását: - A versenybíró az első találat észlelésekor megállítja a küzdelmet, olyan akciókat amiket a küzdelem megállítása után intítottak, érvényteleníteni kell, ezek a fegyelmi vétségek első csoportjába tartoznak (v.ö. Általános/A mérkőzés menete). - Jól érzékelhető időbeli különbség áll fenn, ha a két találat között bármely az alábbiak közül megfigyelhető: - a fegyver egyértelmű visszahúzása, visszaemelése, vagy a fenyegetés visszavonása - következő lépés megkezdése az utánvágás, -szúrás helyett vagy előtt - olyan pillanat, amikor az ellenfél már nem áll közvetlen fenyegetés alatt",
+      "text": "A szabályalkalmazás egységessége érdekében a vezetőbíró az alábbi, megfigyelhető események alapján állapíthatja meg a vívófrázis jól érzékelhető megszakadását:\n- A versenybíró az első találat észlelésekor megállítja a küzdelmet, olyan akciókat amiket a küzdelem megállítása után intítottak, érvényteleníteni kell, ezek a fegyelmi vétségek első csoportjába tartoznak (v.ö. Általános/A mérkőzés menete).\n- Jól érzékelhető időbeli különbség áll fenn, ha a két találat között bármely az alábbiak közül megfigyelhető:\n- a fegyver egyértelmű visszahúzása, visszaemelése, vagy a fenyegetés visszavonása\n- következő lépés megkezdése az utánvágás, -szúrás helyett vagy előtt\n- olyan pillanat, amikor az ellenfél már nem áll közvetlen fenyegetés alatt",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3633,7 +3633,7 @@
     },
     {
       "rule_id": "LS-AB-1.2.6",
-      "text": "Egyidejű találatok esetén mindkét vívó találatot kapottnak tekintendő. A találatokat a következőképpen kell megítélni: - ha mindkét vívó két kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni - ha mindkét vívó egy kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni - ha az egyik vívó egy, a másik két kézzel fogott fegyverrel talált egyidejűleg, az ellen a vívó ellen kell 1 pontot ítélni, aki egy kézzel fogta a fegyvert.",
+      "text": "Egyidejű találatok esetén mindkét vívó találatot kapottnak tekintendő. A találatokat a következőképpen kell megítélni:\n- ha mindkét vívó két kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni\n- ha mindkét vívó egy kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni\n- ha az egyik vívó egy, a másik két kézzel fogott fegyverrel talált egyidejűleg, az ellen a vívó ellen kell 1 pontot ítélni, aki egy kézzel fogta a fegyvert.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3659,7 +3659,7 @@
     },
     {
       "rule_id": "LS-AB-1.2.8",
-      "text": "Kettős találatnál a második találat (függetlenül attól, hogy egy vagy két kézben fogott fegyverrel hajtották végre) csökkenti az adható pontok számát az eredeti találathoz képest: - ha az eredeti találat 2 pontot ér, a második találat a regisztrálandó pontszámot 1-re csökkenti - ha az eredeti találat 1 pontot ér, a második találat a regisztrálandó pontszámot 0-ra csökkenti.",
+      "text": "Kettős találatnál a második találat (függetlenül attól, hogy egy vagy két kézben fogott fegyverrel hajtották végre) csökkenti az adható pontok számát az eredeti találathoz képest:\n- ha az eredeti találat 2 pontot ér, a második találat a regisztrálandó pontszámot 1-re csökkenti\n- ha az eredeti találat 1 pontot ér, a második találat a regisztrálandó pontszámot 0-ra csökkenti.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3672,7 +3672,7 @@
     },
     {
       "rule_id": "LS-AB-1.2.9",
-      "text": "Az után-találat (függetlenül attól, hogy egy vagy két kézben fogott fegyverrel hajtották végre) csökkenti az adható pontok számát az eredeti találathoz képest: - ha az eredeti találat két pontot ér, az után-találat a regisztrálandó pontszámot 1-re csökkenti - ha az eredeti találat egy pontot ér, az után-találat a regisztrálandó pontszámot 0-ra csökkenti.",
+      "text": "Az után-találat (függetlenül attól, hogy egy vagy két kézben fogott fegyverrel hajtották végre) csökkenti az adható pontok számát az eredeti találathoz képest:\n- ha az eredeti találat két pontot ér, az után-találat a regisztrálandó pontszámot 1-re csökkenti\n- ha az eredeti találat egy pontot ér, az után-találat a regisztrálandó pontszámot 0-ra csökkenti.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3698,7 +3698,7 @@
     },
     {
       "rule_id": "LS-AB-1.2.10.1",
-      "text": "Ha az eredeti találatot adó vívó **pengével védi a ténylegesen végrehajtott után-akciót** (elég a védés ténye, a riposzt nem feltétel), a regisztrálandó pontszámot növeli: - ha az eredeti találat 2 pontot ér, az után-akció védése a regisztrálandó pontszámot 3-ra növeli - ha az eredeti találat 1 pontot ér, az után-akció védése a regisztrálandó pontszámot 2-re növeli",
+      "text": "Ha az eredeti találatot adó vívó **pengével védi a ténylegesen végrehajtott után-akciót** (elég a védés ténye, a riposzt nem feltétel), a regisztrálandó pontszámot növeli:\n- ha az eredeti találat 2 pontot ér, az után-akció védése a regisztrálandó pontszámot 3-ra növeli\n- ha az eredeti találat 1 pontot ér, az után-akció védése a regisztrálandó pontszámot 2-re növeli",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3737,7 +3737,7 @@
     },
     {
       "rule_id": "LS-AB-1.2.10.4",
-      "text": "Ha nem hajtottak végre tényleges után-akciót, nem lehet után-akció védését ítélni, akkor sem, - ha az eredeti találatot elért vívó támadás-ismétléssel vagy pengetámadással pengeérintkezést hoz létre. - ha az ellenfél, miután eltalálták, olyan akciót indít, ami nem minősül után-akciónak (késlekedik, megszakadt a vívófrázis, állj után indított akció). - V.ö.: fentebb, Után-találatok, és feltételei",
+      "text": "Ha nem hajtottak végre tényleges után-akciót, nem lehet után-akció védését ítélni, akkor sem,\n- ha az eredeti találatot elért vívó támadás-ismétléssel vagy pengetámadással pengeérintkezést hoz létre.\n- ha az ellenfél, miután eltalálták, olyan akciót indít, ami nem minősül után-akciónak (késlekedik, megszakadt a vívófrázis, állj után indított akció).\n- V.ö.: fentebb, Után-találatok, és feltételei",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -3906,7 +3906,7 @@
     },
     {
       "rule_id": "DIS-1.3.5",
-      "text": "A verseny során, ha egy vívó nem jelenik meg a küzdőtéren amikor a bíró szólítja: - A nem megjelent vívó sárga lapot kap; - Az első hívást követő egy perc elteltével másodszor is szólítják, ha ekkor sem jelenik meg, az érintett vívó piros lapot kap; - A második hívást követő egy perc elteltével egy harmadik és utolsó hívást kap, melyet távolmaradás esetén a versenyszámból való kizárás követ.",
+      "text": "A verseny során, ha egy vívó nem jelenik meg a küzdőtéren amikor a bíró szólítja:\n- A nem megjelent vívó sárga lapot kap;\n- Az első hívást követő egy perc elteltével másodszor is szólítják, ha ekkor sem jelenik meg, az érintett vívó piros lapot kap;\n- A második hívást követő egy perc elteltével egy harmadik és utolsó hívást kap, melyet távolmaradás esetén a versenyszámból való kizárás követ.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "A versenyzők",
       "document": "03-etikett_fegyelem.md",
@@ -4036,7 +4036,7 @@
     },
     {
       "rule_id": "DIS-2.1.3",
-      "text": "A bíró megszakíthatja a mérkőzést, ha az zavarossá, veszélyessé válik, vagy már nem tudja egyértelműen megítélni az akciókat. Objektív találatjelző berendezés hiányában a menetek elbírálásának alapját az akciót megfigyelő bíró és segédje észlelései képezik. A vívók a végső döntés meghozatala előtt fordulhatnak a bíróhoz pontosításért vagy felülvizsgálatért. Ténymegállapítások kapcsán a bírók ítéletét a versenyzők nem kérdőjelezhetik meg, (kivéve a videobíráskodás eseteit), és ha egy vívó ezt az elvet megszegi, az 1. csoportba tartozó vétséget követ el. Ténymegállapításnak számít - nem kizárólagosan - az arénában történtek megítélése és elemzése, találatok érvényessége és prioritása, az arénából kilépés tényének megállapítása, egy vívó viselkedésének 3. vagy 4. csoportba sorolása, stb. De ha egy bíró egyértelműen nem ismer vagy félreért meghatározott szabály(oka)t, vagy azokat szabályokba ütköző módon alkalmazza, a versenyzők személyesen felülvizsgálatot kérhetnek. A felülvizsgálatot kérheti: - egyéni versenyszámban a vívó, - csapat versenyszámban a vívónak vagy a csapatkapitány; udvariasan, formalitás nélkül, azonnal szóban a bírótól, mielőtt bármilyen a kérdéses helyzet után esett találattal kapcsolatban döntés születne. Ha a bíró kitart a véleménye mellett, a főbíró jár el az ügyben, aki döntést hozhat, illetve felügyeletet biztosíthat a mérkőzés további részében. Egy ilyen kérelem megalapozatlansága esetén a vívó a fegyelmi vétségek 1. csoportjára vonatkozó szabályok szerint büntetendő.",
+      "text": "A bíró megszakíthatja a mérkőzést, ha az zavarossá, veszélyessé válik, vagy már nem tudja egyértelműen megítélni az akciókat. Objektív találatjelző berendezés hiányában a menetek elbírálásának alapját az akciót megfigyelő bíró és segédje észlelései képezik. A vívók a végső döntés meghozatala előtt fordulhatnak a bíróhoz pontosításért vagy felülvizsgálatért. Ténymegállapítások kapcsán a bírók ítéletét a versenyzők nem kérdőjelezhetik meg, (kivéve a videobíráskodás eseteit), és ha egy vívó ezt az elvet megszegi, az 1. csoportba tartozó vétséget követ el. Ténymegállapításnak számít - nem kizárólagosan - az arénában történtek megítélése és elemzése, találatok érvényessége és prioritása, az arénából kilépés tényének megállapítása, egy vívó viselkedésének 3. vagy 4. csoportba sorolása, stb. De ha egy bíró egyértelműen nem ismer vagy félreért meghatározott szabály(oka)t, vagy azokat szabályokba ütköző módon alkalmazza, a versenyzők személyesen felülvizsgálatot kérhetnek.\nA felülvizsgálatot kérheti:\n- egyéni versenyszámban a vívó,\n- csapat versenyszámban a vívónak vagy a csapatkapitány;\nudvariasan, formalitás nélkül, azonnal szóban a bírótól, mielőtt bármilyen a kérdéses helyzet után esett találattal kapcsolatban döntés születne. Ha a bíró kitart a véleménye mellett, a főbíró jár el az ügyben, aki döntést hozhat, illetve felügyeletet biztosíthat a mérkőzés további részében. Egy ilyen kérelem megalapozatlansága esetén a vívó a fegyelmi vétségek 1. csoportjára vonatkozó szabályok szerint büntetendő.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Jogkörrel bíró szervek, személyek",
       "document": "03-etikett_fegyelem.md",
@@ -4127,7 +4127,7 @@
     },
     {
       "rule_id": "DIS-3.1.1.1",
-      "text": "Víváshoz kötődő büntetések, amelyek a vívás közben elkövetett vétségek esetén alkalmazhatóak: - területvesztés - a ténylegesen elért találat meg nem adása, - a ténylegesen nem kapott találat megítélése, - a versenyszámból való kizárás.",
+      "text": "Víváshoz kötődő büntetések, amelyek a vívás közben elkövetett vétségek esetén alkalmazhatóak:\n- területvesztés\n- a ténylegesen elért találat meg nem adása,\n- a ténylegesen nem kapott találat megítélése,\n- a versenyszámból való kizárás.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "A büntetések osztályozása",
       "document": "03-etikett_fegyelem.md",
@@ -4140,7 +4140,7 @@
     },
     {
       "rule_id": "DIS-3.1.2",
-      "text": "Fegyelmi büntetések, amelyek a rend, a fegyelem és a sportszellem ellen elkövetett vétségek esetén alkalmazhatóak: - Ténylegesen nem kapott találat odaítélése - versenyszámból való kizárás - A teljes bajnokságból való kizárás - A verseny helyszínéről való kiutasítás - a Szövetség vagy az adott Szervezőcsapat által szervezett rendezvényekről meghatározott időre történő kizárás",
+      "text": "Fegyelmi büntetések, amelyek a rend, a fegyelem és a sportszellem ellen elkövetett vétségek esetén alkalmazhatóak:\n- Ténylegesen nem kapott találat odaítélése\n- versenyszámból való kizárás\n- A teljes bajnokságból való kizárás\n- A verseny helyszínéről való kiutasítás\n- a Szövetség vagy az adott Szervezőcsapat által szervezett rendezvényekről meghatározott időre történő kizárás",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "A büntetések osztályozása",
       "document": "03-etikett_fegyelem.md",
@@ -4153,7 +4153,7 @@
     },
     {
       "rule_id": "DIS-3.1.2",
-      "text": "A felsorolt büntetések mindegyikét –a végleges eltiltást kivéve— alkalmazhatják a versenyen az erre feljogosított hatóságok--a Versenybíró és a szervezőcsapat.",
+      "text": "A felsorolt büntetések mindegyikét –a végleges eltiltást kivéve— alkalmazhatják a\nversenyen az erre feljogosított hatóságok--a Versenybíró és a szervezőcsapat.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "A büntetések osztályozása",
       "document": "03-etikett_fegyelem.md",
@@ -4257,7 +4257,7 @@
     },
     {
       "rule_id": "DIS-3.3.5",
-      "text": "Egy vívó diszkvalifikálása jóhiszeműsége esetén nem szükségszerűen jár határozott vagy végleges eltiltásával; csalárd szándék esetén ugyanakkor további büntetés kiszabása kérhető ellene.",
+      "text": "Egy vívó diszkvalifikálása jóhiszeműsége esetén nem szükségszerűen jár határozott vagy\nvégleges eltiltásával; csalárd szándék esetén ugyanakkor további büntetés kiszabása\nkérhető ellene.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
@@ -4270,7 +4270,7 @@
     },
     {
       "rule_id": "DIS-3.3.6",
-      "text": "Az a csapat, amely olyan versenyzővel állt ki, akit diszkvalifikáltak, maga is a vívó sorsára jut és diszkvalifikálják.",
+      "text": "Az a csapat, amely olyan versenyzővel állt ki, akit diszkvalifikáltak, maga is a vívó\nsorsára jut és diszkvalifikálják.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
@@ -4283,7 +4283,7 @@
     },
     {
       "rule_id": "DIS-3.3.7",
-      "text": "A kizárásra vonatkozó következményeket megfelelően alkalmazni kell a diszkvalifikálásra is (ld.: t.149. szakasz)",
+      "text": "A kizárásra vonatkozó következményeket megfelelően alkalmazni kell a diszkvalifikálásra\nis (ld.: t.149. szakasz)",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
@@ -4296,7 +4296,7 @@
     },
     {
       "rule_id": "DIS-3.3.8",
-      "text": "Ha súlyosabb büntetés kiszabása nem indokolt, a vívót vagy a hivatalos személyt megrovásban kell részesíteni.",
+      "text": "Ha súlyosabb büntetés kiszabása nem indokolt, a vívót vagy a hivatalos személyt\nmegrovásban kell részesíteni.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
@@ -4389,7 +4389,7 @@
     },
     {
       "rule_id": "DIS-4.1.3",
-      "text": "Ugyanakkor, ha a csapatot egy versenyen kizárják, mert egyik tagja fekete lapot kapott, a csapat a további versenyekből nincs kizárva. Csak a megbüntetett vívó kerül a t.159. szakasszal összhangban eltiltásra és az eltiltás hatálya alatt semmilyen csapatnak nem lehet tagja. <!-- TODO '07-etikett_fegyelem'/'Büntetések'/'A büntetések típusai (csoportjai)'/2. pont alapján, és az eltiltás alatt nem választható semmilyen csapat tagjának. Vö. '06-Szervezés'/'Csapatversenyek'/3/8  (vö.: o.99.8).-->",
+      "text": "Ugyanakkor, ha a csapatot egy versenyen kizárják, mert egyik tagja fekete lapot kapott, a csapat a további versenyekből nincs kizárva. Csak a megbüntetett vívó kerül a t.159. szakasszal összhangban eltiltásra és az eltiltás hatálya alatt semmilyen csapatnak nem lehet tagja.\n<!-- TODO\n'07-etikett_fegyelem'/'Büntetések'/'A büntetések típusai (csoportjai)'/2. pont alapján, és az eltiltás alatt nem választható semmilyen csapat tagjának. Vö. '06-Szervezés'/'Csapatversenyek'/3/8  (vö.: o.99.8).-->",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
@@ -4469,7 +4469,7 @@
     },
     {
       "rule_id": "DIS-4.1.5.4",
-      "text": "a verseny helyszínéről való kitiltás (bármely, a verseny rendjét zavaró személy ellen alkalmazható)",
+      "text": "a verseny helyszínéről való kitiltás (bármely, a verseny rendjét zavaró személy ellen\nalkalmazható)",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
@@ -4588,7 +4588,7 @@
     },
     {
       "rule_id": "DIS-4.3.14",
-      "text": "A páston kívüli személy rendzavarása esetén: - első alkalommal SÁRGA LAPOS figyelmeztetés jár, amely a verseny egészére vonatkozik. Ezt a mérkőzés jegyzőkönyvén fel kell tüntetni, és a szervező teamnek  rögzítenie kell. - A verseny ideje alatt második elkövetéskor FEKETE LAP a büntetés. - A páston vagy a páston kívül elkövetett különösen jelentős súlyú rendzavarás esetén a versenybíró a vétkes személyt azonnal kizárhatja vagy kitilthatja.",
+      "text": "A páston kívüli személy rendzavarása esetén:\n- első alkalommal SÁRGA LAPOS figyelmeztetés jár, amely a verseny egészére vonatkozik. Ezt a mérkőzés jegyzőkönyvén fel kell tüntetni, és a szervező teamnek  rögzítenie kell.\n- A verseny ideje alatt második elkövetéskor FEKETE LAP a büntetés.\n- A páston vagy a páston kívül elkövetett különösen jelentős súlyú rendzavarás esetén a versenybíró a vétkes személyt azonnal kizárhatja vagy kitilthatja.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
@@ -4653,7 +4653,7 @@
     },
     {
       "rule_id": "DIS-4.3.19",
-      "text": "Egy találat nem semmisíthető meg pusztán amiatt, hogy szabályszegés történt, ha: - a szabályszegés nem vett közvetlenül részt a pontszerző akció végrehajtásában (a szabálytalanság elkövetése és a találat közt a vívószerepek újraértékelődtek); - a szabályszegés nem állt összefüggésben azokkal a taktikai vagy fizikai feltételekkel, amelyek a találat létrejöttét lehetővé tették.",
+      "text": "Egy találat nem semmisíthető meg pusztán amiatt, hogy szabályszegés történt, ha:\n- a szabályszegés nem vett közvetlenül részt a pontszerző akció végrehajtásában (a szabálytalanság elkövetése és a találat közt a vívószerepek újraértékelődtek);\n- a szabályszegés nem állt összefüggésben azokkal a taktikai vagy fizikai feltételekkel, amelyek a találat létrejöttét lehetővé tették.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Találat megsemmisítése szabályszegés miatt",
       "document": "03-etikett_fegyelem.md",
@@ -4666,7 +4666,7 @@
     },
     {
       "rule_id": "DIS-4.3.20",
-      "text": "A táblázat célja a megfelelő összefoglalás: nem helyettesíti a vonatkozó rendelkezések szövegét, amelyek kétség esetén irányadók. A táblázatot lásd: <table border=\"1\" width=\"100%\"> <colgroup> <col width=\"4%\"> <col width=\"56%\"> <col width=\"10%\"> <col width=\"10%\"> <col width=\"10%\"> <col width=\"10%\"> </colgroup> <thead> <tr> <td> </td> <td>OFFENCE </td> <td>ART. </td> <td colspan=\"3\" >PENALTY </td> </tr> </thead> <tbody> <tr> <td> </td> <td> <h3>Non-presentation</h3> </td> <td> </td> <td colspan=\"3\" > </td> </tr> <tr> <td>0.1 </td> <td>Non presentation when called by the referee ten minutes before the time indicated for start of pool/bouts of direct elimination </td> <td> </td> <td colspan=\"3\" bgcolor=\"#787878\">Elimination from the tournament </td> </tr> <tr> <td>0.2 </td> <td>Non presentation on the arena ready to fence when ordered by the referee. Three calls, with one minute intervals. </td> <td> </td> <td bgcolor=\"#E3D059\">1st call </td> <td bgcolor=\"#E36159\">2nd call </td> <td bgcolor=\"#787878\">Elim. </td> </tr> </tbody> </table> <table border=\"1\" width=\"100%\"> <colgroup> <col width=\"4%\"> <col width=\"56%\"> <col width=\"10%\"> <col width=\"10%\"> <col width=\"10%\"> <col width=\"10%\"> </colgroup> <thead> <tr> <td> </td> <td colspan=\"2\" > <h3>1ST GROUP</h3> </td> <td>1st offence </td> <td>2nd offence </td> <td>3rd offence and subs. </td> </tr> </thead> <tbody> <tr> <td>1.1 </td> <td>Leaving the arena without permission </td> <td> </td> <td rowspan=\"156\" bgcolor=\"#E3D059\">YELLOW </td> <td rowspan=\"16\" bgcolor=\"#E36159\">RED </td> <td rowspan=\"16\" bgcolor=\"#E36159\">RED </td> </tr> <tr> <td>1.2 </td> <td>Turning back on opponent </td> <td> </td> </tr> <tr> <td>1.3 </td> <td>Covering/substitution of valid target </td> <td> </td> </tr> <tr> <td>1.4 </td> <td>Interruption of the bout without valid reason </td> <td> </td> </tr> <tr> <td>1.5 </td> <td>Attacking forbidden targets (back of the head, spine, foot, back of the knee). Hit with crossguard. Attack with the dagger in rapier. Wrestling in rapier. </td> <td> </td> </tr> <tr> <td>1.6 </td> <td>Clothing/equipment nonconforming. Absence of regulation weapon </td> <td> </td> </tr> <tr> <td>1.7 </td> <td>Hitting the arena floor with an uncontrolled action </td> <td> </td> </tr> <tr> <td>1.8 </td> <td>Refusal to obey the referee (including actions before “Fence!” or after “Halt!”) </td> <td> </td> </tr> <tr> <td>1.9 </td> <td>Disorderly fencing *; taking off mask before the Referee calls 'Halt!'; dressing or undressing in the arena </td> <td> </td> </tr> <tr> <td>1.10 </td> <td>Irregular moves in the arena *; throwing the opponent by lifting their both of their feet off the ground * </td> <td> </td> </tr> <tr> <td>1.11 </td> <td>Initiating wrestling/grappling actions when the opponent did not agree to wrestle in the match * </td> <td> </td> </tr> <tr> <td>1.12 </td> <td>Unjustified appeal </td> <td> </td> </tr> <tr> <td>1.13 </td> <td>Hitting with the fists and kicking * </td> <td> </td> </tr> <tr> <td>1.14 </td> <td>Removing the opponent‘s mask or any other protective equipment. * </td> <td> </td> </tr> <tr> <td>1.15 </td> <td>Losing or dropping the cloak during a rapier bout </td> <td> </td> </tr> <tr> <td>1.15 </td> <td>Entering the Arena enclosure without the Referee’s permission + </td> <td> </td> </tr> </tbody> </table> <table border=\"1\" width=\"100%\"> <colgroup> <col width=\"4%\"> <col width=\"56%\"> <col width=\"10%\"> <col width=\"10%\"> <col width=\"10%\"> <col width=\"10%\"> </colgroup> <thead> <tr> <td> </td> <td colspan=\"2\" > <h3>2ND GROUP</h3> </td> <td>1st offence </td> <td>2nd offence </td> <td>3rd offence and subs. </td> </tr> </thead> <tbody> <tr> <td>2.1 </td> <td>Throwing the weapon * </td> <td> </td> <td rowspan=\"4\" bgcolor=\"#E36159\">RED </td> <td rowspan=\"4\" bgcolor=\"#E36159\">RED </td> <td rowspan=\"4\" bgcolor=\"#E36159\">RED </td> </tr> <tr> <td>2.2 </td> <td>Demanding a break for claimed injury/cramp unjustified by the doctor </td> <td> </td> </tr> <tr> <td>2.3 </td> <td>Absence of equipment control marks * </td> <td> </td> </tr> <tr> <td>2.4 </td> <td>Dangerous, violent or vindictive action. * Attack with the dagger in rapier bouts. * </td> <td> </td> </tr> <tbody> </table> <table border=\"1\" width=\"100%\"> <colgroup> <col width=\"4%\"> <col width=\"56%\"> <col width=\"10%\"> <col width=\"15%\"> <col width=\"15%\"> </colgroup> <thead> <tr> <td> </td> <td colspan=\"2\" > <h3>3RD GROUP</h3> </td> <td>1st offence </td> <td>2nd offence </td> </tr> </thead> <tbody> <tr> <td>3.1 </td> <td>Fencer disturbing order when in the arena. In the most serious cases the Referee may award a black card immediately. </td> <td> </td> <td bgcolor=\"#E36159\">RED<sup>4</sup> (even if the fencer at fault has already received a Red Card as a result of offenses in the 1st or 2nd groups) </td> <td rowspan=\"2\" bgcolor=\"#787878\">BLACK<sup>1 </sup>(only after the fencer has committed another offence in this third group.) </td> </tr> <tr> <td>3.2 </td> <td>Dishonest fencing * </td> <td> </td> <td bgcolor=\"#E36159\">RED </td> </tr> <tr> <td>3.3 </td> <td>Any person not in arena disturbing order. In the most serious cases the Referee may award a black card immediately. </td> <td> </td> <td bgcolor=\"#E3D059\">YELLOW<sup>4</sup> (valid for the whole of the competition) </td> <td bgcolor=\"#787878\">BLACK<sup>3</sup> </td> </tr> <tr> <td> </td> <td>Offence against sportsmanship * - In the most serious cases the Referee may award a black card immediately. </td> <td> </td> <td bgcolor=\"#E3D059\">YELLOW </td> <td bgcolor=\"#787878\">BLACK <sup>1 or 2</sup> </td> </tr> </tbody> </table> <table border=\"1\" width=\"100%\"> <colgroup> <col width=\"4%\"> <col width=\"56%\"> <col width=\"10%\"> <col width=\"30%\"> </colgroup> <thead> <tr> <td> </td> <td colspan=\"2\" > <h3>4TH GROUP</h3> </td> <td>1st offence </td> </tr> </thead> <tbody> <tr> <td>4.1 </td> <td>Deliberate brutality. Throwing the opponent onto their head *. Neck-wrenching and small-joint manipulation techniques. * Failing to stop dangerous submission holds before full application (both competitors may be penalised, the victim as well if he/she did not submit). * Throwing the dagger at the opponent in rapier bouts * </td> <td> </td> <td rowspan=\"5\" bgcolor=\"#787878\">BLACK </td> </tr> <tr> <td>4.2 </td> <td>Causing injury or threat of injury with equipment non-conforming to the Rules without or with imitated / transferred weapon control marks. </td> <td> </td> </tr> <tr> <td>4.3 </td> <td>Offence against sportsmanship </td> <td> </td> </tr> <tr> <td>4.4 </td> <td>Refusal of a fencer to fence another competitor properly entered </td> <td> </td> </tr> <tr> <td>4.5 </td> <td>Profiting from collusion, favouring an opponent </td> <td> </td> </tr> </tbody> </table> <table border=\"1\" width=\"100%\"> <colgroup> <col width=\"15%\"> <col width=\"85%\"> </colgroup> <thead> <tr> <td colspan=\"2\"> <h3>EXPLANATIONS</h3> </td> </tr> </thead> <tbody> <tr> <td>*</td> <td>Annulling of any hit scored by the competitor at fault</td> </tr> <tr> <td>+</td> <td>Special YELLOW CARD for the whole team and valid for the whole team match. If, during the same team match, a fencer commits an offence of the 1st group the Referee penalises with a RED CARD each time.</td> </tr> <tr> <td bgcolor=\"#E3D059\">YELLOW CARD </td> <td>Warning valid for the bout. If a competitor commits an offence of the 1st group after having been penalized with a RED CARD, for whatever reason, he/she receives a further RED CARD. </td> </tr> <tr> <td bgcolor=\"#E36159\">RED CARD </td> <td>Penalty hit </td> </tr> <tr> <td bgcolor=\"#787878\">BLACK CARD </td> <td>Exclusion from the competition, suspension from the remainder of the tournament. Possible suspension from future events organised by the Federation or the Organiser. A competitor only receives a BLACK CARD in the 3rd group if the offender previously committed an offence in this Third Group (demonstrated by a RED CARD). <p> <p>1. Exclusion from competition <p>2. Exclusion from tournament <p>3. Expulsion from venue <p>4. In serious cases, the referee may exclude/expel immediately </td> </tr> </tbody> </table>",
+      "text": "A táblázat célja a megfelelő összefoglalás: nem helyettesíti a vonatkozó rendelkezések szövegét, amelyek kétség esetén irányadók. A táblázatot lásd:\n<table border=\"1\" width=\"100%\">\n<colgroup>\n<col width=\"4%\">\n<col width=\"56%\">\n<col width=\"10%\">\n<col width=\"10%\">\n<col width=\"10%\">\n<col width=\"10%\">\n</colgroup>\n<thead>\n<tr>\n<td>\n</td>\n<td>OFFENCE\n</td>\n<td>ART.\n</td>\n<td colspan=\"3\" >PENALTY\n</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>\n</td>\n<td>\n<h3>Non-presentation</h3>\n</td>\n<td>\n</td>\n<td colspan=\"3\" >\n</td>\n</tr>\n<tr>\n<td>0.1\n</td>\n<td>Non presentation when called by the referee ten minutes before the time indicated for start of pool/bouts of direct elimination\n</td>\n<td>\n</td>\n<td colspan=\"3\" bgcolor=\"#787878\">Elimination from the tournament\n</td>\n</tr>\n<tr>\n<td>0.2\n</td>\n<td>Non presentation on the arena ready to fence when ordered by the referee. Three calls, with one minute intervals.\n</td>\n<td>\n</td>\n<td bgcolor=\"#E3D059\">1st call\n</td>\n<td bgcolor=\"#E36159\">2nd call\n</td>\n<td bgcolor=\"#787878\">Elim.\n</td>\n</tr>\n</tbody>\n</table>\n<table border=\"1\" width=\"100%\">\n<colgroup>\n<col width=\"4%\">\n<col width=\"56%\">\n<col width=\"10%\">\n<col width=\"10%\">\n<col width=\"10%\">\n<col width=\"10%\">\n</colgroup>\n<thead>\n<tr>\n<td>\n</td>\n<td colspan=\"2\" >\n<h3>1ST GROUP</h3>\n</td>\n<td>1st offence\n</td>\n<td>2nd offence\n</td>\n<td>3rd offence and subs.\n</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>1.1\n</td>\n<td>Leaving the arena without permission\n</td>\n<td>\n</td>\n<td rowspan=\"156\" bgcolor=\"#E3D059\">YELLOW\n</td>\n<td rowspan=\"16\" bgcolor=\"#E36159\">RED\n</td>\n<td rowspan=\"16\" bgcolor=\"#E36159\">RED\n</td>\n</tr>\n<tr>\n<td>1.2\n</td>\n<td>Turning back on opponent\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.3\n</td>\n<td>Covering/substitution of valid target\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.4\n</td>\n<td>Interruption of the bout without valid reason\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.5\n</td>\n<td>Attacking forbidden targets (back of the head, spine, foot, back of the knee). Hit with crossguard. Attack with the dagger in rapier. Wrestling in rapier.\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.6\n</td>\n<td>Clothing/equipment nonconforming. Absence of regulation weapon\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.7\n</td>\n<td>Hitting the arena floor with an uncontrolled action\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.8\n</td>\n<td>Refusal to obey the referee (including actions before “Fence!” or after “Halt!”)\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.9\n</td>\n<td>Disorderly fencing *; taking off mask before the Referee calls 'Halt!'; dressing or undressing in the arena\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.10\n</td>\n<td>Irregular moves in the arena *; throwing the opponent by lifting their both of their feet off the ground *\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.11\n</td>\n<td>Initiating wrestling/grappling actions when the opponent did not agree to wrestle in the match *\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.12\n</td>\n<td>Unjustified appeal\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.13\n</td>\n<td>Hitting with the fists and kicking *\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.14\n</td>\n<td>Removing the opponent‘s mask or any other protective equipment. *\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.15\n</td>\n<td>Losing or dropping the cloak during a rapier bout\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>1.15\n</td>\n<td>Entering the Arena enclosure without the Referee’s permission +\n</td>\n<td>\n</td>\n</tr>\n</tbody>\n</table>\n<table border=\"1\" width=\"100%\">\n<colgroup>\n<col width=\"4%\">\n<col width=\"56%\">\n<col width=\"10%\">\n<col width=\"10%\">\n<col width=\"10%\">\n<col width=\"10%\">\n</colgroup>\n<thead>\n<tr>\n<td>\n</td>\n<td colspan=\"2\" >\n<h3>2ND GROUP</h3>\n</td>\n<td>1st offence\n</td>\n<td>2nd offence\n</td>\n<td>3rd offence and subs.\n</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>2.1\n</td>\n<td>Throwing the weapon *\n</td>\n<td>\n</td>\n<td rowspan=\"4\" bgcolor=\"#E36159\">RED\n</td>\n<td rowspan=\"4\" bgcolor=\"#E36159\">RED\n</td>\n<td rowspan=\"4\" bgcolor=\"#E36159\">RED\n</td>\n</tr>\n<tr>\n<td>2.2\n</td>\n<td>Demanding a break for claimed injury/cramp unjustified by the doctor\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>2.3\n</td>\n<td>Absence of equipment control marks *\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>2.4\n</td>\n<td>Dangerous, violent or vindictive action. * Attack with the dagger in rapier bouts. *\n</td>\n<td>\n</td>\n</tr>\n<tbody>\n</table>\n<table border=\"1\" width=\"100%\">\n<colgroup>\n<col width=\"4%\">\n<col width=\"56%\">\n<col width=\"10%\">\n<col width=\"15%\">\n<col width=\"15%\">\n</colgroup>\n<thead>\n<tr>\n<td>\n</td>\n<td colspan=\"2\" >\n<h3>3RD GROUP</h3>\n</td>\n<td>1st offence\n</td>\n<td>2nd offence\n</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>3.1\n</td>\n<td>Fencer disturbing order when in the arena. In the most serious cases the Referee may award a black card immediately.\n</td>\n<td>\n</td>\n<td bgcolor=\"#E36159\">RED<sup>4</sup> (even if the fencer at fault has already received a Red Card as a result of offenses in the 1st or 2nd groups)\n</td>\n<td rowspan=\"2\" bgcolor=\"#787878\">BLACK<sup>1 </sup>(only after the fencer has committed another offence in this third group.)\n</td>\n</tr>\n<tr>\n<td>3.2\n</td>\n<td>Dishonest fencing *\n</td>\n<td>\n</td>\n<td bgcolor=\"#E36159\">RED\n</td>\n</tr>\n<tr>\n<td>3.3\n</td>\n<td>Any person not in arena disturbing order. In the most serious cases the Referee may award a black card immediately.\n</td>\n<td>\n</td>\n<td bgcolor=\"#E3D059\">YELLOW<sup>4</sup> (valid for the whole of the competition)\n</td>\n<td bgcolor=\"#787878\">BLACK<sup>3</sup>\n</td>\n</tr>\n<tr>\n<td>\n</td>\n<td>Offence against sportsmanship * - In the most serious cases the Referee may award a black card immediately.\n</td>\n<td>\n</td>\n<td bgcolor=\"#E3D059\">YELLOW\n</td>\n<td bgcolor=\"#787878\">BLACK <sup>1 or 2</sup>\n</td>\n</tr>\n</tbody>\n</table>\n<table border=\"1\" width=\"100%\">\n<colgroup>\n<col width=\"4%\">\n<col width=\"56%\">\n<col width=\"10%\">\n<col width=\"30%\">\n</colgroup>\n<thead>\n<tr>\n<td>\n</td>\n<td colspan=\"2\" >\n<h3>4TH GROUP</h3>\n</td>\n<td>1st offence\n</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>4.1\n</td>\n<td>Deliberate brutality. Throwing the opponent onto their head *. Neck-wrenching and small-joint manipulation techniques. * Failing to stop dangerous submission holds before full application (both competitors may be penalised, the victim as well if he/she did not submit). * Throwing the dagger at the opponent in rapier bouts *\n</td>\n<td>\n</td>\n<td rowspan=\"5\" bgcolor=\"#787878\">BLACK\n</td>\n</tr>\n<tr>\n<td>4.2\n</td>\n<td>Causing injury or threat of injury with equipment non-conforming to the Rules without or with imitated / transferred weapon control marks.\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>4.3\n</td>\n<td>Offence against sportsmanship\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>4.4\n</td>\n<td>Refusal of a fencer to fence another competitor properly entered\n</td>\n<td>\n</td>\n</tr>\n<tr>\n<td>4.5\n</td>\n<td>Profiting from collusion, favouring an opponent\n</td>\n<td>\n</td>\n</tr>\n</tbody>\n</table>\n<table border=\"1\" width=\"100%\">\n<colgroup>\n<col width=\"15%\">\n<col width=\"85%\">\n</colgroup>\n<thead>\n<tr>\n<td colspan=\"2\">\n<h3>EXPLANATIONS</h3>\n</td>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>*</td>\n<td>Annulling of any hit scored by the competitor at fault</td>\n</tr>\n<tr>\n<td>+</td>\n<td>Special YELLOW CARD for the whole team and valid for the whole team\nmatch. If, during the same team match, a fencer commits an offence of the\n1st group the Referee penalises with a RED CARD each time.</td>\n</tr>\n<tr>\n<td bgcolor=\"#E3D059\">YELLOW CARD\n</td>\n<td>Warning valid for the bout. If a competitor commits an offence of the 1st group after having been penalized with a RED CARD, for whatever reason, he/she receives a further RED CARD.\n</td>\n</tr>\n<tr>\n<td bgcolor=\"#E36159\">RED CARD\n</td>\n<td>Penalty hit\n</td>\n</tr>\n<tr>\n<td bgcolor=\"#787878\">BLACK CARD\n</td>\n<td>Exclusion from the competition, suspension from the remainder of the tournament.\nPossible suspension from future events organised by the Federation or the Organiser.\nA competitor only receives a BLACK CARD in the 3rd group if the offender previously committed an offence in this Third Group (demonstrated by a RED CARD).\n<p>\n<p>1. Exclusion from competition\n<p>2. Exclusion from tournament\n<p>3. Expulsion from venue\n<p>4. In serious cases, the referee may exclude/expel immediately\n</td>\n</tr>\n</tbody>\n</table>",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Vétségek és büntetések táblázata.",
       "document": "03-etikett_fegyelem.md",
@@ -4722,7 +4722,7 @@
     },
     {
       "rule_id": "DIS-5.2.3",
-      "text": "Ilyen (vö.: [DIS-5.2.1]) fellebbezés előterjesztésére - egyéni versenyszámban a versenyző, - csapat versenyszámban a versenyző vagy a csapatkapitány jogosult. A fellebbezés nincs alakszerűséghez kötve, az azonnali és udvarias formában, szóban terjeszthető a versenybíró elé a soron következő találatra vonatkozó döntés meghozatalát megelőzően.",
+      "text": "Ilyen (vö.: [DIS-5.2.1]) fellebbezés előterjesztésére\n- egyéni versenyszámban a versenyző,\n- csapat versenyszámban a versenyző vagy a csapatkapitány jogosult.\nA fellebbezés nincs alakszerűséghez kötve, az azonnali és udvarias formában, szóban terjeszthető a versenybíró elé a soron következő találatra vonatkozó döntés meghozatalát megelőzően.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Óvás és fellebbezés",
       "document": "03-etikett_fegyelem.md",
@@ -4737,7 +4737,7 @@
     },
     {
       "rule_id": "DIS-5.2.4",
-      "text": "Amennyiben a versenybíró fenntartja álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHSz ellenőr jogosult a fellebbezés elbírálására . Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.3.20] szakaszokkal összhangban büntetendő.",
+      "text": "Amennyiben a versenybíró fenntartja álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHSz ellenőr jogosult a fellebbezés elbírálására . Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.3.20]\nszakaszokkal összhangban büntetendő.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Óvás és fellebbezés",
       "document": "03-etikett_fegyelem.md",
@@ -4808,7 +4808,7 @@
     },
     {
       "rule_id": "DIS-5.3.2",
-      "text": "Ismétlődő vétkesség esetében a kiszabni rendelt büntetés a következő: - Versenyszámból való kizárás, ha a korábbi büntetés megrovás volt. - Diszkvalifikálás a teljes versenyből, ha a korábbi büntetés versenyszámból való diszkvalifikálás vagy kizárás volt.",
+      "text": "Ismétlődő vétkesség esetében a kiszabni rendelt büntetés a következő:\n- Versenyszámból való kizárás, ha a korábbi büntetés megrovás volt.\n- Diszkvalifikálás a teljes versenyből, ha a korábbi büntetés versenyszámból való diszkvalifikálás vagy kizárás volt.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Ismétlődő vétség",
       "document": "03-etikett_fegyelem.md",
@@ -4886,7 +4886,7 @@
     },
     {
       "rule_id": "ORG-2.1.4",
-      "text": "Az összegzett rangsor tábla a következő módon alakul ki: - A csoportkör összefoglaló tábláán szereplő értékek összegzésével ki kell számítani a két szükséges indexet (V/M, HS-HR). - Az kezdeti besoroláshoz szükséges első index a győzelmek számának a mérkőzések számával való osztásával kerül meghatározásra, a V/M egyenlet alapján. - A legmagasabb (maximum 1) indexszel rendelkező vívó kerül a tábla első helyére. - Az esetben, ha az első index értéke valamely vívók esetén megegyezik, az egyenlő indexű vívók rangsorolásához egy másodlagos index kerül meghatározásra, a HS – HR képlet alapján, az adott (Hits Scored) és a kapott (Hits Received) találatok számának különbsége. - Ha valamely vívók mindkét indexe (V / M és HS – HR) megegyezik, a több találatot adott versenyző kerül előrébb a rangsorban. - Kettő vagy több vívó közti abszolút egyenlőség esetén a sorrend sorshúzással kerül meghatározásra.",
+      "text": "Az összegzett rangsor tábla a következő módon alakul ki:\n- A csoportkör összefoglaló tábláán szereplő értékek összegzésével ki kell számítani a két szükséges indexet (V/M, HS-HR).\n- Az kezdeti besoroláshoz szükséges első index a győzelmek számának a mérkőzések számával való osztásával kerül meghatározásra, a V/M egyenlet alapján.\n- A legmagasabb (maximum 1) indexszel rendelkező vívó kerül a tábla első helyére.\n- Az esetben, ha az első index értéke valamely vívók esetén megegyezik, az egyenlő indexű vívók rangsorolásához egy másodlagos index kerül meghatározásra, a HS – HR képlet alapján, az adott (Hits Scored) és a kapott (Hits Received) találatok számának különbsége.\n- Ha valamely vívók mindkét indexe (V / M és HS – HR) megegyezik, a több találatot adott versenyző kerül előrébb a rangsorban.\n- Kettő vagy több vívó közti abszolút egyenlőség esetén a sorrend sorshúzással kerül meghatározásra.",
       "section": "A verseny szervezése",
       "subsection": "Egyéni csoportmérkőzések",
       "document": "04-szervezes.md",
@@ -5120,7 +5120,7 @@
     },
     {
       "rule_id": "ORG-2.3.3",
-      "text": "Az egyenes kiesés táblán a ragnsort a következőképp kell megállapítani: - A csapat tagjainak HEMARatingsen szereplő, aktuális weightedRating-jeiből számolt átlagot kell figyelembe venni (a relativeRating-ek összegét elosztva a csapattagok számával). - Ha egy vívónak mind a 'Mixed/Men' és a 'Women' kategóriában is van eredménye, a magasabb weightedRating számít. - A HEMARatinggel nem rendelkező csapattagokat egységesen a fegyvernemnek megfelelő kategória legrosszabb weightedRatingjét felezve számított értékkel kell figyelembe venni (vegyes csapatoknál a 'Mixed/Men'-t, nemtől függetlenül). - Ha két csapat így számított indexe egyforma, sorrendjüket sorsolással kell meghatározni.",
+      "text": "Az egyenes kiesés táblán a ragnsort a következőképp kell megállapítani:\n- A csapat tagjainak HEMARatingsen szereplő, aktuális weightedRating-jeiből számolt átlagot kell figyelembe venni (a relativeRating-ek összegét elosztva a csapattagok számával).\n- Ha egy vívónak mind a 'Mixed/Men' és a 'Women' kategóriában is van eredménye, a magasabb weightedRating számít.\n- A HEMARatinggel nem rendelkező csapattagokat egységesen a fegyvernemnek megfelelő kategória legrosszabb weightedRatingjét felezve számított értékkel kell figyelembe venni (vegyes csapatoknál a 'Mixed/Men'-t, nemtől függetlenül).\n- Ha két csapat így számított indexe egyforma, sorrendjüket sorsolással kell meghatározni.",
       "section": "A verseny szervezése",
       "subsection": "Csapatversenyek",
       "document": "04-szervezes.md",
@@ -5172,7 +5172,7 @@
     },
     {
       "rule_id": "ORG-2.3.7",
-      "text": "Az egyes mérkőzések összecsapásait a következő sorrendben kell megvívni: 3–6 2–5 1–5 1–4 2–4 2–6 1–6 3–5 3–4 Ha ezt a sorrendet szándékosan vagy véletlenül megváltoztatják, a módosítást követően elért összes találatot érvénytelenítik, és a mérkőzés a megfelelő sorrendben folytatódik.",
+      "text": "Az egyes mérkőzések összecsapásait a következő sorrendben kell megvívni:\n3–6 2–5 1–5 1–4 2–4 2–6 1–6 3–5 3–4\nHa ezt a sorrendet szándékosan vagy véletlenül megváltoztatják, a módosítást követően elért összes találatot érvénytelenítik, és a mérkőzés a megfelelő sorrendben folytatódik.",
       "section": "A verseny szervezése",
       "subsection": "Csapatversenyek",
       "document": "04-szervezes.md",
@@ -5315,7 +5315,7 @@
     },
     {
       "rule_id": "ORG-2.3.18",
-      "text": "Ha egy csapat nem jelenik meg egy másik csapat ellen, akkor a következőként kell eljárni: - Ha már vívott egy másik csapat ellen, úgy kell kezelni, mintha nem fejezte volna be a versenyt, amelyen részt vesz (vö. Egyenes kieséses mérkőzések/Visszalépés); - ha az első mérkőzésén nem jelenik meg, úgy kell kezelni, mintha egyáltalán nem venne részt a versenyen.",
+      "text": "Ha egy csapat nem jelenik meg egy másik csapat ellen, akkor a következőként kell eljárni:\n- Ha már vívott egy másik csapat ellen, úgy kell kezelni, mintha nem fejezte volna be a versenyt, amelyen részt vesz (vö. Egyenes kieséses mérkőzések/Visszalépés);\n- ha az első mérkőzésén nem jelenik meg, úgy kell kezelni, mintha egyáltalán nem venne részt a versenyen.",
       "section": "A verseny szervezése",
       "subsection": "Csapatversenyek",
       "document": "04-szervezes.md",
@@ -5341,7 +5341,7 @@
     },
     {
       "rule_id": "ORG-2.4.1",
-      "text": "Az általános rangsort a következők szerint kell felállítani: - Első: Az első helyért vívott mérkőzés győztese - Második: az első helyért vívott mérkőzés vesztese. - A harmadik és negyedik helyért az elődöntők két vesztese vív (kivéve ha egyenes kieséses rendszerben bonyolítják le a döntőt, akkor mindketten harmadik helyezettek). - A többi versenyző helyezése minden egyes körben az egyenes kiesés során elért helyükkel egyezik meg.",
+      "text": "Az általános rangsort a következők szerint kell felállítani:\n- Első: Az első helyért vívott mérkőzés győztese\n- Második: az első helyért vívott mérkőzés vesztese.\n- A harmadik és negyedik helyért az elődöntők két vesztese vív (kivéve ha egyenes kieséses rendszerben bonyolítják le a döntőt, akkor mindketten harmadik helyezettek).\n- A többi versenyző helyezése minden egyes körben az egyenes kiesés során elért helyükkel egyezik meg.",
       "section": "A verseny szervezése",
       "subsection": "Értékelés",
       "document": "04-szervezes.md",
@@ -5445,7 +5445,7 @@
     },
     {
       "rule_id": "GEN-6.10.4.1.3",
-      "text": "→ formatum: \"AFTERBLOW\" ```",
+      "text": "→ formatum: \"AFTERBLOW\"\n```",
       "section": "Solution: Variant-Specific Rule Filtering",
       "subsection": "1. **Automatic Detection**",
       "document": "VARIANT_SEARCH_SOLUTION.md",
@@ -5510,7 +5510,7 @@
     },
     {
       "rule_id": "GEN-3.2.2",
-      "text": "A **védekező** akciókat védéseknek (parád) nevezzük. - A védés (parád) fegyverrel végrehajtott védekező akció annak megakadályozására, hogy a támadó akció találjon.",
+      "text": "A **védekező** akciókat védéseknek (parád) nevezzük.\n- A védés (parád) fegyverrel végrehajtott védekező akció annak megakadályozására, hogy a támadó akció találjon.",
       "section": "",
       "subsection": "Támadó és védekező akciók",
       "document": "02-szojegyzek.md",
@@ -5536,7 +5536,7 @@
     },
     {
       "rule_id": "GEN-3.2.3.1",
-      "text": "**Egyszerű** az akció, ha azt egyetlen mozdulattal végzik; - akár **közvetlenül** (ugyanabban a vonalban), - akár **közvetve** (másik vonalban).",
+      "text": "**Egyszerű** az akció, ha azt egyetlen mozdulattal végzik;\n- akár **közvetlenül** (ugyanabban a vonalban),\n- akár **közvetve** (másik vonalban).",
       "section": "",
       "subsection": "Támadó és védekező akciók",
       "document": "02-szojegyzek.md",
@@ -5562,7 +5562,7 @@
     },
     {
       "rule_id": "GEN-3.2.4",
-      "text": "**Riposzt** (visszaszúrás, -vágás) A visszaszúrás (-vágás) lehet **azonnali** vagy **késleltetett**, amely az akció jellegétől és sebességétől függ. A riposzt lehet:",
+      "text": "**Riposzt** (visszaszúrás, -vágás)\nA visszaszúrás (-vágás) lehet **azonnali** vagy **késleltetett**, amely az akció jellegétől és sebességétől függ. A riposzt lehet:",
       "section": "",
       "subsection": "Támadó és védekező akciók",
       "document": "02-szojegyzek.md",
@@ -5575,7 +5575,7 @@
     },
     {
       "rule_id": "GEN-3.2.4.1",
-      "text": "- **Egyszerű, közvetlen (direkt)** - **Direkt riposzt**: anélkül találja el az ellenfelet, hogy azt a vonalat elhagyná, amelyben a védés történt. - **Kötött riposzt**: a védés után, a pengén végigcsúszva találja el az ellenfelet.",
+      "text": "- **Egyszerű, közvetlen (direkt)**\n- **Direkt riposzt**: anélkül találja el az ellenfelet, hogy azt a vonalat elhagyná, amelyben a védés történt.\n- **Kötött riposzt**: a védés után, a pengén végigcsúszva találja el az ellenfelet.",
       "section": "",
       "subsection": "Támadó és védekező akciók",
       "document": "02-szojegyzek.md",
@@ -5588,7 +5588,7 @@
     },
     {
       "rule_id": "GEN-3.2.4.2",
-      "text": "**Egyszerű közvetett (indirekt)** - **Kerülő  visszaszúrás (-vágás)**: az ellenfelet az ellenkező vonalban találja el, mint amelyben védett. (Megkerülve az ellenfél pengéjét alul, ha a felső vonalban, illetve felül, ha az alsó vonalban védett.) - **Dobott riposzt (coupé)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett (a pengével minden esetben megkerülve az ellenfél pengéjének hegyét).",
+      "text": "**Egyszerű közvetett (indirekt)**\n- **Kerülő  visszaszúrás (-vágás)**: az ellenfelet az ellenkező vonalban találja el, mint amelyben védett. (Megkerülve az ellenfél pengéjét alul, ha a felső vonalban, illetve felül, ha az alsó vonalban védett.)\n- **Dobott riposzt (coupé)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett (a pengével minden esetben megkerülve az ellenfél pengéjének hegyét).",
       "section": "",
       "subsection": "Támadó és védekező akciók",
       "document": "02-szojegyzek.md",
@@ -5601,7 +5601,7 @@
     },
     {
       "rule_id": "GEN-3.2.4.3",
-      "text": "**Összetett riposzt** - **A körző-riposzt (en doublant)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett, de az ellenfél pengéje körül leírt teljes körvonal elvégzése után. - **Riposzt \"egy-kettő\"-vel**: az ellenfelet ugyanabban a vonalban találja, amelyben az védett, de csak azt követően, hogy az ellenkező vonalban is volt, az ellenfél pengéjét megkerülve;",
+      "text": "**Összetett riposzt**\n- **A körző-riposzt (en doublant)**: az ellenfelet az ellenkező vonalban találja, mint amelyben védett, de az ellenfél pengéje körül leírt teljes körvonal elvégzése után.\n- **Riposzt \"egy-kettő\"-vel**: az ellenfelet ugyanabban a vonalban találja, amelyben az védett, de csak azt követően, hogy az ellenkező vonalban is volt, az ellenfél pengéjét megkerülve;",
       "section": "",
       "subsection": "Támadó és védekező akciók",
       "document": "02-szojegyzek.md",
@@ -5614,7 +5614,7 @@
     },
     {
       "rule_id": "GEN-3.2.5",
-      "text": "Ellentámadások Az ellentámadások támadó vagy támadó-védekező akciók, amelyeket az ellenfél támadádó akciója közben hajtanak végre.",
+      "text": "Ellentámadások\nAz ellentámadások támadó vagy támadó-védekező akciók, amelyeket az ellenfél támadádó\nakciója közben hajtanak végre.",
       "section": "",
       "subsection": "Támadó és védekező akciók",
       "document": "02-szojegyzek.md",
@@ -5731,7 +5731,7 @@
     },
     {
       "rule_id": "GEN-3.2.7",
-      "text": "**A hárítás egyszerű**, közvetlen, ha ugyanabban a vonalban hajtják végre, mint a támadást. **A körző hárítást** ezzel szemben a támadással ellenkező vonalban hajtják végre.",
+      "text": "**A hárítás egyszerű**, közvetlen, ha ugyanabban a vonalban hajtják végre, mint a támadást.\n**A körző hárítást** ezzel szemben a támadással ellenkező vonalban hajtják végre.",
       "section": "",
       "subsection": "Támadó és védekező akciók",
       "document": "02-szojegyzek.md",
@@ -5770,7 +5770,7 @@
     },
     {
       "rule_id": "GEN-4.2",
-      "text": "A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi akadály a pást határától minimum 1 méterre legyen.",
+      "text": "A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi\nakadály a pást határától minimum 1 méterre legyen.",
       "section": "",
       "subsection": "A küzdőtér",
       "document": "03-felszereles.md",
@@ -5809,7 +5809,7 @@
     },
     {
       "rule_id": "GEN-5.1.1",
-      "text": "A vívók saját felelősségükre és kockázatukra fegyverkeznek és szerelkeznek fel, öltözködnek és vívnak.",
+      "text": "A vívók saját felelősségükre és kockázatukra fegyverkeznek és szerelkeznek fel,\nöltözködnek és vívnak.",
       "section": "",
       "subsection": "Megfelelőség",
       "document": "03-felszereles.md",
@@ -5939,7 +5939,7 @@
     },
     {
       "rule_id": "GEN-5.2.2.1",
-      "text": "Kizárólag olyan kesztyűk használata megengedett, amiket speciálisan HEMA versenyekhez fejlesztettek ki (pl. Sparring Gloves), vagy minden speciális követelményt kielégítenek. Tilos olyan kesztyűk használata, amelyek bármilyen fém alkatrészt tartalmaznak (kivéve a megerősítő szerelvényként, mint a Sparring Gloves kesztyűkön a gumiszalag átvezetésénél használt ringlik).",
+      "text": "Kizárólag olyan kesztyűk használata megengedett, amiket speciálisan HEMA versenyekhez fejlesztettek ki (pl. Sparring Gloves), vagy minden speciális követelményt kielégítenek. Tilos olyan kesztyűk használata, amelyek bármilyen fém alkatrészt tartalmaznak (kivéve a megerősítő szerelvényként, mint a\nSparring Gloves kesztyűkön a gumiszalag átvezetésénél használt ringlik).",
       "section": "",
       "subsection": "Fém fegyverek esetén",
       "document": "03-felszereles.md",
@@ -5952,7 +5952,7 @@
     },
     {
       "rule_id": "GEN-5.2.2.2",
-      "text": "A versenyen használt kesztyűk esetében a tenyeret nem kell, hogy megerősített réteg borítsa, de a teljes tenyér fedett kell legyen, erre elégséges egy egyszerű textil kesztyű is.",
+      "text": "A versenyen használt kesztyűk esetében a tenyeret nem kell, hogy megerősített réteg borítsa, de a teljes tenyér fedett kell legyen, erre elégséges\negy egyszerű textil kesztyű is.",
       "section": "",
       "subsection": "Fém fegyverek esetén",
       "document": "03-felszereles.md",
@@ -6004,7 +6004,7 @@
     },
     {
       "rule_id": "GEN-5.2.2.6",
-      "text": "A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem. <!-- **GEN-5.2.2.7** hónaljvédő TODO -->",
+      "text": "A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem.\n<!-- **GEN-5.2.2.7**\nhónaljvédő TODO -->",
       "section": "",
       "subsection": "Fém fegyverek esetén",
       "document": "03-felszereles.md",
@@ -6043,7 +6043,7 @@
     },
     {
       "rule_id": "GEN-5.2.3.3",
-      "text": "A csípőt a vívókabátnak, külön csípővédelemnek (pl. bélelt szoknya) vagy bélelt nadrágnak kell védenie.",
+      "text": "A csípőt a vívókabátnak, külön csípővédelemnek (pl. bélelt szoknya) vagy bélelt\nnadrágnak kell védenie.",
       "section": "",
       "subsection": "Fém fegyverek esetén",
       "document": "03-felszereles.md",
@@ -6056,7 +6056,7 @@
     },
     {
       "rule_id": "GEN-5.2.3.4",
-      "text": "A combokat, a lágyékot és a csípőt legalább CE Level 1 (350N) minősítésű nadrágnak, vagy más jóváhagyott szúrás álló anyagnak kell borítania.",
+      "text": "A combokat, a lágyékot és a csípőt legalább CE Level 1 (350N) minősítésű\nnadrágnak, vagy más jóváhagyott szúrás álló anyagnak kell borítania.",
       "section": "",
       "subsection": "Fém fegyverek esetén",
       "document": "03-felszereles.md",
@@ -6069,7 +6069,7 @@
     },
     {
       "rule_id": "GEN-5.2.3.5",
-      "text": "A kabát és a nadrág között nem maradhat megfelelő védelemmel ellátatlan testfelület. Javasolt a derékig érő vívónadrágok használata.",
+      "text": "A kabát és a nadrág között nem maradhat megfelelő védelemmel ellátatlan\ntestfelület. Javasolt a derékig érő vívónadrágok használata.",
       "section": "",
       "subsection": "Fém fegyverek esetén",
       "document": "03-felszereles.md",
@@ -6407,7 +6407,7 @@
     },
     {
       "rule_id": "GEN-5.3.2.5",
-      "text": "Fém szerelékkel rendelkező fegyverek használata tilos! [^1]: Mivel kis méretű szervező gárdával rendelkezünk, ezért elképzelhető, hogy a jelenlegi versenyen csak a bírók ellenőrzik a felszereléseket a mérkőzések megkezdése előtt. [^2]: Ideiglenes, még revízió alatt álló szabályozás, csak kirívó esetekben alkalmazandó, ahol a penge rugalmassága extrémen alacsony vagy magas.",
+      "text": "Fém szerelékkel rendelkező fegyverek használata tilos!\n[^1]: Mivel kis méretű szervező gárdával rendelkezünk, ezért elképzelhető, hogy a jelenlegi versenyen csak a bírók ellenőrzik a felszereléseket a mérkőzések megkezdése előtt.\n[^2]: Ideiglenes, még revízió alatt álló szabályozás, csak kirívó esetekben alkalmazandó, ahol a penge rugalmassága extrémen alacsony vagy magas.",
       "section": "",
       "subsection": "Párnázott fegyverek esetén",
       "document": "03-felszereles.md",
@@ -6433,7 +6433,7 @@
     },
     {
       "rule_id": "GEN-7.1.2",
-      "text": "A versenybíró feladatai: - szólítja és számba veszi a vívókat; - vezeti a mérkőzést; - minden mérkőzés előtt ellenőrzi a versenyzők fegyvereit, ruházatát és felszereléseit az előírásoknak megfelelően - irányítja a segédbíró(ka)t, időmérőket, jegyzőkönyvvezetőket, stb. - úgy helyezkedik, és úgy változtatja a helyét, hogy követhesse a mérkőzést - bünteti a vétségeket; - megítéli a találatokat; - fenntartja a rendet; - ugyancsak ellenőriznie kell a pástok állapotát és gondoskodik arról, hogy a mérkőzés ne kezdődhessen el vagy ne folytatódhasson olyan páston, aminek felülete balesetveszélyes, vagy más okból nem alkalmasak a mérkőzés folytatására.",
+      "text": "A versenybíró feladatai:\n- szólítja és számba veszi a vívókat;\n- vezeti a mérkőzést;\n- minden mérkőzés előtt ellenőrzi a versenyzők fegyvereit, ruházatát és felszereléseit az előírásoknak megfelelően\n- irányítja a segédbíró(ka)t, időmérőket, jegyzőkönyvvezetőket, stb.\n- úgy helyezkedik, és úgy változtatja a helyét, hogy követhesse a mérkőzést\n- bünteti a vétségeket;\n- megítéli a találatokat;\n- fenntartja a rendet;\n- ugyancsak ellenőriznie kell a pástok állapotát és gondoskodik arról, hogy a mérkőzés ne kezdődhessen el vagy ne folytatódhasson olyan páston, aminek felülete balesetveszélyes, vagy más okból nem alkalmasak a mérkőzés folytatására.",
       "section": "",
       "subsection": "A Versenybíró",
       "document": "04-biraskodas.md",
@@ -6563,7 +6563,7 @@
     },
     {
       "rule_id": "GEN-7.5.2",
-      "text": "A versenybíró figyelmen kívül hagyja az olyan akciókból származó találatokat: - amelyeket a „Rajta!” vezényszó előtt vagy az „Állj!” vezényszó után indítottak el - amelyek az ellenfél vagy annak felszerelésén kívüli tárgyon estek.",
+      "text": "A versenybíró figyelmen kívül hagyja az olyan akciókból származó találatokat:\n- amelyeket a „Rajta!” vezényszó előtt vagy az „Állj!” vezényszó után indítottak el\n- amelyek az ellenfél vagy annak felszerelésén kívüli tárgyon estek.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "04-biraskodas.md",
@@ -6654,7 +6654,7 @@
     },
     {
       "rule_id": "GEN-7.5.7",
-      "text": "Az egyéni versenyen a páston lévő vívó - csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a videóbíróhoz - egyenes kieséses mérkőzés során két alkalommal",
+      "text": "Az egyéni versenyen a páston lévő vívó\n- csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a videóbíróhoz\n- egyenes kieséses mérkőzés során két alkalommal",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "04-biraskodas.md",
@@ -6693,7 +6693,7 @@
     },
     {
       "rule_id": "GEN-7.5.10",
-      "text": "Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges döntését.",
+      "text": "Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges\ndöntését.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "04-biraskodas.md",
@@ -6758,7 +6758,7 @@
     },
     {
       "rule_id": "GEN-7.5.15",
-      "text": "Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy arra - a versenybíró kezdeményezésére, - a versenyző kérésére, - a döntő találat előtti pontegyenlőségnél, vagy - a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.",
+      "text": "Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy arra\n- a versenybíró kezdeményezésére,\n- a versenyző kérésére,\n- a döntő találat előtti pontegyenlőségnél, vagy\n- a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "04-biraskodas.md",
@@ -6771,7 +6771,7 @@
     },
     {
       "rule_id": "GEN-7.5.16",
-      "text": "A versenybíró az alábbi jelzéseket köteles használni: <p align=\"center\"> <img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_1\" align=\"center\" src=\"https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03\" /> </p> <p align=\"center\"> <img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_2\" align=\"center\" src=\"https://github.com/user-attachments/assets/f5fea300-ae41-43d0-9001-09729f524279\" /> </p> <p align=\"center\"> <img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_3\" align=\"center\" src=\"https://github.com/user-attachments/assets/ca7d4e1b-529d-43da-9686-e92073b07353\" /> </p> <div style=\"page-break-after: always;\"></div>",
+      "text": "A versenybíró az alábbi jelzéseket köteles használni:\n<p align=\"center\">\n<img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_1\" align=\"center\" src=\"https://github.com/user-attachments/assets/77dd95cf-edab-49c9-8f6f-35441ab60a03\" />\n</p>\n<p align=\"center\">\n<img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_2\" align=\"center\" src=\"https://github.com/user-attachments/assets/f5fea300-ae41-43d0-9001-09729f524279\" />\n</p>\n<p align=\"center\">\n<img width=\"75%\" height=\"75%\" alt=\"KEZJELEK_3\" align=\"center\" src=\"https://github.com/user-attachments/assets/ca7d4e1b-529d-43da-9686-e92073b07353\" />\n</p>\n<div style=\"page-break-after: always;\"></div>",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "04-biraskodas.md",
@@ -6797,7 +6797,7 @@
     },
     {
       "rule_id": "GEN-7.6.2",
-      "text": "Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket: - minden fegyvernemben a vívók felszerelésén a szabályos  350N jelzés meglétét (ruha, fejvéd). - hogy mindenki szabályszerű vívókabátot visel-e.. - A fegyvereken fegyverellenőrzés jelzés meglétét. - Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.",
+      "text": "Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket:\n- minden fegyvernemben a vívók felszerelésén a szabályos  350N jelzés meglétét (ruha, fejvéd).\n- hogy mindenki szabályszerű vívókabátot visel-e..\n- A fegyvereken fegyverellenőrzés jelzés meglétét.\n- Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.",
       "section": "",
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "04-biraskodas.md",
@@ -6849,7 +6849,7 @@
     },
     {
       "rule_id": "GEN-7.6.6",
-      "text": "A leellenőrzött tartalék felszereléseket a versenybíró a mérkőzés kezdetén a pást mellé helyezi a megfelelő vívó oldalára.",
+      "text": "A leellenőrzött tartalék felszereléseket a versenybíró a mérkőzés kezdetén a pást mellé\nhelyezi a megfelelő vívó oldalára.",
       "section": "",
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "04-biraskodas.md",
@@ -6875,7 +6875,7 @@
     },
     {
       "rule_id": "GEN-7.7.2",
-      "text": "Ha a vívó a páston: - hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy - a szabályoknak nem megfelelő ruhában jelenik meg, a versenybíró  az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.",
+      "text": "Ha a vívó a páston:\n- hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy\n- a szabályoknak nem megfelelő ruhában\njelenik meg, a versenybíró  az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.",
       "section": "",
       "subsection": "Szabálytalan felszerelés",
       "document": "04-biraskodas.md",
@@ -6928,17 +6928,17 @@
   ],
   "total_rules": 530,
   "documents": [
-    "02.c-hosszukard-AFTERBLOW.md",
-    "02.a-hosszukard-VOR.md",
-    "01-altalanos.md",
-    "04-szervezes.md",
-    "03-felszereles.md",
-    "02.b-hosszukard-COMBAT.md",
     "07-parnazott_fegyver.md",
-    "02-szojegyzek.md",
+    "03-felszereles.md",
+    "VARIANT_SEARCH_SOLUTION.md",
     "02-hosszukard.md",
     "03-etikett_fegyelem.md",
-    "04-biraskodas.md",
-    "VARIANT_SEARCH_SOLUTION.md"
+    "01-altalanos.md",
+    "02.c-hosszukard-AFTERBLOW.md",
+    "02-szojegyzek.md",
+    "02.b-hosszukard-COMBAT.md",
+    "04-szervezes.md",
+    "02.a-hosszukard-VOR.md",
+    "04-biraskodas.md"
   ]
 }

@@ -169,7 +169,20 @@ class RulebookParser:
                    subsection: str, document: str, anchor: str, line_num: int,
                    weapon_type: str, formatum: str):
         """Save a parsed rule, detecting variant from text if present"""
-        text = " ".join(text_lines).strip()
+        # Join text lines preserving structure:
+        # - Lines starting with "- " (bullets) keep newlines
+        # - Other lines are joined with newlines to preserve paragraph breaks
+        formatted_lines = []
+        for line in text_lines:
+            # If line starts with "- ", mark it as a bullet point
+            if line.startswith('- '):
+                formatted_lines.append(line)
+            else:
+                formatted_lines.append(line)
+        
+        # Join with newlines to preserve all line breaks
+        text = '\n'.join(formatted_lines).strip()
+        
         if text:
             # Extract formatum from rule text if it starts with **Vor**:, **Combat**:, **Afterblow**:
             detected_formatum = self._detect_formatum_in_rule_text(text)
