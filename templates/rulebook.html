@@ -237,21 +237,28 @@
 
         /* Rule reference links */
         a.rule-ref {
-            color: #667eea;
-            text-decoration: none;
+            color: #667eea !important;
+            text-decoration: none !important;
             font-weight: 600;
             padding: 0.1rem 0.3rem;
             background-color: #e8eaf6;
             border-radius: 3px;
             transition: all 0.2s ease;
-            cursor: pointer;
+            cursor: pointer !important;
             border-bottom: 2px solid #b8c1ec;
+            display: inline;
         }
 
         a.rule-ref:hover {
             background-color: #667eea;
-            color: white;
+            color: white !important;
             border-bottom-color: #5568d3;
+            text-decoration: none !important;
+        }
+        
+        a.rule-ref:focus {
+            outline: 2px solid #667eea;
+            outline-offset: 2px;
         }
 
         /* Highlight animation for navigated-to rule */
@@ -723,6 +730,7 @@
                 e.stopPropagation();
                 
                 const targetRuleId = target.dataset.ruleId || target.textContent.trim();
+                console.log('Rule reference clicked:', targetRuleId);
                 navigateToRule(targetRuleId);
             }
         }, true); // Use capture phase to ensure it fires
