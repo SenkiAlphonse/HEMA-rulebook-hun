@@ -7,7 +7,7 @@ import re
 import logging
 import unicodedata
 from pathlib import Path
-from typing import List, Dict, Any, Tuple
+from typing import List, Dict, Any, Tuple, Optional
 from dataclasses import dataclass
 from search_utils import get_rule_depth, get_rule_lineage, get_children_rules
 
