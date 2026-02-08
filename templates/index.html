@@ -244,6 +244,8 @@
             color: #333;
             line-height: 1.6;
             margin-bottom: 10px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
         }
 
         .result-meta {
@@ -769,16 +771,27 @@
 
         function renderMarkdownText(text) {
             // Basic markdown rendering for search results
-            let html = escapeHtml(text);
+            // Don't escape first - we need to preserve formatting structure
+            let html = text;
             
-            // Convert newlines to <br>
-            html = html.replace(/\n/g, '<br>');
-            
-            // Convert **bold** to <strong>
-            html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+            // Convert **bold** to <strong> (must do this before escaping)
+            html = html.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>');
             
             // Convert *italic* to <em>
-            html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+            html = html.replace(/\*([^*]+?)\*/g, '<em>$1</em>');
+            
+            // Now escape HTML but preserve the tags we just created
+            html = html.replace(/&/g, '&amp;')
+                       .replace(/</g, '&lt;')
+                       .replace(/>/g, '&gt;')
+                       .replace(/"/g, '&quot;')
+                       .replace(/'/g, '&#39;');
+            
+            // Unescape our markdown tags
+            html = html.replace(/&lt;strong&gt;/g, '<strong>')
+                       .replace(/&lt;\/strong&gt;/g, '</strong>')
+                       .replace(/&lt;em&gt;/g, '<em>')
+                       .replace(/&lt;\/em&gt;/g, '</em>');
             
             // Convert bullet points (- item)
             html = html.replace(/^- (.+)$/gm, '• $1');
