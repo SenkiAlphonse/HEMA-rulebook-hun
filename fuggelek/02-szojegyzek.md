@@ -1,4 +1,4 @@
-## A BÍRÁSKODÁS SORÁN LEGGYAKRABBAN HASZNÁLT SZAKKIFEJEZÉSEK MAGYARÁZATA  
+## A bíráskodás során leggyakrabban használt szakkifejezések magyarázata  
 <span id="GEN-3"></span>  
 
 A vívás bíráskodásában leggyakrabban használt technikai kifejezések magyarázata  

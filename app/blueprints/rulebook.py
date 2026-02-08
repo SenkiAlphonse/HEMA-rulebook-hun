@@ -14,15 +14,12 @@ def _get_rulebook_markdown_content():
     rulebook_dir = Path(__file__).parent.parent.parent
     md_files = [
         "01-altalanos.md",
-        "02-szojegyzek.md",
-        "03-felszereles.md",
-        "04-biraskodas.md",
-        "05-hosszukard.md",
-        "05.a-hosszukard-VOR.md",
-        "05.b-hosszukard-COMBAT.md",
-        "05.c-hosszukard-AFTERBLOW.md",
-        "08-etikett_fegyelem.md",
-        "09-szervezes.md",
+        "02-hosszukard.md",
+        "02.a-hosszukard-VOR.md",
+        "02.b-hosszukard-COMBAT.md",
+        "02.c-hosszukard-AFTERBLOW.md",
+        "03-etikett_fegyelem.md",
+        "04-szervezes.md",
     ]
     
     # Append appendices

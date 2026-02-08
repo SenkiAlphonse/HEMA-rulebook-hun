@@ -84,10 +84,10 @@ A hosszúkard versenyeket az alábbi három formátumok egyikében kell szervezn
 
 - VOR  
 <span id="LS-VOR-1"></span>  
-[05.a-hosszukard-VOR.md](05.a-hosszukard-VOR.md)  
+<!-- [05.a-hosszukard-VOR.md](05.a-hosszukard-VOR.md)   -->
 - COMBAT  
 <span id="LS-COMBAT-1"></span>  
-[05.b-hosszukard-COMBAT.md](05.b-hosszukard-COMBAT.mdd)  
+<!-- [05.b-hosszukard-COMBAT.md](05.b-hosszukard-COMBAT.mdd)   -->
 - AFTERBLOW  
 <span id="LS-AB"></span>  
-[05.c-hosszukard-AFTERBLOW.md](05.c-hosszukard-AFTERBLOW.md)  
+<!-- [05.c-hosszukard-AFTERBLOW.md](05.c-hosszukard-AFTERBLOW.md)   -->

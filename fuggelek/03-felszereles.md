@@ -3,8 +3,7 @@
 <!-- TODO -->  
 
 **GEN-4.1**  
-A küzdőtér felülete egyenletes, vízszintes. Ne biztosítson előnyt vagy okozzon hátrányt egyik  
-vívó részére sem, különösen a fények vonatkozásában.  
+A küzdőtér felülete egyenletes, vízszintes. Ne biztosítson előnyt vagy okozzon hátrányt egyik vívó részére sem, különösen a fények vonatkozásában.  
 
 <!-- TODO össze kell hangolni a FEBUS szabállyal, és figyelembe kell venni, ogy nem mindig adott a lehetőség, kisebb méretet is me kell engedni, de a szervezőnek kommunikálnia kéne előre mekkora várható -->  
 
