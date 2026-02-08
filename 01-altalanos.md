@@ -31,7 +31,7 @@ A vívóidő egy egyszerű akció kivitelezésének időtartama.
 ### Támadó és védekező akciók  
 <span id="GEN-3.2"></span>  
 
-#### Definíciók:  
+#### Definíciók  
 
 **GEN-3.2.1**  
 Támadó akciók (a támadás, a riposzt (visszaszúrás/visszavágás) és a kontrariposzt)  
@@ -116,7 +116,7 @@ Egyéb támadó akciók - A kezdeti támadást követő újabb támadó akció.
 **GEN-3.2.6.4**  
 **Kontratempó (contre temps)**: A támadó által az ellenfél közbetámadása ellen végrehajtott akció.  
 
-#### Védekező akciók  
+##### Védekező akciók  
 
 **GEN-3.2.7** 
 A hárítás 
