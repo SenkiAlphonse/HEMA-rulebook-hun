@@ -107,6 +107,11 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         if stripped.startswith('<span') and 'id=' in stripped:
             return ''
         return text
+    
+    def inline_html(self, html):
+        """Override inline HTML to preserve rule reference links"""
+        # Allow inline HTML to pass through unescaped
+        return html
 
 
 def create_mistune_markdown():
