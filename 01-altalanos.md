@@ -628,15 +628,17 @@ A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen m
 
 **GEN-6.10.6.1**  
 A váltómérkőzés minden váltása 5 találatból áll (5, 10, 15, 20, stb.). Kivételesen egy váltás végződhet többel mint 5, 10, 15 stb., ha a vívó érvényes találatot ad a váltás végén és további büntetőtalálatot is jóváírnak neki: ebben az esetben mindkettőt figyelembe kell venni; a maximális idő egy-egy találkozóra 2 perc.  
-10 Az első két ellenfél addig vív, amíg egyikük 5 találatot el nem ér, a két perces időhatáron belül. A következő két versenyző a két perces időkeretben addig vív, amíg valamelyikük el nem éri a 10 találatot, majd így tovább minden további találkozónál váltásonként öt találatot hozzáadva.  
 
 **GEN-6.10.6.2**  
-Ha a két perc elteltével a fordulóra előírt pontszámot nem érték el, a következő két versenyző olyan állásnál folytatja a mérkőzést amilyennél az abbamaradt, és a fordulóra előírt maximális pontszámig vívnak a két perces időkeretben.  
+Az első két ellenfél addig vív, amíg egyikük 5 találatot el nem ér, a két perces időhatáron belül. A következő két versenyző a két perces időkeretben addig vív, amíg valamelyikük el nem éri a 10 találatot, majd így tovább minden további találkozónál váltásonként öt találatot hozzáadva.  
 
 **GEN-6.10.6.3**  
-A győztes csapat az, amelyik eléri a maximális 45 találatot, vagy amelyik több találatot ért el az idő lejártakor.  
+Ha a két perc elteltével a fordulóra előírt pontszámot nem érték el, a következő két versenyző olyan állásnál folytatja a mérkőzést amilyennél az abbamaradt, és a fordulóra előírt maximális pontszámig vívnak a két perces időkeretben.  
 
 **GEN-6.10.6.4**  
+A győztes csapat az, amelyik eléri a maximális 45 találatot, vagy amelyik több találatot ért el az idő lejártakor.  
+
+**GEN-6.10.6.5**  
 Ha az utolsó fordulóra irányadó idő lejártakor pontegyenlőség áll fenn, az utolsó fordulót vívó versenyzők legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.  
 
 #### Időmérés  

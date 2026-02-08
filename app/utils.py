@@ -11,7 +11,7 @@ def preprocess_rulebook_markdown(text):
     Preprocess markdown before Mistune conversion to handle:
     1. HTML comments removal
     2. Anchor spans removal (<span id="..."></span>)
-    3. Rule ID hard breaks converted to inline <br> for same paragraph
+    3. Rule ID hard breaks converted to double newlines for separate paragraphs
     """
     # Remove HTML comments (<!-- ... -->)
     text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
@@ -19,9 +19,9 @@ def preprocess_rulebook_markdown(text):
     # Remove anchor spans (<span id="..."></span>)
     text = re.sub(r'<span\s+id="[^"]*"></span>\s*', '', text, flags=re.IGNORECASE)
     
-    # Keep rule ID and its paragraph together by inserting an explicit <br>
-    # Pattern: **RULE-ID**␠␠\n → **RULE-ID**<br>\n
-    text = re.sub(r'(\*\*[A-Z]+-[\d\.]+\*\*)  \r?\n', r'\1<br>\n', text)
+    # Convert rule ID hard breaks to double newlines
+    # Pattern: **RULE-ID**␠␠\n → **RULE-ID**\n\n
+    text = re.sub(r'(\*\*[A-Z]+-[\d\.]+\*\*)  \r?\n', r'\1\n\n', text)
     
     return text
 
@@ -43,7 +43,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
     def paragraph(self, text):
         """Override paragraph rendering to detect and style rule IDs"""
         # Match paragraphs that start with a rule ID
-        match = re.match(r'^<strong>([A-Z]+-[\d\.]+)</strong>(?:<br\s*/?>)?', text)
+        match = re.match(r'^<strong>([A-Z]+-[\d\.]+)</strong>', text)
         if match:
             rule_id = match.group(1)
             if '-' in rule_id and rule_id.split('-')[0].isalpha():
