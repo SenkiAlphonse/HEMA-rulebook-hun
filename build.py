@@ -1,12 +1,36 @@
 #!/usr/bin/env python
 """
-Build script for pre-rendering rulebook HTML
+Build script for pre-rendering rulebook HTML and regenerating search index
 Converts all markdown rulebook files to HTML and saves to dist/rulebook.html
+Rebuilds the rules_index.json for search functionality
 Run this at deployment time to generate static rulebook
 """
 
 from pathlib import Path
 import sys
+import subprocess
+
+
+def build_search_index():
+    """Regenerate the search index from markdown files"""
+    try:
+        print("Building search index...")
+        result = subprocess.run(
+            [sys.executable, "qa-tools/parser.py"],
+            cwd=Path(__file__).parent,
+            capture_output=True,
+            text=True
+        )
+        
+        if result.returncode == 0:
+            print("✓ Search index rebuilt successfully")
+            return True
+        else:
+            print(f"✗ Search index build failed: {result.stderr}", file=sys.stderr)
+            return False
+    except Exception as e:
+        print(f"✗ Search index build error: {e}", file=sys.stderr)
+        return False
 
 
 def build_rulebook():
@@ -71,5 +95,11 @@ def build_rulebook():
 
 
 if __name__ == "__main__":
-    success = build_rulebook()
-    sys.exit(0 if success else 1)
+    # Build search index first
+    index_success = build_search_index()
+    
+    # Build rulebook HTML
+    rulebook_success = build_rulebook()
+    
+    # Exit with success only if both succeed
+    sys.exit(0 if (index_success and rulebook_success) else 1)
