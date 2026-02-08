@@ -12,12 +12,21 @@ def preprocess_rulebook_markdown(text):
     1. HTML comments removal
     2. Anchor spans removal (<span id="..."></span>)
     3. Rule ID hard breaks converted to double newlines for separate paragraphs
+    4. Rule ID references [RULE-ID] converted to clickable links
     """
     # Remove HTML comments (<!-- ... -->)
     text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
     
     # Remove anchor spans (<span id="..."></span>)
     text = re.sub(r'<span\s+id="[^"]*"></span>\s*', '', text, flags=re.IGNORECASE)
+    
+    # Convert rule ID references [RULE-ID] to clickable links
+    # Pattern: [GEN-6.2.4] → <a href="#GEN-6.2.4" class="rule-ref" data-rule-id="GEN-6.2.4">GEN-6.2.4</a>
+    text = re.sub(
+        r'\[([A-Z]+-[\d\.]+)\]',
+        r'<a href="#\1" class="rule-ref" data-rule-id="\1">\1</a>',
+        text
+    )
     
     # Convert rule ID hard breaks to double newlines
     # Pattern: **RULE-ID**␠␠\n → **RULE-ID**\n\n
@@ -40,6 +49,10 @@ def get_rule_depth(rule_id):
 class RuleIDRenderer(mistune.HTMLRenderer):
     """Custom Mistune renderer that adds CSS classes to rule IDs for indentation"""
     
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.last_rule_depth = 0  # Track the depth of the last rule ID encountered
+    
     def paragraph(self, text):
         """Override paragraph rendering to detect and style rule IDs"""
         # Match paragraphs that start with a rule ID
@@ -48,10 +61,20 @@ class RuleIDRenderer(mistune.HTMLRenderer):
             rule_id = match.group(1)
             if '-' in rule_id and rule_id.split('-')[0].isalpha():
                 depth = get_rule_depth(rule_id)
+                self.last_rule_depth = depth  # Remember this depth for following paragraphs
                 indent_class = f'rule-depth-{depth}' if depth >= 4 else ''
-                return f'<p class="rule-id {indent_class}">{text}</p>\n'
+                # Reset tracking if we encounter a shallower rule (parent/sibling level)
+                if depth < 4:
+                    self.last_rule_depth = 0
+                # Add an anchor ID for navigation
+                return f'<p class="rule-id {indent_class}" id="{rule_id}">{text}</p>\n'
 
-        # Regular paragraph
+        # Regular paragraph following a rule ID should inherit its indentation if depth >= 4
+        if self.last_rule_depth >= 4:
+            indent_class = f'rule-depth-{self.last_rule_depth}'
+            return f'<p class="{indent_class}">{text}</p>\n'
+        
+        # Regular paragraph without indentation
         return f'<p>{text}</p>\n'
     
     def list(self, text, ordered, **kwargs):

@@ -206,6 +206,17 @@
             margin-left: 4rem;
         }
 
+        /* Paragraphs following indented rules inherit the same indentation */
+        p.rule-depth-4 {
+            margin-left: 2rem;
+            margin-top: 0;
+        }
+
+        p.rule-depth-5 {
+            margin-left: 4rem;
+            margin-top: 0;
+        }
+
         .rule-id strong {
             color: inherit;
             font-family: inherit;
@@ -214,6 +225,94 @@
             border: none;
             display: inline;
             font-weight: 700;
+        }
+
+        /* Rule reference links */
+        a.rule-ref {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.1rem 0.3rem;
+            background-color: #e8eaf6;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border-bottom: 2px solid #b8c1ec;
+        }
+
+        a.rule-ref:hover {
+            background-color: #667eea;
+            color: white;
+            border-bottom-color: #5568d3;
+        }
+
+        /* Highlight animation for navigated-to rule */
+        @keyframes highlight-pulse {
+            0% { background-color: transparent; }
+            50% { background-color: #fff3cd; }
+            100% { background-color: transparent; }
+        }
+
+        .rule-id.highlighted {
+            animation: highlight-pulse 1.5s ease-in-out;
+        }
+
+        /* Bullet list styling */
+        a.rule-ref {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.1rem 0.3rem;
+            background-color: #e8eaf6;
+            border-radius: 3px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        a.rule-ref:hover {
+            background-color: #667eea;
+            color: white;
+        }
+
+        /* Back button for navigation */
+        #back-button {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #667eea;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 3.5rem;
+            height: 3.5rem;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        #back-button:hover {
+            background-color: #5568d3;
+            transform: scale(1.1);
+        }
+
+        #back-button.show {
+            display: flex;
+        }
+
+        /* Highlight animation for navigated-to rule */
+        @keyframes highlight-pulse {
+            0% { background-color: transparent; }
+            50% { background-color: #fff3cd; }
+            100% { background-color: transparent; }
+        }
+
+        .rule-id.highlighted {
+            animation: highlight-pulse 1.5s ease-in-out;
         }
 
         /* Bullet list styling */
@@ -600,8 +699,60 @@
     </div>
 
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
+    <button id="nav-back-button" title="Vissza az előző szabályhoz" aria-label="Vissza">↩</button>
 
     <script>
+        // Navigation history for rule references
+        const navigationHistory = [];
+        const navBackButton = document.getElementById('nav-back-button');
+
+        // Handle rule reference clicks
+        document.addEventListener('click', (e) => {
+            if (e.target.classList.contains('rule-ref')) {
+                e.preventDefault();
+                const targetRuleId = e.target.dataset.ruleId;
+                const currentPosition = window.scrollY;
+                
+                // Save current position to history
+                navigationHistory.push({
+                    position: currentPosition,
+                    timestamp: Date.now()
+                });
+                
+                // Navigate to target rule
+                const targetElement = document.getElementById(targetRuleId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Add highlight animation
+                    targetElement.classList.add('highlighted');
+                    setTimeout(() => {
+                        targetElement.classList.remove('highlighted');
+                    }, 1500);
+                    
+                    // Show navigation back button
+                    navBackButton.classList.add('show');
+                } else {
+                    // Rule ID not found, remove from history
+                    navigationHistory.pop();
+                    alert(`Szabály ${targetRuleId} nem található`);
+                }
+            }
+        });
+
+        // Handle navigation back button clicks
+        navBackButton.addEventListener('click', () => {
+            if (navigationHistory.length > 0) {
+                const previous = navigationHistory.pop();
+                window.scrollTo({ top: previous.position, behavior: 'smooth' });
+                
+                // Hide back button if no more history
+                if (navigationHistory.length === 0) {
+                    navBackButton.classList.remove('show');
+                }
+            }
+        });
+
         function jumpToRule() {
             const query = document.getElementById('searchInput').value.trim().toUpperCase();
             if (!query) {
