@@ -248,6 +248,27 @@
             word-wrap: break-word;
         }
 
+        .result-text ul.search-list {
+            list-style-type: disc;
+            margin: 0.5rem 0 0.5rem 1.5rem;
+            padding-left: 0;
+        }
+
+        .result-text ul.search-list li {
+            margin-bottom: 0.3rem;
+            line-height: 1.5;
+        }
+
+        .result-text strong {
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .result-text em {
+            font-style: italic;
+            color: #764ba2;
+        }
+
         .result-meta {
             font-size: 0.85em;
             color: #999;
@@ -770,33 +791,69 @@
         }
 
         function renderMarkdownText(text) {
-            // Basic markdown rendering for search results
-            // Don't escape first - we need to preserve formatting structure
+            // Basic markdown rendering for search results with line break preservation
             let html = text;
             
-            // Convert **bold** to <strong> (must do this before escaping)
-            html = html.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>');
-            
-            // Convert *italic* to <em>
-            html = html.replace(/\*([^*]+?)\*/g, '<em>$1</em>');
-            
-            // Now escape HTML but preserve the tags we just created
+            // First escape all HTML to prevent XSS
             html = html.replace(/&/g, '&amp;')
                        .replace(/</g, '&lt;')
                        .replace(/>/g, '&gt;')
                        .replace(/"/g, '&quot;')
                        .replace(/'/g, '&#39;');
             
-            // Unescape our markdown tags
-            html = html.replace(/&lt;strong&gt;/g, '<strong>')
-                       .replace(/&lt;\/strong&gt;/g, '</strong>')
-                       .replace(/&lt;em&gt;/g, '<em>')
-                       .replace(/&lt;\/em&gt;/g, '</em>');
+            // Split by double newlines to identify paragraphs/sections
+            const lines = html.split(/\n/);
+            const result = [];
+            let inBulletList = false;
             
-            // Convert bullet points (- item)
-            html = html.replace(/^- (.+)$/gm, '• $1');
+            for (let i = 0; i < lines.length; i++) {
+                let line = lines[i];
+                
+                // Check if this line starts a bullet point
+                if (line.match(/^- /)) {
+                    if (!inBulletList) {
+                        result.push('<ul class="search-list">');
+                        inBulletList = true;
+                    }
+                    // Convert "- item" to "<li>item</li>"
+                    line = line.replace(/^- (.+)$/, (match, content) => {
+                        // Convert markdown within list items
+                        content = convertMarkdownFormatting(content);
+                        return `<li>${content}</li>`;
+                    });
+                    result.push(line);
+                } else {
+                    // End bullet list if we hit a non-bullet line
+                    if (inBulletList && line.trim() !== '') {
+                        result.push('</ul>');
+                        inBulletList = false;
+                    }
+                    
+                    // Skip empty lines within the text
+                    if (line.trim()) {
+                        // Apply markdown formatting to non-list lines
+                        line = convertMarkdownFormatting(line);
+                        result.push(line);
+                    }
+                }
+            }
             
-            return html;
+            // Close bullet list if still open
+            if (inBulletList) {
+                result.push('</ul>');
+            }
+            
+            return result.join('<br>');
+        }
+        
+        function convertMarkdownFormatting(text) {
+            // Convert **bold** to <strong> (already HTML-escaped)
+            text = text.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>');
+            
+            // Convert *italic* to <em> (already HTML-escaped, avoid matching markdown-escaped asterisks)
+            text = text.replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em>$1</em>');
+            
+            return text;
         }
 
         // Load stats on page load

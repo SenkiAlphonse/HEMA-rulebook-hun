@@ -28,15 +28,17 @@ def preprocess_rulebook_markdown(text):
     
     # Convert rule ID references [RULE-ID] to clickable links
     # Pattern: [GEN-6.2.4] → <a href="#GEN-6.2.4" class="rule-ref" data-rule-id="GEN-6.2.4">GEN-6.2.4</a>
+    # Supports multi-part prefixes like LS-VOR-1.1.3, LS-COMBAT-1.2.1.1, LS-AB-1.2.10.2
     text = re.sub(
-        r'\[([A-Z]+-[\d\.]+)\]',
+        r'\[([A-Z]+(?:-[A-Z]+)*-[\d\.]+)\]',
         r'<a href="#\1" class="rule-ref" data-rule-id="\1">\1</a>',
         text
     )
     
     # Convert rule ID hard breaks to double newlines
     # Pattern: **RULE-ID**␠␠\n → **RULE-ID**\n\n
-    text = re.sub(r'(\*\*[A-Z]+-[\d\.]+\*\*)  \r?\n', r'\1\n\n', text)
+    # Supports multi-part prefixes
+    text = re.sub(r'(\*\*[A-Z]+(?:-[A-Z]+)*-[\d\.]+\*\*)  \r?\n', r'\1\n\n', text)
     
     return text
 
@@ -54,7 +56,8 @@ class RuleIDRenderer(mistune.HTMLRenderer):
     def paragraph(self, text):
         """Override paragraph rendering to detect and style rule IDs"""
         # Match paragraphs that start with a rule ID
-        match = re.match(r'^<strong>([A-Z]+-[\d\.]+)</strong>', text)
+        # Supports multi-part prefixes like LS-VOR-1.1.3, LS-COMBAT-1.2.1.1
+        match = re.match(r'^<strong>([A-Z]+(?:-[A-Z]+)*-[\d\.]+)</strong>', text)
         if match:
             rule_id = match.group(1)
             if '-' in rule_id and rule_id.split('-')[0].isalpha():
