@@ -113,7 +113,8 @@ def create_mistune_markdown():
     """Create a Mistune markdown instance with HTML preservation and custom renderer"""
     return mistune.create_markdown(
         renderer=RuleIDRenderer(),
-        escape=False  # Preserve HTML blocks like <table>, <div>, <span id=...>
+        escape=False,  # Preserve HTML blocks like <table>, <div>, <span id=...>
+        plugins=['url', 'strikethrough', 'table']  # Enable plugins including HTML rendering
     )
 
 
