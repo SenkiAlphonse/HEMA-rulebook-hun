@@ -7,6 +7,9 @@ from flask import Blueprint, request, jsonify, current_app, Response
 from app.utils import (
     normalize_filter, build_document_order, filter_rules_for_extract, format_extract_text
 )
+from app.validation import (
+    validate_query, validate_filter, validate_max_results, sanitize_query
+)
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -27,18 +30,36 @@ def api_search():
             return jsonify({"error": "Request body must be JSON"}), 400
             
         query = data.get("query", "").strip()
-        max_results = min(int(data.get("max_results", 100)), 100)
-        formatum_filter = data.get("formatum_filter")
-        weapon_filter = data.get("weapon_filter")
-
-        if not query:
-            return jsonify({"error": "Query cannot be empty"}), 400
-
+        
+        # Validate query
+        is_valid, error_msg = validate_query(query)
+        if not is_valid:
+            return jsonify({"error": error_msg}), 400
+        
+        # Sanitize query
+        query = sanitize_query(query)
+        
+        # Validate and parse max_results
+        try:
+            max_results_raw = data.get("max_results", 100)
+            max_results = int(max_results_raw) if max_results_raw is not None else 100
+        except (ValueError, TypeError):
+            return jsonify({"error": f"max_results must be an integer, got {max_results_raw}"}), 400
+        
+        is_valid, error_msg = validate_max_results(max_results)
+        if not is_valid:
+            return jsonify({"error": error_msg}), 400
+        
         # Validate filters
-        if formatum_filter and formatum_filter not in current_app.config['FORMATS']:
-            formatum_filter = None
-        if weapon_filter and weapon_filter not in current_app.config['WEAPONS']:
-            weapon_filter = None
+        formatum_filter = data.get("formatum_filter")
+        is_valid, error_msg = validate_filter(formatum_filter, current_app.config['FORMATS'])
+        if not is_valid:
+            return jsonify({"error": error_msg}), 400
+        
+        weapon_filter = data.get("weapon_filter")
+        is_valid, error_msg = validate_filter(weapon_filter, current_app.config['WEAPONS'])
+        if not is_valid:
+            return jsonify({"error": error_msg}), 400
 
         # Perform search
         results = current_app.search_engine.search(
@@ -160,6 +181,12 @@ def api_extract():
 def api_rule(rule_id):
     """Get a specific rule by ID"""
     try:
+        # Validate rule ID format
+        from app.validation import validate_rule_id
+        is_valid, error_msg = validate_rule_id(rule_id)
+        if not is_valid:
+            return jsonify({"error": error_msg}), 400
+        
         rule = current_app.search_engine.get_rule_by_id(rule_id)
         if rule:
             return jsonify({
