@@ -4,8 +4,3 @@
 *.ini
 __pycache__/
 *.pyc
-
-# Test coverage
-.coverage
-htmlcov/
-.pytest_cache/
