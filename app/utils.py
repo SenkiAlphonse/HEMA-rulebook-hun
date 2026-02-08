@@ -82,9 +82,6 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         
         # Regular paragraph without indentation
         return f'<p>{text}</p>\n'
-        
-        # Regular paragraph without indentation
-        return f'<p>{text}</p>\n'
     
     def list(self, text, ordered, **kwargs):
         """Override list rendering to add bullet-list CSS class"""
@@ -146,6 +143,18 @@ def build_document_order(rules):
             order[doc] = next_index
             next_index += 1
     return order
+
+
+def get_rulebook_markdown_files_util():
+    """
+    Get all numbered markdown rulebook files from root directory.
+    Shared utility to avoid duplication between build.py and rulebook.py
+    
+    Returns:
+        List of Path objects for markdown files in order
+    """
+    from app.config import get_rulebook_markdown_files
+    return get_rulebook_markdown_files()
 
 
 def filter_rules_for_extract(rules, weapon_filter, formatum_filter):

@@ -5,10 +5,24 @@ Simple keyword-based search over indexed rules
 
 import json
 import re
+import logging
 from pathlib import Path
 from typing import List, Dict, Any
 from dataclasses import dataclass
 from search_utils import get_rule_depth, get_rule_lineage, get_children_rules
+
+# Configure logging
+logger = logging.getLogger(__name__)
+
+# Scoring constants - adjust these values to tune search relevance
+SCORE_RULE_ID_EXACT_MATCH = 100.0      # Exact rule ID match (highest priority)
+SCORE_PHRASE_EXACT_MATCH = 50.0        # Exact phrase match in rule text
+SCORE_SECTION_MATCH = 30.0             # Exact phrase match in section/subsection
+SCORE_TERM_IN_TEXT = 10.0              # Per occurrence of search term in text
+SCORE_TERM_IN_SECTION = 5.0            # Per search term found in section/subsection
+SCORE_WEAPON_TYPE_BONUS = 10.0         # Bonus for weapon-specific rules
+SCORE_FORMATUM_MATCH_BONUS = 25.0      # Bonus for matching variant/format
+SCORE_FORMATUM_GENERAL_BONUS = 5.0     # Slight bonus for general format rules
 
 
 @dataclass
@@ -30,6 +44,7 @@ class RulebookSearch:
     def __init__(self, index_path: str):
         self.index_path = Path(index_path)
         self.rules = []
+        self.rule_id_index = {}  # O(1) lookup: rule_id -> rule_data
         self.load_index()
     
     def load_index(self):
@@ -41,7 +56,10 @@ class RulebookSearch:
             data = json.load(f)
             self.rules = data['rules']
         
-        print(f"Loaded {len(self.rules)} rules from index")
+        # Build O(1) rule ID index for fast lookups
+        self.rule_id_index = {rule['rule_id'].lower(): rule for rule in self.rules}
+        
+        logger.info(f"Loaded {len(self.rules)} rules from index")
     
     def search(self, query: str, max_results: int = 5, 
                weapon_filter: str = None, formatum_filter: str = None) -> List[SearchResult]:
@@ -174,46 +192,43 @@ class RulebookSearch:
         
         # Exact rule ID match (highest priority)
         if rule_id_lower in query:
-            score += 100.0
+            score += SCORE_RULE_ID_EXACT_MATCH
         
         # Exact phrase match in text
         if query in text_lower:
-            score += 50.0
+            score += SCORE_PHRASE_EXACT_MATCH
         
         # Exact phrase match in section/subsection
         if query in section_lower or query in subsection_lower:
-            score += 30.0
+            score += SCORE_SECTION_MATCH
         
         # Term frequency in text
         for term in terms:
             count_in_text = text_lower.count(term)
-            score += count_in_text * 10.0
+            score += count_in_text * SCORE_TERM_IN_TEXT
             
             # Bonus for terms in section/subsection
             if term in section_lower or term in subsection_lower:
-                score += 5.0
+                score += SCORE_TERM_IN_SECTION
         
         # Bonus for specific weapon rules if relevant
         if any(weapon_term in query for weapon_term in ['hosszúkard', 'longsword', 'rapir', 'rapier']):
             if rule.get('weapon_type') != 'general':
-                score += 10.0
+                score += SCORE_WEAPON_TYPE_BONUS
         
         # Bonus for formatum-specific rules if query contains variant keywords
         detected_formatum = self._detect_formatum_in_query(query)
         if detected_formatum and rule_formatum:
             if rule_formatum == detected_formatum.upper():
-                score += 25.0  # Significant bonus for matching variant
+                score += SCORE_FORMATUM_MATCH_BONUS  # Significant bonus for matching variant
             elif rule_formatum == '':  # General rules get slight bonus
-                score += 5.0
+                score += SCORE_FORMATUM_GENERAL_BONUS
         
         return score
     
     def get_rule_by_id(self, rule_id: str) -> Dict[str, Any]:
-        """Get a specific rule by its ID"""
-        for rule in self.rules:
-            if rule['rule_id'].lower() == rule_id.lower():
-                return rule
-        return None
+        """Get a specific rule by its ID (O(1) lookup using index)"""
+        return self.rule_id_index.get(rule_id.lower())
     
     def get_rules_by_section(self, section_name: str) -> List[Dict[str, Any]]:
         """Get all rules in a specific section"""

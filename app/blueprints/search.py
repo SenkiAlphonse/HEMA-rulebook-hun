@@ -2,10 +2,14 @@
 Search blueprint - handles search, stats, and rule lookup endpoints
 """
 
+import logging
 from flask import Blueprint, request, jsonify, current_app, Response
 from app.utils import (
     normalize_filter, build_document_order, filter_rules_for_extract, format_extract_text
 )
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 search_bp = Blueprint('search', __name__, url_prefix='/api')
 
@@ -19,6 +23,9 @@ def api_search():
     """
     try:
         data = request.get_json()
+        if not data:
+            return jsonify({"error": "Request body must be JSON"}), 400
+            
         query = data.get("query", "").strip()
         max_results = min(int(data.get("max_results", 100)), 100)
         formatum_filter = data.get("formatum_filter")
@@ -79,26 +86,34 @@ def api_search():
             "note": "Results grouped by rule hierarchy. Level 4-5 rules include parent rules (up to level 3) and direct child rules."
         })
 
+    except ValueError as e:
+        logger.warning(f"Invalid search request parameters: {e}")
+        return jsonify({"error": "Invalid request parameters"}), 400
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        logger.error(f"Search error: {type(e).__name__}: {e}")
+        return jsonify({"error": "Search failed"}), 500
 
 
 @search_bp.route('/stats', methods=['GET'])
 def api_stats():
     """Get rulebook statistics"""
-    total_rules = len(current_app.search_engine.rules)
-    vor_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "VOR")
-    combat_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "COMBAT")
-    ab_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "AFTERBLOW")
-    longsword_rules = sum(1 for r in current_app.search_engine.rules if r.get("weapon_type") == "longsword")
+    try:
+        total_rules = len(current_app.search_engine.rules)
+        vor_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "VOR")
+        combat_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "COMBAT")
+        ab_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "AFTERBLOW")
+        longsword_rules = sum(1 for r in current_app.search_engine.rules if r.get("weapon_type") == "longsword")
 
-    return jsonify({
-        "total_rules": total_rules,
-        "vor_rules": vor_rules,
-        "combat_rules": combat_rules,
-        "afterblow_rules": ab_rules,
-        "longsword_rules": longsword_rules
-    })
+        return jsonify({
+            "total_rules": total_rules,
+            "vor_rules": vor_rules,
+            "combat_rules": combat_rules,
+            "afterblow_rules": ab_rules,
+            "longsword_rules": longsword_rules
+        })
+    except Exception as e:
+        logger.error(f"Stats error: {type(e).__name__}: {e}")
+        return jsonify({"error": "Failed to get statistics"}), 500
 
 
 @search_bp.route('/extract', methods=['POST'])
@@ -106,6 +121,9 @@ def api_extract():
     """Generate rulebook extract filtered by weapon and format"""
     try:
         data = request.get_json()
+        if not data:
+            return jsonify({"error": "Request body must be JSON"}), 400
+            
         weapon_filter = normalize_filter(data.get("weapon_filter"), current_app.config['WEAPONS'])
         formatum_filter = normalize_filter(data.get("formatum_filter"), current_app.config['FORMATS'])
 
@@ -130,26 +148,34 @@ def api_extract():
             mimetype="text/markdown; charset=utf-8",
             headers={"Content-Disposition": f"attachment; filename={filename}"}
         )
+    except ValueError as e:
+        logger.warning(f"Invalid extract request parameters: {e}")
+        return jsonify({"error": "Invalid request parameters"}), 400
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        logger.error(f"Extract error: {type(e).__name__}: {e}")
+        return jsonify({"error": "Failed to generate extract"}), 500
 
 
 @search_bp.route('/rule/<rule_id>', methods=['GET'])
 def api_rule(rule_id):
     """Get a specific rule by ID"""
-    rule = current_app.search_engine.get_rule_by_id(rule_id)
-    if rule:
-        return jsonify({
-            "success": True,
-            "rule": {
-                "rule_id": rule["rule_id"],
-                "text": rule["text"],
-                "section": rule.get("section", ""),
-                "subsection": rule.get("subsection", ""),
-                "document": rule.get("document", ""),
-                "weapon_type": rule.get("weapon_type", ""),
-                "formatum": rule.get("formatum", ""),
-                "anchor_id": rule.get("anchor_id", "")
-            }
-        })
-    return jsonify({"error": "Rule not found"}), 404
+    try:
+        rule = current_app.search_engine.get_rule_by_id(rule_id)
+        if rule:
+            return jsonify({
+                "success": True,
+                "rule": {
+                    "rule_id": rule["rule_id"],
+                    "text": rule["text"],
+                    "section": rule.get("section", ""),
+                    "subsection": rule.get("subsection", ""),
+                    "document": rule.get("document", ""),
+                    "weapon_type": rule.get("weapon_type", ""),
+                    "formatum": rule.get("formatum", ""),
+                    "anchor_id": rule.get("anchor_id", "")
+                }
+            })
+        return jsonify({"error": "Rule not found"}), 404
+    except Exception as e:
+        logger.error(f"Get rule error: {type(e).__name__}: {e}")
+        return jsonify({"error": "Failed to retrieve rule"}), 500

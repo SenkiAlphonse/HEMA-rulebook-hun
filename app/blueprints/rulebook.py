@@ -5,30 +5,19 @@ Rulebook blueprint - handles full rulebook display and API endpoints
 from pathlib import Path
 from flask import Blueprint, render_template, jsonify, current_app, send_file
 from app.utils import create_mistune_markdown, preprocess_rulebook_markdown
+from app.config import get_rulebook_markdown_files, get_prerendered_rulebook_path
 
 rulebook_bp = Blueprint('rulebook', __name__)
 
 
 def _get_rulebook_markdown_content():
     """Read and concatenate all rulebook markdown files"""
-    rulebook_dir = Path(__file__).parent.parent.parent
-    
-    # Automatically detect all numbered markdown files in the root directory
-    # Pattern: NN-*.md or NN.x-*.md (where NN is 01-99)
-    md_files = []
-    for md_file in sorted(rulebook_dir.glob("[0-9][0-9]*.md")):
-        # Exclude non-rulebook files
-        if md_file.name not in ["README.md"]:
-            md_files.append(md_file.name)
-    
-    # NOTE: Appendix (fuggelek/) files excluded - only root directory files included
+    md_files = get_rulebook_markdown_files()
     
     content = ""
     for md_file in md_files:
-        file_path = rulebook_dir / md_file
-        
-        if file_path.exists():
-            with open(file_path, 'r', encoding='utf-8') as f:
+        if md_file.exists():
+            with open(md_file, 'r', encoding='utf-8') as f:
                 content += f.read() + "\n\n---\n\n"
     
     return content

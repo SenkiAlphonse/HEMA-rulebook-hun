@@ -4,11 +4,15 @@ Enhanced HEMA Rulebook Search Engine with Alias Support
 
 import json
 import re
+import logging
 import unicodedata
 from pathlib import Path
 from typing import List, Dict, Any, Tuple
 from dataclasses import dataclass
 from search_utils import get_rule_depth, get_rule_lineage, get_children_rules
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -46,7 +50,10 @@ class AliasAwareSearch:
             with open(aliases_path, 'r', encoding='utf-8') as f:
                 self.aliases = json.load(f)
         except FileNotFoundError:
-            print(f"Warning: Aliases file not found at {aliases_path}")
+            logger.warning(f"Aliases file not found at {aliases_path}, using empty aliases")
+            self.aliases = {"variants": {}, "weapons": {}, "concepts": {}}
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse aliases JSON: {e}")
             self.aliases = {"variants": {}, "weapons": {}, "concepts": {}}
 
     def _build_alias_lookup(self):
@@ -71,11 +78,15 @@ class AliasAwareSearch:
         if not self.index_path.exists():
             raise FileNotFoundError(f"Index not found: {self.index_path}")
         
-        with open(self.index_path, 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            self.rules = data['rules']
+        try:
+            with open(self.index_path, 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                self.rules = data['rules']
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse index JSON: {e}")
+            raise RuntimeError(f"Index file corrupted: {e}") from e
         
-        print(f"Loaded {len(self.rules)} rules with alias support")
+        logger.info(f"Loaded {len(self.rules)} rules with alias support")
 
     def _expand_query(self, query: str) -> Tuple[str, str, str, List[str], str]:
         """

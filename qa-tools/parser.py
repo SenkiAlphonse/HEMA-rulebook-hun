@@ -226,30 +226,6 @@ class RulebookParser:
         
         return ''
     
-    def _detect_formatum_in_rule_text(self, text: str) -> str:
-        """
-        Detect formatum (VOR, COMBAT, AFTERBLOW) from rule text.
-        Checks if text starts with **Vor**: or **Combat**: or **Afterblow**:
-        (with colon OUTSIDE the bold markers)
-        """
-        text_strip = text.strip()
-        
-        # Pattern: **Word**: with colon outside the asterisks
-        variant_start_pattern = re.compile(r'^\*\*(vor|combat|afterblow)\*\*:', re.IGNORECASE)
-        match = variant_start_pattern.match(text_strip)
-        
-        if match:
-            variant_name = match.group(1).upper()
-            # Normalize variant names
-            if variant_name == 'VOR':
-                return 'VOR'
-            elif variant_name == 'COMBAT':
-                return 'COMBAT'
-            elif variant_name == 'AFTERBLOW':
-                return 'AFTERBLOW'
-        
-        return ''
-    
     def _extract_variant_subrules(self, parent_rule_id: str, text: str, section: str,
                                    subsection: str, document: str, anchor: str, line_num: int,
                                    weapon_type: str) -> List[Rule]:

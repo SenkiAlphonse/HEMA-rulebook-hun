@@ -4,24 +4,39 @@ HEMA Rulebook Search Web App - Flask Application Factory
 
 import os
 import sys
+import logging
 from pathlib import Path
 from flask import Flask
 
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
 # Add qa-tools to path for imports
-qa_dir = Path(__file__).parent.parent / "qa-tools"
+from app.config import get_qa_tools_dir, get_templates_dir, get_rules_index_path, get_aliases_path
+qa_dir = get_qa_tools_dir()
 sys.path.insert(0, str(qa_dir))
 
 
 def create_app():
     """Create and configure the Flask application"""
-    app = Flask(__name__, template_folder=str(Path(__file__).parent.parent / "templates"))
+    app = Flask(__name__, template_folder=str(get_templates_dir()))
     
-    # Load search engine (shared across blueprints)
-    from search_aliases import AliasAwareSearch
-    app.search_engine = AliasAwareSearch(
-        str(qa_dir / "rules_index.json"),
-        str(qa_dir / "aliases.json")
-    )
+    # Load search engine (shared across blueprints) with error handling
+    try:
+        from search_aliases import AliasAwareSearch
+        app.search_engine = AliasAwareSearch(
+            str(get_rules_index_path()),
+            str(get_aliases_path())
+        )
+        logger.info("Search engine initialized successfully")
+    except FileNotFoundError as e:
+        logger.error(f"Search engine initialization failed: {e}")
+        logger.error("Ensure that build.py has been run to generate rules_index.json and aliases.json")
+        raise RuntimeError("Search engine files not found. Run build.py first.") from e
+    except Exception as e:
+        logger.error(f"Unexpected error initializing search engine: {e}")
+        raise RuntimeError("Failed to initialize search engine") from e
     
     # Configuration
     app.config['FORMATS'] = ["VOR", "COMBAT", "AFTERBLOW"]
