@@ -13,7 +13,7 @@ def build_rulebook():
     """Generate pre-rendered rulebook HTML"""
     try:
         # Import Mistune (will be available after pip install)
-        from app.utils import create_mistune_markdown
+        from app.utils import create_mistune_markdown, preprocess_rulebook_markdown
         
         # Get project root
         project_root = Path(__file__).parent
@@ -56,6 +56,8 @@ def build_rulebook():
         
         # Convert to HTML
         md = create_mistune_markdown()
+        # Preprocess markdown before conversion
+        content = preprocess_rulebook_markdown(content)
         html_content = md(content)
         
         # Write to dist

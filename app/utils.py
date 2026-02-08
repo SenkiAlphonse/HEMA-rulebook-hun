@@ -2,7 +2,24 @@
 Shared utilities for HEMA rulebook app
 """
 
+import re
 import mistune
+
+
+def preprocess_rulebook_markdown(text):
+    """
+    Preprocess markdown before Mistune conversion to handle:
+    1. HTML comments removal
+    2. Rule ID hard breaks converted to double newlines for separate paragraphs
+    """
+    # Remove HTML comments (<!-- ... -->)
+    text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
+    
+    # Convert rule ID hard breaks to double newlines
+    # Pattern: **RULE-ID**  \n (two trailing spaces + newline) → **RULE-ID**\n\n
+    text = re.sub(r'(\*\*[A-Z]+-[\d\.]+\*\*)  \n', r'\1\n\n', text)
+    
+    return text
 
 
 def get_rule_depth(rule_id):
@@ -34,6 +51,23 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         
         # Regular paragraph
         return f'<p>{text}</p>\n'
+    
+    def list(self, text, ordered, level, start=None):
+        """Override list rendering to add bullet-list CSS class"""
+        if ordered:
+            tag = 'ol'
+            extra = f' start="{start}"' if start is not None else ''
+        else:
+            tag = 'ul'
+            extra = ' class="bullet-list"'
+        return f'<{tag}{extra}>\n{text}</{tag}>\n'
+    
+    def block_html(self, text):
+        """Override block HTML to filter out comments while preserving other HTML"""
+        # Filter HTML comments but keep other HTML blocks like <span id="...">
+        if text.strip().startswith('<!--'):
+            return ''
+        return text
 
 
 def create_mistune_markdown():

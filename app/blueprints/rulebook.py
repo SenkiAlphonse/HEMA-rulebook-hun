@@ -4,7 +4,7 @@ Rulebook blueprint - handles full rulebook display and API endpoints
 
 from pathlib import Path
 from flask import Blueprint, render_template, jsonify, current_app, send_file
-from app.utils import create_mistune_markdown
+from app.utils import create_mistune_markdown, preprocess_rulebook_markdown
 
 rulebook_bp = Blueprint('rulebook', __name__)
 
@@ -48,6 +48,8 @@ def _render_rulebook_html():
     """Render rulebook markdown to HTML"""
     md = create_mistune_markdown()
     content = _get_rulebook_markdown_content()
+    # Preprocess markdown before conversion
+    content = preprocess_rulebook_markdown(content)
     return md(content)
 
 
