@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEMA Rulebook - Kard Rendje</title>
+    <title>HEMA Rulebook - Magyar Hosszúkardvívó Sportszövetség</title>
     <style>
         * {
             margin: 0;
@@ -418,6 +418,77 @@
             background-color: #2980b9;
         }
 
+        /* Table of Contents */
+        .toc-container {
+            background-color: #f9f9f9;
+            border-left: 4px solid #e74c3c;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+        }
+
+        .toc-container h2 {
+            margin-top: 0;
+            border: none;
+            color: #2c3e50;
+            font-size: 1.3rem;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-item {
+            margin: 0.5rem 0;
+            line-height: 1.6;
+        }
+
+        .toc-item.level-1 {
+            margin-left: 0;
+            font-weight: 600;
+        }
+
+        .toc-item.level-2 {
+            margin-left: 1.5rem;
+        }
+
+        .toc-item.level-3 {
+            margin-left: 3rem;
+            font-size: 0.95rem;
+        }
+
+        .toc-item a {
+            color: #3498db;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .toc-item a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        /* Section heading with anchor */
+        .section-heading {
+            scroll-margin-top: 100px;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-heading h1 {
+            margin-top: 0;
+        }
+
+        .section-heading h2 {
+            margin-top: 0;
+        }
+
+        .section-heading h3 {
+            margin-top: 0;
+        }
+
         @media (max-width: 768px) {
             .container {
                 max-width: 100%;
@@ -455,7 +526,7 @@
     <div class="container">
         <div class="header">
             <h1>HEMA Rulebook</h1>
-            <p>Kard Rendje - Complete Rulebook Viewer</p>
+            <p>Magyar Hosszúkardvívó Sportszövetség - Complete Rulebook Viewer</p>
         </div>
 
         <div class="search-box">
@@ -497,15 +568,54 @@
         function renderRulebook() {
             const contentDiv = document.getElementById('ruleContent');
             let html = '';
+            let toc = [];
 
             for (const rule of allRules) {
                 const ruleHTML = renderRule(rule);
                 html += ruleHTML;
+                
+                // Extract headings for TOC
+                const section = rule.section || '';
+                const subsection = rule.subsection || '';
+                
+                if (section && !toc.some(item => item.text === section && item.level === 1)) {
+                    toc.push({ text: section, level: 1, id: generateId(section) });
+                }
+                if (subsection && !toc.some(item => item.text === subsection && item.level === 2)) {
+                    toc.push({ text: subsection, level: 2, id: generateId(subsection) });
+                }
             }
 
-            contentDiv.innerHTML = html;
+            // Build TOC HTML
+            let tocHTML = '<div class="toc-container"><h2>📖 Table of Contents</h2><ul class="toc-list">';
+            for (const item of toc) {
+                const className = `toc-item level-${item.level}`;
+                tocHTML += `<li class="${className}"><a onclick="scrollToSection('${item.id}')">${item.text}</a></li>`;
+            }
+            tocHTML += '</ul></div>';
+
+            contentDiv.innerHTML = tocHTML + html;
             originalHTML = html;
             attachEventListeners();
+        }
+
+        function generateId(text) {
+            return text.toLowerCase()
+                .replace(/[^\w\s-]/g, '')
+                .replace(/\s+/g, '-')
+                .substring(0, 50);
+        }
+
+        function scrollToSection(id) {
+            const elements = document.querySelectorAll('[data-section-id]');
+            for (const el of elements) {
+                if (el.getAttribute('data-section-id') === id) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.classList.add('highlight');
+                    setTimeout(() => el.classList.remove('highlight'), 2000);
+                    return;
+                }
+            }
         }
 
         function renderRule(rule) {
@@ -544,7 +654,23 @@
                 referencesHTML += `<div class="references-section"><strong>Referenced by:</strong><div class="reference-list">${refLinks}</div></div>`;
             }
 
+            // Build heading HTML if this is the first rule in a section/subsection
+            let headingHTML = '';
+            const currentSectionId = generateId(section);
+            const currentSubsectionId = generateId(subsection);
+            
+            // Add section heading if new
+            if (section) {
+                headingHTML += `<div class="section-heading" data-section-id="${currentSectionId}"><h1>${section}</h1></div>`;
+            }
+            
+            // Add subsection heading if new
+            if (subsection) {
+                headingHTML += `<div class="section-heading" data-section-id="${currentSubsectionId}"><h2>${subsection}</h2></div>`;
+            }
+
             return `
+                ${headingHTML}
                 <div class="rule" id="rule-${ruleId}">
                     <div class="rule-header">
                         <span class="rule-id" onclick="copyToClipboard('${ruleId}')" title="Click to copy ID">${ruleId}</span>
