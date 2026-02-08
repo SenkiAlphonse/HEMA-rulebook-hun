@@ -129,8 +129,10 @@ def create_mistune_markdown() -> mistune.Markdown:
 
 def normalize_filter(value: Optional[str], allowed: List[str]) -> Optional[str]:
     """Validate and normalize filter values"""
-    if value and value in allowed:
-        return value
+    if value:
+        value_upper = value.upper()
+        if value_upper in allowed:
+            return value_upper
     return None
 
 

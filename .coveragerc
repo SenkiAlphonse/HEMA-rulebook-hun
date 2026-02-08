@@ -1,0 +1,18 @@
+[run]
+source = app,qa-tools
+omit = 
+    */tests/*
+    */test_*.py
+    */__pycache__/*
+    */venv/*
+    */virtualenv/*
+    setup.py
+    build.py
+
+[report]
+precision = 2
+show_missing = True
+skip_covered = False
+
+[html]
+directory = htmlcov

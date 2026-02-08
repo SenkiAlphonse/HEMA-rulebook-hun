@@ -1,0 +1,13 @@
+#!/bin/bash
+# Run tests before commit
+
+echo "Running tests before commit..."
+pytest tests/ -q
+
+if [ $? -ne 0 ]; then
+    echo "❌ Tests failed. Commit aborted."
+    echo "Fix tests or use 'git commit --no-verify' to skip."
+    exit 1
+fi
+
+echo "✅ Tests passed. Proceeding with commit."
