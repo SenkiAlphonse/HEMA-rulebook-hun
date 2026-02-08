@@ -708,37 +708,46 @@
 
         // Handle rule reference clicks
         document.addEventListener('click', (e) => {
-            if (e.target.classList.contains('rule-ref')) {
+            // Check if clicked element or its parent is a rule-ref link
+            let target = e.target;
+            if (target.tagName === 'A' && target.classList.contains('rule-ref')) {
                 e.preventDefault();
-                const targetRuleId = e.target.dataset.ruleId;
-                const currentPosition = window.scrollY;
+                e.stopPropagation();
                 
+                const targetRuleId = target.dataset.ruleId || target.textContent.trim();
+                navigateToRule(targetRuleId);
+            }
+        }, true); // Use capture phase to ensure it fires
+
+        function navigateToRule(targetRuleId) {
+            const currentPosition = window.scrollY;
+            
+            // Navigate to target rule
+            const targetElement = document.getElementById(targetRuleId);
+            if (targetElement) {
                 // Save current position to history
                 navigationHistory.push({
                     position: currentPosition,
                     timestamp: Date.now()
                 });
                 
-                // Navigate to target rule
-                const targetElement = document.getElementById(targetRuleId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    
-                    // Add highlight animation
-                    targetElement.classList.add('highlighted');
-                    setTimeout(() => {
-                        targetElement.classList.remove('highlighted');
-                    }, 1500);
-                    
-                    // Show navigation back button
-                    navBackButton.classList.add('show');
-                } else {
-                    // Rule ID not found, remove from history
-                    navigationHistory.pop();
-                    alert(`Szabály ${targetRuleId} nem található`);
-                }
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Add highlight animation
+                targetElement.classList.add('highlighted');
+                setTimeout(() => {
+                    targetElement.classList.remove('highlighted');
+                }, 1500);
+                
+                // Show navigation back button
+                navBackButton.classList.add('show');
+            } else {
+                // Rule ID not found
+                alert(`Szabály ${targetRuleId} nem található az szabályzatban`);
+                console.warn(`Rule ${targetRuleId} not found. Available IDs: `, 
+                    Array.from(document.querySelectorAll('[id^=""]')).map(el => el.id).slice(0, 10));
             }
-        });
+        }
 
         // Handle navigation back button clicks
         navBackButton.addEventListener('click', () => {
