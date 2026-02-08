@@ -1,1 +1,1 @@
-web: python app.py
+web: python build.py && python app.py
