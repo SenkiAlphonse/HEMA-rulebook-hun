@@ -90,16 +90,36 @@ def build_rules_text_for_summary(rules):
     return "\n".join(parts)
 
 
-def summarize_with_gemini(text, language):
-    """Generate summary using Gemini"""
+def summarize_with_gemini(text, language, format_type="standard"):
+    """Generate summary using Gemini
+    
+    Args:
+        text: Rules text to summarize
+        language: "EN" or "HU"
+        format_type: "standard" (paragraph) or "handout" (1-page bullet format)
+    """
     model = get_gemini_model()
     target_language = "Hungarian" if language == "HU" else "English"
-    system_prompt = (
-        f"You are summarizing fencing competition rules. "
-        f"Write a clean, concise, professional summary in {target_language}. "
-        "Use short paragraphs or bullet points. Preserve key constraints, penalties, and exceptions. "
-        "Do not invent rules."
-    )
+    
+    if format_type == "handout":
+        system_prompt = (
+            f"You are creating a compact 1-page rule handout in {target_language}. "
+            f"Format this as a clean, scannable reference sheet:\n"
+            f"- Use bullet points (•) for key rules and exceptions\n"
+            f"- Group related rules under clear section headers (e.g., '## Valid Targets', '## Penalties')\n"
+            f"- Keep each bullet to 1-2 lines maximum\n"
+            f"- Prioritize: valid actions, penalties, restrictions, special cases\n"
+            f"- Use concise language (no fluff)\n"
+            f"- Maximum 1 page when printed (keep it tight!)\n"
+            f"- Do not invent rules or add explanations beyond what's provided"
+        )
+    else:
+        system_prompt = (
+            f"You are summarizing fencing competition rules. "
+            f"Write a clean, concise, professional summary in {target_language}. "
+            "Use short paragraphs or bullet points. Preserve key constraints, penalties, and exceptions. "
+            "Do not invent rules."
+        )
 
     chunks = split_text_for_summary(text)
     summaries = []
@@ -113,10 +133,20 @@ def summarize_with_gemini(text, language):
     if len(summaries) == 1:
         return summaries[0]
 
-    merge_prompt = (
-        f"Combine the summaries into a single cohesive summary in {target_language}. "
-        "Avoid repetition. Keep it compact and structured."
-    )
+    if format_type == "handout":
+        merge_prompt = (
+            f"Merge these rule summaries into a single 1-page handout in {target_language}:\n"
+            f"- Combine related bullets under headers\n"
+            f"- Remove any duplicates\n"
+            f"- Keep it scannable and concise\n"
+            f"- Maximum 1 printed page"
+        )
+    else:
+        merge_prompt = (
+            f"Combine the summaries into a single cohesive summary in {target_language}. "
+            "Avoid repetition. Keep it compact and structured."
+        )
+    
     response = model.generate_content([
         merge_prompt,
         "Summaries:\n" + "\n\n".join(summaries)
@@ -126,7 +156,26 @@ def summarize_with_gemini(text, language):
 
 @ai_bp.route('/summarize', methods=['POST'])
 def api_summarize():
-    """Summarize rules using Gemini"""
+    """Summarize rules using Gemini
+    
+    Request body:
+        {
+            "mode": "extract" or "search",
+            "format": "standard" or "handout" (default: "standard"),
+            "language": "EN" or "HU",
+            "query": "search query" (required if mode="search"),
+            "weapon_filter": "longsword" etc (optional),
+            "formatum_filter": "VOR" etc (optional)
+        }
+    
+    Response:
+        {
+            "success": true,
+            "format": "handout",
+            "language": "EN",
+            "summary": "..."
+        }
+    """
     try:
         from app.utils import normalize_filter, filter_rules_for_extract
         
@@ -143,6 +192,12 @@ def api_summarize():
 
         data = request.get_json()
         mode = data.get("mode", "search")
+        format_type = data.get("format", "standard")
+        
+        # Validate format
+        if format_type not in ("standard", "handout"):
+            return jsonify({"error": 'format must be "standard" or "handout"'}), 400
+        
         language = normalize_filter(
             data.get("language"),
             current_app.config['SUMMARY_LANGUAGES']
@@ -187,10 +242,11 @@ def api_summarize():
             return jsonify({"error": "No matching rules to summarize"}), 400
 
         summary_input = build_rules_text_for_summary(rules)
-        summary = summarize_with_gemini(summary_input, language)
+        summary = summarize_with_gemini(summary_input, language, format_type=format_type)
 
         return jsonify({
             "success": True,
+            "format": format_type,
             "language": language,
             "summary": summary
         })
