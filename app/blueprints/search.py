@@ -142,9 +142,7 @@ def api_stats() -> Any:
 def api_extract() -> Any:
     """Generate rulebook extract filtered by weapon and format"""
     try:
-        data = request.get_json()
-        if not data:
-            return jsonify({"error": "Request body must be JSON"}), 400
+        data = request.get_json() or {}
             
         weapon_filter = normalize_filter(data.get("weapon_filter"), current_app.config['WEAPONS'])
         formatum_filter = normalize_filter(data.get("formatum_filter"), current_app.config['FORMATS'])

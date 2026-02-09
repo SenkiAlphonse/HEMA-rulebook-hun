@@ -205,40 +205,42 @@ class RulebookSearch:
     def _calculate_score(self, rule: Dict[str, Any], query: str, terms: List[str]) -> float:
         """Calculate relevance score for a rule"""
         score = 0.0
-        
+
         # Combine searchable text
         text_lower = rule['text'].lower()
         section_lower = rule['section'].lower()
         subsection_lower = rule['subsection'].lower()
         rule_id_lower = rule['rule_id'].lower()
         rule_formatum = rule.get('formatum', '').upper()
-        
+
         # Exact rule ID match (highest priority)
-        if rule_id_lower in query:
+        if rule_id_lower == query.lower():
+            score += SCORE_RULE_ID_EXACT_MATCH * 2  # Double bonus for exact match
+        elif rule_id_lower in query.lower():
             score += SCORE_RULE_ID_EXACT_MATCH
-        
+
         # Exact phrase match in text
         if query in text_lower:
             score += SCORE_PHRASE_EXACT_MATCH
-        
+
         # Exact phrase match in section/subsection
         if query in section_lower or query in subsection_lower:
             score += SCORE_SECTION_MATCH
-        
+
         # Term frequency in text
         for term in terms:
             count_in_text = text_lower.count(term)
             score += count_in_text * SCORE_TERM_IN_TEXT
-            
+
             # Bonus for terms in section/subsection
             if term in section_lower or term in subsection_lower:
                 score += SCORE_TERM_IN_SECTION
-        
+
         # Bonus for specific weapon rules if relevant
         if any(weapon_term in query for weapon_term in ['hosszúkard', 'longsword', 'rapir', 'rapier']):
             if rule.get('weapon_type') != 'general':
                 score += SCORE_WEAPON_TYPE_BONUS
-        
+
         # Bonus for formatum-specific rules if query contains formatum keywords
         detected_formatum = self._detect_formatum_in_query(query)
         if detected_formatum and rule_formatum:
@@ -246,7 +248,7 @@ class RulebookSearch:
                 score += SCORE_FORMATUM_MATCH_BONUS  # Significant bonus for matching formatum
             elif rule_formatum == '':  # General rules get slight bonus
                 score += SCORE_FORMATUM_GENERAL_BONUS
-        
+
         return score
     
     def get_rule_by_id(self, rule_id: str) -> Optional[Dict[str, Any]]:

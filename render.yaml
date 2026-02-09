@@ -3,7 +3,7 @@ services:
     name: hema-rulebook-search
     runtime: python
     runtimeVersion: "3.11"
-    startCommand: python build.py && python app.py
+    startCommand: pytest tests/ -v && python build.py && python app.py
     envVars:
       - key: PYTHON_VERSION
         value: "3.11"
