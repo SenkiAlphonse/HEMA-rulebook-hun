@@ -47,13 +47,13 @@ The HEMA Rulebook Q&A System is a **Flask-based REST API** that indexes Hungaria
 ┌──────────────────▼──────────────────────────────────┐
 │           Flask Application (app.py)                │
 │  ┌────────────────┬────────────────┬──────────────┐ │
-│  │  Search       │  AI Services   │  Rulebook    │ │
-│  │  Blueprint    │  Blueprint     │  Blueprint   │ │
+│  │  Search        │  AI Services   │  Rulebook    │ │
+│  │  Blueprint     │  Blueprint     │  Blueprint   │ │
 │  └────────────────┴────────────────┴──────────────┘ │
 └──────────────────┬──────────────────────────────────┘
                    │
 ┌──────────────────▼──────────────────────────────────┐
-│    Business Logic Layer (qa-tools/)                │
+│    Business Logic Layer (qa-tools/)                 │
 │  ┌────────────────┬────────────────┬──────────────┐ │
 │  │ AliasAware     │  Rule Parser   │  Validators  │ │
 │  │ Search Engine  │                │              │ │
@@ -70,10 +70,10 @@ The HEMA Rulebook Q&A System is a **Flask-based REST API** that indexes Hungaria
                    │
 ┌──────────────────▼──────────────────────────────────┐
 │          Source Data (Markdown Files)               │
-│  ┌─────────┬─────────┬─────────┬─────────────────┐ │
-│  │ 01-*    │ 03-*    │ 05-*    │ fuggelek/       │ │
-│  │ (intro) │ (equip) │ (long)  │ (glossary, etc) │ │
-│  └─────────┴─────────┴─────────┴─────────────────┘ │
+│  ┌─────────┬─────────┬─────────┬─────────────────┐  │
+│  │ 01-*    │ 03-*    │ 05-*    │ fuggelek/       │  │
+│  │ (intro) │ (equip) │ (long)  │ (glossary, etc) │  │
+│  └─────────┴─────────┴─────────┴─────────────────┘  │
 └─────────────────────────────────────────────────────┘
 ```
 
