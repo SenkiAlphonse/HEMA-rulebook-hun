@@ -10,14 +10,21 @@
 
 ### Rend és Fegyelem fenntartása  
 <span id="DIS-1.2"></span>  
+<!-- TODO -->
 
 **DIS-1.2.1**  
-Minden résztvevő és jelenlévő, beleértve a nézőket is, szigorúan be kell tartsa az adott verseny szabályait, az udvariasság és becsületesség hagyományait, a tisztviselők utasításait. Különösképpen, rendezett, fegyelmezett, és sportszerű módon alávetik magukat az alábbi rendelkezéseknek; melyek bárminemű megszegése a fegyelmi hatóság által kiszabott büntetést vonhat maga után, előzetes figyelmeztetéssel, vagy anélkül, figyelembe véve a tényeket és körülményeket.  
+A vívóknak pontosan és becsületesen be kell tartaniuk az MHSZ versenyszabályait és alapszabályát, az adott versenyre vonatkozó külön szabályokat, az udvariasság és tisztesség hagyományos szokásait és a hivatalos személyek utasítását.  
 
 **DIS-1.2.2**  
-Minden, a versenyen résztvevő és jelenlévő köteles fegyelmezett magatartást tanúsítani, és nem megzavarni a verseny gördülékeny lebonyolítását. A mérkőzések közben senki nem közelítheti meg a küzdőteret, hogy tanácsokat adjon a vívóknak, kritizálja a bírót vagy a segédjét, hogy sértegesse, vagy befolyásolni próbálja őket bármilyen módon. A vívó segédje köteles a számára kijelölt helyen maradni. A bíró köteles haladéktalanul leállítani minden tevékenységet, amely megzavarja az általa vezetett mérkőzést.  
+Kifejezetten alávetik magukat a rend, a fegyelem és a sportszerűség elveinek alapulvételével az alábbi előírásoknak. Ezek megsértése esetén, a tényállástól és a körülményektől függően az illetékes fegyelmi hatóság figyelmeztetést követően, vagy akár anélkül is az előírt büntetéseket<!-- (Vö. t.158-tól t.170-ig)--> alkalmazza.  
 
 **DIS-1.2.3**  
+
+A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHSZ Alapszabályát<!--, ide értve de nem kizárólagosan a FIE Etikai Kódexet és a Safeguarding Szabályzatot is-->. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni
+vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. t137.1-3). Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a 4. csoportba tartozó vétséget követ el, és a [DIS-4.3.15]--[DIS-4.3.16] szakaszban foglaltak szerint büntetendő.
+Minden, a versenyen résztvevő és jelenlévő köteles fegyelmezett magatartást tanúsítani, és nem megzavarni a verseny gördülékeny lebonyolítását. A mérkőzések közben senki nem közelítheti meg a küzdőteret, hogy tanácsokat adjon a vívóknak, kritizálja a bírót vagy a segédjét, hogy sértegesse, vagy befolyásolni próbálja őket bármilyen módon. A vívó segédje köteles a számára kijelölt helyen maradni. A bíró köteles haladéktalanul leállítani minden tevékenységet, amely megzavarja az általa vezetett mérkőzést.  
+
+**DIS-1.2.4**  
 Bármely személy, aki bármilyen indokkal sérteget vagy fenyeget egy tisztviselőt, azonnal diszkvalifikálható / kiutasítható a helyiségből.  
 
 **DIS-1.2.4**  
@@ -77,6 +84,14 @@ Mérkőzések közben és után, akkor is, ha a vívó már elhagyta a küzdőte
 A vívóknak a verseny végéig sportszerűen, legjobb képességeik szerint kell vívniuk, hogy minél jobb helyezést érjenek el, anélkül, hogy bárkinek találatot ajándékoznának, vagy bárkitől ajándék találatot fogadnának el. A szabály megsértőjét a negyedik csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani.  
 <!-- (Vö. t.158-162, t.169, t.170) -->  
 
+<!-- **DIS-1.3.13**
+A csapatvezető -->
+
+**DIS-1.3.14**
+**A csapatkapitány**:
+Csapatversenyeken kizárólag a csapatkapitány jogosult a versenybíróhoz<!-- vagy a versenybírói bizottság kiküldöttéhez--> fordulni mindenfajta technikai kérdés tisztázása vagy panasz előterjesztése érdekében. A panaszokra vonatkozó eljárását a t.[DIS-5.2.2]--[DIS-5.2.5] szakaszok szabályozzák.
+Azok a csapattagok, akik pontosan betartották a csapatkapitány rendelkezéseit, nem vonhatóak felelősségre az arra egyébként illetékes szervek által. Ugyanakkor személyesen felelősek minden tettükért amelyekről nem a csapatkapitány rendelkezett és minden általuk elkövetett vétségért, amellyel megsértették jelen szabályzat rendelkezéseit.
+
 ### Edzők és kísérő személyzet  
 <span id="DIS-1.4"></span>  
 <!-- TODO -->  
@@ -97,33 +112,55 @@ A vívóknak a verseny végéig sportszerűen, legjobb képességeik szerint kel
 A bírói vagy segédbírói szerep vállalásával az adott személy megfogadja, hogy tiszteletben tartja, és betartatja a verseny szabályait, és a legszigorúbb pártatlansággal és odafigyeléssel látja el feladatait.  
 
 **DIS-2.1.2**  
-A bíró nem csak a mérkőzések levezényléséért, a találatok megítéléséért és a felszerelések ellenőrzéséért felelős, hanem a rend fenntartásáért is az általa vezetett mérkőzések során.  
+A versenybíró nem csak a mérkőzést vezeti, a találatokat bírálja el és a felszerelést ellenőrzi, hanem felelős az általa irányított mérkőzések rendjéért is. <!-- (Vö. t.47.2.i).>
 
-**DIS-2.1.3**  
+<!-- FIXME **DIS-2.1.3**  
 A bíró megszakíthatja a mérkőzést, ha az zavarossá, veszélyessé válik, vagy már nem tudja egyértelműen megítélni az akciókat. Objektív találatjelző berendezés hiányában a menetek elbírálásának alapját az akciót megfigyelő bíró és segédje észlelései képezik. A vívók a végső döntés meghozatala előtt fordulhatnak a bíróhoz pontosításért vagy felülvizsgálatért. Ténymegállapítások kapcsán a bírók ítéletét a versenyzők nem kérdőjelezhetik meg, (kivéve a videobíráskodás eseteit), és ha egy vívó ezt az elvet megszegi, az 1. csoportba tartozó vétséget követ el. Ténymegállapításnak számít - nem kizárólagosan - az arénában történtek megítélése és elemzése, találatok érvényessége és prioritása, az arénából kilépés tényének megállapítása, egy vívó viselkedésének 3. vagy 4. csoportba sorolása, stb. De ha egy bíró egyértelműen nem ismer vagy félreért meghatározott szabály(oka)t, vagy azokat szabályokba ütköző módon alkalmazza, a versenyzők személyesen felülvizsgálatot kérhetnek.  
 
 A felülvizsgálatot kérheti:  
 - egyéni versenyszámban a vívó,  
-- csapat versenyszámban a vívónak vagy a csapatkapitány;  
+- csapat versenyszámban a vívó vagy a csapatkapitány;  
 
-udvariasan, formalitás nélkül, azonnal szóban a bírótól, mielőtt bármilyen a kérdéses helyzet után esett találattal kapcsolatban döntés születne. Ha a bíró kitart a véleménye mellett, a főbíró jár el az ügyben, aki döntést hozhat, illetve felügyeletet biztosíthat a mérkőzés további részében. Egy ilyen kérelem megalapozatlansága esetén a vívó a fegyelmi vétségek 1. csoportjára vonatkozó szabályok szerint büntetendő.  
+udvariasan, formalitás nélkül, azonnal szóban a bírótól, mielőtt bármilyen a kérdéses helyzet után esett találattal kapcsolatban döntés születne. Ha a bíró kitart a véleménye mellett, a főbíró jár el az ügyben, aki döntést hozhat, illetve felügyeletet biztosíthat a mérkőzés további részében. Egy ilyen kérelem megalapozatlansága esetén a vívó a fegyelmi vétségek 1. csoportjára vonatkozó szabályok szerint büntetendő.   -->
 
 **DIS-2.1.4**  
-A mérkőzés irányítójaként és a találatok döntőbírójaként a szabályoknak megfelelően jogosult a szabályoknak megfelelő büntetések kiszabására, akár úgy, hogy megtagadja az ellenfélen ténylegesen szerzett találat megítélését, akár úgy, hogy meg nem történt találatot ítél az ellenfélnek, vagy úgy, hogy kizárja a szabálytalankodót a versenyszámból, amelyen bíráskodik, mindezt a körülmények függvényében, előzetes figyelmeztetéssel vagy anélkül. Ilyen körülmények között, és ha tényszerűen ítélkezett, döntései visszavonhatatlanok.  
+Amikor a versenybíró a mérkőzéseket vezeti, a találatokat elbírálja, a szabályok szerint a vívókat vétségeik miatt megbüntetheti a körülmények figyelembevételével előzetes figyelmeztetés után vagy anélkül a ténylegesen adott találat érvénytelenítésével, találat odaítélésével valamelyik vívó terhére amikor találat ténylegesen nem esett, valamint a
+versenyző adott versenyből való kizárásával. Ezek során a ténymegállapítást tartalmazó döntése nem változtatható meg <!-- (Vö. t.172). -->
 
 **DIS-2.1.5**  
-Az általa vezetett versenyen részt vevő, vagy azon jelen lévő összes vívó feletti illetékességi joga alapján javasolhatja a nézők, edzők, oktatók és egyéb kísérő személyek kiutasítását a verseny helyszínéről.  
+A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a <!--Directoire Technique-nél-->szervező teamnél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt.  
+<!-- (Vö. t.158-162, t.167, t.168, t.170). -->
 
 **DIS-2.1.6**  
-Végezetül, javasolhat a Szervező Csapatnak minden egyéb, általa megfelelőnek ítélt büntetést (versenyszámból való kizárás, eltiltás vagy felfüggesztés). A Főbíró illetékes a bíró döntéseire vonatkozó fellebbezések elbírálására.  
-
-#### A szervező csapat és a Főbíró  
+A versenybíró javasolhat a <!--DT-nek-->szervező teamnek további megfelelőnek tartott, büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. t.139.3).  
 
 **DIS-2.1.7**  
-A szervező csapat és a Főbíró jogkörrel illetékes minden olyan vívó felett, aki részt vesz vagy jelen van az általuk rendezett versenyen. Szükség esetén minden vitába beavatkozhatnak. Felelősek a versenyek alatti rend és fegyelem megőrzéséért is, és alkalmazhatják a Szabályzatban meghatározott büntetéseket.  
+A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte, vagy az MHSZ ellenőr (ha nincs küldött).
+<!-- TODO -->
+
+### A <!--Directoire Technique -->Organising Team /Szervező Csapat az MHSZ<!--Nemzetközi szövetség much?--> hivatalos versenyein <!--(vö.: o.15-22)-->
 
 **DIS-2.1.8**  
-A Szervező Csapat vagy a Főbíró minden döntése azonnal végrehajtható. A határozat ellen lehet fellebbezni, de a fellebbezés nem függeszti fel a döntést a verseny ideje alatt.  
+A Szervező Team-nek, a Versenyíró Bizottság küldötteinek illetve az MHSZ ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen.  
+- Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat.  
+- A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják.  
+- A DT köteles a FIE központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket.  
+- A DT felel a kiszabott büntetések végrehajtásáért, ha azok ellen fellebbezésnek nincs helye, vagy annak a végrehajtásra nincs halasztó hatálya.  
+<!-- (Vö. t.136). -->
+
+**DIS-2.1.9**  
+A SZT, a Versenyíró Bizottság küldötte, illetve az MHSZ ellenőr spontán módon hozott, vagy (elsőfokú hatóságként) saját jogon hozott fegyelmi döntése ellen az MHSZ Fegyelmi Bizottságához lehet fellebbezni.  
+
+**DIS-2.1.10**  
+A SZT, a Versenyíró Bizottság küldötte, illetve az MHSZ ellenőr minden döntése azonnal végrehajtható. A verseny során semmilyen fellebbezésnek nincs halasztó hatálya a döntés végrehajtására.  
+<!-- FIXME
+#### A Zzervező csapat és a Főbíró  
+
+**DIS-2.1.11**  
+A szervező csapat és a Főbíró jogkörrel illetékes minden olyan vívó felett, aki részt vesz vagy jelen van az általuk rendezett versenyen. Szükség esetén minden vitába beavatkozhatnak. Felelősek a versenyek alatti rend és fegyelem megőrzéséért is, és alkalmazhatják a Szabályzatban meghatározott büntetéseket.  
+
+**DIS-2.1.12**  
+A Szervező Csapat vagy a Főbíró minden döntése azonnal végrehajtható. A határozat ellen lehet fellebbezni, de a fellebbezés nem függeszti fel a döntést a verseny ideje alatt.   -->
 
 ## Büntetések  
 <span id="DIS-3"></span>  
@@ -162,17 +199,20 @@ versenyen az erre feljogosított hatóságok--a Versenybíró és a szervezőcsa
 #### A ténylegesen elért találat meg nem adása  
 
 **DIS-3.2.1**  
-Szerzett találat jutalmazásának megtagadása. Bár a versenyző ténylegesen eltalálta ellenfele érvényes találati felületét, ezt a találatot meg lehet tagadni, vagy azért, mert nem a vívás megengedett időtartama alatt érkezett meg, vagy azért, mert a versenyző átlépte a küzdőtér határait, vagy mert a találatot erőszakosan szerezte vagy más szabálysértést követett el a találat megszerzése közben, vagy a szabályzatban meghatározott egyéb okok miatt.  
+Meg lehet tagadni az érvényes találati felületre bevitt találat megadását, ha az nem a küzdelmi idő alatt történt; ha a vívó a pástról lelépett; az elektromos felszerelés hibája miatt; ha a találat bevitele közben erőszak történt, vagy a szabályokban rögzített bármely más ok miatt (a Technikai Szabályzattal összhangban).  
 
 #### A ténylegesen nem kapott találat megítélése  
 
 **DIS-3.2.2**  
-Meg nem történt találat odaítélése. A versenyző ellen olyan találatot ítélhetnek meg, amelyet valójában nem kapott; vagy azért, mert átlépte a küzdőtér határát, vagy azért, mert olyan szabálysértést követett el, amely megakadályozta ellenfelét a vívásban.  
+A vívót találattal lehet büntetni, annak ellenére, hogy ténylegesen találat rajta nem esett, ha a vívó mindkét lábával átlépte a hátsó határvonalat,<!-- (Vö. t.34),--> vagy ha ellenfelét meg nem engedett módon akadályozza a vívásban (ütközéssel párosult lerohanás, fogásos vagy birkózó akciók használata amikor nem megengedett stb.)  
 
 #### Kizárás  
 
 **DIS-3.2.3**  
-Kizárható a versenyből az a versenyző, aki vívás közben bizonyos erőszakos vagy bosszúálló cselekményeket követ el ellenfelével szemben, vagy aki nem a legjobb tudása szerint vív, vagy az ellenfelével kötött csalárd megállapodásból profitál. Az a versenyző, akit kizárnak egy versenyből, nem vehet részt a verseny további részében, még akkor sem, ha már kvalifikálta magát a következő fordulóba jutásra. Elveszíti az egyéni rangsorban szerzett helyét, és a kizárt vívó után rangsorolt összes vívó egy hellyel feljebb lép a ranglistában.  
+A versenyszámból kizárható az a vívó, aki durván erőszakos vagy bosszúálló akciót hajt végre, aki nem a legjobb képességei szerint vív, vagy aki hasznot húz az ellenféllel kötött csalárd megállapodásból.
+
+**DIS-3.2.4**  
+A versenyszámból kizárt versenyző nem folytathatja a vívást még abban az esetben sem, ha már továbbjutott a következő fordulóba. Elveszti az egyéni versenyben elért helyezését és a kizárt versenyzőnél rosszabb helyezést elérő vívók egy hellyel feljebb kerülnek. Ha szükséges, a két harmadik helyezett helyezését a tábla összeállításánál használt rangszámuk figyelembevételével kell megállapítani. Minden esetben csak a versenyen pontot szerzett vívók kerülhetnek egy hellyel előrébb.
 
 ### Fegyelmi büntetések  
 <span id="DIS-3.3"></span>  
@@ -180,7 +220,8 @@ Kizárható a versenyből az a versenyző, aki vívás közben bizonyos erőszak
 #### Kizárás a versenyszámból  
 
 **DIS-3.3.1**  
-A versenyszámból való kizárás. Fegyelmi büntetésként is kiszabható (a küzdőtérnél való meg- nem jelenés, fegyver nem felel meg az előírásoknak, szabályszegő magatartás illetékes személlyel szemben, stb.). Az ilyen jellegű kizárás következményei megegyeznek a fentebb leírtakkal. Kizárás a Versenyből. Fegyelmi vétség miatt is kiszabható (a küzdőtéren nem megfelelő megjelenés, nem a szabályoknak megfelelő fegyverek, tisztségviselővel szembeni kifogásolható magatartás stb.). Az ilyen kizárás következményei a versenyzőre nézve megegyeznek a fenti cikkben (A vívással kapcsolatos büntetések/3) leírtakkal.  
+A vívót a versenyszámból ki lehet zárni fegyelmi okok miatt is (nem jelenik meg megfelelően a páston; fegyverei nem szabályszerűek; helytelenül viselkedik hivatalos személlyel szemben, stb.).
+A [DIS-3.2.4] szakaszban részletezett, kizárásra vonatkozó következményeket megfelelően alkalmazni kell.  
 
 #### Kitiltás a verseny helyszínéről, kizárás a versenyből  
 

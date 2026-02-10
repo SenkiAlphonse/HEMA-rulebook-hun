@@ -19,6 +19,7 @@ Az egyik alapelv, amely mindenek felett áll, a sportszerűség elve. Mindegyik 
 <span id="GEN-3"></span>  
 
 A vívás bíráskodásában leggyakrabban használt technikai kifejezések magyarázata  
+
 ### Preambulum  
 Hangsúlyozandó, hogy a jelen szakaszban írtak nem írják felül a vívásról szóló értekezéseket,  
 szerepük a szabályok megértésében való segítség.  
@@ -155,20 +156,25 @@ A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy a
 <span id="GEN-5.1"></span>  
 
 **GEN-5.1.1**  
-A vívók saját felelősségükre és kockázatukra fegyverkeznek és szerelkeznek fel,  
-öltözködnek és vívnak.  
+A vívók saját felelősségükre és kockázatukra fegyverkeznek és szerelkeznek fel, öltözködnek és vívnak.  
 
 **GEN-5.1.2**  
-Minden vívó a saját felszereléséért felelős, és a kötelező elemek minden darabját köteles használni, amikor részt vesz a tornán. Ha a felszerelése egyik elemét a torna kezdetekor vagy a közben versenyzésre alkalmatlannak nyilvánítják, és azt a versenyző nem tudja azt megfelelő elemmel pótolni, akkor nem folytathatja, vagy kezdheti el a versenyzést.  
+Az MHSZ hivatalos versenyeinek helyszínén (ide értve a versenyhez kapcsolódó edzőtermeket is), a bemelegítő vagy edzést végző vívónak kötelező az MHSZ előírásainak megfelelő vívó-öltözetet és felszerelést használnia. Az iskolát adó személynek legalább az MHSZ szabályainak megfelelő mesterplasztront, kesztyűt és maszkot kell viselnie. Az iskolázó vívónak legalább maszkot és kesztyűt kell viselnie. A verseny MHSZ ellenőre vagy a <!--DT-->Szervező Team tagja sárga lappal bünteti azt a személyt, aki e szabályt nem tartja be. Ezt követően ismételt szabályszegés esetén fekete lapot kell adni.
 
 **GEN-5.1.3**  
-A kötelező felszerelést a tornán erre kijelölt személyzet ellenőrzi a torna megkezdése előtt. Továbbá minden egyes pást vezető bírója egy további ellenőrzést hajt végre a mérkőzések megkezdése előtt[^1]. A bíró kötelezheti bármelyik versenyzőt, hogy állítson a felszerelése valamely részein vagy cserélje le azt, erre legfeljebb 5 percnyi időt hagyhat. Ha a vívó nem tud eleget tenni a fenti időkereten belül az utasításnak, akkor fekete lapot kap és ezzel kizárásra kerül a tornáról.  
-
+A jelen szabályzatban és a mellékelt előírásokban (Lásd: felszerelés szabályzat) szereplő biztonsági intézkedések csak a vívók biztonságának megerősítését segítik elő anélkül, hogy azt kifejezetten szavatolhatnák. Ezért a felelősség – bármilyen módon alkalmazzák azokat – semmiképpen sem hárítható át az MHSZ-re, sem a versenyek szervezőire, sem a lebonyolítással megbízott hivatalos személyekre, sem pedig egy esetleges baleset okozóira.
+<!-- 
 **GEN-5.1.4**  
-Ha olyan nem megfelelő felszerelés miatt sérülés következik be a tornán, amit a felszerelés ellenőrző személyzet vagy a bíró jóvá hagyott, akkor azon, hanyagságot elkövető felszerelés ellenőrző személyzet vagy a bíró tekinthető felelősnek, aki jóváhagyta a vívó pástra lépését. A felelős személyt vagy személyeket fegyelmi eljárás alá vonjuk, és a licenszük bevonásra kerülhet.  
-
+Minden vívó a saját felszereléséért felelős, és a kötelező elemek minden darabját köteles használni, amikor részt vesz a tornán. Ha a felszerelése egyik elemét a torna kezdetekor vagy a közben versenyzésre alkalmatlannak nyilvánítják, és azt a versenyző nem tudja azt megfelelő elemmel pótolni, akkor nem folytathatja, vagy kezdheti el a versenyzést.   -->
+<!-- 
+**GEN-5.1.3**  
+A kötelező felszerelést a tornán erre kijelölt személyzet ellenőrzi a torna megkezdése előtt. Továbbá minden egyes pást vezető bírója egy további ellenőrzést hajt végre a mérkőzések megkezdése előtt[^1]. A bíró kötelezheti bármelyik versenyzőt, hogy állítson a felszerelése valamely részein vagy cserélje le azt, erre legfeljebb 5 percnyi időt hagyhat. Ha a vívó nem tud eleget tenni a fenti időkereten belül az utasításnak, akkor fekete lapot kap és ezzel kizárásra kerül a tornáról.   -->
+<!-- 
+**GEN-5.1.4**  
+Ha olyan nem megfelelő felszerelés miatt sérülés következik be a tornán, amit a felszerelés ellenőrző személyzet vagy a bíró jóvá hagyott, akkor azon, hanyagságot elkövető felszerelés ellenőrző személyzet vagy a bíró tekinthető felelősnek, aki jóváhagyta a vívó pástra lépését. A felelős személyt vagy személyeket fegyelmi eljárás alá vonjuk, és a licenszük bevonásra kerülhet.   -->
+<!-- 
 **GEN-5.1.5**  
-A bíró kitilthat olyan felszereléseket, amik nem felelnek meg a követelményeknek.  
+A bíró kitilthat olyan felszereléseket, amik nem felelnek meg a követelményeknek.   -->
 
 ### Fém fegyverek esetén  
 <span id="GEN-5.2"></span>  
@@ -206,7 +212,7 @@ egy egyszerű textil kesztyű is.
 A felsőtestet sérülésmentes vívókabát vagy gambeson kell védje. Ez olyan anyagból készüljön, ami megakadályozza a penge behatolását és tompítja a testre mért ütést vagy szúrást. A vívókabátot a felszerelés ellenőrző személyzet és a bíró is ellenőrzi. A vívókabátnak a hónaljat is fednie kell. A vívókabátnak legalább 350N szúrásállósággal kell rendelkeznie. A vívókabát nyakát olyan módon kell kialakítani, hogy az a felfele csúszó pengét megfoghassa, erre célszerű visszahajtott, szúrásálló anyagot használni.  
 
 **GEN-5.2.2.4**  
-Minden női versenyzőnek kötelező merev mellkasvédelmet használnia. A férfiak esetében nem kötelező, de erősen ajánlott. Vékony, a szúrások, ütéseke erejét csak kis mértékben tompító kabátok (pl. SPES “AP Light”) esetén mindkét nem számára kötelező a használata.  
+Minden versenyzőnek *kötelező merev mellkasvédelmet* használnia.  
 
 **GEN-5.2.2.5**  
 Amennyiben a kabát önmagában nem ad elegendő védelmet a könyöknek és az alkarnak, úgy kiegészítő merev védelem használata kötelező.  
@@ -214,8 +220,8 @@ Amennyiben a kabát önmagában nem ad elegendő védelmet a könyöknek és az 
 **GEN-5.2.2.6**  
 A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem.  
 
-<!-- **GEN-5.2.2.7**  
-hónaljvédő TODO -->  
+**GEN-5.2.2.7**  
+hónaljvédő TODO  
 
 **GEN-5.2.3**  
 #### Lábvédelem  
@@ -704,6 +710,7 @@ Tilos a keresztvassal ütni.
 <span id="GEN-7"></span>  
 
 ### A Versenybíró  
+<!-- TODO -->
 <span id="GEN-7.1"></span>  
 
 **GEN-7.1.1**  
@@ -725,7 +732,8 @@ A versenybíró feladatai:
 A küzdelem megállítása után a bíró szükség esetén egyeztet a segédbíróval (kézjelekkel jelzi az akciót és a találatot, a segéd szükség esetén jelzi, ha a bíró szemszögéből nem látható találat is esett; szükség esetén a bíró szóban is konzultálhat a segéddel), végül javasol egy ítéletet. Ha a vívók elfogadják az döntést (azaz nem kérnek felülvizsgálatot), a küzdelem a bíró által javasolt ítélettel folytatódik. Ha valamelyik vívó felülvizsgálatot kér, de az ellenfele nem ért vele egyet, a bíró megismételheti az asszót, vagy ha meggyőződéssel döntést tud hozni, ítélhet pontot a kérdéses akcióért.  
 
 **GEN-7.1.4**  
-Ha a bíró valamiért nem tudja interpretálni a végrehajtott akciósort, annak okát ismertetnie kell. Ilyenkor megismételtetheti az asszót, és az esetleges hibájáért illendő elnézést kérnie.  
+<!-- FIXME remove/fix -->
+Ha a bíró nem tudja interpretálni a végrehajtott akciósort, annak okát ismertetnie kellés az esetleges hibájáért illendő elnézést kérnie.  
 
 **GEN-7.1.5**  
 A bírói ítéletei a mérkőzés végeztével visszamenőleg nem képezik vita tárgyát.  
@@ -762,7 +770,7 @@ Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akik
 <!-- TODO -->  
 
 #### A találat ténylegessége  
-<!-- TODO a bíró megfigyelése alapján etc.-->  
+<!-- TODO a bíró megfigyelése alapján etc. Re: **DIS-2.1.3**-->  
 
 **GEN-7.5.1**  
 A találat ténylegességét a versenybíró állapítja meg, szükség esetén a segédbíróval való egyeztetés útján.  
@@ -871,7 +879,7 @@ Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés ke
 - minden fegyvernemben a vívók felszerelésén a szabályos <!--FIE --> 350N jelzés meglétét (ruha, fejvéd).  
 <!-- TODO lvl 2 legyen kötelező -->  
 - hogy mindenki szabályszerű vívókabátot visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.  
-<!-- TODO - minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá. -->  
+- minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá (<!-- TODO -->jelenleg nem kötelező, későbbi szabálymódosításig erősen ajánlott, de ellenőrizendő).  
 - A fegyvereken fegyverellenőrzés jelzés meglétét.  
 - Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.  
 
@@ -901,3 +909,47 @@ Ha a vívó a páston:
 <!-- - hónaljvédő nélkül (Vö. t.64.5.), vagy -->  
 - a szabályoknak nem megfelelő ruhában  
 jelenik meg, a versenybíró <!-- a t.158-162, t.165, t.170 szakaszokban előírt,--> az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
+
+**GEN-7.7.3**
+Amennyiben a mérkőzés során a felszerelésben olyan rendellenességet állapítanak meg, amely a küzdelem következtében állhatott elő:  
+
+Például:
+- a ruházaton lyuk található,  
+- merev védőfelszerelés vagy kesztyű eltört vagy szétesett,  
+- a maszk deformálódott,  
+- a fegyver meghibásodik,  
+
+akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, és megadja a meghibásodott fegyverrel adott szabályos találatot.<!-- Ugyanakkor, a mérkőzés során is ha a vívóállásba helyezkedő, vívásra készen álló vívó pengéjének hajlása meghaladja az előírásokban írtakat (Vö. m.8.6, m.16.2, m.23.4), ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162, t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->  
+<!-- 
+Ehhez hasonlóan, ha a vívóállásba helyezkedő, vívásra készen álló vívó maszkja nincs megfelelően rögzítve a fején a második biztonsági eszközzel, ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162,
+t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->
+
+**GEN-7.7.4**
+Amennyiben a páston való jelentkezéskor vagy a mérkőzés során megállapítást nyer, hogy a vívó felszerelése:  
+
+**GEN-7.7.4.1**
+nélkülözi a hitelesítő jelzést. Ilyenkor a versenybíró:  
+- megsemmisíti a vétkes vívó által esetleg adott utolsó találatot,  
+- a <!--t.158-162, t.166, t.170 szakaszokban írt, a -->második csoportba tartozó vétségekre vonatkozó büntetést  alkalmazza.  
+**GEN-7.7.4.2**
+az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró:
+- <!--a t.158-162, t.166, t.170 szakaszokban írt, -->a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
+**GEN-7.7.4.3**
+átment az előzetes hitelesítésen, de csalásra alkalmas  
+**GEN-7.7.4.4**
+viseli a hitelesítő jelet, de az utánzat vagy máshonnan áthelyezett  
+**GEN-7.7.4.5**
+olyan módon szándékosan (tehát nem véletlenből fakadóan vagy a mérkőzés során a körülmények következtében) módosított, hogy az nem menne át az előzetes hitelesítésen  
+<!-- **GEN-7.7.4.6**
+úgy került módosításra, hogy akaratlagosan találatjelzést vagy a találatjelző gép működésképtelenségét lehet vele kiváltani -->
+**GEN-7.7.4.7**
+elektronikus kommunikációt lehetővé tevő felszerelést tartalmaz, amely lehetővé teszi, hogy a vívó a páston kívüli személlyel kommunikáljon.  
+
+**GEN-7.7.4.8**
+- A versenybíró a [GEN-7.7.4.3], [GEN-7.7.4.4], [GEN-7.7.4.5], és [GEN-7.7.4.7] esetekben esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek.  
+
+- A szakértő <!--(az Olimpiákon és Világbajnokságokon a SEMI Bizottság tagja) -->tényeket megállapító véleményének beszerzését követően a [DIS-2.1.4]/[DIS-2.1.6] szakaszokban foglalt hátrányok alkalmazása nélkül:  
+    - A [GEN-7.7.4.3], [GEN-7.7.4.4], [GEN-7.7.4.5], és [GEN-7.7.4.7] esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza.<!-- (vö.: t.158-162, t.169, t.170) -->  
+
+**GEN-7.7.4.7**  
+A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.  
