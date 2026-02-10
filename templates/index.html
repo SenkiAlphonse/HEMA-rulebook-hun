@@ -437,6 +437,13 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <label for="summaryFormat">Summary Format</label>
+                        <select id="summaryFormat" name="summaryFormat">
+                            <option value="standard">Standard (Detailed)</option>
+                            <option value="handout">Handout (Compact 1-page)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="summaryAccessCode">Summary Access Code</label>
                         <input
                             type="password"
@@ -647,6 +654,7 @@
 
         async function summarize(mode) {
             const language = document.getElementById('summaryLanguage').value;
+            const format = document.getElementById('summaryFormat').value;
             const accessCode = document.getElementById('summaryAccessCode').value.trim();
             const formatum = document.getElementById('formatum').value;
             const weapon = document.getElementById('weapon').value;
@@ -659,7 +667,8 @@
 
             const payload = {
                 mode: mode,
-                language: language
+                language: language,
+                format: format
             };
 
             if (mode === 'search') {
