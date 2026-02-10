@@ -42,15 +42,13 @@ pytest tests/unit/test_search.py -v
 pytest tests/unit/test_search.py::TestRulebookSearch::test_search_basic -v
 ```
 
-### Run with Coverage
+### Run Tests with Verbose Output
 ```bash
-# Terminal report
-pytest --cov=. --cov-report=term-missing
+# Run with detailed output
+pytest tests/ -v
 
-# HTML report (opens in browser)
-pytest --cov=. --cov-report=html
-open htmlcov/index.html  # macOS
-start htmlcov/index.html  # Windows
+# Run with extra verbosity
+pytest tests/ -vv
 ```
 
 ### Run Tests by Marker
@@ -80,14 +78,14 @@ Tests run during deployment:
 - Failed tests block deployment
 - View results in Render build logs
 
-## Test Coverage
+## Test Results
 
-Current coverage targets:
+Current test statistics:
 - **Unit tests**: Core modules (search, parser, utils)
-- **Integration tests**: API endpoints
-- **Total test cases**: 54+
+- **Integration tests**: API endpoints  
+- **Total test cases**: 59 (100% passing)
 
-Coverage reports are generated in `htmlcov/` directory.
+View test results in the **Actions** tab on GitHub.
 
 ## Pre-commit Hook (Optional)
 
@@ -109,7 +107,6 @@ git commit --no-verify
 ## Test Configuration
 
 - **pytest.ini**: Pytest configuration and options
-- **.coveragerc**: Coverage report settings
 - **conftest.py**: Shared fixtures and test setup
 
 ## Writing New Tests
@@ -147,8 +144,4 @@ def test_my_endpoint(client):
 1. Check for hardcoded paths
 2. Verify all files are committed
 3. Check environment-specific code
-
-### Coverage Too Low
-1. Add tests for uncovered code
-2. Remove dead code
-3. Mark untestable code with `# pragma: no cover`
+4. Verify Python version matches CI (3.10+)
