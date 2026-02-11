@@ -56,4 +56,4 @@ jobs:
     - name: Verify build artifacts
       run: |
         test -f qa-tools/rules_index.json
-        test -f templates/rulebook_content.html
+        test -f dist/rulebook.html
