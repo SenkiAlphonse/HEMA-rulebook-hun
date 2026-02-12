@@ -728,7 +728,7 @@
                 html += `
                     <div class="result-item">
                         <div class="result-header">
-                            <span class="result-id">${result.rule_id}</span>
+                            <a class="result-id" href="/rulebook#${result.rule_id}" target="_blank" title="Jump to rule in full rulebook">${result.rule_id}</a>
                             <span class="result-score">Score: ${result.score.toFixed(1)}</span>
                         </div>
                         <div class="result-tags">
