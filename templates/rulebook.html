@@ -738,69 +738,67 @@
     </div>
 
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
-    <button id="nav-back-button" title="Vissza az előző szabályhoz" aria-label="Vissza">↩</button>
+    <button id="nav-back-button" title="Vissza az előző szabályhoz" aria-label="Vissza / Back" style="display:none;position:fixed;bottom:90px;right:32px;z-index:1000;padding:10px 18px;background:#222;color:#fff;border:none;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.2);font-size:1rem;cursor:pointer;">Vissza / Back</button>
 
     <script>
+
         // Navigation history for rule references
         const navigationHistory = [];
         const navBackButton = document.getElementById('nav-back-button');
 
+        // Show/hide nav back button
+        function showNavBackButton() {
+            navBackButton.style.display = 'block';
+        }
+        function hideNavBackButton() {
+            navBackButton.style.display = 'none';
+        }
+
         // Handle rule reference clicks
         document.addEventListener('click', (e) => {
-            // Check if clicked element or its parent is a rule-ref link
             let target = e.target;
             if (target.tagName === 'A' && target.classList.contains('rule-ref')) {
                 e.preventDefault();
                 e.stopPropagation();
-                
                 const targetRuleId = target.dataset.ruleId || target.textContent.trim();
-                console.log('Rule reference clicked:', targetRuleId);
                 navigateToRule(targetRuleId);
             }
-        }, true); // Use capture phase to ensure it fires
+        }, true);
 
         function navigateToRule(targetRuleId) {
             const currentPosition = window.scrollY;
-            
-            // Navigate to target rule
             const targetElement = document.getElementById(targetRuleId);
             if (targetElement) {
-                // Save current position to history
-                navigationHistory.push({
-                    position: currentPosition,
-                    timestamp: Date.now()
-                });
-                
+                navigationHistory.push({ position: currentPosition, timestamp: Date.now() });
                 targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
-                // Add highlight animation
                 targetElement.classList.add('highlighted');
                 setTimeout(() => {
                     targetElement.classList.remove('highlighted');
                 }, 1500);
-                
-                // Show navigation back button
-                navBackButton.classList.add('show');
+                showNavBackButton();
             } else {
-                // Rule ID not found
                 alert(`Szabály ${targetRuleId} nem található az szabályzatban`);
-                console.warn(`Rule ${targetRuleId} not found. Available IDs: `, 
-                    Array.from(document.querySelectorAll('[id^=""]')).map(el => el.id).slice(0, 10));
             }
         }
 
-        // Handle navigation back button clicks
         navBackButton.addEventListener('click', () => {
             if (navigationHistory.length > 0) {
                 const previous = navigationHistory.pop();
                 window.scrollTo({ top: previous.position, behavior: 'smooth' });
-                
-                // Hide back button if no more history
                 if (navigationHistory.length === 0) {
-                    navBackButton.classList.remove('show');
+                    hideNavBackButton();
                 }
             }
         });
+
+        // Hide nav back button on blur or after timeout
+        navBackButton.addEventListener('blur', hideNavBackButton);
+        // Optional: auto-hide after 30s
+        setInterval(() => {
+            if (navBackButton.style.display === 'block' && navigationHistory.length === 0) {
+                hideNavBackButton();
+            }
+        }, 30000);
 
         function jumpToRule() {
             const query = document.getElementById('searchInput').value.trim().toUpperCase();
