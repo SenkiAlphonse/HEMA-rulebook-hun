@@ -926,3 +926,8 @@ pylint app/blueprints/search.py
 For API reference, see [API.md](API.md).  
 For system design, see [ARCHITECTURE.md](ARCHITECTURE.md).  
 For search algorithm, see [SEARCH_ENGINE.md](SEARCH_ENGINE.md).
+
+### 2026 Navigation/UX Features
+- **Pop-up Back Button:** Implemented in the rulebook template. Appears after clicking a rule reference, restores previous scroll position.
+- **Clickable Rule IDs:** Search results now link to the full rulebook at the specific rule anchor.
+- **Anchor Navigation:** Rulebook supports direct navigation to rule IDs via URL hash.

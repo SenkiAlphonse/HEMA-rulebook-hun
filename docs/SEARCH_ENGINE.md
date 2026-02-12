@@ -22,6 +22,10 @@ Technical deep-dive into the AliasAwareSearch algorithm, implementation, scoring
 ## Overview
 
 **AliasAwareSearch** is a custom search engine combining three matching strategies:
+
+### 2026 UI Integration
+- Search results now render rule IDs as clickable links. Clicking a rule ID opens the full rulebook and scrolls to the rule anchor.
+- The rulebook view supports anchor-based navigation and highlights the target rule.
 1. **Exact Match** - O(1) rule ID lookups
 2. **Partial Match** - O(n) substring matching
 3. **Fuzzy Match** - O(n*m) typo-tolerant matching with Levenshtein distance

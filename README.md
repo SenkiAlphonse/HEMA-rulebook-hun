@@ -32,7 +32,22 @@
 
 ## Web App
 
+
 - Start: `python app.py`
 - AI summaries (Gemini) require `GEMINI_API_KEY`
 - Optional: `GEMINI_MODEL` (default order: `gemini-2.5-flash`, then `gemini-2.5-flash-lite`)
+
+### New Features (2026)
+
+- **Pop-up Back Button in Rulebook:**
+	- When you click a rule reference in the full rulebook view, a "Vissza / Back" button appears, letting you return to your previous scroll position for easier navigation.
+
+- **Clickable Rule IDs in Search Results:**
+	- Search results now display rule IDs as clickable links. Clicking a rule ID opens the full rulebook and jumps directly to the referenced rule.
+
+- **Direct Anchor Navigation:**
+	- The rulebook view supports URL hash navigation (e.g., `/rulebook#GEN-1.1.1`), scrolling and highlighting the target rule.
+
+- **Improved Navigation Experience:**
+	- Combined, these features make it easy to jump from search to context and back, improving usability for judges, fencers, and organizers.
 

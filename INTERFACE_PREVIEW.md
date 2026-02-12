@@ -30,7 +30,8 @@
 ═════════════════════════════════════════════════════════════
 Found 3 results
 
-[LS-VOR-1.1.1] [Score: 40.0]
+[🔗 LS-VOR-1.1.1] [Score: 40.0]    ← Clickable! Opens full rulebook
+                                       and jumps to this rule
 [longsword] [VOR]
 ---
 **Minden szabályosan végrehajtott támadást** védeni kell...
@@ -39,7 +40,7 @@ Document: 05.a-hosszukard-VOR.md
 Section: A találatok érvényessége vagy elsőbbsége
 ───────────────────────────────────────────────────────────
 
-[LS-VOR-1.1.2] [Score: 40.0]
+[🔗 LS-VOR-1.1.2] [Score: 40.0]    ← Clickable! Opens full rulebook
 [longsword] [VOR]
 ---
 A támadások helyességének elbírálásakor a következőket...
@@ -48,7 +49,7 @@ Document: 05.a-hosszukard-VOR.md
 Section: A találatok érvényessége vagy elsőbbsége
 ───────────────────────────────────────────────────────────
 
-[LS-VOR-1.1.3] [Score: 40.0]
+[🔗 LS-VOR-1.1.3] [Score: 40.0]    ← Clickable! Opens full rulebook
 [longsword] [VOR]
 ---
 Az egyszerű támadás, akár közvetlen, akár közvetett...
@@ -125,6 +126,12 @@ Uses aliases: "free fencing" → COMBAT format
 - Result: 10+ rules with clear explanations
 
 ## What Makes It Work
+
+✅ **Seamless Navigation**
+- Rule IDs in search results are clickable links
+- Click → Opens full rulebook at the referenced rule
+- "Vissza / Back" button → Returns to previous scroll position
+- Works across search-to-rulebook workflow
 
 ✅ **Smart Aliasing**
 - "right of way" = VOR

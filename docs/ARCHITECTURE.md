@@ -21,7 +21,13 @@ Complete technical documentation of the HEMA Rulebook Q&A System's design, data 
 
 ## System Overview
 
+
 The HEMA Rulebook Q&A System is a **Flask-based REST API** that indexes Hungarian martial arts rulebook markdown files and provides fast, intelligent natural language search with automatic alias resolution.
+
+### 2026 Navigation UX Enhancements
+- **Pop-up Back Button:** When a user clicks a rule reference in the full rulebook, a "Vissza / Back" button appears, allowing them to return to their previous scroll position.
+- **Clickable Rule IDs in Search:** Search results display rule IDs as links. Clicking a rule ID opens the full rulebook and jumps to the referenced rule anchor.
+- **Anchor Navigation:** The rulebook view supports direct anchor navigation via URL hash (e.g., `/rulebook#GEN-1.1.1`).
 
 **Core Philosophy:**
 - **Speed First**: O(1) hash-based lookups for sub-millisecond searches
