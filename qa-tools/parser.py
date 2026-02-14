@@ -25,12 +25,25 @@ class Rule:
     formatum: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
     references_to: List[str] = None  # Rule IDs referenced BY this rule
     references_from: List[str] = None  # Rule IDs that reference THIS rule
+    # Hierarchy metadata (computed at parse time)
+    parent_id: str = ""  # Direct parent rule ID (e.g., "GEN-3.2.1" for "GEN-3.2.1.1")
+    child_ids: List[str] = None  # All direct child rule IDs
+    lineage: List[str] = None  # Path from root to parent (e.g., ["GEN", "GEN-3", "GEN-3.2"])
+    depth: int = 0  # Nesting level (1=top, 5=deepest)
+    is_leaf: bool = True  # True if no children
+    sibling_ids: List[str] = None  # Direct siblings (same parent)
     
     def __post_init__(self):
         if self.references_to is None:
             self.references_to = []
         if self.references_from is None:
             self.references_from = []
+        if self.child_ids is None:
+            self.child_ids = []
+        if self.lineage is None:
+            self.lineage = []
+        if self.sibling_ids is None:
+            self.sibling_ids = []
 
 
 @dataclass
@@ -48,6 +61,7 @@ class RulebookParser:
     def __init__(self, rulebook_dir: str):
         self.rulebook_dir = Path(rulebook_dir)
         self.rules: List[Rule] = []
+        self.rule_id_index: Dict[str, Rule] = {}  # O(1) lookup by rule_id
         self.sections: List[Section] = []
         
         # Patterns
@@ -75,6 +89,10 @@ class RulebookParser:
         # Build cross-reference index
         print("Building cross-reference index...")
         self._build_cross_references()
+        
+        # Build hierarchy metadata (parent-child relationships)
+        print("Building hierarchy metadata...")
+        self._build_hierarchy_metadata()
         
         return {
             "rules": [asdict(rule) for rule in self.rules],
@@ -201,6 +219,7 @@ class RulebookParser:
                 formatum=formatum
             )
             self.rules.append(rule)
+            self.rule_id_index[rule_id] = rule  # Add to O(1) lookup index
     
     def _detect_formatum_in_rule_text(self, text: str) -> str:
         """
@@ -323,6 +342,81 @@ class RulebookParser:
         # Remove duplicates and sort
         for rule in self.rules:
             rule.references_from = sorted(list(set(rule.references_from)))
+    
+    def _build_hierarchy_metadata(self) -> None:
+        """Build parent-child hierarchy metadata for all rules"""
+        # First pass: compute parent_id, depth, and lineage for each rule
+        for rule in self.rules:
+            rule.depth = self._get_rule_depth(rule.rule_id)
+            rule.parent_id = self._get_parent_id(rule.rule_id)
+            rule.lineage = self._get_rule_lineage(rule.rule_id)
+        
+        # Second pass: find direct children for each rule
+        parent_to_children = {}
+        for rule in self.rules:
+            if rule.parent_id:
+                if rule.parent_id not in parent_to_children:
+                    parent_to_children[rule.parent_id] = []
+                parent_to_children[rule.parent_id].append(rule.rule_id)
+        
+        # Assign child_ids and is_leaf to each rule
+        for rule in self.rules:
+            rule.child_ids = parent_to_children.get(rule.rule_id, [])
+            rule.is_leaf = len(rule.child_ids) == 0
+        
+        # Third pass: find siblings for each rule
+        for rule in self.rules:
+            if rule.parent_id:
+                # Siblings are all children of parent except self
+                rule.sibling_ids = [rid for rid in parent_to_children.get(rule.parent_id, []) 
+                                   if rid != rule.rule_id]
+            else:
+                rule.sibling_ids = []
+    
+    def _get_rule_depth(self, rule_id: str) -> int:
+        """Calculate nesting depth from rule ID"""
+        if not rule_id or '-' not in rule_id:
+            return 0
+        parts = rule_id.split('-')
+        numeric_part = parts[-1]
+        return numeric_part.count('.') + 1
+    
+    def _get_parent_id(self, rule_id: str) -> str:
+        """Get direct parent rule ID from a given rule"""
+        if not rule_id or '-' not in rule_id:
+            return ""
+        
+        parts = rule_id.split('-')
+        prefix = '-'.join(parts[:-1])
+        numeric = parts[-1]
+        numeric_parts = numeric.split('.')
+        
+        # If no dots, parent is just the prefix (e.g., "GEN-1" -> "GEN")
+        if len(numeric_parts) == 1:
+            return prefix
+        
+        # Otherwise, parent is prefix + all but last numeric part
+        parent_numeric = '.'.join(numeric_parts[:-1])
+        return f"{prefix}-{parent_numeric}"
+    
+    def _get_rule_lineage(self, rule_id: str) -> list:
+        """Get list of parent rule IDs (path from root to parent, excluding rule itself)"""
+        if not rule_id or '-' not in rule_id:
+            return []
+        
+        parts = rule_id.split('-')
+        prefix = '-'.join(parts[:-1])
+        numeric = parts[-1]
+        numeric_parts = numeric.split('.')
+        
+        lineage = [prefix]  # Start with prefix (e.g., "GEN")
+        
+        # Build up hierarchy: GEN-1, GEN-1.2, GEN-1.2.3, etc. (all except self)
+        for i in range(len(numeric_parts) - 1):
+            parent_numeric = '.'.join(numeric_parts[:i+1])
+            lineage.append(f"{prefix}-{parent_numeric}")
+        
+        return lineage
     
     def save_index(self, output_path: Path) -> None:
         """Save parsed rules to JSON index"""

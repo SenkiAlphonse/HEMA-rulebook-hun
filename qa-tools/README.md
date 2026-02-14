@@ -22,6 +22,22 @@ Run the interactive search CLI:
 python qa-tools\search.py
 ```
 
+### 3. (Optional) Test Hierarchy Metadata
+
+Verify that parent-child relationships and hierarchy metadata are correctly populated:
+
+```powershell
+python qa-tools\test_hierarchy.py
+```
+
+### 4. (Optional) Explore AI Explanation Examples
+
+See how to use hierarchy metadata for contextual AI explanations:
+
+```powershell
+python qa-tools\ai_explainer_example.py
+```
+
 ## Usage Examples
 
 ### Example Queries
@@ -57,6 +73,19 @@ The search engine returns:
 - **Rule Text**: Full rule description
 - **Weapon Type & Variant**: If applicable (longsword VOR vs COMBAT)
 - **Relevance Score**: How well the result matches your query
+
+## Hierarchy Metadata (2026)
+
+Each rule now includes explicit hierarchy information for AI-assisted explanations:
+
+- **parent_id**: Direct parent rule (e.g., `GEN-3.2.1` for `GEN-3.2.1.1`)
+- **child_ids**: All direct child rules
+- **lineage**: Path from root to parent (e.g., `["GEN", "GEN-3", "GEN-3.2"]`)
+- **depth**: Nesting level (1-5)
+- **is_leaf**: Whether rule has no children
+- **sibling_ids**: Related rules at same level
+
+See `../docs/HIERARCHY_METADATA.md` for detailed documentation and usage examples.
 
 ## System Architecture
 

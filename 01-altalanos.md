@@ -163,18 +163,6 @@ Az MHSZ hivatalos versenyeinek helyszínén (ide értve a versenyhez kapcsolód�
 
 **GEN-5.1.3**  
 A jelen szabályzatban és a mellékelt előírásokban (Lásd: felszerelés szabályzat) szereplő biztonsági intézkedések csak a vívók biztonságának megerősítését segítik elő anélkül, hogy azt kifejezetten szavatolhatnák. Ezért a felelősség – bármilyen módon alkalmazzák azokat – semmiképpen sem hárítható át az MHSZ-re, sem a versenyek szervezőire, sem a lebonyolítással megbízott hivatalos személyekre, sem pedig egy esetleges baleset okozóira.
-<!-- 
-**GEN-5.1.4**  
-Minden vívó a saját felszereléséért felelős, és a kötelező elemek minden darabját köteles használni, amikor részt vesz a tornán. Ha a felszerelése egyik elemét a torna kezdetekor vagy a közben versenyzésre alkalmatlannak nyilvánítják, és azt a versenyző nem tudja azt megfelelő elemmel pótolni, akkor nem folytathatja, vagy kezdheti el a versenyzést.   -->
-<!-- 
-**GEN-5.1.3**  
-A kötelező felszerelést a tornán erre kijelölt személyzet ellenőrzi a torna megkezdése előtt. Továbbá minden egyes pást vezető bírója egy további ellenőrzést hajt végre a mérkőzések megkezdése előtt[^1]. A bíró kötelezheti bármelyik versenyzőt, hogy állítson a felszerelése valamely részein vagy cserélje le azt, erre legfeljebb 5 percnyi időt hagyhat. Ha a vívó nem tud eleget tenni a fenti időkereten belül az utasításnak, akkor fekete lapot kap és ezzel kizárásra kerül a tornáról.   -->
-<!-- 
-**GEN-5.1.4**  
-Ha olyan nem megfelelő felszerelés miatt sérülés következik be a tornán, amit a felszerelés ellenőrző személyzet vagy a bíró jóvá hagyott, akkor azon, hanyagságot elkövető felszerelés ellenőrző személyzet vagy a bíró tekinthető felelősnek, aki jóváhagyta a vívó pástra lépését. A felelős személyt vagy személyeket fegyelmi eljárás alá vonjuk, és a licenszük bevonásra kerülhet.   -->
-<!-- 
-**GEN-5.1.5**  
-A bíró kitilthat olyan felszereléseket, amik nem felelnek meg a követelményeknek.   -->
 
 ### Fém fegyverek esetén  
 <span id="GEN-5.2"></span>  
