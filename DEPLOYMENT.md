@@ -6,7 +6,7 @@ A Flask web application for searching the Hungarian Historical European Martial 
 
 - 🔍 **Smart Search**: Search across 359+ rules with intelligent ranking
 - 🏷️ **Aliasing**: Find rules using alternative names (e.g., "right of way" → VOR)
-- 🎯 **Filtering**: Filter by competition format (VOR, COMBAT, AFTERBLOW) or weapon
+- 🎯 **Filtering**: Filter by competition variant (VOR, COMBAT, AFTERBLOW) or weapon
 - 📱 **Mobile Responsive**: Works great on phones and tablets
 - ⚡ **Fast**: Real-time search results
 - 🌍 **Accessible**: Deployed publicly for all fencers
@@ -79,7 +79,7 @@ HEMA-rulebook-hun/
 ### Rule Indexing (Backend)
 1. **Parser** (`parser.py`) extracts rules from markdown files
 2. Rules are identified by format: `**PREFIX-NUMBER.NUMBER.NUMBER**`
-3. Metadata captured: weapon type, format (VOR/COMBAT/AFTERBLOW), section, etc.
+3. Metadata captured: weapon type, variant (VOR/COMBAT/AFTERBLOW), section, etc.
 4. All rules indexed in JSON for fast lookup
 
 ### Smart Search
@@ -90,7 +90,7 @@ HEMA-rulebook-hun/
    - Exact phrase match (+50)
    - Format alias match (+40)
    - Term frequency (+10 per occurrence)
-4. **Hierarchy Support**: General rules apply to all weapons/formats
+4. **Hierarchy Support**: General rules apply to all weapons/variants
 
 ### Web Interface (Frontend)
 - Clean, responsive design
@@ -109,13 +109,13 @@ Search for rules
 {
   "query": "right of way target",
   "max_results": 10,
-  "formatum_filter": "VOR",
+  "variant_filter": "VOR",
   "weapon_filter": "longsword"
 }
 ```
 
 ### GET `/api/stats`
-Get rulebook statistics (total rules, by format, etc.)
+Get rulebook statistics (total rules, by variant, etc.)
 
 ### GET `/api/rule/<rule_id>`
 Get a specific rule by ID (e.g., `LS-VOR-1.1.1`)

@@ -10,7 +10,7 @@ Implemented comprehensive code quality improvements identified in architectural 
 
 ### 1. ✅ Fixed Duplicate Method Definition (CRITICAL BUG)
 **File**: `qa-tools/parser.py`
-**Issue**: `_detect_formatum_in_rule_text()` was defined twice (lines 205-227 and 229-254)
+**Issue**: `_detect_variant_in_rule_text()` was defined twice (lines 205-227 and 229-254)
 **Impact**: Second definition overwrote first, causing unpredictable behavior
 **Fix**: Removed duplicate definition, kept more flexible first version
 **Status**: Complete - Verified with syntax check
@@ -65,8 +65,8 @@ SCORE_SECTION_MATCH = 30.0             # Was: 30.0
 SCORE_TERM_IN_TEXT = 10.0              # Was: 10.0 (per term)
 SCORE_TERM_IN_SECTION = 5.0            # Was: 5.0
 SCORE_WEAPON_TYPE_BONUS = 10.0         # Was: 10.0
-SCORE_FORMATUM_MATCH_BONUS = 25.0      # Was: 25.0
-SCORE_FORMATUM_GENERAL_BONUS = 5.0     # Was: 5.0
+SCORE_VARIANT_MATCH_BONUS = 25.0      # Was: 25.0
+SCORE_VARIANT_GENERAL_BONUS = 5.0     # Was: 5.0
 ```
 **Benefit**: Tuning search relevance now requires changing constants, not hunting through code
 **Status**: Complete
@@ -162,7 +162,7 @@ The following high-priority improvements remain for the next phase:
 
 5. **Inconsistent Naming** (2 hrs)
    - Standardize on `rule_id` vs `rule-id` vs `ruleId`
-   - Standardize `formatum` vs `format` vs `variant`
+   - Standardize `variant` vs `format` vs `variant`
 
 ## Files Modified Summary
 

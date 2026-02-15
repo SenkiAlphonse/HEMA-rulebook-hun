@@ -39,7 +39,7 @@ def create_app():
         raise RuntimeError("Failed to initialize search engine") from e
     
     # Configuration
-    app.config['FORMATS'] = ["VOR", "COMBAT", "AFTERBLOW"]
+    app.config['VARIANTS'] = ["VOR", "COMBAT", "AFTERBLOW"]
     app.config['WEAPONS'] = ["longsword", "rapier", "padded_weapons"]
     app.config['SUMMARY_LANGUAGES'] = ["HU", "EN"]
     app.config['SUMMARY_RATE_LIMIT_WINDOW_SEC'] = int(
@@ -72,7 +72,7 @@ def create_app():
         """Home page"""
         return render_template(
             "index.html",
-            formats=app.config['FORMATS'],
+            variants=app.config['VARIANTS'],
             weapons=app.config['WEAPONS']
         )
     

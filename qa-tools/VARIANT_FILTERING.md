@@ -13,7 +13,7 @@ Searching for "VOR 5 találat" would return the entire `GEN-6.10.4` rule contain
 {
   "rule_id": "GEN-6.10.4",
   "text": "...VOR: Valamelyik vívó 5 találatot elért...COMBAT: Valamelyik vívó 5 találatot elért...AFTERBLOW: Valamelyik vívó legalább 7 PONTOT elért...",
-  "formatum": ""
+  "variant": ""
 }
 ```
 
@@ -24,17 +24,17 @@ Now the parser automatically splits this into separate rules:
 {
   "rule_id": "GEN-6.10.4.1",
   "text": "**VOR**: Valamelyik vívó 5 találatot elért.",
-  "formatum": "VOR"
+  "variant": "VOR"
 },
 {
   "rule_id": "GEN-6.10.4.2",
   "text": "**COMBAT**: Valamelyik vívó 5 találatot elért, illetve...",
-  "formatum": "COMBAT"
+  "variant": "COMBAT"
 },
 {
   "rule_id": "GEN-6.10.4.3",
   "text": "**AFTERBLOW**: Valamelyik vívó legalább 7 PONTOT elért...",
-  "formatum": "AFTERBLOW"
+  "variant": "AFTERBLOW"
 }
 ```
 
@@ -46,7 +46,7 @@ The `parser.py` now includes intelligent variant detection:
 
 1. **Detection**: Scans rule text for pattern: `**Vor**:`, `**Combat**:`, `**Afterblow**:`
 2. **Extraction**: Splits multi-variant rules into individual sub-rules
-3. **Tagging**: Assigns `formatum` field (VOR/COMBAT/AFTERBLOW) to each sub-rule
+3. **Tagging**: Assigns `variant` field (VOR/COMBAT/AFTERBLOW) to each sub-rule
 4. **Indexing**: Creates unique sub-rule IDs (GEN-6.10.4.1, GEN-6.10.4.2, etc.)
 
 ### Key Changes in `Rule` Dataclass
@@ -62,7 +62,7 @@ class Rule:
     anchor_id: str
     line_number: int
     weapon_type: str = ""     # e.g., "longsword", "general"
-    formatum: str = ""        # e.g., "VOR", "COMBAT", "AFTERBLOW"
+    variant: str = ""        # e.g., "VOR", "COMBAT", "AFTERBLOW"
 ```
 
 ## Searching with Variant Filters
@@ -74,7 +74,7 @@ Simply include the variant name in your query:
 ```
 Query: VOR mérkőzés
 → Results automatically filtered to VOR-only rules
-  with bonus scoring for formatum matches
+  with bonus scoring for variant matches
 
 Query: COMBAT 5 találat
 → Returns only COMBAT variant rules
@@ -90,20 +90,20 @@ search = RulebookSearch("qa-tools/rules_index.json")
 # Search VOR variant only
 vor_results = search.search(
     "mérkőzés",
-    formatum_filter="VOR"
+    variant_filter="VOR"
 )
 
 # Search COMBAT + longsword only
 combat_longsword = search.search(
     "támadás",
     weapon_filter="longsword",
-    formatum_filter="COMBAT"
+    variant_filter="COMBAT"
 )
 
 # Search AFTERBLOW variant only
 afterblow_results = search.search(
     "pontok",
-    formatum_filter="AFTERBLOW"
+    variant_filter="AFTERBLOW"
 )
 ```
 
@@ -168,7 +168,7 @@ The search engine now includes variant-aware scoring:
 2. **Exact Text Match**: +50.0 points
 3. **Exact Section Match**: +30.0 points
 4. **Term Frequency**: +10.0 per occurrence
-5. **Variant Match** (NEW): +25.0 bonus if query variant matches rule formatum
+5. **Variant Match** (NEW): +25.0 bonus if query variant matches rule variant
 6. **Section/Subsection Terms**: +5.0 bonus
 7. **Weapon-Specific Rule**: +10.0 bonus if weapon detected in query
 
@@ -195,7 +195,7 @@ python qa-tools/parser.py
 This will:
 1. Parse all rulebook markdown files
 2. Detect and extract variant-specific sub-rules
-3. Create `rules_index.json` with new formatum tags
+3. Create `rules_index.json` with new variant tags
 4. Display statistics on variant rules found
 
 ## API Usage Examples
@@ -206,7 +206,7 @@ This will:
 search = RulebookSearch("qa-tools/rules_index.json")
 results = search.search(
     "időlimit limit timeout",
-    formatum_filter="VOR",
+    variant_filter="VOR",
     max_results=10
 )
 ```
@@ -216,13 +216,13 @@ results = search.search(
 ```python
 combat_scoring = search.search(
     "pontok scoring points",
-    formatum_filter="COMBAT",
+    variant_filter="COMBAT",
     max_results=5
 )
 
 afterblow_scoring = search.search(
     "pontok scoring points", 
-    formatum_filter="AFTERBLOW",
+    variant_filter="AFTERBLOW",
     max_results=5
 )
 ```
@@ -272,7 +272,7 @@ Check that:
 
 The search uses keyword matching. Narrow results by:
 - Adding more specific keywords to query
-- Using formatum filter explicitly: `formatum_filter="VOR"`
+- Using variant filter explicitly: `variant_filter="VOR"`
 - Reducing `max_results` parameter
 
 ### Some rules not split into variants

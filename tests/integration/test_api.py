@@ -26,7 +26,7 @@ class TestSearchAPI:
         response = client.post('/api/search',
                               data=json.dumps({
                                   "query": "longsword",
-                                  "variant": "VOR"
+                                  "variant_filter": "VOR"
                               }),
                               content_type='application/json')
         
@@ -41,7 +41,7 @@ class TestSearchAPI:
         response = client.post('/api/search',
                               data=json.dumps({
                                   "query": "rules",
-                                  "weapon": "longsword"
+                                  "weapon_filter": "longsword"
                               }),
                               content_type='application/json')
         
@@ -131,8 +131,8 @@ class TestExtractAPI:
         """Test extract with weapon and variant filters"""
         response = client.post('/api/extract',
                               data=json.dumps({
-                                  "weapon": "longsword",
-                                  "variant": "VOR"
+                                  "weapon_filter": "longsword",
+                                  "variant_filter": "VOR"
                               }),
                               content_type='application/json')
         
