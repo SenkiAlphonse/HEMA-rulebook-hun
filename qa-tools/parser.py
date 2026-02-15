@@ -75,15 +75,21 @@ class RulebookParser:
         
         
     def parse_all(self) -> Dict[str, Any]:
-        """Parse all markdown files in the rulebook directory"""
-        md_files = list(self.rulebook_dir.glob("*.md"))
-        md_files.extend(list(self.rulebook_dir.glob("fuggelek/*.md")))
+        """Parse all markdown files in the rules directory"""
+        rules_dir = self.rulebook_dir / "rules"
         
-        # Skip README and architecture docs
-        md_files = [f for f in md_files if f.name not in ["README.md", "qa-architecture.md"]]
+        if not rules_dir.exists():
+            raise FileNotFoundError(f"Rules directory not found: {rules_dir}")
+        
+        # Parse all markdown files in the rules directory (no filtering needed)
+        md_files = sorted(list(rules_dir.glob("*.md")))
+        md_files.extend(sorted(list(rules_dir.glob("*/*.md"))))
+        
+        if not md_files:
+            raise FileNotFoundError(f"No markdown files found in {rules_dir}")
         
         for md_file in md_files:
-            print(f"Parsing {md_file.name}...")
+            print(f"Parsing {md_file.relative_to(self.rulebook_dir)}...")
             self.parse_file(md_file)
         
         # Build cross-reference index
@@ -351,25 +357,26 @@ class RulebookParser:
             rule.parent_id = self._get_parent_id(rule.rule_id)
             rule.lineage = self._get_rule_lineage(rule.rule_id)
         
-        # Second pass: find direct children for each rule
+        # Second pass: find direct children for each rule (using sets to avoid duplicates)
         parent_to_children = {}
         for rule in self.rules:
             if rule.parent_id:
                 if rule.parent_id not in parent_to_children:
-                    parent_to_children[rule.parent_id] = []
-                parent_to_children[rule.parent_id].append(rule.rule_id)
+                    parent_to_children[rule.parent_id] = set()
+                parent_to_children[rule.parent_id].add(rule.rule_id)
         
-        # Assign child_ids and is_leaf to each rule
+        # Assign child_ids and is_leaf to each rule (convert sets to sorted lists)
         for rule in self.rules:
-            rule.child_ids = parent_to_children.get(rule.rule_id, [])
+            child_set = parent_to_children.get(rule.rule_id, set())
+            rule.child_ids = sorted(list(child_set))
             rule.is_leaf = len(rule.child_ids) == 0
         
-        # Third pass: find siblings for each rule
+        # Third pass: find siblings for each rule (using sets to avoid duplicates)
         for rule in self.rules:
             if rule.parent_id:
-                # Siblings are all children of parent except self
-                rule.sibling_ids = [rid for rid in parent_to_children.get(rule.parent_id, []) 
-                                   if rid != rule.rule_id]
+                # Siblings are all children of parent except self (using set difference)
+                sibling_set = parent_to_children.get(rule.parent_id, set()) - {rule.rule_id}
+                rule.sibling_ids = sorted(list(sibling_set))
             else:
                 rule.sibling_ids = []
     
