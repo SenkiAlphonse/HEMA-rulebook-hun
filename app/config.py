@@ -27,7 +27,7 @@ def get_dist_dir() -> Path:
 
 def get_rulebook_dir() -> Path:
     """Get rulebook directory (root directory with markdown files)"""
-    return PROJECT_ROOT
+    return PROJECT_ROOT / "rules"
 
 def get_rules_index_path() -> Path:
     """Get path to rules_index.json"""
