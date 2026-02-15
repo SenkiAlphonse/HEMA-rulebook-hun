@@ -21,12 +21,12 @@ class TestSearchAPI:
         assert "results" in data
         assert isinstance(data["results"], list)
     
-    def test_api_search_with_formatum_filter(self, client):
-        """Test search with formatum filter"""
+    def test_api_search_with_variant_filter(self, client):
+        """Test search with variant filter"""
         response = client.post('/api/search',
                               data=json.dumps({
                                   "query": "longsword",
-                                  "formatum": "VOR"
+                                  "variant": "VOR"
                               }),
                               content_type='application/json')
         
@@ -128,11 +128,11 @@ class TestExtractAPI:
         assert response.status_code == 200
     
     def test_api_extract_with_filters(self, client):
-        """Test extract with weapon and formatum filters"""
+        """Test extract with weapon and variant filters"""
         response = client.post('/api/extract',
                               data=json.dumps({
                                   "weapon": "longsword",
-                                  "formatum": "VOR"
+                                  "variant": "VOR"
                               }),
                               content_type='application/json')
         

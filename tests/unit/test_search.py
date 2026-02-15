@@ -23,32 +23,32 @@ class TestRulebookSearch:
         # Results should be SearchResult objects
         assert all(isinstance(r, SearchResult) for r in results)
     
-    def test_formatum_filter_vor(self, search_engine):
-        """Test VOR formatum filtering"""
-        results = search_engine.search("longsword", formatum_filter="VOR")
+    def test_variant_filter_vor(self, search_engine):
+        """Test VOR variant filtering"""
+        results = search_engine.search("longsword", variant_filter="VOR")
         
         # Should only return VOR or general rules
         for result in results:
-            assert result.formatum in ["VOR", ""], \
-                f"Expected VOR or empty, got {result.formatum}"
+            assert result.variant in ["VOR", ""], \
+                f"Expected VOR or empty, got {result.variant}"
     
-    def test_formatum_filter_combat(self, search_engine):
-        """Test COMBAT formatum filtering"""
-        results = search_engine.search("longsword", formatum_filter="COMBAT")
+    def test_variant_filter_combat(self, search_engine):
+        """Test COMBAT variant filtering"""
+        results = search_engine.search("longsword", variant_filter="COMBAT")
         
         # Should only return COMBAT or general rules
         for result in results:
-            assert result.formatum in ["COMBAT", ""], \
-                f"Expected COMBAT or empty, got {result.formatum}"
+            assert result.variant in ["COMBAT", ""], \
+                f"Expected COMBAT or empty, got {result.variant}"
     
-    def test_formatum_filter_afterblow(self, search_engine):
-        """Test AFTERBLOW formatum filtering"""
-        results = search_engine.search("longsword", formatum_filter="AFTERBLOW")
+    def test_variant_filter_afterblow(self, search_engine):
+        """Test AFTERBLOW variant filtering"""
+        results = search_engine.search("longsword", variant_filter="AFTERBLOW")
         
         # Should only return AFTERBLOW or general rules
         for result in results:
-            assert result.formatum in ["AFTERBLOW", ""], \
-                f"Expected AFTERBLOW or empty, got {result.formatum}"
+            assert result.variant in ["AFTERBLOW", ""], \
+                f"Expected AFTERBLOW or empty, got {result.variant}"
     
     def test_rule_by_id(self, search_engine):
         """Test get_rule_by_id lookup"""
@@ -112,30 +112,30 @@ class TestRulebookSearch:
                 assert results[i].score >= results[i + 1].score, \
                     "Results should be ordered by score (descending)"
     
-    def test_detect_formatum_in_query(self, search_engine):
-        """Test formatum detection from query text"""
+    def test_detect_variant_in_query(self, search_engine):
+        """Test variant detection from query text"""
         # Test VOR detection
-        detected = search_engine._detect_formatum_in_query("VOR rules")
+        detected = search_engine._detect_variant_in_query("VOR rules")
         assert detected == "VOR"
         
         # Test COMBAT detection
-        detected = search_engine._detect_formatum_in_query("COMBAT format")
+        detected = search_engine._detect_variant_in_query("COMBAT variant")
         assert detected == "COMBAT"
         
         # Test AFTERBLOW detection
-        detected = search_engine._detect_formatum_in_query("AFTERBLOW scoring")
+        detected = search_engine._detect_variant_in_query("AFTERBLOW scoring")
         assert detected == "AFTERBLOW"
         
         # Test no detection
-        detected = search_engine._detect_formatum_in_query("general rules")
+        detected = search_engine._detect_variant_in_query("general rules")
         assert detected == ""
     
     def test_get_rules_by_section(self, search_engine):
         """Test getting rules by section name"""
-        results = search_engine.get_rules_by_section("VOR Format")
+        results = search_engine.get_rules_by_section("VOR Variant")
         
         assert len(results) > 0
-        assert all("VOR Format" in r["section"] for r in results)
+        assert all("VOR Variant" in r["section"] for r in results)
     
     def test_rule_depth_calculation(self, search_engine):
         """Test rule depth calculation"""

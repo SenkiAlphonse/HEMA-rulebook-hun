@@ -6,15 +6,15 @@ Your Q&A system now supports **intelligent alias matching** to make searches mor
 
 ## Alias Types
 
-### 1. **Format Aliases** (Formátum Aliasok)
-Map alternative names to competition formats:
+### 1. **Variant Aliases** (Változat Aliasok)
+Map alternative names to competition rule variants:
 - **VOR** → "right of way", "row", "right-of-way", "priority", "prio"
 - **COMBAT** → "free fencing", "combat", "cf", "free-fencing"
 - **AFTERBLOW** → "afterblow", "after-blow", "ab", "after blow"
 
 **Example:** Query `"right of way rules"` will find all VOR format rules
 
-### 2. **Weapon Aliases** (Fegyver Aliasok)
+### 2. **Weapon Aliases** (Fegyvernem Aliasok)
 Map alternative names to weapons:
 - **longsword** → "sword", "ls", "long sword", "longsword", "hosszúkard"
 - **rapier** → "rapier", "rp", "rapira", "rapier sword"

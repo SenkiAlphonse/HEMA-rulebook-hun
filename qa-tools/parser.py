@@ -22,7 +22,7 @@ class Rule:
     anchor_id: str  # HTML anchor ID for cross-referencing
     line_number: int  # Starting line in source file
     weapon_type: str = ""  # e.g., "longsword", "rapier", or "general"
-    formatum: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
+    variant: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
     references_to: List[str] = None  # Rule IDs referenced BY this rule
     references_from: List[str] = None  # Rule IDs that reference THIS rule
     # Hierarchy metadata (computed at parse time)
@@ -111,8 +111,8 @@ class RulebookParser:
         with open(filepath, 'r', encoding='utf-8') as f:
             lines = f.readlines()
         
-        # Extract weapon type and formatum from filename
-        weapon_type, formatum = self._extract_weapon_info(filepath.name)
+        # Extract weapon type and variant from filename
+        weapon_type, variant = self._extract_weapon_info(filepath.name)
 
         current_section = ""
         current_subsection = ""
@@ -130,7 +130,7 @@ class RulebookParser:
                     self._save_rule(
                         current_rule_id, rule_text_lines, current_section,
                         current_subsection, filepath.name, current_anchor,
-                        rule_start_line, weapon_type, formatum
+                        rule_start_line, weapon_type, variant
                     )
                     current_rule_id = ""
                     rule_text_lines = []
@@ -163,7 +163,7 @@ class RulebookParser:
                     self._save_rule(
                         current_rule_id, rule_text_lines, current_section,
                         current_subsection, filepath.name, current_anchor,
-                        rule_start_line, weapon_type, formatum
+                        rule_start_line, weapon_type, variant
                     )
 
                 # Start new rule
@@ -186,13 +186,13 @@ class RulebookParser:
             self._save_rule(
                 current_rule_id, rule_text_lines, current_section,
                 current_subsection, filepath.name, current_anchor,
-                rule_start_line, weapon_type, formatum
+                rule_start_line, weapon_type, variant
             )
     
     def _save_rule(self, rule_id: str, text_lines: List[str], section: str,
                    subsection: str, document: str, anchor: str, line_num: int,
-                   weapon_type: str, formatum: str) -> None:
-        """Save a parsed rule, detecting formatum from text if present"""
+                   weapon_type: str, variant: str) -> None:
+        """Save a parsed rule, detecting variant from text if present"""
         # Join text lines preserving structure:
         # - Lines starting with "- " (bullets) keep newlines
         # - Other lines are joined with newlines to preserve paragraph breaks
@@ -208,10 +208,10 @@ class RulebookParser:
         text = '\n'.join(formatted_lines).strip()
         
         if text:
-            # Extract formatum from rule text if it starts with **Vor**:, **Combat**:, **Afterblow**:
-            detected_formatum = self._detect_formatum_in_rule_text(text)
-            if detected_formatum:
-                formatum = detected_formatum
+            # Extract variant from rule text if it starts with **Vor**:, **Combat**:, **Afterblow**:
+            detected_variant = self._detect_variant_in_rule_text(text)
+            if detected_variant:
+                variant = detected_variant
             
             rule = Rule(
                 rule_id=rule_id,
@@ -222,107 +222,107 @@ class RulebookParser:
                 anchor_id=anchor,
                 line_number=line_num,
                 weapon_type=weapon_type,
-                formatum=formatum
+                variant=variant
             )
             self.rules.append(rule)
             self.rule_id_index[rule_id] = rule  # Add to O(1) lookup index
     
-    def _detect_formatum_in_rule_text(self, text: str) -> str:
+    def _detect_variant_in_rule_text(self, text: str) -> str:
         """
-        Detect formatum (VOR, COMBAT, AFTERBLOW) from rule text.
+        Detect variant (VOR, COMBAT, AFTERBLOW) from rule text.
         Checks if text starts with **Vor**:, **Combat**:, **Afterblow**:
         Note: The colon can be inside or outside the asterisks.
         """
         text_strip = text.strip()
         
         # Pattern: **Word**: at the start (handles both **Word**: and **Word:**)
-        formatum_start_pattern = re.compile(r'^\*\*(Vor|Combat|Afterblow)\*\*:?', re.IGNORECASE)
-        match = formatum_start_pattern.match(text_strip)
+        variant_start_pattern = re.compile(r'^\*\*(Vor|Combat|Afterblow)\*\*:?', re.IGNORECASE)
+        match = variant_start_pattern.match(text_strip)
         
         if match:
-            formatum_name = match.group(1).upper()
-            # Normalize formatum names
-            if formatum_name == 'VOR':
+            variant_name = match.group(1).upper()
+            # Normalize variant names
+            if variant_name == 'VOR':
                 return 'VOR'
-            elif formatum_name == 'COMBAT':
+            elif variant_name == 'COMBAT':
                 return 'COMBAT'
-            elif formatum_name == 'AFTERBLOW':
+            elif variant_name == 'AFTERBLOW':
                 return 'AFTERBLOW'
         
         return ''
     
-    def _extract_formatum_subrules(self, parent_rule_id: str, text: str, section: str,
+    def _extract_variant_subrules(self, parent_rule_id: str, text: str, section: str,
                                    subsection: str, document: str, anchor: str, line_num: int,
                                    weapon_type: str) -> List[Rule]:
         """
-        Extract formatum-specific sub-rules from text containing Vor/Combat/Afterblow sections.
-        Returns a list of extracted sub-rules, or empty list if no formats found.
+        Extract variant-specific sub-rules from text containing Vor/Combat/Afterblow sections.
+        Returns a list of extracted sub-rules, or empty list if no variants found.
         """
-        # Pattern to detect formatum headers: **Vor**:, **Combat**:, **Afterblow**:
-        formatum_pattern = re.compile(r'\*\*(Vor|Combat|Afterblow)\*\*:?s*(.+?)(?=\*\*(?:Vor|Combat|Afterblow)\*\*|$)', 
+        # Pattern to detect variant headers: **Vor**:, **Combat**:, **Afterblow**:
+        variant_pattern = re.compile(r'\*\*(Vor|Combat|Afterblow)\*\*:?s*(.+?)(?=\*\*(?:Vor|Combat|Afterblow)\*\*|$)', 
                                     re.IGNORECASE | re.DOTALL)
         
-        matches = list(formatum_pattern.finditer(text))
+        matches = list(variant_pattern.finditer(text))
         
-        # Only proceed if we find multiple formats (indicating formatum-split content)
+        # Only proceed if we find multiple variants (indicating variant-split content)
         if len(matches) < 2:
             return []
         
         extracted_rules = []
         
         for match in matches:
-            formatum_name = match.group(1).upper()
-            formatum_text = match.group(2).strip()
+            variant_name = match.group(1).upper()
+            variant_text = match.group(2).strip()
             
-            if not formatum_text:
+            if not variant_text:
                 continue
             
-            # Create a sub-rule ID for this formatum (e.g., GEN-6.10.4.1 for Vor)
-            formatum_subrule_id = f"{parent_rule_id}.{self._formatum_to_subrule_index(formatum_name)}"
+            # Create a sub-rule ID for this variant (e.g., GEN-6.10.4.1 for Vor)
+            variant_subrule_id = f"{parent_rule_id}.{self._variant_to_subrule_index(variant_name)}"
             
             rule = Rule(
-                rule_id=formatum_subrule_id,
-                text=f"**{formatum_name}**: {formatum_text}",
+                rule_id=variant_subrule_id,
+                text=f"**{variant_name}**: {variant_text}",
                 section=section,
                 subsection=subsection,
                 document=document,
                 anchor_id=anchor,
                 line_number=line_num,
                 weapon_type=weapon_type,
-                formatum=formatum_name
+                variant=variant_name
             )
             extracted_rules.append(rule)
         
         return extracted_rules
     
-    def _formatum_to_subrule_index(self, formatum: str) -> str:
-        """Map formatum name to subrule index (1=Vor, 2=Combat, 3=Afterblow)"""
+    def _variant_to_subrule_index(self, variant: str) -> str:
+        """Map variant name to subrule index (1=Vor, 2=Combat, 3=Afterblow)"""
         mapping = {
             "VOR": "1",
             "COMBAT": "2", 
             "AFTERBLOW": "3"
         }
-        return mapping.get(formatum.upper(), "0")
+        return mapping.get(variant.upper(), "0")
     
     def _extract_weapon_info(self, filename: str) -> tuple:  # tuple[str, str]
-        """Extract weapon type and formatum from filename"""
+        """Extract weapon type and variant from filename"""
         weapon_type = "general"
-        formatum = ""
+        variant = ""
 
         if "hosszukard" in filename.lower():
             weapon_type = "longsword"
             if "VOR" in filename:
-                formatum = "VOR"
+                variant = "VOR"
             elif "COMBAT" in filename:
-                formatum = "COMBAT"
+                variant = "COMBAT"
             elif "AFTERBLOW" in filename:
-                formatum = "AFTERBLOW"
+                variant = "AFTERBLOW"
         elif "rapir" in filename.lower():
             weapon_type = "rapier"
         elif "parnazott" in filename.lower():
             weapon_type = "padded_weapons"
 
-        return weapon_type, formatum
+        return weapon_type, variant
 
     def _build_cross_references(self) -> None:
         """Build cross-reference index by scanning rule text for references"""

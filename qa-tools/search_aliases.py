@@ -24,7 +24,7 @@ class SearchResult:
     subsection: str
     document: str
     weapon_type: str
-    formatum: str
+    variant: str
     score: float
 
 
@@ -58,10 +58,10 @@ class AliasAwareSearch:
 
     def _build_alias_lookup(self):
         """Build reverse lookup from alias to its category and key"""
-        # Map format aliases
+        # Map variant aliases
         for key, aliases in self.aliases.get('variants', {}).items():
             for alias in aliases:
-                self.alias_to_key[alias.lower()] = ('formatum', key)
+                self.alias_to_key[alias.lower()] = ('variant', key)
         
         # Map weapon aliases
         for key, aliases in self.aliases.get('weapons', {}).items():
@@ -92,10 +92,10 @@ class AliasAwareSearch:
         """
         Expand query based on aliases
         
-        Returns: (expanded_query, formatum_filter, weapon_filter, concept_terms)
+        Returns: (expanded_query, variant_filter, weapon_filter, concept_terms)
         """
         query_lower = query.lower()
-        formatum_filter = None
+        variant_filter = None
         weapon_filter = None
         concept_terms = []
         remaining_terms = []
@@ -107,8 +107,8 @@ class AliasAwareSearch:
             if word in self.alias_to_key:
                 category, key = self.alias_to_key[word]
                 
-                if category == 'formatum':
-                    formatum_filter = key
+                if category == 'variant':
+                    variant_filter = key
                 elif category == 'weapon':
                     weapon_filter = key
                 elif category == 'concept':
@@ -124,7 +124,7 @@ class AliasAwareSearch:
             # Add concept terms to search
             expanded_query = expanded_query + ' ' + ' '.join(concept_terms)
         
-        return expanded_query.strip(), formatum_filter, weapon_filter, concept_terms, base_query.strip()
+        return expanded_query.strip(), variant_filter, weapon_filter, concept_terms, base_query.strip()
 
     def _normalize_text(self, text: str) -> str:
         if not text:
@@ -133,22 +133,22 @@ class AliasAwareSearch:
         return "".join(ch for ch in normalized if not unicodedata.combining(ch)).lower()
 
     def search(self, query: str, max_results: int = 5,
-               formatum_filter: str = None, weapon_filter: str = None) -> List[SearchResult]:
+               variant_filter: str = None, weapon_filter: str = None) -> List[SearchResult]:
         """
         Search with alias awareness and query expansion
 
         Args:
             query: Search query
             max_results: Max results to return
-            formatum_filter: Filter by format (VOR, COMBAT, AFTERBLOW) - can be overridden by query
+            variant_filter: Filter by variant (VOR, COMBAT, AFTERBLOW) - can be overridden by query
             weapon_filter: Filter by weapon (longsword, rapier, etc.) - can be overridden by query
         """
         # Expand query based on aliases
-        expanded_query, detected_formatum, detected_weapon, concept_terms, base_query = self._expand_query(query)
+        expanded_query, detected_variant, detected_weapon, concept_terms, base_query = self._expand_query(query)
         
         # Use detected filters if not explicitly provided
-        if not formatum_filter and detected_formatum:
-            formatum_filter = detected_formatum
+        if not variant_filter and detected_variant:
+            variant_filter = detected_variant
         if not weapon_filter and detected_weapon:
             weapon_filter = detected_weapon
         
@@ -162,11 +162,11 @@ class AliasAwareSearch:
         for rule in self.rules:
             # Apply filters with hierarchy:
             # - General rules (weapon_type='general') apply to everything
-            # - Weapon-general rules (no formatum) apply to all formats of that weapon
-            # - Format-specific rules apply only to that format
+            # - Weapon-general rules (no variant) apply to all variants of that weapon
+            # - Format-specific rules apply only to that variant
             
             rule_weapon = rule.get('weapon_type', 'general')
-            rule_formatum = rule.get('formatum', '')
+            rule_variant = rule.get('variant', '')
             
             # If weapon filter is specified
             if weapon_filter:
@@ -174,10 +174,10 @@ class AliasAwareSearch:
                 if rule_weapon != 'general' and rule_weapon != weapon_filter:
                     continue
             
-            # If formatum filter is specified
-            if formatum_filter:
-                # Include if: rule is general, OR rule is weapon-general, OR rule matches the format
-                if rule_weapon != 'general' and rule_formatum and rule_formatum != formatum_filter:
+            # If variant filter is specified
+            if variant_filter:
+                # Include if: rule is general, OR rule is weapon-general, OR rule matches the variant
+                if rule_weapon != 'general' and rule_variant and rule_variant != variant_filter:
                     continue
 
             # Require all base query terms to appear somewhere
@@ -202,7 +202,7 @@ class AliasAwareSearch:
                     subsection=rule.get('subsection', ''),
                     document=rule.get('document', ''),
                     weapon_type=rule.get('weapon_type', ''),
-                    formatum=rule.get('formatum', ''),
+                    variant=rule.get('variant', ''),
                     score=score
                 ))
         
@@ -243,7 +243,7 @@ class AliasAwareSearch:
                                 subsection=parent_rule.get('subsection', ''),
                                 document=parent_rule.get('document', ''),
                                 weapon_type=parent_rule.get('weapon_type', ''),
-                                formatum=parent_rule.get('formatum', ''),
+                                variant=parent_rule.get('variant', ''),
                                 score=result.score  # Inherit score from matched rule
                             ))
                 
@@ -263,7 +263,7 @@ class AliasAwareSearch:
                                 subsection=child_rule.get('subsection', ''),
                                 document=child_rule.get('document', ''),
                                 weapon_type=child_rule.get('weapon_type', ''),
-                                formatum=child_rule.get('formatum', ''),
+                                variant=child_rule.get('variant', ''),
                                 score=result.score  # Inherit score
                             ))
                 
@@ -324,9 +324,9 @@ class AliasAwareSearch:
                 if self._normalize_text(concept_term) in text_norm:
                     score += 15.0
 
-        # Check formatum aliases (legacy scoring for non-expanded queries)
-        if rule.get('formatum'):
-            for alias in rule.get('formatum_aliases', []):
+        # Check variant aliases (legacy scoring for non-expanded queries)
+        if rule.get('variant'):
+            for alias in rule.get('variant_aliases', []):
                 if alias in query:
                     score += 40.0
 
@@ -374,10 +374,10 @@ def format_result(result: SearchResult) -> str:
     
     if result.weapon_type and result.weapon_type != 'general':
         output.append(f"Weapon: {result.weapon_type}")
-        if result.formatum:
-            output.append(f"Format: {result.formatum}")
-    elif result.formatum:
-        output.append(f"Format: {result.formatum}")
+        if result.variant:
+            output.append(f"Format: {result.variant}")
+    elif result.variant:
+        output.append(f"Format: {result.variant}")
     
     output.append(f"\nSection: {result.section}")
     if result.subsection:
@@ -425,13 +425,13 @@ def main() -> None:
                 break
             
             parts = cmd.split(maxsplit=1)
-            formatum_filter = None
+            variant_filter = None
             weapon_filter = None
             query = cmd
             
             # Check for filters
             if parts[0].upper() in ['VOR', 'COMBAT', 'AFTERBLOW']:
-                formatum_filter = parts[0].upper()
+                variant_filter = parts[0].upper()
                 query = parts[1] if len(parts) > 1 else ""
             elif parts[0].lower() in ['longsword', 'rapier', 'padded']:
                 weapon_filter = parts[0].lower() if parts[0].lower() != 'padded' else 'padded_weapons'
@@ -442,7 +442,7 @@ def main() -> None:
                 continue
             
             results = search.search(query, max_results=5, 
-                                   formatum_filter=formatum_filter,
+                                   variant_filter=variant_filter,
                                    weapon_filter=weapon_filter)
             
             if not results:

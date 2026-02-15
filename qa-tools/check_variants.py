@@ -9,14 +9,14 @@ variants = [r for r in data['rules'] if r['rule_id'].startswith(('GEN-6.10.4.1.'
 print(f'Found {len(variants)} variant rules:\n')
 for rule in variants:
     print(f"Rule ID: {rule['rule_id']}")
-    print(f"Formatum: '{rule['formatum']}'")
+    print(f"Variant: '{rule['variant']}'")
     print(f"Text: {rule['text'][:100]}...")
     print()
 
 # Check VOR, COMBAT, AFTERBLOW distribution
-vor_rules = [r for r in variants if r['formatum'] == 'VOR']
-combat_rules = [r for r in variants if r['formatum'] == 'COMBAT']
-afterblow_rules = [r for r in variants if r['formatum'] == 'AFTERBLOW']
+vor_rules = [r for r in variants if r['variant'] == 'VOR']
+combat_rules = [r for r in variants if r['variant'] == 'COMBAT']
+afterblow_rules = [r for r in variants if r['variant'] == 'AFTERBLOW']
 
 print(f"\nSummary:")
 print(f"VOR rules: {len(vor_rules)}")

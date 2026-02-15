@@ -52,8 +52,8 @@ def api_search() -> Any:
             return jsonify({"error": error_msg}), 400
         
         # Validate filters
-        formatum_filter = data.get("formatum_filter")
-        is_valid, error_msg = validate_filter(formatum_filter, current_app.config['FORMATS'])
+        variant_filter = data.get("variant_filter")
+        is_valid, error_msg = validate_filter(variant_filter, current_app.config['VARIANTS'])
         if not is_valid:
             return jsonify({"error": error_msg}), 400
         
@@ -66,7 +66,7 @@ def api_search() -> Any:
         results = current_app.search_engine.search(
             query,
             max_results=max_results,
-            formatum_filter=formatum_filter,
+            variant_filter=variant_filter,
             weapon_filter=weapon_filter
         )
 
@@ -94,7 +94,7 @@ def api_search() -> Any:
                 "subsection": r.subsection,
                 "document": r.document,
                 "weapon_type": r.weapon_type,
-                "formatum": r.formatum or "general",
+                "variant": r.variant or "general",
                 "score": r.score,
                 "depth": depth,
                 "group_root": current_group
@@ -121,9 +121,9 @@ def api_stats() -> Any:
     """Get rulebook statistics"""
     try:
         total_rules = len(current_app.search_engine.rules)
-        vor_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "VOR")
-        combat_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "COMBAT")
-        ab_rules = sum(1 for r in current_app.search_engine.rules if r.get("formatum") == "AFTERBLOW")
+        vor_rules = sum(1 for r in current_app.search_engine.rules if r.get("variant") == "VOR")
+        combat_rules = sum(1 for r in current_app.search_engine.rules if r.get("variant") == "COMBAT")
+        ab_rules = sum(1 for r in current_app.search_engine.rules if r.get("variant") == "AFTERBLOW")
         longsword_rules = sum(1 for r in current_app.search_engine.rules if r.get("weapon_type") == "longsword")
 
         return jsonify({
@@ -140,28 +140,28 @@ def api_stats() -> Any:
 
 @search_bp.route('/extract', methods=['POST'])
 def api_extract() -> Any:
-    """Generate rulebook extract filtered by weapon and format"""
+    """Generate rulebook extract filtered by weapon and variant"""
     try:
         data = request.get_json() or {}
             
         weapon_filter = normalize_filter(data.get("weapon_filter"), current_app.config['WEAPONS'])
-        formatum_filter = normalize_filter(data.get("formatum_filter"), current_app.config['FORMATS'])
+        variant_filter = normalize_filter(data.get("variant_filter"), current_app.config['VARIANTS'])
 
         filtered_rules = filter_rules_for_extract(
             current_app.search_engine.rules,
             weapon_filter,
-            formatum_filter
+            variant_filter
         )
 
         extract_text = format_extract_text(
             filtered_rules,
             weapon_filter,
-            formatum_filter
+            variant_filter
         )
 
         weapon_label = weapon_filter or "all-weapons"
-        format_label = formatum_filter or "all-formats"
-        filename = f"rulebook-extract_{weapon_label}_{format_label}.md"
+        variant_label = variant_filter or "all-variants"
+        filename = f"rulebook-extract_{weapon_label}_{variant_label}.md"
 
         return Response(
             extract_text,
@@ -197,7 +197,7 @@ def api_rule(rule_id: str) -> Any:
                     "subsection": rule.get("subsection", ""),
                     "document": rule.get("document", ""),
                     "weapon_type": rule.get("weapon_type", ""),
-                    "formatum": rule.get("formatum", ""),
+                    "variant": rule.get("variant", ""),
                     "anchor_id": rule.get("anchor_id", "")
                 }
             })

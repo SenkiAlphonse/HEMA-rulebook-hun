@@ -184,18 +184,18 @@ def read_rulebook_markdown_content() -> str:
 def filter_rules_for_extract(
     rules: List[Dict[str, Any]],
     weapon_filter: Optional[str],
-    formatum_filter: Optional[str]
+    variant_filter: Optional[str]
 ) -> List[Dict[str, Any]]:
-    """Filter rules by weapon type and format"""
+    """Filter rules by weapon type and variant"""
     filtered = []
     for rule in rules:
         rule_weapon = rule.get("weapon_type", "general")
-        rule_formatum = rule.get("formatum") or ""
+        rule_variant = rule.get("variant") or ""
 
         if weapon_filter and rule_weapon not in ["general", weapon_filter]:
             continue
 
-        if formatum_filter and rule_formatum not in ["", formatum_filter]:
+        if variant_filter and rule_variant not in ["", variant_filter]:
             continue
 
         filtered.append(rule)
@@ -205,14 +205,14 @@ def filter_rules_for_extract(
 def format_extract_text(
     rules: List[Dict[str, Any]],
     weapon_filter: Optional[str],
-    formatum_filter: Optional[str]
+    variant_filter: Optional[str]
 ) -> str:
     """Format filtered rules into markdown extract"""
     title_parts = ["Rulebook Extract"]
     if weapon_filter:
         title_parts.append(f"Weapon: {weapon_filter}")
-    if formatum_filter:
-        title_parts.append(f"Format: {formatum_filter}")
+    if variant_filter:
+        title_parts.append(f"Variant: {variant_filter}")
 
     doc_order = build_document_order(rules)
     sorted_rules = sorted(

@@ -165,7 +165,7 @@ def api_summarize():
             "language": "EN" or "HU",
             "query": "search query" (required if mode="search"),
             "weapon_filter": "longsword" etc (optional),
-            "formatum_filter": "VOR" etc (optional)
+            "variant_filter": "VOR" etc (optional)
         }
     
     Response:
@@ -208,23 +208,23 @@ def api_summarize():
                 data.get("weapon_filter"),
                 current_app.config['WEAPONS']
             )
-            formatum_filter = normalize_filter(
-                data.get("formatum_filter"),
-                current_app.config['FORMATS']
+            variant_filter = normalize_filter(
+                data.get("variant_filter"),
+                current_app.config['VARIANTS']
             )
             rules = filter_rules_for_extract(
                 current_app.search_engine.rules,
                 weapon_filter,
-                formatum_filter
+                variant_filter
             )
         else:
             query = data.get("query", "").strip()
             if not query:
                 return jsonify({"error": "Query cannot be empty"}), 400
             
-            formatum_filter = normalize_filter(
-                data.get("formatum_filter"),
-                current_app.config['FORMATS']
+            variant_filter = normalize_filter(
+                data.get("variant_filter"),
+                current_app.config['VARIANTS']
             )
             weapon_filter = normalize_filter(
                 data.get("weapon_filter"),
@@ -233,7 +233,7 @@ def api_summarize():
             results = current_app.search_engine.search(
                 query,
                 max_results=len(current_app.search_engine.rules),
-                formatum_filter=formatum_filter,
+                variant_filter=variant_filter,
                 weapon_filter=weapon_filter
             )
             rules = [r.__dict__ for r in results]

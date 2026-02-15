@@ -79,8 +79,8 @@ A találat ténylegességének elbírálásában kizárólag a mérkőzést veze
 **LS-1.3.6**  
 Ha egy találat az érvényes találati felületen kívülre érkezik, nem számít érvényes találatnak.  
 
-## A Hosszúkardvívás versenyformátumai  
-A hosszúkard versenyeket az alábbi három formátumok egyikében kell szervezni, ezt a versenykiírásban egyértelműen fel kell tüntetni!  
+## A Hosszúkardvívás szabályváltozatai  
+A hosszúkard versenyeket az alábbi három változat egyikében kell szervezni, ezt a versenykiírásban egyértelműen fel kell tüntetni!  
 
 - VOR  
 <span id="LS-VOR-1"></span>  

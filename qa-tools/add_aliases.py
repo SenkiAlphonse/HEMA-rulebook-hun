@@ -17,16 +17,15 @@ with open(current_dir / 'rules_index.json', 'r', encoding='utf-8') as f:
 # Add aliases to each rule
 for rule in data['rules']:
     weapon_type = rule.get('weapon_type', 'general')
-    formatum = rule.get('formatum', '')
+    variant = rule.get('variant', '')
 
     # Add weapon aliases
     weapon_aliases = aliases.get('weapons', {}).get(weapon_type, [])
     rule['weapon_aliases'] = weapon_aliases
 
-    # Add formatum aliases
-    # Use 'variants' key from aliases.json (will be renamed to 'formats' later)
-    formatum_aliases = aliases.get('variants', {}).get(formatum, []) if formatum else []
-    rule['formatum_aliases'] = formatum_aliases# Save updated index
+    # Add variant aliases
+    variant_aliases = aliases.get('variants', {}).get(variant, []) if variant else []
+    rule['variant_aliases'] = variant_aliases# Save updated index
 with open(current_dir / 'rules_index.json', 'w', encoding='utf-8') as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
@@ -36,5 +35,5 @@ if data['rules']:
     print(f'\nSample rule: {sample["rule_id"]}')
     print(f'  Weapon: {sample.get("weapon_type")}')
     print(f'  Weapon aliases: {sample.get("weapon_aliases", [])}')
-    print(f'  Formatum: {sample.get("formatum")}')
-    print(f'  Formatum aliases: {sample.get("formatum_aliases", [])}')
+    print(f'  Variant: {sample.get("variant")}')
+    print(f'  Variant aliases: {sample.get("variant_aliases", [])}')

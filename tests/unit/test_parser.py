@@ -12,87 +12,87 @@ class TestRulebookParser:
     def test_extract_weapon_info_longsword_vor(self):
         """Test weapon extraction for longsword VOR files"""
         parser = RulebookParser(".")
-        weapon, formatum = parser._extract_weapon_info("05.a-hosszukard-VOR.md")
+        weapon, variant = parser._extract_weapon_info("05.a-hosszukard-VOR.md")
         
         assert weapon == "longsword"
-        assert formatum == "VOR"
+        assert variant == "VOR"
     
     def test_extract_weapon_info_longsword_combat(self):
         """Test weapon extraction for longsword COMBAT files"""
         parser = RulebookParser(".")
-        weapon, formatum = parser._extract_weapon_info("05.b-hosszukard-COMBAT.md")
+        weapon, variant = parser._extract_weapon_info("05.b-hosszukard-COMBAT.md")
         
         assert weapon == "longsword"
-        assert formatum == "COMBAT"
+        assert variant == "COMBAT"
     
     def test_extract_weapon_info_longsword_afterblow(self):
         """Test weapon extraction for longsword AFTERBLOW files"""
         parser = RulebookParser(".")
-        weapon, formatum = parser._extract_weapon_info("05.c-hosszukard-AFTERBLOW.md")
+        weapon, variant = parser._extract_weapon_info("05.c-hosszukard-AFTERBLOW.md")
         
         assert weapon == "longsword"
-        assert formatum == "AFTERBLOW"
+        assert variant == "AFTERBLOW"
     
     def test_extract_weapon_info_rapier(self):
         """Test weapon extraction for rapier files"""
         parser = RulebookParser(".")
-        weapon, formatum = parser._extract_weapon_info("06-rapir.md")
+        weapon, variant = parser._extract_weapon_info("06-rapir.md")
         
         assert weapon == "rapier"
-        assert formatum == ""
+        assert variant == ""
     
     def test_extract_weapon_info_general(self):
         """Test weapon extraction for general files"""
         parser = RulebookParser(".")
-        weapon, formatum = parser._extract_weapon_info("01-altalanos.md")
+        weapon, variant = parser._extract_weapon_info("01-altalanos.md")
         
         assert weapon == "general"
-        assert formatum == ""
+        assert variant == ""
     
-    def test_detect_formatum_in_rule_text_vor(self):
-        """Test VOR formatum detection in rule text"""
+    def test_detect_variant_in_rule_text_vor(self):
+        """Test VOR variant detection in rule text"""
         parser = RulebookParser(".")
         
         text = "**Vor**: This is a VOR specific rule"
-        detected = parser._detect_formatum_in_rule_text(text)
+        detected = parser._detect_variant_in_rule_text(text)
         assert detected == "VOR"
         
         text = "**Vor**:This is a VOR specific rule"
-        detected = parser._detect_formatum_in_rule_text(text)
+        detected = parser._detect_variant_in_rule_text(text)
         assert detected == "VOR"
     
-    def test_detect_formatum_in_rule_text_combat(self):
-        """Test COMBAT formatum detection in rule text"""
+    def test_detect_variant_in_rule_text_combat(self):
+        """Test COMBAT variant detection in rule text"""
         parser = RulebookParser(".")
         
         text = "**Combat**: This is a COMBAT specific rule"
-        detected = parser._detect_formatum_in_rule_text(text)
+        detected = parser._detect_variant_in_rule_text(text)
         assert detected == "COMBAT"
     
-    def test_detect_formatum_in_rule_text_afterblow(self):
-        """Test AFTERBLOW formatum detection in rule text"""
+    def test_detect_variant_in_rule_text_afterblow(self):
+        """Test AFTERBLOW variant detection in rule text"""
         parser = RulebookParser(".")
         
         text = "**Afterblow**: This is an AFTERBLOW specific rule"
-        detected = parser._detect_formatum_in_rule_text(text)
+        detected = parser._detect_variant_in_rule_text(text)
         assert detected == "AFTERBLOW"
     
-    def test_detect_formatum_in_rule_text_none(self):
-        """Test formatum detection with no formatum present"""
+    def test_detect_variant_in_rule_text_none(self):
+        """Test variant detection with no variant present"""
         parser = RulebookParser(".")
         
-        text = "This is a general rule without formatum"
-        detected = parser._detect_formatum_in_rule_text(text)
+        text = "This is a general rule without variant"
+        detected = parser._detect_variant_in_rule_text(text)
         assert detected == ""
     
-    def test_formatum_to_subrule_index(self):
-        """Test formatum to subrule index mapping"""
+    def test_variant_to_subrule_index(self):
+        """Test variant to subrule index mapping"""
         parser = RulebookParser(".")
         
-        assert parser._formatum_to_subrule_index("VOR") == "1"
-        assert parser._formatum_to_subrule_index("COMBAT") == "2"
-        assert parser._formatum_to_subrule_index("AFTERBLOW") == "3"
-        assert parser._formatum_to_subrule_index("UNKNOWN") == "0"
+        assert parser._variant_to_subrule_index("VOR") == "1"
+        assert parser._variant_to_subrule_index("COMBAT") == "2"
+        assert parser._variant_to_subrule_index("AFTERBLOW") == "3"
+        assert parser._variant_to_subrule_index("UNKNOWN") == "0"
     
     def test_rule_id_pattern(self):
         """Test rule ID pattern matching"""

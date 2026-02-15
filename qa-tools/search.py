@@ -21,8 +21,8 @@ SCORE_SECTION_MATCH = 30.0             # Exact phrase match in section/subsectio
 SCORE_TERM_IN_TEXT = 10.0              # Per occurrence of search term in text
 SCORE_TERM_IN_SECTION = 5.0            # Per search term found in section/subsection
 SCORE_WEAPON_TYPE_BONUS = 10.0         # Bonus for weapon-specific rules
-SCORE_FORMATUM_MATCH_BONUS = 25.0      # Bonus for matching formatum
-SCORE_FORMATUM_GENERAL_BONUS = 5.0     # Slight bonus for general format rules
+SCORE_VARIANT_MATCH_BONUS = 25.0      # Bonus for matching variant
+SCORE_VARIANT_GENERAL_BONUS = 5.0     # Slight bonus for general format rules
 
 
 @dataclass
@@ -34,7 +34,7 @@ class SearchResult:
     subsection: str
     document: str
     weapon_type: str
-    formatum: str
+    variant: str
     score: float  # Relevance score
 
 
@@ -80,7 +80,7 @@ class RulebookSearch:
                 self.parent_child_index[parent_id].append(rule_id)
     
     def search(self, query: str, max_results: int = 5, 
-               weapon_filter: str = None, formatum_filter: str = None) -> List[SearchResult]:
+               weapon_filter: str = None, variant_filter: str = None) -> List[SearchResult]:
         """
         Search for rules matching the query.
         For level 4-5 rules, includes parent rules (up to level 3) and direct children.
@@ -89,7 +89,7 @@ class RulebookSearch:
             query: Search query (keywords, natural language, or rule ID)
             max_results: Maximum number of result groups to return
             weapon_filter: Filter by weapon type (e.g., "longsword")
-            formatum_filter: Filter by formatum (e.g., "VOR", "COMBAT", "AFTERBLOW")
+            variant_filter: Filter by variant (e.g., "VOR", "COMBAT", "AFTERBLOW")
         
         Returns:
             List of SearchResult objects, grouped by rule lineage and sorted by relevance
@@ -97,8 +97,8 @@ class RulebookSearch:
         query_lower = query.lower()
         query_terms = self._extract_terms(query_lower)
         
-        # Extract formatum from query if present (e.g., "VOR", "Combat")
-        detected_formatum = self._detect_formatum_in_query(query)
+        # Extract variant from query if present (e.g., "VOR", "Combat")
+        detected_variant = self._detect_variant_in_query(query)
         
         results = []
         
@@ -108,10 +108,10 @@ class RulebookSearch:
                 continue
             
             # Use explicit filter or detected from query
-            effective_formatum_filter = formatum_filter or detected_formatum
-            if effective_formatum_filter:
-                rule_formatum = rule.get('formatum', '').upper()
-                if rule_formatum and rule_formatum != effective_formatum_filter.upper():
+            effective_variant_filter = variant_filter or detected_variant
+            if effective_variant_filter:
+                rule_variant = rule.get('variant', '').upper()
+                if rule_variant and rule_variant != effective_variant_filter.upper():
                     continue
             
             # Calculate relevance score
@@ -125,7 +125,7 @@ class RulebookSearch:
                     subsection=rule['subsection'],
                     document=rule['document'],
                     weapon_type=rule.get('weapon_type', ''),
-                    formatum=rule.get('formatum', ''),
+                    variant=rule.get('variant', ''),
                     score=score
                 ))
         
@@ -179,10 +179,10 @@ class RulebookSearch:
         terms = re.findall(r'\w+', query)
         return [t for t in terms if t not in stop_words and len(t) > 2]
     
-    def _detect_formatum_in_query(self, query: str) -> str:
+    def _detect_variant_in_query(self, query: str) -> str:
         """
-        Detect if query contains references to specific formats/variants.
-        Returns the detected formatum (VOR, COMBAT, AFTERBLOW) or empty string.
+        Detect if query contains references to specific variants.
+        Returns the detected variant (VOR, COMBAT, AFTERBLOW) or empty string.
         """
         query_upper = query.upper()
         
@@ -194,7 +194,7 @@ class RulebookSearch:
         elif 'AFTERBLOW' in query_upper or 'AFTER' in query_upper:
             return 'AFTERBLOW'
         
-        # Check for Hungarian formatum names
+        # Check for Hungarian variant names
         if 'ELŐBOTLÁS' in query_upper or 'VORBEIGEHEN' in query_upper:
             return 'VOR'
         elif 'SZABADHARC' in query_upper:
@@ -211,7 +211,7 @@ class RulebookSearch:
         section_lower = rule['section'].lower()
         subsection_lower = rule['subsection'].lower()
         rule_id_lower = rule['rule_id'].lower()
-        rule_formatum = rule.get('formatum', '').upper()
+        rule_variant = rule.get('variant', '').upper()
 
         # Exact rule ID match (highest priority)
         if rule_id_lower == query.lower():
@@ -241,13 +241,13 @@ class RulebookSearch:
             if rule.get('weapon_type') != 'general':
                 score += SCORE_WEAPON_TYPE_BONUS
 
-        # Bonus for formatum-specific rules if query contains formatum keywords
-        detected_formatum = self._detect_formatum_in_query(query)
-        if detected_formatum and rule_formatum:
-            if rule_formatum == detected_formatum.upper():
-                score += SCORE_FORMATUM_MATCH_BONUS  # Significant bonus for matching formatum
-            elif rule_formatum == '':  # General rules get slight bonus
-                score += SCORE_FORMATUM_GENERAL_BONUS
+        # Bonus for variant-specific rules if query contains variant keywords
+        detected_variant = self._detect_variant_in_query(query)
+        if detected_variant and rule_variant:
+            if rule_variant == detected_variant.upper():
+                score += SCORE_VARIANT_MATCH_BONUS  # Significant bonus for matching variant
+            elif rule_variant == '':  # General rules get slight bonus
+                score += SCORE_VARIANT_GENERAL_BONUS
 
         return score
     
@@ -280,12 +280,12 @@ def format_result(result: SearchResult, show_context: bool = True) -> str:
     output.append(f"Rule ID: {result.rule_id}")
     output.append(f"Document: {result.document}")
     
-    # Display weapon type and formatum
+    # Display weapon type and variant
     display_parts = []
     if result.weapon_type and result.weapon_type != 'general':
         display_parts.append(result.weapon_type)
-    if result.formatum:
-        display_parts.append(f"[{result.formatum}]")
+    if result.variant:
+        display_parts.append(f"[{result.variant}]")
     
     if display_parts:
         output.append(f"Category: {' '.join(display_parts)}")
@@ -325,11 +325,11 @@ def main() -> None:
     print("  - valid target areas")
     print("  - GEN-1.1.1")
     print("  - hosszúkard vágás")
-    print("  - VOR mérkőzés (searches only VOR formatum rules)")
+    print("  - VOR mérkőzés (searches only VOR variant rules)")
     print("  - COMBAT 5 találat")
     print("  - AFTERBLOW pontozás")
     print("\nFilters (use space-separated):")
-    print("  - Add 'VOR', 'COMBAT', or 'AFTERBLOW' to filter by formatum")
+    print("  - Add 'VOR', 'COMBAT', or 'AFTERBLOW' to filter by variant")
     print("  - Add 'longsword' or 'rapier' to filter by weapon")
     print("-"*70)
     

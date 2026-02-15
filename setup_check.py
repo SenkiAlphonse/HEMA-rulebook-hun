@@ -50,22 +50,22 @@ def check_index():
         rules = data.get("rules", data) if isinstance(data, dict) else data
         print(f"✓ Rules indexed: {len(rules)}")
         
-        # Count by weapon and format
+        # Count by weapon and variant
         weapons = {}
-        formats = {}
+        variants = {}
         for rule in rules:
             w = rule.get("weapon_type", "unknown")
-            f = rule.get("formatum", "general")
+            f = rule.get("variant", "general")
             weapons[w] = weapons.get(w, 0) + 1
-            formats[f] = formats.get(f, 0) + 1
+            variants[f] = variants.get(f, 0) + 1
         
         print(f"\nBy weapon type:")
         for w in sorted(weapons.keys()):
             print(f"  - {w}: {weapons[w]} rules")
         
-        print(f"\nBy format:")
-        for f in sorted(formats.keys()) or ["general"]:
-            print(f"  - {f or 'general'}: {formats[f]} rules")
+        print(f"\nBy variant:")
+        for f in sorted(variants.keys()) or ["general"]:
+            print(f"  - {f or 'general'}: {variants[f]} rules")
         
         return True
     except Exception as e:
@@ -121,9 +121,9 @@ def test_search():
             ("target", None, "longsword"),
         ]
         
-        for query, fmt, weapon in test_queries:
-            results = search.search(query, max_results=3, formatum_filter=fmt, weapon_filter=weapon)
-            fmt_label = f" [format={fmt}]" if fmt else ""
+        for query, vrt, weapon in test_queries:
+            results = search.search(query, max_results=3, variant_filter=vrt, weapon_filter=weapon)
+            fmt_label = f" [variant={vrt}]" if vrt else ""
             weapon_label = f" [weapon={weapon}]" if weapon else ""
             print(f"\n✓ Query: '{query}'{fmt_label}{weapon_label}")
             if results:

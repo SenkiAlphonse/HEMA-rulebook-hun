@@ -368,9 +368,9 @@
                         >
                     </div>
                     <div class="form-group">
-                        <label for="formatum">Format</label>
-                        <select id="formatum" name="formatum">
-                            <option value="">All Formats</option>
+                        <label for="variant">Variant</label>
+                        <select id="variant" name="variant">
+                            <option value="">All Variants</option>
                             <option value="VOR">VOR (Right of Way)</option>
                             <option value="COMBAT">COMBAT (Free Fencing)</option>
                             <option value="AFTERBLOW">AFTERBLOW</option>
@@ -401,9 +401,9 @@
             <form class="search-form" id="extractForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="extractFormatum">Extract Format</label>
-                        <select id="extractFormatum" name="extractFormatum">
-                            <option value="">All Formats</option>
+                        <label for="extractVariant">Extract Variant</label>
+                        <select id="extractVariant" name="extractVariant">
+                            <option value="">All Variants</option>
                             <option value="VOR">VOR (Right of Way)</option>
                             <option value="COMBAT">COMBAT (Free Fencing)</option>
                             <option value="AFTERBLOW">AFTERBLOW</option>
@@ -421,7 +421,7 @@
                     <button type="submit" class="btn btn-search">Download Extract</button>
                 </div>
                 <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
-                    Includes all general rules plus matching weapon/format rules, ordered by document and rule index.
+                    Includes all general rules plus matching weapon/variant rules, ordered by document and rule index.
                 </p>
             </form>
         </div>
@@ -560,7 +560,7 @@
 
         async function search() {
             const query = queryInput.value.trim();
-            const formatum = document.getElementById('formatum').value;
+            const variant = document.getElementById('variant').value;
             const weapon = document.getElementById('weapon').value;
 
             if (!query) {
@@ -579,7 +579,7 @@
                     },
                     body: JSON.stringify({
                         query: query,
-                        formatum_filter: formatum || null,
+                        variant_filter: variant || null,
                         weapon_filter: weapon || null,
                         max_results: 100
                     })
@@ -615,7 +615,7 @@
         }
 
         async function downloadExtract() {
-            const formatum = document.getElementById('extractFormatum').value;
+            const variant = document.getElementById('extractVariant').value;
             const weapon = document.getElementById('extractWeapon').value;
 
             try {
@@ -625,7 +625,7 @@
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        formatum_filter: formatum || null,
+                        variant_filter: variant || null,
                         weapon_filter: weapon || null
                     })
                 });
@@ -641,8 +641,8 @@
                 const a = document.createElement('a');
                 a.href = url;
                 const weaponLabel = weapon || 'all-weapons';
-                const formatLabel = formatum || 'all-formats';
-                a.download = `rulebook-extract_${weaponLabel}_${formatLabel}.md`;
+                const variantLabel = variant || 'all-variants';
+                a.download = `rulebook-extract_${weaponLabel}_${variantLabel}.md`;
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
@@ -656,9 +656,9 @@
             const language = document.getElementById('summaryLanguage').value;
             const format = document.getElementById('summaryFormat').value;
             const accessCode = document.getElementById('summaryAccessCode').value.trim();
-            const formatum = document.getElementById('formatum').value;
+            const variant = document.getElementById('variant').value;
             const weapon = document.getElementById('weapon').value;
-            const extractFormatum = document.getElementById('extractFormatum').value;
+            const extractVariant = document.getElementById('extractVariant').value;
             const extractWeapon = document.getElementById('extractWeapon').value;
 
             summaryOutput.innerHTML = '<div class="loading show"><div class="spinner"></div><p>Summarizing...</p></div>';
@@ -678,10 +678,10 @@
                     return;
                 }
                 payload.query = query;
-                payload.formatum_filter = formatum || null;
+                payload.variant_filter = variant || null;
                 payload.weapon_filter = weapon || null;
             } else {
-                payload.formatum_filter = extractFormatum || null;
+                payload.variant_filter = extractVariant || null;
                 payload.weapon_filter = extractWeapon || null;
             }
 
@@ -722,7 +722,7 @@
 
             let html = '';
             resultsToShow.forEach(result => {
-                const formatLabel = result.formatum === 'general' ? 'All Formats' : result.formatum;
+                const variantLabel = result.variant === 'general' ? 'All Variants' : result.variant;
                 const weaponLabel = result.weapon_type === 'general' ? 'General' : result.weapon_type;
 
                 html += `
@@ -733,7 +733,7 @@
                         </div>
                         <div class="result-tags">
                             <span class="tag weapon">${weaponLabel}</span>
-                            <span class="tag format">${formatLabel}</span>
+                            <span class="tag variant">${variantLabel}</span>
                         </div>
                         <div class="result-text">${renderMarkdownText(result.text)}</div>
                         <div class="result-meta">
