@@ -367,11 +367,10 @@ class RulebookParser:
 
 def main() -> None:
     """Main entry point"""
-    # Get the rulebook directory (parent of qa-tools)
-    current_dir = Path(__file__).parent.parent
-    
+    # Get the project root directory (parent of qa_tools)
+    current_dir = Path(__file__).parent.parent.parent
     parser = RulebookParser(current_dir)
-    parser.save_index(current_dir / "qa-tools" / "rules_index.json")
+    parser.save_index(current_dir / "qa_tools" / "rules_index.json")
 
 
 if __name__ == "__main__":
