@@ -209,7 +209,7 @@ Amennyiben a kabát önmagában nem ad elegendő védelmet a könyöknek és az 
 A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem.  
 
 **GEN-5.2.2.7**  
-A 80N ellenállású (FIE, egyoldalas) hónaljvédő ajánlott, kötelező bevezetését tervezzük.
+A 800N ellenállású (FIE, egyoldalas) hónaljvédő ajánlott, kötelező bevezetését tervezzük.
 
 **GEN-5.2.3**  
 #### Lábvédelem  
@@ -274,7 +274,7 @@ A kard hegyét a helyszínen színes, jól látható bandázzsal kell ellátni a
 A kard teljes hossza 120-140cm között kell mozogjon.  
 
 **GEN-5.2.5.12**  
-A kard teljes tömege férfi versenyszámban 1350-1800g között kell mozogjon.  
+A kard teljes tömege férfi versenyszámban 1300-1800g között kell mozogjon.  
 
 **GEN-5.2.5.13**  
 A kard teljes tömege női versenyszámban 1100-1600g között kell mozogjon.  
