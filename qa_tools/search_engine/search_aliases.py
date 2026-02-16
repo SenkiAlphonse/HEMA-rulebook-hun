@@ -2,6 +2,7 @@
 Enhanced HEMA Rulebook Search Engine with Alias Support
 """
 
+
 import json
 import re
 import logging
@@ -9,7 +10,8 @@ import unicodedata
 from pathlib import Path
 from typing import List, Dict, Any, Tuple, Optional
 from dataclasses import dataclass
-from search_utils import get_rule_depth, get_rule_lineage, get_children_rules
+from qa_tools.search_engine.search_utils import get_rule_depth, get_rule_lineage, get_children_rules
+from qa_tools.search_engine import search_config
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -44,8 +46,15 @@ class AliasAwareSearch:
         self.load_index()
         self._build_alias_lookup()
 
-    def load_aliases(self, aliases_path: str):
-        """Load aliases from JSON"""
+    def load_aliases(self, aliases_path: str) -> None:
+        """Load aliases from JSON file.
+        
+        Args:
+            aliases_path: Path to the aliases JSON file
+            
+        Raises:
+            Logs warning if file not found, logs error if JSON is invalid
+        """
         try:
             with open(aliases_path, 'r', encoding='utf-8') as f:
                 self.aliases = json.load(f)
@@ -88,11 +97,21 @@ class AliasAwareSearch:
         
         logger.info(f"Loaded {len(self.rules)} rules with alias support")
 
-    def _expand_query(self, query: str) -> Tuple[str, str, str, List[str], str]:
-        """
-        Expand query based on aliases
+    def _expand_query(self, query: str) -> Tuple[str, Optional[str], Optional[str], List[str], str]:
+        """Expand query based on aliases, extracting filters and concept terms.
         
-        Returns: (expanded_query, variant_filter, weapon_filter, concept_terms)
+        Analyzes query words to detect variant/weapon filters and concept expansions.
+        
+        Args:
+            query: Original search query
+            
+        Returns:
+            Tuple of (expanded_query, variant_filter, weapon_filter, concept_terms, base_query)
+            - expanded_query: Query with concept terms added
+            - variant_filter: Detected variant (VOR/COMBAT/AFTERBLOW) or None
+            - weapon_filter: Detected weapon type or None
+            - concept_terms: List of concept alias terms
+            - base_query: Original query without aliases
         """
         query_lower = query.lower()
         variant_filter = None
@@ -127,19 +146,27 @@ class AliasAwareSearch:
         return expanded_query.strip(), variant_filter, weapon_filter, concept_terms, base_query.strip()
 
     def _normalize_text(self, text: str) -> str:
+        """Normalize text for matching by removing accents and converting to lowercase.
+        
+        Args:
+            text: Text to normalize
+            
+        Returns:
+            Normalized text without diacritics, in lowercase
+        """
         if not text:
             return ""
         normalized = unicodedata.normalize("NFKD", text)
         return "".join(ch for ch in normalized if not unicodedata.combining(ch)).lower()
 
-    def search(self, query: str, max_results: int = 5,
+    def search(self, query: str, max_results: int = None,
                variant_filter: str = None, weapon_filter: str = None) -> List[SearchResult]:
         """
         Search with alias awareness and query expansion
 
         Args:
             query: Search query
-            max_results: Max results to return
+            max_results: Max results to return (defaults to config)
             variant_filter: Filter by variant (VOR, COMBAT, AFTERBLOW) - can be overridden by query
             weapon_filter: Filter by weapon (longsword, rapier, etc.) - can be overridden by query
         """
@@ -208,76 +235,103 @@ class AliasAwareSearch:
         
         results.sort(key=lambda x: x.score, reverse=True)
         
-        # Group level 4-5 results with their parents and children
+        # Use default max results if not provided
+        if max_results is None:
+            max_results = search_config.DEFAULT_MAX_RESULTS
+        # Group results and return
+        return self._group_and_return_results(results, max_results)
+    
+    def _group_and_return_results(self, results: List[SearchResult], max_results: int) -> List[SearchResult]:
+        """Group level 4-5 results with their parents and children"""
         grouped_results = []
         seen_root_ids = set()
-        
+        grouping_multiplier = getattr(search_config, 'GROUPING_MULTIPLIER', 3)
         for result in results[:max_results]:
-            depth = self._get_rule_depth(result.rule_id)
-            
+            depth = self.get_rule_depth(result.rule_id)
             # For level 4-5 rules, include parents (up to level 3) and children
             if depth >= 4:
-                lineage = self._get_rule_lineage(result.rule_id)
-                
+                lineage = self.get_rule_lineage(result.rule_id)
                 # Determine the root of this group (the level 2 parent if it exists)
                 root_id = lineage[1] if len(lineage) > 1 else lineage[0] if lineage else result.rule_id
-                
                 # Skip if we've already processed this family
                 if root_id in seen_root_ids:
                     continue
                 seen_root_ids.add(root_id)
-                
                 # Collect the family: parents + matched rule + children
-                family = []
-                
-                # Add parents (up to level 3)
-                for parent_id in lineage:
-                    parent_depth = self._get_rule_depth(parent_id)
-                    if parent_depth <= 3:
-                        parent_rule = self.get_rule_by_id(parent_id)
-                        if parent_rule:
-                            family.append(SearchResult(
-                                rule_id=parent_rule['rule_id'],
-                                text=parent_rule['text'],
-                                section=parent_rule.get('section', ''),
-                                subsection=parent_rule.get('subsection', ''),
-                                document=parent_rule.get('document', ''),
-                                weapon_type=parent_rule.get('weapon_type', ''),
-                                variant=parent_rule.get('variant', ''),
-                                score=result.score  # Inherit score from matched rule
-                            ))
-                
-                # Add the matched rule itself
-                family.append(result)
-                
-                # Add children (level 5 if we're at level 4, nothing if we're at level 5)
-                if depth == 4:
-                    children = self._get_children_rules(result.rule_id)
-                    for child_id in children:
-                        child_rule = self.get_rule_by_id(child_id)
-                        if child_rule:
-                            family.append(SearchResult(
-                                rule_id=child_rule['rule_id'],
-                                text=child_rule['text'],
-                                section=child_rule.get('section', ''),
-                                subsection=child_rule.get('subsection', ''),
-                                document=child_rule.get('document', ''),
-                                weapon_type=child_rule.get('weapon_type', ''),
-                                variant=child_rule.get('variant', ''),
-                                score=result.score  # Inherit score
-                            ))
-                
+                family = self._build_rule_family(result, lineage)
                 # Sort family by depth and add to results
-                family.sort(key=lambda x: self._get_rule_depth(x.rule_id))
+                family.sort(key=lambda x: self.get_rule_depth(x.rule_id))
                 grouped_results.extend(family)
             else:
                 # Level 1-3 rules: just add them directly
                 grouped_results.append(result)
+        return grouped_results[:max_results * grouping_multiplier]
+    
+    def _build_rule_family(self, result: SearchResult, lineage: List[str]) -> List[SearchResult]:
+        """Build a family of rules: parents + matched rule + children.
         
-        return grouped_results[:max_results * 3]  # Allow more results due to grouping
+        For hierarchical display, gathers parent rules (up to level 3),
+        the matched rule itself, and child rules (if at level 4).
+        
+        Args:
+            result: The matched SearchResult
+            lineage: List of parent rule IDs from get_rule_lineage
+            
+        Returns:
+            List of SearchResult objects forming the rule family
+        """
+        family = []
+        
+        # Add parents (up to level 3)
+        for parent_id in lineage:
+            parent_depth = self.get_rule_depth(parent_id)
+            if parent_depth <= 3:
+                parent_rule = self.get_rule_by_id(parent_id)
+                if parent_rule:
+                    family.append(SearchResult(
+                        rule_id=parent_rule['rule_id'],
+                        text=parent_rule['text'],
+                        section=parent_rule.get('section', ''),
+                        subsection=parent_rule.get('subsection', ''),
+                        document=parent_rule.get('document', ''),
+                        weapon_type=parent_rule.get('weapon_type', ''),
+                        variant=parent_rule.get('variant', ''),
+                        score=result.score  # Inherit score from matched rule
+                    ))
+        
+        # Add the matched rule itself
+        family.append(result)
+        
+        # Add children (level 5 if we're at level 4, nothing if we're at level 5)
+        if self.get_rule_depth(result.rule_id) == 4:
+            children = self.get_children_rules(result.rule_id)
+            for child_id in children:
+                child_rule = self.get_rule_by_id(child_id)
+                if child_rule:
+                    family.append(SearchResult(
+                        rule_id=child_rule['rule_id'],
+                        text=child_rule['text'],
+                        section=child_rule.get('section', ''),
+                        subsection=child_rule.get('subsection', ''),
+                        document=child_rule.get('document', ''),
+                        weapon_type=child_rule.get('weapon_type', ''),
+                        variant=child_rule.get('variant', ''),
+                        score=result.score  # Inherit score
+                    ))
+        
+        return family
     
     def _extract_terms(self, query: str) -> List[str]:
-        """Extract search terms"""
+        """Extract meaningful search terms from query.
+        
+        Filters out Hungarian and English stop words and short terms.
+        
+        Args:
+            query: Search query string
+            
+        Returns:
+            List of extracted terms (> 2 chars, excluding stop words)
+        """
         stop_words = {'a', 'az', 'és', 'vagy', 'de', 'ha', 'hogy', 'mi', 'van', 'volt',
                      'the', 'a', 'an', 'and', 'or', 'but', 'if', 'is'}
         terms = re.findall(r'\w+', query)
@@ -300,61 +354,70 @@ class AliasAwareSearch:
 
         # Direct rule ID match (highest priority)
         if rule_id_lower in query:
-            score += 100.0
+            score += search_config.SCORE_RULE_ID_MATCH
 
         # Exact phrase in text
         if query_norm and query_norm in text_norm:
-            score += 50.0
+            score += search_config.SCORE_EXACT_PHRASE_TEXT
 
         # Exact phrase in section
         if query_norm and (query_norm in section_norm or query_norm in subsection_norm):
-            score += 30.0
+            score += search_config.SCORE_EXACT_PHRASE_SECTION
 
         # Term frequency in text
         for term in terms:
             count_in_text = text_norm.count(term)
-            score += count_in_text * 10.0
+            score += count_in_text * search_config.SCORE_TERM_FREQUENCY
 
             if term in section_norm or term in subsection_norm:
-                score += 5.0
+                score += search_config.SCORE_TERM_SECTION
 
         # Check concept terms (from alias expansion)
         if concept_terms:
             for concept_term in concept_terms:
                 if self._normalize_text(concept_term) in text_norm:
-                    score += 15.0
+                    score += search_config.SCORE_CONCEPT_TERM
 
         # Check variant aliases (legacy scoring for non-expanded queries)
         if rule.get('variant'):
             for alias in rule.get('variant_aliases', []):
                 if alias in query:
-                    score += 40.0
+                    score += search_config.SCORE_VARIANT_ALIAS
 
         # Check weapon aliases (legacy scoring for non-expanded queries)
         for alias in rule.get('weapon_aliases', []):
             if alias in query:
-                score += 20.0
+                score += search_config.SCORE_WEAPON_ALIAS
 
         # Apply length penalty for very long rules (e.g., large tables)
-        # Rules >2000 chars get progressively lower scores to push them down rankings
+        # Rules > threshold chars get progressively lower scores to push them down rankings
         text_length = len(rule['text'])
-        if text_length > 2000:
-            # Exponential penalty: 2000 chars = 1.5x, 4000 = 3x, 8000 = 9x
-            length_penalty = (text_length / 2000.0) ** 1.5
+        if text_length > search_config.LENGTH_PENALTY_THRESHOLD:
+            # Exponential penalty: threshold chars = 1.5x, etc.
+            length_penalty = (text_length / float(search_config.LENGTH_PENALTY_THRESHOLD)) ** search_config.LENGTH_PENALTY_EXP
             score = score / length_penalty
 
         return score
 
-    def _get_rule_depth(self, rule_id: str) -> int:
-        """Get depth of rule from its ID (delegated to search_utils)"""
+    def get_rule_depth(self, rule_id: str) -> int:
+        """Get depth of rule from its ID.
+        
+        Examples:
+            GEN-6.7.4.2 -> depth 4
+            LS-AB-1.2.10.2 -> depth 4
+        """
         return get_rule_depth(rule_id)
     
-    def _get_rule_lineage(self, rule_id: str) -> List[str]:
-        """Get list of parent rule IDs (delegated to search_utils)"""
+    def get_rule_lineage(self, rule_id: str) -> List[str]:
+        """Get list of parent rule IDs for a given rule.
+        
+        Examples:
+            GEN-6.7.4.2 -> ["GEN", "GEN-6", "GEN-6.7", "GEN-6.7.4"]
+        """
         return get_rule_lineage(rule_id)
     
-    def _get_children_rules(self, rule_id: str) -> List[str]:
-        """Get direct child rule IDs (delegated to search_utils)"""
+    def get_children_rules(self, rule_id: str) -> List[str]:
+        """Get direct child rule IDs for a given rule."""
         return get_children_rules(rule_id, self.rules)
     
     def get_rule_by_id(self, rule_id: str) -> Optional[Dict[str, Any]]:
@@ -391,7 +454,7 @@ def format_result(result: SearchResult) -> str:
 
 def main() -> None:
     """Interactive search CLI"""
-    current_dir = Path(__file__).parent
+    current_dir = Path(__file__).parent.parent / "data"
     index_path = current_dir / "rules_index.json"
     aliases_path = current_dir / "aliases.json"
     

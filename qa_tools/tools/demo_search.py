@@ -1,11 +1,11 @@
 """
 Quick demo of the HEMA rulebook search
-Usage: python qa-tools\demo_search.py "your query here"
+Usage: python qa-tools\tools\demo_search.py "your query here"
 """
 
 import sys
 from pathlib import Path
-from search import RulebookSearch, format_result
+from qa_tools.search_engine.search import RulebookSearch, format_result
 
 def main():
     if len(sys.argv) < 2:

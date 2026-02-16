@@ -3,7 +3,7 @@ Unit tests for RulebookParser class
 """
 
 import pytest
-from parser import RulebookParser
+from qa_tools.tools.parser import RulebookParser
 
 
 class TestRulebookParser:
@@ -85,14 +85,7 @@ class TestRulebookParser:
         detected = parser._detect_variant_in_rule_text(text)
         assert detected == ""
     
-    def test_variant_to_subrule_index(self):
-        """Test variant to subrule index mapping"""
-        parser = RulebookParser(".")
-        
-        assert parser._variant_to_subrule_index("VOR") == "1"
-        assert parser._variant_to_subrule_index("COMBAT") == "2"
-        assert parser._variant_to_subrule_index("AFTERBLOW") == "3"
-        assert parser._variant_to_subrule_index("UNKNOWN") == "0"
+    # Note: test_variant_to_subrule_index removed - method was dead code and has been deleted
     
     def test_rule_id_pattern(self):
         """Test rule ID pattern matching"""

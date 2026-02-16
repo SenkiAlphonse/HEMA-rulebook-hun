@@ -44,7 +44,8 @@ def check_index():
     print("=" * 60)
     
     try:
-        with open("qa-tools/rules_index.json", "r", encoding="utf-8") as f:
+        from app.config import get_rules_index_path
+        with open(str(get_rules_index_path()), "r", encoding="utf-8") as f:
             data = json.load(f)
         
         rules = data.get("rules", data) if isinstance(data, dict) else data
@@ -79,7 +80,8 @@ def check_aliases():
     print("=" * 60)
     
     try:
-        with open("qa-tools/aliases.json", "r", encoding="utf-8") as f:
+        from app.config import get_aliases_path
+        with open(str(get_aliases_path()), "r", encoding="utf-8") as f:
             aliases = json.load(f)
         
         if "variants" in aliases:
@@ -109,11 +111,11 @@ def test_search():
     print("=" * 60)
     
     try:
-        # Add qa-tools to path
-        sys.path.insert(0, str(Path("qa-tools").absolute()))
-        from search_aliases import AliasAwareSearch
+        # Import from qa_tools package (already in Python path)
+        from qa_tools.search_engine.search_aliases import AliasAwareSearch
+        from app.config import get_rules_index_path, get_aliases_path
         
-        search = AliasAwareSearch("qa-tools/rules_index.json", "qa-tools/aliases.json")
+        search = AliasAwareSearch(str(get_rules_index_path()), str(get_aliases_path()))
         
         test_queries = [
             ("longsword strike", None, None),

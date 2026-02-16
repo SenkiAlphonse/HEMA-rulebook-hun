@@ -2,16 +2,13 @@
 Pytest configuration and shared fixtures
 """
 
-import sys
 import json
 import pytest
 from pathlib import Path
 from typing import Dict, List, Any
 
-# Add project root and qa-tools to path
+# Project root for relative imports (already in PYTHONPATH via pytest.ini)
 project_root = Path(__file__).parent.parent
-sys.path.insert(0, str(project_root))
-sys.path.insert(0, str(project_root / 'qa-tools'))
 
 
 @pytest.fixture
@@ -132,7 +129,7 @@ def sample_rules_index(tmp_path, sample_rules) -> Path:
 @pytest.fixture
 def search_engine(sample_rules_index):
     """Create RulebookSearch instance for testing"""
-    from search import RulebookSearch
+    from qa_tools.search_engine.search import RulebookSearch
     return RulebookSearch(str(sample_rules_index))
 
 

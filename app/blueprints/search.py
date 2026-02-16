@@ -75,12 +75,12 @@ def api_search() -> Any:
         current_group = None
         
         for r in results:
-            depth = current_app.search_engine._get_rule_depth(r.rule_id)
+            depth = current_app.search_engine.get_rule_depth(r.rule_id)
             
             # Determine group root for hierarchy visualization
             if depth >= 4:
                 # For level 4-5 rules, find the main parent (depth 2)
-                lineage = current_app.search_engine._get_rule_lineage(r.rule_id)
+                lineage = current_app.search_engine.get_rule_lineage(r.rule_id)
                 # Take the second element if it exists (first is the prefix like "GEN")
                 current_group = lineage[1] if len(lineage) > 1 else r.rule_id
             else:

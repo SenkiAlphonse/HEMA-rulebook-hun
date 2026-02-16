@@ -4,7 +4,7 @@ Update existing index with aliases
 import json
 from pathlib import Path
 
-current_dir = Path(__file__).parent
+current_dir = Path(__file__).parent.parent / "data"
 
 # Load aliases
 with open(current_dir / 'aliases.json', 'r', encoding='utf-8') as f:

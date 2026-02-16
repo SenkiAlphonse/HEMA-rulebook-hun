@@ -1,5 +1,7 @@
 # Search Engine Documentation
 
+**⚠️ DEPRECATION NOTICE**: This document describes an older algorithm architecture using threshold-based filtering. The current implementation uses `AliasAwareSearch` with direct scoring and keyword matching. For current API documentation, see [API.md](./API.md). For current implementation details, see source code at `qa_tools/search_engine/search_aliases.py`.
+
 Technical deep-dive into the AliasAwareSearch algorithm, implementation, scoring formula, and optimization strategies.
 
 ---

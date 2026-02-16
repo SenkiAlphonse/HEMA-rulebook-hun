@@ -90,7 +90,7 @@ User Browser (HTTP POST)
         ↓
 /api/search endpoint
         ↓
-Input Validation (query length, language, threshold)
+Input Validation (query length, max_results, variant_filter, weapon_filter)
         ↓
 Query Preprocessing (lowercase, tokenize, split by language)
         ↓
@@ -148,22 +148,22 @@ User Browser (Display Results)
 
 ```
 Request: POST /api/search
-Body: {"query": "longsword target", "language": "auto", "limit": 10}
+Body: {"query": "longsword target", "max_results": 10, "variant_filter": null}
 
 ┌─ Step 1: Request Parsing
 │  ├─ Extract JSON body
 │  ├─ Validate required fields (query)
-│  └─ Set defaults (language=auto, limit=10, threshold=0.5)
+│  └─ Set defaults (max_results=10, variant_filter=null, weapon_filter=null)
 │
 ├─ Step 2: Input Validation
 │  ├─ Check query length (3-500 chars)
-│  ├─ Check language is valid (hu, en, auto)
-│  ├─ Check limit (1-50)
-│  └─ Check threshold (0.0-1.0)
+│  ├─ Check max_results is valid (1-100)
+│  ├─ Check variant_filter is valid (VOR, COMBAT, AFTERBLOW, or null)
+│  ├─ Check weapon_filter is valid (longsword, rapier, armored, or null)
 │  └─ Return 400 error if validation fails
 │
 ├─ Step 3: Query Preprocessing
-│  ├─ Detect language (if auto)
+│  ├─ Detect language (auto-detection for Hungarian characters)
 │  │  ├─ Scan query for Hungarian characters (á, é, ő, etc.)
 │  │  ├─ If found → Hungarian, else → English
 │  ├─ Lowercase query (for case-insensitive matching)
@@ -187,16 +187,18 @@ Body: {"query": "longsword target", "language": "auto", "limit": 10}
 │  │  │  ├─ If match → score = 0.7
 │  │  │  └─ Add to results
 │  │  ├─ Check for fuzzy matches (typo tolerance)
-│  │  │  ├─ If Levenshtein distance < threshold
+│  │  │  ├─ If Levenshtein distance < 0.8
 │  │  │  │  └─ score = 0.3 + (1 - distance) * 0.2
 │  │  │  └─ Add to results
 │  │  └─ Continue for next rule
 │  ├─ De-duplicate results (keep highest score)
-│  └─ Filter results by threshold (>= 0.5)
+│  └─ Filter by minimum relevance (score >= 0.3)
 │
-├─ Step 6: Sorting & Limiting
+├─ Step 6: Apply Filters & Sorting
+│  ├─ Apply variant_filter if specified (VOR, COMBAT, AFTERBLOW)
+│  ├─ Apply weapon_filter if specified (longsword, rapier, armored)
 │  ├─ Sort by score descending
-│  ├─ Keep top 10 results (limit parameter)
+│  ├─ Keep top N results (max_results parameter, default 10)
 │  └─ Generate response object
 │
 ├─ Step 7: Response Formatting
@@ -390,12 +392,13 @@ class AliasAwareSearch:
         self.aliases = aliases_data  # {term → aliases list}
         self.inverted_index = {}  # {word → [rule_id, ...]}
     
-    def search_rules(query, threshold=0.5):
+    def search_rules(query, max_results=10, variant_filter=None, weapon_filter=None):
         # 1. Exact match check (O(1))
         # 2. Partial match check (O(n))
         # 3. Fuzzy match check (O(n*m))
         # 4. Multi-factor scoring
-        # 5. Sort and return
+        # 5. Filter by variant/weapon if specified
+        # 6. Sort and return top N results
     
     def get_rule_by_id(rule_id):
         return self.rules.get(rule_id)

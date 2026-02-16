@@ -61,13 +61,16 @@ A Flask-based Q&A system that indexes the HEMA rulebook (Hungarian martial arts 
 
 ### Supplementary Documentation
 
-- **GETTING_STARTED.md** - Initial project overview (legacy, see DEVELOPMENT.md for current setup)
+- **PHASE2_IMPROVEMENTS.md** - Code quality improvements summary (Phase 2A-2D)
+- **GETTING_STARTED.md** - [ARCHIVED, see DEVELOPMENT.md for current setup]
 - **PROJECT_SUMMARY.md** - High-level feature list (being replaced by INDEX.md)
 - **TESTING.md** - Test execution and coverage details
 - **DEPLOYMENT.md** - Render/GitHub Actions configuration
 - **ALIASES_IMPLEMENTATION.md** - Alias system technical details
 - **INTERFACES_PREVIEW.md** - UI mockups and interface design
 
+### Archived Documentation
+- **../legacy_docs/GETTING_STARTED.md** - Deprecated setup guide (superseded by DEVELOPMENT.md)
 ---
 
 ## Quick Start

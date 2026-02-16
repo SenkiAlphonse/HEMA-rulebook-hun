@@ -14,8 +14,8 @@ def get_project_root() -> Path:
     return PROJECT_ROOT
 
 def get_qa_tools_dir() -> Path:
-    """Get qa-tools directory path"""
-    return PROJECT_ROOT / "qa-tools"
+    """Get qa_tools directory path"""
+    return PROJECT_ROOT / "qa_tools"
 
 def get_templates_dir() -> Path:
     """Get templates directory path"""
@@ -31,11 +31,11 @@ def get_rulebook_dir() -> Path:
 
 def get_rules_index_path() -> Path:
     """Get path to rules_index.json"""
-    return get_qa_tools_dir() / "rules_index.json"
+    return get_qa_tools_dir() / "data" / "rules_index.json"
 
 def get_aliases_path() -> Path:
     """Get path to aliases.json"""
-    return get_qa_tools_dir() / "aliases.json"
+    return get_qa_tools_dir() / "data" / "aliases.json"
 
 def get_rulebook_markdown_files() -> List[Path]:
     """Get all numbered markdown rulebook files from root directory"""
@@ -50,3 +50,10 @@ def get_rulebook_markdown_files() -> List[Path]:
 def get_prerendered_rulebook_path() -> Path:
     """Get path to pre-rendered rulebook HTML"""
     return get_dist_dir() / "rulebook.html"
+
+
+# AI/Gemini Configuration Constants
+GEMINI_MODEL_CANDIDATES = ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
+SUMMARY_CHUNK_SIZE = 6000  # Character limit for content chunks
+SUMMARY_MAX_RETRIES = 2  # Maximum retry attempts for API calls
+

@@ -3,28 +3,33 @@ HEMA Rulebook Search Web App - Flask Application Factory
 """
 
 import os
-import sys
 import logging
 from pathlib import Path
 from flask import Flask
+from typing import Dict
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-# Add qa-tools to path for imports
-from app.config import get_qa_tools_dir, get_templates_dir, get_rules_index_path, get_aliases_path
-qa_dir = get_qa_tools_dir()
-sys.path.insert(0, str(qa_dir))
+# Import configuration paths
+from app.config import get_templates_dir, get_rules_index_path, get_aliases_path
 
 
-def create_app():
-    """Create and configure the Flask application"""
+def create_app() -> Flask:
+    """Create and configure the Flask application.
+    
+    Returns:
+        Flask: Configured Flask application instance
+        
+    Raises:
+        RuntimeError: If search engine files are not found or initialization fails
+    """
     app = Flask(__name__, template_folder=str(get_templates_dir()))
     
     # Load search engine (shared across blueprints) with error handling
     try:
-        from search_aliases import AliasAwareSearch
+        from qa_tools.search_engine import AliasAwareSearch
         app.search_engine = AliasAwareSearch(
             str(get_rules_index_path()),
             str(get_aliases_path())
@@ -52,8 +57,8 @@ def create_app():
     app.config['GEMINI_API_KEY'] = os.environ.get("GEMINI_API_KEY", "").strip()
     app.config['GEMINI_MODEL'] = os.environ.get("GEMINI_MODEL", "").strip()
     
-    # Rate limiting state
-    app.summary_requests = {}
+    # Rate limiting state - type hint for mypy
+    app.summary_requests: Dict[str, int] = {}
     
     # Register blueprints
     from app.blueprints.search import search_bp

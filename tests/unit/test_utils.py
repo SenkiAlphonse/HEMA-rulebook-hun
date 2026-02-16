@@ -8,7 +8,7 @@ from app.utils import (
     preprocess_rulebook_markdown,
     build_document_order
 )
-from search_utils import get_rule_depth
+from qa_tools.search_engine.search_utils import get_rule_depth
 
 
 class TestNormalizeFilter:

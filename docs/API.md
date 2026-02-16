@@ -28,9 +28,9 @@ Search for rules using natural language queries with automatic alias resolution.
 ```json
 {
   "query": "longsword target areas",
-  "language": "en",
-  "limit": 10,
-  "threshold": 0.5
+  "max_results": 10,
+  "variant_filter": null,
+  "weapon_filter": null
 }
 ```
 
@@ -38,9 +38,9 @@ Search for rules using natural language queries with automatic alias resolution.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `query` | string | ✓ | — | Search query (Hungarian or English) |
-| `language` | string | ✗ | "auto" | Force language: "hu", "en", or "auto" |
-| `limit` | integer | ✗ | 10 | Max results to return (1-50) |
-| `threshold` | float | ✗ | 0.5 | Relevance threshold (0.0-1.0) |
+| `max_results` | integer | ✗ | 10 | Max results to return (1-100) |
+| `variant_filter` | string | ✗ | null | Filter by variant: "VOR", "COMBAT", "AFTERBLOW" |
+| `weapon_filter` | string | ✗ | null | Filter by weapon type: "longsword", "rapier", "armored" |
 
 **Response (200 OK):**
 ```json
@@ -103,14 +103,14 @@ curl -X POST http://localhost:5000/api/search \
 ```bash
 curl -X POST http://localhost:5000/api/search \
   -H "Content-Type: application/json" \
-  -d '{"query":"longsword rules","limit":5}'
+  -d '{"query":"longsword rules","max_results":5}'
 ```
 
-*Low threshold for more results:*
+*Filter for specific variant:*
 ```bash
 curl -X POST http://localhost:5000/api/search \
   -H "Content-Type: application/json" \
-  -d '{"query":"target","threshold":0.3,"limit":20}'
+  -d '{"query":"target areas","variant_filter":"VOR","max_results":20}'
 ```
 
 ---
@@ -562,7 +562,8 @@ All error responses follow this format:
 |-------|-------|----------|
 | "Query too short" | Query < 3 characters | Provide longer, more specific query |
 | "Query too long" | Query > 500 characters | Break into multiple queries |
-| "Invalid threshold" | Threshold outside 0.0-1.0 | Use value between 0.0 and 1.0 |
+| "Invalid max_results" | max_results outside 1-100 | Use value between 1 and 100 |
+| "Invalid variant_filter" | Unknown variant specified | Use "VOR", "COMBAT", "AFTERBLOW", or null |
 | "Rate limit exceeded" | Too many requests | Wait 1 minute before retrying |
 | "Search index not initialized" | System startup issue | Retry after 30 seconds |
 | "Rule not found" | Invalid rule ID | Check rule ID format (e.g., "GEN-1.2.3") |
@@ -621,7 +622,7 @@ curl -X POST http://localhost:5000/api/search \
 ```bash
 # Judge asks: "What's the ruling on striking the back of the head?"
 curl -X POST http://localhost:5000/api/search \
-  -d '{"query":"back of head strike","threshold":0.7}'
+  -d '{"query":"back of head strike","max_results":10}'
 
 # Response includes applicable target area rules
 ```

@@ -3,13 +3,22 @@ AI services blueprint - handles Gemini-powered summarization
 """
 
 import time
+import logging
 from flask import Blueprint, request, jsonify, current_app
+from app.config import GEMINI_MODEL_CANDIDATES
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 ai_bp = Blueprint('ai', __name__, url_prefix='/api')
 
 try:
     import google.generativeai as genai
-except Exception:
+except ImportError:
+    logger.warning("google-generativeai module not available - AI features disabled")
+    genai = None
+except Exception as e:
+    logger.error(f"Unexpected error importing google-generativeai: {e}")
     genai = None
 
 
@@ -25,12 +34,18 @@ def get_gemini_model():
     model_name = current_app.config['GEMINI_MODEL']
     
     if model_name:
-        return genai.GenerativeModel(model_name)
-
-    for candidate in ["gemini-2.5-flash", "gemini-2.5-flash-lite"]:
         try:
+            return genai.GenerativeModel(model_name)
+        except Exception as e:
+            logger.error(f"Failed to initialize Gemini model '{model_name}': {e}")
+            raise
+
+    for candidate in GEMINI_MODEL_CANDIDATES:
+        try:
+            logger.debug(f"Attempting to initialize model: {candidate}")
             return genai.GenerativeModel(candidate)
-        except Exception:
+        except Exception as e:
+            logger.debug(f"Model {candidate} not available: {e}")
             continue
 
     raise RuntimeError("No available Gemini model found. Set GEMINI_MODEL explicitly.")
@@ -250,5 +265,9 @@ def api_summarize():
             "language": language,
             "summary": summary
         })
+    except ValueError as e:
+        logger.warning(f"Invalid summary request parameters: {e}")
+        return jsonify({"error": "Invalid request parameters"}), 400
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        logger.exception(f"Summary error: {type(e).__name__}")
+        return jsonify({"error": "Failed to generate summary"}), 500

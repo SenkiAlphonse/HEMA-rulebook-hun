@@ -3,7 +3,6 @@ HEMA Rulebook Parser
 Extracts structured rule data from markdown files
 """
 
-import os
 import re
 import json
 from pathlib import Path
@@ -258,51 +257,9 @@ class RulebookParser:
         Extract variant-specific sub-rules from text containing Vor/Combat/Afterblow sections.
         Returns a list of extracted sub-rules, or empty list if no variants found.
         """
-        # Pattern to detect variant headers: **Vor**:, **Combat**:, **Afterblow**:
-        variant_pattern = re.compile(r'\*\*(Vor|Combat|Afterblow)\*\*:?s*(.+?)(?=\*\*(?:Vor|Combat|Afterblow)\*\*|$)', 
-                                    re.IGNORECASE | re.DOTALL)
-        
-        matches = list(variant_pattern.finditer(text))
-        
-        # Only proceed if we find multiple variants (indicating variant-split content)
-        if len(matches) < 2:
-            return []
-        
-        extracted_rules = []
-        
-        for match in matches:
-            variant_name = match.group(1).upper()
-            variant_text = match.group(2).strip()
-            
-            if not variant_text:
-                continue
-            
-            # Create a sub-rule ID for this variant (e.g., GEN-6.10.4.1 for Vor)
-            variant_subrule_id = f"{parent_rule_id}.{self._variant_to_subrule_index(variant_name)}"
-            
-            rule = Rule(
-                rule_id=variant_subrule_id,
-                text=f"**{variant_name}**: {variant_text}",
-                section=section,
-                subsection=subsection,
-                document=document,
-                anchor_id=anchor,
-                line_number=line_num,
-                weapon_type=weapon_type,
-                variant=variant_name
-            )
-            extracted_rules.append(rule)
-        
-        return extracted_rules
     
     def _variant_to_subrule_index(self, variant: str) -> str:
         """Map variant name to subrule index (1=Vor, 2=Combat, 3=Afterblow)"""
-        mapping = {
-            "VOR": "1",
-            "COMBAT": "2", 
-            "AFTERBLOW": "3"
-        }
-        return mapping.get(variant.upper(), "0")
     
     def _extract_weapon_info(self, filename: str) -> tuple:  # tuple[str, str]
         """Extract weapon type and variant from filename"""
@@ -381,49 +338,19 @@ class RulebookParser:
                 rule.sibling_ids = []
     
     def _get_rule_depth(self, rule_id: str) -> int:
-        """Calculate nesting depth from rule ID"""
-        if not rule_id or '-' not in rule_id:
-            return 0
-        parts = rule_id.split('-')
-        numeric_part = parts[-1]
-        return numeric_part.count('.') + 1
+        """Calculate nesting depth from rule ID (delegates to shared utils)"""
+        from qa_tools.search_engine.search_utils import get_rule_depth
+        return get_rule_depth(rule_id)
     
     def _get_parent_id(self, rule_id: str) -> str:
         """Get direct parent rule ID from a given rule"""
-        if not rule_id or '-' not in rule_id:
-            return ""
-        
-        parts = rule_id.split('-')
-        prefix = '-'.join(parts[:-1])
-        numeric = parts[-1]
-        numeric_parts = numeric.split('.')
-        
-        # If no dots, parent is just the prefix (e.g., "GEN-1" -> "GEN")
-        if len(numeric_parts) == 1:
-            return prefix
-        
-        # Otherwise, parent is prefix + all but last numeric part
-        parent_numeric = '.'.join(numeric_parts[:-1])
-        return f"{prefix}-{parent_numeric}"
+        lineage = self._get_rule_lineage(rule_id)
+        return lineage[-1] if lineage else ""
     
     def _get_rule_lineage(self, rule_id: str) -> list:
-        """Get list of parent rule IDs (path from root to parent, excluding rule itself)"""
-        if not rule_id or '-' not in rule_id:
-            return []
-        
-        parts = rule_id.split('-')
-        prefix = '-'.join(parts[:-1])
-        numeric = parts[-1]
-        numeric_parts = numeric.split('.')
-        
-        lineage = [prefix]  # Start with prefix (e.g., "GEN")
-        
-        # Build up hierarchy: GEN-1, GEN-1.2, GEN-1.2.3, etc. (all except self)
-        for i in range(len(numeric_parts) - 1):
-            parent_numeric = '.'.join(numeric_parts[:i+1])
-            lineage.append(f"{prefix}-{parent_numeric}")
-        
-        return lineage
+        """Get list of parent rule IDs (delegates to shared utils)"""
+        from qa_tools.search_engine.search_utils import get_rule_lineage
+        return get_rule_lineage(rule_id)
     
     def save_index(self, output_path: Path) -> None:
         """Save parsed rules to JSON index"""

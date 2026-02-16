@@ -172,13 +172,10 @@ Follow **PEP 8** with these preferences:
 **1. Naming**
 ```python
 # Functions and variables: snake_case
-def search_rules(query):
-    rule_count = 0
-    return rule_count
-
 # Constants: UPPER_SNAKE_CASE
 MAX_QUERY_LENGTH = 500
-DEFAULT_THRESHOLD = 0.5
+MAX_RESULTS = 100
+MIN_RELEVANCE_SCORE = 0.3
 
 # Classes: PascalCase
 class AliasAwareSearch:
@@ -191,15 +188,17 @@ from typing import List, Dict, Any, Optional, Tuple
 
 def search_rules(
     query: str,
-    threshold: float = 0.5,
-    limit: int = 10
+    max_results: int = 10,
+    variant_filter: Optional[str] = None,
+    weapon_filter: Optional[str] = None
 ) -> List[Dict[str, Any]]:
     """Search rulebook for matching rules.
     
     Args:
         query: Search query (3-500 chars)
-        threshold: Relevance threshold (0.0-1.0)
-        limit: Max results (1-50)
+        max_results: Max results to return (1-100)
+        variant_filter: Filter by variant (VOR, COMBAT, AFTERBLOW, or None)
+        weapon_filter: Filter by weapon (longsword, rapier, armored, or None)
     
     Returns:
         List of matching rule dicts, sorted by score
@@ -584,7 +583,7 @@ def search_rules(query):
 **Scenario 1: Search returning wrong results**
 ```python
 # Add debug prints
-def search_rules(query):
+def search_rules(query, max_results=10):
     print(f"Query: {query}")  # What are we searching for?
     
     results = []
@@ -592,11 +591,14 @@ def search_rules(query):
         print(f"Checking rule {rule['rule_id']}")
         score = calculate_score(query, rule)
         print(f"  Score: {score}")
-        if score >= threshold:
-            results.append(rule)
+        if score >= 0.3:  # Minimum relevance threshold
+            results.append((score, rule))
     
-    print(f"Final results: {len(results)}")
-    return results
+    # Sort by score descending and limit results
+    results.sort(key=lambda x: x[0], reverse=True)
+    final_results = [r[1] for r in results[:max_results]]
+    print(f"Final results: {len(final_results)}")
+    return final_results
 ```
 
 **Scenario 2: API endpoint returning 500 error**
@@ -608,7 +610,7 @@ def search():
         query = data.get('query', '')
         print(f"Received query: {query}")  # Debug
         
-        results = search_engine.search_rules(query)
+        results = search_engine.search(query, max_results=10)
         print(f"Search returned: {len(results)}")  # Debug
         
         return jsonify({"success": True, "results": results})
