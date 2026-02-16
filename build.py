@@ -24,7 +24,7 @@ def build_search_index():
     try:
         logger.info("Building search index...")
         result = subprocess.run(
-            [sys.executable, "qa-tools/parser.py"],
+            [sys.executable, "qa_tools/tools/parser.py"],
             cwd=get_project_root(),
             capture_output=True,
             text=True,

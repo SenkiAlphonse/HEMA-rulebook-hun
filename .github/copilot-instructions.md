@@ -1,113 +1,233 @@
-# AI Coding Instructions for HEMA Rulebook Project
+# AI Coding Instructions for HEMA Rulebook RAG Assistant
 
 ## Project Overview
 
-This is a **Hungarian Historical European Martial Arts (HEMA) rulebook repository** for the "Kard Rendje" (Order of the Sword) competition ruleset. The goal is to create an **AI-assisted Q&A solution** that indexes and queries rulebook markdown files to help fencers, judges, and organizers find relevant rules quickly using natural language.
+This is a **Hungarian Historical European Martial Arts (HEMA) rulebook
+repository** for the magyar Hosszúkardvívó Sportszövetség competition Ruleset.
 
-### Current Project Structure
+The long-term goal is to build an **AI-assisted Retrieval-Augmented
+Generation (RAG) system** that supports:
 
-- **Main rulebook chapters** (8 numbered markdown files):
-  - `01-bevezetes.md` - Introduction
-  - `02-felszereles.md` - Equipment and gear requirements
-  - `03-altalanos.md` - General rules applying to all weapons
-  - `04-hosszukard.md` - Longsword general rules
-  - `04.a-hosszukard-VOR.md` - Longsword VOR (Vorbeigehen) variant
-  - `04.b-hosszukard-COMBAT.md` - Longsword COMBAT variant
-  - `04.c-hosszukard-AFTERBLOW.md` - Longsword AFTERBLOW variant
-  - `07-szervezes-biraskodas.md` - Organization and refereeing
-  - `08-etikett_fegyelem.md` - Etiquette and discipline
+-   **Fencers** looking up rules quickly in natural language\
+-   **Referees** handling unclear or stressful situations consistently\
+-   **Organizers** clarifying disciplinary procedures and edge cases\
+-   Future: **basic tactical/coaching guidance**, when safely possible
 
-- **Appendices** (`fuggelek/`):
-  - `01-szojegyzek.md` - Glossary of terms
-  - `02-elsobbseg.md` - Convention priority rules explanation
+This is not just a keyword search tool --- it is intended to become a
+**rule-grounded advisor**:
 
-- **Metadata**: README.md contains the complete index/navigation structure
+> Retrieve the relevant rule passages first, then generate a helpful
+> answer strictly supported by those sources.
 
-## Key Content Patterns
+The assistant must remain **faithful to the rulebook**, avoid
+hallucinating penalties, and always cite rule IDs.
 
-### Rule Numbering System
-Rules follow a hierarchical numbering scheme using hyphens (e.g., `GEN-1.1.1`, `GEN-1.2.3`):
-- First part (e.g., `GEN`) = section code
-- Numbers = hierarchical level (1 = main section, 1.1 = subsection, 1.1.1 = rule)
-- Anchor IDs use `<span id="...">` HTML tags for cross-referencing
+------------------------------------------------------------------------
 
-**Example from 03-altalanos.md:**
-```markdown
-# Vívásra általánosan érvényes szabályok
-<span id="GEN"></span>
+## Core Vision: RAG-Based Rules Advisor
 
-## A mérkőzések menete
-<span id="GEN-1"></span>
+The system follows a **Retrieval-Augmented Generation (RAG)**
+architecture:
 
-**GEN-1.1.1**  
-Rule text explaining meeting structure...
-```
+1.  User asks a question in natural language (Hungarian first)
+2.  The system retrieves the most relevant rule chunks (plus parent
+    context)
+3.  The AI generates an answer **only using retrieved sources**
+4.  The answer includes citations by `rule_id`
+5.  If the rulebook does not contain enough information, the assistant
+    must say so and ask clarifying questions
 
-### Content Structure
-1. **Headings** (#, ##, ###) define logical sections
-2. **Bold rule IDs** (e.g., `**GEN-1.1.1**`) precede rule statements
-3. **Images** embedded via GitHub markdown for visual rules (target areas, positions)
-4. **Cross-references** use explicit mentions or anchor IDs for lookup
-5. **Lists** (numbered and bulleted) explain multi-part rules
+This ensures:
 
-## Q&A Solution Design Considerations
+-   Accuracy and trust
+-   No invented rules or sanctions
+-   Maintainability as rules evolve
 
-### What Makes Rules Queryable
-- **Hierarchical structure**: Q&A system should preserve section/subsection relationships
-- **Anchor IDs**: Use these for precise cross-references in answers
-- **Hungarian terminology**: Include both Hungarian rule ID (e.g., "GEN-1.1.1") and descriptions
-- **Variants**: Same base rule may differ between weapon types (longsword VOR vs COMBAT) or equipment rules
+------------------------------------------------------------------------
 
-### Critical Integration Points
-1. **Glossary lookup** (`fuggelek/01-szojegyzek.md`): Q&A must resolve Hungarian HEMA terms
-2. **Priority rules** (`fuggelek/02-elsobbseg.md`): Explains hierarchy for ambiguous situations
-3. **Penalty tables** (PDF format): Referenced for enforcement - may need OCR for full Q&A capability
-4. **Equipment rules** (02-felszereles.md): Prerequisite for understanding valid vs invalid techniques
+## Ultimate Use Cases
 
-### Domain-Specific Challenges
-- **Language**: All content in Hungarian; Q&A should preserve accuracy of technical terms
-- **Multi-weapon context**: Rules in `03-altalanos.md` apply to all weapons, but specific chapters override/clarify
-- **Variant rules**: Longsword has 3 competition variants (VOR, COMBAT, AFTERBLOW) with significant differences
-- **Visual rules**: Target areas, positions, and referee signals include images—consider multimodal indexing for complete understanding
+### 1. Rule Lookup (Strict Mode)
+
+-   "Is shouting a penalty?"
+-   "What are valid target areas?"
+-   "Does afterblow apply here?"
+
+Answers must be grounded and cited.
+
+------------------------------------------------------------------------
+
+### 2. Refereeing Advisor (Nuanced Support)
+
+The assistant should eventually help referees with:
+
+-   Interpreting unclear situations
+-   Applying proportional penalties
+-   De-escalation language and soft skills
+-   Match control guidance
+
+Example:
+
+-   "Is this emotional celebration or disruptive misconduct?"
+-   "What warning ladder is appropriate?"
+
+Important:
+
+-   The assistant must distinguish **mandatory rules** vs **referee
+    discretion**
+-   It must never invent penalties not present in sources
+
+------------------------------------------------------------------------
+
+### 3. Fencer Support and Summaries
+
+The assistant may provide:
+
+-   Simple explanations of rules in plain language
+-   Summaries of key obligations
+-   "What should I know before fencing this variant?"
+
+------------------------------------------------------------------------
+
+### 4. Future Extension: Tactical/Coaching Advice (Optional)
+
+Later, the assistant may provide limited tactical guidance such as:
+
+-   Safe, general training suggestions
+-   Tactical decision frameworks
+-   Common referee expectations
+
+But tactical advice must remain:
+
+-   Clearly separated from rule authority
+-   Conservative and non-hallucinatory
+-   Never presented as official rules
+
+------------------------------------------------------------------------
+
+## Current Project Structure
+
+### Rulebook Chapters (`rules/`)
+
+-   `01-altalanos.md` --- General rules (applies universally)
+-   `02-hosszukard.md` --- Longsword base rules
+-   `02.a-hosszukard-VOR.md` --- Longsword VOR rule variant
+-   `02.b-hosszukard-COMBAT.md` --- Longsword COMBAT rule variant
+-   `02.c-hosszukard-AFTERBLOW.md` --- Longsword AFTERBLOW rule variant
+-   `03-etikett_fegyelem.md` --- Etiquette and discipline
+-   `04-szervezes.md` --- Organization and refereeing
+
+### Future Content (`fuggelek/`)
+
+Not yet indexed, but planned for expansion:
+
+-   Additional weapon rule chapters
+-   Penalty tables and disciplinary guidance
+-   Forms and documents
+
+------------------------------------------------------------------------
+
+## Rule Numbering and Structure
+
+Rules use hierarchical IDs:
+
+-   `GEN-1`
+-   `GEN-1.1`
+-   `GEN-1.1.1`
+
+Anchor IDs are stored with `<span id="...">` for precise referencing.
+
+Each rule chunk should preserve:
+
+-   `rule_id`
+-   hierarchy level and lineage
+-   parent-child relationships
+
+------------------------------------------------------------------------
+
+## Indexing and Retrieval Design
+
+### Index Requirements
+
+Each indexed rule chunk must include metadata:
+
+-   `rule_id`
+-   `text`
+-   `section` / `subsection`
+-   weapon type (`fegyvernem`)
+-   rule variant (`szabályváltozat`)
+-   anchor ID
+-   hierarchy: parent/child/lineage
+
+### Retrieval Rules
+
+-   Specific overrides general
+-   Leaf rules should include parent context when needed
+-   The assistant must cite rule IDs in every answer
+
+------------------------------------------------------------------------
+
+## Query + Answer Contract
+
+The AI assistant must obey:
+
+-   **No citation → no definitive rule claim**
+-   Only use retrieved sources
+-   Ask clarifying questions when context is missing
+-   Clearly label discretionary interpretations
+
+Recommended output format:
+
+A)  Short answer\
+B)  Relevant rule citations (`GEN-...`)\
+C)  Referee handling guidance (if applicable)\
+D)  Clarifying questions (if needed)
+
+------------------------------------------------------------------------
 
 ## Development Workflow
 
-### For Building the Q&A System
+### Phase 1 --- Parsing
 
-1. **Parsing Phase**:
-   - Extract all markdown files from root and `fuggelek/` directory
-   - Parse rule IDs (e.g., `GEN-1.1.1`) and anchor IDs
-   - Build hierarchical relationships: document → section → subsection → rule
+-   Extract markdown rules
+-   Build hierarchical rule nodes
+-   Preserve anchors and IDs
 
-2. **Indexing Phase**:
-   - Index full rule text with metadata: rule ID, section, anchor, weapon type (if applicable)
-   - Create glossary mappings for Hungarian terms (from `01-szojegyzek.md`)
-   - Flag cross-references and variant overrides
+### Phase 2 --- Indexing
 
-3. **Query Phase**:
-   - Accept natural language queries in Hungarian or English
-   - Return relevant rules with full context (section, rule ID, anchor)
-   - Rank by hierarchical relevance (specific weapon rules > general rules)
-   - Suggest related rules from glossary or cross-references
+-   Store rules in structured JSON
+-   Add alias mappings
+-   Support parent inclusion for deep rules
 
-### Testing Recommendations
-- **Sample queries**: "What are valid target areas for longsword?" → should return relevant rules from both 03-altalanos.md and 04-hosszukard.md
-- **Variant handling**: "Can you use COMBAT techniques in VOR competition?" → should return rules showing distinctions
-- **Term resolution**: "What is a 'szúrás'?" → should resolve from glossary and show usage in rules
+### Phase 3 --- RAG Answering
 
-## File References for Common Tasks
+-   Retrieve top rule passages
+-   Generate grounded responses via OpenAI API
+-   Require citations and safe fallback behavior
 
-| Task | Key Files |
-|------|-----------|
-| Add Q&A training examples | Create `docs/qa-examples.md` or extend README.md |
-| Update rule structure | Modify affected chapter + update README.md TOC |
-| Add new weapon type | Create new chapter following naming pattern `04.*-*.md` |
-| Extend Q&A system | Add parsing logic for new file types (currently markdown + PDF) |
-| Glossary expansion | Edit `fuggelek/01-szojegyzek.md` with new Hungarian terms |
+### Phase 4 --- Scenario Library (Referee "Case Law")
 
-## Notes for AI Agents
+-   Add curated examples for nuanced officiating
+-   Improve consistency for soft-skill situations
 
-- **Context is distributed**: Understanding a rule often requires reading 03-altalanos.md (general), the specific weapon chapter, and sometimes the glossary
-- **Preserve structure**: When extracting or summarizing rules, maintain rule IDs and anchor references for accuracy
-- **Hungarian accuracy**: When translating or explaining rules, verify Hungarian terms against the glossary
-- **Variant awareness**: Always note which rules apply universally vs. only to specific weapon variants
+------------------------------------------------------------------------
+
+## Notes for AI Agents (Copilot, Claude, ChatGPT)
+
+-   Rules are authoritative; the assistant is advisory
+-   Preserve IDs and hierarchy at all times
+-   Hungarian terminology must remain accurate
+-   Variant awareness is essential
+-   Referee guidance must be proportional, calm, and de-escalatory
+-   Tactical advice is optional and must never override rules
+
+------------------------------------------------------------------------
+
+## File References
+
+  Task                     File
+  ------------------------ ------------------------------
+  Rule parsing/indexing    `qa-tools/` scripts
+  Alias expansion          `qa_tools/aliases.json`
+  Add scenario exemplars   `docs/scenarios.md` (future)
+  Extend rulebook          `rules/*.md`
