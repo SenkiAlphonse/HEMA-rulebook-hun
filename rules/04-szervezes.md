@@ -12,7 +12,7 @@
 A verseny 18. (különös esetekben 16.) életévüket betöltött személyek számára nyitott.  
 
 **ORG-1.1.1**  
-Tilos a versenyen való részvétel alkohol, illetve teljesítményfokozó drogok befolyása alatt (beleértve a rekreációs és orvos által felírt készítményeket is).s  
+Tilos a versenyen való részvétel alkohol, illetve teljesítményfokozó drogok befolyása alatt (beleértve a rekreációs és orvos által felírt készítményeket is).  
 
 ## A versenyek szervezése és minősítése  
 <span id="ORG-2"></span>  

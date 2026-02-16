@@ -159,10 +159,10 @@ A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy a
 A vívók saját felelősségükre és kockázatukra fegyverkeznek és szerelkeznek fel, öltözködnek és vívnak.  
 
 **GEN-5.1.2**  
-Az MHSZ hivatalos versenyeinek helyszínén (ide értve a versenyhez kapcsolódó edzőtermeket is), a bemelegítő vagy edzést végző vívónak kötelező az MHSZ előírásainak megfelelő vívó-öltözetet és felszerelést használnia. Az iskolát adó személynek legalább az MHSZ szabályainak megfelelő mesterplasztront, kesztyűt és maszkot kell viselnie. Az iskolázó vívónak legalább maszkot és kesztyűt kell viselnie. A verseny MHSZ ellenőre vagy a <!--DT-->Szervező Team tagja sárga lappal bünteti azt a személyt, aki e szabályt nem tartja be. Ezt követően ismételt szabályszegés esetén fekete lapot kell adni.
+Az MHS hivatalos versenyeinek helyszínén (ide értve a versenyhez kapcsolódó edzőtermeket is), a bemelegítő vagy edzést végző vívónak kötelező az MHS előírásainak megfelelő vívó-öltözetet és felszerelést használnia. Az iskolát adó személynek legalább az MHS szabályainak megfelelő mesterplasztront, kesztyűt és maszkot kell viselnie. Az iskolázó vívónak legalább maszkot és kesztyűt kell viselnie. A verseny MHS ellenőre vagy a <!--DT-->Szervező Team tagja sárga lappal bünteti azt a személyt, aki e szabályt nem tartja be. Ezt követően ismételt szabályszegés esetén fekete lapot kell adni.
 
 **GEN-5.1.3**  
-A jelen szabályzatban és a mellékelt előírásokban (Lásd: felszerelés szabályzat) szereplő biztonsági intézkedések csak a vívók biztonságának megerősítését segítik elő anélkül, hogy azt kifejezetten szavatolhatnák. Ezért a felelősség – bármilyen módon alkalmazzák azokat – semmiképpen sem hárítható át az MHSZ-re, sem a versenyek szervezőire, sem a lebonyolítással megbízott hivatalos személyekre, sem pedig egy esetleges baleset okozóira.
+A jelen szabályzatban és a mellékelt előírásokban (Lásd: felszerelés szabályzat) szereplő biztonsági intézkedések csak a vívók biztonságának megerősítését segítik elő anélkül, hogy azt kifejezetten szavatolhatnák. Ezért a felelősség – bármilyen módon alkalmazzák azokat – semmiképpen sem hárítható át az MHS-re, sem a versenyek szervezőire, sem a lebonyolítással megbízott hivatalos személyekre, sem pedig egy esetleges baleset okozóira.
 
 ### Fém fegyverek esetén  
 <span id="GEN-5.2"></span>  

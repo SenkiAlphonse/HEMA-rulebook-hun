@@ -13,14 +13,14 @@
 <!-- TODO -->
 
 **DIS-1.2.1**  
-A vívóknak pontosan és becsületesen be kell tartaniuk az MHSZ versenyszabályait és alapszabályát, az adott versenyre vonatkozó külön szabályokat, az udvariasság és tisztesség hagyományos szokásait és a hivatalos személyek utasítását.  
+A vívóknak pontosan és becsületesen be kell tartaniuk az MHS versenyszabályait és alapszabályát, az adott versenyre vonatkozó külön szabályokat, az udvariasság és tisztesség hagyományos szokásait és a hivatalos személyek utasítását.  
 
 **DIS-1.2.2**  
 Kifejezetten alávetik magukat a rend, a fegyelem és a sportszerűség elveinek alapulvételével az alábbi előírásoknak. Ezek megsértése esetén, a tényállástól és a körülményektől függően az illetékes fegyelmi hatóság figyelmeztetést követően, vagy akár anélkül is az előírt büntetéseket<!-- (Vö. t.158-tól t.170-ig)--> alkalmazza.  
 
 **DIS-1.2.3**  
 
-A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHSZ Alapszabályát<!--, ide értve de nem kizárólagosan a FIE Etikai Kódexet és a Safeguarding Szabályzatot is-->. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni
+A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát<!--, ide értve de nem kizárólagosan a FIE Etikai Kódexet és a Safeguarding Szabályzatot is-->. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni
 vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. t137.1-3). Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a 4. csoportba tartozó vétséget követ el, és a [DIS-4.3.15]--[DIS-4.3.16] szakaszban foglaltak szerint büntetendő.
 Minden, a versenyen résztvevő és jelenlévő köteles fegyelmezett magatartást tanúsítani, és nem megzavarni a verseny gördülékeny lebonyolítását. A mérkőzések közben senki nem közelítheti meg a küzdőteret, hogy tanácsokat adjon a vívóknak, kritizálja a bírót vagy a segédjét, hogy sértegesse, vagy befolyásolni próbálja őket bármilyen módon. A vívó segédje köteles a számára kijelölt helyen maradni. A bíró köteles haladéktalanul leállítani minden tevékenységet, amely megzavarja az általa vezetett mérkőzést.  
 
@@ -135,13 +135,13 @@ A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműköd�
 A versenybíró javasolhat a <!--DT-nek-->szervező teamnek további megfelelőnek tartott, büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. t.139.3).  
 
 **DIS-2.1.7**  
-A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte, vagy az MHSZ ellenőr (ha nincs küldött).
+A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte, vagy az MHS ellenőr (ha nincs küldött).
 <!-- TODO -->
 
-### A <!--Directoire Technique -->Organising Team /Szervező Csapat az MHSZ<!--Nemzetközi szövetség much?--> hivatalos versenyein <!--(vö.: o.15-22)-->
+### A <!--Directoire Technique -->Organising Team /Szervező Csapat az MHS<!--Nemzetközi szövetség much?--> hivatalos versenyein <!--(vö.: o.15-22)-->
 
 **DIS-2.1.8**  
-A Szervező Team-nek, a Versenyíró Bizottság küldötteinek illetve az MHSZ ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen.  
+A Szervező Team-nek, a Versenyíró Bizottság küldötteinek illetve az MHS ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen.  
 - Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat.  
 - A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják.  
 - A DT köteles a FIE központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket.  
@@ -149,10 +149,10 @@ A Szervező Team-nek, a Versenyíró Bizottság küldötteinek illetve az MHSZ e
 <!-- (Vö. t.136). -->
 
 **DIS-2.1.9**  
-A SZT, a Versenyíró Bizottság küldötte, illetve az MHSZ ellenőr spontán módon hozott, vagy (elsőfokú hatóságként) saját jogon hozott fegyelmi döntése ellen az MHSZ Fegyelmi Bizottságához lehet fellebbezni.  
+A SZT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr spontán módon hozott, vagy (elsőfokú hatóságként) saját jogon hozott fegyelmi döntése ellen az MHS Fegyelmi Bizottságához lehet fellebbezni.  
 
 **DIS-2.1.10**  
-A SZT, a Versenyíró Bizottság küldötte, illetve az MHSZ ellenőr minden döntése azonnal végrehajtható. A verseny során semmilyen fellebbezésnek nincs halasztó hatálya a döntés végrehajtására.  
+A SZT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr minden döntése azonnal végrehajtható. A verseny során semmilyen fellebbezésnek nincs halasztó hatálya a döntés végrehajtására.  
 <!-- FIXME
 #### A Zzervező csapat és a Főbíró  
 
@@ -275,7 +275,7 @@ A végleges eltiltás következményei megegyeznek a határozott idejű eltiltá
 <!-- TODO -->  
 
 **DIS-3.4.1**  
-A Szervező csapat haladéktalanul köteles tájékoztatni az MHSZ Irodáját a versenyek alatt kiszabott büntetésekről és kiszabásuk okáról  
+A Szervező csapat haladéktalanul köteles tájékoztatni az MHS Irodáját a versenyek alatt kiszabott büntetésekről és kiszabásuk okáról  
 <!-- (Vö. t.139.4). -->  
 
 ## BÜNTETÉSEK ÉS A KISZABÁSRA JOGOSULT SZERVEK  
