@@ -30,7 +30,7 @@ jobs:
     - name: Check code compiles
       run: |
         python -m py_compile app.py build.py
-        python -m py_compile qa-tools/*.py
+        python -m py_compile qa_tools/tools/*.py
 
   build:
     runs-on: ubuntu-latest
@@ -55,5 +55,5 @@ jobs:
     
     - name: Verify build artifacts
       run: |
-        test -f qa-tools/rules_index.json
+        test -f qa_tools/data/rules_index.json
         test -f dist/rulebook.html
