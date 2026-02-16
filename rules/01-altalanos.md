@@ -209,7 +209,7 @@ Amennyiben a kabát önmagában nem ad elegendő védelmet a könyöknek és az 
 A test teljes felületét megfelelő védőruházat kell borítsa. Nem maradhat fedetlen bőrfelület a kesztyű és a kabát között sem.  
 
 **GEN-5.2.2.7**  
-hónaljvédő TODO  
+A 80N ellenállású (FIE, egyoldalas) hónaljvédő ajánlott, kötelező bevezetését tervezzük.
 
 **GEN-5.2.3**  
 #### Lábvédelem  
@@ -255,7 +255,7 @@ A keresztvasnak egyenesnek és lekerekített végűnek kell lennie. Kiegészít�
 A markolatgomb sima felületű kell legyen, és nem lehetnek rajta hegyes szegecsek, tüskék.  
 
 **GEN-5.2.5.6**  
-A penge rugalmasságát egy mérlegen végrehajtott kihajlás próbával ellenőrizzük. A penge rugalmasságának értékét a mérlegre állított és központosan nyomott penge által, a mérlegen maximálisan kijelzett kilogramm érték mutatja. A hosszúkard rugalmassága 9-18kg között kell mozogjon.
+A penge rugalmasságát egy mérlegen végrehajtott kihajlás próbával ellenőrizzük. A penge rugalmasságának értékét a mérlegre állított és központosan nyomott penge által, a mérlegen maximálisan kijelzett kilogramm érték mutatja. A hosszúkard rugalmassága 9-16kg között kell mozogjon.
   <!-- TODO -->
 
 **GEN-5.2.5.7**  
