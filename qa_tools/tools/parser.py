@@ -3,6 +3,11 @@ HEMA Rulebook Parser
 Extracts structured rule data from markdown files
 """
 
+import sys
+from pathlib import Path
+# Ensure project root is in sys.path for qa_tools imports
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
 import re
 import json
 from pathlib import Path
