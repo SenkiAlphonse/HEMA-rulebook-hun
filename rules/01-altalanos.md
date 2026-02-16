@@ -234,7 +234,7 @@ testfelület. Javasolt a derékig érő vívónadrágok használata.
 
 **GEN-5.2.4**  
 #### Fegyverek  
-Minden vívó a saját fegyveréért felelős. Azt a versenyen megfelelő állapotban, sorja és rozsdamentesen, a hegyéről minden korábbi bandázst eltávolítva kell prezentálnia. A fegyvereket a tornán erre kijelölt személyzet ellenőrzi az alábbiakban meghatározott feltételeknek megfelelően, megfelelőség esetén annak hegyét a torna erre kijelölt személyzet bebandázsolja. Az egyes pástok vezető bírói bármikor újra ellenőrizhetik a fegyvereket, azokat nagyobb sérülések esetén kitilthatják a versenyről. A vívó fegyverének kitiltása után a bíró legfeljebb 5 percnyi időt hagyhat annak cseréjére. Ha a vívó nem tud eleget tenni a fenti időkereten belül az utasításnak, akkor fekete lapot kap és ezzel kizárásra kerül a tornáról.  
+Minden vívó a saját fegyveréért felelős. Azt a versenyen megfelelő állapotban, sorja és rozsdamentesen, a hegyéről minden korábbi bandázst eltávolítva kell prezentálnia. A fegyvereket a tornán erre kijelölt személyzet ellenőrzi az alábbiakban meghatározott feltételeknek megfelelően, megfelelőség esetén annak hegyét a torna erre kijelölt személyzet bebandázsolja. Az egyes pástok vezető bírói bármikor újra ellenőrizhetik a fegyvereket, azokat nagyobb sérülések esetén kitilthatják a versenyről. A vívó fegyverének kitiltása után a bíró legfeljebb 5 percnyi időt hagyhat annak cseréjére. Ha a vívó nem tud ennek eleet tenni a fenti időkereten belül, akkor nem foytathatja a versenyzést, kizárásra kerülhet a versenyszámból.  
 
 **GEN-5.2.5**  
 #### Hosszúkard  
