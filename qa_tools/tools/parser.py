@@ -5,6 +5,9 @@ Extracts structured rule data from markdown files
 
 import sys
 from pathlib import Path
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+from app.utils.strip_markdown import strip_markdown
 # Ensure project root is in sys.path for qa_tools imports
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
@@ -19,12 +22,13 @@ from dataclasses import dataclass, asdict
 class Rule:
     """Represents a single rule in the rulebook"""
     rule_id: str  # e.g., "GEN-1.1.1"
-    text: str  # Full rule text
+    text: str  # Full rule text (markdown-formatted)
     section: str  # Parent section heading
     subsection: str  # Parent subsection heading
     document: str  # Source document name
     anchor_id: str  # HTML anchor ID for cross-referencing
     line_number: int  # Starting line in source file
+    text_plain: str = ""  # Plain text for search (no formatting)
     weapon_type: str = ""  # e.g., "longsword", "rapier", or "general"
     variant: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
     references_to: List[str] = None  # Rule IDs referenced BY this rule
@@ -210,16 +214,17 @@ class RulebookParser:
         
         # Join with newlines to preserve all line breaks
         text = '\n'.join(formatted_lines).strip()
+        text_plain = strip_markdown(text)
         
         if text:
             # Extract variant from rule text if it starts with **Vor**:, **Combat**:, **Afterblow**:
             detected_variant = self._detect_variant_in_rule_text(text)
             if detected_variant:
                 variant = detected_variant
-            
             rule = Rule(
                 rule_id=rule_id,
                 text=text,
+                text_plain=text_plain,
                 section=section,
                 subsection=subsection,
                 document=document,

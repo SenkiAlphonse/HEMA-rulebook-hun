@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ main ]
 
+permissions:
+  contents: write
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -55,5 +58,14 @@ jobs:
     
     - name: Verify build artifacts
       run: |
-        test -f qa_tools/data/rules_index.json
+        test -f qa_tools/rules_index.json
         test -f dist/rulebook.html
+    
+    - name: Commit build artifacts
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add qa_tools/rules_index.json dist/rulebook.html
+        git diff --staged --quiet || git commit -m "chore: rebuild search index and rulebook [skip ci]"
+        git push

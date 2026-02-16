@@ -210,7 +210,7 @@ class AliasAwareSearch:
             # Require all base query terms to appear somewhere
             if required_terms:
                 combined_text = " ".join([
-                    rule.get('text', ''),
+                    rule.get('text_plain', rule.get('text', '')),
                     rule.get('section', ''),
                     rule.get('subsection', '')
                 ])
@@ -246,6 +246,7 @@ class AliasAwareSearch:
         grouped_results = []
         seen_root_ids = set()
         grouping_multiplier = getattr(search_config, 'GROUPING_MULTIPLIER', 3)
+        
         for result in results[:max_results]:
             depth = self.get_rule_depth(result.rule_id)
             # For level 4-5 rules, include parents (up to level 3) and children
@@ -257,8 +258,36 @@ class AliasAwareSearch:
                 if root_id in seen_root_ids:
                     continue
                 seen_root_ids.add(root_id)
-                # Collect the family: parents + matched rule + children
-                family = self._build_rule_family(result, lineage)
+                
+                # Collect ALL matched results with the same root (all siblings that matched)
+                siblings = [r for r in results if self.get_rule_lineage(r.rule_id)[1] == root_id 
+                           if len(self.get_rule_lineage(r.rule_id)) > 1]
+                
+                # Collect the family: parents + all matched siblings + children
+                family = []
+                
+                # Add parents (up to level 3)
+                for parent_id in lineage:
+                    parent_depth = self.get_rule_depth(parent_id)
+                    if parent_depth <= 3:
+                        parent_rule = self.get_rule_by_id(parent_id)
+                        if parent_rule:
+                            family.append(SearchResult(
+                                rule_id=parent_rule['rule_id'],
+                                text=parent_rule['text'],
+                                section=parent_rule.get('section', ''),
+                                subsection=parent_rule.get('subsection', ''),
+                                document=parent_rule.get('document', ''),
+                                weapon_type=parent_rule.get('weapon_type', ''),
+                                variant=parent_rule.get('variant', ''),
+                                score=result.score  # Inherit score from matched rule
+                            ))
+                
+                # Add all matched siblings (up to 5 deep)
+                for sibling in siblings:
+                    if sibling not in family:
+                        family.append(sibling)
+                
                 # Sort family by depth and add to results
                 family.sort(key=lambda x: self.get_rule_depth(x.rule_id))
                 grouped_results.extend(family)
@@ -343,7 +372,10 @@ class AliasAwareSearch:
         """Calculate score including alias matches"""
         score = 0.0
 
-        text_lower = rule['text'].lower()
+        # Use text_plain for scoring (markdown-stripped version) to enable substring matches
+        # but keep original text for display
+        text_plain = rule.get('text_plain', rule.get('text', ''))
+        text_lower = text_plain.lower()
         section_lower = rule.get('section', '').lower()
         subsection_lower = rule.get('subsection', '').lower()
         rule_id_lower = rule['rule_id'].lower()

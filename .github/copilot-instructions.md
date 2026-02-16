@@ -169,19 +169,30 @@ Each indexed rule chunk must include metadata:
 
 ## Query + Answer Contract
 
-The AI assistant must obey:
 
--   **No citation → no definitive rule claim**
--   Only use retrieved sources
--   Ask clarifying questions when context is missing
--   Clearly label discretionary interpretations
+### Answer Output Format (Required)
 
-Recommended output format:
+All answers must use the following structure, with each section clearly labeled:
 
-A)  Short answer\
-B)  Relevant rule citations (`GEN-...`)\
-C)  Referee handling guidance (if applicable)\
-D)  Clarifying questions (if needed)
+**A) Rule Summary**
+- Plain language summary of the relevant rule(s), strictly grounded in cited sources
+- Must include rule IDs and anchor IDs where possible
+
+**B) Referee Advice**
+- Interpretive, context-sensitive guidance for referees
+- Must be clearly labeled as advice, not mandatory rule
+- De-escalatory, proportional, and always cite supporting rules
+
+**C) Coaching Advice**
+- Optional, only if query is tactical or training-related
+- Must be clearly separated from rule authority
+- Never overrides or contradicts rules
+
+**D) Clarifying Questions**
+- If the query is ambiguous or could be interpreted as either referee or coaching advice, prompt the user for clarification
+- Ask for more context if the rules do not provide a definitive answer
+
+All sections should be present in the output, even if some are empty (e.g., "No coaching advice applicable.").
 
 ------------------------------------------------------------------------
 
