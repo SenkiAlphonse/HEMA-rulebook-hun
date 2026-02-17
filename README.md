@@ -1,10 +1,10 @@
-# Kard Rendje - HEMA Rulebook Project
+# Magyar Hosszúkardvívó Sportszövetség (Hungarian Longsword Federation, MHS) - HEMA Rulebook Project
 
 [![Tests](https://img.shields.io/badge/tests-59%2F59%20passing-brightgreen)](./tests)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green)](./LICENSE)
 
-A comprehensive AI-assisted Hungarian Historical European Martial Arts (HEMA) rulebook for the "Kard Rendje" (Order of the Sword) competition ruleset. This project provides a searchable web interface with natural language query support and optional AI-powered rule summarization.
+A comprehensive AI-assisted Hungarian Historical European Martial Arts (HEMA) rulebook for the "Magyar Hosszúkardvívó Sportszövetség" (Hungarian Longsword Federation, MHS) competition ruleset. This project provides a searchable web interface with natural language query support and optional AI-powered rule summarization.
 
 ## Quick Links
 
@@ -306,7 +306,8 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 
 ## Acknowledgments
 
-- **HEMA Community**: For defining the Kard Rendje ruleset
+- **HEMA Community**: For supporting and testing the Magyar Hosszúkardvívó Sportszövetség (Hungarian Longsword Federation, MHS) ruleset
+- **FIE - International Fencing Federation**: Their comprehensive rulebooks have provided guidance and structural inspiration, enabling us to develop a detailed and well-organized ruleset for the Hungarian HEMA competition scene
 - **Contributors**: For development, testing, and feedback
 - **Google Gemini**: For AI-powered rule summarization (optional)
 

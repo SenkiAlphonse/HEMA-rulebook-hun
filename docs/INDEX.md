@@ -1,6 +1,6 @@
 # HEMA Rulebook Q&A System - Documentation Index
 
-Welcome to the HEMA Rulebook Q&A System documentation. This is a comprehensive AI-assisted search and Q&A solution for the "Kard Rendje" (Order of the Sword) rulebook, indexed with natural language querying capabilities and rule cross-referencing.
+Welcome to the HEMA Rulebook Q&A System documentation. This is a comprehensive AI-assisted search and Q&A solution for the "Magyar Hosszúkardvívó Sportszövetség" (Hungarian Longsword Federation, MHS) rulebook, indexed with natural language querying capabilities and rule cross-referencing.
 
 ## Quick Navigation by Role
 
