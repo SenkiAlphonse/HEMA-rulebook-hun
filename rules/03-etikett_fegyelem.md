@@ -60,23 +60,21 @@ A verseny során, ha egy vívó nem jelenik meg a küzdőtéren amikor a bíró 
 
 #### Vívó etikett  
 
-**DIS-1.3.6**  
-Minden mérkőzésnek meg kell őriznie az udvarias és nyílt összecsapás szellemiségét. Minden rendhagyó cselekedet (például: az ellenfél erőszakos fellökése, fegyelmezetlen vívás, szabálytalan mozdulatok a küzdőtéren, erőszakkal megszerzett találatok, keresztvassal végrehajtott csapások, véletlen esés közben vagy után bevitt találatok, veszélyes technikák végrehajtása, düh kitöltése a berendezésen vagy a helyszín felszerelésein) vagy sportszerűtlen viselkedés szigorúan tilos.  
+**DIS-1.3.6**
+**DIS-1.3.6.1**
+A versenyzőknek becsületesen, jelen szabályzat előírásait szigorúan betartva kell vívniuk. Ezen szabályok bárminemű megsértése az itt rögzített büntetéseket vonja maga után.
+<!--  (Vö.t.158-162, t.170.) -->
+
+**DIS-1.3.6.2**  
+Minden mérkőzésnek udvarias és becsületes jellegűnek kell maradnia. Kifejezetten tiltott minden rendellenes akció (az ellenfél lökésével végződő lerohanás, zavaros vívásmód, rendellenes helyváltoztatások, erőszakkal bevitt találatok, kosárral végrehajtott vágás, szándékos elesés a találat elkerülése érdekében) vagy sportszerűtlen magatartás<!--  (Vö. t. 158-162, t.170) -->
+. Ilyen vétség felmerülésekor a vétkes vívó által esetlegesen adott találatot meg kell semmisíteni.
 
 **DIS-1.3.7**  
-A mérkőzés kezdete előtt a két vívó vívó-tisztelgéssel üdvözöli az ellenfelét, a versenybírót és a közönséget. Az utolsó találat beadása után a versenybíró döntését nyugodtan meg kell várniuk a felállási vonalon. Utána vívó-tisztelgést kell végrehajtaniuk, üdvözölve az ellenfelet, a versenybírót és A közönséget. A mérkőzés ezt követően ér véget. Ha az egyik vagy mindkét vívó ezt megtagadja, a versenybíró a vétkessel/vétkesekkel szemben a 4. csoportba tartozó vétségekre vonatkozó büntetést alkalmazza  
+A mérkőzés kezdete előtt a két vívó vívó-tisztelgéssel üdvözöli az ellenfelét, a versenybírót és a közönséget. Az utolsó találat beadása után a versenybíró döntését nyugodtan meg kell várniuk a felállási vonalon. Utána vívó-tisztelgést<!-- (vö.: t.1) --> kell végrehajtaniuk, üdvözölve az ellenfelet, a versenybírót és A közönséget. A mérkőzés ezt követően ér véget. Ha az egyik vagy mindkét vívó ezt megtagadja, a versenybíró a vétkessel/vétkesekkel szemben a 4. csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
+<!--  (Vö. t.158-162,t.169, t.170) -->
 
 **DIS-1.3.8**  
-A büntetendő cselekedetek szóbeli figyelmeztetést, figyelmeztetést (sárga lap), ellenfélnek adott pontot (piros lap), a versenyszámból vagy a helyszínről való kizárást (fekete lap) vonhatnak maguk után, figyelembe véve azok súlyosságát és ismétlődését, a szabályokban foglaltaknak megfelelően. (Lásd még a Függelékben a Fegyelmi Vétségek Táblázatát)  
-
-**DIS-1.3.9**  
-A nézők kötelesek tartózkodni a verseny rendjének megzavarásától, cselekedeteikkel nem befolyásolhatják sem a vívókat, sem a bírót, és az utóbbi döntéseit akkor is tiszteletben kell tartaniuk, ha azzal nem értenek egyet. Minden rájuk vonatkozó utasításnak engedelmeskedniük kell, amik kiadását a bíró szükségesnek ítéli.  
-
-**DIS-1.3.10**  
-A vívó, mind a küzdőtéren és azon kívül, köteles viselnie a maszkját egészen addig, amíg a bíró „Állj-t” (Halt!) nem mond. Semmilyen körülmények között sem szólíthatja meg a bírót, ameddig a bíró a döntését meg nem hozta.  
-
-**DIS-1.3.11**  
-Mérkőzések közben és után, akkor is, ha a vívó már elhagyta a küzdőteret, minden olyan cselekedet, ami megsérti a sportszerűség elvét, például a sisak (vagy bármely más felszerelés) veszélyt okozó elhajítása büntetést von maga után.  
+Mérkőzés közben vagy azt követően, akár a pást elhagyása után is tilos mindennemű sportszerűtlen magatartás tanúsítása, mint például a maszk vagy más felszerelés erőszakos vagy veszélyes elhajítása, és <!-- a t.169 (Vö. t.108.1, 2 and t.109.) szerint  -->a negyedik csoportba tartozó vétségként büntetendő.
 
 #### Személyes hozzáállás  
 

@@ -694,40 +694,36 @@ A távolság vagy a mozdulat szükséges mértékének helytelen felmérése mia
 **GEN-6.11.5**  
 Tilos a keresztvassal ütni.  
 
-## A mérkőzések vezetése és a találatok elbírálása  
+## A mérkőzés vezetése és a találatok elbírálása  
 <span id="GEN-7"></span>  
 
 ### A Versenybíró  
 <!-- TODO -->
 <span id="GEN-7.1"></span>  
 
-**GEN-7.1.1**  
-A bíró egy segéddel együtt dolgozik, vezeti a jegyzőkönyvet, és kezeli az időmérést (szükség esetén adminisztratív személyzet támogatásával).  
+**GEN-7.1.1**
+**GEN-7.1.1.1**  
+A versenybíróvá vagy segédbíróvá való kinevezés elfogadása magával vonja azt a becsületbeli kötelezettséget, hogy az illető tiszteletben tartja a szabályokat, valamint tevékenységét a legszigorúbb elfogulatlansággal és teljes odafigyeléssel látja el.
+**GEN-7.1.1.2**  
+A versenybírók a versenyen semmiféle más tisztséget, mint pld. Szervező Csapat tag, csapatkapitány, saját szövetségük hivatalos kiküldöttje, edző stb. nem tölthetnek be.
+
+<!-- **GEN-7.1.2**
+Az MHS hivatalos versenyein minden mérkőzést olyan versenybíró vezet, aki az adott évadra érvényes MHS licensszel rendelkezik. -->
 
 **GEN-7.1.2**  
 A versenybíró feladatai:  
-- szólítja és számba veszi a vívókat;  
+- szólítja és számba veszi a vívókat<!-- (Vö. t.114; t.118, t.119) -->;  
 - vezeti a mérkőzést;  
 - minden mérkőzés előtt ellenőrzi a versenyzők fegyvereit, ruházatát és felszereléseit az előírásoknak megfelelően  
 - irányítja a segédbíró(ka)t, időmérőket, jegyzőkönyvvezetőket, stb.  
-- úgy helyezkedik, és úgy változtatja a helyét, hogy követhesse a mérkőzést  
-- bünteti a vétségeket;  
-- megítéli a találatokat;  
-- fenntartja a rendet;  
+- úgy helyezkedik, és úgy változtatja a helyét, hogy követhesse a mérkőzést;  
+- bünteti a vétségeket<!--  (Vö. t.164) -->;  
+- megítéli a találatokat<!--  (Vö. t.54 stb.) -->;  
+- fenntartja a rendet<!--  (Vö. t.134) -->;  
 - ugyancsak ellenőriznie kell a pástok állapotát és gondoskodik arról, hogy a mérkőzés ne kezdődhessen el vagy ne folytatódhasson olyan páston, aminek felülete balesetveszélyes, vagy más okból nem alkalmasak a mérkőzés folytatására.  
 
 **GEN-7.1.3**  
-A küzdelem megállítása után a bíró szükség esetén egyeztet a segédbíróval (kézjelekkel jelzi az akciót és a találatot, a segéd szükség esetén jelzi, ha a bíró szemszögéből nem látható találat is esett; szükség esetén a bíró szóban is konzultálhat a segéddel), végül javasol egy ítéletet. Ha a vívók elfogadják az döntést (azaz nem kérnek felülvizsgálatot), a küzdelem a bíró által javasolt ítélettel folytatódik. Ha valamelyik vívó felülvizsgálatot kér, de az ellenfele nem ért vele egyet, a bíró megismételheti az asszót, vagy ha meggyőződéssel döntést tud hozni, ítélhet pontot a kérdéses akcióért.  
-
-**GEN-7.1.4**  
-<!-- FIXME remove/fix -->
-Ha a bíró nem tudja interpretálni a végrehajtott akciósort, annak okát ismertetnie kellés az esetleges hibájáért illendő elnézést kérnie.  
-
-**GEN-7.1.5**  
-A bírói ítéletei a mérkőzés végeztével visszamenőleg nem képezik vita tárgyát.  
-
-**GEN-7.1.6**  
-A bíró képes kell legyen a mérkőzések angol nyelvű vezetésére, beleértve a szabályok és az akciók interpretációját.  
+A küzdelem megállítása után a bíró szükség esetén szóban vagy kézjelekkel egyeztet a segédbíróval.  
 
 ### A segédbíró  
 <span id="GEN-7.2"></span>  
@@ -747,7 +743,10 @@ A segédbíró nem felel a pontok megítéléséért, sem a mérkőzés végső 
 <span id="GEN-7.3"></span>  
 
 **GEN-7.3.1**  
-Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akiknek feladata hogy közvetlenül, élőben figyeljék a mérkőzést, majd ha szükséges ezután tekintsék meg azt a képernyőn is és egyeztessenek a versenybíróval.  
+Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akiknek feladata hogy közvetlenül, élőben figyeljék a mérkőzést, majd ha szükséges ezután tekintsék meg azt a képernyőn is és egyeztessenek a versenybíróval<!--  a t.60-62, o105 szakaszokban írtaknakmegfelelően -->.
+<!-- Video-konzultáns akkor lehet valaki, ha:
+1. az adott szezonra érvényes versenybírói MHS licence-szel rendelkezik;
+2. videóbírói felkészítésen vett részt; -->
 
 ### A bírók és a videóbírók kijelölése  
 <span id="GEN-7.4"></span>  
