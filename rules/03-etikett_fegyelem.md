@@ -180,7 +180,7 @@ Víváshoz kötődő büntetések, amelyek a vívás közben elkövetett vétsé
 - a ténylegesen nem kapott találat megítélése,  
 - a versenyszámból való kizárás.  
 
-**DIS-3.1.2**  
+**DIS-3.1.1.2**  
 Fegyelmi büntetések, amelyek a rend, a fegyelem és a sportszellem ellen elkövetett vétségek esetén alkalmazhatóak:  
 
 - Ténylegesen nem kapott találat odaítélése  
@@ -366,7 +366,7 @@ A negyedik csoportba tartozó vétség elkövetése nyomban FEKETE LAPPAL (a ver
 
 **DIS-4.3.16**  
 <!-- TODO -->  
-Továbbá az MHSz versenyein illetve a MHSz fegyelmi kódexének magát alávető konföderáció által szervezett minden kiosztott fekete lapot 10 napon belül jelenteni kell az MHSz elnökének, aki kiértékeli hogy a vétség súlyossága indokolja-e a MHSz ellenőr vagy a Szervező Team <!-- DT --> jelentésének továbbküldését a Jogi Bizottság elnöke felé azzal a kéréssel, hogy az Fegyelmi Bíróságot állítson fel annak megállapítására, hogy a versenyen kiszabott büntetés mellett további kell-e további büntetést kiszabni.  
+Továbbá az MHS versenyein illetve a MHS fegyelmi kódexének magát alávető konföderáció által szervezett minden kiosztott fekete lapot 10 napon belül jelenteni kell az MHS elnökének, aki kiértékeli hogy a vétség súlyossága indokolja-e a MHS ellenőr vagy a Szervező Team <!-- DT --> jelentésének továbbküldését a Jogi Bizottság elnöke felé azzal a kéréssel, hogy az Fegyelmi Bíróságot állítson fel annak megállapítására, hogy a versenyen kiszabott büntetés mellett további kell-e további büntetést kiszabni.  
 
 ### Találat megsemmisítése szabályszegés miatt  
 
@@ -894,7 +894,7 @@ A fellebbezés nincs alakszerűséghez kötve, az azonnali és udvarias formába
 
 **DIS-5.2.4**  
 <!-- TODO -->  
-Amennyiben a versenybíró fenntartja álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHSz ellenőr jogosult a fellebbezés elbírálására <!-- (vö. t.141)-->. Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.3.20]  
+Amennyiben a versenybíró fenntartja álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHS ellenőr jogosult a fellebbezés elbírálására <!-- (vö. t.141)-->. Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.3.20]  
 szakaszokkal összhangban büntetendő.  
 
 #### Egyéb óvás és fellebbezés  
@@ -903,7 +903,7 @@ szakaszokkal összhangban büntetendő.
 Azok a panaszok és óvások, amelyek nem a versenybíró döntésével kapcsolatosak, haladéktalanul írásban, a <!--DT-nek -->szervező teamnek címezve terjeszthetők elő.  
 
 **DIS-5.2.6**  
-Ha a panasz vagy óvás a <!--Directoire Technique vagy a hivatalos FIE küldött--> szervező team vagy a hivatalos MHSz küldött döntését vonja kétségbe, azt az MHSz Irodájának kell címezni<!-- az Alapszabály 7.2 és a t.140 szakaszokkal összhangban-->.  
+Ha a panasz vagy óvás a <!--Directoire Technique vagy a hivatalos FIE küldött--> szervező team vagy a hivatalos MHS küldött döntését vonja kétségbe, azt az MHS Irodájának kell címezni<!-- az Alapszabály 7.2 és a t.140 szakaszokkal összhangban-->.  
 
 #### A döntéshozatal módja  
 
@@ -922,4 +922,4 @@ Ismétlődő vétkesség esetében a kiszabni rendelt büntetés a következő:
 
 - Versenyszámból való kizárás, ha a korábbi büntetés megrovás volt.  
 - Diszkvalifikálás a teljes versenyből, ha a korábbi büntetés versenyszámból való diszkvalifikálás vagy kizárás volt.  
-<!-- Lásd még a MHSz Fegyelmi Szabályzatát (MHSz Alapszabály VII. fejezet). -->
+<!-- Lásd még a MHS Fegyelmi Szabályzatát (MHS Alapszabály VII. fejezet). -->
