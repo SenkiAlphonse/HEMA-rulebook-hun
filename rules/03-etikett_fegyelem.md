@@ -66,8 +66,7 @@ A versenyzőknek becsületesen, jelen szabályzat előírásait szigorúan betar
 <!--  (Vö.t.158-162, t.170.) -->
 
 **DIS-1.3.6.2**  
-Minden mérkőzésnek udvarias és becsületes jellegűnek kell maradnia. Kifejezetten tiltott minden rendellenes akció (az ellenfél lökésével végződő lerohanás, zavaros vívásmód, rendellenes helyváltoztatások, erőszakkal bevitt találatok, kosárral végrehajtott vágás, szándékos elesés a találat elkerülése érdekében) vagy sportszerűtlen magatartás<!--  (Vö. t. 158-162, t.170) -->
-. Ilyen vétség felmerülésekor a vétkes vívó által esetlegesen adott találatot meg kell semmisíteni.
+Minden mérkőzésnek udvarias és becsületes jellegűnek kell maradnia. Kifejezetten tiltott minden rendellenes akció (az ellenfél lökésével végződő lerohanás, zavaros vívásmód, rendellenes helyváltoztatások, erőszakkal bevitt találatok, ütés, rúgás, kosárral/keresztvassal végrehajtott ütés, szándékos elesés a találat elkerülése érdekében) vagy sportszerűtlen magatartás—V.ö.[DIS-4.1.1]-[DIS-4.1.5], [DIS-4.3.20]. Ilyen vétség felmerülésekor a vétkes vívó által esetlegesen adott találatot meg kell semmisíteni.
 
 **DIS-1.3.7**  
 A mérkőzés kezdete előtt a két vívó vívó-tisztelgéssel üdvözöli az ellenfelét, a versenybírót és a közönséget. Az utolsó találat beadása után a versenybíró döntését nyugodtan meg kell várniuk a felállási vonalon. Utána vívó-tisztelgést<!-- (vö.: t.1) --> kell végrehajtaniuk, üdvözölve az ellenfelet, a versenybírót és A közönséget. A mérkőzés ezt követően ér véget. Ha az egyik vagy mindkét vívó ezt megtagadja, a versenybíró a vétkessel/vétkesekkel szemben a 4. csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
@@ -87,7 +86,7 @@ A csapatvezető -->
 
 **DIS-1.3.14**
 **A csapatkapitány**:
-Csapatversenyeken kizárólag a csapatkapitány jogosult a versenybíróhoz<!-- vagy a versenybírói bizottság kiküldöttéhez--> fordulni mindenfajta technikai kérdés tisztázása vagy panasz előterjesztése érdekében. A panaszokra vonatkozó eljárását a t.[DIS-5.2.2]--[DIS-5.2.5] szakaszok szabályozzák.
+Csapatversenyeken kizárólag a csapatkapitány jogosult a versenybíróhoz<!-- vagy a versenybírói bizottság kiküldöttéhez--> fordulni mindenfajta technikai kérdés tisztázása vagy panasz előterjesztése érdekében. A panaszokra vonatkozó eljárását a [DIS-5.2.2]--[DIS-5.2.5] szakaszok szabályozzák.
 Azok a csapattagok, akik pontosan betartották a csapatkapitány rendelkezéseit, nem vonhatóak felelősségre az arra egyébként illetékes szervek által. Ugyanakkor személyesen felelősek minden tettükért amelyekről nem a csapatkapitány rendelkezett és minden általuk elkövetett vétségért, amellyel megsértették jelen szabályzat rendelkezéseit.
 
 ### Edzők és kísérő személyzet  
@@ -575,7 +574,7 @@ A táblázat célja a megfelelő összefoglalás: nem helyettesíti a vonatkozó
     <tr>  
       <td>1.13  
       </td>  
-      <td>Hitting with the fists and kicking *  
+      <td>Hitting with the fists (or any other bodyparts O.o ) and kicking *  
       </td>  
       <td>  
       </td>  
