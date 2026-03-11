@@ -3,7 +3,12 @@ services:
     name: hema-rulebook-search
     runtime: python
     runtimeVersion: "3.11"
-    buildCommand: pip install -r requirements.txt && pytest tests/ -v && python build.py
+    buildCommand: |
+      pip install -r requirements.txt && \
+      pytest tests/ -v && \
+      mkdir -p dist && \
+      python build.py && \
+      ls -la dist/rulebook.html
     startCommand: python app.py
     envVars:
       - key: PYTHON_VERSION
