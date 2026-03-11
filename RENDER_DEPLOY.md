@@ -27,8 +27,8 @@ The form will appear with these settings:
 |---------|-------|
 | **Name** | `hema-rulebook-search` |
 | **Runtime** | Python 3.11 |
-| **Build Command** | (leave empty, Render auto-detects) |
-| **Start Command** | `python app.py` |
+| **Build Command** | Use `render.yaml` |
+| **Start Command** | Use `render.yaml` |
 | **Region** | Choose closest to your location |
 | **Plan** | Free |
 
@@ -37,7 +37,7 @@ The form will appear with these settings:
 2. Render will start building
 3. Wait for the build to complete (2-3 minutes)
 4. You'll see a green checkmark when done
-5. Your site URL: `https://hema-rulebook-search.onrender.com`
+5. Your site URL: `https://hema-rulebook-hun.onrender.com`
 
 ### 5. Test It Works
 1. Visit your URL
@@ -49,7 +49,8 @@ The form will appear with these settings:
 ✅ Render detects `render.yaml` configuration  
 ✅ Installs Python 3.11  
 ✅ Installs dependencies from `requirements.txt`  
-✅ Runs `python app.py`  
+✅ Runs tests and rebuilds `dist/rulebook.html` during deploy  
+✅ Starts the app with Gunicorn  
 ✅ Serves the app on a public URL  
 ✅ Auto-redeploys when you push to GitHub  
 

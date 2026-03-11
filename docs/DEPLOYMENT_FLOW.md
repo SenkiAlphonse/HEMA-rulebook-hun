@@ -22,12 +22,12 @@ python build.py
 
 **Build Command** (runs during deployment):
 ```bash
-pip install -r requirements.txt && pytest tests/ -v && python build.py
+pip install -r requirements.txt && pytest tests/ -v && mkdir -p dist && python build.py && ls -la dist/rulebook.html
 ```
 
 **Start Command** (runs to start the service):
 ```bash
-python app.py
+gunicorn --bind 0.0.0.0:${PORT:-10000} --workers ${WEB_CONCURRENCY:-1} app:app
 ```
 
 **Key Points:**
@@ -45,7 +45,7 @@ release: python build.py
 
 **Web Process**:
 ```bash
-web: python app.py
+web: gunicorn --bind 0.0.0.0:${PORT:-10000} --workers ${WEB_CONCURRENCY:-1} app:app
 ```
 
 ## GitHub Actions (`.github/workflows/test.yml`)

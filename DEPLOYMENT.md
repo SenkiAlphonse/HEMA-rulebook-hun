@@ -23,13 +23,13 @@ A Flask web application for searching the Hungarian Historical European Martial 
 ### 2. Configure the Service
 - **Name**: `hema-rulebook-search`
 - **Runtime**: Python 3.11+
-- **Start Command**: `python app.py`
+- **Build / Start Command**: leave blank if using `render.yaml`
 - **Region**: Choose closest to your users
 
 ### 3. Deploy
 - Click "Create Web Service"
-- Render will automatically detect `render.yaml` and build
-- Your site will be live at `https://hema-rulebook-search.onrender.com`
+- Render will automatically detect `render.yaml`, run tests, rebuild `dist/rulebook.html`, and start Gunicorn
+- Your site will be live at `https://hema-rulebook-hun.onrender.com`
 
 ## Local Development
 
@@ -70,7 +70,7 @@ HEMA-rulebook-hun/
 │   └── aliases.json      # Search aliases
 ├── requirements.txt      # Python dependencies
 ├── render.yaml          # Render.com config
-├── Procfile             # Process file
+├── Procfile             # Optional generic process file
 └── README.md           # This file
 ```
 

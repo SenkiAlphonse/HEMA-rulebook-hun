@@ -706,22 +706,20 @@ User Browser (https://hema-rulebook-hun.onrender.com)
 
 ### Render.com Configuration
 
-**runtime.txt**: Python 3.14
+**render.yaml**: Python 3.11 runtime, deploy-time build, Gunicorn startup
 
-**Procfile**: `web: gunicorn app:create_app()`
+**Procfile**: `web: gunicorn --bind 0.0.0.0:${PORT:-10000} --workers ${WEB_CONCURRENCY:-1} app:app`
 
 **Environment Variables**:
 ```
 FLASK_ENV=production
 DEBUG=False
-PORT=5000
+PORT=10000
 ```
 
-**startup.sh**:
+**Render startup command**:
 ```bash
-pip install -r requirements.txt
-python qa-tools/parser.py  # Rebuild indexes if needed
-gunicorn app:create_app()
+gunicorn --bind 0.0.0.0:${PORT:-10000} --workers ${WEB_CONCURRENCY:-1} app:app
 ```
 
 ---
