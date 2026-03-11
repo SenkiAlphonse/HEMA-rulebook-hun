@@ -463,7 +463,7 @@ Az ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedet
 **GEN-6.7.4**  
 Pontszerző birkózó akciók:  
 
-**GEN-6.7.4.1** 
+**GEN-6.7.4.1**  
 Birkózófogással az ellenfél legalább egy lábának elemelése a talajról. (A dobásokat, földreviteleket NEM szabad befejezni.)  
 
 **GEN-6.7.4.2**  
