@@ -43,6 +43,18 @@ def create_app() -> Flask:
         logger.error(f"Unexpected error initializing search engine: {e}")
         raise RuntimeError("Failed to initialize search engine") from e
     
+    # Ensure rulebook HTML is pre-rendered on startup if it doesn't exist
+    # This handles cases where the build command didn't run during deployment
+    rulebook_path = Path(__file__).parent.parent / "dist" / "rulebook.html"
+    if not rulebook_path.exists():
+        try:
+            logger.info("Pre-rendering rulebook HTML (dist/rulebook.html does not exist)...")
+            from build import build_rulebook
+            build_rulebook()
+            logger.info(f"✓ Rulebook pre-rendered to {rulebook_path}")
+        except Exception as e:
+            logger.warning(f"Failed to pre-render rulebook on startup: {e}. HTML will be generated dynamically on requests.")
+    
     # Configuration
     app.config['VARIANTS'] = ["VOR", "COMBAT", "AFTERBLOW"]
     app.config['WEAPONS'] = ["longsword", "rapier", "padded_weapons"]

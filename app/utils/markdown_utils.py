@@ -42,8 +42,9 @@ def preprocess_rulebook_markdown(text: str) -> str:
             else:
                 # Remove ALL anchor spans: both standalone AND inline
                 line = re.sub(r'<span\s+id="[^"]*"></span>\s*', '', line)
-                if line.strip():  # Only keep non-empty lines
-                    result.append(line)
+                # Preserve blank lines so markdown structure remains intact,
+                # especially after raw HTML blocks like <table>...</table>.
+                result.append(line)
             i += 1
         return '\n'.join(result)
     

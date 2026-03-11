@@ -13732,12 +13732,12 @@
   ],
   "total_rules": 425,
   "documents": [
-    "02.b-hosszukard-COMBAT.md",
-    "02.c-hosszukard-AFTERBLOW.md",
     "03-etikett_fegyelem.md",
     "02.a-hosszukard-VOR.md",
-    "04-szervezes.md",
+    "02.c-hosszukard-AFTERBLOW.md",
+    "02.b-hosszukard-COMBAT.md",
     "01-altalanos.md",
-    "02-hosszukard.md"
+    "02-hosszukard.md",
+    "04-szervezes.md"
   ]
 }
