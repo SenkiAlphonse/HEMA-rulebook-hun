@@ -10,15 +10,44 @@ def preprocess_rulebook_markdown(text: str) -> str:
     """
     Preprocess markdown before Mistune conversion to handle:
     1. HTML comments removal
-    2. Anchor spans removal (<span id="..."></span>)
+    2. Anchor spans preservation - attach to headers using special syntax
     3. Rule ID hard breaks converted to double newlines for separate paragraphs
     4. Rule ID references [RULE-ID] converted to clickable links
     """
     # Remove HTML comments (<!-- ... -->)
     text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
     
-    # Remove anchor spans (<span id="..."></span>)
-    text = re.sub(r'<span\s+id="[^"]*"></span>\s*', '', text, flags=re.IGNORECASE)
+    # Preserve anchor spans by attaching them to headers
+    # Convert pattern: heading \n <span id="ID"></span> → heading {anchor:ID}
+    # This format survives Mistune's inline markdown processing
+    def preserve_header_anchors(text):
+        lines = text.split('\n')
+        result = []
+        i = 0
+        while i < len(lines):
+            line = lines[i]
+            # Check if this is a heading
+            if re.match(r'^#{1,6}\s+', line):
+                # Check if next line is an anchor span
+                if i + 1 < len(lines):
+                    next_line = lines[i + 1].strip()
+                    anchor_match = re.match(r'^<span\s+id="([^"]+)"></span>\s*$', next_line)
+                    if anchor_match:
+                        anchor_id = anchor_match.group(1)
+                        # Append anchor notation to heading: ## Title → ## Title {anchor:ID}
+                        # We append it with curly braces which are preserved through markdown
+                        line = line + f' {{anchor:{anchor_id}}}'
+                        i += 1  # Skip the anchor line since we've embedded it
+                result.append(line)
+            else:
+                # Remove ALL anchor spans: both standalone AND inline
+                line = re.sub(r'<span\s+id="[^"]*"></span>\s*', '', line)
+                if line.strip():  # Only keep non-empty lines
+                    result.append(line)
+            i += 1
+        return '\n'.join(result)
+    
+    text = preserve_header_anchors(text)
     
     # Convert rule ID references [RULE-ID] to clickable links
     # Pattern: [GEN-6.2.4] → <a href="#GEN-6.2.4" class="rule-ref" data-rule-id="GEN-6.2.4">GEN-6.2.4</a>
@@ -43,6 +72,26 @@ class RuleIDRenderer(mistune.HTMLRenderer):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.last_rule_depth = 0  # Track the depth of the last rule ID encountered
+    
+    def heading(self, text: str, level: int, **kwargs) -> str:
+        """Override heading rendering to attach anchor IDs from preserved headers"""
+        # Extract anchor ID from heading text using pattern {anchor:ID}
+        # The pattern is appended to the heading text during preprocessing
+        anchor_id = None
+        cleaned_text = text
+        
+        # Match pattern: ... {anchor:SOME-ID}
+        # Curly braces are preserved through Mistune's inline markdown processing
+        anchor_pattern = re.compile(r'\s*\{anchor:([^}]+)\}\s*$')
+        match = anchor_pattern.search(text)
+        if match:
+            anchor_id = match.group(1)
+            # Remove the {anchor:...} pattern from the heading text
+            cleaned_text = anchor_pattern.sub('', text)
+        
+        # Build heading with optional ID
+        id_attr = f' id="{anchor_id}"' if anchor_id else ''
+        return f'<h{level}{id_attr}>{cleaned_text}</h{level}>\n'
     
     def paragraph(self, text: str) -> str:
         """Override paragraph rendering to detect and style rule IDs"""
