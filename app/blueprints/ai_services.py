@@ -86,8 +86,12 @@ def split_text_for_summary(text, max_chars=6000):
     return chunks
 
 
-def build_rules_text_for_summary(rules):
-    """Convert rules to text for summarization"""
+def build_rules_text_for_summary(rules, max_chars=None):
+    """Convert rules to text for summarization with optional character cap.
+
+    Returns:
+        tuple[str, int, bool]: (summary_text, included_rule_count, truncated)
+    """
     from app.utils import build_document_order
     
     doc_order = build_document_order(rules)
@@ -100,9 +104,32 @@ def build_rules_text_for_summary(rules):
         )
     )
     parts = []
+    included_count = 0
+    current_chars = 0
+    truncated = False
+
     for rule in sorted_rules:
-        parts.append(f"[{rule.get('rule_id','')}] {rule.get('text','').strip()}")
-    return "\n".join(parts)
+        rule_prefix = f"[{rule.get('rule_id','')}] "
+        rule_text = rule.get('text', '').strip()
+        line = f"{rule_prefix}{rule_text}"
+        line_len = len(line) + 1
+
+        if max_chars is not None and current_chars + line_len > max_chars:
+            remaining_chars = max_chars - current_chars
+            min_required = len(rule_prefix) + len("...") + 1
+            if remaining_chars >= min_required:
+                clipped_text_len = remaining_chars - len(rule_prefix) - len("...") - 1
+                clipped_text = rule_text[:clipped_text_len].rstrip()
+                parts.append(f"{rule_prefix}{clipped_text}...")
+                included_count += 1
+            truncated = True
+            break
+
+        parts.append(line)
+        included_count += 1
+        current_chars += line_len
+
+    return "\n".join(parts), included_count, truncated
 
 
 def summarize_with_gemini(text, language, format_type="standard"):
@@ -136,7 +163,8 @@ def summarize_with_gemini(text, language, format_type="standard"):
             "Do not invent rules."
         )
 
-    chunks = split_text_for_summary(text)
+    chunk_size = current_app.config['SUMMARY_CHUNK_SIZE']
+    chunks = split_text_for_summary(text, max_chars=chunk_size)
     summaries = []
     for chunk in chunks:
         response = model.generate_content([
@@ -175,7 +203,7 @@ def api_summarize():
     
     Request body:
         {
-            "mode": "extract" or "search",
+            "mode": "search",
             "format": "standard" or "handout" (default: "standard"),
             "language": "EN" or "HU",
             "query": "search query" (required if mode="search"),
@@ -192,7 +220,7 @@ def api_summarize():
         }
     """
     try:
-        from app.utils import normalize_filter, filter_rules_for_extract
+        from app.utils import normalize_filter
         
         client_key = request.headers.get("X-Forwarded-For", request.remote_addr or "unknown")
         
@@ -208,6 +236,9 @@ def api_summarize():
         data = request.get_json()
         mode = data.get("mode", "search")
         format_type = data.get("format", "standard")
+
+        if mode != "search":
+            return jsonify({"error": 'Only mode="search" is supported'}), 400
         
         # Validate format
         if format_type not in ("standard", "handout"):
@@ -218,52 +249,49 @@ def api_summarize():
             current_app.config['SUMMARY_LANGUAGES']
         ) or "EN"
 
-        if mode == "extract":
-            weapon_filter = normalize_filter(
-                data.get("weapon_filter"),
-                current_app.config['WEAPONS']
-            )
-            variant_filter = normalize_filter(
-                data.get("variant_filter"),
-                current_app.config['VARIANTS']
-            )
-            rules = filter_rules_for_extract(
-                current_app.search_engine.rules,
-                weapon_filter,
-                variant_filter
-            )
-        else:
-            query = data.get("query", "").strip()
-            if not query:
-                return jsonify({"error": "Query cannot be empty"}), 400
-            
-            variant_filter = normalize_filter(
-                data.get("variant_filter"),
-                current_app.config['VARIANTS']
-            )
-            weapon_filter = normalize_filter(
-                data.get("weapon_filter"),
-                current_app.config['WEAPONS']
-            )
-            results = current_app.search_engine.search(
-                query,
-                max_results=len(current_app.search_engine.rules),
-                variant_filter=variant_filter,
-                weapon_filter=weapon_filter
-            )
-            rules = [r.__dict__ for r in results]
+        query = data.get("query", "").strip()
+        if not query:
+            return jsonify({"error": "Query cannot be empty"}), 400
+
+        variant_filter = normalize_filter(
+            data.get("variant_filter"),
+            current_app.config['VARIANTS']
+        )
+        weapon_filter = normalize_filter(
+            data.get("weapon_filter"),
+            current_app.config['WEAPONS']
+        )
+
+        max_rules = current_app.config['SUMMARY_SEARCH_MAX_RULES']
+        results = current_app.search_engine.search(
+            query,
+            max_results=max_rules,
+            variant_filter=variant_filter,
+            weapon_filter=weapon_filter
+        )
+        rules = [r.__dict__ for r in results]
 
         if not rules:
             return jsonify({"error": "No matching rules to summarize"}), 400
 
-        summary_input = build_rules_text_for_summary(rules)
+        summary_input, included_rule_count, input_truncated = build_rules_text_for_summary(
+            rules,
+            max_chars=current_app.config['SUMMARY_MAX_INPUT_CHARS']
+        )
+
+        if not summary_input.strip():
+            return jsonify({"error": "Matching rules are too large to summarize under current limits"}), 400
+
         summary = summarize_with_gemini(summary_input, language, format_type=format_type)
 
         return jsonify({
             "success": True,
             "format": format_type,
             "language": language,
-            "summary": summary
+            "summary": summary,
+            "rule_count_total": len(rules),
+            "rule_count_summarized": included_rule_count,
+            "input_truncated": input_truncated
         })
     except ValueError as e:
         logger.warning(f"Invalid summary request parameters: {e}")

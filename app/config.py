@@ -56,4 +56,6 @@ def get_prerendered_rulebook_path() -> Path:
 GEMINI_MODEL_CANDIDATES = ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
 SUMMARY_CHUNK_SIZE = 6000  # Character limit for content chunks
 SUMMARY_MAX_RETRIES = 2  # Maximum retry attempts for API calls
+SUMMARY_SEARCH_MAX_RULES = 20  # Max number of search matches sent for summary
+SUMMARY_MAX_INPUT_CHARS = 15000  # Max total input chars sent to Gemini for one summary
 

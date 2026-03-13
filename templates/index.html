@@ -453,10 +453,9 @@
                         >
                     </div>
                     <button type="button" class="btn btn-search" id="summarizeSearchBtn">Summarize Search</button>
-                    <button type="button" class="btn btn-search" id="summarizeExtractBtn">Summarize Extract</button>
                 </div>
                 <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
-                    Generates a concise summary from all matching rules (not capped).
+                    Summarizes top matching search results with input limits for free-tier API usage.
                 </p>
             </form>
             <div id="summaryControls" style="margin-top: 10px; display: none; gap: 10px;">
@@ -481,7 +480,6 @@
         const copySummaryBtn = document.getElementById('copySummaryBtn');
         const downloadSummaryBtn = document.getElementById('downloadSummaryBtn');
         const summarizeSearchBtn = document.getElementById('summarizeSearchBtn');
-        const summarizeExtractBtn = document.getElementById('summarizeExtractBtn');
         const queryInput = document.getElementById('query');
         const resultsDiv = document.getElementById('results');
         const loadingDiv = document.getElementById('loading');
@@ -533,11 +531,7 @@
         });
 
         summarizeSearchBtn.addEventListener('click', async () => {
-            await summarize('search');
-        });
-
-        summarizeExtractBtn.addEventListener('click', async () => {
-            await summarize('extract');
+            await summarize();
         });
 
         copySummaryBtn.addEventListener('click', async () => {
@@ -652,38 +646,31 @@
             }
         }
 
-        async function summarize(mode) {
+        async function summarize() {
             const language = document.getElementById('summaryLanguage').value;
             const format = document.getElementById('summaryFormat').value;
             const accessCode = document.getElementById('summaryAccessCode').value.trim();
             const variant = document.getElementById('variant').value;
             const weapon = document.getElementById('weapon').value;
-            const extractVariant = document.getElementById('extractVariant').value;
-            const extractWeapon = document.getElementById('extractWeapon').value;
+            const query = queryInput.value.trim();
+
+            if (!query) {
+                summaryOutput.innerHTML = '<div class="error-message">Please enter a search query first.</div>';
+                return;
+            }
 
             summaryOutput.innerHTML = '<div class="loading show"><div class="spinner"></div><p>Summarizing...</p></div>';
             summaryControls.style.display = 'none';
             lastSummaryText = '';
 
             const payload = {
-                mode: mode,
+                mode: 'search',
                 language: language,
-                format: format
+                format: format,
+                query: query,
+                variant_filter: variant || null,
+                weapon_filter: weapon || null
             };
-
-            if (mode === 'search') {
-                const query = queryInput.value.trim();
-                if (!query) {
-                    summaryOutput.innerHTML = '<div class="error-message">Please enter a search query first.</div>';
-                    return;
-                }
-                payload.query = query;
-                payload.variant_filter = variant || null;
-                payload.weapon_filter = weapon || null;
-            } else {
-                payload.variant_filter = extractVariant || null;
-                payload.weapon_filter = extractWeapon || null;
-            }
 
             try {
                 const response = await fetch('/api/summarize', {
@@ -707,6 +694,7 @@
                             <span class="result-id">Summary (${data.language})</span>
                         </div>
                         <div class="result-text">${escapeHtml(data.summary).replace(/\n/g, '<br>')}</div>
+                        ${data.input_truncated ? '<div class="result-meta" style="margin-top: 10px; color: #666;">Input was truncated to stay within API limits.</div>' : ''}
                     </div>
                 `;
                 lastSummaryText = data.summary;

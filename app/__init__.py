@@ -14,6 +14,7 @@ logger = logging.getLogger(__name__)
 
 # Import configuration paths
 from app.config import get_templates_dir, get_rules_index_path, get_aliases_path
+from app.config import SUMMARY_CHUNK_SIZE, SUMMARY_SEARCH_MAX_RULES, SUMMARY_MAX_INPUT_CHARS
 
 
 def create_app() -> Flask:
@@ -64,6 +65,15 @@ def create_app() -> Flask:
     )
     app.config['SUMMARY_RATE_LIMIT_MAX'] = int(
         os.environ.get("SUMMARY_RATE_LIMIT_MAX", 10)
+    )
+    app.config['SUMMARY_CHUNK_SIZE'] = int(
+        os.environ.get("SUMMARY_CHUNK_SIZE", SUMMARY_CHUNK_SIZE)
+    )
+    app.config['SUMMARY_SEARCH_MAX_RULES'] = int(
+        os.environ.get("SUMMARY_SEARCH_MAX_RULES", SUMMARY_SEARCH_MAX_RULES)
+    )
+    app.config['SUMMARY_MAX_INPUT_CHARS'] = int(
+        os.environ.get("SUMMARY_MAX_INPUT_CHARS", SUMMARY_MAX_INPUT_CHARS)
     )
     app.config['SUMMARY_SHARED_TOKEN'] = os.environ.get("SUMMARY_SHARED_TOKEN", "").strip()
     app.config['GEMINI_API_KEY'] = os.environ.get("GEMINI_API_KEY", "").strip()
