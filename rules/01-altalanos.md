@@ -38,7 +38,7 @@ A vívóidő egy egyszerű akció kivitelezésének időtartama.
 Támadó akciók (a támadás, a riposzt (visszaszúrás/visszavágás) és a kontrariposzt)  
 
 **GEN-3.2.1.1**  
-**Támadás** - az a kitörést vagy a lerohanást, vagy más fegyverspecifikus támadó lábmunka megindítását megelőző, kezdeményező támadó akció, amelyet a kar nyújtásával és az ellenfél érvényes találati felületének állandó fenyegetésével hajtanak végre. Nem minősül a támadás részének az előkészítő akciók és a kéz-, vagy fegyver olyan mozgásai, amelyek nem fenyegetik állandóan a találati felületet.  
+**Támadás** - az a kitörést vagy a lerohanást, vagy más fegyverspecifikus támadó lábmunka megindítását megelőző, kezdeményező támadó akció, amelyet a kar nyújtásával és az ellenfél érvényes találati felületének állandó fenyegetésével hajtanak végre. 
 
 **GEN-3.2.1.2**  
 **Riposzt (visszaszúrás, -vágás)** - annak a vívónak támadó akciója, aki a támadást kivédte.  
