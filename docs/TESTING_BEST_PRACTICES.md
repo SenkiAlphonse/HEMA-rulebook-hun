@@ -156,8 +156,8 @@ pytest tests/ --cov=app --cov=qa_tools --cov-report=term-missing
 pytest tests/ --cov=qa_tools.search_engine --cov-report=html
 
 # View HTML report
-open htmlcov/index.html  # macOS/Linux
-start htmlcov/index.html  # Windows
+open artifacts/coverage/htmlcov/index.html  # macOS/Linux
+start artifacts/coverage/htmlcov/index.html  # Windows
 ```
 
 ### Continuous Testing

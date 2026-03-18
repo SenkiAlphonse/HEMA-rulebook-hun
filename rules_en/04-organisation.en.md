@@ -14,7 +14,7 @@ The competition is open to persons who are 18 years old (in special cases 16 yea
 **ORG-1.1.1**  
 Participation while under the influence of alcohol or performance-enhancing drugs is forbidden (including recreational substances and doctor-prescribed medications).  
 
-[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] FIE age/eligibility rules and anti-doping frameworks are not directly transferable to this HEMA competition context; apply the HEMA organiser’s eligibility policy as written here.
+<!-- [[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] FIE age/eligibility rules and anti-doping frameworks are not directly transferable to this HEMA competition context; apply the HEMA organiser’s eligibility policy as written here. -->
 
 ## Organisation and classification of competitions  
 <span id="ORG-2"></span>  
@@ -108,8 +108,8 @@ Team seeding on the bracket is determined as follows:
 - If a fencer has results in both ‘Mixed/Men’ and ‘Women’, the higher `weightedRating` is used.  
 - Team members without a HEMARating are assigned a value equal to half of the worst `weightedRating` in the relevant category (for mixed teams: ‘Mixed/Men’, regardless of gender).  
 - If two teams’ computed indices are equal, their order is determined by drawing lots.  
-
-[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] HEMARatings-based team seeding is a HEMA-specific mechanism and has no direct analogue in the FIE technical rules.
+<!-- 
+[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] HEMARatings-based team seeding is a HEMA-specific mechanism and has no direct analogue in the FIE technical rules. -->
 
 **ORG-2.3.4**  
 For the first 16 places in the bracket, teams fence for all places. From 17th place downward, team placement is determined by their original bracket position.  

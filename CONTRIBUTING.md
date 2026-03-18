@@ -45,7 +45,7 @@ pip install -e .
 
 ```
 HEMA-rulebook-hun/
-├── app/                           # Flask web application
+├── src/app/                        # Flask web application
 │   ├── __init__.py               # App factory
 │   ├── blueprints/               # Flask blueprints
 │   │   ├── search.py            # Search API endpoints
@@ -55,7 +55,7 @@ HEMA-rulebook-hun/
 │   ├── utils.py                 # Shared utilities
 │   └── validation.py            # Input validation
 │
-├── qa_tools/                      # Search and indexing package
+├── src/qa_tools/                   # Search and indexing package
 │   ├── search_engine/            # Search implementations
 │   │   ├── search_aliases.py    # AliasAwareSearch (production)
 │   │   ├── search.py            # RulebookSearch (wrapper/backward compat)
@@ -272,7 +272,7 @@ git commit -m "update"
 - Use composition over inheritance
 
 ### Configuration Over Hardcoding
-- All configurable values in `app/config.py`
+- All configurable values in `src/app/config.py`
 - Environment variables for secrets (API keys)
 - No magic numbers in code
 

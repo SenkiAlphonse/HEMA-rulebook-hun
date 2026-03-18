@@ -1,6 +1,6 @@
 """
 Quick demo of the HEMA rulebook search
-Usage: python qa-tools\tools\demo_search.py "your query here"
+Usage: python qa_tools/tools/demo_search.py "your query here"
 """
 
 import sys

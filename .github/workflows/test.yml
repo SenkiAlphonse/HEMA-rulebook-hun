@@ -32,8 +32,8 @@ jobs:
     
     - name: Check code compiles
       run: |
-        python -m py_compile app.py build.py
-        python -m py_compile qa_tools/tools/*.py
+        python -m py_compile wsgi.py build.py tools/build.py tools/setup_check.py
+        python -m py_compile src/qa_tools/tools/*.py
 
   build:
     runs-on: ubuntu-latest
@@ -58,7 +58,7 @@ jobs:
     
     - name: Verify build artifacts
       run: |
-        test -f qa_tools/rules_index.json
+        test -f data/search/rules_index.json
         test -f dist/rulebook.html
     
     - name: Commit build artifacts
@@ -66,6 +66,6 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add qa_tools/rules_index.json dist/rulebook.html
+        git add data/search/rules_index.json dist/rulebook.html
         git diff --staged --quiet || git commit -m "chore: rebuild search index and rulebook [skip ci]"
         git push

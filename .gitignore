@@ -9,6 +9,14 @@ __pycache__/
 
 # Test coverage
 .coverage
+artifacts/
 htmlcov/
 .pytest_cache/
+
+# Generated rulebook alignment reports (do not commit)
+docs/FIE_HEMA_TEXT_ALIGNMENT_HU*.md
+qa_tools/output/fie_hema_alignment_hu*.json
+
+# Local corpora / extracted data (not committed by default)
+data/fie_extracted/
 

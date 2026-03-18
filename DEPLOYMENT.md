@@ -51,7 +51,7 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 python -m pip install -r requirements.txt
 
 # Run the app
-python app.py
+python wsgi.py
 ```
 
 Visit `http://localhost:5000` in your browser.
@@ -60,7 +60,7 @@ Visit `http://localhost:5000` in your browser.
 
 ```
 HEMA-rulebook-hun/
-├── app.py                 # Flask application
+├── wsgi.py                # Flask application entrypoint
 ├── templates/
 │   └── index.html        # Web interface
 ├── qa-tools/
@@ -170,7 +170,7 @@ python add_aliases.py
 ### Search Not Working
 - Verify `rules_index.json` exists and is valid JSON
 - Check `aliases.json` is in `qa-tools/`
-- Restart the app: `python app.py`
+- Restart the app: `python wsgi.py`
 
 ### Slow Search
 - Normal: First search takes ~1 second

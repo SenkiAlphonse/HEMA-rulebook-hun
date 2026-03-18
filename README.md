@@ -46,7 +46,7 @@ source .venv/bin/activate  # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # Run the app
-python app.py
+python wsgi.py
 # Visit http://localhost:5000
 ```
 
@@ -108,16 +108,21 @@ See [API Documentation](./docs/API.md) for complete endpoint reference.
 
 ```
 HEMA-rulebook-hun/
-├── app/                          # Flask web application
-│   ├── blueprints/              # API endpoints
-│   ├── config.py                # Configuration
-│   ├── utils.py                 # Utilities
-│   └── validation.py            # Input validation
+├── src/                         # Python packages (src/ layout)
+│   ├── app/                     # Flask web application
+│   │   ├── blueprints/          # API endpoints
+│   │   ├── config.py            # Configuration & paths
+│   │   ├── utils.py             # Utilities
+│   │   └── validation.py        # Input validation
+│   │
+│   └── qa_tools/                # Search & indexing package
+│       ├── search_engine/       # Search implementations
+│       └── tools/               # Parser / demo / alias tools
 │
-├── qa_tools/                    # Search & indexing package
-│   ├── search_engine/           # Search implementations
-│   ├── tools/                   # Utility scripts
-│   └── data/                    # Index files
+├── tools/                       # Repo scripts (build, setup checks, etc.)
+├── data/                        # Data assets
+│   ├── search/                  # aliases.json + rules_index.json
+│   └── fie_extracted/           # FIE corpus (not committed by default)
 │
 ├── tests/                       # Test suite (59 tests)
 │   ├── unit/                   # Unit tests
@@ -143,7 +148,7 @@ HEMA-rulebook-hun/
 ## Recent Improvements
 
 ### Phase 2 Code Quality Enhancements
-- ✅ Professional Python package structure (`qa_tools/`)
+- ✅ Professional Python package structure (`src/qa_tools/`)
 - ✅ Consolidated search engines (single production implementation)
 - ✅ Improved exception handling and logging
 - ✅ Centralized configuration management
@@ -204,7 +209,7 @@ FLASK_ENV=development
 FLASK_DEBUG=true
 ```
 
-### Main Configuration (app/config.py)
+### Main Configuration (src/app/config.py)
 
 ```python
 GEMINI_MODEL_CANDIDATES = ['gemini-2.0-flash', 'gemini-1.5-pro']
@@ -217,7 +222,7 @@ SUMMARY_MAX_RETRIES = 3
 ### Development Mode (Local)
 
 ```bash
-python app.py
+python wsgi.py
 # App starts at http://localhost:5000
 # Auto-reloads on Python changes
 ```
@@ -226,7 +231,7 @@ python app.py
 
 ```bash
 export FLASK_ENV=production
-gunicorn -w 4 -b 0.0.0.0:5000 app:app
+gunicorn -w 4 -b 0.0.0.0:5000 wsgi:app
 ```
 
 ### Docker Deployment

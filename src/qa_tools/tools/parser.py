@@ -3,13 +3,10 @@ HEMA Rulebook Parser
 Extracts structured rule data from markdown files
 """
 
-import sys
 from pathlib import Path
-import sys
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
+
+from app.config import get_project_root, get_rules_index_path
 from app.utils.strip_markdown import strip_markdown
-# Ensure project root is in sys.path for qa_tools imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 import re
 import json
@@ -377,10 +374,11 @@ class RulebookParser:
 
 def main() -> None:
     """Main entry point"""
-    # Get the project root directory (parent of qa_tools)
-    current_dir = Path(__file__).parent.parent.parent
-    parser = RulebookParser(current_dir)
-    parser.save_index(current_dir / "qa_tools" / "rules_index.json")
+    project_root = get_project_root()
+    parser = RulebookParser(project_root)
+    output_path = get_rules_index_path()
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    parser.save_index(output_path)
 
 
 if __name__ == "__main__":

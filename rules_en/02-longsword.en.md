@@ -87,4 +87,4 @@ Longsword tournaments must be organised in exactly one of the following three va
 - AFTERBLOW  
 <span id="LS-AB"></span>  
 
-[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] The FIE rulebook does not define longsword; where this ruleset borrows concepts from FIE foil/sabre conventions, they are adapted and may not be applied verbatim without modification.
+<!-- [[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] The FIE rulebook does not define longsword; where this ruleset borrows concepts from FIE foil/sabre conventions, they are adapted and may not be applied verbatim without modification. -->

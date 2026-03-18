@@ -137,17 +137,17 @@ A vonal helyzet egy olyan különleges helyzet, amelyben a vívó a karját kiny
 **GEN-4.1**  
 A küzdőtér felülete egyenletes, vízszintes. Ne biztosítson előnyt vagy okozzon hátrányt egyik vívó részére sem, különösen a fények vonatkozásában.  
 
+**GEN-4.2**  
+- A küzdőtér vívásra kijelölt része a pást.  
+<!-- - Minden fegyvernem versenyeit ugyanolyan páston bonyolítják le. -->
+
 <!-- TODO össze kell hangolni a FEBUS szabállyal, és figyelembe kell venni, ogy nem mindig adott a lehetőség, kisebb méretet is me kell engedni, de a szervezőnek kommunikálnia kéne előre mekkora várható -->  
 
-**GEN-4.2**  
-A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi  
-akadály a pást határától minimum 1 méterre legyen.  
-
 **GEN-4.3**  
-A pást közepe megjelölhető.  
+A pást négyzet vagy téglalap alakú, legkisebb megengedett befoglaló mérete 6×9 méter, a legnagyobb pedig 8×12 méter. A pást határait teljes hosszában meg kell jelölni, olyan módon, hogy az a padlóhoz jól tapadjon. A legközelebbi akadály a pást határától minimum 1 méterre legyen.    
 
 **GEN-4.4**  
-A vívók kezdő helyét a padlón egyértelműen meg kell jelölni úgy, hogy azok legalább 2 méterre legyenek a pást középpontjától, ezzel legalább 4 méteres távolságot hagyva a két vívó között az asszó kezdetekor.  
+A felállási vonalakat egyértelműen meg kell jelölni úgy, hogy azok 2 méterre legyenek a pást középpontjától, ezzel legalább 4 méteres távolságot hagyva a két vívó között az asszó kezdetekor.  
 
 ## Felszerelés  
 <span id="GEN-5"></span>  

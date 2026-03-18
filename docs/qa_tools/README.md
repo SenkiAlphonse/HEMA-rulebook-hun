@@ -9,17 +9,17 @@ AI-assisted question-answering system for the Hungarian HEMA (Historical Europea
 Parse all markdown rulebook files and create a searchable index:
 
 ```powershell
-python qa-tools\parser.py
+python -m qa_tools.tools.parser
 ```
 
-This will create `qa-tools/rules_index.json` containing all extracted rules.
+This will create `data/search/rules_index.json` containing all extracted rules.
 
 ### 2. Search the Rulebook
 
-Run the interactive search CLI:
+Run the interactive search CLI demo:
 
 ```powershell
-python qa-tools\search.py
+python -m qa_tools.tools.demo_search
 ```
 
 ### 3. (Optional) Test Hierarchy Metadata
@@ -27,7 +27,7 @@ python qa-tools\search.py
 Verify that parent-child relationships and hierarchy metadata are correctly populated:
 
 ```powershell
-python qa-tools\test_hierarchy.py
+python -m qa_tools.tools.test_hierarchy
 ```
 
 ### 4. (Optional) Explore AI Explanation Examples
@@ -35,7 +35,7 @@ python qa-tools\test_hierarchy.py
 See how to use hierarchy metadata for contextual AI explanations:
 
 ```powershell
-python qa-tools\ai_explainer_example.py
+python examples\qa_tools\ai_explainer_example.py
 ```
 
 ## Usage Examples

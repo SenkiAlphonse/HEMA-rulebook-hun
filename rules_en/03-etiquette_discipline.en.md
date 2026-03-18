@@ -335,7 +335,7 @@ A hit must not be annulled merely because a rule violation occurred, if:
 
 The table is intended as a convenient summary; it does not replace the text of the relevant provisions, which are authoritative in case of doubt.  
 
-[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] The large offence/penalty tables below are largely based on FIE-style card/penalty structures and should be interpreted only as incorporated and adapted by this HEMA ruleset.
+<!-- [[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] The large offence/penalty tables below are largely based on FIE-style card/penalty structures and should be interpreted only as incorporated and adapted by this HEMA ruleset. -->
 
 <table border="1" width="100%">  
   <colgroup>  

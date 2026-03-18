@@ -109,7 +109,7 @@ class TestRulebookSearch:
         from pathlib import Path
         from qa_tools.search_engine.search import RulebookSearch
         
-        real_index = Path(__file__).parent.parent.parent / 'qa_tools' / 'rules_index.json'
+        real_index = Path(__file__).parent.parent.parent / 'data' / 'search' / 'rules_index.json'
         if not real_index.exists():
             pytest.skip(f"Real rules index not found at {real_index}")
         

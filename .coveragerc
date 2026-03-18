@@ -1,5 +1,5 @@
 [run]
-source = app,qa-tools
+source = app,qa_tools
 omit = 
     */tests/*
     */test_*.py
@@ -8,6 +8,7 @@ omit =
     */virtualenv/*
     setup.py
     build.py
+    tools/build.py
 
 [report]
 precision = 2
@@ -15,4 +16,4 @@ show_missing = True
 skip_covered = False
 
 [html]
-directory = htmlcov
+directory = artifacts/coverage/htmlcov

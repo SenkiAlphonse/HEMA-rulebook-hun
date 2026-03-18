@@ -128,9 +128,9 @@ Query: VOR mérkőzés hosszúkard
 If you're building on top of this system:
 
 ```python
-from qa_tools.search import RulebookSearch
+from qa_tools.search_engine.search import RulebookSearch
 
-search = RulebookSearch("qa-tools/rules_index.json")
+search = RulebookSearch("data/search/rules_index.json")
 
 # Get VOR-only results
 vor_results = search.search("mérkőzés", formatum_filter="VOR")
@@ -147,19 +147,19 @@ vor_rule = search.get_rule_by_id("GEN-6.10.4.1.1")
 
 ## What Changed in the System
 
-1. **Parser** (`qa-tools/parser.py`):
+1. **Parser** (`python -m qa_tools.tools.parser`):
    - Detects variant keywords in rule text
    - Assigns `formatum` tag to each rule
 
-2. **Search Engine** (`qa-tools/search.py`):
+2. **Search Engine** (`src/qa_tools/search_engine/search.py`):
    - Recognizes variant keywords in queries
    - Awards bonus points for matching variants
    - Supports explicit filtering via `formatum_filter` parameter
 
-3. **Index** (`qa-tools/rules_index.json`):
+3. **Index** (`data/search/rules_index.json`):
    - All 392 rules now have correct `formatum` tags
    - VOR, COMBAT, and AFTERBLOW rules are distinguishable
 
 ## Questions?
 
-See the full documentation in `qa-tools/VARIANT_FILTERING.md`
+See the full documentation in `docs/qa_tools/VARIANT_FILTERING.md`

@@ -29,7 +29,7 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
 # Run the app
-python app.py
+python wsgi.py
 
 # Visit http://localhost:5000
 ```
@@ -75,13 +75,28 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+#### Offline install (no internet)
+
+If you are in a restricted environment without PyPI access, you can install from a local wheels directory.
+
+**Windows example (standard local wheels path):**
+
+```powershell
+# After activating .venv
+$WHEELS_DIR = "C:\Users\A200311706\OneDrive - Deutsche Telekom AG\Dokumente\GitHub\wheels"
+
+python -m pip install --upgrade pip
+python -m pip install --no-index --find-links "$WHEELS_DIR" -r requirements.txt
+python -m pip install --no-index --find-links "$WHEELS_DIR" -r requirements-dev.txt
+```
+
 ### Step 4: Verify Installation
 
 ```bash
 # Run tests to verify everything works
-pytest tests/ -v
+python -m pytest
 
-# You should see: ===== 59 passed in X.XXs =====
+# You should see: ===== 58 passed in X.XXs =====
 ```
 
 ## Configuration
@@ -109,7 +124,7 @@ The app works without Gemini, but you can enable AI-powered summaries:
 
 ### Configuration File
 
-Main settings in `app/config.py`:
+Main settings in `src/app/config.py`:
 
 ```python
 # Model selection for Gemini
@@ -120,8 +135,8 @@ SUMMARY_CHUNK_SIZE = 2000  # Characters per chunk
 SUMMARY_MAX_RETRIES = 3    # Retry failed summaries
 
 # Search data paths
-RULES_INDEX_PATH = 'qa_tools/data/rules_index.json'
-ALIASES_PATH = 'qa_tools/data/aliases.json'
+RULES_INDEX_PATH = 'data/search/rules_index.json'
+ALIASES_PATH = 'data/search/aliases.json'
 ```
 
 ## Running the Application
@@ -130,7 +145,7 @@ ALIASES_PATH = 'qa_tools/data/aliases.json'
 
 ```bash
 # With hot reload (recommended for development)
-python app.py
+python wsgi.py
 
 # Flask will start at http://localhost:5000
 # The app auto-reloads when you modify Python files
@@ -144,7 +159,7 @@ export FLASK_ENV=production  # On Windows: set FLASK_ENV=production
 
 # Run with gunicorn (production WSGI server)
 pip install gunicorn
-gunicorn -w 4 -b 0.0.0.0:5000 app:app
+gunicorn -w 4 -b 0.0.0.0:5000 wsgi:app
 ```
 
 ### Accessing the Application
@@ -159,50 +174,50 @@ gunicorn -w 4 -b 0.0.0.0:5000 app:app
 
 ```bash
 # Run all tests
-pytest tests/ -v
+python -m pytest tests/ -v
 
 # Run quickly (exit on first failure)
-pytest tests/ -x
+python -m pytest tests/ -x
 
 # Run quietly (minimal output)
-pytest tests/ -q
+python -m pytest tests/ -q
 ```
 
 ### Targeted Testing
 
 ```bash
 # Run only unit tests
-pytest tests/unit/ -v
+python -m pytest tests/unit/ -v
 
 # Run only integration tests
-pytest tests/integration/ -v
+python -m pytest tests/integration/ -v
 
 # Run specific test class
-pytest tests/unit/test_search.py::TestRulebookSearch -v
+python -m pytest tests/unit/test_search.py::TestRulebookSearch -v
 
 # Run specific test
-pytest tests/unit/test_search.py::TestRulebookSearch::test_basic_search -v
+python -m pytest tests/unit/test_search.py::TestRulebookSearch::test_basic_search -v
 ```
 
 ### Coverage Report
 
 ```bash
 # Generate coverage report
-pytest tests/ --cov=app --cov=qa_tools --cov-report=html
+python -m pytest tests/ --cov=app --cov=qa_tools --cov-report=html
 
 # View report
-open htmlcov/index.html  # On macOS/Linux
-start htmlcov/index.html  # On Windows
+open artifacts/coverage/htmlcov/index.html  # On macOS/Linux
+start artifacts/coverage/htmlcov/index.html  # On Windows
 ```
 
 ### Test Markers
 
 ```bash
 # Run only fast tests (skip slow ones)
-pytest tests/ -m "not slow" -v
+python -m pytest tests/ -m "not slow" -v
 
 # Run only marked tests
-pytest tests/ -m "integration" -v
+python -m pytest tests/ -m "integration" -v
 ```
 
 ## Using the Search Interface
@@ -306,7 +321,10 @@ pip install -e .
 
 **Solution**: Install test dependencies:
 ```bash
-pip install pytest pytest-cov
+python -m pip install pytest pytest-cov
+
+# Offline (no internet):
+python -m pip install --no-index --find-links "C:\Users\A200311706\OneDrive - Deutsche Telekom AG\Dokumente\GitHub\wheels" pytest pytest-cov
 ```
 
 ### Tests fail with "FileNotFoundError: rules_index.json"
@@ -321,7 +339,7 @@ python parser.py
 
 **Solution**: Check port is available:
 ```bash
-# Change port in app.py
+# Change port in wsgi.py
 if __name__ == '__main__':
     app.run(debug=True, port=8000)  # Use 8000 instead
 ```
@@ -387,9 +405,9 @@ for i in range(0, len(rules), BATCH_SIZE):
 
 ```bash
 # Development
-python app.py                    # Start dev server
-pytest tests/ -v                 # Run all tests
-pytest tests/ --cov             # Coverage report
+python wsgi.py                   # Start dev server
+python -m pytest tests/ -v       # Run all tests
+python -m pytest tests/ --cov    # Coverage report
 
 # Installation
 pip install -r requirements.txt  # Install dependencies
@@ -401,9 +419,9 @@ python -m qa_tools.tools.add_aliases.py  # Manage aliases
 
 # Production
 export FLASK_ENV=production     # Set production mode
-gunicorn -w 4 app:app          # Run with gunicorn
+gunicorn -w 4 wsgi:app         # Run with gunicorn
 ```
 
 ---
 
-Ready to dive in? Start with `python app.py` and visit http://localhost:5000! 🚀
+Ready to dive in? Start with `python wsgi.py` and visit http://localhost:5000!

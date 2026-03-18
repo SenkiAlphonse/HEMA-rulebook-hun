@@ -1,12 +1,27 @@
-"""
-Centralized configuration and path management for HEMA Rulebook app
-"""
+"""Centralized configuration and path management for HEMA Rulebook app."""
+
+from __future__ import annotations
 
 from pathlib import Path
 from typing import List
 
-# Project root directory - one level above app/ directory
-PROJECT_ROOT = Path(__file__).parent.parent
+
+def _find_project_root(start: Path) -> Path:
+    """Find repo root by walking up until expected folders exist."""
+    start = start.resolve()
+    for candidate in [start] + list(start.parents):
+        # Heuristics: these directories/files are expected at repo root.
+        if (candidate / "rules").is_dir() and (candidate / "templates").is_dir() and (candidate / "requirements.txt").exists():
+            return candidate
+    # Fallback: src/app/config.py -> repo root is 2 parents up (app -> src -> root)
+    try:
+        return start.parents[2]
+    except IndexError:
+        return start.parent
+
+
+# Project root directory (works with `src/` layout)
+PROJECT_ROOT = _find_project_root(Path(__file__))
 
 # Common path getters
 def get_project_root() -> Path:
@@ -14,8 +29,16 @@ def get_project_root() -> Path:
     return PROJECT_ROOT
 
 def get_qa_tools_dir() -> Path:
-    """Get qa_tools directory path"""
-    return PROJECT_ROOT / "qa_tools"
+    """Get qa_tools package directory path (developer convenience)."""
+    return PROJECT_ROOT / "src" / "qa_tools"
+
+def get_data_dir() -> Path:
+    """Get top-level data directory"""
+    return PROJECT_ROOT / "data"
+
+def get_search_data_dir() -> Path:
+    """Get directory containing search index + aliases"""
+    return get_data_dir() / "search"
 
 def get_templates_dir() -> Path:
     """Get templates directory path"""
@@ -31,11 +54,11 @@ def get_rulebook_dir() -> Path:
 
 def get_rules_index_path() -> Path:
     """Get path to rules_index.json"""
-    return get_qa_tools_dir() / "data" / "rules_index.json"
+    return get_search_data_dir() / "rules_index.json"
 
 def get_aliases_path() -> Path:
     """Get path to aliases.json"""
-    return get_qa_tools_dir() / "data" / "aliases.json"
+    return get_search_data_dir() / "aliases.json"
 
 def get_rulebook_markdown_files() -> List[Path]:
     """Get all numbered markdown rulebook files from root directory"""

@@ -1,9 +1,9 @@
 # General provisions and rules common to the weapon categories  
 <span id="GEN"></span>  
 
-> Marking convention used in this English version:
+<!-- > Marking convention used in this English version:
 > - `[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]]` marks places where FIE wording/concepts cannot be applied verbatim without change in this HEMA ruleset.
-> - Where the Hungarian HEMA text already references FIE articles (`t.`), those references are kept to support HU→FIE-ID→EN alignment.
+> - Where the Hungarian HEMA text already references FIE articles (`t.`), those references are kept to support HU→FIE-ID→EN alignment. -->
 
 ## Introduction  
 <span id="GEN-1"></span>  
@@ -24,12 +24,12 @@ A fundamental principle above all others is sportsmanship. Any workable ruleset 
 Explanation of the technical terms most commonly used in judging fencing actions.  
 
 ### Preamble  
-It is emphasised that this section does not replace fencing treatises; it is included to help the reader understand the rules. (Cf. FIE t.7)  
+It is emphasised that this section does not replace fencing treatises; it is included to help the reader understand the rules.  
 
 ### Fencing time  
 <span id="GEN-3.1"></span>  
 
-Fencing time is the time required to perform one simple fencing action. (Cf. FIE t.8)  
+Fencing time is the time required to perform one simple fencing action.  
 
 ### Offensive and defensive actions  
 <span id="GEN-3.2"></span>  
@@ -136,12 +136,10 @@ The point in line position is a specific position in which the fencer’s arm is
 The surface of the field of play is even and horizontal. It must not provide advantage or disadvantage to either fencer, especially with respect to lighting.  
 
 **GEN-4.2**  
-The piste/arena is square or rectangular. The minimum permitted bounding size is 6×9 metres and the maximum is 8×12 metres. The boundaries must be marked along their full length in a way that adheres well to the floor. The nearest obstacle must be at least 1 metre from the boundary.  
-
-[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] FIE piste dimensions (14m × 1.5–2m) do not apply to this HEMA arena format; use the arena sizes defined here.
+That portion of the field of play which is used for fencing is called the piste.  
 
 **GEN-4.3**  
-The centre of the piste may be marked.  
+The piste/arena is square or rectangular. The minimum permitted bounding size is 6×9 metres and the maximum is 8×12 metres. The boundaries must be marked along their full length in a way that adheres well to the floor. The nearest obstacle must be at least 1 metre from the boundary.  
 
 **GEN-4.4**  
 The starting positions of the fencers must be clearly marked on the floor such that they are at least 2 metres from the centre, leaving at least 4 metres between the two fencers at the start of the bout.  
@@ -160,8 +158,6 @@ At the venue of official MHS competitions (including training halls linked to th
 
 **GEN-5.1.3**  
 The safety measures specified in this ruleset and the attached standards are designed to reinforce safety but cannot guarantee it. Responsibility cannot be transferred to MHS, organisers, officials, or any person who may cause an accident.  
-
-[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] Specific protective equipment requirements below are HEMA-specific and differ from FIE weapon/equipment rules.
 
 ### For steel weapons  
 <span id="GEN-5.2"></span>  
@@ -366,8 +362,6 @@ When applying VOR rules/weapon variant, coming on guard may not be done in the p
 
 **GEN-6.2.1**  
 Before the start of the bout, the Referee asks the opponents to agree whether grappling holds are allowed during body-to-body fighting in their bout. This must be noted on the score sheet.  
-
-[[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] Mandatory pre-bout agreement on wrestling/grappling is HEMA-specific and not an FIE requirement.
 
 **GEN-6.2.2**  
 The start of the bout is signalled by “Play!”. Any movement executed or initiated before the command is not counted.  

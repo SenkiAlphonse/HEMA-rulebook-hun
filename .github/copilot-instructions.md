@@ -238,7 +238,7 @@ All sections should be present in the output, even if some are empty (e.g., "No 
 
   Task                     File
   ------------------------ ------------------------------
-  Rule parsing/indexing    `qa-tools/` scripts
-  Alias expansion          `qa_tools/aliases.json`
+    Rule parsing/indexing    `src/qa_tools/tools/` scripts
+    Alias expansion          `data/search/aliases.json`
   Add scenario exemplars   `docs/scenarios.md` (future)
   Extend rulebook          `rules/*.md`

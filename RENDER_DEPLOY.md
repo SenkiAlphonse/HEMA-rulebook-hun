@@ -121,7 +121,7 @@ To update rules and re-deploy:
 ## Questions?
 
 - Check Render logs: Dashboard → Web Service → Logs
-- Test locally: `python app.py` then visit `http://localhost:5000`
+- Test locally: `python wsgi.py` then visit `http://localhost:5000`
 - Read DEPLOYMENT.md for more details
 
 ---

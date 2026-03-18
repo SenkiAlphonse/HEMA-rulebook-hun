@@ -9,13 +9,8 @@ setup(
     version="1.0.0",
     description="Q&A tools and search engine for HEMA rulebook",
     author="HEMA Rulebook Project",
-    packages=find_packages(),
-    package_data={
-        "qa_tools": [
-            "data/rules_index.json",
-            "data/aliases.json",
-        ],
-    },
+    package_dir={"": "src"},
+    packages=find_packages("src"),
     python_requires=">=3.9",
     install_requires=[
         "mistune>=2.0.0",

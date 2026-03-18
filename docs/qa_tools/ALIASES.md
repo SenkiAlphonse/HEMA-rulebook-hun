@@ -65,7 +65,7 @@ Query: padded weapon target
 
 ## Customizing Aliases
 
-Edit `qa-tools/aliases.json` to add your own aliases:
+Edit `data/search/aliases.json` to add your own aliases:
 
 ```json
 {
@@ -97,12 +97,12 @@ Results are sorted by total relevance score.
 
 1. **`search_aliases.py`** - New alias-aware search (recommended)
    ```powershell
-   python qa-tools\search_aliases.py
+  python -m qa_tools.search_engine.search_aliases
    ```
 
 2. **`search.py`** - Original basic search (still works)
    ```powershell
-   python qa-tools\search.py
+  python -m qa_tools.search_engine.search
    ```
 
 ## Example Session

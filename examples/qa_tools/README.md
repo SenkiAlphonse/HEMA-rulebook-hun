@@ -9,7 +9,7 @@ Demonstrates how to use hierarchy metadata for AI-assisted rule explanations.
 
 **Usage:**
 ```bash
-python qa_tools/examples/ai_explainer_example.py
+python examples/qa_tools/ai_explainer_example.py
 ```
 
 **Purpose:** Shows how to leverage parent_id, child_ids, lineage, depth, and sibling_ids fields to build contextual explanations.
@@ -21,7 +21,7 @@ View sample rules from the generated index file.
 
 **Usage:**
 ```bash
-python qa_tools/examples/view_index.py
+python examples/qa_tools/view_index.py
 ```
 
 **Purpose:** Quick inspection tool to verify the rules index structure and content.
@@ -33,8 +33,7 @@ Diagnostic script to verify variant detection (VOR, COMBAT, AFTERBLOW).
 
 **Usage:**
 ```bash
-cd qa_tools
-python examples/check_variants.py
+python examples/qa_tools/check_variants.py
 ```
 
 **Purpose:** Validates that variant-specific rules are correctly tagged during parsing.
@@ -43,9 +42,10 @@ python examples/check_variants.py
 
 ## For Production Tools
 
-Production tools (parser, search, alias management) remain in `qa_tools/tools/` and are used by the build process.
+Production tools (parser, search, alias management) live in `src/qa_tools/tools/` and are used by the build process.
 
 For detailed documentation on the QA tools architecture, see:
 - `qa_tools/README.md` - Main QA tools documentation
+- `docs/qa_tools/README.md` - QA tools docs (this repo)
 - `docs/qa-architecture.md` - System architecture
 - `docs/SEARCH_ENGINE.md` - Search algorithm details
