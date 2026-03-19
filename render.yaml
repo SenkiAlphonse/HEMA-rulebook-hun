@@ -9,7 +9,7 @@ services:
       mkdir -p dist && \
       python build.py && \
       ls -la dist/rulebook.html
-    startCommand: gunicorn --bind 0.0.0.0:${PORT:-10000} --workers ${WEB_CONCURRENCY:-1} wsgi:app
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 wsgi:app
     envVars:
       - key: PYTHON_VERSION
         value: "3.11"

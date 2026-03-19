@@ -4,7 +4,6 @@ HEMA Rulebook Search Web App - Flask Application Factory
 
 import os
 import logging
-from pathlib import Path
 from flask import Flask
 from typing import Dict
 
@@ -13,7 +12,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Import configuration paths
-from app.config import get_templates_dir, get_rules_index_path, get_aliases_path
+from app.config import get_templates_dir, get_rules_index_path, get_aliases_path, get_prerendered_rulebook_path
 from app.config import SUMMARY_CHUNK_SIZE, SUMMARY_SEARCH_MAX_RULES, SUMMARY_MAX_INPUT_CHARS
 
 
@@ -43,18 +42,12 @@ def create_app() -> Flask:
     except Exception as e:
         logger.error(f"Unexpected error initializing search engine: {e}")
         raise RuntimeError("Failed to initialize search engine") from e
-    
-    # Ensure rulebook HTML is pre-rendered on startup if it doesn't exist
-    # This handles cases where the build command didn't run during deployment
-    rulebook_path = Path(__file__).parent.parent / "dist" / "rulebook.html"
-    if not rulebook_path.exists():
-        try:
-            logger.info("Pre-rendering rulebook HTML (dist/rulebook.html does not exist)...")
-            from build import build_rulebook
-            build_rulebook()
-            logger.info(f"✓ Rulebook pre-rendered to {rulebook_path}")
-        except Exception as e:
-            logger.warning(f"Failed to pre-render rulebook on startup: {e}. HTML will be generated dynamically on requests.")
+
+    prerendered_rulebook = get_prerendered_rulebook_path()
+    if not prerendered_rulebook.exists():
+        logger.error(f"Pre-rendered rulebook is missing: {prerendered_rulebook}")
+        logger.error("Ensure that build.py has been run to generate dist/rulebook.html")
+        raise RuntimeError("Pre-rendered rulebook is missing. Run build.py first.")
     
     # Configuration
     app.config['VARIANTS'] = ["VOR", "COMBAT", "AFTERBLOW"]

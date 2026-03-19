@@ -2,42 +2,19 @@
 Rulebook blueprint - handles full rulebook display and API endpoints
 """
 
-from pathlib import Path
-from flask import Blueprint, render_template, jsonify, current_app, send_file
-from app.utils import create_mistune_markdown, preprocess_rulebook_markdown, read_rulebook_markdown_content
+from flask import Blueprint, render_template, jsonify, current_app
 from app.config import get_prerendered_rulebook_path
 
 rulebook_bp = Blueprint('rulebook', __name__)
 
 
-def _get_rulebook_markdown_content():
-    """Read and concatenate all rulebook markdown files (shared utility)"""
-    return read_rulebook_markdown_content()
-
-
-def _render_rulebook_html():
-    """Render rulebook markdown to HTML"""
-    md = create_mistune_markdown()
-    content = _get_rulebook_markdown_content()
-    # Preprocess markdown before conversion
-    content = preprocess_rulebook_markdown(content)
-    return md(content)
-
-
 @rulebook_bp.route('/rulebook')
 def rulebook():
     """Display the entire rulebook"""
-    # Try to load pre-rendered rulebook first
-    dist_path = Path(__file__).parent.parent.parent / "dist" / "rulebook.html"
-    
-    if dist_path.exists():
-        # Pre-rendered HTML available
-        with open(dist_path, 'r', encoding='utf-8') as f:
-            html_content = f.read()
-    else:
-        # Fall back to runtime rendering
-        html_content = _render_rulebook_html()
-    
+    dist_path = get_prerendered_rulebook_path()
+    with open(dist_path, 'r', encoding='utf-8') as f:
+        html_content = f.read()
+
     return render_template("rulebook.html", markdown_content=html_content)
 
 

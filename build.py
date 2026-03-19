@@ -10,6 +10,10 @@ from __future__ import annotations
 
 import runpy
 
+from tools.build import build_rulebook, build_search_index
+
+__all__ = ["build_search_index", "build_rulebook"]
+
 
 if __name__ == "__main__":
     runpy.run_path("tools/build.py", run_name="__main__")
