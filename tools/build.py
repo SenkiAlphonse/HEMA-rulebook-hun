@@ -45,7 +45,7 @@ def build_search_index():
 
 
 def build_rulebook():
-    """Generate pre-rendered rulebook HTML"""
+    """Generate pre-rendered rulebook HTML for all languages (hun + eng)"""
     try:
         # Import shared utilities
         from app.utils import create_mistune_markdown, preprocess_rulebook_markdown, read_rulebook_markdown_content
@@ -54,26 +54,29 @@ def build_rulebook():
         dist_dir = get_dist_dir()
         dist_dir.mkdir(exist_ok=True)
         
-        # Read all markdown using shared utility
-        content = read_rulebook_markdown_content()
-        
-        if not content:
-            logger.warning("⚠ No markdown content found for rulebook")
-            return False
-        
-        # Convert to HTML
         md = create_mistune_markdown()
-        # Preprocess markdown before conversion
-        content = preprocess_rulebook_markdown(content)
-        html_content = md(content)
+        all_ok = True
+
+        for lang in ("hun", "eng"):
+            content = read_rulebook_markdown_content(lang=lang)
+            
+            if not content:
+                logger.warning(f"⚠ No markdown content found for lang='{lang}'")
+                all_ok = False
+                continue
+            
+            # Convert to HTML
+            processed = preprocess_rulebook_markdown(content)
+            html_content = md(processed)
+            
+            # Write to dist
+            output_path = get_prerendered_rulebook_path(lang=lang)
+            with open(output_path, 'w', encoding='utf-8') as f:
+                f.write(html_content)
+            
+            logger.info(f"✓ Rulebook ({lang}) pre-rendered to {output_path}")
         
-        # Write to dist
-        output_path = get_prerendered_rulebook_path()
-        with open(output_path, 'w', encoding='utf-8') as f:
-            f.write(html_content)
-        
-        logger.info(f"✓ Rulebook pre-rendered to {output_path}")
-        return True
+        return all_ok
         
     except Exception as e:
         logger.error(f"✗ Build failed: {type(e).__name__}: {e}")

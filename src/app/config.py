@@ -52,6 +52,10 @@ def get_rulebook_dir() -> Path:
     """Get rulebook directory (root directory with markdown files)"""
     return PROJECT_ROOT / "rules"
 
+def get_rulebook_en_dir() -> Path:
+    """Get English rulebook directory with markdown files"""
+    return PROJECT_ROOT / "rules_en"
+
 def get_rules_index_path() -> Path:
     """Get path to rules_index.json"""
     return get_search_data_dir() / "rules_index.json"
@@ -70,9 +74,22 @@ def get_rulebook_markdown_files() -> List[Path]:
     
     return md_files
 
-def get_prerendered_rulebook_path() -> Path:
-    """Get path to pre-rendered rulebook HTML"""
-    return get_dist_dir() / "rulebook.html"
+def get_rulebook_markdown_files_en() -> List[Path]:
+    """Get all numbered English markdown rulebook files"""
+    rulebook_dir = get_rulebook_en_dir()
+    md_files = sorted(rulebook_dir.glob("[0-9][0-9]*.md"))
+    md_files = [f for f in md_files if f.name != "README.md"]
+    return md_files
+
+def get_prerendered_rulebook_path(lang: str = "hun") -> Path:
+    """Get path to pre-rendered rulebook HTML.
+    
+    Args:
+        lang: Language code, 'hun' (Hungarian) or 'eng' (English). Defaults to 'hun'.
+    """
+    if lang == "eng":
+        return get_dist_dir() / "rulebook_eng.html"
+    return get_dist_dir() / "rulebook_hun.html"
 
 
 # AI/Gemini Configuration Constants

@@ -43,11 +43,12 @@ def create_app() -> Flask:
         logger.error(f"Unexpected error initializing search engine: {e}")
         raise RuntimeError("Failed to initialize search engine") from e
 
-    prerendered_rulebook = get_prerendered_rulebook_path()
-    if not prerendered_rulebook.exists():
-        logger.error(f"Pre-rendered rulebook is missing: {prerendered_rulebook}")
-        logger.error("Ensure that build.py has been run to generate dist/rulebook.html")
-        raise RuntimeError("Pre-rendered rulebook is missing. Run build.py first.")
+    for _lang in ("hun", "eng"):
+        prerendered_rulebook = get_prerendered_rulebook_path(_lang)
+        if not prerendered_rulebook.exists():
+            logger.error(f"Pre-rendered rulebook is missing: {prerendered_rulebook}")
+            logger.error("Ensure that build.py has been run to generate dist/rulebook_hun.html and dist/rulebook_eng.html")
+            raise RuntimeError(f"Pre-rendered rulebook ({_lang}) is missing. Run build.py first.")
     
     # Configuration
     app.config['VARIANTS'] = ["VOR", "COMBAT", "AFTERBLOW"]

@@ -16,17 +16,24 @@ def build_document_order(rules: List[Dict[str, Any]]) -> Dict[str, int]:
     return order
 
 
-def read_rulebook_markdown_content() -> str:
+def read_rulebook_markdown_content(lang: str = "hun") -> str:
     """
     Read and concatenate all rulebook markdown files.
     Shared utility to eliminate duplication between build.py and rulebook.py
     
+    Args:
+        lang: Language code, 'hun' (Hungarian, default) or 'eng' (English).
+    
     Returns:
         Concatenated markdown content with separator sections
     """
-    from app.config import get_rulebook_markdown_files
+    if lang == "eng":
+        from app.config import get_rulebook_markdown_files_en
+        md_files = get_rulebook_markdown_files_en()
+    else:
+        from app.config import get_rulebook_markdown_files
+        md_files = get_rulebook_markdown_files()
     
-    md_files = get_rulebook_markdown_files()
     content = ""
     
     for md_file in md_files:
