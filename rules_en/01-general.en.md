@@ -367,10 +367,10 @@ Before the start of the bout, the Referee asks the opponents to agree whether gr
 The start of the bout is signalled by “Play!”. Any movement executed or initiated before the command is not counted.  
 
 **GEN-6.2.3**  
-The bout stops on the command “Halt!”, except in special situations which modify the regular and normal conditions of the bout: [GEN-6.2.4], [GEN-6.2.5], [GEN-6.2.6], [GEN-6.2.7].  
+The bout stops on the command “Halt!”, except in special situations which modify the regular and normal conditions of the bout (see [GEN-6.10.9], [GEN-6.10.9] as well): [GEN-6.2.4], [GEN-6.2.5], [GEN-6.2.6], [GEN-6.2.7].  
 
 **GEN-6.2.4**  
-After “Halt!”, a fencer may not start a new action; only a movement begun before the order remains valid. Everything which occurs afterwards is not valid.  
+After “Halt!”, a fencer may not start a new action; only a movement begun before the order remains valid. Everything which occurs afterwards is not valid (but see [GEN-6.10.9], [GEN-6.10.9]).  
 
 **GEN-6.2.5**  
 If a fencer stops before “Halt!” and is hit, the hit is valid.  
@@ -397,7 +397,7 @@ If the Referee stops the bout because they believed an earlier hit was invalid a
 At the end of the pools and every direct elimination bout, before leaving the field of play, fencers check and sign the score sheet kept by the Referee or staff. In team matches this is done by the team captains.  
 
 **GEN-6.2.13**  
-In case of equipment failure during the bout, the Referee may allow a break of up to 5 minutes (starting when the Referee confirms the failure). This time may be used for repair or replacement and re-checking. If the competitor cannot continue by the end of the break, the Referee may exclude the competitor from that bout.  
+In case of equipment failure during the bout, the Referee may allow a break of up to 5 minutes (starting when the Referee confirms the failure). This time may be used for repair or replacement and re-checking. If the competitor cannot continue by the end of the break, the Referee may exclude the competitor from that bout. See [ORG-2.3.13].  
 
 ### Close quarters  
 <span id="GEN-6.3"></span>  

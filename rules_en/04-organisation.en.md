@@ -149,7 +149,7 @@ If, consequently, the opposing team captain has also requested a substitution, t
 If a team member must withdraw during a match due to an accident properly recognised by the Organising Team’s medical representative, the team captain may request the reserve to enter the match at the point where the withdrawing fencer withdrew, even during an ongoing relay bout.  
 
 **ORG-2.3.13**  
-The same applies if a team member must be removed from the match due to equipment failure. (See also the bout procedure rules.)  
+The same applies if a team member must be removed from the match due to equipment failure. See [GEN-6.2.13].  
 
 **ORG-2.3.14**  
 A fencer substituted in this manner may not take their place again in the team in the same match.  
@@ -158,14 +158,14 @@ A fencer substituted in this manner may not take their place again in the team i
 If both the fencer and the reserve (if any) must withdraw and the team is therefore incomplete, the team loses the match and must withdraw from the event, while retaining its placement in the final ranking.  
 
 **ORG-2.3.16**  
-If a fencer is excluded during a team match, their team loses the match and is excluded from the event without final placement.  
+If a fencer is excluded during a team match, their team loses the match and is excluded from the event without final placement. See [DIS-4.1.3].  
 
 **ORG-2.3.17**  
-If a team does not finish the event for any reason, the Organising Team applies the same rules as for an individual fencer failing to complete an event, treating the team as if it were a single competitor.  
+If a team does not finish the event for any reason, the Organising Team applies the same rules as for an individual fencer failing to complete an event, treating the team as if it were a single competitor. See [DIS-4.3.20].  
 
 **ORG-2.3.18**  
 If a team does not appear to fence against another team:  
-- If it has already fenced another team, it is treated as having not finished the event;  
+- If it has already fenced another team, it is treated as having not finished the event (see [ORG-2.2.4]);  
 - If it does not appear for its first match, it is treated as not participating in the event at all.  
 
 **ORG-2.3.19**  
