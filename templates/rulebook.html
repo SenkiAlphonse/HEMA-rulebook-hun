@@ -12,40 +12,41 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
             line-height: 1.6;
             min-height: 100vh;
-            padding: 20px;
         }
 
         .container {
             max-width: 900px;
             margin: 0 auto;
-            background: white;
-            min-height: 100vh;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            border: 1px solid #e8eaed;
         }
 
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #1a3a4a;
             color: white;
-            padding: 2rem;
+            padding: 3rem 2rem;
             text-align: center;
-            border-bottom: none;
+            border-bottom: 1px solid #0d1f24;
         }
 
         .header h1 {
-            font-size: 2rem;
+            font-size: 2.2em;
             margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
         }
 
         .header p {
-            font-size: 0.95rem;
+            font-size: 1em;
             opacity: 0.9;
+            font-weight: 400;
         }
 
         .content {
@@ -55,7 +56,7 @@
         .rule {
             margin-bottom: 2rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #ecf0f1;
         }
 
         .rule:last-child {
@@ -74,10 +75,11 @@
             color: inherit;
             padding: 0;
             border-radius: 0;
-            font-weight: 600;
-            font-family: inherit;
-            font-size: 1rem;
+            font-weight: 700;
+            font-family: "Courier New", monospace;
+            font-size: 1.05em;
             cursor: default;
+            color: #34495e;
         }
 
         .rule-id:hover {
@@ -85,7 +87,7 @@
         }
 
         .rule-metadata {
-            font-size: 0.85rem;
+            font-size: 0.8em;
             color: #7f8c8d;
             display: flex;
             gap: 1rem;
@@ -94,17 +96,24 @@
 
         .meta-badge {
             display: inline-block;
-            background-color: #e8eaf6;
-            color: #667eea;
-            padding: 0.2rem 0.5rem;
-            border-radius: 2px;
-            font-weight: 500;
+            background-color: #e8f1f7;
+            color: #2c5aa0;
+            padding: 0.3rem 0.7rem;
+            border-radius: 3px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .meta-badge.weapon {
+            background-color: #f4ede1;
+            color: #8b6f47;
         }
 
         .rule-text {
             margin-top: 0.8rem;
             line-height: 1.8;
-            color: #2c3e50;
+            color: #34495e;
         }
 
         .rule-text p {
@@ -116,8 +125,7 @@
             margin-left: 2rem;
             margin-bottom: 0.8rem;
         }
-        
-        /* Bullet list styling with custom class */
+
         ul.bullet-list {
             margin-left: 2rem;
             margin-bottom: 0.8rem;
@@ -127,7 +135,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Nested lists indentation */
         .rule-text ul ul,
         .rule-text ol ol,
         .rule-text ul ol,
@@ -137,7 +144,7 @@
         }
 
         .rule-text strong {
-            font-weight: 600;
+            font-weight: 700;
             color: #2c3e50;
         }
 
@@ -147,49 +154,36 @@
         }
 
         .rule-text a {
-            color: #3498db;
+            color: #34495e;
             text-decoration: none;
-            border-bottom: 1px dotted #3498db;
+            border-bottom: 1px solid #bdc3c7;
             cursor: pointer;
             transition: all 0.2s ease;
         }
 
         .rule-text a:hover {
-            background-color: #ecf0f1;
-            color: #2980b9;
+            background-color: #f0f3f7;
+            border-bottom-color: #34495e;
         }
 
-        /* Reference links styling */
         .ref-link {
-            background-color: #fff3cd;
+            background-color: #f5f5f5;
             padding: 0.2rem 0.4rem;
             border-radius: 2px;
-            font-weight: 500;
-            border-bottom: 2px solid #ffc107;
+            font-weight: 600;
+            border-bottom: 2px solid #bdc3c7;
         }
 
         .ref-link:hover {
-            background-color: #ffc107;
+            background-color: #e8eaed;
         }
 
         .rule-text img {
             max-width: 100%;
             height: auto;
             margin: 1rem 0;
-            border: 1px solid #ddd;
+            border: 1px solid #e8eaed;
             border-radius: 4px;
-        }
-
-        /* Rule indentation based on depth */
-        .rule-id {
-            display: block;
-            margin-top: 1.5rem;
-            margin-bottom: 0.3rem;
-            line-height: 1.6;
-        }
-
-        .rule-id br {
-            line-height: 1.2;
         }
 
         .rule-id.rule-depth-1,
@@ -212,7 +206,6 @@
             margin-bottom: 0.3rem;
         }
 
-        /* Paragraphs following indented rules inherit the same indentation */
         p.rule-depth-4 {
             margin-left: 2rem;
             margin-top: 0;
@@ -235,33 +228,31 @@
             font-weight: 700;
         }
 
-        /* Rule reference links */
         a.rule-ref {
-            color: #667eea !important;
-            text-decoration: none !important;
-            font-weight: 600;
-            padding: 0.1rem 0.3rem;
-            background-color: #e8eaf6;
+            color: #34495e;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 0.15rem 0.5rem;
+            background-color: #f0f3f7;
             border-radius: 3px;
             transition: all 0.2s ease;
-            cursor: pointer !important;
-            border-bottom: 2px solid #b8c1ec;
+            cursor: pointer;
+            border-bottom: 1.5px solid #bdc3c7;
             display: inline;
         }
 
         a.rule-ref:hover {
-            background-color: #667eea;
-            color: white !important;
-            border-bottom-color: #5568d3;
-            text-decoration: none !important;
+            background-color: #34495e;
+            color: white;
+            border-bottom-color: #2c3e50;
+            text-decoration: none;
         }
-        
+
         a.rule-ref:focus {
-            outline: 2px solid #667eea;
+            outline: 2px solid #34495e;
             outline-offset: 2px;
         }
 
-        /* Highlight animation for navigated-to rule */
         @keyframes highlight-pulse {
             0% { background-color: transparent; }
             50% { background-color: #fff3cd; }
@@ -272,65 +263,6 @@
             animation: highlight-pulse 1.5s ease-in-out;
         }
 
-        /* Bullet list styling */
-        a.rule-ref {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 0.1rem 0.3rem;
-            background-color: #e8eaf6;
-            border-radius: 3px;
-            transition: all 0.2s ease;
-            cursor: pointer;
-        }
-
-        a.rule-ref:hover {
-            background-color: #667eea;
-            color: white;
-        }
-
-        /* Back button for navigation */
-        #back-button {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background-color: #667eea;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 3.5rem;
-            height: 3.5rem;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            z-index: 1000;
-        }
-
-        #back-button:hover {
-            background-color: #5568d3;
-            transform: scale(1.1);
-        }
-
-        #back-button.show {
-            display: flex;
-        }
-
-        /* Highlight animation for navigated-to rule */
-        @keyframes highlight-pulse {
-            0% { background-color: transparent; }
-            50% { background-color: #fff3cd; }
-            100% { background-color: transparent; }
-        }
-
-        .rule-id.highlighted {
-            animation: highlight-pulse 1.5s ease-in-out;
-        }
-
-        /* Bullet list styling */
         .bullet-list {
             list-style-type: disc;
             margin-left: 2rem;
@@ -339,13 +271,12 @@
             line-height: 1.6;
         }
 
-        /* Table styling */
         .rule-text table {
             width: 100%;
             border-collapse: collapse;
             margin: 1rem 0;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
+            background-color: #ffffff;
+            border: 1px solid #e8eaed;
             border-radius: 4px;
             overflow: hidden;
         }
@@ -358,24 +289,23 @@
         .rule-text table th {
             padding: 0.8rem;
             text-align: left;
-            font-weight: 600;
-            border: 1px solid #ddd;
+            font-weight: 700;
+            border: 1px solid #e8eaed;
         }
 
         .rule-text table td {
             padding: 0.8rem;
-            border: 1px solid #ddd;
+            border: 1px solid #e8eaed;
         }
 
         .rule-text table tbody tr:nth-child(even) {
-            background-color: #f5f5f5;
+            background-color: #f8f9fa;
         }
 
         .rule-text table tbody tr:hover {
             background-color: #ecf0f1;
         }
 
-        /* Colored table cells */
         .rule-text table [bgcolor] {
             background-color: attr(bgcolor) !important;
             color: white;
@@ -401,60 +331,63 @@
             font-size: 0.8rem;
         }
 
-        /* Section headings */
         h1 {
             color: #2c3e50;
-            margin-top: 3rem;
+            margin-top: 2.5rem;
             margin-bottom: 0.8rem;
-            border-bottom: 2px solid #e74c3c;
+            border-bottom: 2px solid #34495e;
             padding-bottom: 0.5rem;
+            font-size: 1.8em;
+            font-weight: 700;
         }
 
         h2 {
             color: #34495e;
-            margin-top: 2.5rem;
+            margin-top: 2rem;
             margin-bottom: 0.6rem;
-            border-bottom: 1px solid #bdc3c7;
+            border-bottom: 1px solid #e8eaed;
             padding-bottom: 0.3rem;
+            font-size: 1.4em;
+            font-weight: 700;
         }
 
         h3 {
             color: #7f8c8d;
-            margin-top: 2rem;
+            margin-top: 1.8rem;
             margin-bottom: 0.5rem;
-            font-size: 1rem;
+            font-size: 1.1em;
+            font-weight: 700;
         }
 
         h4 {
             color: #95a5a6;
-            margin-top: 1.8rem;
+            margin-top: 1.5rem;
             margin-bottom: 0.4rem;
-            font-size: 0.95rem;
-            font-weight: 600;
+            font-size: 1em;
+            font-weight: 700;
         }
 
         h5 {
             color: #b0b0b0;
-            margin-top: 1.5rem;
+            margin-top: 1.2rem;
             margin-bottom: 0.3rem;
-            font-size: 0.9rem;
-            font-weight: 600;
+            font-size: 0.95em;
+            font-weight: 700;
         }
 
         h6 {
             color: #b0b0b0;
-            margin-top: 1.2rem;
+            margin-top: 1rem;
             margin-bottom: 0.3rem;
-            font-size: 0.85rem;
-            font-weight: 600;
+            font-size: 0.9em;
+            font-weight: 700;
         }
 
-        /* References section */
         .references-section {
             margin-top: 1rem;
             padding-top: 1rem;
-            border-top: 1px solid #e0e0e0;
-            font-size: 0.9rem;
+            border-top: 1px solid #e8eaed;
+            font-size: 0.9em;
             color: #7f8c8d;
         }
 
@@ -470,29 +403,28 @@
         }
 
         .reference-item {
-            background-color: #e8eaf6;
-            color: #667eea;
-            padding: 0.3rem 0.6rem;
+            background-color: #f0f3f7;
+            color: #34495e;
+            padding: 0.4rem 0.8rem;
             border-radius: 3px;
             cursor: pointer;
             transition: all 0.2s ease;
-            font-weight: 500;
+            font-weight: 600;
         }
 
         .reference-item:hover {
-            background-color: #d1d5f7;
+            background-color: #e8eaed;
             text-decoration: underline;
         }
 
-        /* Back to top button */
         .back-to-top {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #34495e;
             color: white;
             border: none;
-            padding: 0.8rem 1rem;
+            padding: 0;
             border-radius: 50%;
             width: 50px;
             height: 50px;
@@ -500,22 +432,22 @@
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(52, 73, 94, 0.25);
+            font-size: 1.5em;
+            transition: all 0.25s ease;
             z-index: 1000;
         }
 
         .back-to-top:hover {
+            background: #2c3e50;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+            box-shadow: 0 6px 16px rgba(52, 73, 94, 0.35);
         }
 
         .back-to-top.show {
             display: flex;
         }
 
-        /* Loading spinner */
         .loading {
             text-align: center;
             padding: 2rem;
@@ -524,11 +456,11 @@
 
         .spinner {
             border: 4px solid #ecf0f1;
-            border-top: 4px solid #e74c3c;
+            border-top: 4px solid #34495e;
             border-radius: 50%;
             width: 40px;
             height: 40px;
-            animation: spin 1s linear infinite;
+            animation: spin 0.8s linear infinite;
             margin: 0 auto 1rem;
         }
 
@@ -537,7 +469,6 @@
             100% { transform: rotate(360deg); }
         }
 
-        /* Anchor highlight */
         .rule.highlight {
             background-color: #fffacd;
             padding: 1rem;
@@ -560,73 +491,90 @@
         .search-box {
             position: sticky;
             top: 0;
-            background: white;
-            padding: 1rem 2rem;
-            border-bottom: 2px solid #e0e0e0;
+            background: #ffffff;
+            padding: 1.2rem 2rem;
+            border-bottom: 1px solid #e8eaed;
             z-index: 100;
             display: flex;
             gap: 1rem;
+            align-items: flex-end;
         }
 
         .search-box input {
             flex: 1;
-            padding: 0.7rem;
-            border: 1px solid #bdc3c7;
-            border-radius: 4px;
-            font-size: 1rem;
+            padding: 0.75rem;
+            border: 1.5px solid #dfe1e4;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.25s ease;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #34495e;
+            box-shadow: 0 0 0 3px rgba(52, 73, 94, 0.08);
         }
 
         .search-box button {
-            padding: 0.7rem 1.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0.75rem 1.5rem;
+            background: #34495e;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
+            font-weight: 700;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-size: 0.9em;
         }
 
         .search-box button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            background: #2c3e50;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(52, 73, 94, 0.25);
         }
 
         .nav-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .nav-btn {
-            padding: 0.7rem 1.5rem;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0.75rem 1.5rem;
+            background: #34495e;
             color: white;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s;
+            font-weight: 700;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            font-size: 0.9em;
         }
 
         .nav-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+            background: #2c3e50;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(52, 73, 94, 0.25);
         }
 
-        /* Table of Contents */
         .toc-container {
-            background-color: #f3f3f9;
-            border-left: 4px solid #667eea;
+            background-color: #f8fbfd;
+            border-left: 3px solid #34495e;
             padding: 1.5rem 2rem;
             margin-bottom: 2rem;
-            border-radius: 4px;
+            border-radius: 5px;
+            border: 1px solid #e8eaed;
         }
 
         .toc-container h2 {
             margin-top: 0;
             border: none;
-            color: #667eea;
-            font-size: 1.3rem;
+            color: #34495e;
+            font-size: 1.3em;
+            padding-bottom: 0;
         }
 
         .toc-list {
@@ -641,7 +589,7 @@
 
         .toc-item.level-1 {
             margin-left: 0;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .toc-item.level-2 {
@@ -650,22 +598,23 @@
 
         .toc-item.level-3 {
             margin-left: 3rem;
-            font-size: 0.95rem;
+            font-size: 0.95em;
         }
 
         .toc-item a {
-            color: #667eea;
+            color: #34495e;
             text-decoration: none;
             cursor: pointer;
             transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
         }
 
         .toc-item a:hover {
-            color: #764ba2;
+            color: #2c3e50;
             text-decoration: underline;
+            border-bottom-color: #34495e;
         }
 
-        /* Section heading with anchor */
         .section-heading {
             scroll-margin-top: 100px;
             margin-top: 2rem;
@@ -686,24 +635,25 @@
 
         @media (max-width: 768px) {
             .container {
-                max-width: 100%;
                 box-shadow: none;
+                border: none;
             }
 
             .header {
-                padding: 1.5rem;
+                padding: 2rem 1rem;
             }
 
             .header h1 {
-                font-size: 1.5rem;
+                font-size: 1.8em;
             }
 
             .content {
-                padding: 1rem;
+                padding: 1.2rem;
             }
 
             .search-box {
                 flex-direction: column;
+                gap: 0.8rem;
             }
 
             .search-box input,
@@ -714,13 +664,22 @@
             .rule-header {
                 flex-wrap: wrap;
             }
+
+            .nav-buttons {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .nav-btn {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>HEMA Rulebook</h1>
+            <h1>⚔️ HEMA Rulebook</h1>
             <p>Magyar Hosszúkardvívó Sportszövetség - Complete Rulebook Viewer</p>
         </div>
 
