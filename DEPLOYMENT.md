@@ -28,8 +28,18 @@ A Flask web application for searching the Hungarian Historical European Martial 
 
 ### 3. Deploy
 - Click "Create Web Service"
-- Render will automatically detect `render.yaml`, run tests, rebuild `dist/rulebook.html`, and start Gunicorn
+- Render will automatically detect `render.yaml`, run tests, rebuild rulebook/index artifacts, and start Gunicorn
 - Your site will be live at `https://hema-rulebook-hun.onrender.com`
+
+### 4. Rebuild Guarantee on Deployments
+- The service is configured to run `python build.py` in the Render **Build Command**.
+- This guarantees regeneration of:
+  - `dist/rulebook_hun.html`
+  - `dist/rulebook_eng.html`
+  - `data/search/rules_index_hun.json`
+  - `data/search/rules_index_eng.json`
+  - `data/search/rules_index.json`
+- Use **Manual Deploy → Deploy latest commit** (or push a commit) for content updates. A simple **Restart Service** does not deploy new code and should not be used as a rebuild trigger.
 
 ## Local Development
 

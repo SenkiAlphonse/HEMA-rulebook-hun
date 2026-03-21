@@ -44,12 +44,18 @@ The form will appear with these settings:
 2. Try searching: "longsword", "right of way", "target"
 3. Test the filters
 
+### 6. Ensure Rebuild Runs on Every Deployment
+- This project is configured to run `python build.py` in the Render **Build Command**.
+- Result: `dist/rulebook_hun.html`, `dist/rulebook_eng.html`, and `data/search/rules_index*.json` are regenerated on each deployment.
+- Important: **Restart Service** does not fetch a new commit and should not be used as a rebuild trigger.
+- Use **Manual Deploy → Deploy latest commit** (or push to trigger auto-deploy) for code/content changes.
+
 ## What Happens Automatically
 
 ✅ Render detects `render.yaml` configuration  
 ✅ Installs Python 3.11  
 ✅ Installs dependencies from `requirements.txt`  
-✅ Runs tests and rebuilds `dist/rulebook.html` during deploy  
+✅ Runs tests and rebuilds rulebook/index artifacts during deploy  
 ✅ Starts the app with Gunicorn  
 ✅ Serves the app on a public URL  
 ✅ Auto-redeploys when you push to GitHub  

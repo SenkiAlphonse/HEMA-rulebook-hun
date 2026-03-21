@@ -19,6 +19,10 @@
             min-height: 100vh;
         }
 
+        :root {
+            --anchor-scroll-offset: 110px;
+        }
+
         .container {
             max-width: 900px;
             margin: 0 auto;
@@ -616,9 +620,18 @@
         }
 
         .section-heading {
-            scroll-margin-top: 100px;
+            scroll-margin-top: var(--anchor-scroll-offset);
             margin-top: 2rem;
             margin-bottom: 1rem;
+        }
+
+        .rule-id[id],
+        h1[id],
+        h2[id],
+        h3[id],
+        h4[id],
+        h5[id] {
+            scroll-margin-top: var(--anchor-scroll-offset);
         }
 
         .section-heading h1 {
@@ -729,7 +742,7 @@
             const targetElement = document.getElementById(targetRuleId);
             if (targetElement) {
                 navigationHistory.push({ position: currentPosition, timestamp: Date.now() });
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 targetElement.classList.add('highlighted');
                 setTimeout(() => {
                     targetElement.classList.remove('highlighted');
