@@ -108,7 +108,7 @@ When directing bouts, judging hits and checking equipment, the Referee may — t
 The Referee’s authority extends to all fencers participating in or contributing to the competition. The Referee may propose to the Organising Team to expel anyone from the venue, including spectators, coaches or other attendants.  
 
 **DIS-2.1.6**  
-The Referee may propose to the Organising Team further sanctions they consider appropriate (exclusion from the whole competition, suspension or disqualification).  
+The Referee may propose to the Organising Team further sanctions they consider appropriate (exclusion from the whole competition, suspension or disqualification) (see [DIS-2.1.8.3]).  
 
 **DIS-2.1.7**  
 The appeal body regarding the Referee’s decisions is the delegate of the Referees’ Committee, or the MHS inspector (if there is no delegate).  
@@ -116,12 +116,17 @@ The appeal body regarding the Referee’s decisions is the delegate of the Refer
 
 ### The Organising Team / Szervező Csapat at official MHS competitions  
 
-**DIS-2.1.8**  
+**DIS-2.1.8** The Organising Team / Szervező Team at official MHS competitions.  
+**DIS-2.1.8.1**  
 The Organising Team, the delegates of the Referees’ Committee and the MHS inspector have authority over every competitor who participates in or is present at the fencing competition they supervise.  
-- If necessary, they may intervene in any dispute on their own initiative.  
-- They must maintain order and discipline during the competition and may apply the sanctions prescribed in this ruleset.  
-- The Organising Team must forward the disciplinary sanctions imposed during the competition to the MHS central office, as well as any requests for reprimand, suspension, permanent suspension, extension of sanctions, or final appeals.  
-- The Organising Team is responsible for implementing imposed sanctions where no appeal is possible or where the appeal has no suspensive effect.  
+**DIS-2.1.8.2**  
+If necessary, they may intervene in any dispute on their own initiative.  
+**DIS-2.1.8.3**  
+They must maintain order and discipline during the competition and may apply the sanctions prescribed in this ruleset.  
+**DIS-2.1.8.4**  
+The Organising Team must forward the disciplinary sanctions imposed during the competition to the MHS central office, as well as any requests for reprimand, suspension, permanent suspension, extension of sanctions, or final appeals.  
+**DIS-2.1.8.5**  
+The Organising Team is responsible for implementing imposed sanctions where no appeal is possible or where the appeal has no suspensive effect.  
 
 **DIS-2.1.9**  
 Against a spontaneous decision of the Organising Team / delegate / inspector, or a decision issued by them in first instance, an appeal may be filed with the MHS Disciplinary Committee.  
@@ -207,7 +212,7 @@ Disqualification in good faith does not necessarily entail a fixed-term or perma
 A team that fields a competitor who has been disqualified is itself subject to the same fate and is disqualified.  
 
 **DIS-3.3.7**  
-The consequences described for exclusion apply appropriately to disqualification as well.  
+The consequences described for exclusion apply appropriately to disqualification as well (see [DIS-3.2.3]–[DIS-3.2.4]).  
 
 #### Reprimand  
 
@@ -242,13 +247,13 @@ The Organising Team must immediately inform the MHS Office about sanctions impos
 <span id="DIS-4.1"></span>  
 
 **DIS-4.1.1**  
-Three types of penalties may be applied in the cases listed in the t.170 table. If the Referee penalises a fencer who committed several offences at the same time, the penalty for the less serious fault must be imposed first.  
+Three types of penalties may be applied in the cases listed in the table in [DIS-4.3.20]. If the Referee penalises a fencer who committed several offences at the same time, the penalty for the less serious fault must be imposed first.  
 
 **DIS-4.1.2**  
 Penalties accumulate and apply within a bout, except the BLACK CARD, which entails exclusion from the event and suspension from the remainder of the tournament.  
 
 **DIS-4.1.3**  
-However, if a team is excluded from a competition because one of its members received a black card, the team is not excluded from future competitions. Only the penalised fencer is suspended in accordance with the relevant rules, and during the suspension they may not be a member of any team.  
+However, if a team is excluded from a competition because one of its members received a black card, the team is not excluded from future competitions. Only the penalised fencer is suspended in accordance with [DIS-4.1.2], and during the suspension they may not be a member of any team.  
 
 **DIS-4.1.4**  
 Certain offences entail annulling any hit scored by the competitor at fault. During a bout, only those hits affected by the offence are to be annulled.  
