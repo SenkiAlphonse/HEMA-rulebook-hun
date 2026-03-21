@@ -336,6 +336,15 @@
             display: inline-block;
         }
 
+        .btn-rulebook .flag-icon {
+            width: 18px;
+            height: 12px;
+            vertical-align: -2px;
+            margin-right: 8px;
+            border-radius: 2px;
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6);
+        }
+
         .btn-rulebook:hover {
             background: white;
             color: #667eea;
@@ -350,8 +359,26 @@
             <h1>⚔️ HEMA Rulebook Search</h1>
             <p>Hungarian Historical European Martial Arts - Quick Rule Lookup</p>
             <div class="header-buttons">
-                <a href="/rulebook?lang=hun" target="_blank" rel="noopener noreferrer" class="btn-rulebook">🇭🇺 Full Rulebook HUN</a>
-                <a href="/rulebook?lang=eng" target="_blank" rel="noopener noreferrer" class="btn-rulebook">🇬🇧 Full Rulebook ENG</a>
+                <a href="/rulebook?lang=hun" target="_blank" rel="noopener noreferrer" class="btn-rulebook">
+                    Full Rulebook
+                    <svg class="flag-icon" viewBox="0 0 3 2" aria-hidden="true" focusable="false">
+                        <rect width="3" height="2" fill="#ce2939"></rect>
+                        <rect width="3" height="1.333" y="0.667" fill="#ffffff"></rect>
+                        <rect width="3" height="0.667" y="1.333" fill="#477050"></rect>
+                    </svg>
+                </a>
+                <a href="/rulebook?lang=eng" target="_blank" rel="noopener noreferrer" class="btn-rulebook">
+                    Full Rulebook
+                    <svg class="flag-icon" viewBox="0 0 60 30" aria-hidden="true" focusable="false">
+                        <rect width="60" height="30" fill="#012169"></rect>
+                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#ffffff" stroke-width="6"></path>
+                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="3"></path>
+                        <rect x="24" width="12" height="30" fill="#ffffff"></rect>
+                        <rect y="9" width="60" height="12" fill="#ffffff"></rect>
+                        <rect x="26" width="8" height="30" fill="#C8102E"></rect>
+                        <rect y="11" width="60" height="8" fill="#C8102E"></rect>
+                    </svg>
+                </a>
             </div>
         </div>
 
@@ -359,10 +386,10 @@
             <form class="search-form" id="searchForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="searchLanguage">Ruleset Language</label>
+                        <label for="searchLanguage">Language</label>
                         <select id="searchLanguage" name="searchLanguage">
-                            <option value="hun">Hungarian Rules</option>
-                            <option value="eng">English Rules</option>
+                            <option value="hun">Hungarian</option>
+                            <option value="eng">English</option>
                         </select>
                     </div>
                     <div class="form-group">

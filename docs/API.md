@@ -149,222 +149,124 @@ curl -X POST http://localhost:5000/api/search \
 
 ### 2. Variant-Specific Search
 
-**Endpoint:** `POST /api/search/variant`
+**Endpoint:** `GET /api/rule/<rule_id>?rules_lang=hun|eng`
 
-Search for rules specific to longsword variants (VOR, COMBAT, AFTERBLOW).
+Get a specific rule by ID from the selected language index.
 
-**Request Body:**
-```json
-{
-  "query": "distance rules",
-  "variant": "VOR",
-  "limit": 10
-}
-```
-
-**Parameters:**
+**Query Parameters:**
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
-| `query` | string | ✓ | — | Search query |
-| `variant` | string | ✓ | — | Longsword variant: "VOR", "COMBAT", or "AFTERBLOW" |
-| `limit` | integer | ✗ | 10 | Max results |
+| `rules_lang` | string | ✗ | `hun` | Ruleset language: `hun` or `eng` |
 
 **Response (200 OK):**
 ```json
 {
   "success": true,
-  "query": "distance rules",
-  "variant": "VOR",
-  "results": [
-    {
-      "rule_id": "VOR-3.2.1",
-      "title": "Minimum Distance in VOR",
-      "content": "In VOR variant, fencers must maintain minimum distance of 1.5 meters...",
-      "section": "VOR-Specific Rules",
-      "score": 0.96,
-      "source_file": "05.a-hosszukard-VOR.md",
-      "variant": "VOR"
-    }
-  ],
-  "result_count": 1,
-  "execution_time_ms": 2.1
-}
-```
-
-**Response (400 Bad Request):**
-```json
-{
-  "success": false,
-  "error": "Invalid variant. Must be one of: VOR, COMBAT, AFTERBLOW"
+  "rules_lang": "eng",
+  "rule": {
+    "rule_id": "GEN-1.1",
+    "text": "The purpose of this event is...",
+    "section": "General Provisions",
+    "subsection": "Introduction",
+    "document": "01-general.en.md",
+    "weapon_type": "general",
+    "variant": "",
+    "anchor_id": "GEN-1"
+  }
 }
 ```
 
 **Example:**
 ```bash
-curl -X POST http://localhost:5000/api/search/variant \
-  -H "Content-Type: application/json" \
-  -d '{"query":"afterblow regulations","variant":"AFTERBLOW"}'
+curl "http://localhost:5000/api/rule/GEN-1.1?rules_lang=eng"
 ```
 
 ---
 
 ### 3. Extract Rule by ID
 
-**Endpoint:** `POST /api/extract`
+**Endpoint:** `GET /api/stats?rules_lang=hun|eng`
 
-Get a specific rule by its rule ID (e.g., "GEN-1.2.3").
-
-**Request Body:**
-```json
-{
-  "rule_id": "GEN-1.2.3"
-}
-```
-
-**Parameters:**
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `rule_id` | string | ✓ | Rule identifier (e.g., "GEN-1.2.3", "HOSSZU-2.1") |
+Get statistics for the selected language ruleset.
 
 **Response (200 OK):**
 ```json
 {
-  "success": true,
-  "rule": {
-    "rule_id": "GEN-1.2.3",
-    "title": "Valid Target Areas",
-    "content": "Valid target areas include head, torso, arms, and legs. Strikes to the spine are prohibited.",
-    "section": "General Rules",
-    "source_file": "03-altalanos.md",
-    "anchor_id": "GEN-1.2.3",
-    "weapon_type": "all",
-    "full_hierarchy": "01. General Rules > 1.2 Combat Rules > 1.2.3 Target Areas"
-  }
-}
-```
-
-**Response (404 Not Found):**
-```json
-{
-  "success": false,
-  "error": "Rule 'GEN-1.2.99' not found in index"
+  "rules_lang": "hun",
+  "total_rules": 425,
+  "vor_rules": 26,
+  "combat_rules": 25,
+  "afterblow_rules": 24,
+  "longsword_rules": 173
 }
 ```
 
 **Example:**
 ```bash
-curl -X POST http://localhost:5000/api/extract \
-  -H "Content-Type: application/json" \
-  -d '{"rule_id":"GEN-1.2.3"}'
+curl "http://localhost:5000/api/stats?rules_lang=eng"
 ```
 
 ---
 
 ### 4. Resolve Alias
 
-**Endpoint:** `POST /api/search/alias`
+**Endpoint:** `POST /api/extract`
 
-Resolve a Hungarian or English term to its mapped rules and aliases.
+Download a markdown extract filtered by weapon + variant from selected language index.
 
 **Request Body:**
 ```json
 {
-  "term": "szúrás",
-  "language": "hu"
+  "rules_lang": "eng",
+  "weapon_filter": "longsword",
+  "variant_filter": "VOR"
 }
 ```
-
-**Parameters:**
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `term` | string | ✓ | — | Term to resolve (Hungarian or English) |
-| `language` | string | ✗ | "auto" | Force language: "hu" or "en" |
 
 **Response (200 OK):**
-```json
-{
-  "success": true,
-  "term": "szúrás",
-  "language": "hu",
-  "primary_meaning": "thrust/lunge",
-  "aliases": ["thrust", "lunge", "szúrások (plural)"],
-  "related_rules": [
-    {
-      "rule_id": "GEN-2.1.5",
-      "title": "Thrust Mechanics",
-      "score": 0.98
-    },
-    {
-      "rule_id": "HOSSZU-1.3.2",
-      "title": "Valid Thrust Targets in Longsword",
-      "score": 0.95
-    }
-  ],
-  "result_count": 2
-}
-```
-
-**Response (404 Not Found):**
-```json
-{
-  "success": false,
-  "error": "Term 'unknown_word' not found in alias database"
-}
-```
+- `text/markdown` attachment
+- Filename format: `rulebook-extract_<rules_lang>_<weapon>_<variant>.md`
 
 **Example:**
 ```bash
-curl -X POST http://localhost:5000/api/search/alias \
+curl -X POST http://localhost:5000/api/extract \
   -H "Content-Type: application/json" \
-  -d '{"term":"vágás"}'
+  -d '{"rules_lang":"hun","weapon_filter":"longsword","variant_filter":"VOR"}'
 ```
 
 ---
 
 ### 5. Fuzzy Match
 
-**Endpoint:** `POST /api/search/fuzzy`
+**Endpoint:** `POST /api/summarize`
 
-Find rules using fuzzy/approximate string matching (tolerance for typos).
+Summarize top matching rules from a selected ruleset language.
 
 **Request Body:**
 ```json
 {
-  "query": "longsword taget",
-  "tolerance": 0.8
+  "mode": "search",
+  "query": "valid targets",
+  "rules_lang": "eng",
+  "language": "EN",
+  "format": "standard",
+  "weapon_filter": null,
+  "variant_filter": null
 }
 ```
-
-**Parameters:**
-| Parameter | Type | Required | Default | Description |
-|-----------|------|----------|---------|-------------|
-| `query` | string | ✓ | — | Query with potential typos |
-| `tolerance` | float | ✗ | 0.8 | Match tolerance (0.0-1.0, higher = stricter) |
-| `limit` | integer | ✗ | 10 | Max results |
 
 **Response (200 OK):**
 ```json
 {
   "success": true,
-  "query": "longsword taget",
-  "corrected_query": "longsword target",
-  "results": [
-    {
-      "rule_id": "GEN-1.2.3",
-      "title": "Valid Target Areas",
-      "content": "...",
-      "fuzzy_match_score": 0.92
-    }
-  ],
-  "result_count": 1
+  "format": "standard",
+  "language": "EN",
+  "rules_lang": "eng",
+  "summary": "...",
+  "rule_count_total": 20,
+  "rule_count_summarized": 12,
+  "input_truncated": true
 }
-```
-
-**Example:**
-```bash
-curl -X POST http://localhost:5000/api/search/fuzzy \
-  -H "Content-Type: application/json" \
-  -d '{"query":"afterblow regelz","tolerance":0.75}'
 ```
 
 ---
@@ -373,191 +275,57 @@ curl -X POST http://localhost:5000/api/search/fuzzy \
 
 ### 6. Get Rulebook Index
 
-**Endpoint:** `GET /api/rulebook/index`
+**Endpoint:** `GET /rulebook?lang=hun|eng`
 
-Get the complete rulebook structure with all chapters and sections.
+Open pre-rendered full rulebook HTML in browser.
 
-**Query Parameters:** None
-
-**Response (200 OK):**
-```json
-{
-  "success": true,
-  "chapters": [
-    {
-      "id": "01",
-      "title": "Bevezetés",
-      "filename": "01-altalanos.md",
-      "rule_count": 15
-    },
-    {
-      "id": "03",
-      "title": "Felszerelés",
-      "filename": "03-felszereles.md",
-      "rule_count": 22
-    },
-    {
-      "id": "04",
-      "title": "Általános szabályok",
-      "filename": "04-altalanos.md",
-      "rule_count": 45
-    }
-  ],
-  "total_rules": 487,
-  "total_chapters": 9,
-  "last_updated": "2026-02-09T14:32:00Z"
-}
-```
-
-**Example:**
+**Examples:**
 ```bash
-curl http://localhost:5000/api/rulebook/index
+curl "http://localhost:5000/rulebook?lang=hun"
+curl "http://localhost:5000/rulebook?lang=eng"
 ```
 
 ---
 
 ### 7. Get Chapter Rules
 
-**Endpoint:** `GET /api/rulebook/chapter/<chapter_id>`
+**Endpoint:** `GET /api/rulebook?lang=hun|eng`
 
-Get all rules in a specific chapter.
-
-**URL Parameters:**
-| Parameter | Type | Description |
-|-----------|------|-------------|
-| `chapter_id` | string | Chapter ID (e.g., "03", "05") |
-
-**Query Parameters:**
-| Parameter | Type | Default | Description |
-|-----------|------|---------|-------------|
-| `detailed` | boolean | true | Include full rule content (false = summaries only) |
+Return all indexed rules from the selected language index.
 
 **Response (200 OK):**
 ```json
 {
   "success": true,
-  "chapter_id": "04",
-  "chapter_title": "Általános szabályok",
-  "filename": "04-altalanos.md",
+  "lang": "hun",
   "rules": [
     {
       "rule_id": "GEN-1.1",
-      "title": "Match Structure",
-      "content": "A match consists of three phases...",
-      "section": "1. Match Phases"
-    },
-    {
-      "rule_id": "GEN-1.2",
-      "title": "Round Duration",
-      "content": "Each round lasts 3 minutes...",
-      "section": "1. Match Phases"
+      "text": "..."
     }
   ],
-  "rule_count": 45
+  "total": 425
 }
 ```
 
 **Example:**
 ```bash
-curl "http://localhost:5000/api/rulebook/chapter/04?detailed=true"
+curl "http://localhost:5000/api/rulebook?lang=eng"
 ```
 
 ---
 
-### 8. Get Chapter Metadata
+### 8. Legacy Endpoints Removed
 
-**Endpoint:** `GET /api/rulebook/chapters`
+These endpoints were part of an earlier draft and are **not implemented** in the current backend:
 
-Get metadata for all chapters without full rule content.
-
-**Query Parameters:** None
-
-**Response (200 OK):**
-```json
-{
-  "success": true,
-  "chapters": [
-    {
-      "id": "01",
-      "title": "Bevezetés",
-      "filename": "01-altalanos.md",
-      "rule_count": 15,
-      "weapon_type": "all"
-    },
-    {
-      "id": "05",
-      "title": "Hosszúkard",
-      "filename": "05-hosszukard.md",
-      "rule_count": 78,
-      "weapon_type": "longsword"
-    }
-  ],
-  "total_chapters": 9,
-  "total_rules": 487
-}
-```
-
-**Example:**
-```bash
-curl http://localhost:5000/api/rulebook/chapters
-```
-
----
-
-## AI Service Endpoints
-
-### 9. AI-Enhanced Rule Explanation
-
-**Endpoint:** `POST /api/ai/explain`
-
-Get an AI-generated explanation of a rule with examples and clarifications.
-
-**Request Body:**
-```json
-{
-  "rule_id": "GEN-1.2.3",
-  "context": "I'm new to HEMA and need simple explanation"
-}
-```
-
-**Parameters:**
-| Parameter | Type | Required | Description |
-|-----------|------|----------|-------------|
-| `rule_id` | string | ✓ | Rule to explain |
-| `context` | string | ✗ | Additional context for AI (e.g., experience level) |
-| `language` | string | ✗ | Output language: "hu" or "en" |
-
-**Response (200 OK):**
-```json
-{
-  "success": true,
-  "rule_id": "GEN-1.2.3",
-  "original_rule": "Valid target areas include head, torso, arms, and legs...",
-  "ai_explanation": "Think of valid target areas as the parts of your opponent's body where you can score points. This includes the head (any part above the shoulders), torso (front and back), arms (from shoulder to wrist), and legs (from hip to ankle). You cannot strike the spine, groin, or joints as these are protected areas.",
-  "examples": [
-    "A thrust to the chest = valid target",
-    "A slash to the forearm = valid target",
-    "A strike to the back of the head = valid target",
-    "A strike to the spine = INVALID (protected)"
-  ],
-  "generated_at": "2026-02-09T14:32:00Z"
-}
-```
-
-**Response (400 Bad Request):**
-```json
-{
-  "success": false,
-  "error": "Rule 'UNKNOWN-1.1' not found"
-}
-```
-
-**Example:**
-```bash
-curl -X POST http://localhost:5000/api/ai/explain \
-  -H "Content-Type: application/json" \
-  -d '{"rule_id":"GEN-1.2.3","context":"beginner fencer"}'
-```
+- `POST /api/search/variant`
+- `POST /api/search/alias`
+- `POST /api/search/fuzzy`
+- `GET /api/rulebook/index`
+- `GET /api/rulebook/chapter/<chapter_id>`
+- `GET /api/rulebook/chapters`
+- `POST /api/ai/explain`
 
 ---
 
@@ -644,7 +412,7 @@ location /api {
 ```bash
 # User asks: "What are the rules for longsword matches?"
 curl -X POST http://localhost:5000/api/search \
-  -d '{"query":"longsword match rules","limit":5}'
+  -d '{"query":"longsword match rules","rules_lang":"eng","max_results":5}'
 
 # Response includes top 5 relevant rules from 05-hosszukard.md
 ```
@@ -662,8 +430,8 @@ curl -X POST http://localhost:5000/api/search \
 ### Use Case 3: Mobile App Integration
 
 ```bash
-# App fetches all chapters for offline cache
-curl http://localhost:5000/api/rulebook/index
+# App fetches full rule list for offline cache (English)
+curl "http://localhost:5000/api/rulebook?lang=eng"
 
 # User searches locally using /api/search endpoint
 # App translates user query to JSON and posts to /api/search
@@ -672,31 +440,30 @@ curl http://localhost:5000/api/rulebook/index
 ### Use Case 4: VOR vs COMBAT Comparison
 
 ```bash
-# Coach asks: "What's different about VOR distance rules?"
-curl -X POST http://localhost:5000/api/search/variant \
-  -d '{"query":"distance requirements","variant":"VOR"}'
+# Coach compares variant behavior using filters in one endpoint
+curl -X POST http://localhost:5000/api/search \
+  -H "Content-Type: application/json" \
+  -d '{"query":"distance requirements","rules_lang":"hun","variant_filter":"VOR"}'
 
-# Gets VOR-specific rules, then repeat with variant=COMBAT to compare
+# Repeat with variant_filter="COMBAT" to compare
 ```
 
 ### Use Case 5: Glossary Lookup
 
 ```bash
-# Student asks: "What does 'szúrás' mean?"
-curl -X POST http://localhost:5000/api/search/alias \
-  -d '{"term":"szúrás","language":"hu"}'
-
-# Returns definition + related rules using this term
+# Student asks: "What does 'szúrás' mean?" (alias-aware search)
+curl -X POST http://localhost:5000/api/search \
+  -H "Content-Type: application/json" \
+  -d '{"query":"szúrás","rules_lang":"hun"}'
 ```
 
-### Use Case 6: AI-Powered Learning
+### Use Case 6: AI-Powered Summary
 
 ```bash
-# Beginner asks for explanation
-curl -X POST http://localhost:5000/api/ai/explain \
-  -d '{"rule_id":"GEN-1.2.3","context":"I am a beginner"}'
-
-# Gets AI explanation with examples and clarifications
+# Beginner asks for search-based summary
+curl -X POST http://localhost:5000/api/summarize \
+  -H "Content-Type: application/json" \
+  -d '{"mode":"search","query":"target areas","rules_lang":"eng","language":"EN","format":"standard"}'
 ```
 
 ---
@@ -706,12 +473,11 @@ curl -X POST http://localhost:5000/api/ai/explain \
 | Operation | Typical Time | Notes |
 |-----------|--------------|-------|
 | `/api/search` | 2-5 ms | Hash-based index lookup |
-| `/api/extract` | <1 ms | Direct index access |
-| `/api/search/variant` | 3-7 ms | Filters + scoring |
-| `/api/search/alias` | 1-3 ms | Hash-based alias lookup |
-| `/api/ai/explain` | 1-3 seconds | LLM inference time |
-| `/api/rulebook/index` | <1 ms | Cached metadata |
-| `/api/rulebook/chapter/*` | 5-10 ms | Full chapter retrieval |
+| `/api/stats` | <1 ms | Preloaded in-memory counters |
+| `/api/rule/<id>` | <1 ms | Direct rule lookup |
+| `/api/extract` | 2-8 ms | Filter + markdown export |
+| `/api/summarize` | 1-3 seconds | LLM inference time |
+| `/api/rulebook` | 2-10 ms | Returns full index rules array |
 
 **Note:** Times are for production deployment with optimizations. Development mode may be 2-3x slower.
 
@@ -735,17 +501,21 @@ curl -X POST $BASE_URL/api/search \
 echo -e "\n\nTesting extract..."
 curl -X POST $BASE_URL/api/extract \
   -H "Content-Type: application/json" \
-  -d '{"rule_id":"GEN-1.1.1"}'
+  -d '{"rules_lang":"hun","weapon_filter":"longsword","variant_filter":"VOR"}'
 
-# Test 3: Index
-echo -e "\n\nTesting rulebook index..."
-curl $BASE_URL/api/rulebook/index
+# Test 3: Stats (English ruleset)
+echo -e "\n\nTesting stats..."
+curl "$BASE_URL/api/stats?rules_lang=eng"
 
-# Test 4: Variant search
-echo -e "\n\nTesting variant search..."
-curl -X POST $BASE_URL/api/search/variant \
+# Test 4: Rule lookup
+echo -e "\n\nTesting rule lookup..."
+curl "$BASE_URL/api/rule/GEN-1.1?rules_lang=hun"
+
+# Test 5: Summarize
+echo -e "\n\nTesting summarize..."
+curl -X POST $BASE_URL/api/summarize \
   -H "Content-Type: application/json" \
-  -d '{"query":"VOR rules","variant":"VOR"}'
+  -d '{"mode":"search","query":"target area","rules_lang":"eng","language":"EN","format":"standard"}'
 ```
 
 ---
@@ -753,21 +523,17 @@ curl -X POST $BASE_URL/api/search/variant \
 ## Changelog
 
 ### v2.0 (Current - February 2026)
-- Added AI-enhanced explanation endpoint (`/api/ai/explain`)
-- Improved error messages with error codes
-- Added fuzzy matching endpoint
-- Variant search endpoint added
-- Full type hints in responses
+- Added bilingual ruleset indexing and `rules_lang` parameter support
+- Added language-specific pre-rendered rulebooks (`/rulebook?lang=hun|eng`)
+- Added search-engine selection by index language (`hun`/`eng`)
 
 ### v1.0 (Original)
 - Basic search endpoint
-- Extract rule endpoint
-- Rulebook index endpoints
-- Alias resolution
+- Rule extract export
 
 ---
 
-**Last Updated:** February 2026  
+**Last Updated:** March 2026  
 **Maintainer:** AI Agent, HEMA Development Team  
 **Status:** Production Ready
 

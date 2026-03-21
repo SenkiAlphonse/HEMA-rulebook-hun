@@ -1,6 +1,6 @@
 # Magyar Hosszúkardvívó Sportszövetség (Hungarian Longsword Federation, MHS) - HEMA Rulebook Project
 
-[![Tests](https://img.shields.io/badge/tests-59%2F59%20passing-brightgreen)](./tests)
+[![Tests](https://img.shields.io/badge/tests-58%2F58%20passing-brightgreen)](./tests)
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green)](./LICENSE)
 
@@ -29,7 +29,7 @@ A comprehensive AI-assisted Hungarian Historical European Martial Arts (HEMA) ru
 - 🤖 **AI Summaries** (Optional) - Rule summarization via Gemini AI
 - 📱 **Web Interface** - Clean, responsive search interface
 - ⚔️ **Variant Support** - Different rules for VOR, COMBAT, AFTERBLOW variants
-- 🇭🇺 **Hungarian Content** - Complete rulebook in Hungarian with glossary
+- 🌐 **Bilingual Rulesets** - Full Hungarian and English rulebooks (search + full view)
 
 ## Quick Start
 
@@ -68,13 +68,21 @@ See [Getting Started](./GETTING_STARTED.md) for detailed setup instructions.
 ### REST API
 ```bash
 # Search for rules
-curl "http://localhost:5000/api/search?query=target+areas"
+curl -X POST "http://localhost:5000/api/search" \
+	-H "Content-Type: application/json" \
+	-d '{"query":"target areas","rules_lang":"eng"}'
 
 # Get specific rule
-curl "http://localhost:5000/api/rule/GEN-1.1.1"
+curl "http://localhost:5000/api/rule/GEN-1.1?rules_lang=hun"
 
 # Get AI summary (requires GEMINI_API_KEY)
-curl "http://localhost:5000/api/rule/GEN-1.1.1/summary"
+curl -X POST "http://localhost:5000/api/summarize" \
+	-H "Content-Type: application/json" \
+	-d '{"mode":"search","query":"valid targets","rules_lang":"eng","language":"EN","format":"standard"}'
+
+# Open full pre-rendered rulebook
+curl "http://localhost:5000/rulebook?lang=hun"
+curl "http://localhost:5000/rulebook?lang=eng"
 ```
 
 See [API Documentation](./docs/API.md) for complete endpoint reference.
@@ -121,10 +129,10 @@ HEMA-rulebook-hun/
 │
 ├── tools/                       # Repo scripts (build, setup checks, etc.)
 ├── data/                        # Data assets
-│   ├── search/                  # aliases.json + rules_index.json
+│   ├── search/                  # aliases + language indexes (hun/eng)
 │   └── fie_extracted/           # FIE corpus (not committed by default)
 │
-├── tests/                       # Test suite (59 tests)
+├── tests/                       # Test suite (58 tests)
 │   ├── unit/                   # Unit tests
 │   └── integration/            # Integration tests
 │
@@ -147,12 +155,17 @@ HEMA-rulebook-hun/
 
 ## Recent Improvements
 
+### Recent Platform Enhancements
+- ✅ Bilingual rulebook rendering (`/rulebook?lang=hun|eng`)
+- ✅ Bilingual indexing/search (`rules_lang: hun|eng`)
+- ✅ Pre-rendered deploy artifacts for both languages
+
 ### Phase 2 Code Quality Enhancements
 - ✅ Professional Python package structure (`src/qa_tools/`)
 - ✅ Consolidated search engines (single production implementation)
 - ✅ Improved exception handling and logging
 - ✅ Centralized configuration management
-- ✅ Comprehensive test suite (59 tests, 46% coverage)
+- ✅ Comprehensive test suite (58 tests, 50%+ coverage)
 
 ### Phase 1 Critical Fixes
 - ✅ Bare exception handling → specific exception types
@@ -212,9 +225,9 @@ FLASK_DEBUG=true
 ### Main Configuration (src/app/config.py)
 
 ```python
-GEMINI_MODEL_CANDIDATES = ['gemini-2.0-flash', 'gemini-1.5-pro']
-SUMMARY_CHUNK_SIZE = 2000
-SUMMARY_MAX_RETRIES = 3
+GEMINI_MODEL_CANDIDATES = ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
+SUMMARY_CHUNK_SIZE = 6000
+SUMMARY_MAX_RETRIES = 2
 ```
 
 ## Running the Application
@@ -254,9 +267,9 @@ pytest tests/ --cov=app --cov=qa_tools
 ```
 
 ### Test Statistics
-- **Total Tests**: 59
-- **Passing**: 59/59 (100%)
-- **Coverage**: 46.07%
+- **Total Tests**: 58
+- **Passing**: 58/58 (100%)
+- **Coverage**: 50%+
 - **Time**: ~2.3 seconds
 
 See [TESTING.md](./docs/TESTING.md) for detailed testing guide.
@@ -282,7 +295,7 @@ See [TESTING.md](./docs/TESTING.md) for detailed testing guide.
 
 ## Known Limitations
 
-- Rulebook is Hungarian only (English translation planned)
+- English ruleset currently has fewer indexed documents than Hungarian
 - PDF penalty table requires OCR for full-text search
 - Gemini API integration is optional (works without it)
 - Some visual rules (diagrams, referee signals) are images only
@@ -351,5 +364,5 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 
 ---
 
-**Last Updated**: 2024 | **Status**: Active Development | **Tests**: 59/59 Passing ✅
+**Last Updated**: 2026 | **Status**: Active Development | **Tests**: 58/58 Passing ✅
 
