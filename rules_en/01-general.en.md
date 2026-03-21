@@ -367,7 +367,7 @@ Before the start of the bout, the Referee asks the opponents to agree whether gr
 The start of the bout is signalled by “Play!”. Any movement executed or initiated before the command is not counted.  
 
 **GEN-6.2.3**  
-The bout stops on the command “Halt!”, except in special situations which modify the regular and normal conditions of the bout.  
+The bout stops on the command “Halt!”, except in special situations which modify the regular and normal conditions of the bout: [GEN-6.2.4], [GEN-6.2.5], [GEN-6.2.6], [GEN-6.2.7].  
 
 **GEN-6.2.4**  
 After “Halt!”, a fencer may not start a new action; only a movement begun before the order remains valid. Everything which occurs afterwards is not valid.  
