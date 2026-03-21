@@ -129,7 +129,7 @@ A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműköd�
 <!-- (Vö. t.158-162, t.167, t.168, t.170). -->
 
 **DIS-2.1.6**  
-A versenybíró javasolhat a <!--DT-nek-->szervező teamnek további megfelelőnek tartott, büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. t.139.3).  
+A versenybíró javasolhat a <!--DT-nek-->szervező teamnek további megfelelőnek tartott, büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. [DIS-2.1.8.3]).  
 
 **DIS-2.1.7**  
 A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte, vagy az MHS ellenőr (ha nincs küldött).
@@ -137,12 +137,17 @@ A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói B
 
 ### A <!--Directoire Technique -->Organising Team /Szervező Csapat az MHS<!--Nemzetközi szövetség much?--> hivatalos versenyein <!--(vö.: o.15-22)-->
 
-**DIS-2.1.8**  
+**DIS-2.1.8** A <!--Directoire Technique-->Szervező Team az MHS hivatalos versenyein <!-- (vö.: o.15-22)   -->
+**DIS-2.1.8.1**  
 A Szervező Team-nek, a Versenyíró Bizottság küldötteinek illetve az MHS ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen.  
-- Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat.  
-- A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják.  
-- A Szervező Team köteles az MHS központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket.  
-- A Szervező Team felel a kiszabott büntetések végrehajtásáért, ha azok ellen fellebbezésnek nincs helye, vagy annak a végrehajtásra nincs halasztó hatálya.  
+**DIS-2.1.8.2**  
+Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat.  
+**DIS-2.1.8.3**  
+A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják.  
+**DIS-2.1.8.4**  
+A Szervező Team köteles az MHS központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket.  
+**DIS-2.1.8.5**  
+A Szervező Team felel a kiszabott büntetések végrehajtásáért, ha azok ellen fellebbezésnek nincs helye, vagy annak a végrehajtásra nincs halasztó hatálya.  
 <!-- (Vö. t.136). -->
 
 **DIS-2.1.9**  
@@ -246,7 +251,7 @@ sorsára jut és diszkvalifikálják.
 
 **DIS-3.3.7**  
 A kizárásra vonatkozó következményeket megfelelően alkalmazni kell a diszkvalifikálásra  
-is (ld.: t.149. szakasz)  
+is (ld.: [DIS-3.2.3]-[DIS-3.2.4] szakasz)  
 
 #### Megrovás  
 
@@ -283,14 +288,14 @@ A Szervező csapat haladéktalanul köteles tájékoztatni az MHS Irodáját a v
 <span id="DIS-4.1"></span>  
 
 **DIS-4.1.1**  
-Három fajta büntetés alkalmazható a t.170 szakasz táblázatában szereplő esetekben. Ha a versenybíró olyan vívót büntet, aki egyidejűleg több vétséget követett el, először a kevésbé súlyos hiba büntetését kell kiszabni.  
+Három fajta büntetés alkalmazható a [DIS-4.3.20] szakasz táblázatában szereplő esetekben. Ha a versenybíró olyan vívót büntet, aki egyidejűleg több vétséget követett el, először a kevésbé súlyos hiba büntetését kell kiszabni.  
 
 **DIS-4.1.2**  
 A büntetések halmozódnak és egy mérkőzésre érvényesek, a FEKETE LAP kivételével, amely a versenyszámból való kizárást, a verseny további részéből felfüggesztést,  
 <!-- TODO: vagy a szövetség vagy az adott Szervezőcsapat által szervezett jövőbeni eseményekről való eltiltást jelentik. / és további döntés alapján 60 napos eltiltás az aktív vívóévadból (szeptember 1-től a Világbajnokságig tart junioroknál, és szeptember 1-től a Világbajnokságig tart felnőtteknél) amely érintheti a folyamatban lévő, a következő vagy mindkét évadot (vö.: t.169.2). -->  
 
 **DIS-4.1.3**  
-Ugyanakkor, ha a csapatot egy versenyen kizárják, mert egyik tagja fekete lapot kapott, a csapat a további versenyekből nincs kizárva. Csak a megbüntetett vívó kerül a t.159. szakasszal összhangban eltiltásra és az eltiltás hatálya alatt semmilyen csapatnak nem lehet tagja.  
+Ugyanakkor, ha a csapatot egy versenyen kizárják, mert egyik tagja fekete lapot kapott, a csapat a további versenyekből nincs kizárva. Csak a megbüntetett vívó kerül a [DIS-4.1.2] szakasszal összhangban eltiltásra és az eltiltás hatálya alatt semmilyen csapatnak nem lehet tagja.  
 <!-- TODO  
 '07-etikett_fegyelem'/'Büntetések'/'A büntetések típusai (csoportjai)'/2. pont alapján, és az eltiltás alatt nem választható semmilyen csapat tagjának. Vö. '06-Szervezés'/'Csapatversenyek'/3/8  (vö.: o.99.8).-->  
 
