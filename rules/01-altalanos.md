@@ -380,10 +380,10 @@ A mérkőzés megkezdése előtt a bíró felkéri az ellenfeleket, hogy egyezze
 A küzdelem kezdetét a "rajta!" vezényszó jelzi. A vezényszó előtt végrehajtott vagy indított mozdulat nem vehető figyelembe.  
 
 **GEN-6.2.3**  
-A mérkőzés az "állj!" vezényszóra áll meg, kivéve az olyan különleges helyzeteket, amelyek a mérkőzés szabályos és szokványos feltételeit megváltoztatják (Vö. Időmérés 1/1, 1/2 is). [GEN-6.2.4], [GEN-6.2.5], [GEN-6.2.6], [GEN-6.2.7]  
+A mérkőzés az "állj!" vezényszóra áll meg, kivéve az olyan különleges helyzeteket, amelyek a mérkőzés szabályos és szokványos feltételeit megváltoztatják (Vö. [GEN-6.10.9], [GEN-6.10.9] is). [GEN-6.2.4], [GEN-6.2.5], [GEN-6.2.6], [GEN-6.2.7]  
 
 **GEN-6.2.4**  
-Az "állj!" vezényszó elhangzása után a vívó nem kezdhet új akciót; csak a már elindított mozdulat marad érvényes. Minden, ami ezután történik, teljesen érvénytelen (de Időmérés 1/1, 1/2).  
+Az "állj!" vezényszó elhangzása után a vívó nem kezdhet új akciót; csak a már elindított mozdulat marad érvényes. Minden, ami ezután történik, teljesen érvénytelen (de [GEN-6.10.9], [GEN-6.10.9]).  
 
 **GEN-6.2.5**  
 Ha valamelyik vívó az "állj!" vezényszó előtt megáll, és találatot kap, az a találat érvényes.  
@@ -410,7 +410,7 @@ Abban az esetben, mikor a bíró úgy állítja meg az asszót, hogy egy talála
 A vívók a körmérkőzések, és minden egyenes kieséses mérkőzés végén, a küzdőtér elhagyása előtt ellenőrzik, és aláírják a pontvezető lapot, melyet a bíró vagy a kisegítő személyzet vezet a mérkőzés alatt. Csapatmérkőzések végén ez a csapatkapitányok feladata.  
 
 **GEN-6.2.13**  
-Felszerelés mérkőzés közbeni meghibásodása esetén a bíró 5 perc szünetet engedélyezhet (amely akkor kezdődik, amikor a bíró megbizonyosodott a meghibásodásról). Ez az idő felhasználható az érintett felszerelés kijavítására, vagy cseréjére és ellenőriztetésére. Ha a versenyző nem tudja folytatni a mérkőzést a szünet végéig, a bíró kizárhatja a versenyzőt az adott mérkőzésből. Vö 07-szervezés/Csapatversenyek/3/6  
+Felszerelés mérkőzés közbeni meghibásodása esetén a bíró 5 perc szünetet engedélyezhet (amely akkor kezdődik, amikor a bíró megbizonyosodott a meghibásodásról). Ez az idő felhasználható az érintett felszerelés kijavítására, vagy cseréjére és ellenőriztetésére. Ha a versenyző nem tudja folytatni a mérkőzést a szünet végéig, a bíró kizárhatja a versenyzőt az adott mérkőzésből. Vö [ORG-2.3.13]  
 
 ### Közelharc  
 <span id="GEN-6.3"></span>  

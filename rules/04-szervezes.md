@@ -143,8 +143,9 @@ Ha következésképpen az ellenfél csapatkapitánya is cserét kért, az előbb
 
 **ORG-2.3.12**  
  Ha egy csapat tagja a mérkőzés alatt a Szervezőcsapat orvosi képviselője által megfelelően elismert baleset miatt köteles visszavonulni, csapatának kapitánya kérheti tartalék felvételét a mérkőzés folytatásához azon a ponton, ahol a visszalépésre kötelezett versenyző visszalépett, még a folyamatban lévő viadal alatt is.  
+
 **ORG-2.3.13**  
-Ugyanígy kell eljárni akkor is, ha a csapat egyik tagját felszerelés meghibásodása miatt kell kizárni a mérkőzésből. Vö. 03-általános/A mérkőzések menete/24  
+Ugyanígy kell eljárni akkor is, ha a csapat egyik tagját felszerelés meghibásodása miatt kell kizárni a mérkőzésből. Vö. [GEN-6.2.13]  
 
 **ORG-2.3.14**  
 Az így lecserélt versenyző azonban ugyanazon a mérkőzésen nem foglalhatja el ismét a helyét a csapatban.  
@@ -153,14 +154,14 @@ Az így lecserélt versenyző azonban ugyanazon a mérkőzésen nem foglalhatja 
 Ha mind a vívó, mind a tartalék (ha van ilyen) kénytelen visszalépni, és ezért a csapat nem teljes, akkor elveszti a mérkőzést, és vissza kell lépnie a versenytől. A csapat megőrzi helyét a végső rangsorban.  
 
 **ORG-2.3.16**  
-Ha egy vívót csapatmérkőzés közben kizárnak, akkor csapata elvesztette a mérkőzést, és a csapatot végső helyezés nélkül kizárják a versenyből. Vö. '08-etikett_fegyelem'/'Büntetések'/'A büntetések típusai (csoportjai)'/3  
+Ha egy vívót csapatmérkőzés közben kizárnak, akkor csapata elvesztette a mérkőzést, és a csapatot végső helyezés nélkül kizárják a versenyből. Vö. [DIS-4.1.3]  
 
 **ORG-2.3.17**  
-Ha egy csapat bármilyen okból nem fejezi be azt az eseményt, amelyen részt vesz, a Szervezőcsapat azokra a versenyzőkre vonatkozó szabályokat alkalmazza, akik nem teljesítenek egy eseményt egyéni versenyen, minden csapatot teljes egészében úgy kezelve, mintha egyetlen versenyző lenne. Vö. 'Függelék'/'Büntetések táblázata'  
+Ha egy csapat bármilyen okból nem fejezi be azt az eseményt, amelyen részt vesz, a Szervezőcsapat azokra a versenyzőkre vonatkozó szabályokat alkalmazza, akik nem teljesítenek egy eseményt egyéni versenyen, minden csapatot teljes egészében úgy kezelve, mintha egyetlen versenyző lenne. Vö. [DIS-4.3.20]  
 
 **ORG-2.3.18**  
 Ha egy csapat nem jelenik meg egy másik csapat ellen, akkor a következőként kell eljárni:  
- - Ha már vívott egy másik csapat ellen, úgy kell kezelni, mintha nem fejezte volna be a versenyt, amelyen részt vesz (vö. Egyenes kieséses mérkőzések/Visszalépés);  
+ - Ha már vívott egy másik csapat ellen, úgy kell kezelni, mintha nem fejezte volna be a versenyt, amelyen részt vesz (vö. [ORG-2.2.4]);  
  - ha az első mérkőzésén nem jelenik meg, úgy kell kezelni, mintha egyáltalán nem venne részt a versenyen.  
 
 **ORG-2.3.19**  
