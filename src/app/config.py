@@ -56,13 +56,33 @@ def get_rulebook_en_dir() -> Path:
     """Get English rulebook directory with markdown files"""
     return PROJECT_ROOT / "rules_en"
 
-def get_rules_index_path() -> Path:
-    """Get path to rules_index.json"""
+def get_rules_index_path(lang: str = "hun", legacy_fallback: bool = False) -> Path:
+    """Get path to language-specific rules index.
+
+    Args:
+        lang: Language code, 'hun' or 'eng'.
+        legacy_fallback: If True and lang='hun', fall back to legacy rules_index.json.
+    """
+    search_dir = get_search_data_dir()
+    if lang == "eng":
+        return search_dir / "rules_index_eng.json"
+
+    hun_path = search_dir / "rules_index_hun.json"
+    if legacy_fallback and not hun_path.exists():
+        return get_legacy_rules_index_path()
+    return hun_path
+
+def get_legacy_rules_index_path() -> Path:
+    """Get legacy monolingual index path for backward compatibility."""
     return get_search_data_dir() / "rules_index.json"
 
-def get_aliases_path() -> Path:
-    """Get path to aliases.json"""
-    return get_search_data_dir() / "aliases.json"
+def get_aliases_path(lang: str = "hun") -> Path:
+    """Get path to aliases file for a language, with fallback to shared aliases.json."""
+    search_dir = get_search_data_dir()
+    lang_alias_path = search_dir / f"aliases_{lang}.json"
+    if lang_alias_path.exists():
+        return lang_alias_path
+    return search_dir / "aliases.json"
 
 def get_rulebook_markdown_files() -> List[Path]:
     """Get all numbered markdown rulebook files from root directory"""

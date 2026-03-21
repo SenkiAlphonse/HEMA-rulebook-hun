@@ -17,6 +17,23 @@ logger = logging.getLogger(__name__)
 
 search_bp = Blueprint('search', __name__, url_prefix='/api')
 
+VALID_RULESET_LANGS = {"hun", "eng"}
+
+
+def _resolve_rules_lang(data: dict | None = None) -> str:
+    """Resolve rules language from request body or query params."""
+    payload = data or {}
+    raw_lang = payload.get("rules_lang") or request.args.get("rules_lang") or "hun"
+    lang = str(raw_lang).strip().lower()
+    if lang not in VALID_RULESET_LANGS:
+        raise ValueError(f"Invalid rules_lang '{raw_lang}'. Use 'hun' or 'eng'.")
+    return lang
+
+
+def _get_engine_for_lang(lang: str):
+    """Get search engine for language with default fallback."""
+    return getattr(current_app, "search_engines", {}).get(lang, current_app.search_engine)
+
 
 @search_bp.route('/search', methods=['POST'])
 def api_search() -> Any:
@@ -29,6 +46,9 @@ def api_search() -> Any:
         data = request.get_json()
         if not data:
             return jsonify({"error": "Request body must be JSON"}), 400
+
+        rules_lang = _resolve_rules_lang(data)
+        search_engine = _get_engine_for_lang(rules_lang)
             
         query = data.get("query", "").strip()
         
@@ -63,7 +83,7 @@ def api_search() -> Any:
             return jsonify({"error": error_msg}), 400
 
         # Perform search
-        results = current_app.search_engine.search(
+        results = search_engine.search(
             query,
             max_results=max_results,
             variant_filter=variant_filter,
@@ -75,12 +95,12 @@ def api_search() -> Any:
         current_group = None
         
         for r in results:
-            depth = current_app.search_engine.get_rule_depth(r.rule_id)
+            depth = search_engine.get_rule_depth(r.rule_id)
             
             # Determine group root for hierarchy visualization
             if depth >= 4:
                 # For level 4-5 rules, find the main parent (depth 2)
-                lineage = current_app.search_engine.get_rule_lineage(r.rule_id)
+                lineage = search_engine.get_rule_lineage(r.rule_id)
                 # Take the second element if it exists (first is the prefix like "GEN")
                 current_group = lineage[1] if len(lineage) > 1 else r.rule_id
             else:
@@ -103,6 +123,7 @@ def api_search() -> Any:
         return jsonify({
             "success": True,
             "query": query,
+            "rules_lang": rules_lang,
             "count": len(results_data),
             "results": results_data,
             "note": "Results grouped by rule hierarchy. Level 4-5 rules include parent rules (up to level 3) and direct child rules."
@@ -120,13 +141,16 @@ def api_search() -> Any:
 def api_stats() -> Any:
     """Get rulebook statistics"""
     try:
-        total_rules = len(current_app.search_engine.rules)
-        vor_rules = sum(1 for r in current_app.search_engine.rules if r.get("variant") == "VOR")
-        combat_rules = sum(1 for r in current_app.search_engine.rules if r.get("variant") == "COMBAT")
-        ab_rules = sum(1 for r in current_app.search_engine.rules if r.get("variant") == "AFTERBLOW")
-        longsword_rules = sum(1 for r in current_app.search_engine.rules if r.get("weapon_type") == "longsword")
+        rules_lang = _resolve_rules_lang()
+        search_engine = _get_engine_for_lang(rules_lang)
+        total_rules = len(search_engine.rules)
+        vor_rules = sum(1 for r in search_engine.rules if r.get("variant") == "VOR")
+        combat_rules = sum(1 for r in search_engine.rules if r.get("variant") == "COMBAT")
+        ab_rules = sum(1 for r in search_engine.rules if r.get("variant") == "AFTERBLOW")
+        longsword_rules = sum(1 for r in search_engine.rules if r.get("weapon_type") == "longsword")
 
         return jsonify({
+            "rules_lang": rules_lang,
             "total_rules": total_rules,
             "vor_rules": vor_rules,
             "combat_rules": combat_rules,
@@ -143,12 +167,14 @@ def api_extract() -> Any:
     """Generate rulebook extract filtered by weapon and variant"""
     try:
         data = request.get_json() or {}
+        rules_lang = _resolve_rules_lang(data)
+        search_engine = _get_engine_for_lang(rules_lang)
             
         weapon_filter = normalize_filter(data.get("weapon_filter"), current_app.config['WEAPONS'])
         variant_filter = normalize_filter(data.get("variant_filter"), current_app.config['VARIANTS'])
 
         filtered_rules = filter_rules_for_extract(
-            current_app.search_engine.rules,
+            search_engine.rules,
             weapon_filter,
             variant_filter
         )
@@ -161,7 +187,7 @@ def api_extract() -> Any:
 
         weapon_label = weapon_filter or "all-weapons"
         variant_label = variant_filter or "all-variants"
-        filename = f"rulebook-extract_{weapon_label}_{variant_label}.md"
+        filename = f"rulebook-extract_{rules_lang}_{weapon_label}_{variant_label}.md"
 
         return Response(
             extract_text,
@@ -180,16 +206,19 @@ def api_extract() -> Any:
 def api_rule(rule_id: str) -> Any:
     """Get a specific rule by ID"""
     try:
+        rules_lang = _resolve_rules_lang()
+        search_engine = _get_engine_for_lang(rules_lang)
         # Validate rule ID format
         from app.validation import validate_rule_id
         is_valid, error_msg = validate_rule_id(rule_id)
         if not is_valid:
             return jsonify({"error": error_msg}), 400
         
-        rule = current_app.search_engine.get_rule_by_id(rule_id)
+        rule = search_engine.get_rule_by_id(rule_id)
         if rule:
             return jsonify({
                 "success": True,
+                "rules_lang": rules_lang,
                 "rule": {
                     "rule_id": rule["rule_id"],
                     "text": rule["text"],

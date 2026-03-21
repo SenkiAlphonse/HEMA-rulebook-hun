@@ -8,7 +8,7 @@ services:
       pytest tests/ -v && \
       mkdir -p dist && \
       python build.py && \
-      ls -la dist/rulebook_hun.html dist/rulebook_eng.html
+      ls -la dist/rulebook_hun.html dist/rulebook_eng.html data/search/rules_index_hun.json data/search/rules_index_eng.json
     startCommand: gunicorn --bind 0.0.0.0:$PORT --workers 1 wsgi:app
     envVars:
       - key: PYTHON_VERSION

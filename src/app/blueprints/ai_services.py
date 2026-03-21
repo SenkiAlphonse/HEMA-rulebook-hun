@@ -11,6 +11,7 @@ from app.config import GEMINI_MODEL_CANDIDATES
 logger = logging.getLogger(__name__)
 
 ai_bp = Blueprint('ai', __name__, url_prefix='/api')
+VALID_RULESET_LANGS = {"hun", "eng"}
 
 try:
     import google.generativeai as genai
@@ -249,6 +250,13 @@ def api_summarize():
             current_app.config['SUMMARY_LANGUAGES']
         ) or "EN"
 
+        raw_rules_lang = data.get("rules_lang", "hun")
+        rules_lang = str(raw_rules_lang).strip().lower()
+        if rules_lang not in VALID_RULESET_LANGS:
+            return jsonify({"error": f"Invalid rules_lang '{raw_rules_lang}'. Use 'hun' or 'eng'."}), 400
+
+        search_engine = getattr(current_app, "search_engines", {}).get(rules_lang, current_app.search_engine)
+
         query = data.get("query", "").strip()
         if not query:
             return jsonify({"error": "Query cannot be empty"}), 400
@@ -263,7 +271,7 @@ def api_summarize():
         )
 
         max_rules = current_app.config['SUMMARY_SEARCH_MAX_RULES']
-        results = current_app.search_engine.search(
+        results = search_engine.search(
             query,
             max_results=max_rules,
             variant_filter=variant_filter,
@@ -288,6 +296,7 @@ def api_summarize():
             "success": True,
             "format": format_type,
             "language": language,
+            "rules_lang": rules_lang,
             "summary": summary,
             "rule_count_total": len(rules),
             "rule_count_summarized": included_rule_count,

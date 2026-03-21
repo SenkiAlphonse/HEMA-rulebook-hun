@@ -37,6 +37,7 @@ class Rule:
     depth: int = 0  # Nesting level (1=top, 5=deepest)
     is_leaf: bool = True  # True if no children
     sibling_ids: List[str] = None  # Direct siblings (same parent)
+    language: str = "hun"  # Index language code (hun/eng)
     
     def __post_init__(self):
         if self.references_to is None:
@@ -63,8 +64,10 @@ class Section:
 class RulebookParser:
     """Parse HEMA rulebook markdown files"""
     
-    def __init__(self, rulebook_dir: str):
+    def __init__(self, rulebook_dir: str, rules_subdir: str = "rules", language: str = "hun"):
         self.rulebook_dir = Path(rulebook_dir)
+        self.rules_subdir = rules_subdir
+        self.language = language
         self.rules: List[Rule] = []
         self.rule_id_index: Dict[str, Rule] = {}  # O(1) lookup by rule_id
         self.sections: List[Section] = []
@@ -81,7 +84,7 @@ class RulebookParser:
         
     def parse_all(self) -> Dict[str, Any]:
         """Parse all markdown files in the rules directory"""
-        rules_dir = self.rulebook_dir / "rules"
+        rules_dir = self.rulebook_dir / self.rules_subdir
         
         if not rules_dir.exists():
             raise FileNotFoundError(f"Rules directory not found: {rules_dir}")
@@ -108,7 +111,8 @@ class RulebookParser:
         return {
             "rules": [asdict(rule) for rule in self.rules],
             "total_rules": len(self.rules),
-            "documents": list(set(rule.document for rule in self.rules))
+            "documents": list(set(rule.document for rule in self.rules)),
+            "language": self.language
         }
     
     def parse_file(self, filepath: Path):
@@ -228,7 +232,8 @@ class RulebookParser:
                 anchor_id=anchor,
                 line_number=line_num,
                 weapon_type=weapon_type,
-                variant=variant
+                variant=variant,
+                language=self.language
             )
             self.rules.append(rule)
             self.rule_id_index[rule_id] = rule  # Add to O(1) lookup index
@@ -273,7 +278,9 @@ class RulebookParser:
         weapon_type = "general"
         variant = ""
 
-        if "hosszukard" in filename.lower():
+        lower_name = filename.lower()
+
+        if "hosszukard" in lower_name or "longsword" in lower_name:
             weapon_type = "longsword"
             if "VOR" in filename:
                 variant = "VOR"
@@ -281,9 +288,9 @@ class RulebookParser:
                 variant = "COMBAT"
             elif "AFTERBLOW" in filename:
                 variant = "AFTERBLOW"
-        elif "rapir" in filename.lower():
+        elif "rapir" in lower_name or "rapier" in lower_name:
             weapon_type = "rapier"
-        elif "parnazott" in filename.lower():
+        elif "parnazott" in lower_name or "padded" in lower_name:
             weapon_type = "padded_weapons"
 
         return weapon_type, variant
@@ -375,7 +382,7 @@ class RulebookParser:
 def main() -> None:
     """Main entry point"""
     project_root = get_project_root()
-    parser = RulebookParser(project_root)
+    parser = RulebookParser(project_root, rules_subdir="rules", language="hun")
     output_path = get_rules_index_path()
     output_path.parent.mkdir(parents=True, exist_ok=True)
     parser.save_index(output_path)

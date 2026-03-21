@@ -14,6 +14,36 @@ Complete documentation of all REST endpoints exposed by the HEMA Rulebook Q&A Sy
 
 **Error Format:** Standard HTTP status codes + JSON error messages
 
+## Bilingual Ruleset Selection (`rules_lang`)
+
+The API now supports **language-specific rule indexes**:
+
+- `hun` → Hungarian ruleset (`data/search/rules_index_hun.json`)
+- `eng` → English ruleset (`data/search/rules_index_eng.json`)
+
+If omitted, endpoints default to `hun`.
+
+### Endpoints supporting `rules_lang`
+
+- `POST /api/search` (request body)
+- `GET /api/stats` (query parameter)
+- `POST /api/extract` (request body)
+- `GET /api/rule/<rule_id>` (query parameter)
+- `POST /api/summarize` (request body)
+
+### Rulebook language parameter
+
+- `GET /rulebook?lang=hun|eng`
+- `GET /api/rulebook?lang=hun|eng`
+
+### Example
+
+```bash
+curl -X POST http://localhost:5000/api/search \
+  -H "Content-Type: application/json" \
+  -d '{"query":"valid target","rules_lang":"eng"}'
+```
+
 ---
 
 ## Search Endpoints
@@ -28,6 +58,7 @@ Search for rules using natural language queries with automatic alias resolution.
 ```json
 {
   "query": "longsword target areas",
+  "rules_lang": "eng",
   "max_results": 10,
   "variant_filter": null,
   "weapon_filter": null
@@ -38,6 +69,7 @@ Search for rules using natural language queries with automatic alias resolution.
 | Parameter | Type | Required | Default | Description |
 |-----------|------|----------|---------|-------------|
 | `query` | string | ✓ | — | Search query (Hungarian or English) |
+| `rules_lang` | string | ✗ | `hun` | Ruleset language: `hun` or `eng` |
 | `max_results` | integer | ✗ | 10 | Max results to return (1-100) |
 | `variant_filter` | string | ✗ | null | Filter by variant: "VOR", "COMBAT", "AFTERBLOW" |
 | `weapon_filter` | string | ✗ | null | Filter by weapon type: "longsword", "rapier", "armored" |
@@ -96,14 +128,14 @@ Search for rules using natural language queries with automatic alias resolution.
 ```bash
 curl -X POST http://localhost:5000/api/search \
   -H "Content-Type: application/json" \
-  -d '{"query":"hosszúkard szabályok","language":"hu"}'
+  -d '{"query":"hosszúkard szabályok","rules_lang":"hun"}'
 ```
 
 *English query with custom limit:*
 ```bash
 curl -X POST http://localhost:5000/api/search \
   -H "Content-Type: application/json" \
-  -d '{"query":"longsword rules","max_results":5}'
+  -d '{"query":"longsword rules","rules_lang":"eng","max_results":5}'
 ```
 
 *Filter for specific variant:*

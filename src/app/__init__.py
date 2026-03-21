@@ -30,14 +30,19 @@ def create_app() -> Flask:
     # Load search engine (shared across blueprints) with error handling
     try:
         from qa_tools.search_engine import AliasAwareSearch
-        app.search_engine = AliasAwareSearch(
-            str(get_rules_index_path()),
-            str(get_aliases_path())
-        )
-        logger.info("Search engine initialized successfully")
+        app.search_engines = {}
+        for lang in ("hun", "eng"):
+            app.search_engines[lang] = AliasAwareSearch(
+                str(get_rules_index_path(lang=lang, legacy_fallback=(lang == "hun"))),
+                str(get_aliases_path(lang=lang))
+            )
+
+        # Backward compatibility alias: default search engine is Hungarian
+        app.search_engine = app.search_engines["hun"]
+        logger.info("Search engines initialized successfully (hun + eng)")
     except FileNotFoundError as e:
         logger.error(f"Search engine initialization failed: {e}")
-        logger.error("Ensure that build.py has been run to generate rules_index.json and aliases.json")
+        logger.error("Ensure that build.py has been run to generate rules_index_hun.json, rules_index_eng.json, and aliases")
         raise RuntimeError("Search engine files not found. Run build.py first.") from e
     except Exception as e:
         logger.error(f"Unexpected error initializing search engine: {e}")

@@ -27,9 +27,15 @@ def rulebook():
 @rulebook_bp.route('/api/rulebook')
 def api_rulebook():
     """API endpoint to get all rules as JSON"""
-    rules = current_app.search_engine.rules
+    lang = request.args.get('lang', 'hun').lower()
+    if lang not in VALID_LANGS:
+        abort(400, description=f"Invalid lang '{lang}'. Use 'hun' or 'eng'.")
+
+    search_engine = getattr(current_app, "search_engines", {}).get(lang, current_app.search_engine)
+    rules = search_engine.rules
     return jsonify({
         "success": True,
+        "lang": lang,
         "rules": rules,
         "total": len(rules)
     })

@@ -8,6 +8,7 @@ Run this at deployment time to generate static rulebook
 
 import sys
 import logging
+import shutil
 from pathlib import Path
 
 # Allow running `python tools/build.py` without installing the package
@@ -19,6 +20,7 @@ from app.config import (
     get_project_root, get_dist_dir,
     get_prerendered_rulebook_path,
     get_rules_index_path,
+    get_legacy_rules_index_path,
 )
 
 # Configure logging
@@ -27,15 +29,27 @@ logger = logging.getLogger(__name__)
 
 
 def build_search_index():
-    """Regenerate the search index from markdown files"""
+    """Regenerate language-specific search indexes from markdown files"""
     try:
         logger.info("Building search index...")
         from qa_tools.tools.parser import RulebookParser
 
         project_root = get_project_root()
-        output_path = get_rules_index_path()
-        output_path.parent.mkdir(parents=True, exist_ok=True)
-        RulebookParser(project_root).save_index(output_path)
+        index_specs = (
+            ("hun", "rules"),
+            ("eng", "rules_en"),
+        )
+
+        for lang, rules_subdir in index_specs:
+            output_path = get_rules_index_path(lang=lang)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            logger.info(f"Building {lang} index from {rules_subdir}/ ...")
+            RulebookParser(project_root, rules_subdir=rules_subdir, language=lang).save_index(output_path)
+
+        # Keep legacy monolingual file for backward compatibility (maps to Hungarian index)
+        legacy_output_path = get_legacy_rules_index_path()
+        shutil.copyfile(get_rules_index_path(lang="hun"), legacy_output_path)
+        logger.info(f"✓ Legacy index updated at {legacy_output_path}")
 
         logger.info("✓ Search index rebuilt successfully")
         return True
