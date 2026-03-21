@@ -12,58 +12,130 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
+            background: #f8f9fa;
             min-height: 100vh;
-            padding: 20px;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+
+        .site-header {
+            background: #ffffff;
+            border-bottom: 1px solid #e8eaed;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #1a3a4a;
+            letter-spacing: -0.5px;
+        }
+
+        .header-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-rulebook {
+            background: #ffffff;
+            color: #34495e;
+            border: 1.5px solid #bdc3c7;
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-rulebook:hover {
+            border-color: #34495e;
+            background: #f8fbfd;
+            transform: none;
+        }
+
+        .btn-rulebook .flag-icon {
+            width: 16px;
+            height: 11px;
+            border-radius: 2px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
 
-        .header {
+        .page-title {
             text-align: center;
-            color: white;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        .page-title h1 {
+            font-size: 2.2em;
+            color: #1a3a4a;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        .header p {
-            font-size: 1.1em;
-            opacity: 0.95;
+        .page-title p {
+            font-size: 1.05em;
+            color: #7f8c8d;
+            font-weight: 400;
         }
 
-        .search-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            margin-bottom: 30px;
+        .card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 32px;
+            margin-bottom: 28px;
+            border: 1px solid #e8eaed;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: box-shadow 0.2s ease;
         }
 
-        .search-form {
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        .card-title {
+            font-size: 1.15em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        .form-grid {
             display: grid;
-            gap: 15px;
+            gap: 16px;
         }
 
         .form-row {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr auto;
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
             align-items: end;
-        }
-
-        @media (max-width: 768px) {
-            .form-row {
-                grid-template-columns: 1fr;
-            }
         }
 
         .form-group {
@@ -73,56 +145,84 @@
 
         .form-group label {
             font-weight: 600;
-            margin-bottom: 6px;
-            color: #333;
+            margin-bottom: 8px;
+            color: #34495e;
             font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .form-group input,
         .form-group select {
-            padding: 10px;
-            border: 2px solid #e0e0e0;
-            border-radius: 6px;
-            font-size: 1em;
-            transition: border-color 0.3s;
+            padding: 11px 13px;
+            border: 1.5px solid #dfe1e4;
+            border-radius: 5px;
+            font-size: 0.95em;
+            background: #ffffff;
+            color: #2c3e50;
+            font-family: inherit;
+            transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .form-group input::placeholder {
+            color: #95a5a6;
         }
 
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #667eea;
+            border-color: #34495e;
+            box-shadow: 0 0 0 3px rgba(52, 73, 94, 0.08);
         }
 
         .btn {
-            padding: 10px 20px;
+            padding: 11px 24px;
             border: none;
-            border-radius: 6px;
-            font-size: 1em;
+            border-radius: 5px;
+            font-size: 0.95em;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
         }
 
-        .btn-search {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        .btn-primary {
+            background: #34495e;
             color: white;
-            padding: 10px 30px;
         }
 
-        .btn-search:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        .btn-primary:hover {
+            background: #2c3e50;
+            box-shadow: 0 4px 12px rgba(52, 73, 94, 0.25);
+            transform: translateY(-1px);
         }
 
-        .btn-search:active {
+        .btn-primary:active {
             transform: translateY(0);
+        }
+
+        .btn-secondary {
+            background: #ecf0f1;
+            color: #34495e;
+        }
+
+        .btn-secondary:hover {
+            background: #bdc3c7;
+        }
+
+        .form-hint {
+            font-size: 0.85em;
+            color: #7f8c8d;
+            margin-top: 12px;
+            line-height: 1.5;
         }
 
         .loading {
             display: none;
             text-align: center;
-            padding: 20px;
-            color: #667eea;
+            padding: 40px 20px;
+            color: #34495e;
         }
 
         .loading.show {
@@ -130,13 +230,13 @@
         }
 
         .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #667eea;
+            border: 3px solid #ecf0f1;
+            border-top: 3px solid #34495e;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 10px;
+            width: 36px;
+            height: 36px;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 16px;
         }
 
         @keyframes spin {
@@ -146,106 +246,121 @@
 
         .stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 2px solid #e0e0e0;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid #ecf0f1;
         }
 
         .stat-item {
             text-align: center;
-            padding: 10px;
+            padding: 12px;
         }
 
         .stat-number {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #667eea;
+            font-size: 1.9em;
+            font-weight: 700;
+            color: #34495e;
         }
 
         .stat-label {
-            font-size: 0.9em;
-            color: #666;
-            margin-top: 5px;
+            font-size: 0.85em;
+            color: #7f8c8d;
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
-        .results {
-            margin-top: 30px;
+        .results-container {
+            margin-top: 28px;
+        }
+
+        .results-header {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #ecf0f1;
         }
 
         .result-item {
-            background: white;
-            border-radius: 12px;
+            background: #ffffff;
+            border-radius: 8px;
             padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-            border-left: 4px solid #667eea;
-            transition: transform 0.2s, box-shadow 0.2s;
+            margin-bottom: 16px;
+            border-left: 3px solid #34495e;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
         }
 
         .result-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            transform: translateX(2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .result-header {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 10px;
+            align-items: flex-start;
+            margin-bottom: 12px;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 12px;
         }
 
         .result-id {
-            font-weight: bold;
-            font-size: 1.2em;
-            color: #667eea;
-            font-family: monospace;
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #34495e;
+            font-family: "Courier New", monospace;
         }
 
         .result-score {
-            background: #f0f0f0;
-            padding: 4px 12px;
+            background: #ecf0f1;
+            padding: 5px 12px;
             border-radius: 20px;
-            font-size: 0.85em;
-            color: #666;
+            font-size: 0.8em;
+            color: #7f8c8d;
+            font-weight: 500;
         }
 
         .result-tags {
             display: flex;
             gap: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             flex-wrap: wrap;
         }
 
         .tag {
             display: inline-block;
-            background: #e8eaf6;
-            color: #667eea;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            font-weight: 500;
+            background: #f0f3f7;
+            color: #34495e;
+            padding: 5px 11px;
+            border-radius: 18px;
+            font-size: 0.8em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
         }
 
         .tag.weapon {
-            background: #f3e5f5;
-            color: #764ba2;
+            background: #f4ede1;
+            color: #8b6f47;
         }
 
-        .tag.format {
-            background: #e0f2f1;
-            color: #00796b;
+        .tag.variant {
+            background: #e8f1f7;
+            color: #2c5aa0;
         }
 
         .result-text {
-            color: #333;
-            line-height: 1.6;
-            margin-bottom: 10px;
+            color: #34495e;
+            line-height: 1.7;
+            margin-bottom: 12px;
             white-space: pre-wrap;
             word-wrap: break-word;
+            font-size: 0.95em;
         }
 
         .result-text ul.search-list {
@@ -255,109 +370,119 @@
         }
 
         .result-text ul.search-list li {
-            margin-bottom: 0.3rem;
-            line-height: 1.5;
+            margin-bottom: 0.4rem;
+            line-height: 1.6;
         }
 
         .result-text strong {
             font-weight: 700;
-            color: #667eea;
+            color: #34495e;
         }
 
         .result-text em {
             font-style: italic;
-            color: #764ba2;
+            color: #7f8c8d;
         }
 
         .result-meta {
             font-size: 0.85em;
-            color: #999;
-            border-top: 1px solid #f0f0f0;
-            padding-top: 10px;
+            color: #95a5a6;
+            border-top: 1px solid #ecf0f1;
+            padding-top: 12px;
         }
 
         .section-info {
-            margin: 8px 0;
+            margin: 6px 0;
+            display: flex;
+            gap: 8px;
         }
 
         .section-label {
             font-weight: 600;
-            color: #666;
+            color: #7f8c8d;
+            min-width: 80px;
         }
 
         .error-message {
-            background: #ffebee;
-            border-left: 4px solid #f44336;
-            color: #c62828;
+            background: #fadbd8;
+            border-left: 3px solid #e74c3c;
+            color: #c0392b;
             padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
+            border-radius: 5px;
+            margin: 16px 0;
+            font-size: 0.95em;
         }
 
         .no-results {
             text-align: center;
-            padding: 40px 20px;
-            color: #999;
+            padding: 50px 20px;
+            color: #95a5a6;
         }
 
         .no-results-icon {
-            font-size: 3em;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin-bottom: 12px;
         }
 
         footer {
             text-align: center;
-            color: white;
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255,255,255,0.2);
-            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-top: 60px;
+            padding: 30px 20px;
+            border-top: 1px solid #e8eaed;
+            font-size: 0.85em;
         }
 
-        .header-buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 15px;
-            flex-wrap: wrap;
-        }
-
-        .btn-rulebook {
-            background: rgba(255, 255, 255, 0.2);
+        .load-more-btn {
+            display: block;
+            margin: 28px auto;
+            padding: 12px 32px;
+            background: #34495e;
             color: white;
-            border: 2px solid white;
-            padding: 10px 20px;
-            border-radius: 6px;
+            border: none;
+            border-radius: 5px;
             font-size: 0.95em;
             font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
+            transition: all 0.25s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
         }
 
-        .btn-rulebook .flag-icon {
-            width: 18px;
-            height: 12px;
-            vertical-align: -2px;
-            margin-right: 8px;
-            border-radius: 2px;
-            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6);
+        .load-more-btn:hover {
+            background: #2c3e50;
+            box-shadow: 0 4px 12px rgba(52, 73, 94, 0.25);
+            transform: translateY(-1px);
         }
 
-        .btn-rulebook:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .page-title h1 {
+                font-size: 1.8em;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .result-item {
+                padding: 16px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>⚔️ HEMA Rulebook Search</h1>
-            <p>Hungarian Historical European Martial Arts - Quick Rule Lookup</p>
+    <div class="site-header">
+        <div class="header-content">
+            <div class="logo">HEMA Rulebook</div>
             <div class="header-buttons">
                 <a href="/rulebook?lang=hun" target="_blank" rel="noopener noreferrer" class="btn-rulebook">
                     Full Rulebook
@@ -381,9 +506,20 @@
                 </a>
             </div>
         </div>
+    </div>
 
-        <div class="search-card">
-            <form class="search-form" id="searchForm">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-title">
+            <h1>⚔️ HEMA Rulebook Search</h1>
+            <p>Quick and accurate rule lookup for Hungarian HEMA competition</p>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Search Rules</div>
+            <form class="form-grid" id="searchForm">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="searchLanguage">Language</label>
@@ -420,7 +556,7 @@
                             <option value="padded_weapons">Padded Weapons</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-search">Search</button>
+                    <button type="submit" class="btn btn-primary">Search</button>
                 </div>
             </form>
 
@@ -432,8 +568,9 @@
             <div class="stats" id="stats"></div>
         </div>
 
-        <div class="search-card" style="margin-top: 25px;">
-            <form class="search-form" id="extractForm">
+        <div class="card">
+            <div class="card-title">Download Rulebook Extract</div>
+            <form class="form-grid" id="extractForm">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="extractLanguage">Language</label>
@@ -460,16 +597,15 @@
                             <option value="padded_weapons">Padded Weapons</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-search">Download Extract</button>
+                    <button type="submit" class="btn btn-primary">Download Extract</button>
                 </div>
-                <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
-                    Includes all general rules plus matching weapon/variant rules, ordered by document and rule index.
-                </p>
+                <p class="form-hint">Includes all general rules plus matching weapon/variant rules, ordered by document and rule index.</p>
             </form>
         </div>
 
-        <div class="search-card" style="margin-top: 25px;">
-            <form class="search-form" id="summaryForm">
+        <div class="card">
+            <div class="card-title">Summarize Search Results with AI</div>
+            <form class="form-grid" id="summaryForm">
                 <div class="form-row">
                     <div class="form-group">
                         <label for="summaryLanguage">Summary Language</label>
@@ -494,23 +630,23 @@
                             placeholder="( ͡° ͜ʖ ͡°)"
                         >
                     </div>
-                    <button type="button" class="btn btn-search" id="summarizeSearchBtn">Summarize Search</button>
+                    <button type="button" class="btn btn-primary" id="summarizeSearchBtn">Summarize Search</button>
                 </div>
-                <p style="margin-top: 10px; font-size: 0.9em; color: #666;">
+                <p class="form-hint">
                     Summarizes top matching search results with input limits for free-tier API usage.
                 </p>
             </form>
-            <div id="summaryControls" style="margin-top: 10px; display: none; gap: 10px;">
-                <button type="button" class="btn btn-search" id="copySummaryBtn">Copy Summary</button>
-                <button type="button" class="btn btn-search" id="downloadSummaryBtn">Download Summary (.txt)</button>
+            <div id="summaryControls" style="margin-top: 20px; display: none; gap: 12px; flex-direction: row;">
+                <button type="button" class="btn btn-secondary" id="copySummaryBtn">Copy Summary</button>
+                <button type="button" class="btn btn-secondary" id="downloadSummaryBtn">Download Summary (.txt)</button>
             </div>
-            <div id="summaryOutput" style="margin-top: 15px;"></div>
+            <div id="summaryOutput" style="margin-top: 20px;"></div>
         </div>
 
-        <div class="results" id="results"></div>
+        <div class="results-container" id="results"></div>
 
         <footer>
-            <p>HEMA Rulebook Search | Powered by Flask + AI | <a href="#" style="color: white;">GitHub</a></p>
+            <p>HEMA Rulebook Search | Powered by Flask + AI</p>
         </footer>
     </div>
 
@@ -649,7 +785,7 @@
 
                 allResults = data.results;
                 displayedCount = 0;
-                resultsDiv.innerHTML = `<h2 style="color: #333; margin-bottom: 20px;">Results (${data.count})</h2>`;
+                resultsDiv.innerHTML = `<div class="results-header">Results (${data.count})</div>`;
                 displayResults();
             } catch (error) {
                 loadingDiv.classList.remove('show');
@@ -807,28 +943,8 @@
             if (displayedCount < allResults.length) {
                 const loadMoreBtn = document.createElement('button');
                 loadMoreBtn.id = 'loadMoreBtn';
+                loadMoreBtn.className = 'load-more-btn';
                 loadMoreBtn.textContent = `Load More (${allResults.length - displayedCount} remaining)`;
-                loadMoreBtn.style.cssText = `
-                    display: block;
-                    margin: 20px auto;
-                    padding: 12px 30px;
-                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-                    color: white;
-                    border: none;
-                    border-radius: 8px;
-                    font-size: 1em;
-                    font-weight: 600;
-                    cursor: pointer;
-                    transition: transform 0.2s, box-shadow 0.2s;
-                `;
-                loadMoreBtn.onmouseover = () => {
-                    loadMoreBtn.style.transform = 'translateY(-2px)';
-                    loadMoreBtn.style.boxShadow = '0 6px 20px rgba(102, 126, 234, 0.4)';
-                };
-                loadMoreBtn.onmouseout = () => {
-                    loadMoreBtn.style.transform = 'translateY(0)';
-                    loadMoreBtn.style.boxShadow = 'none';
-                };
                 loadMoreBtn.onclick = displayResults;
                 resultsDiv.appendChild(loadMoreBtn);
             }
