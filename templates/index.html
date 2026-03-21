@@ -436,6 +436,13 @@
             <form class="search-form" id="extractForm">
                 <div class="form-row">
                     <div class="form-group">
+                        <label for="extractLanguage">Language</label>
+                        <select id="extractLanguage" name="extractLanguage">
+                            <option value="hun">Hungarian</option>
+                            <option value="eng">English</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="extractVariant">Extract Variant</label>
                         <select id="extractVariant" name="extractVariant">
                             <option value="">All Variants</option>
@@ -651,9 +658,9 @@
         }
 
         async function downloadExtract() {
+            const language = document.getElementById('extractLanguage').value;
             const variant = document.getElementById('extractVariant').value;
             const weapon = document.getElementById('extractWeapon').value;
-            const rulesLang = searchLanguageSelect.value;
 
             try {
                 const response = await fetch('/api/extract', {
@@ -662,7 +669,7 @@
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        rules_lang: rulesLang,
+                        rules_lang: language,
                         variant_filter: variant || null,
                         weapon_filter: weapon || null
                     })
@@ -680,7 +687,7 @@
                 a.href = url;
                 const weaponLabel = weapon || 'all-weapons';
                 const variantLabel = variant || 'all-variants';
-                a.download = `rulebook-extract_${rulesLang}_${weaponLabel}_${variantLabel}.md`;
+                a.download = `rulebook-extract_${language}_${weaponLabel}_${variantLabel}.md`;
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
