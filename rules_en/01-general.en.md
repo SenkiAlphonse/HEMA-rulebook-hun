@@ -432,50 +432,56 @@ Displacement and ducking are allowed, including where the unarmed hand and/or th
 **GEN-6.6.2**  
 Turning one’s back on the opponent during the bout is forbidden. First-group penalties apply and any hit scored by the fencer at fault is annulled.  
 
-### Gripping and wrestling actions  
+### Substituting valid target surfaces  
 <span id="GEN-6.7"></span>  
 
 **GEN-6.7.1**  
+If a fencer covers or moves a valid target surface by blocking or irregular movement, the fencer is penalised by the Referee with first-group penalties as listed in [DIS-4.1.1]–[DIS-4.1.5], [DIS-4.1.9], [DIS-4.3.20], and any hit scored by the fencer at fault is annulled.  
+
+### Grappling and wrestling actions  
+<span id="GEN-6.8"></span>
+
+**GEN-6.8.1**  
 Gripping and wrestling (grabbing/control/throw/takedown) are permitted within a bout only if both parties consent before the bout starts. If one party does not accept wrestling, no explanation is required. In team matches, each team member decides individually whether they accept wrestling with the given opponent.  
 
-**GEN-6.7.2**  
-A wrestling action includes any close-quarter action not executed with the weapon (hand/foot/head techniques, holds, disarms, strikes), as well as weapon actions which, instead of direct hitting, aim to manipulate the opponent’s body parts. If either opponent did not consent to wrestling, initiating any wrestling action is a first-group offence.  
+**GEN-6.8.2**  
+A wrestling action includes any close-quarter action not executed with the weapon (hand/foot/head techniques, holds, disarms, strikes), as well as weapon actions which, instead of direct hitting, aim to manipulate the opponent's body parts. If either opponent did not consent to wrestling, initiating any wrestling action is a first-group offence.  
 
-**GEN-6.7.3**  
+**GEN-6.8.3**
 The Referee may stop the bout after prolonged unsuccessful close quarters or wrestling (at the Referee’s discretion). Grabbing an opponent’s momentarily neutralised blade is permitted. A point may be awarded only if the blade grab is brief and is immediately followed by a weapon hit. If no hit results from the grab, the Referee stops without awarding a point. If the initiating party does not neutralise the opponent’s weapon first and receives a hit, the point is awarded against the initiator.  
 
-**GEN-6.7.4**  
+**GEN-6.8.4**  
 Scoring wrestling actions:  
 
-**GEN-6.7.4.1**  
+**GEN-6.8.4.1**  
 With a wrestling hold, lifting at least one of the opponent’s feet off the ground. (Throws/takedowns must NOT be completed.)  
 
-**GEN-6.7.4.2**  
-Wrestling holds with or without the weapon that prevent the opponent’s movement/escape. The Referee judges whether the control position exists and is valid; once the Referee judges the control/dominance requirements are met, they call “Halt!” and award 1 point against the dominated fencer.  
+**GEN-6.8.4.2**  
+Wrestling holds with or without the weapon that prevent the opponent's movement/escape. The Referee judges whether the control position exists and is valid; once the Referee judges the control/dominance requirements are met, they call "Halt!" and award 1 point against the dominated fencer.  
 
-**GEN-6.7.4.3**  
+**GEN-6.8.4.3**
 A dominance/control judgement is not applicable in positions where the opponent can break out and initiate valid actions, even if, by active effort, the dominating weapon continues to touch the opponent’s target. The Referee judges validity at their discretion.  
 
-**GEN-6.7.5**  
-After a takedown, further fighting is not permitted. The Referee calls “Halt!” if either fencer goes to the ground, or if the Referee cannot judge the action, or if dominance cannot be obtained over a prolonged period (Referee’s discretion).  
+**GEN-6.8.5**  
+After a takedown, further fighting is not permitted. The Referee calls "Halt!" if either fencer goes to the ground, or if the Referee cannot judge the action, or if dominance cannot be obtained over a prolonged period (Referee's discretion).  
 
-**GEN-6.7.6**  
-A disarm (where one fencer, by intentional close-quarter action, takes the opponent’s weapon) is a valid scoring method, except if the disarmed fencer immediately (before “Halt!”) controls the opponent’s blade and continues wrestling.  
+**GEN-6.8.6**  
+A disarm (where one fencer, by intentional close-quarter action, takes the opponent's weapon) is a valid scoring method, except if the disarmed fencer immediately (before "Halt!") controls the opponent's blade and continues wrestling.  
 
-**GEN-6.7.7**  
+**GEN-6.8.7**
 If a fencer drops their weapon or falls without opponent intervention, the Referee calls “Halt!”. A hit achieved by a movement that began before the opponent clearly lost their weapon or fell must be considered valid even if it lands afterwards. By sportsmanship, it is improper to initiate a new attack against an opponent who has lost their weapon or fallen; therefore no point is awarded for such a new attack.  
 
 ### Ground gained or lost  
-<span id="GEN-6.8"></span>  
+<span id="GEN-6.9"></span>  
 
-**GEN-6.8.1**  
-When “Halt!” is called, ground gained is held until a hit is awarded. If no hit is awarded, on re-placing on guard both fencers should retire an equal distance to keep fencing distance.  
+**GEN-6.9.1**  
+When "Halt!" is called, ground gained is held until a hit is awarded. If no hit is awarded, on re-placing on guard both fencers should retire an equal distance to keep fencing distance.  
 
-**GEN-6.8.2**  
+**GEN-6.9.2**  
 However, if the bout was stopped because of body contact (and close quarters is not allowed), the fencers are placed on guard so that the fencer who sustained the body contact remains where they were; this also applies if the opponent made a flèche attack even without body contact.  
 
 ### Crossing the boundaries  
-<span id="GEN-6.9"></span>  
+<span id="GEN-6.10"></span>
 
 **GEN-6.9.1**  
 If a competitor crosses completely (with both feet) any boundary line of the arena, the Referee must immediately call “Halt!” and must annul everything that occurred after the boundary was crossed.  
@@ -497,18 +503,18 @@ If a fencer steps completely beyond a boundary (both feet) without having scored
 ### Duration of the bout  
 <span id="GEN-6.10"></span>  
 
-**GEN-6.10.1**  
-The duration of a bout means effective fighting time, i.e. the total of time intervals between “Play!” and “Halt!”.  
+**GEN-6.11.1**  
+The duration of a bout means effective fighting time, i.e. the total of time intervals between "Play!" and "Halt!".  
 
-**GEN-6.10.2**  
+**GEN-6.11.2**  
 Time is controlled by the Referee or a timekeeper. In bouts where the timer is visible to spectators (strongly recommended for finals), the timer must be placed so it is visible to both fencers and the Referee.  
 
-**GEN-6.10.3**  
+**GEN-6.11.3**  
 A finished bout or relay segment may not be restarted, even if there was a formal error.  
 
 #### Framework for individual pool bouts  
 
-**GEN-6.10.4**  
+**GEN-6.11.4**
 In individual pool bouts, a bout ends when any of the following conditions is met:  
 
 **GEN-6.10.4.1**  

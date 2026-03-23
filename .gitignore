@@ -21,6 +21,10 @@ qa_tools/output/fie_hema_alignment_hu*.json
 data/fie_extracted/
 
 # Build artifacts (generated on deploy, do not commit)
-dist/
-data/search/
 
+data/search/rules_index.json
+data/search/rules_index_eng.json
+data/search/rules_index_hun.json
+dist/rulebook_hun.html
+dist/rulebook_eng.html
+dist/rulebook.html

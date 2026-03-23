@@ -96,42 +96,48 @@ In team competitions only the team captain may approach the Referee to clarify t
 #### The Referee  
 
 **DIS-2.1.1**  
-By accepting the role of Referee or assistant referee, the person pledges to respect and enforce the rules of the competition and to fulfil their duties with the strictest impartiality and full attention.  
-
-**DIS-2.1.2**  
 The Referee not only directs the bout, judges hits and checks equipment, but is also responsible for maintaining order in the bouts they supervise.  
+<!-- FIXME **DIS-2.1.2**
+The Referee may interrupt the bout if it becomes chaotic, dangerous, or if they can no longer clearly assess the actions. In the absence of objective hit recording equipment, the basis for judging the exchanges is the observations of the Referee observing the action and their assistant. Fencers may ask the Referee for clarification or review before a final decision is made regarding hits. Regarding findings of fact, fencers may not question the Referees' judgment (except in video refereeing cases), and if a fencer violates this principle, they commit a 1st-group offence. Findings of fact include — not exclusively — the assessment and analysis of what happened in the arena, the validity and priority of hits, the determination of a fencer stepping out, the classification of a fencer's behaviour into the 3rd or 4th group, etc. However, if a Referee clearly does not know or misinterprets specific rule(s), or applies them in a manner contrary to the rules, fencers may personally request review.
 
-**DIS-2.1.4**  
+The review may be requested by:
+- in individual events: the fencer;
+- in team events: the fencer or the team captain;
+
+politely, without formality, immediately and orally from the Referee, before any decision is made regarding any hit that occurred after the questioned situation. If the Referee maintains their position, the Chief Referee will decide the matter, who may make a decision or provide supervision for the rest of the bout. If such a request is unfounded, the fencer must be penalised in accordance with the rules for 1st-group disciplinary offences. -->
+
+
+**DIS-2.1.3**  
 When directing bouts, judging hits and checking equipment, the Referee may — taking circumstances into account, with or without prior warning — penalise fencers for offences by annulling a hit actually scored, awarding a penalty hit against a fencer even though no hit actually occurred, or excluding the competitor from the given bout/event. Decisions containing findings of fact may not be altered.  
 
-**DIS-2.1.5**  
+**DIS-2.1.4**  
 The Referee’s authority extends to all fencers participating in or contributing to the competition. The Referee may propose to the Organising Team to expel anyone from the venue, including spectators, coaches or other attendants.  
 
-**DIS-2.1.6**  
-The Referee may propose to the Organising Team further sanctions they consider appropriate (exclusion from the whole competition, suspension or disqualification) (see [DIS-2.1.8.3]).  
+**DIS-2.1.5**  
+The Referee may propose to the Organising Team further sanctions they consider appropriate (exclusion from the whole competition, suspension or disqualification) (see [DIS-2.1.7.3]).  
 
-**DIS-2.1.7**  
-The appeal body regarding the Referee’s decisions is the delegate of the Referees’ Committee, or the MHS inspector (if there is no delegate).  
+**DIS-2.1.6**  
+The appeal body regarding the Referee's decisions is the delegate of the Referees' Committee, or the MHS inspector (if there is no delegate).  
 <!-- TODO -->  
 
 ### The Organising Team / Szervező Csapat at official MHS competitions  
 
-**DIS-2.1.8** The Organising Team / Szervező Team at official MHS competitions.  
-**DIS-2.1.8.1**  
-The Organising Team, the delegates of the Referees’ Committee and the MHS inspector have authority over every competitor who participates in or is present at the fencing competition they supervise.  
-**DIS-2.1.8.2**  
+**DIS-2.1.7** The Organising Team / Szervező Team at official MHS competitions.
+**DIS-2.1.7.1**  
+The Organising Team, the delegates of the Referees' Committee and the MHS inspector have authority over every competitor who participates in or is present at the fencing competition they supervise.  
+**DIS-2.1.7.2**  
 If necessary, they may intervene in any dispute on their own initiative.  
-**DIS-2.1.8.3**  
+**DIS-2.1.7.3**  
 They must maintain order and discipline during the competition and may apply the sanctions prescribed in this ruleset.  
-**DIS-2.1.8.4**  
+**DIS-2.1.7.4**  
 The Organising Team must forward the disciplinary sanctions imposed during the competition to the MHS central office, as well as any requests for reprimand, suspension, permanent suspension, extension of sanctions, or final appeals.  
-**DIS-2.1.8.5**  
+**DIS-2.1.7.5**  
 The Organising Team is responsible for implementing imposed sanctions where no appeal is possible or where the appeal has no suspensive effect.  
 
-**DIS-2.1.9**  
+**DIS-2.1.8**  
 Against a spontaneous decision of the Organising Team / delegate / inspector, or a decision issued by them in first instance, an appeal may be filed with the MHS Disciplinary Committee.  
 
-**DIS-2.1.10**  
+**DIS-2.1.9**  
 Every decision of the Organising Team / delegate / inspector is immediately enforceable. During the competition, no appeal has suspensive effect on execution.  
 
 ## Sanctions  
