@@ -9028,11 +9028,9 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -9066,18 +9064,16 @@
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
     },
     {
       "rule_id": "LS-AB-1.2.3",
-      "text": "A találatokat kettősnek kell tekinteni, amikor\n- mindkét találat ugyanabban a vívófrázisban esik,\n- nincs egy vívóidőnyi különbség a két találat közt, tehát\n- a versenybíró nem tudja egyértelműen megállapítani, hogy az egyik találat befejezése megelőzte volna a másik találatot közvetlenül elérő mozdulat megkezdését.\n- A találatot közvetlenül elérő mozdulat lehet pl. egyszerű (direkt vagy indirekt) támadás/közbetámadás/riposzt; vagy összetett támadás/közbetámadás/riposzt esetén az utolsó mozzanat, ami a találat végső célpontjára irányul\n- Példák (nem akció-prioritást, hanem akció-időzítést vizsgálva): közbetámadás egyszerű támadásba, vagy összetett támadás utolsó mozzanatába, ahol mindkét akció talál.",
+      "text": "A találatokat kettősnek kell tekinteni, amikor\n- mindkét találat ugyanabban a vívófrázisban esik,\n- nincs egy vívóidőnyi különbség a két találat közt, tehát\n- a versenybíró nem tudja egyértelműen megállapítani, hogy az egyik találat befejezése megelőzte volna a másik találatot közvetlenül elérő mozdulat megkezdését.\n- A találatot közvetlenül elérő mozdulat lehet pl. egyszerű (direkt vagy indirekt) támadás/közbetámadás/riposzt; vagy összetett támadás/közbetámadás/riposzt esetén az utolsó mozzanat, ami a találat végső célpontjára irányul\n- Példák (nem akció-prioritást, hanem akció-időzítést vizsgálva): közbetámadás egyszerű támadásba, vagy összetett támadás utolsó mozzanatába, ahol mindkét akció talál.\n<!-- **LS-AB-1.2.4**\nA bíró döntése az egyidejű, kettős, és után-találatok megkülönböztetését illetően ténymegállapításnak minősül, amely nem megkérdőjelezhető, emiatt videó-bíráskodás nem kérhető.   -->",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
@@ -9104,49 +9100,9 @@
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
-        "LS-AB-1.2.9"
-      ],
-      "language": "hun"
-    },
-    {
-      "rule_id": "LS-AB-1.2.4",
-      "text": "A bíró döntése az egyidejű és kettős találatok megkülönböztetését illetően ténymegállapításnak minősül, amely nem megkérdőjelezhető, emiatt videó-bíráskodás nem kérhető.",
-      "section": "",
-      "subsection": "A találatok elbírálása",
-      "document": "02.c-hosszukard-AFTERBLOW.md",
-      "anchor_id": "LS-AB-1.2",
-      "line_number": 37,
-      "text_plain": "A bíró döntése az egyidejű és kettős találatok megkülönböztetését illetően ténymegállapításnak minősül, amely nem megkérdőjelezhető, emiatt videó-bíráskodás nem kérhető.",
-      "weapon_type": "longsword",
-      "variant": "AFTERBLOW",
-      "references_to": [],
-      "references_from": [],
-      "parent_id": "LS-AB-1.2",
-      "child_ids": [],
-      "lineage": [
-        "LS-AB",
-        "LS-AB-1",
-        "LS-AB-1.2"
-      ],
-      "depth": 3,
-      "is_leaf": true,
-      "sibling_ids": [
-        "LS-AB-1.2.1",
-        "LS-AB-1.2.10",
-        "LS-AB-1.2.11",
-        "LS-AB-1.2.12",
-        "LS-AB-1.2.13",
-        "LS-AB-1.2.2",
-        "LS-AB-1.2.3",
-        "LS-AB-1.2.5",
-        "LS-AB-1.2.6",
-        "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -9184,10 +9140,8 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -9250,13 +9204,13 @@
     },
     {
       "rule_id": "LS-AB-1.2.6",
-      "text": "Egyidejű találatok esetén mindkét vívó találatot kapottnak tekintendő. A találatokat a következőképpen kell megítélni:\n- ha mindkét vívó két kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni\n- ha mindkét vívó egy kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni\n- ha az egyik vívó egy, a másik két kézzel fogott fegyverrel talált egyidejűleg, az ellen a vívó ellen kell 1 pontot ítélni, aki egy kézzel fogta a fegyvert.",
+      "text": "Egyidejű találatok ÉS kettős találatok esetén mindkét vívó találatot kapottnak tekintendő. A találatokat a következőképpen kell megítélni:\n- ha mindkét vívó két kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni\n- ha mindkét vívó egy kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni\n- ha az egyik vívó egy, a másik két kézzel fogott fegyverrel talált egyidejűleg, az ellen a vívó ellen kell 1 pontot ítélni, aki egy kézzel fogta a fegyvert.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
       "anchor_id": "LS-AB-1.2",
       "line_number": 62,
-      "text_plain": "Egyidejű találatok esetén mindkét vívó találatot kapottnak tekintendő. A találatokat a következőképpen kell megítélni: - ha mindkét vívó két kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni - ha mindkét vívó egy kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni - ha az egyik vívó egy, a másik két kézzel fogott fegyverrel talált egyidejűleg, az ellen a vívó ellen kell 1 pontot ítélni, aki egy kézzel fogta a fegyvert.",
+      "text_plain": "Egyidejű találatok ÉS kettős találatok esetén mindkét vívó találatot kapottnak tekintendő. A találatokat a következőképpen kell megítélni: - ha mindkét vívó két kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni - ha mindkét vívó egy kézzel fogott fegyerrel talált, mindkét vívó ellen 1 pontot kell ítélni - ha az egyik vívó egy, a másik két kézzel fogott fegyverrel talált egyidejűleg, az ellen a vívó ellen kell 1 pontot ítélni, aki egy kézzel fogta a fegyvert.",
       "weapon_type": "longsword",
       "variant": "AFTERBLOW",
       "references_to": [],
@@ -9278,23 +9232,21 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
     },
     {
       "rule_id": "LS-AB-1.2.7",
-      "text": "Kettős találatok és után-találatok esetén annak a vívónak a terhére kell találatot ítélni, akit időbeli sorrendben először találtak el. A második találat nem saját jogán kerül megítélésre, hanem csak abból a szempontból, hogy az első, eredeti találathoz viszonyítva érvényes kettős- vagy után-találatnak minősül-e.",
+      "text": "Után-találatok esetén annak a vívónak a terhére kell találatot ítélni, akit időbeli sorrendben először találtak el. Az után-találat nem saját jogán kerül megítélésre, hanem csak abból a szempontból, hogy az első, eredeti találathoz viszonyítva érvényes után-találatnak minősül-e.\n<!-- **LS-AB-1.2.8**\nKettős találatnál a második találat (függetlenül attól, hogy egy vagy két kézben fogott fegyverrel hajtották végre) csökkenti az adható pontok számát az eredeti találathoz képest:\n- ha az eredeti találat 2 pontot ér, a második találat a regisztrálandó pontszámot 1-re csökkenti\n- ha az eredeti találat 1 pontot ér, a második találat a regisztrálandó pontszámot 0-ra csökkenti.   -->",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
       "anchor_id": "LS-AB-1.2",
       "line_number": 69,
-      "text_plain": "Kettős találatok és után-találatok esetén annak a vívónak a terhére kell találatot ítélni, akit időbeli sorrendben először találtak el. A második találat nem saját jogán kerül megítélésre, hanem csak abból a szempontból, hogy az első, eredeti találathoz viszonyítva érvényes kettős- vagy után-találatnak minősül-e.",
+      "text_plain": "Után-találatok esetén annak a vívónak a terhére kell találatot ítélni, akit időbeli sorrendben először találtak el. Az után-találat nem saját jogán kerül megítélésre, hanem csak abból a szempontból, hogy az első, eredeti találathoz viszonyítva érvényes után-találatnak minősül-e.",
       "weapon_type": "longsword",
       "variant": "AFTERBLOW",
       "references_to": [],
@@ -9316,48 +9268,8 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
-        "LS-AB-1.2.8",
-        "LS-AB-1.2.9"
-      ],
-      "language": "hun"
-    },
-    {
-      "rule_id": "LS-AB-1.2.8",
-      "text": "Kettős találatnál a második találat (függetlenül attól, hogy egy vagy két kézben fogott fegyverrel hajtották végre) csökkenti az adható pontok számát az eredeti találathoz képest:\n- ha az eredeti találat 2 pontot ér, a második találat a regisztrálandó pontszámot 1-re csökkenti\n- ha az eredeti találat 1 pontot ér, a második találat a regisztrálandó pontszámot 0-ra csökkenti.",
-      "section": "",
-      "subsection": "A találatok elbírálása",
-      "document": "02.c-hosszukard-AFTERBLOW.md",
-      "anchor_id": "LS-AB-1.2",
-      "line_number": 72,
-      "text_plain": "Kettős találatnál a második találat (függetlenül attól, hogy egy vagy két kézben fogott fegyverrel hajtották végre) csökkenti az adható pontok számát az eredeti találathoz képest: - ha az eredeti találat 2 pontot ér, a második találat a regisztrálandó pontszámot 1-re csökkenti - ha az eredeti találat 1 pontot ér, a második találat a regisztrálandó pontszámot 0-ra csökkenti.",
-      "weapon_type": "longsword",
-      "variant": "AFTERBLOW",
-      "references_to": [],
-      "references_from": [],
-      "parent_id": "LS-AB-1.2",
-      "child_ids": [],
-      "lineage": [
-        "LS-AB",
-        "LS-AB-1",
-        "LS-AB-1.2"
-      ],
-      "depth": 3,
-      "is_leaf": true,
-      "sibling_ids": [
-        "LS-AB-1.2.1",
-        "LS-AB-1.2.10",
-        "LS-AB-1.2.11",
-        "LS-AB-1.2.12",
-        "LS-AB-1.2.13",
-        "LS-AB-1.2.2",
-        "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
-        "LS-AB-1.2.5",
-        "LS-AB-1.2.6",
-        "LS-AB-1.2.7",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -9392,11 +9304,9 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
-        "LS-AB-1.2.7",
-        "LS-AB-1.2.8"
+        "LS-AB-1.2.7"
       ],
       "language": "hun"
     },
@@ -9418,7 +9328,9 @@
         "LS-AB-1.2.10.1",
         "LS-AB-1.2.10.2",
         "LS-AB-1.2.10.3",
-        "LS-AB-1.2.10.4"
+        "LS-AB-1.2.10.4",
+        "LS-AB-1.2.10.5",
+        "LS-AB-1.2.10.6"
       ],
       "lineage": [
         "LS-AB",
@@ -9434,11 +9346,9 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -9469,7 +9379,9 @@
       "sibling_ids": [
         "LS-AB-1.2.10.2",
         "LS-AB-1.2.10.3",
-        "LS-AB-1.2.10.4"
+        "LS-AB-1.2.10.4",
+        "LS-AB-1.2.10.5",
+        "LS-AB-1.2.10.6"
       ],
       "language": "hun"
     },
@@ -9499,19 +9411,21 @@
       "sibling_ids": [
         "LS-AB-1.2.10.1",
         "LS-AB-1.2.10.3",
-        "LS-AB-1.2.10.4"
+        "LS-AB-1.2.10.4",
+        "LS-AB-1.2.10.5",
+        "LS-AB-1.2.10.6"
       ],
       "language": "hun"
     },
     {
       "rule_id": "LS-AB-1.2.10.3",
-      "text": "Az egy vívóidőn belüli találatok megelőzését, elhárítását (pl kizáró vágások/szúrások) nem tekinthetjük után-akció védésének. Csak abban az esetben ítélhető meg az után-akció védése, ha azt egy érvényes eredeti találatot követően hajtják végre, tényleges, önálló, érvényes után-akcióval szemben (v.ö. fentebb: Után-találatok).",
+      "text": "Az egy vívóidőn belüli találatok megelőzését, elhárítását (pl kizáró vágások/szúrások) nem tekinthetjük után-akció védésének.",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
       "anchor_id": "LS-AB-1.2",
       "line_number": 98,
-      "text_plain": "Az egy vívóidőn belüli találatok megelőzését, elhárítását (pl kizáró vágások/szúrások) nem tekinthetjük után-akció védésének. Csak abban az esetben ítélhető meg az után-akció védése, ha azt egy érvényes eredeti találatot követően hajtják végre, tényleges, önálló, érvényes után-akcióval szemben (v.ö. fentebb: Után-találatok).",
+      "text_plain": "Az egy vívóidőn belüli találatok megelőzését, elhárítását (pl kizáró vágások/szúrások) nem tekinthetjük után-akció védésének.",
       "weapon_type": "longsword",
       "variant": "AFTERBLOW",
       "references_to": [],
@@ -9529,18 +9443,84 @@
       "sibling_ids": [
         "LS-AB-1.2.10.1",
         "LS-AB-1.2.10.2",
-        "LS-AB-1.2.10.4"
+        "LS-AB-1.2.10.4",
+        "LS-AB-1.2.10.5",
+        "LS-AB-1.2.10.6"
       ],
       "language": "hun"
     },
     {
       "rule_id": "LS-AB-1.2.10.4",
-      "text": "Ha nem hajtottak végre tényleges után-akciót, nem lehet után-akció védését ítélni, akkor sem,\n- ha az eredeti találatot elért vívó támadás-ismétléssel vagy pengetámadással pengeérintkezést hoz létre.\n- ha az ellenfél, miután eltalálták, olyan akciót indít, ami nem minősül után-akciónak (késlekedik, megszakadt a vívófrázis, állj után indított akció).\n- V.ö.: fentebb, Után-találatok, és feltételei",
+      "text": "Csak abban az esetben ítélhető meg az után-akció védése, ha azt egy érvényes eredeti találatot követően hajtják végre, tényleges, érvényes után-akcióval szemben, tényleges védekező akcióval: tehát találat után végrehajtott, új, azonnali, tényleges parád mozdulattal (v.ö. fentebb: Után-találatok).",
       "section": "",
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
       "anchor_id": "LS-AB-1.2",
       "line_number": 101,
+      "text_plain": "Csak abban az esetben ítélhető meg az után-akció védése, ha azt egy érvényes eredeti találatot követően hajtják végre, tényleges, érvényes után-akcióval szemben, tényleges védekező akcióval: tehát találat után végrehajtott, új, azonnali, tényleges parád mozdulattal (v.ö. fentebb: Után-találatok).",
+      "weapon_type": "longsword",
+      "variant": "AFTERBLOW",
+      "references_to": [],
+      "references_from": [],
+      "parent_id": "LS-AB-1.2.10",
+      "child_ids": [],
+      "lineage": [
+        "LS-AB",
+        "LS-AB-1",
+        "LS-AB-1.2",
+        "LS-AB-1.2.10"
+      ],
+      "depth": 4,
+      "is_leaf": true,
+      "sibling_ids": [
+        "LS-AB-1.2.10.1",
+        "LS-AB-1.2.10.2",
+        "LS-AB-1.2.10.3",
+        "LS-AB-1.2.10.5",
+        "LS-AB-1.2.10.6"
+      ],
+      "language": "hun"
+    },
+    {
+      "rule_id": "LS-AB-1.2.10.5",
+      "text": "Egy megkísérelt után-akció sikertelensége vagy érvénytelensége (pl. rövid, mellévág, ráesik az ellenfél kardjára) önmagában NEM tekinthető utánakció védésének.",
+      "section": "",
+      "subsection": "A találatok elbírálása",
+      "document": "02.c-hosszukard-AFTERBLOW.md",
+      "anchor_id": "LS-AB-1.2",
+      "line_number": 104,
+      "text_plain": "Egy megkísérelt után-akció sikertelensége vagy érvénytelensége (pl. rövid, mellévág, ráesik az ellenfél kardjára) önmagában NEM tekinthető utánakció védésének.",
+      "weapon_type": "longsword",
+      "variant": "AFTERBLOW",
+      "references_to": [],
+      "references_from": [],
+      "parent_id": "LS-AB-1.2.10",
+      "child_ids": [],
+      "lineage": [
+        "LS-AB",
+        "LS-AB-1",
+        "LS-AB-1.2",
+        "LS-AB-1.2.10"
+      ],
+      "depth": 4,
+      "is_leaf": true,
+      "sibling_ids": [
+        "LS-AB-1.2.10.1",
+        "LS-AB-1.2.10.2",
+        "LS-AB-1.2.10.3",
+        "LS-AB-1.2.10.4",
+        "LS-AB-1.2.10.6"
+      ],
+      "language": "hun"
+    },
+    {
+      "rule_id": "LS-AB-1.2.10.6",
+      "text": "Ha nem hajtottak végre tényleges után-akciót, nem lehet után-akció védését ítélni, akkor sem,\n- ha az eredeti találatot elért vívó támadás-ismétléssel vagy pengetámadással pengeérintkezést hoz létre.\n- ha az ellenfél, miután eltalálták, olyan akciót indít, ami nem minősül után-akciónak (késlekedik, megszakadt a vívófrázis, állj után indított akció).\n- V.ö.: fentebb, Után-találatok, és feltételei",
+      "section": "",
+      "subsection": "A találatok elbírálása",
+      "document": "02.c-hosszukard-AFTERBLOW.md",
+      "anchor_id": "LS-AB-1.2",
+      "line_number": 107,
       "text_plain": "Ha nem hajtottak végre tényleges után-akciót, nem lehet után-akció védését ítélni, akkor sem, - ha az eredeti találatot elért vívó támadás-ismétléssel vagy pengetámadással pengeérintkezést hoz létre. - ha az ellenfél, miután eltalálták, olyan akciót indít, ami nem minősül után-akciónak (késlekedik, megszakadt a vívófrázis, állj után indított akció). - V.ö.: fentebb, Után-találatok, és feltételei",
       "weapon_type": "longsword",
       "variant": "AFTERBLOW",
@@ -9559,7 +9539,9 @@
       "sibling_ids": [
         "LS-AB-1.2.10.1",
         "LS-AB-1.2.10.2",
-        "LS-AB-1.2.10.3"
+        "LS-AB-1.2.10.3",
+        "LS-AB-1.2.10.4",
+        "LS-AB-1.2.10.5"
       ],
       "language": "hun"
     },
@@ -9570,7 +9552,7 @@
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
       "anchor_id": "LS-AB-1.2",
-      "line_number": 108,
+      "line_number": 114,
       "text_plain": "Ha egyidejű vagy kettős találat, majd után-találat is esik egy vívófrázison belül, az után-találatot figyelmen kívül kell hagyni.",
       "weapon_type": "longsword",
       "variant": "AFTERBLOW",
@@ -9592,11 +9574,9 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -9608,7 +9588,7 @@
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
       "anchor_id": "LS-AB-1.2",
-      "line_number": 111,
+      "line_number": 117,
       "text_plain": "Ha kettős találat vagy találat-után-találat van, amelyek közül az egyik érvényes és a másik érvénytelen (érvénytelen felületre esett, vagy amelyet a pást elhagyása után adtak, stb.), csak az érvényes találatot kell megítélni, úgy, mintha az lett volna az eredeti, egyetlen találat. Ha ezután még egy után-találat esik (pl. egy érvénytelen felületre esett találat utáni ismétlés), azt figyelmen kívül kell hagyni.",
       "weapon_type": "longsword",
       "variant": "AFTERBLOW",
@@ -9630,11 +9610,9 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -9646,7 +9624,7 @@
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
       "anchor_id": "LS-AB-1.2",
-      "line_number": 114,
+      "line_number": 120,
       "text_plain": "Ha a bíró nem tudja megítélni egy vélt találat megtörténtét vagy érvényességét, megsemmisíti a találatot vagy a kettős találatot, nem ítél pontot, és a vívókat ott állítja fel újra, ahol a küzdelmet megállította (v.ö.: 03-altalanos/Nyert vagy vesztett terület).",
       "weapon_type": "longsword",
       "variant": "AFTERBLOW",
@@ -9668,11 +9646,9 @@
         "LS-AB-1.2.12",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -9684,7 +9660,7 @@
       "subsection": "A találatok elbírálása",
       "document": "02.c-hosszukard-AFTERBLOW.md",
       "anchor_id": "LS-AB-1.2",
-      "line_number": 117,
+      "line_number": 123,
       "text_plain": "Ha az eredeti találat érvénytelen (érvénytelen felületre esett, vagy amelyet a pást elhagyásaután adtak, stb.), az ezt követő után-találat nem pontszerző akció, meg kell semmisíteni, és a vívókat vissza kell állítani vívóállásba a felállási vonalra.",
       "weapon_type": "longsword",
       "variant": "AFTERBLOW",
@@ -9706,11 +9682,9 @@
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
-        "LS-AB-1.2.4",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
         "LS-AB-1.2.7",
-        "LS-AB-1.2.8",
         "LS-AB-1.2.9"
       ],
       "language": "hun"
@@ -14313,13 +14287,13 @@
   ],
   "total_rules": 429,
   "documents": [
-    "04-szervezes.md",
-    "02.c-hosszukard-AFTERBLOW.md",
+    "02.b-hosszukard-COMBAT.md",
     "02.a-hosszukard-VOR.md",
-    "01-altalanos.md",
     "02-hosszukard.md",
-    "03-etikett_fegyelem.md",
-    "02.b-hosszukard-COMBAT.md"
+    "02.c-hosszukard-AFTERBLOW.md",
+    "01-altalanos.md",
+    "04-szervezes.md",
+    "03-etikett_fegyelem.md"
   ],
   "language": "hun"
 }
