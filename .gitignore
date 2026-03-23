@@ -20,3 +20,7 @@ qa_tools/output/fie_hema_alignment_hu*.json
 # Local corpora / extracted data (not committed by default)
 data/fie_extracted/
 
+# Build artifacts (generated on deploy, do not commit)
+dist/
+data/search/
+
