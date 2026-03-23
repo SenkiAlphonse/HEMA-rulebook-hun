@@ -437,7 +437,7 @@ A jelen szakaszban hivatkozott rendszeresen testérintkezéssel végződő fless
 **GEN-6.5.2**  
 Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar "Állj"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást határát, találatot kapottnak tekintendő (V.ö.: A küzdőtér határvonala).  
 
-### Elhajlás (a találati felület áthelyezése) és túlhaladás  
+### A találati felület elmozdítása és túlhaladás  
 <span id="GEN-6.6"></span>  
 
 **GEN-6.6.1**  
@@ -445,153 +445,166 @@ A helyváltoztatás és elhajlás megengedett, beleértve az az esetet is, amiko
 
 **GEN-6.6.2**  
 Tilos az ellenfélnek hátat fordítani a küzdelem alatt. Ilyen vétség esetén a versenybíró az első csoportba tartozó vétségekre vonatkozó büntetéseket alkalmazza és a vétkes vívó által esetleg adott találatot megsemmisíti.  
+<!-- 
+**GEN-6.6.3**  
+Amikor a küzdelem folyamán egy vívó teljes mértékben elhalad az ellenfele mellett, a versenybírónak azonnal “állj!” vezényszót kell kiáltania, és a vívókat vissza kell állítani arra a helyre, amelyet a túlhaladás előtt elfoglaltak.  
 
-### Fogásos és birkózó akciók  
+**GEN-6.6.4**  
+Ha a túlhaladás közben találatok estek, ezek közül az azonnal bevitt találat érvényes; a túlhaladás után a túlhaladó által bevitt találatot meg kell semmisíteni, azonban a túlhaladást elszenvedett vívó által azonnal adott találat még akkor is érvényes, ha azt visszafordulva adja.   -->
+
+### Az érvényes találati felület helyettesítése  
 <span id="GEN-6.7"></span>  
 
 **GEN-6.7.1**  
-Fogásos küzdelem és birkózás (megfogás/kontroll/dobás/földrevitel) egy mérkőzésen belül csak abban az esetben engedhető meg, **ha abba mindkét fél beleegyezett a mérkőzés megkezdése előtt**. Amennyiben az egyik fél nem vállalja a birkózást, annak okára nem kell magyarázatot adnia. Csapatmérkőzéseken a csapattagok egyénileg dönthetnek arról, hogy az adott ellenféllel vállalják-e a birkózást.  
+Ha a vívó annak elfedésével vagy rendellenes mozdulattal érvényes találati felületét érvénytelennel helyettesíti, őt a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9], [DIS-4.3.20] szakaszokban írt, az első csoportba tartozó vétségekre vonatkozó büntetésekkel sújtja és az általa esetlegesen bevitt találatot megsemmisíti.  
 
-**GEN-6.7.2**  
-Birkózó akciónak számít minden közelharci akció, amit nem fegyverrel hajtanak végre (kézzel/lábbal/fejjel/stb. végzett technikák, fogások, lefegyverzések, ütések), illetve amik fegyverrel a közvetlen találatadás helyett az ellenfél testrészeinek manipulálását szolgálják.  
-Amennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, úgy bármilyen birkózó akció kezdeményezője a fegyelmi vétségek első csoportjába tartozó szabálytalanságot követ el.  
-
-**GEN-6.7.3**  
-A bíró megállíthatja a mérkőzést huzamosabb idejű sikertelen közelharc vagy birkózás után (ezt a bíró saját hatáskörében ítéli meg).  
-Az ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedett. Akkor ítélhető pont, ha a penge kézzeli megfogása futólagos, és azt azonnal követi egy fegyverrel adott találat. Ha a penge kézzeli megfogása következtében nem sikerül találatot elérni, a bíró megállítja az asszót, és nem ítél pontot. Ha a birkózást kezdeményező fél az ellenfél fegyverét előbb nem hatástalanítja, és találatot kap, az ellenfélnek kell pontot ítélni.  
-
-**GEN-6.7.4**  
-Pontszerző birkózó akciók:  
-
-**GEN-6.7.4.1**  
-Birkózófogással az ellenfél legalább egy lábának elemelése a talajról. (A dobásokat, földreviteleket NEM szabad befejezni.)  
-
-**GEN-6.7.4.2**  
-Fegyverrel vagy anélkül végrehajtott birkózófogások, amelyek a vívó mozgását, szabadulását megakadályozzák. A kontrolláló helyzet létrejöttét és érvényességét a versenybíró ítéli meg: amikor a versenybíró saját hatáskörében úgy ítéli, hogy a kontrollálás/dominancia követelményei teljesültek, ‘Állj!’-t mond, és 1 pontot ítél a dominálást elszenvedő vívó ellen.  
-
-**GEN-6.7.4.3**  
-Dominancia/kontrollálás ítélet nem alkalmazható olyan helyzetekre, ahol az ellenfél ki tud törni a fogásból, és érvényes akciókat tud kezdeményezni, akkor sem, ha valamilyen aktív erőfeszítés eredményeképp a dominálni szándékozó fegyver továbbra is érinti az ellenfél találati felületét. A domináló akciók érvényességét a bíró saját hatáskörében ítéli meg.  
-
-**GEN-6.7.5**  
-A földrevitel után további küzdelem nem engedélyezett. A bíró ‘Állj’-t mond, ha valamelyik vívó a földre kerül, vagy a bíró nem tudja megítélni az akciót, vagy a dominancia megszerzése huzamosabb ideig sem sikerül (ezt a bíró saját hatáskörében ítéli meg).  
-
-**GEN-6.7.6**  
-A lefegyverzés (mely során az egyik vívó szándékos, célirányos közelharci akció eredményeképp elveszi az ellenfele fegyverét) érvényes pontszerzési mód, kivéve ha a lefegyverzett vívó azonnal (a bírói ‘Állj’ előtt) kontrolállja az ellenfél pengéjét és folytatja a birkózást.  
-
-**GEN-6.7.7**  
-Ha a vívó az ellenfél beavatkozása nélkül elejti a fegyverét vagy elesik, a bíró ‘Állj’-t mond. Azt az (egyszerű, vagy az összetett akciót befejező mozdulattal) elért találatot, ami még azelőtt indult, hogy az ellenfél nyilvánvalóan elveszítette a fegyverét vagy elesett, érvényesnek kell minősíteni akkor is, ha csak azután érkezik be. A sportszerűség jegyében illetlenség új támadást kezdeményezni a fegyverét vesztett vagy földre került ellenféllel szemben, így ezért nem adható pont.  
-
-### Nyert vagy vesztett terület  
+### Fogásos és birkózó akciók  
 <span id="GEN-6.8"></span>  
 
 **GEN-6.8.1**  
-Az "állj!" vezényszó elhangzásakor a nyert területet megszerezettnek kell tekinteni mindaddig, amíg nincs megítélt találat. Ha nincs megítélt találat, a vívóállásba való új felállításkor a két vívónak egyforma mértékben kell hátrálnia, hogy a megfelelő vívótávolságot felvegyék.  
+Fogásos küzdelem és birkózás (megfogás/kontroll/dobás/földrevitel) egy mérkőzésen belül csak abban az esetben engedhető meg, **ha abba mindkét fél beleegyezett a mérkőzés megkezdése előtt**. Amennyiben az egyik fél nem vállalja a birkózást, annak okára nem kell magyarázatot adnia. Csapatmérkőzéseken a csapattagok egyénileg dönthetnek arról, hogy az adott ellenféllel vállalják-e a birkózást.  
 
 **GEN-6.8.2**  
-Ugyanakkor, ha a mérkőzés testérintkezés miatt szakadt meg (és a közelharc nem engedélyezett), a vívókat úgy kell visszaállítani vívóállásba, hogy a testérintkezést elszenvedő vívó azon a helyen maradjon, ahol korábban állt; ez vonatkozik arra is, ha az ellenfél lerohanó támadást hajtott végre akár testérintkezés nélkül.  
+Birkózó akciónak számít minden közelharci akció, amit nem fegyverrel hajtanak végre (kézzel/lábbal/fejjel/stb. végzett technikák, fogások, lefegyverzések, ütések), illetve amik fegyverrel a közvetlen találatadás helyett az ellenfél testrészeinek manipulálását szolgálják.  
+Amennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, úgy bármilyen birkózó akció kezdeményezője a fegyelmi vétségek első csoportjába tartozó szabálytalanságot követ el.  
 
-### A határvonalak átlépése  
+**GEN-6.8.3**  
+A bíró megállíthatja a mérkőzést huzamosabb idejű sikertelen közelharc vagy birkózás után (ezt a bíró saját hatáskörében ítéli meg).  
+Az ellenfél pillanatnyilag hatástalanított pengéjének megfogása megengedett. Akkor ítélhető pont, ha a penge kézzeli megfogása futólagos, és azt azonnal követi egy fegyverrel adott találat. Ha a penge kézzeli megfogása következtében nem sikerül találatot elérni, a bíró megállítja az asszót, és nem ítél pontot. Ha a birkózást kezdeményező fél az ellenfél fegyverét előbb nem hatástalanítja, és találatot kap, az ellenfélnek kell pontot ítélni.  
+
+**GEN-6.8.4**  
+Pontszerző birkózó akciók:  
+
+**GEN-6.8.4.1**  
+Birkózófogással az ellenfél legalább egy lábának elemelése a talajról. (A dobásokat, földreviteleket NEM szabad befejezni.)  
+
+**GEN-6.8.4.2**  
+Fegyverrel vagy anélkül végrehajtott birkózófogások, amelyek a vívó mozgását, szabadulását megakadályozzák. A kontrolláló helyzet létrejöttét és érvényességét a versenybíró ítéli meg: amikor a versenybíró saját hatáskörében úgy ítéli, hogy a kontrollálás/dominancia követelményei teljesültek, ‘Állj!’-t mond, és 1 pontot ítél a dominálást elszenvedő vívó ellen.  
+
+**GEN-6.8.4.3**  
+Dominancia/kontrollálás ítélet nem alkalmazható olyan helyzetekre, ahol az ellenfél ki tud törni a fogásból, és érvényes akciókat tud kezdeményezni, akkor sem, ha valamilyen aktív erőfeszítés eredményeképp a dominálni szándékozó fegyver továbbra is érinti az ellenfél találati felületét. A domináló akciók érvényességét a bíró saját hatáskörében ítéli meg.  
+
+**GEN-6.8.5**  
+A földrevitel után további küzdelem nem engedélyezett. A bíró ‘Állj’-t mond, ha valamelyik vívó a földre kerül, vagy a bíró nem tudja megítélni az akciót, vagy a dominancia megszerzése huzamosabb ideig sem sikerül (ezt a bíró saját hatáskörében ítéli meg).  
+
+**GEN-6.8.6**  
+A lefegyverzés (mely során az egyik vívó szándékos, célirányos közelharci akció eredményeképp elveszi az ellenfele fegyverét) érvényes pontszerzési mód, kivéve ha a lefegyverzett vívó azonnal (a bírói ‘Állj’ előtt) kontrolállja az ellenfél pengéjét és folytatja a birkózást.  
+
+**GEN-6.8.7**  
+Ha a vívó az ellenfél beavatkozása nélkül elejti a fegyverét vagy elesik, a bíró ‘Állj’-t mond. Azt az (egyszerű, vagy az összetett akciót befejező mozdulattal) elért találatot, ami még azelőtt indult, hogy az ellenfél nyilvánvalóan elveszítette a fegyverét vagy elesett, érvényesnek kell minősíteni akkor is, ha csak azután érkezik be. A sportszerűség jegyében illetlenség új támadást kezdeményezni a fegyverét vesztett vagy földre került ellenféllel szemben, így ezért nem adható pont.  
+
+### Nyert vagy vesztett terület  
 <span id="GEN-6.9"></span>  
 
 **GEN-6.9.1**  
-Ha az egyik versenyző mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát,  
-
-**GEN-6.9.1.1**  
-a versenybírónak azonnal "állj!"-t kell kiáltania, és  
-
-**GEN-6.9.1.2**  
-meg kell semmisíteni mindent, ami a határvonal átlépése után történt.  
+Az "állj!" vezényszó elhangzásakor a nyert területet megszerezettnek kell tekinteni mindaddig, amíg nincs megítélt találat. Ha nincs megítélt találat, a vívóállásba való új felállításkor a két vívónak egyforma mértékben kell hátrálnia, hogy a megfelelő vívótávolságot felvegyék.  
 
 **GEN-6.9.2**  
+Ugyanakkor, ha a mérkőzés testérintkezés miatt szakadt meg (és a közelharc nem engedélyezett), a vívókat úgy kell visszaállítani vívóállásba, hogy a testérintkezést elszenvedő vívó azon a helyen maradjon, ahol korábban állt; ez vonatkozik arra is, ha az ellenfél lerohanó támadást hajtott végre akár testérintkezés nélkül.  
+
+### A határvonalak átlépése  
+<span id="GEN-6.10"></span>  
+
+**GEN-6.10.1**  
+Ha az egyik versenyző mindkét lábfejével teljesen átlépi a küzdőtér valamelyik határvonalát,  
+
+**GEN-6.10.1.1**  
+a versenybírónak azonnal "állj!"-t kell kiáltania, és  
+
+**GEN-6.10.1.2**  
+meg kell semmisíteni mindent, ami a határvonal átlépése után történt.  
+
+**GEN-6.10.2**  
 Ugyanakkor a határvonalat csak egy lábbal (másikkal nem vagy csak részben) átlépő vívó találata érvényes marad, ha az akció az "állj!" előtt kezdődött; akkor is, ha a vívó ezután teljesen elhagyta a küzdőteret.  
 
-**GEN-6.9.3**  
+**GEN-6.10.3**  
 Ha az egyik vívó a pást valmelyik határvona teljesen, tehát mindkét lábbal kilép a pástról, akkor csak azt a találatot lehet megítélni, amelyet a páston legalább egy lábbal belül maradó vívó adott, és csakis Hosszúkard--Combat és --Afterblow esetén, még egyidejű találat esetében is. Hosszúkard--Vor esetén a konvenció szabályai irányadóak.  
 
-**GEN-6.9.4**  
+**GEN-6.10.4**  
 Ha a vívó valamelyik határvonalat teljesen, tehát mindkét lábbal túlhaladja (anélkül hogy a kilépés előtt érvényes találatot adott volna), a versenybíró a következőképpen jár el:  
     <!-- TODO a figyelmeztetés elhagyható, ha a pást mérete hosszabb távon rögzül -->  
     <!-- TODO ha a jövőben hosszabb pástokat használunk, a hátsó vonal vs oldalvonal megkülönböztetés is relevánssá válhat majd -->  
 
-**GEN-6.9.4.1**  
+**GEN-6.10.4.1**  
 Az első kilépésnél a vívó figyelmeztetést kap.  
 
-**GEN-6.9.4.2**  
+**GEN-6.10.4.2**  
 Minden, a mérkőzésen belüli további esetben a küzdőtér határvonalát túlhaladó versenyző egy találattal büntetendő (ellenfele egy pontot kap), akkor is ha ténylegesen nem találták el.  
 
-**GEN-6.9.5**  
+**GEN-6.10.5**  
 **Vétlen lelépés:** semmilyen büntetéssel nem büntetendő az a vívó, aki valamelyik határvonalon nem szándékosan, hanem bármilyen váratlan esemény, baleset (például lökés) következtében kilép.  
 
 ### A mérkőzés időtartama  
-<span id="GEN-6.10"></span>  
+<span id="GEN-6.11"></span>  
 
-**GEN-6.10.1**  
+**GEN-6.11.1**  
 A küzdelem időtartamán a tényleges küzdelem idejét, tehát a "rajta!" és "állj!" közötti időközök összességét kell érteni.  
 
-**GEN-6.10.2**  
+**GEN-6.11.2**  
 A küzdelem időtartamát a versenybíró vagy egy időmérő méri. Minden olyan mérkőzésen (a hivatalos versenyek döntőin kiemelten javasolt), amelyen a nézők számára látható az időmérés, az időmérő órát úgy kell elhelyezni, hogy azt a páston levő két vívó és a versenybíró is láthassa.  
 
-**GEN-6.10.3**  
+**GEN-6.11.3**  
 A befejezett mérkőzés vagy váltás nem kezdhető újra, még akkor sem, ha formális hiba történt. (V.ö.: 08-etikett-fegyelem/vívó etikett/2.)  
    
 #### Egyéni csoportmérkőzések keretei  
 
-**GEN-6.10.4**  
+**GEN-6.11.4**  
 Az egyéni csoportmérkőzések során egy mérkőzés akkor ér véget, ha a következő feltételek valamelyike teljesül:  
 
-**GEN-6.10.4.1**  
+**GEN-6.11.4.1**  
 az egyik vívó elérte a meghatározott találatszámot (afterblow esetében pontszámot):  
 
-**GEN-6.10.4.1.1**  
+**GEN-6.11.4.1.1**  
 **Vor**: Valamelyik vívó **5 találatot elért**.  
 
-**GEN-6.10.4.1.2**  
+**GEN-6.11.4.1.2**  
 **Combat**:   
 - Valamelyik vívó **5 találatot elért**, illetve  
 - ha a versenyzők 4-4 -es állásig jutnak, döntő találatot kell elérniük az időkorlát végéig. A kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)  
 
-**GEN-6.10.4.1.3**  
+**GEN-6.11.4.1.3**  
 **Afterblow**:   
-- Valamelyik vívó **legalább 7 PONTOT elért**,  
-    - a súlyozás miatt a 7 pontot meg lehet haladni.  
-    - Ha mindkét versenyző egyszerre éri el vagy haladja meg a 7 pontot (egyidejű találatokkal),   
+- Valamelyik vívó **7 PONTOT elért**,  
+    <!-- - a súlyozás miatt a 7 pontot meg lehet haladni.   -->
+    - Ha mindkét versenyző egyszerre éri el a 7 pontot (egyidejű vagy kettős találatokkal),   
         - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;  
-        - ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)  
+        - ha az állás ekkor döntetlen lett, a pontszámokat vissza kell állítani 6-6-ra, és döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű vagy kettős találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)  
+        - a győztesnél 7 pontot kell végső pontszámként regisztrálni a pontozólapon, akkor is, ha az utolsó találat értékével meghaladná azt  
 
-**GEN-6.10.4.1.4**  
-A pontozólapra a végső pontszám kerül (VN–Dn, N = a győztes pontjai, n = vesztes pontjai)  
+**GEN-6.11.4.1.4**  
+A pontozólapra a végső pontszám kerül. (VN–Dn, N = a győztes pontjai, n = vesztes pontjai)  
 
-**GEN-6.10.4.5**  
+**GEN-6.11.4.2**  
 Vagy három percnyi tényleges vívóidő eltelt:  
 
-**GEN-6.10.4.5.1**  
+**GEN-6.11.4.2.1**  
 Ha az idő lejártakor legalább egy találatnyi különbség van a két versenyző pontjai között, a több pontot elért versenyzőt kell győztesnek kihirdetni. A jegyzőkönyvön a mérkőzésen ténylegesen elért találatokat kell rögzíteni (VN – Dn, ahol N= a győztes vívó által szerzett pontok száma és n= a vesztes vívó által szerzett pontok száma).  
 
-**GEN-6.10.4.5.2**  
+**GEN-6.11.4.2.2**  
 Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. **A vívás újrakezdése előtt** a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.  
 
-**GEN-6.10.4.5.3**  
+**GEN-6.11.4.2.3**  
 Ebben az esetben a jegyzőkönyvön a mérkőzés során ténylegesen elért találatokat kell rögzíteni:   
     - VN – Dn, ha döntő találat esett az időkereten belül;  
     - V6 – D6 vagy V4 – D4 vagy V2 – D2 vagy V1 – D1 vagy V0 – D0 ha sorsolás alapján kerül ki győztes.  
 
 #### Egyéni egyenes kieséses mérkőzések keretei  
 
-**GEN-6.10.5**  
+**GEN-6.11.5**  
 Az egyéni egyenes kieséses mérkőzés akkor ér véget, ha a következő feltételek valamelyike teljesül:  
 
-**GEN-6.10.5.1**  
+**GEN-6.11.5.1**  
 az egyik vívó elérte a meghatározott találatszámot (afterblow esetében pontszámot):  
 
-**GEN-6.10.5.1.1**  
+**GEN-6.11.5.1.1**  
 **Vor**: az egyik versenyző **elér 10 találatot**  
 
-**GEN-6.10.5.1.2**  
+**GEN-6.11.5.1.2**  
 **Combat**:   
     - az egyik versenyző **elér 10 találatot**  
     - Ha mindkét versenyző egyszerre éri el a 10 pontot (egyidejű találatokkal), döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)  
 
-**GEN-6.10.5.1.3**  
+**GEN-6.11.5.1.3**  
 **Afterblow**:  
     - az egyik versenyző **elér legalább 11 PONTOT**;   
         - a súlyozás miatt a 11 pontot meg lehet haladni.  
@@ -599,59 +612,59 @@ az egyik vívó elérte a meghatározott találatszámot (afterblow esetében po
             - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;  
             - ha az állás ekkor döntetlen lett, döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)  
 
-**GEN-6.10.5.2**  
+**GEN-6.11.5.2**  
 vagy a meghatározott tényleges vívóidő eltelt:  
 <!-- ezeket az időket harmonizálni kell középtávon, és esetleges más fegyverek felvétele esetén is érvényesek kell maradjanak -->  
 A két, egyperces pihenőidőkkel elválasztott három perces periódus (6 percnyi tényleges vívóidő) eltelt.   
 
-**GEN-6.10.5.2.1**  
+**GEN-6.11.5.2.1**  
 **Vor** esetén az első periódus vagy a három perces idő leteltéig vagy addig tart, amíg valamelyik vívó 5 találatot el nem ér.   
 
-**GEN-6.10.5.2.2**  
+**GEN-6.11.5.2.2**  
 Ha a szabályokban foglalt idő leteltekor a pontszámok egyenlőek, a vívók győztes pontért küzdenek, maximum egy percig. **A vívás újrakezdése előtt** a bíró kisorsolja (pénzfeldobással), ki lesz a győztes abban az esetben, ha a pontok a plusz egy perc leteltével még mindig egyenlőek.   
 
-**GEN-6.10.5.3**  
+**GEN-6.11.5.3**  
 Az egyperces pihenőidő alatt egy, a mérkőzés előtt megnevezett személy mehet a versenyző közvetlen közelébe.  
 
-**GEN-6.10.5.4**  
+**GEN-6.11.5.4**  
 A pontozólapon feltüntetett pontszámok az összecsapás során ténylegesen megszerzett pontszámok.  
 
-**GEN-6.10.6**  
+**GEN-6.11.6**  
 #### Csapatmérkőzések  
 <!-- TODO Afterblow -->  
 
-**GEN-6.10.6.1**  
+**GEN-6.11.6.1**  
 A váltómérkőzés minden váltása 5 találatból áll (5, 10, 15, 20, stb.). Kivételesen egy váltás végződhet többel mint 5, 10, 15 stb., ha a vívó érvényes találatot ad a váltás végén és további büntetőtalálatot is jóváírnak neki: ebben az esetben mindkettőt figyelembe kell venni; a maximális idő egy-egy találkozóra 2 perc.  
 
-**GEN-6.10.6.2**  
+**GEN-6.11.6.2**  
 Az első két ellenfél addig vív, amíg egyikük 5 találatot el nem ér, a két perces időhatáron belül. A következő két versenyző a két perces időkeretben addig vív, amíg valamelyikük el nem éri a 10 találatot, majd így tovább minden további találkozónál váltásonként öt találatot hozzáadva.  
 
-**GEN-6.10.6.3**  
+**GEN-6.11.6.3**  
 Ha a két perc elteltével a fordulóra előírt pontszámot nem érték el, a következő két versenyző olyan állásnál folytatja a mérkőzést amilyennél az abbamaradt, és a fordulóra előírt maximális pontszámig vívnak a két perces időkeretben.  
 
-**GEN-6.10.6.4**  
+**GEN-6.11.6.4**  
 A győztes csapat az, amelyik eléri a maximális 45 találatot, vagy amelyik több találatot ért el az idő lejártakor.  
 
-**GEN-6.10.6.5**  
+**GEN-6.11.6.5**  
 Ha az utolsó fordulóra irányadó idő lejártakor pontegyenlőség áll fenn, az utolsó fordulót vívó versenyzők legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.  
 
 #### Időmérés  
 
 A küzdelem megszakítása   
 
-**GEN-6.10.7**   
+**GEN-6.11.7**   
 Minden alkalommal amikor a küzdelem megszakad, a vívóknak lehetőségük van megkérdezni, hogy mennyi idejük maradt még vívni.  
 
-**GEN-6.10.8**  
+**GEN-6.11.8**  
 Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétségként büntetendő.  
 
-**GEN-6.10.9**  
+**GEN-6.11.9**  
 A szabályos idő letelte után, az időmérőnek "állj!"-t kell kiáltania (vagy hangjelzést kell működtetnie), amellyel a küzdelmet megállítja és a már elindított, de az idő lejárta után esett találat sem érvényes.  
 
-**GEN-6.10.10**  
+**GEN-6.11.10**  
 Ha a mérkőzésen nem biztosított a vívók által is látható időmérés (kijelző), az időmérőnek 60 másodperccel a vége előtt "Egy perc!" figyelmeztést kell kiáltania (vagy hangjelzést kell működtetnie)--a küzdelmet ilyenkor nem kell megállítani.   
 
-**GEN-6.10.11**  
+**GEN-6.11.11**  
 A versenybírónak a mérkőzés során végig feladata az időmérés. Az időmérő óra meghibásodása esetén a versenybíró állapítja meg a hátralevő vívóidőt.   
 
 ### Sérülés vagy más egészségügyi ok, a versenyző visszalépése  
@@ -676,21 +689,21 @@ A szervező a verseny hatékony lebonyolítása érdekében a csoportfordulóban
 <!-- eredetileg DT, és (Vö. o.71.1). -->  
 
 ### Tiltott akciók  
-<span id="GEN-6.11"></span>  
+<span id="GEN-6.12"></span>  
 
-**GEN-6.11.1**  
+**GEN-6.12.1**  
 Nyakcsavarás, ellenfél felemelése, teljes ízület feszítés, kisízület feszítés, nagyívű dobások és más potenciálisan veszélyes birkózó technikák, ütések (beleértve fejelés, térdelés, könyökölés), rúgások, erőszakos lökések valamint a fegyver dobása szigorúan tiltott.  
 
-**GEN-6.11.2**  
+**GEN-6.12.2**  
 Tilos a túlzott erőkifejtés, brutalitás és a szükségtelen erőszak.  
 
-**GEN-6.11.3**  
+**GEN-6.12.3**  
 Tilos eltalálni a fej hátulját, a gerincet, a térdhajlatot és a lábfejet.  
 
-**GEN-6.11.4**  
+**GEN-6.12.4**  
 A távolság vagy a mozdulat szükséges mértékének helytelen felmérése miatt a padló eltalálása első csoportba tartozó szabálytalanság (a bíró figyelmen kívül hagyhatja az ellenfél akciója következtében, az ellenfél eltalálása után, vagy véletlenül eső könnyed padló érintéseket).  
 
-**GEN-6.11.5**  
+**GEN-6.12.5**  
 Tilos a keresztvassal ütni.  
 
 ## A mérkőzés vezetése és a találatok elbírálása  
@@ -703,6 +716,7 @@ Tilos a keresztvassal ütni.
 **GEN-7.1.1**
 **GEN-7.1.1.1**  
 A versenybíróvá vagy segédbíróvá való kinevezés elfogadása magával vonja azt a becsületbeli kötelezettséget, hogy az illető tiszteletben tartja a szabályokat, valamint tevékenységét a legszigorúbb elfogulatlansággal és teljes odafigyeléssel látja el.
+
 **GEN-7.1.1.2**  
 A versenybírók a versenyen semmiféle más tisztséget, mint pld. Szervező Csapat tag, csapatkapitány, saját szövetségük hivatalos kiküldöttje, edző stb. nem tölthetnek be.
 

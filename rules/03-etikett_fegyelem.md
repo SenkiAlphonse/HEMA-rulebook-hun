@@ -106,9 +106,6 @@ Azok a csapattagok, akik pontosan betartották a csapatkapitány rendelkezéseit
 #### A Versenybíró  
 
 **DIS-2.1.1**  
-A bírói vagy segédbírói szerep vállalásával az adott személy megfogadja, hogy tiszteletben tartja, és betartatja a verseny szabályait, és a legszigorúbb pártatlansággal és odafigyeléssel látja el feladatait.  
-
-**DIS-2.1.2**  
 A versenybíró nem csak a mérkőzést vezeti, a találatokat bírálja el és a felszerelést ellenőrzi, hanem felelős az általa irányított mérkőzések rendjéért is. <!-- (Vö. t.47.2.i).>
 
 <!-- FIXME **DIS-2.1.3**  
@@ -120,48 +117,48 @@ A felülvizsgálatot kérheti:
 
 udvariasan, formalitás nélkül, azonnal szóban a bírótól, mielőtt bármilyen a kérdéses helyzet után esett találattal kapcsolatban döntés születne. Ha a bíró kitart a véleménye mellett, a főbíró jár el az ügyben, aki döntést hozhat, illetve felügyeletet biztosíthat a mérkőzés további részében. Egy ilyen kérelem megalapozatlansága esetén a vívó a fegyelmi vétségek 1. csoportjára vonatkozó szabályok szerint büntetendő.   -->
 
-**DIS-2.1.4**  
+**DIS-2.1.3**  
 Amikor a versenybíró a mérkőzéseket vezeti, a találatokat elbírálja, a szabályok szerint a vívókat vétségeik miatt megbüntetheti a körülmények figyelembevételével előzetes figyelmeztetés után vagy anélkül a ténylegesen adott találat érvénytelenítésével, találat odaítélésével valamelyik vívó terhére amikor találat ténylegesen nem esett, valamint a
 versenyző adott versenyből való kizárásával. Ezek során a ténymegállapítást tartalmazó döntése nem változtatható meg <!-- (Vö. t.172). -->
 
-**DIS-2.1.5**  
+**DIS-2.1.4**  
 A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a <!--Directoire Technique-nél-->szervező teamnél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt.  
 <!-- (Vö. t.158-162, t.167, t.168, t.170). -->
 
-**DIS-2.1.6**  
+**DIS-2.1.5**  
 A versenybíró javasolhat a <!--DT-nek-->szervező teamnek további megfelelőnek tartott, büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. [DIS-2.1.8.3]).  
 
-**DIS-2.1.7**  
+**DIS-2.1.6**  
 A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte, vagy az MHS ellenőr (ha nincs küldött).
 <!-- TODO -->
 
 ### A <!--Directoire Technique -->Organising Team /Szervező Csapat az MHS<!--Nemzetközi szövetség much?--> hivatalos versenyein <!--(vö.: o.15-22)-->
 
-**DIS-2.1.8** A <!--Directoire Technique-->Szervező Team az MHS hivatalos versenyein <!-- (vö.: o.15-22)   -->
-**DIS-2.1.8.1**  
+**DIS-2.1.7** A <!--Directoire Technique-->Szervező Team az MHS hivatalos versenyein <!-- (vö.: o.15-22)   -->
+**DIS-2.1.7.1**  
 A Szervező Team-nek, a Versenyíró Bizottság küldötteinek illetve az MHS ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen.  
-**DIS-2.1.8.2**  
+**DIS-2.1.7.2**  
 Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat.  
-**DIS-2.1.8.3**  
+**DIS-2.1.7.3**  
 A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják.  
-**DIS-2.1.8.4**  
+**DIS-2.1.7.4**  
 A Szervező Team köteles az MHS központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket.  
-**DIS-2.1.8.5**  
+**DIS-2.1.7.5**  
 A Szervező Team felel a kiszabott büntetések végrehajtásáért, ha azok ellen fellebbezésnek nincs helye, vagy annak a végrehajtásra nincs halasztó hatálya.  
 <!-- (Vö. t.136). -->
 
-**DIS-2.1.9**  
+**DIS-2.1.8**  
 A SZT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr spontán módon hozott, vagy (elsőfokú hatóságként) saját jogon hozott fegyelmi döntése ellen az MHS Fegyelmi Bizottságához lehet fellebbezni.  
 
-**DIS-2.1.10**  
+**DIS-2.1.9**  
 A SZT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr minden döntése azonnal végrehajtható. A verseny során semmilyen fellebbezésnek nincs halasztó hatálya a döntés végrehajtására.  
 <!-- FIXME
-#### A Zzervező csapat és a Főbíró  
+#### A Szervező csapat és a Főbíró  
 
-**DIS-2.1.11**  
+**DIS-2.1.10**  
 A szervező csapat és a Főbíró jogkörrel illetékes minden olyan vívó felett, aki részt vesz vagy jelen van az általuk rendezett versenyen. Szükség esetén minden vitába beavatkozhatnak. Felelősek a versenyek alatti rend és fegyelem megőrzéséért is, és alkalmazhatják a Szabályzatban meghatározott büntetéseket.  
 
-**DIS-2.1.12**  
+**DIS-2.1.11**  
 A Szervező Csapat vagy a Főbíró minden döntése azonnal végrehajtható. A határozat ellen lehet fellebbezni, de a fellebbezés nem függeszti fel a döntést a verseny ideje alatt.   -->
 
 ## Büntetések  
