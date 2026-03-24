@@ -608,9 +608,7 @@ az egyik vívó elérte a meghatározott találatszámot (afterblow esetében po
 **Afterblow**:  
     - az egyik versenyző **elér legalább 11 PONTOT**;   
         - a súlyozás miatt a 11 pontot meg lehet haladni.  
-        - Ha mindkét versenyző egyszerre éri el vagy haladja meg a 11 pontot (egyidejű találatokkal),   
-            - amennyiben a pontkülönbség legalább 1, a mérkőzés véget ér;  
-            - ha az állás ekkor döntetlen lett, döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak)  
+        - Ha mindkét versenyző egyszerre éri el a 11 pontot (egyidejű / kettős találatokkal), döntő találatot kell elérniük az időkorlát végéig. Az egyenértékű egyidejű találatok nem vehetőek figyelembe (és a versenyzők azon a helyen maradnak a páston, amit korábban elfoglaltak).  
 
 **GEN-6.11.5.2**  
 vagy a meghatározott tényleges vívóidő eltelt:  

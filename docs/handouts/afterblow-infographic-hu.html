@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AFTERBLOW pontozás – gyors infografika</title>
+  <style>
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #1f2933;
+      --muted: #52606d;
+      --accent: #0f4c81;
+      --accent-2: #1769aa;
+      --ok: #116149;
+      --warn: #8a4b00;
+      --line: #d9e2ec;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.35;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      gap: 14px;
+    }
+
+    .hero {
+      background: linear-gradient(120deg, var(--accent), var(--accent-2));
+      color: #fff;
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+
+    .hero h1 {
+      margin: 0 0 8px;
+      font-size: 1.45rem;
+    }
+
+    .hero p {
+      margin: 0;
+      opacity: 0.95;
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 14px;
+    }
+
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      color: var(--accent);
+    }
+
+    .span-4 { grid-column: span 4; }
+    .span-5 { grid-column: span 5; }
+    .span-6 { grid-column: span 6; }
+    .span-7 { grid-column: span 7; }
+    .span-8 { grid-column: span 8; }
+    .span-12 { grid-column: span 12; }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 0.85rem;
+      background: #f8fafc;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a.chip:hover {
+      background: #e8f0fe;
+      border-color: var(--accent-2);
+      color: var(--accent);
+    }
+
+    .big {
+      font-weight: 700;
+      color: var(--accent);
+      font-size: 1.05rem;
+    }
+
+    .score-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    .score-table th,
+    .score-table td {
+      border: 1px solid var(--line);
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .score-table th {
+      background: #f0f4f8;
+      color: #243b53;
+    }
+
+    .flow {
+      display: grid;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 8px 10px;
+      background: #fbfcfe;
+      font-size: 0.9rem;
+    }
+
+    .arrow {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .ok { color: var(--ok); font-weight: 700; }
+    .warn { color: var(--warn); font-weight: 700; }
+
+    .note {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    ul {
+      margin: 6px 0 0 18px;
+      padding: 0;
+    }
+
+    li { margin: 4px 0; }
+
+    .footer {
+      background: #fff;
+      border: 1px dashed var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 900px) {
+      .span-4, .span-5, .span-6, .span-7, .span-8 { grid-column: span 12; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { max-width: none; padding: 0; gap: 8px; }
+      .hero { border-radius: 0; }
+      .card, .footer { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>AFTERBLOW pontozás – gyors infografika (hosszúkard)</h1>
+      <p>Gyakorlati emlékeztető vívóknak és bíróknak. Fő forrás: 02.c-hosszukard-AFTERBLOW, kiegészítve néhány kritikus általános szabállyal.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card span-4">
+        <h2>1) Alap pontérték</h2>
+        <div class="big">2 kézzel adott találat = 2 pont</div>
+        <div class="big">1 kézzel adott találat = 1 pont</div>
+        <div class="chips">
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.1.1" target="_blank" rel="noopener">LS-AB-1.1.1</a>
+        </div>
+      </article>
+
+      <article class="card span-4">
+        <h2>2) Egyidejű / kettős találat</h2>
+        <ul>
+          <li>Mindkét vívó találatot kapottnak számít.</li>
+          <li>Pontozásban mindkét fél ellen <strong>1 pont</strong> kerül megítélésre.</li>
+          <li>Ha egyik egykezes, másik kétkezes: az egykezest megsemmisítik.</li>
+        </ul>
+        <div class="chips">
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.1" target="_blank" rel="noopener">LS-AB-1.2.1</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.2" target="_blank" rel="noopener">LS-AB-1.2.2</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.3" target="_blank" rel="noopener">LS-AB-1.2.3</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.6" target="_blank" rel="noopener">LS-AB-1.2.6</a>
+        </div>
+      </article>
+
+      <article class="card span-4">
+        <h2>3) Utántalálat hatása</h2>
+        <ul>
+          <li>Érvényes utántalálat csökkenti az eredeti találat értékét.</li>
+          <li><strong>2 pontos eredeti</strong> → <strong>1 pontra</strong> csökken.</li>
+          <li><strong>1 pontos eredeti</strong> → <strong>0 pontra</strong> csökken.</li>
+        </ul>
+        <div class="chips">
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.5.1" target="_blank" rel="noopener">LS-AB-1.2.5.1</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.7" target="_blank" rel="noopener">LS-AB-1.2.7</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.9" target="_blank" rel="noopener">LS-AB-1.2.9</a>
+        </div>
+      </article>
+
+      <article class="card span-7">
+        <h2>4) Döntési folyamat (egy frázis)</h2>
+        <div class="flow">
+          <div class="step"><strong>1.</strong> Volt érvényes első találat?</div>
+          <div class="arrow">↓</div>
+          <div class="step"><strong>2.</strong> A második akció azonnali, megszakítás nélküli utánakció? <span class="warn">(ha nem: nincs utántalálat)</span></div>
+          <div class="arrow">↓</div>
+          <div class="step"><strong>3.</strong> Utánakció volt: csökkentsd az eredeti találatot (2→1, 1→0).</div>
+          <div class="arrow">↓</div>
+          <div class="step"><strong>4.</strong> Az eredeti találat adója pengével védte a tényleges utánakciót? <span class="ok">(ha igen: +1 pont)</span></div>
+        </div>
+        <div class="note">A „későn indított”, megszakadt vagy „Állj!” utáni akció nem érvényes utánakció.</div>
+        <div class="chips">
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.5.2" target="_blank" rel="noopener">LS-AB-1.2.5.2</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.9" target="_blank" rel="noopener">LS-AB-1.2.9</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.10.1" target="_blank" rel="noopener">LS-AB-1.2.10.1</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.10.2" target="_blank" rel="noopener">LS-AB-1.2.10.2</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.10.4" target="_blank" rel="noopener">LS-AB-1.2.10.4</a>
+        </div>
+      </article>
+
+      <article class="card span-5">
+        <h2>5) Gyors ponttábla</h2>
+        <table class="score-table" aria-label="Afterblow ponttábla">
+          <thead>
+            <tr>
+              <th>Helyzet</th>
+              <th>Regisztrált érték</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eredeti 2 pontos találat, nincs utántalálat</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Eredeti 2 pontos + érvényes utántalálat</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Eredeti 2 pontos + utántalálat + védett utánakció</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Eredeti 1 pontos + érvényes utántalálat</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>Eredeti 1 pontos + utántalálat + védett utánakció</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="chips">
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.9" target="_blank" rel="noopener">LS-AB-1.2.9</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.10.1" target="_blank" rel="noopener">LS-AB-1.2.10.1</a>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <h2>6) Kritikus „ne felejtsd el” pontok</h2>
+        <ul>
+          <li>Ha egyidejű/kettős után még utántalálat esik: azt <strong>figyelmen kívül kell hagyni</strong>.</li>
+          <li>Ha az egyik találat érvénytelen, csak az érvényeset kell megítélni.</li>
+          <li>Ha a bíró nem tudja megítélni a találatot: nincs pont, visszaállítás.</li>
+          <li>„Rajta!” előtti és „Állj!” utáni találat nem érvényes.</li>
+          <li>Sikertelen vagy érvénytelen utánakció-kísérlet (rövid, mellémegy, ráesik a pengére) <strong>NEM minősül utánakció-védésnek</strong>; a +1 pont csak tényleges pengeparád alapján adható meg.</li>
+        </ul>
+        <div class="chips">
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.11" target="_blank" rel="noopener">LS-AB-1.2.11</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.12" target="_blank" rel="noopener">LS-AB-1.2.12</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.13" target="_blank" rel="noopener">LS-AB-1.2.13</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-1.3.5" target="_blank" rel="noopener">LS-1.3.5</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.10.5" target="_blank" rel="noopener">LS-AB-1.2.10.5</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-AB-1.2.10.6" target="_blank" rel="noopener">LS-AB-1.2.10.6</a>
+        </div>
+      </article>
+
+      <article class="card span-6">
+        <h2>7) Mérkőzés vége AFTERBLOW-ban</h2>
+        <ul>
+          <li>A cél: <strong>pool – 7 pont</strong> || <strong>DE – 11 pont</strong>.</li>
+          <li>Ha mindketten egyszerre érik el a 7-et / 11-et:
+            <ul>
+              <li>pool → <strong>6–6-ra visszaáll</strong>, döntő találat, csak tiszta, <strong>V7-Dn</strong></li>
+              <li>DE → döntő találat, <strong>VN-Dn</strong></li>
+            </ul>
+          </li>
+          <li>A győztes végső pontja a pontozólapon: <strong>7</strong>.</li>
+          <li class="note" style="list-style:none; margin-left:-18px;">⏱ Időkorlát: Pool – <strong>3 perc</strong> tényleges vívóidő; DE – <strong>2 × 3 perces</strong> tényleges vívóidő (összesen 6 perc, 1 perces szünettel). Döntetlen esetén <strong>sorsolás</strong>, majd +1 perc hirtelen halál. Ha nincs döntő találat, a sorsolás dönt.</li>
+        </ul>
+        <div class="chips">
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#GEN-6.11.4.1.3" target="_blank" rel="noopener">GEN-6.11.4.1.3</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#GEN-6.11.4.1.4" target="_blank" rel="noopener">GEN-6.11.4.1.4</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#GEN-6.11.4.2" target="_blank" rel="noopener">GEN-6.11.4.2</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#GEN-6.11.5.2" target="_blank" rel="noopener">GEN-6.11.5.2</a>
+        </div>
+      </article>
+
+      <article class="card span-12">
+        <h2>8) Két extra kulcsszabály a gyakorlatból</h2>
+        <ul>
+          <li><strong>Pástelhagyás (mindkét láb):</strong> AFTERBLOW-ban csak a bent maradó fél találata ítélhető meg, akár egyidejű helyzetben is.</li>
+          <li><strong>Érvényes felület helyettesítése/fedése:</strong> szabálytalanság, büntetés és találat-megsemmisítés következhet.</li>
+        </ul>
+        <div class="chips">
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#GEN-6.10.3" target="_blank" rel="noopener">GEN-6.10.3</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#GEN-6.7.1" target="_blank" rel="noopener">GEN-6.7.1</a>
+          <a class="chip" href="https://hema-rulebook-hun.onrender.com/rulebook?lang=hun#LS-1.2.3" target="_blank" rel="noopener">LS-1.2.3</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="footer">
+      <strong>Megjegyzés:</strong> Ez oktatási segédanyag. Vitás helyzetben mindig az eredeti szabályszöveg az irányadó.
+      Készlet fókusza: AFTERBLOW pontozási logika (02.c) + minimális kritikus keretszabályok.
+    </section>
+  </main>
+</body>
+</html>
