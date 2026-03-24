@@ -102,4 +102,26 @@ def create_app() -> Flask:
             weapons=app.config['WEAPONS']
         )
     
+    # Serve handout files (e.g., AFTERBLOW infographic)
+    @app.route("/handouts/<filename>")
+    def serve_handout(filename: str):
+        """Serve handout HTML files from docs/handouts/ directory."""
+        from flask import send_file
+        from pathlib import Path
+        
+        # Security: only allow .html files and prevent directory traversal
+        if not filename.endswith('.html'):
+            return {"error": "Only HTML files are allowed"}, 403
+        
+        if '..' in filename or '/' in filename:
+            return {"error": "Invalid filename"}, 403
+        
+        handout_dir = Path(__file__).resolve().parent.parent.parent / "docs" / "handouts"
+        filepath = handout_dir / filename
+        
+        if not filepath.exists():
+            return {"error": f"Handout not found: {filename}"}, 404
+        
+        return send_file(str(filepath), mimetype='text/html')
+    
     return app

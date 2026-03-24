@@ -34,8 +34,44 @@
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            gap: 16px;
+        }
+
+        .logo {
+            flex-shrink: 0;
+        }
+
+        /* Center the AFTERBLOW button in header on all screen sizes */
+        .header-center-button {
+            flex: 1 0 auto;
+            text-align: center;
+        }
+
+        .header-buttons {
+            flex-shrink: 0;
+        }
+
+        .header-center-button .btn-afterblow-handout {
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .header-center-button {
+                flex-basis: 100%;
+                order: 2;
+            }
+
+            .header-buttons {
+                flex-basis: 100%;
+                order: 3;
+            }
         }
 
         .logo {
@@ -209,6 +245,54 @@
 
         .btn-secondary:hover {
             background: #bdc3c7;
+        }
+
+        /* ⚠︎ TEMPORARY: Prominent AFTERBLOW Infographic Button (Kitsch Alert!) */
+        .btn-afterblow-handout {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 50%, #fdb827 100%);
+            color: #ffffff;
+            border: 2px solid #ff4500;
+            padding: 14px 28px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            box-shadow: 0 0 20px rgba(255, 107, 53, 0.5), 0 4px 15px rgba(255, 107, 53, 0.3);
+            animation: pulse-glow 2s ease-in-out infinite;
+            font-size: 0.9em;
+            white-space: nowrap;
+        }
+
+        .btn-afterblow-handout:hover {
+            background: linear-gradient(135deg, #ff5722 0%, #ff6b35 50%, #ffa500 100%);
+            box-shadow: 0 0 35px rgba(255, 107, 53, 0.7), 0 6px 25px rgba(255, 107, 53, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.2);
+            transform: scale(1.08) translateY(-2px);
+        }
+
+        .btn-afterblow-handout:active {
+            transform: scale(0.96);
+            box-shadow: 0 0 15px rgba(255, 107, 53, 0.4), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 0 20px rgba(255, 107, 53, 0.5), 0 4px 15px rgba(255, 107, 53, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 30px rgba(255, 107, 53, 0.7), 0 6px 20px rgba(255, 107, 53, 0.4);
+            }
+        }
+
+        .btn-afterblow-handout .icon {
+            font-size: 1.2em;
+            display: inline-block;
         }
 
         .form-hint {
@@ -483,6 +567,15 @@
     <div class="site-header">
         <div class="header-content">
             <div class="logo">HEMA Rulebook</div>
+            
+            <!-- ⚠︎ TEMPORARY: Prominent AFTERBLOW Infographic Button -->
+            <div class="header-center-button">
+                <a href="/handouts/afterblow-infographic-hu.html" target="_blank" rel="noopener noreferrer" class="btn-afterblow-handout">
+                    <span class="icon">📋</span>
+                    AFTERBLOW Quick Guide
+                </a>
+            </div>
+            
             <div class="header-buttons">
                 <a href="/rulebook?lang=hun" target="_blank" rel="noopener noreferrer" class="btn-rulebook">
                     Full Rulebook
