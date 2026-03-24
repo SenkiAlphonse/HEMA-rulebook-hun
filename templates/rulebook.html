@@ -714,6 +714,47 @@
 
     <script>
 
+        function getScrollOffset() {
+            const searchBox = document.querySelector('.search-box');
+            if (!searchBox) {
+                return 16;
+            }
+            return Math.ceil(searchBox.getBoundingClientRect().height + 12);
+        }
+
+        function updateAnchorScrollOffsetVar() {
+            document.documentElement.style.setProperty('--anchor-scroll-offset', `${getScrollOffset()}px`);
+        }
+
+        function scrollToElementWithOffset(element, behavior = 'smooth') {
+            if (!element) {
+                return;
+            }
+            const targetTop = Math.max(0, element.getBoundingClientRect().top + window.scrollY - getScrollOffset());
+            window.scrollTo({ top: targetTop, behavior });
+        }
+
+        function highlightRuleTarget(element) {
+            if (!element) {
+                return;
+            }
+            element.classList.add('highlighted');
+            setTimeout(() => {
+                element.classList.remove('highlighted');
+            }, 1500);
+        }
+
+        function alignToHashTarget(behavior = 'auto') {
+            const hash = decodeURIComponent(window.location.hash || '').replace(/^#/, '');
+            if (!hash) {
+                return;
+            }
+            const hashTarget = document.getElementById(hash);
+            if (hashTarget) {
+                scrollToElementWithOffset(hashTarget, behavior);
+            }
+        }
+
         // Navigation history for rule references
         const navigationHistory = [];
         const navBackButton = document.getElementById('nav-back-button');
@@ -742,11 +783,8 @@
             const targetElement = document.getElementById(targetRuleId);
             if (targetElement) {
                 navigationHistory.push({ position: currentPosition, timestamp: Date.now() });
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                targetElement.classList.add('highlighted');
-                setTimeout(() => {
-                    targetElement.classList.remove('highlighted');
-                }, 1500);
+                scrollToElementWithOffset(targetElement, 'smooth');
+                highlightRuleTarget(targetElement);
                 showNavBackButton();
             } else {
                 alert(`Szabály ${targetRuleId} nem található az szabályzatban`);
@@ -779,33 +817,20 @@
                 return;
             }
 
-            // Search for bold text matching the rule ID
-            const content = document.getElementById('ruleContent').innerHTML;
-            const regex = new RegExp(`<strong>${query}</strong>`, 'i');
-            
-            if (regex.test(content)) {
-                // Create temporary marker
-                const originalHTML = document.getElementById('ruleContent').innerHTML;
-                const replacedHTML = originalHTML.replace(
-                    new RegExp(`(<strong>${query}</strong>)`, 'i'),
-                    '<span id="found-rule">$1</span>'
-                );
-                document.getElementById('ruleContent').innerHTML = replacedHTML;
-                
-                const element = document.getElementById('found-rule');
-                if (element) {
-                    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    element.style.backgroundColor = '#fffacd';
-                    element.style.padding = '0.2rem';
-                    element.style.borderRadius = '2px';
-                    
-                    setTimeout(() => {
-                        element.style.backgroundColor = '';
-                        element.style.padding = '';
-                        element.style.borderRadius = '';
-                        element.removeAttribute('id');
-                    }, 2000);
-                }
+            const directIdMatch = document.getElementById(query);
+            if (directIdMatch) {
+                scrollToElementWithOffset(directIdMatch, 'smooth');
+                highlightRuleTarget(directIdMatch);
+                return;
+            }
+
+            const strongMatches = Array.from(document.querySelectorAll('#ruleContent strong'));
+            const strongRuleId = strongMatches.find((strongEl) => strongEl.textContent.trim().toUpperCase() === query);
+
+            if (strongRuleId) {
+                const preferredTarget = strongRuleId.closest('.rule-id') || strongRuleId;
+                scrollToElementWithOffset(preferredTarget, 'smooth');
+                highlightRuleTarget(preferredTarget);
             } else {
                 alert(`Rule ${query} not found in the rulebook`);
             }
@@ -829,6 +854,14 @@
         document.getElementById('searchInput').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') jumpToRule();
         });
+
+        window.addEventListener('load', () => {
+            updateAnchorScrollOffsetVar();
+            setTimeout(() => alignToHashTarget('auto'), 0);
+        });
+
+        window.addEventListener('resize', updateAnchorScrollOffsetVar);
+        window.addEventListener('hashchange', () => alignToHashTarget('smooth'));
     </script>
 </body>
 </html>
