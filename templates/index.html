@@ -84,6 +84,35 @@
         .header-buttons {
             display: flex;
             gap: 12px;
+            align-items: center;
+        }
+
+        .header-control {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .header-control-label {
+            font-size: 0.7em;
+            font-weight: 700;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1;
+        }
+
+        .header-select {
+            background: #ffffff;
+            color: #34495e;
+            border: 1.5px solid #bdc3c7;
+            padding: 8px 10px;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: 600;
+            cursor: pointer;
+            min-width: 150px;
+            font-family: "Segoe UI", "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
         }
 
         .btn-rulebook {
@@ -106,6 +135,18 @@
             border-color: #34495e;
             background: #f8fbfd;
             transform: none;
+        }
+
+        .btn-rulebook.is-active {
+            background: #34495e;
+            color: #ffffff;
+            border-color: #2c3e50;
+            box-shadow: 0 0 0 2px rgba(52, 73, 94, 0.18);
+        }
+
+        .btn-rulebook.is-active:hover {
+            background: #2c3e50;
+            border-color: #2c3e50;
         }
 
         .btn-rulebook .flag-icon {
@@ -560,69 +601,73 @@
             .result-item {
                 padding: 16px;
             }
+
+            .header-buttons {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .header-control {
+                min-width: 100%;
+            }
+
+            .header-select {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
     <div class="site-header">
         <div class="header-content">
-            <div class="logo">HEMA Rulebook</div>
+            <div class="logo" id="logoText">HEMA Rulebook</div>
             
             <!-- ⚠︎ TEMPORARY: Prominent AFTERBLOW Infographic Button -->
             <div class="header-center-button">
                 <a href="/handouts/afterblow-infographic-hu.html" target="_blank" rel="noopener noreferrer" class="btn-afterblow-handout">
                     <span class="icon">📋</span>
-                    AFTERBLOW Quick Guide
+                    <span id="afterblowButtonText">AFTERBLOW Quick Guide</span>
                 </a>
             </div>
             
             <div class="header-buttons">
-                <a href="/rulebook?lang=hun" target="_blank" rel="noopener noreferrer" class="btn-rulebook">
-                    Full Rulebook
-                    <svg class="flag-icon" viewBox="0 0 3 2" aria-hidden="true" focusable="false">
-                        <rect width="3" height="2" fill="#ce2939"></rect>
-                        <rect width="3" height="1.333" y="0.667" fill="#ffffff"></rect>
-                        <rect width="3" height="0.667" y="1.333" fill="#477050"></rect>
-                    </svg>
-                </a>
-                <a href="/rulebook?lang=eng" target="_blank" rel="noopener noreferrer" class="btn-rulebook">
-                    Full Rulebook
-                    <svg class="flag-icon" viewBox="0 0 60 30" aria-hidden="true" focusable="false">
-                        <rect width="60" height="30" fill="#012169"></rect>
-                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#ffffff" stroke-width="6"></path>
-                        <path d="M0,0 L60,30 M60,0 L0,30" stroke="#C8102E" stroke-width="3"></path>
-                        <rect x="24" width="12" height="30" fill="#ffffff"></rect>
-                        <rect y="9" width="60" height="12" fill="#ffffff"></rect>
-                        <rect x="26" width="8" height="30" fill="#C8102E"></rect>
-                        <rect y="11" width="60" height="8" fill="#C8102E"></rect>
-                    </svg>
-                </a>
+                <div class="header-control">
+                    <label class="header-control-label" id="siteLanguageMenuLabel" for="siteLanguageMenu">Site Language</label>
+                    <select id="siteLanguageMenu" class="header-select" aria-label="Site language">
+                        <option value="hun">🇭🇺 Magyar</option>
+                        <option value="eng">🇬🇧 English</option>
+                    </select>
+                </div>
+                <div class="header-control">
+                    <label class="header-control-label" id="rulebookLanguageMenuLabel" for="rulebookLanguageMenu">Full Rulebook</label>
+                    <select id="rulebookLanguageMenu" class="header-select" aria-label="Full rulebook language">
+                        <option value="hun">🇭🇺 Magyar szabálykönyv</option>
+                        <option value="eng">🇬🇧 English rulebook</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>
 
-    </style>
-</head>
-<body>
     <div class="container">
         <div class="page-title">
-            <h1>⚔️ HEMA Rulebook Search</h1>
-            <p>Quick and accurate rule lookup for Hungarian HEMA competition</p>
+            <h1 id="pageTitle">⚔️ HEMA Rulebook Search</h1>
+            <p id="pageSubtitle">Quick and accurate rule lookup for Hungarian HEMA competition</p>
         </div>
 
         <div class="card">
-            <div class="card-title">Search Rules</div>
+            <div class="card-title" id="searchCardTitle">Search Rules</div>
             <form class="form-grid" id="searchForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="searchLanguage">Language</label>
+                        <label for="searchLanguage" id="labelSearchLanguage">Language</label>
                         <select id="searchLanguage" name="searchLanguage">
-                            <option value="hun">Hungarian</option>
+                            <option value="hun">Magyar</option>
                             <option value="eng">English</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="query">Search Query</label>
+                        <label for="query" id="labelQuery">Search Query</label>
                         <input 
                             type="text" 
                             id="query" 
@@ -632,7 +677,7 @@
                         >
                     </div>
                     <div class="form-group">
-                        <label for="variant">Variant</label>
+                        <label for="variant" id="labelVariant">Variant</label>
                         <select id="variant" name="variant">
                             <option value="">All Variants</option>
                             <option value="VOR">VOR (Right of Way)</option>
@@ -641,7 +686,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="weapon">Weapon</label>
+                        <label for="weapon" id="labelWeapon">Weapon</label>
                         <select id="weapon" name="weapon">
                             <option value="">All Weapons</option>
                             <option value="longsword">Longsword</option>
@@ -649,31 +694,31 @@
                             <option value="padded_weapons">Padded Weapons</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-primary" id="searchBtn">Search</button>
                 </div>
             </form>
 
             <div class="loading" id="loading">
                 <div class="spinner"></div>
-                <p>Searching rulebook...</p>
+                <p id="loadingText">Searching rulebook...</p>
             </div>
 
             <div class="stats" id="stats"></div>
         </div>
 
         <div class="card">
-            <div class="card-title">Download Rulebook Extract</div>
+            <div class="card-title" id="extractCardTitle">Download Rulebook Extract</div>
             <form class="form-grid" id="extractForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="extractLanguage">Language</label>
+                        <label for="extractLanguage" id="labelExtractLanguage">Language</label>
                         <select id="extractLanguage" name="extractLanguage">
-                            <option value="hun">Hungarian</option>
+                            <option value="hun">Magyar</option>
                             <option value="eng">English</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="extractVariant">Extract Variant</label>
+                        <label for="extractVariant" id="labelExtractVariant">Extract Variant</label>
                         <select id="extractVariant" name="extractVariant">
                             <option value="">All Variants</option>
                             <option value="VOR">VOR (Right of Way)</option>
@@ -682,7 +727,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="extractWeapon">Extract Weapon</label>
+                        <label for="extractWeapon" id="labelExtractWeapon">Extract Weapon</label>
                         <select id="extractWeapon" name="extractWeapon">
                             <option value="">All Weapons</option>
                             <option value="longsword">Longsword</option>
@@ -690,32 +735,32 @@
                             <option value="padded_weapons">Padded Weapons</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary">Download Extract</button>
+                    <button type="submit" class="btn btn-primary" id="downloadExtractBtn">Download Extract</button>
                 </div>
-                <p class="form-hint">Includes all general rules plus matching weapon/variant rules, ordered by document and rule index.</p>
+                <p class="form-hint" id="extractHint">Includes all general rules plus matching weapon/variant rules, ordered by document and rule index.</p>
             </form>
         </div>
 
         <div class="card">
-            <div class="card-title">Summarize Search Results with AI</div>
+            <div class="card-title" id="summaryCardTitle">Summarize Search Results with AI</div>
             <form class="form-grid" id="summaryForm">
                 <div class="form-row">
                     <div class="form-group">
-                        <label for="summaryLanguage">Summary Language</label>
+                        <label for="summaryLanguage" id="labelSummaryLanguage">Summary Language</label>
                         <select id="summaryLanguage" name="summaryLanguage">
                             <option value="EN">English</option>
                             <option value="HU">Hungarian</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="summaryFormat">Summary Format</label>
+                        <label for="summaryFormat" id="labelSummaryFormat">Summary Format</label>
                         <select id="summaryFormat" name="summaryFormat">
                             <option value="standard">Standard (Detailed)</option>
                             <option value="handout">Handout (Compact 1-page)</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="summaryAccessCode">Summary Access Code</label>
+                        <label for="summaryAccessCode" id="labelSummaryAccessCode">Summary Access Code</label>
                         <input
                             type="password"
                             id="summaryAccessCode"
@@ -725,7 +770,7 @@
                     </div>
                     <button type="button" class="btn btn-primary" id="summarizeSearchBtn">Summarize Search</button>
                 </div>
-                <p class="form-hint">
+                <p class="form-hint" id="summaryHint">
                     Summarizes top matching search results with input limits for free-tier API usage.
                 </p>
             </form>
@@ -739,7 +784,7 @@
         <div class="results-container" id="results"></div>
 
         <footer>
-            <p>HEMA Rulebook Search | Powered by Flask + AI</p>
+            <p id="footerText">HEMA Rulebook Search | Powered by Flask + AI</p>
         </footer>
     </div>
 
@@ -755,12 +800,252 @@
         const queryInput = document.getElementById('query');
         const resultsDiv = document.getElementById('results');
         const loadingDiv = document.getElementById('loading');
+        const siteLanguageMenu = document.getElementById('siteLanguageMenu');
+        const rulebookLanguageMenu = document.getElementById('rulebookLanguageMenu');
+        const extractLanguageSelect = document.getElementById('extractLanguage');
 
         let lastSummaryText = '';
+        let currentUiLang = 'eng';
 
         let allResults = [];
         let displayedCount = 0;
         const RESULTS_PER_PAGE = 10;
+
+        const UI_STRINGS = {
+            eng: {
+                title: 'HEMA Rulebook Search',
+                logo: 'HEMA Rulebook',
+                afterblowGuide: 'AFTERBLOW Quick Guide',
+                fullRulebook: 'Full Rulebook',
+                pageTitle: '⚔️ HEMA Rulebook Search',
+                pageSubtitle: 'Quick and accurate rule lookup for Hungarian HEMA competition',
+                searchCardTitle: 'Search Rules',
+                extractCardTitle: 'Download Rulebook Extract',
+                summaryCardTitle: 'Summarize Search Results with AI',
+                labelLanguage: 'Language',
+                labelQuery: 'Search Query',
+                labelVariant: 'Variant',
+                labelWeapon: 'Weapon',
+                labelExtractVariant: 'Extract Variant',
+                labelExtractWeapon: 'Extract Weapon',
+                labelSummaryLanguage: 'Summary Language',
+                labelSummaryFormat: 'Summary Format',
+                labelSummaryAccessCode: 'Summary Access Code',
+                searchBtn: 'Search',
+                downloadExtractBtn: 'Download Extract',
+                summarizeSearchBtn: 'Summarize Search',
+                copySummaryBtn: 'Copy Summary',
+                downloadSummaryBtn: 'Download Summary (.txt)',
+                loadingText: 'Searching rulebook...',
+                summaryLoadingText: 'Summarizing...',
+                extractHint: 'Includes all general rules plus matching weapon/variant rules, ordered by document and rule index.',
+                summaryHint: 'Summarizes top matching search results with input limits for free-tier API usage.',
+                footerText: 'HEMA Rulebook Search | Powered by Flask + AI',
+                queryPlaceholder: "e.g., 'right of way target', 'longsword strike'",
+                searchLanguageHun: 'Hungarian',
+                searchLanguageEng: 'English',
+                allVariants: 'All Variants',
+                allWeapons: 'All Weapons',
+                longsword: 'Longsword',
+                rapier: 'Rapier',
+                paddedWeapons: 'Padded Weapons',
+                standardDetailed: 'Standard (Detailed)',
+                handoutCompact: 'Handout (Compact 1-page)',
+                pleaseEnterQuery: 'Please enter a search query',
+                pleaseEnterQueryFirst: 'Please enter a search query first.',
+                noResultsTitle: 'No rules found matching your search.',
+                noResultsHint: 'Try different keywords or remove filters.',
+                resultsHeader: 'Results',
+                errorPrefix: 'Error',
+                summaryTitle: 'Summary',
+                statsTotal: 'Total Rules',
+                statsVor: 'VOR Rules',
+                statsCombat: 'Combat Rules',
+                statsAfterblow: 'Afterblow Rules',
+                scoreLabel: 'Score',
+                documentLabel: 'Document',
+                sectionLabel: 'Section',
+                subsectionLabel: 'Subsection',
+                loadMore: 'Load More',
+                remaining: 'remaining',
+                allWeaponsTag: 'General',
+                allVariantsTag: 'All Variants',
+                inputTruncated: 'Input was truncated to stay within API limits.',
+                extractFilenamePrefix: 'rulebook-extract',
+                siteLanguageMenuLabel: 'Site Language',
+                rulebookLanguageMenuLabel: 'Full Rulebook',
+                siteLanguageHun: '🇭🇺 Magyar',
+                siteLanguageEng: '🇬🇧 English',
+                fullRulebookHun: '🇭🇺 Magyar szabálykönyv',
+                fullRulebookEng: '🇬🇧 English rulebook'
+            },
+            hun: {
+                title: 'HEMA Szabálykönyv Kereső',
+                logo: 'HEMA Szabálykönyv',
+                afterblowGuide: 'AFTERBLOW Gyors Segédlet',
+                fullRulebook: 'Teljes Szabálykönyv',
+                pageTitle: '⚔️ HEMA Szabálykönyv Kereső',
+                pageSubtitle: 'Gyors és pontos szabálykeresés a magyar HEMA versenyekhez',
+                searchCardTitle: 'Szabálykeresés',
+                extractCardTitle: 'Szabálykivonat letöltése',
+                summaryCardTitle: 'Keresési találatok AI összegzése',
+                labelLanguage: 'Nyelv',
+                labelQuery: 'Keresőkifejezés',
+                labelVariant: 'Változat',
+                labelWeapon: 'Fegyvernem',
+                labelExtractVariant: 'Kivonat változat',
+                labelExtractWeapon: 'Kivonat fegyvernem',
+                labelSummaryLanguage: 'Összegzés nyelve',
+                labelSummaryFormat: 'Összegzés formátuma',
+                labelSummaryAccessCode: 'Összegzés hozzáférési kód',
+                searchBtn: 'Keresés',
+                downloadExtractBtn: 'Kivonat letöltése',
+                summarizeSearchBtn: 'Keresés összegzése',
+                copySummaryBtn: 'Összegzés másolása',
+                downloadSummaryBtn: 'Összegzés letöltése (.txt)',
+                loadingText: 'Szabálykönyv keresése...',
+                summaryLoadingText: 'Összegzés készítése...',
+                extractHint: 'A kivonat tartalmazza az összes általános szabályt, valamint a szűrésnek megfelelő fegyvernem/változat szabályait, dokumentum- és szabálysorrendben.',
+                summaryHint: 'Az AI a legjobb találatokat foglalja össze, ingyenes API-limit figyelembevételével.',
+                footerText: 'HEMA Szabálykönyv Kereső | Flask + AI',
+                queryPlaceholder: "pl. 'elsőbbség találati felület', 'hosszúkard találat'",
+                searchLanguageHun: 'Magyar',
+                searchLanguageEng: 'Angol',
+                allVariants: 'Minden változat',
+                allWeapons: 'Minden fegyvernem',
+                longsword: 'Hosszúkard',
+                rapier: 'Rapiér',
+                paddedWeapons: 'Párnázott fegyverek',
+                standardDetailed: 'Normál (részletes)',
+                handoutCompact: 'Handout (kompakt 1 oldal)',
+                pleaseEnterQuery: 'Adj meg egy keresőkifejezést.',
+                pleaseEnterQueryFirst: 'Először adj meg egy keresőkifejezést.',
+                noResultsTitle: 'Nem található szabály a kereséshez.',
+                noResultsHint: 'Próbálj más kulcsszavakat, vagy vedd le a szűrőket.',
+                resultsHeader: 'Találatok',
+                errorPrefix: 'Hiba',
+                summaryTitle: 'Összegzés',
+                statsTotal: 'Összes szabály',
+                statsVor: 'VOR szabályok',
+                statsCombat: 'COMBAT szabályok',
+                statsAfterblow: 'AFTERBLOW szabályok',
+                scoreLabel: 'Pontszám',
+                documentLabel: 'Dokumentum',
+                sectionLabel: 'Szakasz',
+                subsectionLabel: 'Alszakasz',
+                loadMore: 'További találatok',
+                remaining: 'hátralévő',
+                allWeaponsTag: 'Általános',
+                allVariantsTag: 'Minden változat',
+                inputTruncated: 'A bemenet az API-korlát miatt rövidítve lett.',
+                extractFilenamePrefix: 'szabalykivonat',
+                siteLanguageMenuLabel: 'Oldal nyelve',
+                rulebookLanguageMenuLabel: 'Teljes szabálykönyv',
+                siteLanguageHun: '🇭🇺 Magyar',
+                siteLanguageEng: '🇬🇧 English',
+                fullRulebookHun: '🇭🇺 Magyar szabálykönyv',
+                fullRulebookEng: '🇬🇧 English rulebook'
+            }
+        };
+
+        function t(key) {
+            return UI_STRINGS[currentUiLang]?.[key] ?? UI_STRINGS.eng[key] ?? key;
+        }
+
+        function setText(id, value) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = value;
+            }
+        }
+
+        function applyUiLanguage(lang) {
+            currentUiLang = lang === 'hun' ? 'hun' : 'eng';
+            document.documentElement.lang = currentUiLang === 'hun' ? 'hu' : 'en';
+            document.title = t('title');
+
+            setText('logoText', t('logo'));
+            setText('afterblowButtonText', t('afterblowGuide'));
+            setText('pageTitle', t('pageTitle'));
+            setText('pageSubtitle', t('pageSubtitle'));
+            setText('searchCardTitle', t('searchCardTitle'));
+            setText('extractCardTitle', t('extractCardTitle'));
+            setText('summaryCardTitle', t('summaryCardTitle'));
+            setText('labelSearchLanguage', t('labelLanguage'));
+            setText('labelQuery', t('labelQuery'));
+            setText('labelVariant', t('labelVariant'));
+            setText('labelWeapon', t('labelWeapon'));
+            setText('labelExtractLanguage', t('labelLanguage'));
+            setText('labelExtractVariant', t('labelExtractVariant'));
+            setText('labelExtractWeapon', t('labelExtractWeapon'));
+            setText('labelSummaryLanguage', t('labelSummaryLanguage'));
+            setText('labelSummaryFormat', t('labelSummaryFormat'));
+            setText('labelSummaryAccessCode', t('labelSummaryAccessCode'));
+            setText('searchBtn', t('searchBtn'));
+            setText('downloadExtractBtn', t('downloadExtractBtn'));
+            setText('summarizeSearchBtn', t('summarizeSearchBtn'));
+            setText('copySummaryBtn', t('copySummaryBtn'));
+            setText('downloadSummaryBtn', t('downloadSummaryBtn'));
+            setText('loadingText', t('loadingText'));
+            setText('extractHint', t('extractHint'));
+            setText('summaryHint', t('summaryHint'));
+            setText('footerText', t('footerText'));
+            setText('siteLanguageMenuLabel', t('siteLanguageMenuLabel'));
+            setText('rulebookLanguageMenuLabel', t('rulebookLanguageMenuLabel'));
+
+            queryInput.placeholder = t('queryPlaceholder');
+
+            const siteMenuOptions = siteLanguageMenu.options;
+            if (siteMenuOptions[0]) siteMenuOptions[0].textContent = t('siteLanguageHun');
+            if (siteMenuOptions[1]) siteMenuOptions[1].textContent = t('siteLanguageEng');
+            siteLanguageMenu.value = currentUiLang;
+
+            const rulebookMenuOptions = rulebookLanguageMenu.options;
+            if (rulebookMenuOptions[0]) rulebookMenuOptions[0].textContent = t('fullRulebookHun');
+            if (rulebookMenuOptions[1]) rulebookMenuOptions[1].textContent = t('fullRulebookEng');
+            rulebookLanguageMenu.value = searchLanguageSelect.value === 'eng' ? 'eng' : 'hun';
+
+            const searchLanguageOptions = searchLanguageSelect.options;
+            if (searchLanguageOptions[0]) searchLanguageOptions[0].textContent = t('searchLanguageHun');
+            if (searchLanguageOptions[1]) searchLanguageOptions[1].textContent = t('searchLanguageEng');
+
+            const extractLanguageOptions = document.getElementById('extractLanguage').options;
+            if (extractLanguageOptions[0]) extractLanguageOptions[0].textContent = t('searchLanguageHun');
+            if (extractLanguageOptions[1]) extractLanguageOptions[1].textContent = t('searchLanguageEng');
+
+            const variantOptions = document.getElementById('variant').options;
+            if (variantOptions[0]) variantOptions[0].textContent = t('allVariants');
+
+            const extractVariantOptions = document.getElementById('extractVariant').options;
+            if (extractVariantOptions[0]) extractVariantOptions[0].textContent = t('allVariants');
+
+            const weaponOptions = document.getElementById('weapon').options;
+            if (weaponOptions[0]) weaponOptions[0].textContent = t('allWeapons');
+            if (weaponOptions[1]) weaponOptions[1].textContent = t('longsword');
+            if (weaponOptions[2]) weaponOptions[2].textContent = t('rapier');
+            if (weaponOptions[3]) weaponOptions[3].textContent = t('paddedWeapons');
+
+            const extractWeaponOptions = document.getElementById('extractWeapon').options;
+            if (extractWeaponOptions[0]) extractWeaponOptions[0].textContent = t('allWeapons');
+            if (extractWeaponOptions[1]) extractWeaponOptions[1].textContent = t('longsword');
+            if (extractWeaponOptions[2]) extractWeaponOptions[2].textContent = t('rapier');
+            if (extractWeaponOptions[3]) extractWeaponOptions[3].textContent = t('paddedWeapons');
+
+            const summaryFormatOptions = document.getElementById('summaryFormat').options;
+            if (summaryFormatOptions[0]) summaryFormatOptions[0].textContent = t('standardDetailed');
+            if (summaryFormatOptions[1]) summaryFormatOptions[1].textContent = t('handoutCompact');
+
+            localStorage.setItem('ui_lang', currentUiLang);
+            loadStats(searchLanguageSelect.value);
+        }
+
+        function applyRulesLanguage(lang) {
+            const normalized = lang === 'eng' ? 'eng' : 'hun';
+            searchLanguageSelect.value = normalized;
+            extractLanguageSelect.value = normalized;
+            localStorage.setItem('rules_lang', normalized);
+            loadStats(normalized);
+        }
 
         // Load stats on page load
         async function loadStats(rulesLang = 'hun') {
@@ -772,19 +1057,19 @@
                 statsDiv.innerHTML = `
                     <div class="stat-item">
                         <div class="stat-number">${data.total_rules}</div>
-                        <div class="stat-label">Total Rules</div>
+                        <div class="stat-label">${t('statsTotal')}</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">${data.vor_rules}</div>
-                        <div class="stat-label">VOR Rules</div>
+                        <div class="stat-label">${t('statsVor')}</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">${data.combat_rules}</div>
-                        <div class="stat-label">Combat Rules</div>
+                        <div class="stat-label">${t('statsCombat')}</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-number">${data.afterblow_rules}</div>
-                        <div class="stat-label">Afterblow Rules</div>
+                        <div class="stat-label">${t('statsAfterblow')}</div>
                     </div>
                 `;
             } catch (error) {
@@ -798,7 +1083,19 @@
         });
 
         searchLanguageSelect.addEventListener('change', async () => {
+            localStorage.setItem('rules_lang', searchLanguageSelect.value);
+            extractLanguageSelect.value = searchLanguageSelect.value;
             await loadStats(searchLanguageSelect.value);
+        });
+
+        siteLanguageMenu.addEventListener('change', () => {
+            const selected = siteLanguageMenu.value === 'eng' ? 'en' : 'hu';
+            window.location.href = `/${selected}`;
+        });
+
+        rulebookLanguageMenu.addEventListener('change', () => {
+            const selected = rulebookLanguageMenu.value;
+            window.open(`/rulebook?lang=${selected}`, '_blank', 'noopener,noreferrer');
         });
 
         extractForm.addEventListener('submit', async (e) => {
@@ -835,7 +1132,7 @@
             const rulesLang = searchLanguageSelect.value;
 
             if (!query) {
-                resultsDiv.innerHTML = '<div class="error-message">Please enter a search query</div>';
+                resultsDiv.innerHTML = `<div class="error-message">${t('pleaseEnterQuery')}</div>`;
                 return;
             }
 
@@ -861,7 +1158,7 @@
                 loadingDiv.classList.remove('show');
 
                 if (!response.ok) {
-                    resultsDiv.innerHTML = `<div class="error-message">Error: ${data.error}</div>`;
+                    resultsDiv.innerHTML = `<div class="error-message">${t('errorPrefix')}: ${data.error}</div>`;
                     return;
                 }
 
@@ -869,8 +1166,8 @@
                     resultsDiv.innerHTML = `
                         <div class="no-results">
                             <div class="no-results-icon">🔍</div>
-                            <p>No rules found matching your search.</p>
-                            <p style="font-size: 0.9em; margin-top: 10px;">Try different keywords or remove filters.</p>
+                            <p>${t('noResultsTitle')}</p>
+                            <p style="font-size: 0.9em; margin-top: 10px;">${t('noResultsHint')}</p>
                         </div>
                     `;
                     return;
@@ -878,11 +1175,11 @@
 
                 allResults = data.results;
                 displayedCount = 0;
-                resultsDiv.innerHTML = `<div class="results-header">Results (${data.count})</div>`;
+                resultsDiv.innerHTML = `<div class="results-header">${t('resultsHeader')} (${data.count})</div>`;
                 displayResults();
             } catch (error) {
                 loadingDiv.classList.remove('show');
-                resultsDiv.innerHTML = `<div class="error-message">Error: ${error.message}</div>`;
+                resultsDiv.innerHTML = `<div class="error-message">${t('errorPrefix')}: ${error.message}</div>`;
             }
         }
 
@@ -906,7 +1203,7 @@
 
                 if (!response.ok) {
                     const data = await response.json();
-                    alert(`Error: ${data.error || 'Failed to generate extract'}`);
+                    alert(`${t('errorPrefix')}: ${data.error || 'Failed to generate extract'}`);
                     return;
                 }
 
@@ -916,13 +1213,13 @@
                 a.href = url;
                 const weaponLabel = weapon || 'all-weapons';
                 const variantLabel = variant || 'all-variants';
-                a.download = `rulebook-extract_${language}_${weaponLabel}_${variantLabel}.md`;
+                a.download = `${t('extractFilenamePrefix')}_${language}_${weaponLabel}_${variantLabel}.md`;
                 document.body.appendChild(a);
                 a.click();
                 a.remove();
                 window.URL.revokeObjectURL(url);
             } catch (error) {
-                alert(`Error: ${error.message}`);
+                alert(`${t('errorPrefix')}: ${error.message}`);
             }
         }
 
@@ -936,11 +1233,11 @@
             const rulesLang = searchLanguageSelect.value;
 
             if (!query) {
-                summaryOutput.innerHTML = '<div class="error-message">Please enter a search query first.</div>';
+                summaryOutput.innerHTML = `<div class="error-message">${t('pleaseEnterQueryFirst')}</div>`;
                 return;
             }
 
-            summaryOutput.innerHTML = '<div class="loading show"><div class="spinner"></div><p>Summarizing...</p></div>';
+            summaryOutput.innerHTML = `<div class="loading show"><div class="spinner"></div><p>${t('summaryLoadingText')}</p></div>`;
             summaryControls.style.display = 'none';
             lastSummaryText = '';
 
@@ -966,23 +1263,23 @@
 
                 const data = await response.json();
                 if (!response.ok) {
-                    summaryOutput.innerHTML = `<div class="error-message">Error: ${data.error}</div>`;
+                    summaryOutput.innerHTML = `<div class="error-message">${t('errorPrefix')}: ${data.error}</div>`;
                     return;
                 }
 
                 summaryOutput.innerHTML = `
                     <div class="result-item">
                         <div class="result-header">
-                            <span class="result-id">Summary (${data.language})</span>
+                            <span class="result-id">${t('summaryTitle')} (${data.language})</span>
                         </div>
                         <div class="result-text">${escapeHtml(data.summary).replace(/\n/g, '<br>')}</div>
-                        ${data.input_truncated ? '<div class="result-meta" style="margin-top: 10px; color: #666;">Input was truncated to stay within API limits.</div>' : ''}
+                        ${data.input_truncated ? `<div class="result-meta" style="margin-top: 10px; color: #666;">${t('inputTruncated')}</div>` : ''}
                     </div>
                 `;
                 lastSummaryText = data.summary;
                 summaryControls.style.display = 'flex';
             } catch (error) {
-                summaryOutput.innerHTML = `<div class="error-message">Error: ${error.message}</div>`;
+                summaryOutput.innerHTML = `<div class="error-message">${t('errorPrefix')}: ${error.message}</div>`;
             }
         }
 
@@ -992,14 +1289,14 @@
 
             let html = '';
             resultsToShow.forEach(result => {
-                const variantLabel = result.variant === 'general' ? 'All Variants' : result.variant;
-                const weaponLabel = result.weapon_type === 'general' ? 'General' : result.weapon_type;
+                const variantLabel = result.variant === 'general' ? t('allVariantsTag') : result.variant;
+                const weaponLabel = result.weapon_type === 'general' ? t('allWeaponsTag') : result.weapon_type;
 
                 html += `
                     <div class="result-item">
                         <div class="result-header">
-                            <a class="result-id" href="/rulebook?lang=${searchLanguageSelect.value}#${result.rule_id}" target="_blank" title="Jump to rule in full rulebook">${result.rule_id}</a>
-                            <span class="result-score">Score: ${result.score.toFixed(1)}</span>
+                            <a class="result-id" href="/rulebook?lang=${searchLanguageSelect.value}#${result.rule_id}" target="_blank" title="${t('fullRulebook')}">${result.rule_id}</a>
+                            <span class="result-score">${t('scoreLabel')}: ${result.score.toFixed(1)}</span>
                         </div>
                         <div class="result-tags">
                             <span class="tag weapon">${weaponLabel}</span>
@@ -1008,10 +1305,10 @@
                         <div class="result-text">${renderMarkdownText(result.text)}</div>
                         <div class="result-meta">
                             <div class="section-info">
-                                <span class="section-label">Document:</span> ${escapeHtml(result.document)}
+                                <span class="section-label">${t('documentLabel')}:</span> ${escapeHtml(result.document)}
                             </div>
-                            ${result.section ? `<div class="section-info"><span class="section-label">Section:</span> ${escapeHtml(result.section)}</div>` : ''}
-                            ${result.subsection ? `<div class="section-info"><span class="section-label">Subsection:</span> ${escapeHtml(result.subsection)}</div>` : ''}
+                            ${result.section ? `<div class="section-info"><span class="section-label">${t('sectionLabel')}:</span> ${escapeHtml(result.section)}</div>` : ''}
+                            ${result.subsection ? `<div class="section-info"><span class="section-label">${t('subsectionLabel')}:</span> ${escapeHtml(result.subsection)}</div>` : ''}
                         </div>
                     </div>
                 `;
@@ -1037,7 +1334,7 @@
                 const loadMoreBtn = document.createElement('button');
                 loadMoreBtn.id = 'loadMoreBtn';
                 loadMoreBtn.className = 'load-more-btn';
-                loadMoreBtn.textContent = `Load More (${allResults.length - displayedCount} remaining)`;
+                loadMoreBtn.textContent = `${t('loadMore')} (${allResults.length - displayedCount} ${t('remaining')})`;
                 loadMoreBtn.onclick = displayResults;
                 resultsDiv.appendChild(loadMoreBtn);
             }
@@ -1115,8 +1412,14 @@
             return text;
         }
 
-        // Load stats on page load
-        loadStats(searchLanguageSelect.value);
+        const initialUiLang = new URLSearchParams(window.location.search).get('ui_lang')
+            || localStorage.getItem('ui_lang')
+            || 'hun';
+        const initialRulesLang = new URLSearchParams(window.location.search).get('rules_lang')
+            || localStorage.getItem('rules_lang')
+            || (initialUiLang === 'eng' ? 'eng' : 'hun');
+        applyUiLanguage(initialUiLang === 'hun' ? 'hun' : 'eng');
+        applyRulesLanguage(initialRulesLang);
 
         // Allow Enter key to search from any field
         document.addEventListener('keypress', (e) => {

@@ -91,16 +91,32 @@ def create_app() -> Flask:
     app.register_blueprint(rulebook_bp)
     
     # Home page route
-    from flask import render_template
+    from flask import render_template, redirect, url_for, request
     
     @app.route("/")
     def index():
         """Home page"""
+        ui_lang = str(request.args.get("ui_lang", "")).strip().lower()
+        rules_lang = str(request.args.get("rules_lang", "")).strip().lower()
+
+        if ui_lang not in {"hun", "eng"} or rules_lang not in {"hun", "eng"}:
+            return redirect(url_for("index", ui_lang="hun", rules_lang="hun"), code=302)
+
         return render_template(
             "index.html",
             variants=app.config['VARIANTS'],
             weapons=app.config['WEAPONS']
         )
+
+    @app.route("/hu")
+    def index_hu():
+        """Hungarian entry point with preselected UI + rules language."""
+        return redirect(url_for("index", ui_lang="hun", rules_lang="hun"), code=302)
+
+    @app.route("/en")
+    def index_en():
+        """English entry point with preselected UI + rules language."""
+        return redirect(url_for("index", ui_lang="eng", rules_lang="eng"), code=302)
     
     # Serve handout files (e.g., AFTERBLOW infographic)
     @app.route("/handouts/<filename>")
