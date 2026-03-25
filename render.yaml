@@ -12,6 +12,7 @@ services:
       test -f data/search/rules_index_hun.json && \
       test -f data/search/rules_index_eng.json && \
       test -f data/search/rules_index.json
+    healthCheckPath: /healthz
     startCommand: gunicorn --bind 0.0.0.0:${PORT:-10000} --workers 1 --timeout 120 wsgi:app
     envVars:
       - key: PYTHON_VERSION

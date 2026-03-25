@@ -117,6 +117,11 @@ def create_app() -> Flask:
     def index_en():
         """English entry point with preselected UI + rules language."""
         return redirect(url_for("index", ui_lang="eng", rules_lang="eng"), code=302)
+
+    @app.route("/healthz")
+    def healthz():
+        """Lightweight liveness endpoint for platform health checks."""
+        return {"status": "ok"}, 200
     
     # Serve handout files (e.g., AFTERBLOW infographic)
     @app.route("/handouts/<filename>")
