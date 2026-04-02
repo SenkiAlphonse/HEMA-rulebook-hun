@@ -641,6 +641,7 @@
                 <div class="header-control">
                     <label class="header-control-label" id="rulebookLanguageMenuLabel" for="rulebookLanguageMenu">Full Rulebook</label>
                     <select id="rulebookLanguageMenu" class="header-select" aria-label="Full rulebook language">
+                        <option value="" disabled selected hidden id="rulebookLanguageMenuPlaceholder">📖 Open Rulebook…</option>
                         <option value="hun">🇭🇺 Magyar szabálykönyv</option>
                         <option value="eng">🇬🇧 English rulebook</option>
                     </select>
@@ -877,7 +878,8 @@
                 siteLanguageHun: '🇭🇺 Magyar',
                 siteLanguageEng: '🇬🇧 English',
                 fullRulebookHun: '🇭🇺 Magyar szabálykönyv',
-                fullRulebookEng: '🇬🇧 English rulebook'
+                fullRulebookEng: '🇬🇧 English rulebook',
+                openRulebook: '📖 Show…'
             },
             hun: {
                 title: 'HEMA Szabálykönyv Kereső',
@@ -944,7 +946,9 @@
                 siteLanguageHun: '🇭🇺 Magyar',
                 siteLanguageEng: '🇬🇧 English',
                 fullRulebookHun: '🇭🇺 Magyar szabálykönyv',
-                fullRulebookEng: '🇬🇧 English rulebook'
+                fullRulebookEng: '🇬🇧 English rulebook',
+                openRulebook: '📖 Mutasd…'
+
             }
         };
 
@@ -1001,9 +1005,10 @@
             siteLanguageMenu.value = currentUiLang;
 
             const rulebookMenuOptions = rulebookLanguageMenu.options;
-            if (rulebookMenuOptions[0]) rulebookMenuOptions[0].textContent = t('fullRulebookHun');
-            if (rulebookMenuOptions[1]) rulebookMenuOptions[1].textContent = t('fullRulebookEng');
-            rulebookLanguageMenu.value = searchLanguageSelect.value === 'eng' ? 'eng' : 'hun';
+            if (rulebookMenuOptions[0]) rulebookMenuOptions[0].textContent = t('openRulebook');
+            if (rulebookMenuOptions[1]) rulebookMenuOptions[1].textContent = t('fullRulebookHun');
+            if (rulebookMenuOptions[2]) rulebookMenuOptions[2].textContent = t('fullRulebookEng');
+            rulebookLanguageMenu.value = '';
 
             const searchLanguageOptions = searchLanguageSelect.options;
             if (searchLanguageOptions[0]) searchLanguageOptions[0].textContent = t('searchLanguageHun');
@@ -1095,7 +1100,10 @@
 
         rulebookLanguageMenu.addEventListener('change', () => {
             const selected = rulebookLanguageMenu.value;
-            window.open(`/rulebook?lang=${selected}`, '_blank', 'noopener,noreferrer');
+            if (selected) {
+                window.open(`/rulebook?lang=${selected}`, '_blank', 'noopener,noreferrer');
+                rulebookLanguageMenu.value = '';
+            }
         });
 
         extractForm.addEventListener('submit', async (e) => {
