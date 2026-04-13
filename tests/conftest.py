@@ -3,12 +3,17 @@ Pytest configuration and shared fixtures
 """
 
 import json
+import sys
 import pytest
 from pathlib import Path
 from typing import Dict, List, Any
 
-# Project root for relative imports (already in PYTHONPATH via pytest.ini)
+# Ensure imports work even when pytest-pythonpath plugin is not installed (e.g., CI)
 project_root = Path(__file__).parent.parent
+src_root = project_root / "src"
+for _path in (str(project_root), str(src_root)):
+    if _path not in sys.path:
+        sys.path.insert(0, _path)
 
 
 @pytest.fixture

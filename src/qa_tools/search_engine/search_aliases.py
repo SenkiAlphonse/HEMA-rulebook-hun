@@ -90,12 +90,48 @@ class AliasAwareSearch:
         try:
             with open(self.index_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
-                self.rules = data['rules']
+                loaded_rules = data['rules']
+                self.rules = self._deduplicate_rules_by_id(loaded_rules)
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse index JSON: {e}")
             raise RuntimeError(f"Index file corrupted: {e}") from e
         
         logger.info(f"Loaded {len(self.rules)} rules with alias support")
+
+    def _deduplicate_rules_by_id(self, rules: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Return rules with unique rule IDs, preserving first occurrence order."""
+        deduplicated = []
+        seen_rule_ids = set()
+
+        for rule in rules:
+            rule_id = rule.get('rule_id')
+            if not rule_id or rule_id in seen_rule_ids:
+                continue
+            seen_rule_ids.add(rule_id)
+            deduplicated.append(rule)
+
+        duplicate_count = len(rules) - len(deduplicated)
+        if duplicate_count > 0:
+            logger.warning(
+                "Removed %d duplicate rules by rule_id while loading %s",
+                duplicate_count,
+                self.index_path,
+            )
+
+        return deduplicated
+
+    def _deduplicate_results_by_rule_id(self, results: List[SearchResult]) -> List[SearchResult]:
+        """Return results with unique rule IDs, preserving ranking order."""
+        deduplicated = []
+        seen_rule_ids = set()
+
+        for result in results:
+            if result.rule_id in seen_rule_ids:
+                continue
+            seen_rule_ids.add(result.rule_id)
+            deduplicated.append(result)
+
+        return deduplicated
 
     def _expand_query(self, query: str) -> Tuple[str, Optional[str], Optional[str], List[str], str]:
         """Expand query based on aliases, extracting filters and concept terms.
@@ -234,6 +270,7 @@ class AliasAwareSearch:
                 ))
         
         results.sort(key=lambda x: x.score, reverse=True)
+        results = self._deduplicate_results_by_rule_id(results)
         
         # Use default max results if not provided
         if max_results is None:
@@ -294,6 +331,7 @@ class AliasAwareSearch:
             else:
                 # Level 1-3 rules: just add them directly
                 grouped_results.append(result)
+        grouped_results = self._deduplicate_results_by_rule_id(grouped_results)
         return grouped_results[:max_results * grouping_multiplier]
     
     def _build_rule_family(self, result: SearchResult, lineage: List[str]) -> List[SearchResult]:

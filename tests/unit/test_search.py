@@ -2,6 +2,7 @@
 Unit tests for RulebookSearch class
 """
 
+import json
 import pytest
 from qa_tools.search_engine.search import RulebookSearch, SearchResult
 
@@ -120,3 +121,48 @@ class TestRulebookSearch:
         # These rules should all be present if the substring is matched in text_plain
         expected = {"GEN-3.2.5.1", "GEN-3.2.5.2", "GEN-3.2.5.3"}
         assert expected.issubset(found_ids), f"Missing: {expected - found_ids}"
+
+    def test_search_deduplicates_rule_ids_in_results(self, tmp_path):
+        """Search results should not contain duplicate rule IDs."""
+        index_data = {
+            "rules": [
+                {
+                    "rule_id": "GEN-6.11.2",
+                    "text": "Vívóidőn belüli közbetámadás szabály.",
+                    "section": "Általános",
+                    "subsection": "",
+                    "document": "01-altalanos.md",
+                    "weapon_type": "general",
+                    "variant": ""
+                },
+                {
+                    "rule_id": "GEN-6.11.2",
+                    "text": "Vívóidőn belüli közbetámadás szabály.",
+                    "section": "Általános",
+                    "subsection": "",
+                    "document": "01-altalanos.md",
+                    "weapon_type": "general",
+                    "variant": ""
+                },
+                {
+                    "rule_id": "GEN-6.11.2.1",
+                    "text": "A vívóidő megítélése esetfüggő.",
+                    "section": "Általános",
+                    "subsection": "",
+                    "document": "01-altalanos.md",
+                    "weapon_type": "general",
+                    "variant": ""
+                }
+            ],
+            "total_rules": 3,
+            "documents": ["01-altalanos.md"]
+        }
+
+        index_file = tmp_path / "rules_index_dupe.json"
+        index_file.write_text(json.dumps(index_data, ensure_ascii=False), encoding="utf-8")
+
+        search_engine = RulebookSearch(str(index_file))
+        results = search_engine.search("idő", max_results=10)
+
+        result_ids = [r.rule_id for r in results]
+        assert len(result_ids) == len(set(result_ids)), f"Duplicate rule IDs found: {result_ids}"
