@@ -198,7 +198,7 @@ versenyen az erre feljogosított hatóságok--a Versenybíró és a szervezőcsa
 #### A ténylegesen elért találat meg nem adása  
 
 **DIS-3.2.1**  
-Meg lehet tagadni az érvényes találati felületre bevitt találat megadását, ha az nem a küzdelmi idő alatt történt; ha a vívó a pástról lelépett; az elektromos felszerelés hibája miatt; ha a találat bevitele közben erőszak történt, vagy a szabályokban rögzített bármely más ok miatt (a Technikai Szabályzattal összhangban).  
+Meg lehet tagadni az érvényes találati felületre bevitt találat megadását, ha az nem a küzdelmi idő alatt történt; ha a vívó a pástról lelépett;<!-- az elektromos felszerelés hibája miatt;--> ha a találat bevitele közben erőszak történt, vagy a szabályokban rögzített bármely más ok miatt (a Technikai Szabályzattal összhangban).  
 
 #### A ténylegesen nem kapott találat megítélése  
 

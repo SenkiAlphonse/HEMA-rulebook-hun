@@ -175,7 +175,7 @@ All listed penalties — except permanent suspension — may be imposed at the c
 #### Annulling a hit actually scored  
 
 **DIS-3.2.1**  
-A hit on valid target may be annulled if it did not occur during effective fighting time; if the fencer stepped out; because of electrical equipment failure; if violence occurred while delivering the hit; or for any other reason recorded in the rules (in line with the technical rules).  
+A hit on valid target may be annulled if it did not occur during effective fighting time; if the fencer stepped out;<!-- because of electrical equipment failure;--> if violence occurred while delivering the hit; or for any other reason recorded in the rules (in line with the technical rules).  
 
 #### Awarding a penalty hit (a hit not actually received)  
 
