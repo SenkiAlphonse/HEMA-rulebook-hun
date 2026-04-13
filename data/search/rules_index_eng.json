@@ -10315,13 +10315,13 @@
     },
     {
       "rule_id": "DIS-3.2.1",
-      "text": "A hit on valid target may be annulled if it did not occur during effective fighting time; if the fencer stepped out; because of electrical equipment failure; if violence occurred while delivering the hit; or for any other reason recorded in the rules (in line with the technical rules).",
+      "text": "A hit on valid target may be annulled if it did not occur during effective fighting time; if the fencer stepped out; if violence occurred while delivering the hit; or for any other reason recorded in the rules (in line with the technical rules).",
       "section": "Disciplinary Rules for Competitions",
       "subsection": "Bout-related penalties",
       "document": "03-etiquette_discipline.en.md",
       "anchor_id": "DIS-3.2",
       "line_number": 177,
-      "text_plain": "A hit on valid target may be annulled if it did not occur during effective fighting time; if the fencer stepped out; because of electrical equipment failure; if violence occurred while delivering the hit; or for any other reason recorded in the rules (in line with the technical rules).",
+      "text_plain": "A hit on valid target may be annulled if it did not occur during effective fighting time; if the fencer stepped out; if violence occurred while delivering the hit; or for any other reason recorded in the rules (in line with the technical rules).",
       "weapon_type": "general",
       "variant": "",
       "references_to": [],
@@ -13764,12 +13764,12 @@
   ],
   "total_rules": 414,
   "documents": [
+    "02.c-longsword-AFTERBLOW.en.md",
     "02-longsword.en.md",
     "04-organisation.en.md",
     "02.a-longsword-VOR.en.md",
-    "03-etiquette_discipline.en.md",
     "01-general.en.md",
-    "02.c-longsword-AFTERBLOW.en.md"
+    "03-etiquette_discipline.en.md"
   ],
   "language": "eng"
 }
