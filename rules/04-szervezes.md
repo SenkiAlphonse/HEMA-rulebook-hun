@@ -17,6 +17,9 @@ Tilos a versenyen való részvétel alkohol, illetve teljesítményfokozó drogo
 ## A versenyek szervezése és minősítése  
 <span id="ORG-2"></span>  
 
+<!--TODO ez kell ide? **GEN-6.3.12**  
+A vívók a körmérkőzések, és minden egyenes kieséses mérkőzés végén, a küzdőtér elhagyása előtt ellenőrzik, és aláírják a pontvezető lapot, melyet a bíró vagy a kisegítő személyzet vezet a mérkőzés alatt. Csapatmérkőzések végén ez a csapatkapitányok feladata.   -->
+
 ### Egyéni csoportmérkőzések  
 <span id="ORG-2.1"></span>  
 
@@ -47,7 +50,7 @@ Távolmaradás: az a vívó, aki nem jelenik meg a csoportkör kezdetén, törle
 **ORG-2.1.7**  
 abban az esetben, ha egy vívó a csoportban egyetlen mérkőzéstől lép vissza felszerelés meghibásodás vagy sérülés miatt, de a többi mérkőzését be tudja fejezni, a visszalépő versenyző ellenfelét kell győztesként regisztrálni Vn – DN, VN – Dn, habár a szerzett pontok nem kerülnek törlésre.  
 
-#### Visszalépés:  
+#### Visszalépés, kizárás:  
 
 **ORG-2.1.8**  
 abban az esetben, ha egy vívó a csoportban egyetlen mérkőzéstől lép vissza felszerelés meghibásodás vagy sérülés miatt, de a többi mérkőzését be tudja fejezni, a visszalépő versenyző ellenfelét kell győztesként regisztrálni Vn – DN, VN – Dn, habár a szerzett pontok nem kerülnek törlésre.  
@@ -61,6 +64,10 @@ Ha egy vívó az utolsó küzdelmétől lépne vissza a csoportmérkőzések sor
 
 **ORG-2.1.11**  
 Kizárás: az a vívó, aki a csoportkör során kizárásra kerül, törlendő a csoportból, az eredményeit meg kell semmisíteni, mintha nem vett volna részt. A végső rangsor végén helyezés nélkül, "Excluded" megjegyzéssel regisztrálandó.  
+
+<!-- FIXME ennek lesz jobb helye is... -->
+**ORG-2.1.12**  
+Felszerelés mérkőzés közbeni meghibásodása esetén a bíró 5 perc szünetet engedélyezhet (amely akkor kezdődik, amikor a bíró megbizonyosodott a meghibásodásról). Ez az idő felhasználható az érintett felszerelés kijavítására, vagy cseréjére és ellenőriztetésére. Ha a versenyző nem tudja folytatni a mérkőzést a szünet végéig, a bíró kizárhatja a versenyzőt az adott mérkőzésből. Vö [ORG-2.3.13]  
 
 ### Egyéni egyenes kieséses mérkőzések  
 <span id="ORG-2.2"></span>  
@@ -78,7 +85,7 @@ Ha egy vívó az egyenes kiesés alatt lép vissza, az ellenfelet nyilvánítjá
 Visszalépés: Ha, bármilyen okból kifolyólag, az egyik versenyző nem képes folytatni a küzdelmet, vagy befejezni a mérkőzést, az ellenfelet nyilvánítják győztesnek. A visszalépő vívó "Did not finish"/"Visszalépett" megjegyzéssel megtartja a helyezését az összesített rangsorban.  
 
 **ORG-2.2.5**  
-Kizárás: ha egy vívót kizárnak, el kell távolítani az egyenes kieséses tábláról, és az eredményeit meg kell semmisíteni, mintha nem vett volna részt a versenyen. A kizárt vívót a végső rangsor végén "Excluded"/"Kizárva" megjegyzéssel kell adminisztrálni.  
+Kizárás: ha egy vívót kizárnak, el kell távolítani az egyenes kieséses tábláról, és az eredményeit meg kell semmisíteni, mintha nem vett volna részt a versenyen. A kizárt vívót a végső rangsor végén "Excluded"/"Kizárva" megjegyzéssel kell adminisztrálni. (de: [ORG-2.1.12])  
 
 **ORG-2.2.6**  
 A mérkőzések sorrendje: az egyenes kieséses tábla minden fordulójában (256, 128, 64, 32, 16, 8, 4) a mérkőzéseket mindig a táblázat szerint fentről lefelé haladva hirdetik ki.  
@@ -98,7 +105,7 @@ Az azonos fegyvernemben megrendezett női és férfi versenyszámok döntőit le
 A csapatok minden fegyvernem esetén három vívóból állnak, egy tartalékkal, vagy anélkül. Egy csapat csak akkor kezdhet el egy mérkőzést, ha minden tagja jelen van.  
 
 **ORG-2.3.2**  
-A csapatversenyt egyenes kieséses táblával kell lebonyolítani, amelyben lehetnek erőnyerők.  
+A csapatverseny formátuma az egyenes kieséses tábla, amelyben lehetnek erőnyerők.  
 
 **ORG-2.3.3**  
 Az egyenes kiesés táblán a ragnsort a következőképp kell megállapítani:  
@@ -145,7 +152,7 @@ Ha következésképpen az ellenfél csapatkapitánya is cserét kért, az előbb
  Ha egy csapat tagja a mérkőzés alatt a Szervezőcsapat orvosi képviselője által megfelelően elismert baleset miatt köteles visszavonulni, csapatának kapitánya kérheti tartalék felvételét a mérkőzés folytatásához azon a ponton, ahol a visszalépésre kötelezett versenyző visszalépett, még a folyamatban lévő viadal alatt is.  
 
 **ORG-2.3.13**  
-Ugyanígy kell eljárni akkor is, ha a csapat egyik tagját felszerelés meghibásodása miatt kell kizárni a mérkőzésből. Vö. [GEN-6.2.13]  
+Ugyanígy kell eljárni akkor is, ha a csapat egyik tagját felszerelés meghibásodása miatt kell kizárni a mérkőzésből. Vö. [ORG-2.1.12]  
 
 **ORG-2.3.14**  
 Az így lecserélt versenyző azonban ugyanazon a mérkőzésen nem foglalhatja el ismét a helyét a csapatban.  
