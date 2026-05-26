@@ -743,61 +743,16 @@
             </form>
         </div>
 
-        <div class="card">
-            <div class="card-title" id="summaryCardTitle">Summarize Search Results with AI</div>
-            <form class="form-grid" id="summaryForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="summaryLanguage" id="labelSummaryLanguage">Summary Language</label>
-                        <select id="summaryLanguage" name="summaryLanguage">
-                            <option value="EN">English</option>
-                            <option value="HU">Hungarian</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="summaryFormat" id="labelSummaryFormat">Summary Format</label>
-                        <select id="summaryFormat" name="summaryFormat">
-                            <option value="standard">Standard (Detailed)</option>
-                            <option value="handout">Handout (Compact 1-page)</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="summaryAccessCode" id="labelSummaryAccessCode">Summary Access Code</label>
-                        <input
-                            type="password"
-                            id="summaryAccessCode"
-                            name="summaryAccessCode"
-                            placeholder="( ͡° ͜ʖ ͡°)"
-                        >
-                    </div>
-                    <button type="button" class="btn btn-primary" id="summarizeSearchBtn">Summarize Search</button>
-                </div>
-                <p class="form-hint" id="summaryHint">
-                    Summarizes top matching search results with input limits for free-tier API usage.
-                </p>
-            </form>
-            <div id="summaryControls" style="margin-top: 20px; display: none; gap: 12px; flex-direction: row;">
-                <button type="button" class="btn btn-secondary" id="copySummaryBtn">Copy Summary</button>
-                <button type="button" class="btn btn-secondary" id="downloadSummaryBtn">Download Summary (.txt)</button>
-            </div>
-            <div id="summaryOutput" style="margin-top: 20px;"></div>
-        </div>
-
         <div class="results-container" id="results"></div>
 
         <footer>
-            <p id="footerText">HEMA Rulebook Search | Powered by Flask + AI</p>
+            <p id="footerText">HEMA Rulebook Search | Powered by Flask</p>
         </footer>
     </div>
 
     <script>
         const form = document.getElementById('searchForm');
         const extractForm = document.getElementById('extractForm');
-        const summaryOutput = document.getElementById('summaryOutput');
-        const summaryControls = document.getElementById('summaryControls');
-        const copySummaryBtn = document.getElementById('copySummaryBtn');
-        const downloadSummaryBtn = document.getElementById('downloadSummaryBtn');
-        const summarizeSearchBtn = document.getElementById('summarizeSearchBtn');
         const searchLanguageSelect = document.getElementById('searchLanguage');
         const queryInput = document.getElementById('query');
         const resultsDiv = document.getElementById('results');
@@ -806,7 +761,6 @@
         const rulebookLanguageMenu = document.getElementById('rulebookLanguageMenu');
         const extractLanguageSelect = document.getElementById('extractLanguage');
 
-        let lastSummaryText = '';
         let currentUiLang = 'eng';
 
         let allResults = [];
@@ -823,26 +777,17 @@
                 pageSubtitle: 'Quick and accurate rule lookup for Hungarian HEMA competition',
                 searchCardTitle: 'Search Rules',
                 extractCardTitle: 'Download Rulebook Extract',
-                summaryCardTitle: 'Summarize Search Results with AI',
                 labelLanguage: 'Language',
                 labelQuery: 'Search Query',
                 labelVariant: 'Variant',
                 labelWeapon: 'Weapon',
                 labelExtractVariant: 'Extract Variant',
                 labelExtractWeapon: 'Extract Weapon',
-                labelSummaryLanguage: 'Summary Language',
-                labelSummaryFormat: 'Summary Format',
-                labelSummaryAccessCode: 'Summary Access Code',
                 searchBtn: 'Search',
                 downloadExtractBtn: 'Download Extract',
-                summarizeSearchBtn: 'Summarize Search',
-                copySummaryBtn: 'Copy Summary',
-                downloadSummaryBtn: 'Download Summary (.txt)',
                 loadingText: 'Searching rulebook...',
-                summaryLoadingText: 'Summarizing...',
                 extractHint: 'Includes all general rules plus matching weapon/variant rules, ordered by document and rule index.',
-                summaryHint: 'Summarizes top matching search results with input limits for free-tier API usage.',
-                footerText: 'HEMA Rulebook Search | Powered by Flask + AI',
+                footerText: 'HEMA Rulebook Search | Powered by Flask',
                 queryPlaceholder: "e.g., 'right of way target', 'longsword strike'",
                 searchLanguageHun: 'Hungarian',
                 searchLanguageEng: 'English',
@@ -851,15 +796,12 @@
                 longsword: 'Longsword',
                 rapier: 'Rapier',
                 paddedWeapons: 'Padded Weapons',
-                standardDetailed: 'Standard (Detailed)',
-                handoutCompact: 'Handout (Compact 1-page)',
                 pleaseEnterQuery: 'Please enter a search query',
                 pleaseEnterQueryFirst: 'Please enter a search query first.',
                 noResultsTitle: 'No rules found matching your search.',
                 noResultsHint: 'Try different keywords or remove filters.',
                 resultsHeader: 'Results',
                 errorPrefix: 'Error',
-                summaryTitle: 'Summary',
                 statsTotal: 'Total Rules',
                 statsVor: 'VOR Rules',
                 statsCombat: 'Combat Rules',
@@ -872,7 +814,6 @@
                 remaining: 'remaining',
                 allWeaponsTag: 'General',
                 allVariantsTag: 'All Variants',
-                inputTruncated: 'Input was truncated to stay within API limits.',
                 extractFilenamePrefix: 'rulebook-extract',
                 siteLanguageMenuLabel: 'Site Language',
                 rulebookLanguageMenuLabel: 'Full Rulebook',
@@ -891,26 +832,17 @@
                 pageSubtitle: 'Gyors és pontos szabálykeresés a magyar HEMA versenyekhez',
                 searchCardTitle: 'Szabálykeresés',
                 extractCardTitle: 'Szabálykivonat letöltése',
-                summaryCardTitle: 'Keresési találatok AI összegzése',
                 labelLanguage: 'Nyelv',
                 labelQuery: 'Keresőkifejezés',
                 labelVariant: 'Változat',
                 labelWeapon: 'Fegyvernem',
                 labelExtractVariant: 'Kivonat változat',
                 labelExtractWeapon: 'Kivonat fegyvernem',
-                labelSummaryLanguage: 'Összegzés nyelve',
-                labelSummaryFormat: 'Összegzés formátuma',
-                labelSummaryAccessCode: 'Összegzés hozzáférési kód',
                 searchBtn: 'Keresés',
                 downloadExtractBtn: 'Kivonat letöltése',
-                summarizeSearchBtn: 'Keresés összegzése',
-                copySummaryBtn: 'Összegzés másolása',
-                downloadSummaryBtn: 'Összegzés letöltése (.txt)',
                 loadingText: 'Szabálykönyv keresése...',
-                summaryLoadingText: 'Összegzés készítése...',
                 extractHint: 'A kivonat tartalmazza az összes általános szabályt, valamint a szűrésnek megfelelő fegyvernem/változat szabályait, dokumentum- és szabálysorrendben.',
-                summaryHint: 'Az AI a legjobb találatokat foglalja össze, ingyenes API-limit figyelembevételével.',
-                footerText: 'HEMA Szabálykönyv Kereső | Flask + AI',
+                footerText: 'HEMA Szabálykönyv Kereső | Flask',
                 queryPlaceholder: "pl. 'elsőbbség találati felület', 'hosszúkard találat'",
                 searchLanguageHun: 'Magyar',
                 searchLanguageEng: 'Angol',
@@ -919,15 +851,12 @@
                 longsword: 'Hosszúkard',
                 rapier: 'Rapiér',
                 paddedWeapons: 'Párnázott fegyverek',
-                standardDetailed: 'Normál (részletes)',
-                handoutCompact: 'Handout (kompakt 1 oldal)',
                 pleaseEnterQuery: 'Adj meg egy keresőkifejezést.',
                 pleaseEnterQueryFirst: 'Először adj meg egy keresőkifejezést.',
                 noResultsTitle: 'Nem található szabály a kereséshez.',
                 noResultsHint: 'Próbálj más kulcsszavakat, vagy vedd le a szűrőket.',
                 resultsHeader: 'Találatok',
                 errorPrefix: 'Hiba',
-                summaryTitle: 'Összegzés',
                 statsTotal: 'Összes szabály',
                 statsVor: 'VOR szabályok',
                 statsCombat: 'COMBAT szabályok',
@@ -940,7 +869,6 @@
                 remaining: 'hátralévő',
                 allWeaponsTag: 'Általános',
                 allVariantsTag: 'Minden változat',
-                inputTruncated: 'A bemenet az API-korlát miatt rövidítve lett.',
                 extractFilenamePrefix: 'szabalykivonat',
                 siteLanguageMenuLabel: 'Oldal nyelve',
                 rulebookLanguageMenuLabel: 'Teljes szabálykönyv',
@@ -975,7 +903,6 @@
             setText('pageSubtitle', t('pageSubtitle'));
             setText('searchCardTitle', t('searchCardTitle'));
             setText('extractCardTitle', t('extractCardTitle'));
-            setText('summaryCardTitle', t('summaryCardTitle'));
             setText('labelSearchLanguage', t('labelLanguage'));
             setText('labelQuery', t('labelQuery'));
             setText('labelVariant', t('labelVariant'));
@@ -983,17 +910,10 @@
             setText('labelExtractLanguage', t('labelLanguage'));
             setText('labelExtractVariant', t('labelExtractVariant'));
             setText('labelExtractWeapon', t('labelExtractWeapon'));
-            setText('labelSummaryLanguage', t('labelSummaryLanguage'));
-            setText('labelSummaryFormat', t('labelSummaryFormat'));
-            setText('labelSummaryAccessCode', t('labelSummaryAccessCode'));
             setText('searchBtn', t('searchBtn'));
             setText('downloadExtractBtn', t('downloadExtractBtn'));
-            setText('summarizeSearchBtn', t('summarizeSearchBtn'));
-            setText('copySummaryBtn', t('copySummaryBtn'));
-            setText('downloadSummaryBtn', t('downloadSummaryBtn'));
             setText('loadingText', t('loadingText'));
             setText('extractHint', t('extractHint'));
-            setText('summaryHint', t('summaryHint'));
             setText('footerText', t('footerText'));
             setText('siteLanguageMenuLabel', t('siteLanguageMenuLabel'));
             setText('rulebookLanguageMenuLabel', t('rulebookLanguageMenuLabel'));
@@ -1036,10 +956,6 @@
             if (extractWeaponOptions[1]) extractWeaponOptions[1].textContent = t('longsword');
             if (extractWeaponOptions[2]) extractWeaponOptions[2].textContent = t('rapier');
             if (extractWeaponOptions[3]) extractWeaponOptions[3].textContent = t('paddedWeapons');
-
-            const summaryFormatOptions = document.getElementById('summaryFormat').options;
-            if (summaryFormatOptions[0]) summaryFormatOptions[0].textContent = t('standardDetailed');
-            if (summaryFormatOptions[1]) summaryFormatOptions[1].textContent = t('handoutCompact');
 
             localStorage.setItem('ui_lang', currentUiLang);
             loadStats(searchLanguageSelect.value);
@@ -1110,28 +1026,6 @@
         extractForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             await downloadExtract();
-        });
-
-        summarizeSearchBtn.addEventListener('click', async () => {
-            await summarize();
-        });
-
-        copySummaryBtn.addEventListener('click', async () => {
-            if (!lastSummaryText) return;
-            await navigator.clipboard.writeText(lastSummaryText);
-        });
-
-        downloadSummaryBtn.addEventListener('click', () => {
-            if (!lastSummaryText) return;
-            const blob = new Blob([lastSummaryText], { type: 'text/plain;charset=utf-8' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'summary.txt';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            window.URL.revokeObjectURL(url);
         });
 
         async function search() {
@@ -1229,66 +1123,6 @@
                 window.URL.revokeObjectURL(url);
             } catch (error) {
                 alert(`${t('errorPrefix')}: ${error.message}`);
-            }
-        }
-
-        async function summarize() {
-            const language = document.getElementById('summaryLanguage').value;
-            const format = document.getElementById('summaryFormat').value;
-            const accessCode = document.getElementById('summaryAccessCode').value.trim();
-            const variant = document.getElementById('variant').value;
-            const weapon = document.getElementById('weapon').value;
-            const query = queryInput.value.trim();
-            const rulesLang = searchLanguageSelect.value;
-
-            if (!query) {
-                summaryOutput.innerHTML = `<div class="error-message">${t('pleaseEnterQueryFirst')}</div>`;
-                return;
-            }
-
-            summaryOutput.innerHTML = `<div class="loading show"><div class="spinner"></div><p>${t('summaryLoadingText')}</p></div>`;
-            summaryControls.style.display = 'none';
-            lastSummaryText = '';
-
-            const payload = {
-                mode: 'search',
-                language: language,
-                format: format,
-                query: query,
-                rules_lang: rulesLang,
-                variant_filter: variant || null,
-                weapon_filter: weapon || null
-            };
-
-            try {
-                const response = await fetch('/api/summarize', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        ...(accessCode ? { 'X-Summary-Token': accessCode } : {})
-                    },
-                    body: JSON.stringify(payload)
-                });
-
-                const data = await response.json();
-                if (!response.ok) {
-                    summaryOutput.innerHTML = `<div class="error-message">${t('errorPrefix')}: ${data.error}</div>`;
-                    return;
-                }
-
-                summaryOutput.innerHTML = `
-                    <div class="result-item">
-                        <div class="result-header">
-                            <span class="result-id">${t('summaryTitle')} (${data.language})</span>
-                        </div>
-                        <div class="result-text">${escapeHtml(data.summary).replace(/\n/g, '<br>')}</div>
-                        ${data.input_truncated ? `<div class="result-meta" style="margin-top: 10px; color: #666;">${t('inputTruncated')}</div>` : ''}
-                    </div>
-                `;
-                lastSummaryText = data.summary;
-                summaryControls.style.display = 'flex';
-            } catch (error) {
-                summaryOutput.innerHTML = `<div class="error-message">${t('errorPrefix')}: ${error.message}</div>`;
             }
         }
 

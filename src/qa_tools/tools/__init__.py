@@ -8,7 +8,6 @@ Modules:
 - check_variants: Check and validate rule variants
 - demo_search: Demo search interface
 - view_index: View rulebook index
-- ai_explainer_example: Example AI explainer functionality
 """
 
 __all__ = [

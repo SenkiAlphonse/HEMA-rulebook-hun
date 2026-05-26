@@ -83,12 +83,10 @@ HEMA-rulebook-hun/
 │   ├── config.py                 # Configuration
 │   ├── blueprints/               # Route blueprints
 │   │   ├── search.py             # Search endpoints
-│   │   ├── ai_services.py        # AI endpoints
 │   │   └── rulebook.py           # Rulebook endpoints
 │   └── utils/                    # Utility functions
 │       ├── validation.py         # Input validation
 │       ├── parsing.py            # Response formatting
-│       ├── ai_helpers.py         # AI service helpers
 │       └── logging.py            # Logging utilities
 │
 ├── qa-tools/                     # Search engine & indexing

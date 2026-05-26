@@ -2,9 +2,7 @@
 Integration tests for Flask API endpoints
 """
 
-import pytest
 import json
-from types import SimpleNamespace
 
 
 class TestSearchAPI:
@@ -140,63 +138,3 @@ class TestExtractAPI:
                               content_type='application/json')
         
         assert response.status_code == 200
-
-
-class TestSummarizeAPI:
-    """Test /api/summarize endpoint"""
-
-    def test_api_summarize_extract_mode_disabled(self, client):
-        """Summarize endpoint should reject extract mode."""
-        response = client.post(
-            '/api/summarize',
-            data=json.dumps({"mode": "extract", "language": "EN", "format": "standard"}),
-            content_type='application/json'
-        )
-
-        assert response.status_code == 400
-        data = response.get_json()
-        assert "error" in data
-
-    def test_api_summarize_search_applies_caps(self, client, monkeypatch):
-        """Summarize should limit max rules and input size before model call."""
-        fake_results = [
-            SimpleNamespace(
-                rule_id=f"GEN-{index}",
-                text="Very long rule text. " * 30,
-                document="01-altalanos.md",
-                line_number=index,
-                variant="",
-                weapon_type="general"
-            )
-            for index in range(1, 11)
-        ]
-
-        def fake_search(query, max_results, variant_filter, weapon_filter):
-            return fake_results[:max_results]
-
-        monkeypatch.setattr(client.application.search_engine, "search", fake_search)
-        monkeypatch.setattr(
-            "app.blueprints.ai_services.summarize_with_gemini",
-            lambda text, language, format_type="standard": text
-        )
-
-        client.application.config['SUMMARY_SEARCH_MAX_RULES'] = 3
-        client.application.config['SUMMARY_MAX_INPUT_CHARS'] = 220
-
-        response = client.post(
-            '/api/summarize',
-            data=json.dumps({
-                "mode": "search",
-                "query": "rule",
-                "language": "EN",
-                "format": "standard"
-            }),
-            content_type='application/json'
-        )
-
-        assert response.status_code == 200
-        data = response.get_json()
-        assert data["success"] is True
-        assert data["rule_count_total"] == 3
-        assert data["rule_count_summarized"] < data["rule_count_total"]
-        assert data["input_truncated"] is True

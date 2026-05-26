@@ -4,20 +4,19 @@
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-green)](./LICENSE)
 
-A comprehensive AI-assisted Hungarian Historical European Martial Arts (HEMA) rulebook for the "Magyar Hosszúkardvívó Sportszövetség" (Hungarian Longsword Federation, MHS) competition ruleset. This project provides a searchable web interface with natural language query support and optional AI-powered rule summarization.
+A comprehensive Hungarian Historical European Martial Arts (HEMA) rulebook for the "Magyar Hosszúkardvívó Sportszövetség" (Hungarian Longsword Federation, MHS) competition ruleset. This project provides a bilingual, searchable web interface for fencers, referees, and organizers to quickly look up authoritative rule passages.
 
 ## Quick Links
 
 📚 **Documentation**
-- [Getting Started](./GETTING_STARTED.md) - Setup and first run
 - [Contributing Guide](./CONTRIBUTING.md) - Development workflow
 - [Architecture Documentation](./docs/ARCHITECTURE.md) - System design
 - [API Reference](./docs/API.md) - REST endpoints
 
 🎯 **For Different Roles**
-- **Fencers/Judges**: [Start here](./GETTING_STARTED.md#quick-start) to use the search interface
-- **Developers**: [Contributing guide](./CONTRIBUTING.md) for development setup
-- **Operators**: [Deployment guide](./DEPLOYMENT.md) for production setup
+- **Fencers/Judges**: open the web interface and search rules by keyword or rule ID
+- **Developers**: see the [Contributing guide](./CONTRIBUTING.md) for development setup
+- **Operators**: see the [Deployment guide](./DEPLOYMENT.md) for production setup
 
 ## Features
 
@@ -26,7 +25,6 @@ A comprehensive AI-assisted Hungarian Historical European Martial Arts (HEMA) ru
 - 📋 **Hierarchical Rule Structure** - Organized by weapon type and category
 - 🎯 **Rule ID Navigation** - Direct lookup by rule identifier (e.g., GEN-1.1.1)
 - 🔗 **Cross-References** - Related rules and glossary terms
-- 🤖 **AI Summaries** (Optional) - Rule summarization via Gemini AI
 - 📱 **Web Interface** - Clean, responsive search interface
 - ⚔️ **Variant Support** - Different rules for VOR, COMBAT, AFTERBLOW variants
 - 🌐 **Bilingual Rulesets** - Full Hungarian and English rulebooks (search + full view)
@@ -74,11 +72,6 @@ curl -X POST "http://localhost:5000/api/search" \
 
 # Get specific rule
 curl "http://localhost:5000/api/rule/GEN-1.1?rules_lang=hun"
-
-# Get AI summary (requires GEMINI_API_KEY)
-curl -X POST "http://localhost:5000/api/summarize" \
-	-H "Content-Type: application/json" \
-	-d '{"mode":"search","query":"valid targets","rules_lang":"eng","language":"EN","format":"standard"}'
 
 # Open full pre-rendered rulebook
 curl "http://localhost:5000/rulebook?lang=hun"
@@ -148,7 +141,6 @@ HEMA-rulebook-hun/
 |-----------|-----------|
 | Backend | Python 3.9+, Flask |
 | Search | Custom hierarchical indexing |
-| AI Summaries | Google Gemini API (optional) |
 | Database | JSON indexes |
 | Testing | pytest, pytest-cov |
 | Deployment | Gunicorn, Render.com ready |
@@ -214,9 +206,6 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for:
 ### Environment Variables
 
 ```bash
-# Optional: Enable AI rule summaries
-GEMINI_API_KEY=your_api_key_here
-
 # Optional: Flask settings
 FLASK_ENV=development
 FLASK_DEBUG=true
@@ -224,11 +213,7 @@ FLASK_DEBUG=true
 
 ### Main Configuration (src/app/config.py)
 
-```python
-GEMINI_MODEL_CANDIDATES = ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
-SUMMARY_CHUNK_SIZE = 6000
-SUMMARY_MAX_RETRIES = 2
-```
+See `src/app/config.py` for path helpers and runtime constants.
 
 ## Running the Application
 
@@ -297,7 +282,6 @@ See [TESTING.md](./docs/TESTING.md) for detailed testing guide.
 
 - English ruleset currently has fewer indexed documents than Hungarian
 - PDF penalty table requires OCR for full-text search
-- Gemini API integration is optional (works without it)
 - Some visual rules (diagrams, referee signals) are images only
 
 ## Deployment
@@ -327,7 +311,6 @@ This project is licensed under the Creative Commons Attribution-NonCommercial-Sh
 - **HEMA Community**: For supporting and testing the Magyar Hosszúkardvívó Sportszövetség (Hungarian Longsword Federation, MHS) ruleset
 - **FIE - International Fencing Federation**: Their comprehensive rulebooks have provided guidance and structural inspiration, enabling us to develop a detailed and well-organized ruleset for the Hungarian HEMA competition scene
 - **Contributors**: For development, testing, and feedback
-- **Google Gemini**: For AI-powered rule summarization (optional)
 
 ---
 

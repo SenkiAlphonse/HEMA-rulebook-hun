@@ -111,11 +111,3 @@ def get_prerendered_rulebook_path(lang: str = "hun") -> Path:
         return get_dist_dir() / "rulebook_eng.html"
     return get_dist_dir() / "rulebook_hun.html"
 
-
-# AI/Gemini Configuration Constants
-GEMINI_MODEL_CANDIDATES = ["gemini-2.5-flash", "gemini-2.5-flash-lite"]
-SUMMARY_CHUNK_SIZE = 6000  # Character limit for content chunks
-SUMMARY_MAX_RETRIES = 2  # Maximum retry attempts for API calls
-SUMMARY_SEARCH_MAX_RULES = 20  # Max number of search matches sent for summary
-SUMMARY_MAX_INPUT_CHARS = 15000  # Max total input chars sent to Gemini for one summary
-

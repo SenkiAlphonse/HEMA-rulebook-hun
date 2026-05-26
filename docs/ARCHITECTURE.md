@@ -124,7 +124,6 @@ User Browser (Display Results)
 
 2. Blueprints registered
    ├─ search.py blueprint loaded
-   ├─ ai_services.py blueprint loaded
    └─ rulebook.py blueprint loaded
 
 3. Data Layer Initialization
@@ -288,7 +287,6 @@ def create_app():
     
     # Register blueprints
     app.register_blueprint(search_bp)
-    app.register_blueprint(ai_bp)
     app.register_blueprint(rulebook_bp)
     
     # Initialize utilities
@@ -348,24 +346,7 @@ def search():
 
 ---
 
-### 3. AI Services Blueprint (app/blueprints/ai_services.py)
-
-**Responsibility**: Handle AI-powered endpoints
-
-**Endpoints**:
-- `POST /api/ai/explain` - AI rule explanation
-- `POST /api/ai/question_answering` - Q&A with context
-- `POST /api/ai/clarify` - Clarification on rules
-
-**Integration**:
-- Uses `google.generativeai` (LLM API)
-- Calls rules from search engine
-- Formats user context
-- Returns AI-generated explanations
-
----
-
-### 4. Rulebook Blueprint (app/blueprints/rulebook.py)
+### 3. Rulebook Blueprint (app/blueprints/rulebook.py)
 
 **Responsibility**: Handle rulebook metadata and structure
 
@@ -380,7 +361,7 @@ def search():
 
 ---
 
-### 5. AliasAwareSearch Engine (qa-tools/search_aliases.py)
+### 4. AliasAwareSearch Engine (qa-tools/search_aliases.py)
 
 **Responsibility**: Core search logic with alias resolution
 
@@ -411,7 +392,7 @@ class AliasAwareSearch:
 
 ---
 
-### 6. Rule Parser (qa-tools/parser.py)
+### 5. Rule Parser (qa-tools/parser.py)
 
 **Responsibility**: Parse markdown files → JSON indexes
 
@@ -444,7 +425,7 @@ class AliasAwareSearch:
 
 ---
 
-### 7. Utilities Layer (app/utils/)
+### 6. Utilities Layer (app/utils/)
 
 **Responsibility**: Shared logic and helpers
 
@@ -597,7 +578,6 @@ Where for each token t:
 | File | Responsibility | Endpoints |
 |------|-----------------|-----------|
 | `search.py` | Search functionality | `/api/search/*` (4 endpoints) |
-| `ai_services.py` | AI-powered features | `/api/ai/*` (3 endpoints) |
 | `rulebook.py` | Rulebook metadata | `/api/rulebook/*` (3 endpoints) |
 
 ### app/utils/
@@ -606,7 +586,6 @@ Where for each token t:
 |------|-----------------|-----------|
 | `validation.py` | Input validation | validate_query, validate_language, etc. |
 | `parsing.py` | Response formatting | success_response, error_response, format_rule |
-| `ai_helpers.py` | AI integration | call_claude_api, format_prompt, etc. |
 | `logging.py` | Structured logging | log_search, log_error, etc. |
 
 ### qa-tools/
@@ -732,17 +711,7 @@ gunicorn --bind 0.0.0.0:${PORT:-10000} --workers ${WEB_CONCURRENCY:-1} app:app
 **Process**: parser.py reads and indexes
 **Output**: rules_index.json + aliases.json
 
-### 2. LLM Integration (Google Generative AI)
-
-**Service**: Google Generative AI (Gemini model)
-**Endpoint**: `POST /api/ai/explain`
-**Integration**: 
-- Fetch rule from search engine
-- Format prompt with rule + context
-- Call LLM API
-- Format response
-
-### 3. Web UI (templates/index.html)
+### 2. Web UI (templates/index.html)
 
 **Frontend**: HTML + JavaScript
 **Backend**: Flask JSON APIs
@@ -752,7 +721,7 @@ gunicorn --bind 0.0.0.0:${PORT:-10000} --workers ${WEB_CONCURRENCY:-1} app:app
 - Backend returns JSON
 - JavaScript renders results
 
-### 4. External Integrations
+### 3. External Integrations
 
 **Mobile Apps**: Can call REST API directly
 **Third-party Tools**: Can integrate via `/api/search`

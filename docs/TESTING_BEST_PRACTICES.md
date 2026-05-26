@@ -381,42 +381,6 @@ See `tests/conftest.py` for all available fixtures:
 
 ## Mock Patterns
 
-### Mocking External Dependencies
-
-```python
-from unittest.mock import patch, MagicMock
-import pytest
-
-class TestAISummaries:
-    """Test AI summary functionality with mocked Gemini API"""
-    
-    @patch('app.blueprints.ai_services.call_gemini_api')
-    def test_summary_generation(self, mock_gemini):
-        """Test summary generation calls Gemini"""
-        # Setup mock
-        mock_gemini.return_value = "Summary text"
-        
-        # Call code that uses Gemini
-        from app.blueprints import ai_services
-        result = ai_services.get_summary("GEN-1.1.1")
-        
-        # Verify mock was called
-        mock_gemini.assert_called_once()
-        assert result == "Summary text"
-    
-    @patch('app.blueprints.ai_services.call_gemini_api')
-    def test_summary_handles_api_failure(self, mock_gemini):
-        """Test summary generation handles API failures"""
-        # Setup mock to raise error
-        mock_gemini.side_effect = Exception("API Error")
-        
-        from app.blueprints import ai_services
-        
-        # Should handle error gracefully
-        result = ai_services.get_summary("GEN-1.1.1")
-        assert result is None or "error" in result.lower()
-```
-
 ### Mocking File I/O
 
 ```python
@@ -529,17 +493,16 @@ def test_search_with_query():
 ### 4. Mock External Dependencies
 
 ```python
-# ✅ Good: Mock external API
-@patch('app.call_gemini_api')
-def test_summary_with_mock_api(self, mock_api):
-    mock_api.return_value = "summary"
-    result = get_summary("rule")
-    assert result == "summary"
+# ✅ Good: Mock external resources
+@patch('builtins.open', new_callable=mock_open, read_data='{"rules": []}')
+def test_loader_with_mock_file(self, mock_file):
+    result = load_index("any/path.json")
+    assert result == {"rules": []}
 
-# ❌ Bad: Actual API calls in tests
-def test_summary_with_real_api():
-    # Will fail if API is down, slow, or rate-limited
-    result = get_summary("rule")
+# ❌ Bad: Hitting the real filesystem / network in tests
+def test_loader_with_real_file():
+    # Will fail if the file is missing or its contents change
+    result = load_index("data/search/rules_index.json")
     assert result is not None
 ```
 

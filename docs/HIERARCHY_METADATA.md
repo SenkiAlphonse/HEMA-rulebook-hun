@@ -110,23 +110,6 @@ Leaf vs Parent:
 - Parent rules (have children): 34
 ```
 
-## Implementation: Using Hierarchy for AI
-
-See `ai_explainer_example.py` for a complete example of how to use the hierarchy metadata:
-
-```python
-from ai_explainer_example import AIExplainer
-
-explainer = AIExplainer("rules_index.json")
-
-# Get structured explanation with hierarchy
-result = explainer.explain_rule("GEN-3.2.1.1")
-print(result["breadcrumb"])  # GEN → GEN-3 → GEN-3.2 → GEN-3.2.1 → GEN-3.2.1.1
-
-# Generate human-readable contextual explanation
-explanation = explainer.generate_contextual_answer("GEN-3.2.1.1")
-print(explanation)
-```
 
 ## Benefits for LLM Integration
 

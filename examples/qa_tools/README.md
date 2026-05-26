@@ -4,19 +4,7 @@ This directory contains example and demo scripts that show how to use the HEMA R
 
 ## Available Examples
 
-### 1. `ai_explainer_example.py`
-Demonstrates how to use hierarchy metadata for AI-assisted rule explanations.
-
-**Usage:**
-```bash
-python examples/qa_tools/ai_explainer_example.py
-```
-
-**Purpose:** Shows how to leverage parent_id, child_ids, lineage, depth, and sibling_ids fields to build contextual explanations.
-
----
-
-### 2. `view_index.py`
+### 1. `view_index.py`
 View sample rules from the generated index file.
 
 **Usage:**
@@ -28,7 +16,7 @@ python examples/qa_tools/view_index.py
 
 ---
 
-### 3. `check_variants.py`
+### 2. `check_variants.py`
 Diagnostic script to verify variant detection (VOR, COMBAT, AFTERBLOW).
 
 **Usage:**

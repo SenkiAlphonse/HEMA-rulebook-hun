@@ -112,12 +112,11 @@ A Flask-based Q&A system that indexes the HEMA rulebook (Hungarian martial arts 
 
 ```
 HEMA-rulebook-hun/
-├── app/                          # Flask application (3 blueprints)
+├── app/                          # Flask application (2 blueprints)
 │   ├── blueprints/
 │   │   ├── search.py             # /api/search endpoint
-│   │   ├── ai_services.py        # /api/ai/* endpoints
 │   │   └── rulebook.py           # /api/rulebook/* endpoints
-│   ├── utils/                    # Helpers (validation, parsing, AI calls)
+│   ├── utils/                    # Helpers (validation, parsing)
 │   └── __init__.py               # Flask app factory
 ├── qa-tools/                     # Search engine & indexing
 │   ├── search_aliases.py         # AliasAwareSearch class (core engine)

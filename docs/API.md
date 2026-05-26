@@ -29,7 +29,6 @@ If omitted, endpoints default to `hun`.
 - `GET /api/stats` (query parameter)
 - `POST /api/extract` (request body)
 - `GET /api/rule/<rule_id>` (query parameter)
-- `POST /api/summarize` (request body)
 
 ### Rulebook language parameter
 
@@ -236,41 +235,6 @@ curl -X POST http://localhost:5000/api/extract \
 
 ---
 
-### 5. Fuzzy Match
-
-**Endpoint:** `POST /api/summarize`
-
-Summarize top matching rules from a selected ruleset language.
-
-**Request Body:**
-```json
-{
-  "mode": "search",
-  "query": "valid targets",
-  "rules_lang": "eng",
-  "language": "EN",
-  "format": "standard",
-  "weapon_filter": null,
-  "variant_filter": null
-}
-```
-
-**Response (200 OK):**
-```json
-{
-  "success": true,
-  "format": "standard",
-  "language": "EN",
-  "rules_lang": "eng",
-  "summary": "...",
-  "rule_count_total": 20,
-  "rule_count_summarized": 12,
-  "input_truncated": true
-}
-```
-
----
-
 ## Rulebook Endpoints
 
 ### 6. Get Rulebook Index
@@ -457,15 +421,6 @@ curl -X POST http://localhost:5000/api/search \
   -d '{"query":"szúrás","rules_lang":"hun"}'
 ```
 
-### Use Case 6: AI-Powered Summary
-
-```bash
-# Beginner asks for search-based summary
-curl -X POST http://localhost:5000/api/summarize \
-  -H "Content-Type: application/json" \
-  -d '{"mode":"search","query":"target areas","rules_lang":"eng","language":"EN","format":"standard"}'
-```
-
 ---
 
 ## Response Time Expectations
@@ -476,7 +431,6 @@ curl -X POST http://localhost:5000/api/summarize \
 | `/api/stats` | <1 ms | Preloaded in-memory counters |
 | `/api/rule/<id>` | <1 ms | Direct rule lookup |
 | `/api/extract` | 2-8 ms | Filter + markdown export |
-| `/api/summarize` | 1-3 seconds | LLM inference time |
 | `/api/rulebook` | 2-10 ms | Returns full index rules array |
 
 **Note:** Times are for production deployment with optimizations. Development mode may be 2-3x slower.
@@ -510,12 +464,6 @@ curl "$BASE_URL/api/stats?rules_lang=eng"
 # Test 4: Rule lookup
 echo -e "\n\nTesting rule lookup..."
 curl "$BASE_URL/api/rule/GEN-1.1?rules_lang=hun"
-
-# Test 5: Summarize
-echo -e "\n\nTesting summarize..."
-curl -X POST $BASE_URL/api/summarize \
-  -H "Content-Type: application/json" \
-  -d '{"mode":"search","query":"target area","rules_lang":"eng","language":"EN","format":"standard"}'
 ```
 
 ---

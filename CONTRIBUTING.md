@@ -49,7 +49,6 @@ HEMA-rulebook-hun/
 │   ├── __init__.py               # App factory
 │   ├── blueprints/               # Flask blueprints
 │   │   ├── search.py            # Search API endpoints
-│   │   ├── ai_services.py       # AI/Gemini integration
 │   │   └── rulebook.py          # Rulebook display endpoints
 │   ├── config.py                # Centralized configuration
 │   ├── utils.py                 # Shared utilities
@@ -147,7 +146,7 @@ pytest tests/ -m "not slow" -v
 
 **Unit Tests** (`tests/unit/`):
 - Test individual functions/methods in isolation
-- Use mocks for external dependencies (Gemini API, filesystem)
+- Use mocks for external dependencies (filesystem)
 - Fast execution, no I/O
 
 **Integration Tests** (`tests/integration/`):

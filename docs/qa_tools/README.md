@@ -30,14 +30,6 @@ Verify that parent-child relationships and hierarchy metadata are correctly popu
 python -m qa_tools.tools.test_hierarchy
 ```
 
-### 4. (Optional) Explore AI Explanation Examples
-
-See how to use hierarchy metadata for contextual AI explanations:
-
-```powershell
-python examples\qa_tools\ai_explainer_example.py
-```
-
 ## Usage Examples
 
 ### Example Queries
