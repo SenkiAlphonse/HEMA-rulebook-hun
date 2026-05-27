@@ -6,29 +6,30 @@
 
 ### A szabályok személyi hatálya  
 <span id="DIS-1.1"></span>  
-<!-- TODO -->  
+
+**DIS-1.1.1**  
+- Ezen rész előírásai a vívóversenyen részt vevő és jelenlévő valamennyi személyre vonatkoznak, beleértve a nézőket is.  
+- Az alábbi szakaszokban a "vívók" megnevezés alatt az összes ilyen személy értendő.  
 
 ### Rend és Fegyelem fenntartása  
 <span id="DIS-1.2"></span>  
 <!-- TODO -->
 
 **DIS-1.2.1**  
-A vívóknak pontosan és becsületesen be kell tartaniuk az MHS versenyszabályait és alapszabályát, az adott versenyre vonatkozó külön szabályokat, az udvariasság és tisztesség hagyományos szokásait és a hivatalos személyek utasítását.  
+- A vívóknak pontosan és becsületesen be kell tartaniuk az MHS versenyszabályait és alapszabályát, az adott versenyre vonatkozó külön szabályokat, az udvariasság és tisztesség hagyományos szokásait és a hivatalos személyek utasítását.  
+- Kifejezetten alávetik magukat a rend, a fegyelem és a sportszerűség elveinek alapulvételével az alábbi előírásoknak. Ezek megsértése esetén, a tényállástól és a körülményektől függően az illetékes fegyelmi hatóság figyelmeztetést követően, vagy akár anélkül is az előírt büntetéseket (vö: [DIS-4.1.1]-tól [DIS-4.1.19]-ig) alkalmazza.  
 
 **DIS-1.2.2**  
-Kifejezetten alávetik magukat a rend, a fegyelem és a sportszerűség elveinek alapulvételével az alábbi előírásoknak. Ezek megsértése esetén, a tényállástól és a körülményektől függően az illetékes fegyelmi hatóság figyelmeztetést követően, vagy akár anélkül is az előírt büntetéseket<!-- (Vö. t.158-tól t.170-ig)--> alkalmazza.  
+A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát<!--TODO , ide értve de nem kizárólagosan a FIE Etikai Kódexet és a Safeguarding Szabályzatot is-->. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. [DIS-2.1.1]--[DIS-2.1.3]).  
+
+Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a 4. csoportba tartozó vétséget követ el, és a [DIS-4.1.14]--[DIS-4.1.15] szakaszban foglaltak szerint büntetendő.  
 
 **DIS-1.2.3**  
-
-A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát<!--, ide értve de nem kizárólagosan a FIE Etikai Kódexet és a Safeguarding Szabályzatot is-->. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni
-vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. [DIS-2.1.2]--[DIS-2.1.4]). Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a 4. csoportba tartozó vétséget követ el, és a [DIS-4.3.15]--[DIS-4.3.16] szakaszban foglaltak szerint büntetendő.
-Minden, a versenyen résztvevő és jelenlévő köteles fegyelmezett magatartást tanúsítani, és nem megzavarni a verseny gördülékeny lebonyolítását. A mérkőzések közben senki nem közelítheti meg a küzdőteret, hogy tanácsokat adjon a vívóknak, kritizálja a bírót vagy a segédjét, hogy sértegesse, vagy befolyásolni próbálja őket bármilyen módon. A vívó segédje köteles a számára kijelölt helyen maradni. A bíró köteles haladéktalanul leállítani minden tevékenységet, amely megzavarja az általa vezetett mérkőzést.  
+A verseny helyszínéül szolgáló termekben tilos dohányozni. A dohányzás a verseny rendje megzavarásának tekintendő (Vö. [DIS-1.2.4]).  
+Ezen szabályok megsértése a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.12]--[DIS-4.1.13], [DIS-4.1.19] szakaszok szerint (a büntetések harmadik csoportja) büntetendő.  
 
 **DIS-1.2.4**  
-Bármely személy, aki bármilyen indokkal sérteget vagy fenyeget egy tisztviselőt, azonnal diszkvalifikálható / kiutasítható a helyiségből.  
-
-**DIS-1.2.4**  
-A bíró, és/vagy szervező csapat saját jogkörükben dönthetnek minden olyan személy a verseny területéről való kiutasításáról, aki a gesztusaival, magatartásával vagy nyelvhasználatával megzavarja a verseny zavartalan lebonyolítását.  
+A bíró, és/vagy szervező csapat saját jogkörükben dönthetnek minden olyan személy a verseny területéről való kiutasításáról, aki a gesztusaival, magatartásával vagy nyelvezetével megzavarja a verseny zavartalan lebonyolítását.  
 
 ### A versenyzők  
 <span id="DIS-1.3"></span>  
@@ -36,55 +37,87 @@ A bíró, és/vagy szervező csapat saját jogkörükben dönthetnek minden olya
 #### Becsületbeli elköteleződés  
 
 **DIS-1.3.1**  
-A versenyen való puszta részvételükkel a vívók becsületükre megfogadják, hogy betartják a szabályokat, és alávetik magukat a tisztviselők döntéseinek és utasításainak, hogy tisztelettel bánnak a bírókkal (bírókkal és segédbírókkal) és lelkiismeretesen végrehajtják az utasításaikat és rendelkezéseiket.  
+A versenyre való nevezés tényével a versenyző becsületbeli elköteleződését fejezi ki arra vonatkozóan, hogy a szabályokat és a hivatalos személyek döntéseit betartja, tisztelettel viseltetik a versenybírók és oldalbírók iránt, valamint lelkiismeretesen aláveti magát a versenybíró utasításainak és vezényszavainak (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.14]--[DIS-4.1.15], [DIS-4.1.19])  
 
 #### Az ellenféllel való megmérkőzés megtagadása  
 
 **DIS-1.3.2**  
-A vívó nem vehet részt a versenyen, ha nem hajlandó kiállni egy, a versenyre szabályosan nevezett versenytársa ellen. Ezen szabály megsértése esetén a fegyelmi vétségek 4. csoportjában meghatározott büntetést kell kiszabni.  
+Az MHS  vívója (egyéni vagy csapat) nem vehet részt a hivatalos versenyeken, amennyiben másik szabályosan benevezett vívóval (egyéniben vagy csapatban) való megmérkőzést megtagadja. Ennek a szabálynak a megsértése esetén a vívót a 4. csoportba tartozó vétségekre vonatkozó szankciókkal kell büntetni (vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.14]--[DIS-4.1.15], [DIS-4.1.19])  
 
 #### Pontos megjelenés  
 
 **DIS-1.3.3**  
-A vívók kötelesek megjelenni teljes, a szabályoknak mindenben megfelelő felszerelésben, és vívásra készen az adott csoportkör, mérkőzés vagy egyenes kieséses mérkőzés meghatározott helyén és idején, illetve a felszerelés ellenőrzésre kijelölt időpontban a mérkőzésük előtt, valamint a verseny során bármikor, amikor a bíró erre őket felszólítja.  
+A vívóknak a szabályzat előírásainak megfelelő felszereléssel (Vö. [GEN-7.7.1]--[GEN-7.8.1]) teljesen felszerelve és vívásra készen kell a kijelölt helyen és időben megjelenniük a csoportmérkőzés vagy az egyenes kieséses mérkőzés kezdetén, vagy a mérkőzés előtt a felszerelés ellenőrzésére előírt időpontban (Vö. [GEN-7.7.1]--[GEN-7.7.2]<!--[GEN-7.7.3] -->) és a verseny folyamán bármikor a versenybíró kérésének megfelelően.  
 
 **DIS-1.3.4**  
-Amikor egy mérkőzés megkezdéséhez jelentkeznek, a vívóknak teljesen vívásra kész állapotban kell megjelenniük a küzdőtéren – szabályos öltözetben, zárt kabátban, felvett kesztyűben és fegyverrel a kézben.  
+- A mérkőzésre jelentkezéskor a vívónak a páston vívásra teljesen készen kell megjelennie: szabályos vívóruhában, zárt vívókabátban, kesztyűben, kezében a fegyvert tartva (egykezes fegyvert a fegyveres kézben). A maszkot a fegyvertelen kézben kell tartani.  
+- A mérkőzés kezdete előtt a vívók haját a vívóruhán- és/vagy a maszkon belül kell rögzíteni oly módon, hogy azt ne kelljen a mérkőzés során megigazítani, és ezáltal a küzdelmet megszakítani.  
+<!-- 
+- az ne fedje az érvényes találati felületet (tehát ne akadályozza a találat bevitelét)
+- az ne takarja el a vívó nevét és nemzetiségét -->
 
+A szabály megszegése esetén a versenybíró az 1. csoportba tartozó ([DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19]) büntetéseket alkalmazza.  
+
+<!-- TODO
 **DIS-1.3.5**  
-A verseny során, ha egy vívó nem jelenik meg a küzdőtéren amikor a bíró szólítja:  
+t.116.
+A versenyzők semmilyen körülmények között nem öltözködhetnek vagy vetkőzhetnek
+nyilvánosan, kivéve az ügyeletes orvos vagy az Orvosi Bizottság küldötte által megállapított
+sérülés esetében. (Vö. t.126, t.158-162, t.165, t.170).
+**DIS-1.3.6**  
+t.117.
+A versenyzőknek a szabályoknak megfelelő, kifogástalanul működő két fegyverrel (ebből egy
+tartalék), két testvezetékkel (ebből egy tartalék) és két fejvezetékkel (ebből egy tartalék) kell
+mérkőzésük levívásához a pástra érkezniük. (Vö. t.71, t.158-162, t.165, t.170). -->
 
-- A nem megjelent vívó sárga lapot kap;  
-- Az első hívást követő egy perc elteltével másodszor is szólítják, ha ekkor sem jelenik meg, az érintett vívó piros lapot kap;  
-- A második hívást követő egy perc elteltével egy harmadik és utolsó hívást kap, melyet távolmaradás esetén a versenyszámból való kizárás követ.  
+<!-- **DIS-1.3.7**  
+A csoportmérkőzés, a csapatmérkőzés, az egyenes kieséses mérkőzés (egyéni vagy
+csapat) kezdete előtt:
+
+- Ha a csoportmérkőzés, csapatmérkőzés vagy közvetlen kieséses mérkőzés megkezdésére kijelölt időpont előtt 10 perccel a versenybíró első felszólítására a vívó vagy teljes csapat nem jelentkezik, a vívót vagy csapatot versenyből kizárják.
+- A csapat akkor tekinthető teljesnek, ha legalább három tagja jelen van.
+- A csapatmérkőzésen csak azok a csapattagok (vívók, a csapatkapitány és egy edző, Vö. t.132.1) vehetnek részt, akik a versenybíró első felszólítására a mérkőzésre kijelölt kezdési időpont előtt 10 perccel jelen vannak. -->
+
+**DIS-1.3.8**  
+Az egyéni- vagy csapatversenyen ha egy vívó nem jelentkezik a páston vívásra készen a versenybíró felszólítására:
+- A vívó vagy csapattag sárga lapos figyelmeztetést kap;  
+- Egy perccel az első felszólítás utáni második felszólításra, a nem jelentkező vívó vagy csapattag piros lapos büntetést kap.  
+- A harmadik és utolsó felszólításra, egy perccel a második felszólítás után a nem jelentkező vívót (egyéni versenyen), csapatversenyen a teljes csapatot kizárják a versenyből.   
+
+**DIS-1.3.9**  
+Ha a vívó a pást elhagyásával félbeszakítja a mérkőzést (vö.: [GEN-6.3.7]), a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szerinti büntetést kell alkalmazni.  
 
 #### Vívó etikett  
 
-**DIS-1.3.6**
-**DIS-1.3.6.1**
-A versenyzőknek becsületesen, jelen szabályzat előírásait szigorúan betartva kell vívniuk. Ezen szabályok bárminemű megsértése az itt rögzített büntetéseket vonja maga után.
-<!--  (Vö.t.158-162, t.170.) -->
+**DIS-1.3.10**
+**DIS-1.3.10.1**
+A versenyzőknek becsületesen, jelen szabályzat előírásait szigorúan betartva kell vívniuk. Ezen szabályok bárminemű megsértése az itt rögzített büntetéseket vonja maga után (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.19]).  
 
-**DIS-1.3.6.2**  
-Minden mérkőzésnek udvarias és becsületes jellegűnek kell maradnia. Kifejezetten tiltott minden rendellenes akció (az ellenfél lökésével végződő lerohanás, zavaros vívásmód, rendellenes helyváltoztatások, erőszakkal bevitt találatok, ütés, rúgás, kosárral/keresztvassal végrehajtott ütés, szándékos elesés a találat elkerülése érdekében) vagy sportszerűtlen magatartás—V.ö.[DIS-4.1.1]--[DIS-4.1.5], [DIS-4.3.20]. Ilyen vétség felmerülésekor a vétkes vívó által esetlegesen adott találatot meg kell semmisíteni.
+**DIS-1.3.10.2**  
+Minden mérkőzésnek udvarias és becsületes jellegűnek kell maradnia. Kifejezetten tiltott minden rendellenes akció (az ellenfél lökésével végződő lerohanás, zavaros vívásmód, rendellenes helyváltoztatások, erőszakkal bevitt találatok, kosárral/keresztvassal végrehajtott ütés, szándékos elesés a találat elkerülése érdekében) vagy sportszerűtlen magatartás (V.ö.[DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.19]). Ilyen vétség felmerülésekor a vétkes vívó által esetlegesen adott találatot meg kell semmisíteni.  
 
-**DIS-1.3.7**  
-A mérkőzés kezdete előtt a két vívó vívó-tisztelgéssel üdvözöli az ellenfelét, a versenybírót és a közönséget. Az utolsó találat beadása után a versenybíró döntését nyugodtan meg kell várniuk a felállási vonalon. Utána vívó-tisztelgést<!-- (vö.: t.1) --> kell végrehajtaniuk, üdvözölve az ellenfelet, a versenybírót és A közönséget. A mérkőzés ezt követően ér véget. Ha az egyik vagy mindkét vívó ezt megtagadja, a versenybíró a vétkessel/vétkesekkel szemben a 4. csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
-<!--  (Vö. t.158-162,t.169, t.170) -->
+**DIS-1.3.11**  
+A mérkőzés kezdete előtt a két vívó vívó-tisztelgéssel üdvözöli az ellenfelét, a versenybírót és a közönséget. Ugyanúgy, az utolsó találat beadása után a mérkőzés nem ér véget mindaddig, amíg a két vívó nem üdvözölte az ellenfelet, a versenybírót és a közönséget: ennek megfelelően a versenybíró döntését nyugodtan meg kell várniuk, majd a döntés kihirdetését követően vissza kell térniük a felállási vonalra, vívó-tisztelgést kell végrehajtaniuk, és egymással kezet kell fogniuk. Ha az egyik vagy mindkét vívó ezt a szabályt megszegi, a versenybíró a vétkessel/vétkesekkel szemben a 4. csoportba tartozó vétségekre vonatkozó büntetést alkalmazza (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.14]--[DIS-4.1.15], [DIS-4.1.19])  
 
-**DIS-1.3.8**  
-Mérkőzés közben vagy azt követően, akár a pást elhagyása után is tilos mindennemű sportszerűtlen magatartás tanúsítása, mint például a maszk vagy más felszerelés erőszakos vagy veszélyes elhajítása, és <!-- a t.169 (Vö. t.108.1, 2 and t.109.) szerint  -->a negyedik csoportba tartozó vétségként büntetendő.
+**DIS-1.3.12**  
+Mérkőzés közben vagy azt követően, akár a pást elhagyása után is tilos mindennemű sportszerűtlen magatartás tanúsítása, mint például a maszk vagy más felszerelés erőszakos vagy veszélyes elhajítása, és a [DIS-4.1.14]--[DIS-4.1.15] (Vö. [DIS-1.2.1]--[DIS-1.2.2]) szerint a negyedik csoportba tartozó vétségként büntetendő.  
+
+<!-- **DIS-1.3.13**  
+t.124.
+Passzivitás -->
+
+**DIS-1.3.14**  
+A vívó a páston vagy a páston kívül, a versenybíró „állj!” vezényszaváig köteles a maszkot a fején tartani. A versenybírót döntése meghozatala előtt semmilyen körülmények között nem szólíthatja meg. (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19]).  
 
 #### Személyes hozzáállás  
 
-**DIS-1.3.12**  
-A vívóknak a verseny végéig sportszerűen, legjobb képességeik szerint kell vívniuk, hogy minél jobb helyezést érjenek el, anélkül, hogy bárkinek találatot ajándékoznának, vagy bárkitől ajándék találatot fogadnának el. A szabály megsértőjét a negyedik csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani.  
-<!-- (Vö. t.158-162, t.169, t.170) -->  
+**DIS-1.3.15**  
+A vívóknak a verseny végéig sportszerűen, legjobb képességeik szerint kell vívniuk, hogy minél jobb helyezést érjenek el, anélkül, hogy bárkinek találatot ajándékoznának, vagy bárkitől ajándék találatot fogadnának el (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.14]--[DIS-4.1.15], [DIS-4.1.19])  
 
-<!-- **DIS-1.3.13**
+<!-- **DIS-1.3.16**
 A csapatvezető -->
 
-**DIS-1.3.14**
+**DIS-1.3.15**
 **A csapatkapitány**:
 Csapatversenyeken kizárólag a csapatkapitány jogosult a versenybíróhoz<!-- vagy a versenybírói bizottság kiküldöttéhez--> fordulni mindenfajta technikai kérdés tisztázása vagy panasz előterjesztése érdekében. A panaszokra vonatkozó eljárását a [DIS-5.2.2]--[DIS-5.2.5] szakaszok szabályozzák.
 Azok a csapattagok, akik pontosan betartották a csapatkapitány rendelkezéseit, nem vonhatóak felelősségre az arra egyébként illetékes szervek által. Ugyanakkor személyesen felelősek minden tettükért amelyekről nem a csapatkapitány rendelkezett és minden általuk elkövetett vétségért, amellyel megsértették jelen szabályzat rendelkezéseit.
@@ -334,24 +367,23 @@ A versenyszabályzat különböző szakaszaiban található vétségek és bünt
 **DIS-4.1.9**  
 Ebben az első csoportban az első vétség SÁRGA LAP (figyelmeztetés) büntetést von maga után. Ha ugyanazon a mérkőzésen a vívó ismételten elköveti ugyanazt vagy más, ebben a csoportban lévő szabálysértést, a Bíró minden alkalommal PIROS LAP-tal (büntető találat) bünteti. Ha a vétkes vívót az adott mérkőzésen már büntették PIROS LAPPAL a Második vagy Harmadik Csoportban felsorolt szabálysértés miatt, akkor az első csoportba tartozó első szabálysértéséért is további PIROS LAPOT kap.  
 
-**DIS-4.3.10**  
+**DIS-4.1.10**  
 Csapatmérkőzéseken belül az első csoportba tartozó vétségek számítása az egyes meccsek kezdetével újraindul (minden egyes fordulóban az első vétségért SÁRGA LAP jár), kivéve a táblázatban megjelölt, egész csapatra vonatkozó figyemeztetések, amelyek után a mérkőzés hátralevő részében bármely, az első csoportba tartozó vétség elkövetése PIROS LAPpal büntetendő.  
 
 #### A második csoportba tartozó vétségek  
 
-**DIS-4.3.11**  
+**DIS-4.1.11**  
 A második csoportba tartozó összes vétség az első elkövetéstől kezdve PIROS LAPPAL (büntető találattal) büntetendő.  
 
 #### A harmadik csoportba tartozó vétségek  
 
-**DIS-4.3.12**  
-A harmadik csoportba tartozó vétségek első elkövetése PIROS LAPPAL (büntető találattal) büntetendő, akkor is, ha a vétkes vívó korábban már az első illetve a második csoportba tartozó vétség elkövetéséért PIROS LAPOT kapott.  
-
-**DIS-4.3.13**  
-Ha a vívó ugyanazon mérkőzés során ismételten a harmadik a csoportba tartozó azonos vagy másik vétséget követ el, büntetése FEKETE LAP (a versenyszámból való kizárás, felfüggesztés a verseny további részéből).  
+**DIS-4.1.12**  
+- A harmadik csoportba tartozó vétségek első elkövetése PIROS LAPPAL (büntető találattal) büntetendő, akkor is, ha a vétkes vívó korábban már az első illetve a második csoportba tartozó vétség elkövetéséért PIROS LAPOT kapott.  
+ 
+- Ha a vívó ugyanazon mérkőzés során ismételten a harmadik a csoportba tartozó azonos vagy másik vétséget követ el, büntetése FEKETE LAP (a versenyszámból való kizárás, felfüggesztés a verseny további részéből).  
 <!--és 60 napos eltiltás az aktív vívóévadból (szeptember 1. – Junior Világbajnokság és szeptember 1.- Felnőtt Világbajnokság.)) A büntetett vívó megtartja a kizárás pillanatáig megszerzett pozícióját a ranglistán--kivéve, ha a rangsort még nem állították fel a csoportmérkőzések útján -->  
 
-**DIS-4.3.14**  
+**DIS-4.1.13**  
 A páston kívüli személy rendzavarása esetén:  
 
 - első alkalommal SÁRGA LAPOS figyelmeztetés jár, amely a verseny egészére vonatkozik. Ezt a mérkőzés jegyzőkönyvén fel kell tüntetni, és a szervező teamnek <!--DT-nek --> rögzítenie kell.  
@@ -360,28 +392,28 @@ A páston kívüli személy rendzavarása esetén:
 
 #### A negyedik csoportba tartozó vétségek  
 
-**DIS-4.3.15**  
+**DIS-4.1.14**  
 A negyedik csoportba tartozó vétség elkövetése nyomban FEKETE LAPPAL (a versenyszámból való kizárás, felfüggesztés a verseny további részéből <!--és 60 napos eltiltás az aktív évadból-->) büntetendő.  
 
-**DIS-4.3.16**  
+**DIS-4.1.15**  
 <!-- TODO -->  
 Továbbá az MHS versenyein illetve a MHS fegyelmi kódexének magát alávető konföderáció által szervezett minden kiosztott fekete lapot 10 napon belül jelenteni kell az MHS elnökének, aki kiértékeli hogy a vétség súlyossága indokolja-e a MHS ellenőr vagy a Szervező Team <!-- DT --> jelentésének továbbküldését a Jogi Bizottság elnöke felé azzal a kéréssel, hogy az Fegyelmi Bíróságot állítson fel annak megállapítására, hogy a versenyen kiszabott büntetés mellett további kell-e további büntetést kiszabni.  
 
 ### Találat megsemmisítése szabályszegés miatt  
 
-**DIS-4.3.17**  
+**DIS-4.1.16**  
 Egy találatot meg kell semmisíteni, ha a versenybíró megállapítja, hogy a találatot olyan szabályszegés útján érték el, amely közvetlenül és oksági kapcsolatban állt a találathoz vezető vívóakcióval.  
 
-**DIS-4.3.18**  
+**DIS-4.1.17**  
 Egy szabályszegés akkor tekinthető közvetlen és oksági kapcsolatban állónak, ha a versenybíró megítélése szerint a találat azonos módon vagy azonos időpillanatban nem jöhetett volna létre a szabályszegés elkövetése nélkül.  
 
-**DIS-4.3.19**  
+**DIS-4.1.18**  
 Egy találat nem semmisíthető meg pusztán amiatt, hogy szabályszegés történt, ha:  
 
 - a szabályszegés nem vett közvetlenül részt a pontszerző akció végrehajtásában (a szabálytalanság elkövetése és a találat közt a vívószerepek újraértékelődtek);  
 - a szabályszegés nem állt összefüggésben azokkal a taktikai vagy fizikai feltételekkel, amelyek a találat létrejöttét lehetővé tették.  
 
-**DIS-4.3.20**  
+**DIS-4.1.19**  
 ### Vétségek és büntetések táblázata.  
 
 A táblázat célja a megfelelő összefoglalás: nem helyettesíti a vonatkozó rendelkezések szövegét, amelyek kétség esetén irányadók. A táblázatot lásd:  
