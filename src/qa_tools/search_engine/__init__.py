@@ -1,18 +1,17 @@
 """
 Search Engine Module
 
-Provides different search implementations for rulebook querying.
+Provides alias-aware search for rulebook querying.
 
 Classes:
-- AliasAwareSearch: Production search engine with alias support
-- RulebookSearch: Backward-compatible wrapper around AliasAwareSearch
-  (simplified demo/test fixture without alias expansion)
+- AliasAwareSearch: Production search engine with alias support and
+  case-insensitive rule ID lookup.
+- SearchResult: Dataclass representing a single search hit.
 """
 
-from qa_tools.search_engine.search_aliases import AliasAwareSearch
-from qa_tools.search_engine.search import RulebookSearch
+from qa_tools.search_engine.search_aliases import AliasAwareSearch, SearchResult
 
 __all__ = [
     "AliasAwareSearch",
-    "RulebookSearch",
+    "SearchResult",
 ]

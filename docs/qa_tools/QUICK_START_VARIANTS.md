@@ -128,9 +128,9 @@ Query: VOR mérkőzés hosszúkard
 If you're building on top of this system:
 
 ```python
-from qa_tools.search_engine.search import RulebookSearch
+from qa_tools.search_engine import AliasAwareSearch
 
-search = RulebookSearch("data/search/rules_index.json")
+search = AliasAwareSearch("data/search/rules_index.json")
 
 # Get VOR-only results
 vor_results = search.search("mérkőzés", formatum_filter="VOR")

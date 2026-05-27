@@ -5,7 +5,7 @@ This package provides search engine, indexing, and utility tools for querying
 the Hungarian Historical European Martial Arts (HEMA) rulebook.
 
 Main Components:
-- search_engine: Search implementations (AliasAwareSearch with RulebookSearch wrapper)
+- search_engine: Search implementation (AliasAwareSearch with alias + case-insensitive lookup)
 - tools: Utility scripts for indexing, aliases, and analysis
 - data: Configuration and index files
 

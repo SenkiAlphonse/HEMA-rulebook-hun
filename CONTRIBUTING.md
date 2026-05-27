@@ -51,13 +51,12 @@ HEMA-rulebook-hun/
 │   │   ├── search.py            # Search API endpoints
 │   │   └── rulebook.py          # Rulebook display endpoints
 │   ├── config.py                # Centralized configuration
-│   ├── utils.py                 # Shared utilities
+│   ├── utils/                   # Shared utilities (no utils.py shim)
 │   └── validation.py            # Input validation
 │
 ├── src/qa_tools/                   # Search and indexing package
 │   ├── search_engine/            # Search implementations
 │   │   ├── search_aliases.py    # AliasAwareSearch (production)
-│   │   ├── search.py            # RulebookSearch (wrapper/backward compat)
 │   │   ├── search_utils.py      # Shared search utilities
 │   │   └── __init__.py
 │   ├── tools/                    # Utility scripts

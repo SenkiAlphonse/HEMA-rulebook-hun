@@ -4,11 +4,11 @@ Unit tests for RulebookSearch class
 
 import json
 import pytest
-from qa_tools.search_engine.search import RulebookSearch, SearchResult
+from qa_tools.search_engine import AliasAwareSearch, SearchResult
 
 
 class TestRulebookSearch:
-    """Test RulebookSearch functionality"""
+    """Test search engine (AliasAwareSearch) functionality"""
 
     def test_load_index(self, search_engine, sample_rules):
         """Test that index loads correctly"""
@@ -108,13 +108,13 @@ class TestRulebookSearch:
         """Test that searching for 'özbetám' finds all GEN-3.2.5.x rules (substring, regardless of formatting)"""
         # Use the real rules index (not the sample fixture) to test actual rules
         from pathlib import Path
-        from qa_tools.search_engine.search import RulebookSearch
-        
+        from qa_tools.search_engine import AliasAwareSearch
+
         real_index = Path(__file__).parent.parent.parent / 'data' / 'search' / 'rules_index.json'
         if not real_index.exists():
             pytest.skip(f"Real rules index not found at {real_index}")
-        
-        search_engine = RulebookSearch(str(real_index))
+
+        search_engine = AliasAwareSearch(str(real_index))
         results = search_engine.search("özbetám", max_results=20)
         found_ids = {r.rule_id for r in results}
         
@@ -161,7 +161,7 @@ class TestRulebookSearch:
         index_file = tmp_path / "rules_index_dupe.json"
         index_file.write_text(json.dumps(index_data, ensure_ascii=False), encoding="utf-8")
 
-        search_engine = RulebookSearch(str(index_file))
+        search_engine = AliasAwareSearch(str(index_file))
         results = search_engine.search("idő", max_results=10)
 
         result_ids = [r.rule_id for r in results]

@@ -491,9 +491,14 @@ class AliasAwareSearch:
         return get_children_rules(rule_id, self.rules)
     
     def get_rule_by_id(self, rule_id: str) -> Optional[Dict[str, Any]]:
-        """Get a rule by its ID"""
+        """Get a rule by its ID (case-insensitive)."""
         for rule in self.rules:
             if rule.get('rule_id') == rule_id:
+                return rule
+        # Case-insensitive fallback
+        rule_id_lower = rule_id.lower()
+        for rule in self.rules:
+            if rule.get('rule_id', '').lower() == rule_id_lower:
                 return rule
         return None
 

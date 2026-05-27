@@ -83,9 +83,9 @@ Query: COMBAT 5 találat
 ### Explicit Filtering (API)
 
 ```python
-from qa_tools.search_engine.search import RulebookSearch
+from qa_tools.search_engine import AliasAwareSearch
 
-search = RulebookSearch("data/search/rules_index.json")
+search = AliasAwareSearch("data/search/rules_index.json")
 
 # Search VOR variant only
 vor_results = search.search(
@@ -203,7 +203,7 @@ This will:
 ### Example 1: Find all VOR-specific rules about timeouts
 
 ```python
-search = RulebookSearch("data/search/rules_index.json")
+search = AliasAwareSearch("data/search/rules_index.json")
 results = search.search(
     "időlimit limit timeout",
     variant_filter="VOR",

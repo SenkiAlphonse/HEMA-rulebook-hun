@@ -133,9 +133,9 @@ def sample_rules_index(tmp_path, sample_rules) -> Path:
 
 @pytest.fixture
 def search_engine(sample_rules_index):
-    """Create RulebookSearch instance for testing"""
-    from qa_tools.search_engine.search import RulebookSearch
-    return RulebookSearch(str(sample_rules_index))
+    """Create AliasAwareSearch instance for testing"""
+    from qa_tools.search_engine import AliasAwareSearch
+    return AliasAwareSearch(str(sample_rules_index))
 
 
 @pytest.fixture
