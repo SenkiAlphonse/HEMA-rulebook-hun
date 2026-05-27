@@ -759,7 +759,7 @@ Fő feladata a mérkőzés megfigyelése a bíró pozíciójával ellentétes ir
 <span id="GEN-7.4"></span>  
 
 **GEN-7.4.1**  
-Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akiknek feladata hogy közvetlenül, élőben figyeljék a mérkőzést, majd ha szükséges ezután tekintsék meg azt a képernyőn is és egyeztessenek a versenybíróval<!--  a t.60-62, o105 szakaszokban írtaknakmegfelelően -->.
+Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akiknek feladata hogy közvetlenül, élőben figyeljék a mérkőzést, majd ha szükséges ezután tekintsék meg azt a képernyőn is és egyeztessenek a versenybíróval a [**GEN-7.6.9**]--[]<!--  a t.60-62, o105 szakaszokban írtaknakmegfelelően -->.
 <!-- Video-konzultáns akkor lehet valaki, ha:
 1. az adott szezonra érvényes versenybírói MHS licence-szel rendelkezik;
 2. videóbírói felkészítésen vett részt; -->
@@ -808,51 +808,56 @@ A találat ténylegességének megállapításában hozott döntése után a ver
 #### A videóbíróhoz fordulás lehetősége  
 <!-- TODO -->  
 
-<!-- TODO **GEN-7.6.8**  
-A videó felülvizsgálat technikai feltételeit az egyenes kieséses mérkőzéseken a szervező köteles biztosítani. -->  
+**GEN-7.6.8**  
+Mind csapat, mind egyéni versenyeken csak a páston lévő vívó jogosult videó visszanézést
+kérvényezni.  
+
+#### Videobíráskodás
 
 **GEN-7.6.9**  
-A videóbíróhoz fordulás lehetősége: mind csapat, mind egyéni versenyeken csak a páston lévő vívó jogosult videó visszanézést kérvényezni.  
+Az egyéni versenyen vívó  
 
-**GEN-7.6.10**  
-Az egyéni versenyen a páston lévő vívó  
-
-- csoportmérkőzések során, mérkőzésenként egy alkalommal fordulhat a videóbíróhoz  
-- egyenes kieséses mérkőzés során két alkalommal  
-
-**GEN-7.6.11**  
+- csoportmérkőzések során, mérkőzésenként egy alkalommal,  
+- egyenes kieséses mérkőzés során két alkalommal fordulhat a videóbíróhoz.  
 Amennyiben a versenybíró a visszajátszást kérő versenyzővel egyetért, úgy a versenyző visszajátszáshoz való joga nem vész el.  
 
-**GEN-7.6.12**  
+**GEN-7.6.10**  
 Csapatversenyeken váltásonként egy alkalommal van joguk a versenyzőknek a videóbíróhoz fordulni, és amennyiben a versenybíró egyetért a versenyzői indítvánnyal, úgy ez a jog továbbra is megmarad.  
 
-**GEN-7.6.13**  
-Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges  
-döntését.  
+**GEN-7.6.11**  
+Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges döntését.  
 
-**GEN-7.6.14**  
-A versenybíró választása szerint valós-időben vagy lassított felvételen az általa választott sebességben nézi vissza az akciót.  
+**GEN-7.6.12**
+**GEN-7.6.12.1**  
+<!-- Legfeljebb 4 alkalommal lehet a videót visszanézni.  -->A versenybíró választása szerint valós-időben vagy lassított felvételen az általa választott sebességben nézi vissza az akciót.  
 
-**GEN-7.6.15**  
+**GEN-7.6.12.2**  
 A versenybíró minden fegyvernemben bármikor dönthet úgy, hogy a döntése meghozatalát megelőzően megtekinti a képernyőjét.  
 
-**GEN-7.6.16**  
+**GEN-7.6.12.3**  
 A mérkőzés végén, ha az állás egyenlő, a döntő találat megítélése előtt a versenybírónak kötelező alkalmaznia a video bíráskodást.  
 
-**GEN-7.6.17**  
+**GEN-7.6.12.4**  
 A videóbíró bármikor kérheti a versenybírót, hogy alkalmazzon videóbíráskodást.  
 
-**GEN-7.6.18**  
+**GEN-7.6.12.5**  
 Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy arra  
 
 - a versenybíró kezdeményezésére,  
 - a versenyző kérésére,  
 - a döntő találat előtti pontegyenlőségnél, vagy  
-- a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.  
+- a videóbíró kérésére került sor, 
+a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet. 
+
+<!-- **GEN-7.6.12.6**    
+Minden alkalommal ha a versenybíró a videóbíráskodást alkalmazza, akár saját
+kezdeményezésére, vagy versenyzői kérésre vagy a videóbíró javaslatára, a
+versenybíró és a videóbíró véleményét a mérkőzés jegyzőkönyvén rögzíteni kell.
+ -->
 
 #### A versenybíró kézjelei  
 
-**GEN-7.6.19**  
+**GEN-7.6.13**  
 A versenybíró az alábbi jelzéseket köteles használni:  
 
   <p align="center">  
@@ -874,27 +879,28 @@ A versenybíró az alábbi jelzéseket köteles használni:
 <!-- TODO -->  
 
 **GEN-7.7.1**  
-A bíró minden forduló előtt röviden ellenőrzi a felszerelésre és fegyverekre vonatkozó szabályokban előírt szabványjeleket és fegyverellenőri jelzéseket, valamint hogy a versenyzők hiánytalan felszerelésben és ruházatban jelentek-e meg.  
+Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket: (Vö. [**GEN-7.2.2**])  
 
-**GEN-7.7.2**  
-Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket: <!--(Vö.t.47.2.)-->  
-
-- minden fegyvernemben a vívók felszerelésén a szabályos <!--FIE --> 350N jelzés meglétét (ruha, fejvéd).  
+- minden fegyvernemben, hogy a versenyzők hiánytalan felszerelésben és ruházatban jelentek-e meg.  
+<!-- TODO ezt updatelni kell, ha fejlődik a standard -->
+- minden fegyvernemben a vívók felszerelésén a szabályos, a felszerelésre és fegyverekre vonatkozó szabályok által előírt 350N vagy FIE jelzés meglétét, és a fegyverellenőri jelzéseket.  
 <!-- TODO lvl 2 legyen kötelező -->  
-- hogy mindenki szabályszerű vívókabátot visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.  
-- minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá (<!-- TODO -->jelenleg nem kötelező, későbbi szabálymódosításig erősen ajánlott, de ellenőrizendő).  
+- hogy mindenki **szabályszerű vívókabátot** visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.  
+- minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá (<!-- TODO -->jelenleg nem kötelező, későbbi szabálymódosításig erősen ajánlott, és ellenőrizendő).  
 - A fegyvereken fegyverellenőrzés jelzés meglétét.  
 - Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.  
 
-**GEN-7.7.3**  
-A csoportmérkőzések során a versenybíró általi fegyverellenőrzést a vívók gyülekezésre szólításakor kell elvégezni.  
+**GEN-7.7.2**  
+- A csoportmérkőzések során ezt az ellenőrzést a vívók gyülekezésre szólításakor kell elvégezni.  
+- Az egyenes kieséses mérkőzések és a döntők előtt az ellenőrzést a gyülekező területen végzik el.  
 
+<!--**GEN-7.7.3** t.66. -->
 **GEN-7.7.4**  
-Az egyenes kieséses mérkőzések és a döntők előtt a versenybíró általi fegyverellenőrzést a gyülekező területen végzik el.  
+A fenti ellenőrzéseken túlmenően, a mérkőzést vezető bíró, saját elhatározásából, vagy a vívó, vagy a csapatkapitány kérésére, bármikor ellenőrzést végezhet, továbbá ellenőrizheti a már elvégzett hitelesítést vagy újabb ellenőrzéseket végezhet illetve végeztethet. (vö: [GEN-7.2.2])  
 
 **GEN-7.7.5**  
-A fenti ellenőrzéseken túlmenően, a mérkőzést vezető bíró, saját elhatározásából, vagy a vívó, vagy a csapatkapitány kérésére, bármikor ellenőrzést végezhet, továbbá ellenőrizheti a már elvégzett hitelesítést vagy újabb ellenőrzéseket végezhet illetve végeztethet.  
-<!-- (Vö. t.47) -->  
+Minden esetben a mérkőzés előtt megállapítja a ruhán, a pengén és a maszkon a fegyverellenőri jelzés meglétét.  
+<!-- TODO bíró ellenőrizzen flexet standard súllyal? -->
 
 **GEN-7.7.6**  
 A leellenőrzött tartalék felszereléseket a versenybíró a mérkőzés kezdetén a pást mellé  
@@ -908,10 +914,12 @@ Bármely helyzetben, ha egy versenyző (a Felszerelés Szabályzat értelmében)
 
 **GEN-7.8.2**  
 Ha a vívó a páston:  
+
+<!-- - összesen egy szabályos fegyverrel (vö. t.114,115); vagy -->
 - hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy  
 <!-- - hónaljvédő nélkül (Vö. t.64.5.), vagy -->  
 - a szabályoknak nem megfelelő ruhában  
-jelenik meg, a versenybíró <!-- a t.158-162, t.165, t.170 szakaszokban előírt,--> az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
+jelenik meg, a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.3.20] szakaszokban előírt, az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
 **GEN-7.8.3**
 Amennyiben a mérkőzés során a felszerelésben olyan rendellenességet állapítanak meg, amely a küzdelem következtében állhatott elő:  
@@ -920,11 +928,11 @@ Például:
 - a ruházaton lyuk található,  
 - merev védőfelszerelés vagy kesztyű eltört vagy szétesett,  
 - a maszk deformálódott,  
-- a fegyver meghibásodik,  
+- a fegyver veszélyesen deformálódik vagy eltörik,  
 
-akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, és megadja a meghibásodott fegyverrel adott szabályos találatot.<!-- Ugyanakkor, a mérkőzés során is ha a vívóállásba helyezkedő, vívásra készen álló vívó pengéjének hajlása meghaladja az előírásokban írtakat (Vö. m.8.6, m.16.2, m.23.4), ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162, t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->  
-<!-- 
-Ehhez hasonlóan, ha a vívóállásba helyezkedő, vívásra készen álló vívó maszkja nincs megfelelően rögzítve a fején a második biztonsági eszközzel, ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162,
+akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, és megadja a meghibásodott fegyverrel adott szabályos találatot.
+<!-- Ugyanakkor, a mérkőzés során is ha a vívóállásba helyezkedő, vívásra készen álló vívó pengéjének hajlása meghaladja az előírásokban írtakat (Vö. m.8.6, m.16.2, m.23.4), ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162, t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->  
+<!-- Ehhez hasonlóan, ha a vívóállásba helyezkedő, vívásra készen álló vívó maszkja nincs megfelelően rögzítve a fején a második biztonsági eszközzel, ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162,
 t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->
 
 **GEN-7.8.4**
