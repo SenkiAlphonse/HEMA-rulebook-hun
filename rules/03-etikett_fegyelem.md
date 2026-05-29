@@ -149,28 +149,25 @@ A nézők nem zavarhatják a versenyek rendjét és semmi olyat nem tehetnek, am
 ## A fegyelmi hatóságok és hatáskörük  
 <span id="DIS-2"></span>  
 
-<!-- ### Preambulum  
+### Preambulum  
 <span id="DIS-2.1"></span>  
 
 **DIS-2.1.1**  
-A következő szakaszok csak a verseny helyszínére vonatkozó fegyelmet szabályozzák. A  
-megállapított vétségek súlyától függően nem zárják ki az MHS Fegyelmi Kódex alkalmazását (a MHS  
-Alapszabály ??? fejezetét), amely kiegészíti vagy adott esetben felülírja az alábbi szakaszok rendelkezéseit.   -->  
+A következő szakaszok csak a verseny helyszínére vonatkozó fegyelmet szabályozzák. A megállapított vétségek súlyától függően nem zárják ki az MHS Fegyelmi Kódex alkalmazását <!--(a MHS Alapszabály ??? fejezetét) -->, amely kiegészíti vagy adott esetben felülírja az alábbi szakaszok rendelkezéseit.  
 
 ### Jogkörrel bíró szervek, személyek  
 <span id="DIS-2.2"></span>  
 
 **DIS-2.2.1**  
 A következők bírnak fegyelmi hatáskörrel:  
-- a versenybíró (Vö. t.137)  
+- a versenybíró (Vö. [DIS-2.4.1])  
 - A Versenybírói Bizottság küldöttei  
-- a Directoire Technique (Vö. t.139, o.15 to o.22)  
-- a FIE ellenőr;  
-- a Nemzetközi Olimpiai Bizottság Végrehajtó Bizottsága az Olimpiai Játékokon (Vö. t.142)  
-- a FIE Irodája (Vö. t.143.1/4, o.12)  
-- a FIE Végrehajtó Bizottsága (Vö. t.143.5).  
-- a FIE Fegyelmi Bizottsága és Választottbírósága  
-- a Sportdöntőbíróság és Sport Ítélő Tábla Lásd még a FIE Fegyelmi Szabályzatát (a FIE Alapszabály VII. fejezet)  
+- a Szervező Csapat (Vö. [DIS-2.5.1]<!--, o.15 to o.22-->)  
+- az MHS ellenőr;  
+- az MHS Irodája (Vö. [DIS-2.6.1]<!--, o.12-->)  
+- az MHS Végrehajtó Bizottsága (Vö. [DIS-2.6.1] /3).  
+- az MHS Fegyelmi Bizottsága és Választottbírósága  
+<!-- - a Sportdöntőbíróság és Sport Ítélő Tábla Lásd még a FIE Fegyelmi Szabályzatát (a MHS Alapszabály ??? fejezet)   -->
 
 ### Az eljárás elvei  
 <span id="DIS-2.3"></span>  
@@ -184,60 +181,49 @@ A következők bírnak fegyelmi hatáskörrel:
 <span id="DIS-2.4"></span>  
 
 **DIS-2.4.1**  
-A versenybíró nem csak a mérkőzést vezeti, a találatokat bírálja el és a felszerelést ellenőrzi, hanem felelős az általa irányított mérkőzések rendjéért is. <!-- (Vö. t.47.2.i).>  
+- A versenybíró nem csak a mérkőzést vezeti, a találatokat bírálja el és a felszerelést ellenőrzi, hanem felelős az általa irányított mérkőzések rendjéért is. (Vö. [GEN-7.2.2]).  
 
-<!-- FIXME **DIS-2.1.3**  
-A bíró megszakíthatja a mérkőzést, ha az zavarossá, veszélyessé válik, vagy már nem tudja egyértelműen megítélni az akciókat. Objektív találatjelző berendezés hiányában a menetek elbírálásának alapját az akciót megfigyelő bíró és segédje észlelései képezik. A vívók a végső döntés meghozatala előtt fordulhatnak a bíróhoz pontosításért vagy felülvizsgálatért. Ténymegállapítások kapcsán a bírók ítéletét a versenyzők nem kérdőjelezhetik meg, (kivéve a videobíráskodás eseteit), és ha egy vívó ezt az elvet megszegi, az 1. csoportba tartozó vétséget követ el. Ténymegállapításnak számít - nem kizárólagosan - az arénában történtek megítélése és elemzése, találatok érvényessége és prioritása, az arénából kilépés tényének megállapítása, egy vívó viselkedésének 3. vagy 4. csoportba sorolása, stb. De ha egy bíró egyértelműen nem ismer vagy félreért meghatározott szabály(oka)t, vagy azokat szabályokba ütköző módon alkalmazza, a versenyzők személyesen felülvizsgálatot kérhetnek.  
+- Amikor a versenybíró a mérkőzéseket vezeti, a találatokat elbírálja, a szabályok szerint a vívókat vétségeik miatt megbüntetheti a körülmények figyelembevételével előzetes figyelmeztetés után vagy anélkül a ténylegesen adott találat érvénytelenítésével, találat odaítélésével valamelyik vívó terhére amikor találat ténylegesen nem esett, valamint a versenyző adott versenyből való kizárásával. Ezek során a ténymegállapítást tartalmazó döntése nem változtatható meg (Vö. [DIS-5.2.1]).  
 
-A felülvizsgálatot kérheti:  
-- egyéni versenyszámban a vívó,  
-- csapat versenyszámban a vívó vagy a csapatkapitány;  
+-A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a Szervező Teamnél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.12]--[DIS-4.1.13], [DIS-4.1.19] t.158-162, t.167, t.168, t.170).  
 
-udvariasan, formalitás nélkül, azonnal szóban a bírótól, mielőtt bármilyen a kérdéses helyzet után esett találattal kapcsolatban döntés születne. Ha a bíró kitart a véleménye mellett, a főbíró jár el az ügyben, aki döntést hozhat, illetve felügyeletet biztosíthat a mérkőzés további részében. Egy ilyen kérelem megalapozatlansága esetén a vívó a fegyelmi vétségek 1. csoportjára vonatkozó szabályok szerint büntetendő.   -->  
+- A versenybíró javasolhat a Szervező Teamnek további megfelelőnek tartott büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. [DIS-2.5.1] /3).  
 
-**DIS-2.1.3**  
-Amikor a versenybíró a mérkőzéseket vezeti, a találatokat elbírálja, a szabályok szerint a vívókat vétségeik miatt megbüntetheti a körülmények figyelembevételével előzetes figyelmeztetés után vagy anélkül a ténylegesen adott találat érvénytelenítésével, találat odaítélésével valamelyik vívó terhére amikor találat ténylegesen nem esett, valamint a  
-versenyző adott versenyből való kizárásával. Ezek során a ténymegállapítást tartalmazó döntése nem változtatható meg <!-- (Vö. t.172). -->  
-
-**DIS-2.1.4**  
-A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a <!--Directoire Technique-nél-->szervező teamnél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt.  
-<!-- (Vö. t.158-162, t.167, t.168, t.170). -->  
-
-**DIS-2.1.5**  
-A versenybíró javasolhat a <!--DT-nek-->szervező teamnek további megfelelőnek tartott, büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. [DIS-2.1.8.3]).  
-
-**DIS-2.1.6**  
+**DIS-2.4.2**  
 A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte, vagy az MHS ellenőr (ha nincs küldött).  
-<!-- TODO -->  
 
-### A <!--Directoire Technique -->Organising Team /Szervező Csapat az MHS<!--Nemzetközi szövetség much?--> hivatalos versenyein <!--(vö.: o.15-22)-->  
 
-**DIS-2.1.7** A <!--Directoire Technique-->Szervező Team az MHS hivatalos versenyein <!-- (vö.: o.15-22)   -->  
-**DIS-2.1.7.1**  
-A Szervező Team-nek, a Versenyíró Bizottság küldötteinek illetve az MHS ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen.  
-**DIS-2.1.7.2**  
-Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat.  
-**DIS-2.1.7.3**  
-A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják.  
-**DIS-2.1.7.4**  
-A Szervező Team köteles az MHS központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket.  
-**DIS-2.1.7.5**  
-A Szervező Team felel a kiszabott büntetések végrehajtásáért, ha azok ellen fellebbezésnek nincs helye, vagy annak a végrehajtásra nincs halasztó hatálya.  
-<!-- (Vö. t.136). -->  
+### A <!--Directoire Technique -->Organising Team /Szervező Csapat az MHS<!--Nemzetközi szövetség much?--> hivatalos versenyein<!-- (vö.: o.15-22)-->  
+<span id="DIS-2.5"></span>  
 
-**DIS-2.1.8**  
-A SZT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr spontán módon hozott, vagy (elsőfokú hatóságként) saját jogon hozott fegyelmi döntése ellen az MHS Fegyelmi Bizottságához lehet fellebbezni.  
+**DIS-2.5.1**  
+- A Szervező Teamnek, a Versenyíró Bizottság küldötteinek illetve az MHS ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen.  
+  
+- Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat.  
 
-**DIS-2.1.9**  
-A SZT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr minden döntése azonnal végrehajtható. A verseny során semmilyen fellebbezésnek nincs halasztó hatálya a döntés végrehajtására.  
-<!-- FIXME  
-#### A Szervező csapat és a Főbíró  
+- A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják.  
 
-**DIS-2.1.10**  
-A szervező csapat és a Főbíró jogkörrel illetékes minden olyan vívó felett, aki részt vesz vagy jelen van az általuk rendezett versenyen. Szükség esetén minden vitába beavatkozhatnak. Felelősek a versenyek alatti rend és fegyelem megőrzéséért is, és alkalmazhatják a Szabályzatban meghatározott büntetéseket.  
+- A Szervező Team köteles az MHS központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket.  
 
-**DIS-2.1.11**  
-A Szervező Csapat vagy a Főbíró minden döntése azonnal végrehajtható. A határozat ellen lehet fellebbezni, de a fellebbezés nem függeszti fel a döntést a verseny ideje alatt.   -->  
+- A Szervező Team felel a kiszabott büntetések végrehajtásáért, ha azok ellen fellebbezésnek nincs helye, vagy annak a végrehajtásra nincs halasztó hatálya (Vö. [DIS-2.3.1]).  
+
+**DIS-2.5.2**  
+A SzT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr spontán módon hozott, vagy (elsőfokú hatóságként) saját jogon hozott fegyelmi döntése ellen az MHS Fegyelmi Bizottságához lehet fellebbezni.  
+
+**DIS-2.5.3**  
+A SzT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr minden döntése azonnal végrehajtható. A verseny során semmilyen fellebbezésnek nincs halasztó hatálya a döntés végrehajtására.  
+
+### A FIE Központi Iroda, Fegyelmi Bizottság, Végrehajtó Bizottság, Sportdöntőbíróság  
+<span id="DIS-2.6"></span>  
+
+**DIS-2.6.1**  
+<!-- - A nemzeti szövetségnek, az SzT-nek vagy más hatáskörrel rendelkező szervnek minden hivatalos [nemzetközi szövetség] versenyen felmerült fegyelmi üggyel kapcsolatosan a [nemzetközi szövetség] Központi Irodáját kell megcímeznie. Ez átteszi az ügyet az illetékes szervhez.   -->
+- Az MHS Fegyelmi Bizottsága az MHS ítélkező szerve: eldönti az MHS hatáskörét nem meghaladó valamennyi az MHS-nek megküldött fegyelmi ügyet és elbírálja a Szervező Team, a Versenybíró Bizottság hivatalos kiküldötte, vagy az MHS ellenőr (ha nincs kiküldött) határozatai ellen benyújtott valamennyi fellebbezést.  
+<!-- - A lausanne-i Sportdöntőbíróság – „TAS”-, bírál el minden fellebbezést, amelyet a Fegyelmi Bizottság valamelyik tanácsának határozata ellen benyújtottak.   -->
+- Sürgős esetben az MHS Irodája tehet adminisztratív lépéseket, hogy a Fegyelmi Szabályzattal összhangban, a vétkes versenyzési engedélyét (licencét) felfüggesszék.  
+- A Végrehajtó Bizottság felel a Fegyelmi Bizottság határozatainak tiszteletben tartásáért és végrehajtásáért.  
+
+Lásd az MHS Fegyelmi Kódexét<!-- (MHS Alapszabály ???. fejezet)-->.  
 
 ## Büntetések  
 <span id="DIS-3"></span>  
@@ -246,8 +232,7 @@ A Szervező Csapat vagy a Főbíró minden döntése azonnal végrehajtható. A 
 <span id="DIS-3.1"></span>  
 
 **DIS-3.1.1**  
-A különböző vétségeket különböző fajtájú büntetésekkel kell büntetni  
-<!-- (vö.: .t158ss.) -->  
+A különböző vétségeket különböző fajtájú büntetésekkel kell büntetni (vö.: [DIS-4.1.1]ss.)  
 
 **DIS-3.1.1.1**  
 Víváshoz kötődő büntetések, amelyek a vívás közben elkövetett vétségek esetén alkalmazhatóak:  
@@ -260,15 +245,22 @@ Víváshoz kötődő büntetések, amelyek a vívás közben elkövetett vétsé
 **DIS-3.1.1.2**  
 Fegyelmi büntetések, amelyek a rend, a fegyelem és a sportszellem ellen elkövetett vétségek esetén alkalmazhatóak:  
 
-- Ténylegesen nem kapott találat odaítélése  
-- versenyszámból való kizárás  
-- A teljes bajnokságból való kizárás  
-- A verseny helyszínéről való kiutasítás  
-- a Szövetség vagy az adott Szervezőcsapat által szervezett rendezvényekről meghatározott időre történő kizárás  
+- Ténylegesen nem kapott találat megítélése  
+- kizárás a versenyszámból,  
+- kizárás a versenyből,  
+- kiutasítás a verseny helyszínéről,  
+<!-- TODO
+- diszkvalifikálás  
+- megrovás,  
+- pénzbírság,   -->
+- határozott idejű eltiltás,  
+- végleges eltiltás.  
 
 **DIS-3.1.2**  
-A felsorolt büntetések mindegyikét –a végleges eltiltást kivéve— alkalmazhatják a  
-versenyen az erre feljogosított hatóságok--a Versenybíró és a szervezőcsapat.  
+- A felsorolt büntetések mindegyikét —a végleges eltiltást kivéve— alkalmazhatják a versenyen az erre feljogosított hatóságok: a Versenybíró és a szervezőcsapat.  
+- A határozott idejű eltiltás büntetést csak akkor alkalmazhatják a fenti szervek, ha a versenyző megtagadja az üdvözlést. (Vö. [DIS-1.3.11], [DIS-4.1.19]).  
+
+Lásd az MHS Fegyelmi Kódexét<!-- (FIE Alapszabály ???. fejezet)-->.  
 
 ### Víváshoz kötődő büntetések  
 <span id="DIS-3.2"></span>  
@@ -966,11 +958,10 @@ Az egyes büntetések kiszabása az arra illetékes hatóságok feladata, akik m
 #### A versenybíró döntése ellen  
 
 **DIS-5.2.1**  
-A versenybíró ténykérdésben hozott döntése ellen nincs helye fellebbezésnek, kivéve a <!-- z o.105. és t.60-63. szerinti --> megengedett esetekben videóbíráskodás esetén.  
+- A versenybíró ténykérdésben hozott döntése ellen nincs helye fellebbezésnek, kivéve a <!-- z o.105. és t.60-63. szerinti --> megengedett esetekben videóbíráskodás esetén.  
 <!-- (vö. t.136.1/2, t.137.2) -->  
 
-**DIS-5.2.2**  
-Ha a vívó ezt az alapelvet megsérti, és a mérkőzés során kétségbe vonja a versenybíró ténykérdésben hozott döntését, a szabályzat szerint, az első csoportba tartozó vétségként büntetendő <!-- (Vö. t.158-162, t.165, t.170) -->. Ha azonban a versenybíró a konkrét szabályozás rendelkezését figyelmen kívül hagyja, félreértelmezi vagy azt nem a szabályzattal összhangban alkalmazza, az ügyben fellebbezés terjeszthető elő. Ténymegállapítás különösen, de nem kizárólagosan a versenybíró megállapítása a páston történtekről, úgy mint a találat érvényességének vagy elsőbbségének kérdése, hogy a vívó elhagyta-e a pástot <!-- oldalt vagy hátul -->vagy hogy valakinek a viselkedése harmadik vagy negyedik csoportba tartozó vétség-e.  
+- Ha a vívó ezt az alapelvet megsérti, és a mérkőzés során kétségbe vonja a versenybíró ténykérdésben hozott döntését, a szabályzat szerint, az első csoportba tartozó vétségként büntetendő <!-- (Vö. t.158-162, t.165, t.170) -->. Ha azonban a versenybíró a konkrét szabályozás rendelkezését figyelmen kívül hagyja, félreértelmezi vagy azt nem a szabályzattal összhangban alkalmazza, az ügyben fellebbezés terjeszthető elő. Ténymegállapítás különösen, de nem kizárólagosan a versenybíró megállapítása a páston történtekről, úgy mint a találat érvényességének vagy elsőbbségének kérdése, hogy a vívó elhagyta-e a pástot <!-- oldalt vagy hátul -->vagy hogy valakinek a viselkedése harmadik vagy negyedik csoportba tartozó vétség-e.  
 
 **DIS-5.2.3**  
 Ilyen (vö.: [DIS-5.2.1]) fellebbezés előterjesztésére  
