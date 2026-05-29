@@ -121,8 +121,9 @@ A vívóknak a verseny végéig sportszerűen, legjobb képességeik szerint kel
 <!-- **DIS-1.3.17**  
 A csapatvezető -->  
 
+#### A csapatkapitány
+
 **DIS-1.3.18**  
-**A csapatkapitány**:  
 Csapatversenyeken kizárólag a csapatkapitány jogosult a versenybíróhoz vagy a versenybírói bizottság kiküldöttéhez fordulni mindenfajta technikai kérdés tisztázása vagy panasz előterjesztése érdekében. A panaszokra vonatkozó eljárását a [DIS-5.2.1]--[DIS-5.2.6] szakaszok szabályozzák.  
 Azok a csapattagok, akik pontosan betartották a csapatkapitány rendelkezéseit, nem vonhatóak felelősségre az arra egyébként illetékes szervek által. Ugyanakkor személyesen felelősek minden tettükért amelyekről nem a csapatkapitány rendelkezett és minden általuk elkövetett vétségért, amellyel megsértették jelen szabályzat rendelkezéseit.  
 
@@ -274,15 +275,14 @@ Meg lehet tagadni az érvényes találati felületre bevitt találat megadását
 #### A ténylegesen nem kapott találat megítélése  
 
 **DIS-3.2.2**  
-A vívót találattal lehet büntetni, annak ellenére, hogy ténylegesen találat rajta nem esett, ha a vívó mindkét lábával átlépte a <!--hátsó -->határvonalat, (Vö. [GEN-6.11.5] ), vagy ha ellenfelét meg nem engedett módon akadályozza a vívásban (ütközéssel párosult lerohanás, fegyvertelen kéz használata, fogásos vagy birkózó akciók használata amikor az nem megengedett stb.) (Vö. t.137.2, t.162.1/2, t.165, t.166, t.167.1, [DIS-4.1.19]).  
+A vívót találattal lehet büntetni, annak ellenére, hogy ténylegesen találat rajta nem esett, ha a vívó mindkét lábával átlépte a <!--hátsó -->határvonalat, (Vö. [GEN-6.11.5] ), vagy ha ellenfelét meg nem engedett módon akadályozza a vívásban (ütközéssel párosult lerohanás, fegyvertelen kéz használata, fogásos vagy birkózó akciók használata amikor az nem megengedett stb.) (Vö. [DIS-2.4.1] /2, [DIS-4.1.5.1]--[DIS-4.1.5.2], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.11], [DIS-4.1.12] /1, [DIS-4.1.19]).  
 
 #### Kizárás  
 
 **DIS-3.2.3**  
-A versenyszámból kizárható az a vívó, aki durván erőszakos vagy bosszúálló akciót hajt végre, aki nem a legjobb képességei szerint vív, vagy aki hasznot húz az ellenféllel kötött csalárd megállapodásból.  
+- A versenyszámból kizárható az a vívó, aki durván erőszakos vagy bosszúálló akciót hajt végre, aki nem a legjobb képességei szerint vív, vagy aki hasznot húz az ellenféllel kötött csalárd megállapodásból.  
 
-**DIS-3.2.4**  
-A versenyszámból kizárt versenyző nem folytathatja a vívást még abban az esetben sem, ha már továbbjutott a következő fordulóba. Elveszti az egyéni versenyben elért helyezését és a kizárt versenyzőnél rosszabb helyezést elérő vívók egy hellyel feljebb kerülnek. Ha szükséges, a két harmadik helyezett helyezését a tábla összeállításánál használt rangszámuk figyelembevételével kell megállapítani. Minden esetben csak a versenyen pontot szerzett vívók kerülhetnek egy hellyel előrébb.  
+- A versenyszámból kizárt versenyző nem folytathatja a vívást még abban az esetben sem, ha már továbbjutott a következő fordulóba. Elveszti az egyéni versenyben elért helyezését és a kizárt versenyzőnél rosszabb helyezést elérő vívók egy hellyel feljebb kerülnek. Ha szükséges, a két harmadik helyezett helyezését a tábla összeállításánál használt rangszámuk figyelembevételével kell megállapítani. Minden esetben csak a versenyen pontot szerzett vívók kerülhetnek egy hellyel előrébb.  
 
 ### Fegyelmi büntetések  
 <span id="DIS-3.3"></span>  
@@ -290,54 +290,44 @@ A versenyszámból kizárt versenyző nem folytathatja a vívást még abban az 
 #### Kizárás a versenyszámból  
 
 **DIS-3.3.1**  
-A vívót a versenyszámból ki lehet zárni fegyelmi okok miatt is (nem jelenik meg megfelelően a páston; fegyverei nem szabályszerűek; helytelenül viselkedik hivatalos személlyel szemben, stb.).  
-A [DIS-3.2.4] szakaszban részletezett, kizárásra vonatkozó következményeket megfelelően alkalmazni kell.  
+- A vívót a versenyszámból ki lehet zárni fegyelmi okok miatt is (nem jelenik meg megfelelően a páston; fegyverei nem szabályszerűek; helytelenül viselkedik hivatalos személlyel szemben, stb.).  
+- A [DIS-3.2.3] szakaszban részletezett, kizárásra vonatkozó következményeket megfelelően alkalmazni kell.  
 
 #### Kitiltás a verseny helyszínéről, kizárás a versenyből  
 
 **DIS-3.3.2**  
-A versenyző, akit az egész versenyből kizártak, a továbbiakban nem vehet részt ezen a versenyen semmilyen versenyszámban sem ugyanabban, sem más fegyvernemben.  
+- A versenyző, akit az egész versenyből kizártak, a továbbiakban nem vehet részt ezen a versenyen semmilyen versenyszámban sem ugyanabban, sem más fegyvernemben.  
+- Ha a kizárás egy egész csapatra vonatkozik, külön-külön kell megvizsgálni a csapat minden egyes tagjának az esetét és büntetésük a körülmények alapján különböző lehet (Vö. [DIS-1.3.18]).  
 
 **DIS-3.3.3**  
-Ha a kizárás egy egész csapatra vonatkozik, külön-külön kell megvizsgálni a csapat minden egyes tagjának az esetét és büntetésük a körülmények alapján különböző lehet  
-<!-- (Vö. t.130). -->  
-
-**DIS-3.3.4**  
-Minden résztvevőt vagy nem vívó kísérőt, aki részt vesz vagy jelen van a versenyen (edzőt, technikust, szurkolót, hivatalos személyt, nézőt stb.) ki lehet utasítani. A kiutasítás azzal jár, hogy a verseny vagy a versenyszám időtartama alatt annak helyszínén a kiutasított személy nem tartózkodhat. Ez az intézkedés semmilyen körülmények között nem fellebbezhető.  
-<!-- (Vö. t.133, t.137.3, t.170) -->  
+Minden résztvevőt vagy nem vívó kísérőt, aki részt vesz vagy jelen van a versenyen (edzőt, technikust, szurkolót, hivatalos személyt, nézőt stb.) **ki lehet utasítani**. A kiutasítás azzal jár, hogy a verseny vagy a versenyszám időtartama alatt annak helyszínén a kiutasított személy **nem tartózkodhat** (Vö. [DIS-1.5.1], [DIS-2.4.1] /3, [[DIS-4.1.19]]). Ez az intézkedés semmilyen körülmények között nem fellebbezhető.  
 
 #### Diszkvalifikálás  
 
+**DIS-3.3.4**  
+Egy vívó diszkvalifikálása jóhiszeműsége esetén nem szükségszerűen jár határozott vagy végleges eltiltásával; csalárd szándék esetén ugyanakkor további büntetés kiszabása kérhető ellene.  
+
 **DIS-3.3.5**  
-Egy vívó diszkvalifikálása jóhiszeműsége esetén nem szükségszerűen jár határozott vagy  
-végleges eltiltásával; csalárd szándék esetén ugyanakkor további büntetés kiszabása  
-kérhető ellene.  
+Az a csapat, amely olyan versenyzővel állt ki, akit diszkvalifikáltak, maga is a vívó sorsára jut és diszkvalifikálják.  
 
 **DIS-3.3.6**  
-Az a csapat, amely olyan versenyzővel állt ki, akit diszkvalifikáltak, maga is a vívó  
-sorsára jut és diszkvalifikálják.  
-
-**DIS-3.3.7**  
-A kizárásra vonatkozó következményeket megfelelően alkalmazni kell a diszkvalifikálásra  
-is (ld.: [DIS-3.2.3]-[DIS-3.2.4] szakasz)  
+A kizárásra vonatkozó következményeket megfelelően alkalmazni kell a diszkvalifikálásra is (ld.: [DIS-3.2.3] szakasz)  
 
 #### Megrovás  
 
-**DIS-3.3.8**  
-Ha súlyosabb büntetés kiszabása nem indokolt, a vívót vagy a hivatalos személyt  
-megrovásban kell részesíteni.  
+**DIS-3.3.7**  
+Ha súlyosabb büntetés kiszabása nem indokolt, a vívót vagy a hivatalos személyt megrovásban kell részesíteni.  
 
 #### Határozott idejű eltiltás  
 
-**DIS-3.3.9**  
-Az eltiltott versenyző a határozott idejű eltiltás tartama alatt nem vehet részt az MHS hivatalos versenyein.  
-
-**DIS-3.3.10**  
-Az egyéb (nem versenyző) eltiltott személyek nem gyakorolhatják hivatásukat az eltiltás területi hatálya és időtartama alatt.  
+**DIS-3.3.8**  
+- Az eltiltott versenyző a határozott idejű eltiltás tartama alatt nem vehet részt az MHS hivatalos versenyein.  
+  
+- Az egyéb (nem versenyző) eltiltott személyek nem gyakorolhatják hivatásukat az eltiltás területi hatálya és időtartama alatt.  
 
 #### Végleges eltiltás  
 
-**DIS-3.3.11**  
+**DIS-3.3.9**  
 A végleges eltiltás következményei megegyeznek a határozott idejű eltiltás következményeivel, de határozatlan ideig tartanak.  
 
 ### A büntetések kihirdetése  
@@ -403,7 +393,8 @@ A versenyszabályzat különböző szakaszaiban található vétségek és bünt
 #### Az első csoportba tartozó vétségek  
 
 **DIS-4.1.9**  
-Ebben az első csoportban az első vétség SÁRGA LAP (figyelmeztetés) büntetést von maga után. Ha ugyanazon a mérkőzésen a vívó ismételten elköveti ugyanazt vagy más, ebben a csoportban lévő szabálysértést, a Bíró minden alkalommal PIROS LAP-tal (büntető találat) bünteti. Ha a vétkes vívót az adott mérkőzésen már büntették PIROS LAPPAL a Második vagy Harmadik Csoportban felsorolt szabálysértés miatt, akkor az első csoportba tartozó első szabálysértéséért is további PIROS LAPOT kap.  
+Az első csoportba tartozó vétség első elkövetése SÁRGA LAP felmutatásával
+(figyelmeztetéssel) jár. Ha a vívó ezután ugyanazon mérkőzés folyamán ebbe a csoportba tartozó ugyanolyan vagy másik vétséget követ el, a versenybíró minden alkalommal PIROS LAPPAL (büntető találattal) bünteti. Ha a vétkes vívó már valamely, a 2. vagy 3. csoportba tartozó vétségért PIROS LAP büntetést kapott, abban az esetben az 1. csoportba tartozó bármely vétség első elkövetése esetén is egyből PIROS LAPPAL büntetendő.  
 
 **DIS-4.1.10**  
 Csapatmérkőzéseken belül az első csoportba tartozó vétségek számítása az egyes meccsek kezdetével újraindul (minden egyes fordulóban az első vétségért SÁRGA LAP jár), kivéve a táblázatban megjelölt, egész csapatra vonatkozó figyemeztetések, amelyek után a mérkőzés hátralevő részében bármely, az első csoportba tartozó vétség elkövetése PIROS LAPpal büntetendő.  
@@ -416,24 +407,17 @@ A második csoportba tartozó összes vétség az első elkövetéstől kezdve P
 #### A harmadik csoportba tartozó vétségek  
 
 **DIS-4.1.12**  
-- A harmadik csoportba tartozó vétségek első elkövetése PIROS LAPPAL (büntető találattal) büntetendő, akkor is, ha a vétkes vívó korábban már az első illetve a második csoportba tartozó vétség elkövetéséért PIROS LAPOT kapott.  
+1. A harmadik csoportba tartozó vétségek első elkövetése PIROS LAPPAL (büntető találattal) büntetendő, akkor is, ha a vétkes vívó korábban már az első illetve a második csoportba tartozó vétség elkövetéséért PIROS LAPOT kapott.  
 
-- Ha a vívó ugyanazon mérkőzés során ismételten a harmadik a csoportba tartozó azonos vagy másik vétséget követ el, büntetése FEKETE LAP (a versenyszámból való kizárás, felfüggesztés a verseny további részéből).  
+1. Ha a vívó ugyanazon mérkőzés során ismételten a harmadik a csoportba tartozó azonos vagy másik vétséget követ el, büntetése FEKETE LAP (a versenyszámból való kizárás, felfüggesztés a verseny további részéből).  
 <!--és 60 napos eltiltás az aktív vívóévadból (szeptember 1. – Junior Világbajnokság és szeptember 1.- Felnőtt Világbajnokság.)) A büntetett vívó megtartja a kizárás pillanatáig megszerzett pozícióját a ranglistán--kivéve, ha a rangsort még nem állították fel a csoportmérkőzések útján -->  
-**DIS-4.1.12**  
-- A harmadik csoportba tartozó vétségek első elkövetése PIROS LAPPAL (büntető találattal) büntetendő, akkor is, ha a vétkes vívó korábban már az első illetve a második csoportba tartozó vétség elkövetéséért PIROS LAPOT kapott.  
-
-- Ha a vívó ugyanazon mérkőzés során ismételten a harmadik a csoportba tartozó azonos vagy másik vétséget követ el, büntetése FEKETE LAP (a versenyszámból való kizárás, felfüggesztés a verseny további részéből).  
-<!--és 60 napos eltiltás az aktív vívóévadból (szeptember 1. – Junior Világbajnokság és szeptember 1.- Felnőtt Világbajnokság.)) A büntetett vívó megtartja a kizárás pillanatáig megszerzett pozícióját a ranglistán--kivéve, ha a rangsort még nem állították fel a csoportmérkőzések útján -->  
-
-**DIS-4.1.13**  
-A páston kívüli személy rendzavarása esetén:  
+  
 **DIS-4.1.13**  
 A páston kívüli személy rendzavarása esetén:  
 
-- első alkalommal SÁRGA LAPOS figyelmeztetés jár, amely a verseny egészére vonatkozik. Ezt a mérkőzés jegyzőkönyvén fel kell tüntetni, és a szervező teamnek <!--DT-nek --> rögzítenie kell.  
-- A verseny ideje alatt második elkövetéskor FEKETE LAP a büntetés.  
-- A páston vagy a páston kívül elkövetett különösen jelentős súlyú rendzavarás esetén a versenybíró a vétkes személyt azonnal kizárhatja vagy kitilthatja.  
+1. első alkalommal SÁRGA LAPOS figyelmeztetés jár, amely a verseny egészére vonatkozik. Ezt a mérkőzés jegyzőkönyvén fel kell tüntetni, és a szervező teamnek <!--DT-nek --> rögzítenie kell.  
+1. A verseny ideje alatt második elkövetéskor FEKETE LAP a büntetés.  
+1. A páston vagy a páston kívül elkövetett különösen jelentős súlyú rendzavarás esetén a versenybíró a vétkes személyt azonnal kizárhatja vagy kitilthatja.  
 
 #### A negyedik csoportba tartozó vétségek  
 
