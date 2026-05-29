@@ -181,13 +181,13 @@ A következők bírnak fegyelmi hatáskörrel:
 <span id="DIS-2.4"></span>  
 
 **DIS-2.4.1**  
-- A versenybíró nem csak a mérkőzést vezeti, a találatokat bírálja el és a felszerelést ellenőrzi, hanem felelős az általa irányított mérkőzések rendjéért is. (Vö. [GEN-7.2.2]).  
+1. A versenybíró nem csak a mérkőzést vezeti, a találatokat bírálja el és a felszerelést ellenőrzi, hanem felelős az általa irányított mérkőzések rendjéért is. (Vö. [GEN-7.2.2]).  
 
-- Amikor a versenybíró a mérkőzéseket vezeti, a találatokat elbírálja, a szabályok szerint a vívókat vétségeik miatt megbüntetheti a körülmények figyelembevételével előzetes figyelmeztetés után vagy anélkül a ténylegesen adott találat érvénytelenítésével, találat odaítélésével valamelyik vívó terhére amikor találat ténylegesen nem esett, valamint a versenyző adott versenyből való kizárásával. Ezek során a ténymegállapítást tartalmazó döntése nem változtatható meg (Vö. [DIS-5.2.1]).  
+1. Amikor a versenybíró a mérkőzéseket vezeti, a találatokat elbírálja, a szabályok szerint a vívókat vétségeik miatt megbüntetheti a körülmények figyelembevételével előzetes figyelmeztetés után vagy anélkül a ténylegesen adott találat érvénytelenítésével, találat odaítélésével valamelyik vívó terhére amikor találat ténylegesen nem esett, valamint a versenyző adott versenyből való kizárásával. Ezek során a ténymegállapítást tartalmazó döntése nem változtatható meg (Vö. [DIS-5.2.1]).  
 
--A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a Szervező Teamnél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.12]--[DIS-4.1.13], [DIS-4.1.19] t.158-162, t.167, t.168, t.170).  
+1. A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a Szervező Teamnél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.12]--[DIS-4.1.13], [DIS-4.1.19] t.158-162, t.167, t.168, t.170).  
 
-- A versenybíró javasolhat a Szervező Teamnek további megfelelőnek tartott büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. [DIS-2.5.1] /3).  
+1. A versenybíró javasolhat a Szervező Teamnek további megfelelőnek tartott büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. [DIS-2.5.1] /3).  
 
 **DIS-2.4.2**  
 A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte, vagy az MHS ellenőr (ha nincs küldött).  
@@ -268,12 +268,13 @@ Lásd az MHS Fegyelmi Kódexét<!-- (FIE Alapszabály ???. fejezet)-->.
 #### A ténylegesen elért találat meg nem adása  
 
 **DIS-3.2.1**  
-Meg lehet tagadni az érvényes találati felületre bevitt találat megadását, ha az nem a küzdelmi idő alatt történt; ha a vívó a pástról lelépett;<!-- az elektromos felszerelés hibája miatt;--> ha a találat bevitele közben erőszak történt, vagy a szabályokban rögzített bármely más ok miatt (a Technikai Szabályzattal összhangban).  
+Meg lehet tagadni az érvényes találati felületre bevitt találat megadását, ha az nem a küzdelmi idő alatt történt; ha a vívó a pástról lelépett;<!-- az elektromos felszerelés hibája miatt;--> ha a találat bevitele közben erőszak történt, vagy a szabályokban rögzített bármely más ok miatt (Vö.
+[GEN-6.5.2],<!-- [GEN-6.7.4],--> [GEN-6.8.1]--[GEN-6.8.2],<!-- [GEN-6.11.2]/[GEN-6.11.4],--> [GEN-6.14.3], [GEN-7.8.4], [LS-VOR-1.3.4], [LS-COMBAT-1.1.6], [LS-1.1.3], [DIS-1.3.10.2], [DIS-2.4.1] /2, [DIS-4.1.4], [DIS-4.1.19]).  
 
 #### A ténylegesen nem kapott találat megítélése  
 
 **DIS-3.2.2**  
-A vívót találattal lehet büntetni, annak ellenére, hogy ténylegesen találat rajta nem esett, ha a vívó mindkét lábával átlépte a hátsó határvonalat,<!-- (Vö. t.34),--> vagy ha ellenfelét meg nem engedett módon akadályozza a vívásban (ütközéssel párosult lerohanás, fogásos vagy birkózó akciók használata amikor nem megengedett stb.)  
+A vívót találattal lehet büntetni, annak ellenére, hogy ténylegesen találat rajta nem esett, ha a vívó mindkét lábával átlépte a <!--hátsó -->határvonalat, (Vö. [GEN-6.11.5] ), vagy ha ellenfelét meg nem engedett módon akadályozza a vívásban (ütközéssel párosult lerohanás, fegyvertelen kéz használata, fogásos vagy birkózó akciók használata amikor az nem megengedett stb.) (Vö. t.137.2, t.162.1/2, t.165, t.166, t.167.1, [DIS-4.1.19]).  
 
 #### Kizárás  
 

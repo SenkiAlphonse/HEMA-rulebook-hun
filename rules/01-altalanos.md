@@ -517,7 +517,7 @@ Ha a vívó mindkét lábbal kilép a pástról, meg kell semmisíteni mindent, 
 Ugyanakkor a határvonalat csak egy lábbal (másikkal nem vagy csak részben) átlépő vívó találata érvényes marad, ha az akció az "állj!" előtt kezdődött.  
 
 **GEN-6.11.4**  
-Ha az egyik vívó a pást valmelyik határvona teljesen, tehát mindkét lábbal kilép a pástról, akkor csak azt a találatot lehet megítélni, amelyet a páston legalább egy lábbal belül maradó vívó adott, és csakis Hosszúkard--Combat és --Afterblow esetén, még egyidejű találat esetében is. Hosszúkard--Vor esetén a konvenció szabályai irányadóak.   -->
+Ha az egyik vívó két lábbal kilép a pástról, akkor csak azt a találatot lehet megítélni, amelyet a páston legalább egy lábbal belül maradó vívó adott, és csakis Hosszúkard--Combat és --Afterblow esetén, még egyidejű találat esetében is. Hosszúkard--Vor esetén a konvenció szabályai irányadóak.   -->
 
 **GEN-6.11.5**  
 Ha a vívó valamelyik határvonalat teljesen, tehát mindkét lábbal túlhaladja (anélkül hogy a kilépés előtt érvényes találatot adott volna), a versenybíró a következőképpen jár el:  
@@ -656,7 +656,7 @@ Ha az utolsó fordulóra irányadó idő lejártakor pontegyenlőség áll fenn,
 Minden alkalommal amikor a küzdelem megszakad, a vívóknak lehetőségük van megkérdezni, hogy mennyi idejük maradt még vívni.  
 
 **GEN-6.14.2**  
-Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
+Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
 
 **GEN-6.14.3**  
 A szabályos idő letelte után, az időmérőnek "állj!"-t kell kiáltania (vagy hangjelzést kell működtetnie), amely a küzdelmet megállítja és a már elindított, de az idő lejárta után esett találat sem érvényes.  
@@ -708,7 +708,7 @@ Tilos eltalálni a fej hátulját, a gerincet, a térdhajlatot és a lábfejet.
 A távolság vagy a mozdulat szükséges mértékének helytelen felmérése miatt a padló eltalálása első csoportba tartozó szabálytalanság  és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban írt szakaszokban előírt büntetést alkalmazza. (A bíró figyelmen kívül hagyhatja az ellenfél akciója következtében, az ellenfél eltalálása után, vagy véletlenül eső könnyed padló érintéseket).  
 
 **GEN-6.16.5**  
-Tilos a keresztvassal ütni.  
+Tilos keresztvassal vagy kosárral ütni.  
 
 ## A mérkőzés vezetése és a találatok elbírálása  
 <span id="GEN-7"></span>  
@@ -938,33 +938,30 @@ akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, 
 <!-- Ehhez hasonlóan, ha a vívóállásba helyezkedő, vívásra készen álló vívó maszkja nincs megfelelően rögzítve a fején a második biztonsági eszközzel, ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162,
 t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->
 
-**GEN-7.8.4**
-Amennyiben a páston való jelentkezéskor vagy a mérkőzés során megállapítást nyer, hogy a vívó felszerelése:  
+**GEN-7.8.4**   
+1. Amennyiben a páston való jelentkezéskor vagy a mérkőzés során megállapítást nyer, hogy a vívó felszerelése:  
 
-**GEN-7.8.4.1**
-nélkülözi a hitelesítő jelzést. Ilyenkor a versenybíró:  
-- megsemmisíti a vétkes vívó által esetleg adott utolsó találatot,  
-- a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
-**GEN-7.8.4.2**
-az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró:
-- a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
-**GEN-7.8.4.3**
-átment az előzetes hitelesítésen, de csalásra alkalmas  
-**GEN-7.8.4.4**
-viseli a hitelesítő jelet, de az utánzat vagy máshonnan áthelyezett  
-**GEN-7.8.4.5**
-olyan módon szándékosan (tehát nem véletlenből fakadóan vagy a mérkőzés során a körülmények következtében) módosított, hogy az nem menne át az előzetes hitelesítésen  
-<!-- **GEN-7.8.4.6**
-úgy került módosításra, hogy akaratlagosan találatjelzést vagy a találatjelző gép működésképtelenségét lehet vele kiváltani -->
-**GEN-7.8.4.7**
-elektronikus kommunikációt lehetővé tevő felszerelést tartalmaz, amely lehetővé teszi, hogy a vívó a páston kívüli személlyel kommunikáljon.  
+  1. nélkülözi a hitelesítő jelzést. Ilyenkor a versenybíró:  
+    - megsemmisíti a vétkes vívó által esetleg adott utolsó találatot,  
+    - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
-**GEN-7.8.4.8**
-- A versenybíró a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek.  
+  1. az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró:
+  1. a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
-- A szakértő <!--(az Olimpiákon és Világbajnokságokon a SEMI Bizottság tagja) -->tényeket megállapító véleményének beszerzését követően a [DIS-2.1.3]/[DIS-2.1.5] szakaszokban foglalt hátrányok alkalmazása nélkül a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza.  
+  1. átment az előzetes hitelesítésen, de csalásra alkalmas  
 
-**GEN-7.8.4.9**  
-A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.  
+  1. viseli a hitelesítő jelet, de az utánzat vagy máshonnan áthelyezett  
+
+  1. olyan módon szándékosan (tehát nem véletlenből fakadóan vagy a mérkőzés során a körülmények következtében) módosított, hogy az nem menne át az előzetes hitelesítésen  
+<!-- 
+  1. úgy került módosításra, hogy akaratlagosan találatjelzést vagy a találatjelző gép működésképtelenségét lehet vele kiváltani -->
+
+  1. elektronikus kommunikációt lehetővé tevő felszerelést tartalmaz, amely lehetővé teszi, hogy a vívó a páston kívüli személlyel kommunikáljon.  
+
+A versenybíró a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek.  
+
+1. A szakértő <!--(az Olimpiákon és Világbajnokságokon a SEMI Bizottság tagja) -->tényeket megállapító véleményének beszerzését követően a [DIS-2.1.3]/[DIS-2.1.5] szakaszokban foglalt hátrányok alkalmazása nélkül a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza.  
+
+1. A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.  
 
 <!-- t.74. és t.75. név, nemzetiség feltüntetése, ill. pótlása cserélt felszerelésen etc. -->
