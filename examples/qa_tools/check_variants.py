@@ -1,6 +1,6 @@
 import json
 
-with open('rules_index.json', 'r', encoding='utf-8') as f:
+with open('rules_index.json', encoding='utf-8') as f:
     data = json.load(f)
 
 # Find all GEN-6.10.4 and GEN-6.10.5 variants
@@ -18,7 +18,7 @@ vor_rules = [r for r in variants if r['variant'] == 'VOR']
 combat_rules = [r for r in variants if r['variant'] == 'COMBAT']
 afterblow_rules = [r for r in variants if r['variant'] == 'AFTERBLOW']
 
-print(f"\nSummary:")
+print("\nSummary:")
 print(f"VOR rules: {len(vor_rules)}")
 print(f"COMBAT rules: {len(combat_rules)}")
 print(f"AFTERBLOW rules: {len(afterblow_rules)}")

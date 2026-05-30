@@ -63,35 +63,35 @@ def build_rulebook():
     try:
         # Import shared utilities
         from app.utils import create_mistune_markdown, preprocess_rulebook_markdown, read_rulebook_markdown_content
-        
+
         # Create dist directory
         dist_dir = get_dist_dir()
         dist_dir.mkdir(exist_ok=True)
-        
+
         md = create_mistune_markdown()
         all_ok = True
 
         for lang in ("hun", "eng"):
             content = read_rulebook_markdown_content(lang=lang)
-            
+
             if not content:
                 logger.warning(f"⚠ No markdown content found for lang='{lang}'")
                 all_ok = False
                 continue
-            
+
             # Convert to HTML
             processed = preprocess_rulebook_markdown(content)
             html_content = md(processed)
-            
+
             # Write to dist
             output_path = get_prerendered_rulebook_path(lang=lang)
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(html_content)
-            
+
             logger.info(f"✓ Rulebook ({lang}) pre-rendered to {output_path}")
-        
+
         return all_ok
-        
+
     except Exception as e:
         logger.error(f"✗ Build failed: {type(e).__name__}: {e}")
         return False
@@ -100,10 +100,10 @@ def build_rulebook():
 if __name__ == "__main__":
     # Build search index first
     index_success = build_search_index()
-    
+
     # Build rulebook HTML
     rulebook_success = build_rulebook()
-    
+
     # Exit with success only if both succeed
     sys.exit(0 if (index_success and rulebook_success) else 1)
 

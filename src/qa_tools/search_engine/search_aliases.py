@@ -48,10 +48,10 @@ class AliasAwareSearch:
 
     def load_aliases(self, aliases_path: str) -> None:
         """Load aliases from JSON file.
-        
+
         Args:
             aliases_path: Path to the aliases JSON file
-            
+
         Raises:
             Logs warning if file not found, logs error if JSON is invalid
         """
@@ -71,12 +71,12 @@ class AliasAwareSearch:
         for key, aliases in self.aliases.get('variants', {}).items():
             for alias in aliases:
                 self.alias_to_key[alias.lower()] = ('variant', key)
-        
+
         # Map weapon aliases
         for key, aliases in self.aliases.get('weapons', {}).items():
             for alias in aliases:
                 self.alias_to_key[alias.lower()] = ('weapon', key)
-        
+
         # Map concept aliases - store all aliases in concept group
         for concept_key, aliases in self.aliases.get('concepts', {}).items():
             for alias in aliases:
@@ -86,7 +86,7 @@ class AliasAwareSearch:
         """Load the rules index"""
         if not self.index_path.exists():
             raise FileNotFoundError(f"Index not found: {self.index_path}")
-        
+
         try:
             with open(self.index_path, 'r', encoding='utf-8') as f:
                 data = json.load(f)
@@ -95,7 +95,7 @@ class AliasAwareSearch:
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse index JSON: {e}")
             raise RuntimeError(f"Index file corrupted: {e}") from e
-        
+
         logger.info(f"Loaded {len(self.rules)} rules with alias support")
 
     def _deduplicate_rules_by_id(self, rules: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -135,12 +135,12 @@ class AliasAwareSearch:
 
     def _expand_query(self, query: str) -> Tuple[str, Optional[str], Optional[str], List[str], str]:
         """Expand query based on aliases, extracting filters and concept terms.
-        
+
         Analyzes query words to detect variant/weapon filters and concept expansions.
-        
+
         Args:
             query: Original search query
-            
+
         Returns:
             Tuple of (expanded_query, variant_filter, weapon_filter, concept_terms, base_query)
             - expanded_query: Query with concept terms added
@@ -154,14 +154,14 @@ class AliasAwareSearch:
         weapon_filter = None
         concept_terms = []
         remaining_terms = []
-        
+
         # Split query into words
         words = re.findall(r'\w+', query_lower)
-        
+
         for word in words:
             if word in self.alias_to_key:
                 category, key = self.alias_to_key[word]
-                
+
                 if category == 'variant':
                     variant_filter = key
                 elif category == 'weapon':
@@ -171,22 +171,22 @@ class AliasAwareSearch:
                     concept_terms.extend(self.aliases['concepts'][key])
             else:
                 remaining_terms.append(word)
-        
+
         # Build expanded query
         base_query = ' '.join(remaining_terms)
         expanded_query = base_query
         if concept_terms:
             # Add concept terms to search
             expanded_query = expanded_query + ' ' + ' '.join(concept_terms)
-        
+
         return expanded_query.strip(), variant_filter, weapon_filter, concept_terms, base_query.strip()
 
     def _normalize_text(self, text: str) -> str:
         """Normalize text for matching by removing accents and converting to lowercase.
-        
+
         Args:
             text: Text to normalize
-            
+
         Returns:
             Normalized text without diacritics, in lowercase
         """
@@ -208,35 +208,35 @@ class AliasAwareSearch:
         """
         # Expand query based on aliases
         expanded_query, detected_variant, detected_weapon, concept_terms, base_query = self._expand_query(query)
-        
+
         # Use detected filters if not explicitly provided
         if not variant_filter and detected_variant:
             variant_filter = detected_variant
         if not weapon_filter and detected_weapon:
             weapon_filter = detected_weapon
-        
+
         query_lower = expanded_query.lower() if expanded_query else query.lower()
         query_norm = self._normalize_text(query_lower)
         query_terms = self._extract_terms(query_norm)
         required_terms = self._extract_terms(self._normalize_text(base_query)) if base_query else []
 
         results = []
-        
+
         for rule in self.rules:
             # Apply filters with hierarchy:
             # - General rules (weapon_type='general') apply to everything
             # - Weapon-general rules (no variant) apply to all variants of that weapon
             # - Format-specific rules apply only to that variant
-            
+
             rule_weapon = rule.get('weapon_type', 'general')
             rule_variant = rule.get('variant', '')
-            
+
             # If weapon filter is specified
             if weapon_filter:
                 # Exclude if rule is for different weapon (unless rule is general)
                 if rule_weapon != 'general' and rule_weapon != weapon_filter:
                     continue
-            
+
             # If variant filter is specified
             if variant_filter:
                 # Include if: rule is general, OR rule is weapon-general, OR rule matches the variant
@@ -268,22 +268,22 @@ class AliasAwareSearch:
                     variant=rule.get('variant', ''),
                     score=score
                 ))
-        
+
         results.sort(key=lambda x: x.score, reverse=True)
         results = self._deduplicate_results_by_rule_id(results)
-        
+
         # Use default max results if not provided
         if max_results is None:
             max_results = search_config.DEFAULT_MAX_RESULTS
         # Group results and return
         return self._group_and_return_results(results, max_results)
-    
+
     def _group_and_return_results(self, results: List[SearchResult], max_results: int) -> List[SearchResult]:
         """Group level 4-5 results with their parents and children"""
         grouped_results = []
         seen_root_ids = set()
         grouping_multiplier = getattr(search_config, 'GROUPING_MULTIPLIER', 3)
-        
+
         for result in results[:max_results]:
             depth = self.get_rule_depth(result.rule_id)
             # For level 4-5 rules, include parents (up to level 3) and children
@@ -295,14 +295,14 @@ class AliasAwareSearch:
                 if root_id in seen_root_ids:
                     continue
                 seen_root_ids.add(root_id)
-                
+
                 # Collect ALL matched results with the same root (all siblings that matched)
-                siblings = [r for r in results if self.get_rule_lineage(r.rule_id)[1] == root_id 
+                siblings = [r for r in results if self.get_rule_lineage(r.rule_id)[1] == root_id
                            if len(self.get_rule_lineage(r.rule_id)) > 1]
-                
+
                 # Collect the family: parents + all matched siblings + children
                 family = []
-                
+
                 # Add parents (up to level 3)
                 for parent_id in lineage:
                     parent_depth = self.get_rule_depth(parent_id)
@@ -319,12 +319,12 @@ class AliasAwareSearch:
                                 variant=parent_rule.get('variant', ''),
                                 score=result.score  # Inherit score from matched rule
                             ))
-                
+
                 # Add all matched siblings (up to 5 deep)
                 for sibling in siblings:
                     if sibling not in family:
                         family.append(sibling)
-                
+
                 # Sort family by depth and add to results
                 family.sort(key=lambda x: self.get_rule_depth(x.rule_id))
                 grouped_results.extend(family)
@@ -333,22 +333,22 @@ class AliasAwareSearch:
                 grouped_results.append(result)
         grouped_results = self._deduplicate_results_by_rule_id(grouped_results)
         return grouped_results[:max_results * grouping_multiplier]
-    
+
     def _build_rule_family(self, result: SearchResult, lineage: List[str]) -> List[SearchResult]:
         """Build a family of rules: parents + matched rule + children.
-        
+
         For hierarchical display, gathers parent rules (up to level 3),
         the matched rule itself, and child rules (if at level 4).
-        
+
         Args:
             result: The matched SearchResult
             lineage: List of parent rule IDs from get_rule_lineage
-            
+
         Returns:
             List of SearchResult objects forming the rule family
         """
         family = []
-        
+
         # Add parents (up to level 3)
         for parent_id in lineage:
             parent_depth = self.get_rule_depth(parent_id)
@@ -365,10 +365,10 @@ class AliasAwareSearch:
                         variant=parent_rule.get('variant', ''),
                         score=result.score  # Inherit score from matched rule
                     ))
-        
+
         # Add the matched rule itself
         family.append(result)
-        
+
         # Add children (level 5 if we're at level 4, nothing if we're at level 5)
         if self.get_rule_depth(result.rule_id) == 4:
             children = self.get_children_rules(result.rule_id)
@@ -385,17 +385,17 @@ class AliasAwareSearch:
                         variant=child_rule.get('variant', ''),
                         score=result.score  # Inherit score
                     ))
-        
+
         return family
-    
+
     def _extract_terms(self, query: str) -> List[str]:
         """Extract meaningful search terms from query.
-        
+
         Filters out Hungarian and English stop words and short terms.
-        
+
         Args:
             query: Search query string
-            
+
         Returns:
             List of extracted terms (> 2 chars, excluding stop words)
         """
@@ -403,7 +403,7 @@ class AliasAwareSearch:
                      'the', 'a', 'an', 'and', 'or', 'but', 'if', 'is'}
         terms = re.findall(r'\w+', query)
         return [t for t in terms if t not in stop_words and len(t) > 2]
-    
+
     def _calculate_score_with_aliases(self, rule: Dict[str, Any],
                                       query: str, query_norm: str, terms: List[str],
                                       concept_terms: List[str] = None) -> float:
@@ -471,25 +471,25 @@ class AliasAwareSearch:
 
     def get_rule_depth(self, rule_id: str) -> int:
         """Get depth of rule from its ID.
-        
+
         Examples:
             GEN-6.7.4.2 -> depth 4
             LS-AB-1.2.10.2 -> depth 4
         """
         return get_rule_depth(rule_id)
-    
+
     def get_rule_lineage(self, rule_id: str) -> List[str]:
         """Get list of parent rule IDs for a given rule.
-        
+
         Examples:
             GEN-6.7.4.2 -> ["GEN", "GEN-6", "GEN-6.7", "GEN-6.7.4"]
         """
         return get_rule_lineage(rule_id)
-    
+
     def get_children_rules(self, rule_id: str) -> List[str]:
         """Get direct child rule IDs for a given rule."""
         return get_children_rules(rule_id, self.rules)
-    
+
     def get_rule_by_id(self, rule_id: str) -> Optional[Dict[str, Any]]:
         """Get a rule by its ID (case-insensitive)."""
         for rule in self.rules:
@@ -509,21 +509,21 @@ def format_result(result: SearchResult) -> str:
     output.append(f"\n{'='*70}")
     output.append(f"Rule ID: {result.rule_id}")
     output.append(f"Document: {result.document}")
-    
+
     if result.weapon_type and result.weapon_type != 'general':
         output.append(f"Weapon: {result.weapon_type}")
         if result.variant:
             output.append(f"Format: {result.variant}")
     elif result.variant:
         output.append(f"Format: {result.variant}")
-    
+
     output.append(f"\nSection: {result.section}")
     if result.subsection:
         output.append(f"Subsection: {result.subsection}")
-    
+
     output.append(f"\n{result.text[:300]}...")
     output.append(f"\n[Score: {result.score:.1f}]")
-    
+
     return "\n".join(output)
 
 
@@ -532,13 +532,13 @@ def main() -> None:
     current_dir = Path(__file__).parent.parent / "data"
     index_path = current_dir / "rules_index.json"
     aliases_path = current_dir / "aliases.json"
-    
+
     if not index_path.exists():
         print("Error: Index not found. Run parser.py first.")
         return
-    
+
     search = AliasAwareSearch(str(index_path), str(aliases_path))
-    
+
     print("\n" + "="*70)
     print("HEMA Rulebook Search - Alias-Aware")
     print("="*70)
@@ -553,20 +553,20 @@ def main() -> None:
     print("  - search longsword <query>")
     print("  - quit to exit")
     print("-"*70)
-    
+
     while True:
         try:
             cmd = input("\nQuery: ").strip()
-            
+
             if not cmd or cmd.lower() in ['quit', 'exit', 'q']:
                 print("Goodbye!")
                 break
-            
+
             parts = cmd.split(maxsplit=1)
             variant_filter = None
             weapon_filter = None
             query = cmd
-            
+
             # Check for filters
             if parts[0].upper() in ['VOR', 'COMBAT', 'AFTERBLOW']:
                 variant_filter = parts[0].upper()
@@ -574,23 +574,23 @@ def main() -> None:
             elif parts[0].lower() in ['longsword', 'rapier', 'padded']:
                 weapon_filter = parts[0].lower() if parts[0].lower() != 'padded' else 'padded_weapons'
                 query = parts[1] if len(parts) > 1 else ""
-            
+
             if not query:
                 print("Please enter a query.")
                 continue
-            
-            results = search.search(query, max_results=5, 
+
+            results = search.search(query, max_results=5,
                                    variant_filter=variant_filter,
                                    weapon_filter=weapon_filter)
-            
+
             if not results:
                 print("\nNo results found. Try different keywords or aliases.")
                 continue
-            
+
             print(f"\nFound {len(results)} results:")
             for result in results:
                 print(format_result(result))
-        
+
         except KeyboardInterrupt:
             print("\n\nGoodbye!")
             break

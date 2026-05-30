@@ -4,13 +4,11 @@ Search blueprint - handles search, stats, and rule lookup endpoints
 
 import logging
 from typing import Any
-from flask import Blueprint, request, jsonify, current_app, Response
-from app.utils import (
-    normalize_filter, build_document_order, filter_rules_for_extract, format_extract_text
-)
-from app.validation import (
-    validate_query, validate_filter, validate_max_results, sanitize_query
-)
+
+from flask import Blueprint, Response, current_app, jsonify, request
+
+from app.utils import filter_rules_for_extract, format_extract_text, normalize_filter
+from app.validation import sanitize_query, validate_filter, validate_max_results, validate_query
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -38,7 +36,7 @@ def _get_engine_for_lang(lang: str):
 @search_bp.route('/search', methods=['POST'])
 def api_search() -> Any:
     """Search for rules by keyword
-    
+
     For level 4-5 rules, returns grouped results with parent context and child rules.
     Each result includes a depth indicator and group_root for hierarchical organization.
     """
@@ -49,34 +47,34 @@ def api_search() -> Any:
 
         rules_lang = _resolve_rules_lang(data)
         search_engine = _get_engine_for_lang(rules_lang)
-            
+
         query = data.get("query", "").strip()
-        
+
         # Validate query
         is_valid, error_msg = validate_query(query)
         if not is_valid:
             return jsonify({"error": error_msg}), 400
-        
+
         # Sanitize query
         query = sanitize_query(query)
-        
+
         # Validate and parse max_results
         try:
             max_results_raw = data.get("max_results", 100)
             max_results = int(max_results_raw) if max_results_raw is not None else 100
         except (ValueError, TypeError):
             return jsonify({"error": f"max_results must be an integer, got {max_results_raw}"}), 400
-        
+
         is_valid, error_msg = validate_max_results(max_results)
         if not is_valid:
             return jsonify({"error": error_msg}), 400
-        
+
         # Validate filters
         variant_filter = data.get("variant_filter")
         is_valid, error_msg = validate_filter(variant_filter, current_app.config['VARIANTS'])
         if not is_valid:
             return jsonify({"error": error_msg}), 400
-        
+
         weapon_filter = data.get("weapon_filter")
         is_valid, error_msg = validate_filter(weapon_filter, current_app.config['WEAPONS'])
         if not is_valid:
@@ -93,10 +91,10 @@ def api_search() -> Any:
         # Convert results to JSON with depth and grouping info
         results_data = []
         current_group = None
-        
+
         for r in results:
             depth = search_engine.get_rule_depth(r.rule_id)
-            
+
             # Determine group root for hierarchy visualization
             if depth >= 4:
                 # For level 4-5 rules, find the main parent (depth 2)
@@ -106,7 +104,7 @@ def api_search() -> Any:
             else:
                 # For levels 1-3, the rule itself is a group anchor
                 current_group = r.rule_id
-            
+
             results_data.append({
                 "rule_id": r.rule_id,
                 "text": r.text,
@@ -169,7 +167,7 @@ def api_extract() -> Any:
         data = request.get_json() or {}
         rules_lang = _resolve_rules_lang(data)
         search_engine = _get_engine_for_lang(rules_lang)
-            
+
         weapon_filter = normalize_filter(data.get("weapon_filter"), current_app.config['WEAPONS'])
         variant_filter = normalize_filter(data.get("variant_filter"), current_app.config['VARIANTS'])
 
@@ -213,7 +211,7 @@ def api_rule(rule_id: str) -> Any:
         is_valid, error_msg = validate_rule_id(rule_id)
         if not is_valid:
             return jsonify({"error": error_msg}), 400
-        
+
         rule = search_engine.get_rule_by_id(rule_id)
         if rule:
             return jsonify({

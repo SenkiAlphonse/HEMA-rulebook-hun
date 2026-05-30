@@ -3,13 +3,12 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import List
 
 
 def _find_project_root(start: Path) -> Path:
     """Find repo root by walking up until expected folders exist."""
     start = start.resolve()
-    for candidate in [start] + list(start.parents):
+    for candidate in [start, *list(start.parents)]:
         # Heuristics: these directories/files are expected at repo root.
         if (candidate / "rules").is_dir() and (candidate / "templates").is_dir() and (candidate / "requirements.txt").exists():
             return candidate
@@ -84,17 +83,17 @@ def get_aliases_path(lang: str = "hun") -> Path:
         return lang_alias_path
     return search_dir / "aliases.json"
 
-def get_rulebook_markdown_files() -> List[Path]:
+def get_rulebook_markdown_files() -> list[Path]:
     """Get all numbered markdown rulebook files from root directory"""
     rulebook_dir = get_rulebook_dir()
     md_files = sorted(rulebook_dir.glob("[0-9][0-9]*.md"))
-    
+
     # Filter out README and other non-rulebook files
     md_files = [f for f in md_files if f.name != "README.md"]
-    
+
     return md_files
 
-def get_rulebook_markdown_files_en() -> List[Path]:
+def get_rulebook_markdown_files_en() -> list[Path]:
     """Get all numbered English markdown rulebook files"""
     rulebook_dir = get_rulebook_en_dir()
     md_files = sorted(rulebook_dir.glob("[0-9][0-9]*.md"))
@@ -103,7 +102,7 @@ def get_rulebook_markdown_files_en() -> List[Path]:
 
 def get_prerendered_rulebook_path(lang: str = "hun") -> Path:
     """Get path to pre-rendered rulebook HTML.
-    
+
     Args:
         lang: Language code, 'hun' (Hungarian) or 'eng' (English). Defaults to 'hun'.
     """

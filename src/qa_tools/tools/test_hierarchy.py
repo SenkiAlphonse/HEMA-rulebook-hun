@@ -19,7 +19,7 @@ for rule_id in samples:
         if r['rule_id'] == rule_id:
             found = r
             break
-    
+
     if found:
         print(f"\nRule: {found['rule_id']}")
         print(f"  Depth: {found.get('depth')}")

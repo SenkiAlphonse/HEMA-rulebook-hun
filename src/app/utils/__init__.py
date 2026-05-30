@@ -7,22 +7,22 @@ All utilities have been moved to submodules:
 - extract_utils: Rule extraction and formatting
 """
 
-from .markdown_utils import preprocess_rulebook_markdown, RuleIDRenderer, create_mistune_markdown
-from .filter_utils import normalize_filter
 from .extract_utils import (
     build_document_order,
-    read_rulebook_markdown_content,
     filter_rules_for_extract,
-    format_extract_text
+    format_extract_text,
+    read_rulebook_markdown_content,
 )
+from .filter_utils import normalize_filter
+from .markdown_utils import RuleIDRenderer, create_mistune_markdown, preprocess_rulebook_markdown
 
 __all__ = [
-    'preprocess_rulebook_markdown',
-    'RuleIDRenderer',
-    'create_mistune_markdown',
-    'normalize_filter',
-    'build_document_order',
-    'read_rulebook_markdown_content',
-    'filter_rules_for_extract',
-    'format_extract_text'
+    "RuleIDRenderer",
+    "build_document_order",
+    "create_mistune_markdown",
+    "filter_rules_for_extract",
+    "format_extract_text",
+    "normalize_filter",
+    "preprocess_rulebook_markdown",
+    "read_rulebook_markdown_content",
 ]

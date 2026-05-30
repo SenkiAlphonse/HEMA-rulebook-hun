@@ -1,10 +1,10 @@
 """
 Rule extraction and formatting utilities for HEMA rulebook app.
 """
-from typing import Any, Dict, List, Optional
+from typing import Any
 
 
-def build_document_order(rules: List[Dict[str, Any]]) -> Dict[str, int]:
+def build_document_order(rules: list[dict[str, Any]]) -> dict[str, int]:
     """Build a mapping of document names to sequence index for sorting"""
     order = {}
     next_index = 0
@@ -20,10 +20,10 @@ def read_rulebook_markdown_content(lang: str = "hun") -> str:
     """
     Read and concatenate all rulebook markdown files.
     Shared utility to eliminate duplication between build.py and rulebook.py
-    
+
     Args:
         lang: Language code, 'hun' (Hungarian, default) or 'eng' (English).
-    
+
     Returns:
         Concatenated markdown content with separator sections
     """
@@ -33,22 +33,22 @@ def read_rulebook_markdown_content(lang: str = "hun") -> str:
     else:
         from app.config import get_rulebook_markdown_files
         md_files = get_rulebook_markdown_files()
-    
+
     content = ""
-    
+
     for md_file in md_files:
         if md_file.exists():
-            with open(md_file, 'r', encoding='utf-8') as f:
+            with open(md_file, encoding='utf-8') as f:
                 content += f.read() + "\n\n---\n\n"
-    
+
     return content
 
 
 def filter_rules_for_extract(
-    rules: List[Dict[str, Any]],
-    weapon_filter: Optional[str],
-    variant_filter: Optional[str]
-) -> List[Dict[str, Any]]:
+    rules: list[dict[str, Any]],
+    weapon_filter: str | None,
+    variant_filter: str | None
+) -> list[dict[str, Any]]:
     """Filter rules by weapon type and variant"""
     filtered = []
     for rule in rules:
@@ -66,9 +66,9 @@ def filter_rules_for_extract(
 
 
 def format_extract_text(
-    rules: List[Dict[str, Any]],
-    weapon_filter: Optional[str],
-    variant_filter: Optional[str]
+    rules: list[dict[str, Any]],
+    weapon_filter: str | None,
+    variant_filter: str | None
 ) -> str:
     """Format filtered rules into markdown extract"""
     title_parts = ["Rulebook Extract"]

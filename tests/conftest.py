@@ -120,14 +120,14 @@ def sample_rules_index(tmp_path, sample_rules) -> Path:
     index_data = {
         "rules": sample_rules,
         "total_rules": len(sample_rules),
-        "documents": ["01-altalanos.md", "02.a-hosszukard-VOR.md", 
+        "documents": ["01-altalanos.md", "02.a-hosszukard-VOR.md",
                      "02.b-hosszukard-COMBAT.md", "02.c-hosszukard-AFTERBLOW.md"]
     }
-    
+
     index_file = tmp_path / "rules_index.json"
     with open(index_file, 'w', encoding='utf-8') as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
-    
+
     return index_file
 
 

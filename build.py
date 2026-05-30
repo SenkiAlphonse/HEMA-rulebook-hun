@@ -12,7 +12,7 @@ import runpy
 
 from tools.build import build_rulebook, build_search_index
 
-__all__ = ["build_search_index", "build_rulebook"]
+__all__ = ["build_rulebook", "build_search_index"]
 
 
 if __name__ == "__main__":

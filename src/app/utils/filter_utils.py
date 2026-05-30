@@ -1,10 +1,8 @@
 """
 Filtering and normalization utilities for HEMA rulebook app.
 """
-from typing import Optional, List
 
-
-def normalize_filter(value: Optional[str], allowed: List[str]) -> Optional[str]:
+def normalize_filter(value: str | None, allowed: list[str]) -> str | None:
     """Validate and normalize filter values"""
     if value:
         value_upper = value.upper()

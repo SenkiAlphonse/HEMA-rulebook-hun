@@ -2,7 +2,8 @@
 Rulebook blueprint - handles full rulebook display and API endpoints
 """
 
-from flask import Blueprint, render_template, jsonify, current_app, request, abort
+from flask import Blueprint, abort, current_app, jsonify, render_template, request
+
 from app.config import get_prerendered_rulebook_path
 
 rulebook_bp = Blueprint('rulebook', __name__)
@@ -18,7 +19,7 @@ def rulebook():
         abort(400, description=f"Invalid lang '{lang}'. Use 'hun' or 'eng'.")
 
     dist_path = get_prerendered_rulebook_path(lang=lang)
-    with open(dist_path, 'r', encoding='utf-8') as f:
+    with open(dist_path, encoding='utf-8') as f:
         html_content = f.read()
 
     return render_template("rulebook.html", markdown_content=html_content)

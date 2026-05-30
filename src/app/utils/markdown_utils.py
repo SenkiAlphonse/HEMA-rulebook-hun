@@ -2,7 +2,9 @@
 Markdown preprocessing and custom renderer utilities for HEMA rulebook app.
 """
 import re
+
 import mistune
+
 from qa_tools.search_engine.search_utils import get_rule_depth
 
 
@@ -16,7 +18,7 @@ def preprocess_rulebook_markdown(text: str) -> str:
     """
     # Remove HTML comments (<!-- ... -->)
     text = re.sub(r'<!--.*?-->', '', text, flags=re.DOTALL)
-    
+
     # Preserve anchor spans by attaching them to headers
     # Convert pattern: heading \n <span id="ID"></span> → heading {anchor:ID}
     # This format survives Mistune's inline markdown processing
@@ -47,9 +49,9 @@ def preprocess_rulebook_markdown(text: str) -> str:
                 result.append(line)
             i += 1
         return '\n'.join(result)
-    
+
     text = preserve_header_anchors(text)
-    
+
     # Convert rule ID references [RULE-ID] to clickable links
     # Pattern: [GEN-6.2.4] → <a href="#GEN-6.2.4" class="rule-ref" data-rule-id="GEN-6.2.4">GEN-6.2.4</a>
     # Supports multi-part prefixes like LS-VOR-1.1.3, LS-COMBAT-1.2.1.1, LS-AB-1.2.10.2
@@ -58,29 +60,29 @@ def preprocess_rulebook_markdown(text: str) -> str:
         r'<a href="#\1" class="rule-ref" data-rule-id="\1">\1</a>',
         text
     )
-    
+
     # Convert rule ID hard breaks to double newlines
     # Pattern: **RULE-ID**␠␠\n → **RULE-ID**\n\n
     # Supports multi-part prefixes
     text = re.sub(r'(\*\*[A-Z]+(?:-[A-Z]+)*-[\d\.]+\*\*)  \r?\n', r'\1\n\n', text)
-    
+
     return text
 
 
 class RuleIDRenderer(mistune.HTMLRenderer):
     """Custom Mistune renderer that adds CSS classes to rule IDs for indentation"""
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.last_rule_depth = 0  # Track the depth of the last rule ID encountered
-    
+
     def heading(self, text: str, level: int, **kwargs) -> str:
         """Override heading rendering to attach anchor IDs from preserved headers"""
         # Extract anchor ID from heading text using pattern {anchor:ID}
         # The pattern is appended to the heading text during preprocessing
         anchor_id = None
         cleaned_text = text
-        
+
         # Match pattern: ... {anchor:SOME-ID}
         # Curly braces are preserved through Mistune's inline markdown processing
         anchor_pattern = re.compile(r'\s*\{anchor:([^}]+)\}\s*$')
@@ -89,11 +91,11 @@ class RuleIDRenderer(mistune.HTMLRenderer):
             anchor_id = match.group(1)
             # Remove the {anchor:...} pattern from the heading text
             cleaned_text = anchor_pattern.sub('', text)
-        
+
         # Build heading with optional ID
         id_attr = f' id="{anchor_id}"' if anchor_id else ''
         return f'<h{level}{id_attr}>{cleaned_text}</h{level}>\n'
-    
+
     def paragraph(self, text: str) -> str:
         """Override paragraph rendering to detect and style rule IDs"""
         # Match paragraphs that start with a rule ID
@@ -104,15 +106,15 @@ class RuleIDRenderer(mistune.HTMLRenderer):
             if '-' in rule_id and rule_id.split('-')[0].isalpha():
                 depth = get_rule_depth(rule_id)
                 self.last_rule_depth = depth  # Remember this depth for following paragraphs
-                
+
                 # Apply indent class for depth 4 and 5
                 indent_class = f'rule-depth-{depth}' if depth >= 4 else ''
                 class_attr = f'rule-id {indent_class}' if indent_class else 'rule-id'
-                
+
                 # Reset tracking if we encounter a shallower rule (parent/sibling level)
                 if depth < 4:
                     self.last_rule_depth = 0
-                
+
                 # Add an anchor ID for navigation
                 return f'<p class="{class_attr}" id="{rule_id}">{text}</p>\n'
 
@@ -120,15 +122,15 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         if self.last_rule_depth >= 4:
             indent_class = f'rule-depth-{self.last_rule_depth}'
             return f'<p class="{indent_class}">{text}</p>\n'
-        
+
         # Regular paragraph without indentation
         return f'<p>{text}</p>\n'
-    
+
     def list(self, text: str, ordered: bool, **kwargs) -> str:
         """Override list rendering to add bullet-list CSS class"""
         # Extract known parameters, ignore others
         start = kwargs.get('start', None)
-        
+
         if ordered:
             tag = 'ol'
             extra = f' start="{start}"' if start is not None else ''
@@ -136,7 +138,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
             tag = 'ul'
             extra = ' class="bullet-list"'
         return f'<{tag}{extra}>\n{text}</{tag}>\n'
-    
+
     def block_html(self, text: str) -> str:
         """Override block HTML to filter out comments and anchor spans"""
         stripped = text.strip()
@@ -145,7 +147,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
         if stripped.startswith('<span') and 'id=' in stripped:
             return ''
         return text
-    
+
     def inline_html(self, html: str) -> str:
         """Override inline HTML to preserve rule reference links but filter comments and spans"""
         # Filter out HTML comments

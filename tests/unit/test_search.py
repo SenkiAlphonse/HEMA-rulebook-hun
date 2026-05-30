@@ -117,7 +117,7 @@ class TestRulebookSearch:
         search_engine = AliasAwareSearch(str(real_index))
         results = search_engine.search("özbetám", max_results=20)
         found_ids = {r.rule_id for r in results}
-        
+
         # These rules should all be present if the substring is matched in text_plain
         expected = {"GEN-3.2.5.1", "GEN-3.2.5.2", "GEN-3.2.5.3"}
         assert expected.issubset(found_ids), f"Missing: {expected - found_ids}"

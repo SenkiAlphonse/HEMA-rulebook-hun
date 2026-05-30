@@ -15,23 +15,23 @@ def main():
         print("  python demo_search.py 'valid target areas'")
         print("  python demo_search.py 'GEN-1.1.1'")
         return
-    
+
     query = " ".join(sys.argv[1:])
-    
+
     # Initialize search
     index_path = Path(__file__).parent / "rules_index.json"
     search_engine = RulebookSearch(str(index_path))
-    
+
     # Search
     print(f"\nSearching for: '{query}'\n")
     results = search_engine.search(query, max_results=3)
-    
+
     if not results:
         print("No results found. Try different keywords.")
         return
-    
+
     print(f"Found {len(results)} results:\n")
-    
+
     for result in results:
         print(format_result(result))
 
