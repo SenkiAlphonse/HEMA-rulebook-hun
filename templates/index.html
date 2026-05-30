@@ -484,7 +484,6 @@
             color: #34495e;
             line-height: 1.7;
             margin-bottom: 12px;
-            white-space: pre-wrap;
             word-wrap: break-word;
             font-size: 0.95em;
         }
@@ -495,7 +494,14 @@
             padding-left: 0;
         }
 
-        .result-text ul.search-list li {
+        .result-text ol.search-list {
+            list-style-type: decimal;
+            margin: 0.5rem 0 0.5rem 1.5rem;
+            padding-left: 0;
+        }
+
+        .result-text ul.search-list li,
+        .result-text ol.search-list li {
             margin-bottom: 0.4rem;
             line-height: 1.6;
         }
@@ -1204,12 +1210,28 @@
             const lines = html.split(/\n/);
             const result = [];
             let inBulletList = false;
+            let inOrderedList = false;
             
             for (let i = 0; i < lines.length; i++) {
                 let line = lines[i];
                 
+                // Check if this line starts a numbered list item (1. 2. 3. … or all-1. style)
+                if (line.match(/^\d+\. /)) {
+                    // Close bullet list if switching
+                    if (inBulletList) { result.push('</ul>'); inBulletList = false; }
+                    if (!inOrderedList) {
+                        result.push('<ol class="search-list">');
+                        inOrderedList = true;
+                    }
+                    line = line.replace(/^\d+\. (.+)$/, (match, content) => {
+                        content = convertMarkdownFormatting(content);
+                        return `<li>${content}</li>`;
+                    });
+                    result.push(line);
                 // Check if this line starts a bullet point
-                if (line.match(/^- /)) {
+                } else if (line.match(/^- /)) {
+                    // Close ordered list if switching
+                    if (inOrderedList) { result.push('</ol>'); inOrderedList = false; }
                     if (!inBulletList) {
                         result.push('<ul class="search-list">');
                         inBulletList = true;
@@ -1222,10 +1244,14 @@
                     });
                     result.push(line);
                 } else {
-                    // End bullet list if we hit a non-bullet line
+                    // End bullet or ordered list if we hit a non-list line
                     if (inBulletList && line.trim() !== '') {
                         result.push('</ul>');
                         inBulletList = false;
+                    }
+                    if (inOrderedList && line.trim() !== '') {
+                        result.push('</ol>');
+                        inOrderedList = false;
                     }
                     
                     // Skip empty lines within the text
@@ -1237,9 +1263,12 @@
                 }
             }
             
-            // Close bullet list if still open
+            // Close any open list
             if (inBulletList) {
                 result.push('</ul>');
+            }
+            if (inOrderedList) {
+                result.push('</ol>');
             }
             
             return result.join('<br>');
