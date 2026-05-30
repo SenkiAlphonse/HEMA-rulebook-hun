@@ -34,7 +34,7 @@ class SearchResult:
 class AliasAwareSearch:
     """Search engine with alias support for HEMA rulebook"""
 
-    def __init__(self, index_path: str, aliases_path: str = None):
+    def __init__(self, index_path: str, aliases_path: str | None = None):
         self.index_path = Path(index_path)
         self.rules = []
         self.aliases = {}
@@ -205,9 +205,9 @@ class AliasAwareSearch:
     def search(
         self,
         query: str,
-        max_results: int = None,
-        variant_filter: str = None,
-        weapon_filter: str = None,
+        max_results: int | None = None,
+        variant_filter: str | None = None,
+        weapon_filter: str | None = None,
     ) -> list[SearchResult]:
         """
         Search with alias awareness and query expansion
@@ -246,16 +246,12 @@ class AliasAwareSearch:
             rule_variant = rule.get("variant", "")
 
             # If weapon filter is specified
-            if weapon_filter:
-                # Exclude if rule is for different weapon (unless rule is general)
-                if rule_weapon != "general" and rule_weapon != weapon_filter:
-                    continue
+            if weapon_filter and rule_weapon != "general" and rule_weapon != weapon_filter:
+                continue
 
             # If variant filter is specified
-            if variant_filter:
-                # Include if: rule is general, OR rule is weapon-general, OR rule matches the variant
-                if rule_weapon != "general" and rule_variant and rule_variant != variant_filter:
-                    continue
+            if variant_filter and rule_weapon != "general" and rule_variant and rule_variant != variant_filter:
+                continue
 
             # Require all base query terms to appear somewhere
             if required_terms:
@@ -461,7 +457,7 @@ class AliasAwareSearch:
         query: str,
         query_norm: str,
         terms: list[str],
-        concept_terms: list[str] = None,
+        concept_terms: list[str] | None = None,
     ) -> float:
         """Calculate score including alias matches"""
         score = 0.0
