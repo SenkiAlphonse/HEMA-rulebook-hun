@@ -150,7 +150,7 @@ class RulebookParser:
                     rule_text_lines = []
 
                 level = len(heading_match.group(1))
-                title = heading_match.group(2).strip()
+                title = self.comment_pattern.sub("", heading_match.group(2)).strip()
 
                 if level == 1:
                     current_section = title

@@ -587,6 +587,25 @@
             transform: translateY(-1px);
         }
 
+        .show-less-btn {
+            display: block;
+            margin: 8px auto 28px;
+            padding: 8px 24px;
+            background: transparent;
+            color: #7f8c8d;
+            border: 1.5px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 0.85em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+
+        .show-less-btn:hover {
+            color: #34495e;
+            border-color: #7f8c8d;
+        }
+
         @media (max-width: 768px) {
             .form-row {
                 grid-template-columns: 1fr;
@@ -818,6 +837,7 @@
                 subsectionLabel: 'Subsection',
                 loadMore: 'Load More',
                 remaining: 'remaining',
+                showLess: 'Show Less',
                 allWeaponsTag: 'General',
                 allVariantsTag: 'All Variants',
                 extractFilenamePrefix: 'rulebook-extract',
@@ -873,6 +893,7 @@
                 subsectionLabel: 'Alszakasz',
                 loadMore: 'További találatok',
                 remaining: 'hátralévő',
+                showLess: 'Kevesebb',
                 allWeaponsTag: 'Általános',
                 allVariantsTag: 'Minden változat',
                 extractFilenamePrefix: 'szabalykivonat',
@@ -1163,21 +1184,22 @@
                 `;
             });
 
-            // Append new results
-            const headerElement = resultsDiv.querySelector('h2');
-            if (headerElement) {
-                headerElement.insertAdjacentHTML('afterend', html);
-            } else {
-                resultsDiv.innerHTML = html;
+            // Append new results into a stable content area (keeps header intact)
+            let contentArea = document.getElementById('resultsContent');
+            if (!contentArea) {
+                contentArea = document.createElement('div');
+                contentArea.id = 'resultsContent';
+                resultsDiv.appendChild(contentArea);
             }
+            contentArea.insertAdjacentHTML('beforeend', html);
 
             displayedCount = endIndex;
 
-            // Add or update Load More button
-            const existingButton = document.getElementById('loadMoreBtn');
-            if (existingButton) {
-                existingButton.remove();
-            }
+            // Remove existing nav buttons
+            ['loadMoreBtn', 'showLessBtn'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.remove();
+            });
 
             if (displayedCount < allResults.length) {
                 const loadMoreBtn = document.createElement('button');
@@ -1187,6 +1209,23 @@
                 loadMoreBtn.onclick = displayResults;
                 resultsDiv.appendChild(loadMoreBtn);
             }
+
+            if (displayedCount > RESULTS_PER_PAGE) {
+                const showLessBtn = document.createElement('button');
+                showLessBtn.id = 'showLessBtn';
+                showLessBtn.className = 'show-less-btn';
+                showLessBtn.textContent = t('showLess');
+                showLessBtn.onclick = collapseResults;
+                resultsDiv.appendChild(showLessBtn);
+            }
+        }
+
+        function collapseResults() {
+            const contentArea = document.getElementById('resultsContent');
+            if (contentArea) contentArea.innerHTML = '';
+            displayedCount = 0;
+            displayResults();
+            resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         function escapeHtml(text) {

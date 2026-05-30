@@ -181,7 +181,7 @@ A következők bírnak fegyelmi hatáskörrel:
 
 1. Amikor a versenybíró a mérkőzéseket vezeti, a találatokat elbírálja, a szabályok szerint a vívókat vétségeik miatt megbüntetheti a körülmények figyelembevételével előzetes figyelmeztetés után vagy anélkül a ténylegesen adott találat érvénytelenítésével, találat odaítélésével valamelyik vívó terhére amikor találat ténylegesen nem esett, valamint a versenyző adott versenyből való kizárásával. Ezek során a ténymegállapítást tartalmazó döntése nem változtatható meg (Vö. [DIS-5.2.1]).  
 
-1. A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a Szervező Teamnél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.12]--[DIS-4.1.13], [DIS-4.1.18] t.158-162, t.167, t.168, t.170).  
+1. A versenybíró hatásköre kiterjed a versenyen résztvevő vagy közreműködő valamennyi vívóra. Javasolhatja a Szervező Teamnél bárki kiutasítását a verseny helyszínéről, ideértve a nézőt, az edzőt vagy más kísérőt (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.12]--[DIS-4.1.13], [DIS-4.1.18] ).  
 
 1. A versenybíró javasolhat a Szervező Teamnek további megfelelőnek tartott büntetést (az egész versenyből való kizárást, felfüggesztést vagy diszkvalifikálást) (Vö. [DIS-2.5.1] /3).  
 
