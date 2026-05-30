@@ -14,15 +14,18 @@ A hosszúkard szúró- és vágófegyver.
 A penge lapjával, hosszú és rövid élével, illetve hegyével végrehajtott minden vágás illetve a szúrás megfelelő, amennyiben úgy hajtják végre, hogy az, éles fegyvert feltételezve, egy védőruházat nélküli ellenfélnek sérülést okozna. A lappal végrehajtott találat érvényesnek tekinthető, ha koordinált és hatásos akció eredménye.  
 
 **LS-1.1.3**  
-A pengén keresztül történő vágások, amelyek egyidejűleg találják a test érvényes találati felületét és az ellenfél fegyverét, érvényesek olyankor amikor tisztán az érvényes találati felületre érkeznek.  
-
-**LS-1.1.3**  
-A markolatgombbal végrehajtott találatok érvényesek, ha az ellenfél maszkjának borítás nélküli rostélyát találják el jelzés értékűen -akár a gombot kesztyűvel eltakarva- és biztonságosan kivitelezve. A szükségtelen erővel végrehajtott markolatgomb akciók a szabálytalanságok második csoportjában foglaltak szerint büntetendő.  
+Tilos a kard keresztvasával találatot bevinni. A kard kosarával végrehajtott minden találatot meg kell semmisíteni és az ilyen találatot adó vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszok szerint kell büntetni.
 
 **LS-1.1.4**  
-Mindhárom fegyvernemben kizárólag a fegyverrel lehet végrehajtani védekező akciót, kivéve, ha a felek a fogásos és birkózó akciókat engedélyezték (V.ö.:03-altalanos/A közelharc szabályai).  
+A pengén keresztül történő vágások, amelyek egyidejűleg találják a test érvényes találati felületét és az ellenfél fegyverét, érvényesek olyankor amikor tisztán az érvényes találati felületre érkeznek.  
 
 **LS-1.1.5**  
+A markolatgombbal végrehajtott találatok érvényesek, ha az ellenfél maszkjának borítás nélküli rostélyát találják el jelzés értékűen -akár a gombot kesztyűvel eltakarva- és biztonságosan kivitelezve. A szükségtelen erővel végrehajtott markolatgomb akciók a szabálytalanságok második csoportjában foglaltak szerint büntetendő.  
+
+**LS-1.1.6**  
+Mindhárom fegyvernemben kizárólag a fegyverrel lehet végrehajtani védekező akciót, kivéve, ha a felek a fogásos és birkózó akciókat engedélyezték (V.ö.:03-altalanos/A közelharc szabályai).  
+
+**LS-1.1.7**  
 A fegyvert nem lehet – állandóan vagy ideiglenesen, láthatóan vagy leplezve – hajítófegyverként használni. A fegyvert úgy kell kezelni, hogy legalább egy kéz folytonosan a markolaton legyen.  
 
 ### Érvényes találati felület  

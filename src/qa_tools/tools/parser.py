@@ -185,9 +185,13 @@ class RulebookParser:
             if current_rule_id:
                 stripped = line.strip()
                 if stripped and not stripped.startswith('---'):
-                    # Remove HTML comments
-                    cleaned = self.comment_pattern.sub('', stripped).strip()
-                    if cleaned:  # Only add if there's content after removing comments
+                    # Preserve leading whitespace for indented list items so
+                    # multilevel nested lists keep their nesting depth
+                    if line.lstrip() != line:
+                        cleaned = self.comment_pattern.sub('', line.rstrip())
+                    else:
+                        cleaned = self.comment_pattern.sub('', stripped).strip()
+                    if cleaned.strip():  # Only add if there's content after removing comments
                         rule_text_lines.append(cleaned)
         
         # Save last rule if exists
