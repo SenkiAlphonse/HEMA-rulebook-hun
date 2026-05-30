@@ -3,6 +3,7 @@ Unit tests for RulebookParser class
 """
 
 import pytest
+
 from qa_tools.tools.parser import RulebookParser
 
 

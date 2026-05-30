@@ -6,7 +6,7 @@ The actual implementation lives in `tools/setup_check.py`.
 
 from __future__ import annotations
 
-import runpy
+import runpy  # noqa: I001
 
 
 if __name__ == "__main__":

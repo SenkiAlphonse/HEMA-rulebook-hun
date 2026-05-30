@@ -3,16 +3,14 @@ HEMA Rulebook Parser
 Extracts structured rule data from markdown files
 """
 
+import json
+import re
+from dataclasses import asdict, dataclass
 from pathlib import Path
+from typing import Any
 
 from app.config import get_project_root, get_rules_index_path
 from app.utils.strip_markdown import strip_markdown
-
-import re
-import json
-from pathlib import Path
-from typing import List, Dict, Any
-from dataclasses import dataclass, asdict
 
 
 @dataclass
@@ -28,15 +26,15 @@ class Rule:
     text_plain: str = ""  # Plain text for search (no formatting)
     weapon_type: str = ""  # e.g., "longsword", "rapier", or "general"
     variant: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
-    references_to: List[str] = None  # Rule IDs referenced BY this rule
-    references_from: List[str] = None  # Rule IDs that reference THIS rule
+    references_to: list[str] = None  # Rule IDs referenced BY this rule
+    references_from: list[str] = None  # Rule IDs that reference THIS rule
     # Hierarchy metadata (computed at parse time)
     parent_id: str = ""  # Direct parent rule ID (e.g., "GEN-3.2.1" for "GEN-3.2.1.1")
-    child_ids: List[str] = None  # All direct child rule IDs
-    lineage: List[str] = None  # Path from root to parent (e.g., ["GEN", "GEN-3", "GEN-3.2"])
+    child_ids: list[str] = None  # All direct child rule IDs
+    lineage: list[str] = None  # Path from root to parent (e.g., ["GEN", "GEN-3", "GEN-3.2"])
     depth: int = 0  # Nesting level (1=top, 5=deepest)
     is_leaf: bool = True  # True if no children
-    sibling_ids: List[str] = None  # Direct siblings (same parent)
+    sibling_ids: list[str] = None  # Direct siblings (same parent)
     language: str = "hun"  # Index language code (hun/eng)
 
     def __post_init__(self):
@@ -58,7 +56,7 @@ class Section:
     title: str
     anchor_id: str
     level: int  # 1 for #, 2 for ##, etc.
-    rules: List[Rule]
+    rules: list[Rule]
 
 
 class RulebookParser:
@@ -68,9 +66,9 @@ class RulebookParser:
         self.rulebook_dir = Path(rulebook_dir)
         self.rules_subdir = rules_subdir
         self.language = language
-        self.rules: List[Rule] = []
-        self.rule_id_index: Dict[str, Rule] = {}  # O(1) lookup by rule_id
-        self.sections: List[Section] = []
+        self.rules: list[Rule] = []
+        self.rule_id_index: dict[str, Rule] = {}  # O(1) lookup by rule_id
+        self.sections: list[Section] = []
 
         # Patterns
         self.rule_id_pattern = re.compile(r'\*\*([A-Z]+(?:-[A-Z]+)*-[\d.]+)\*\*')
@@ -82,7 +80,7 @@ class RulebookParser:
         self.reference_pattern = re.compile(r'\[([A-Z]+(?:-[A-Z]+)*(?:-\d+(?:\.\d+)*)?)\]')
 
 
-    def parse_all(self) -> Dict[str, Any]:
+    def parse_all(self) -> dict[str, Any]:
         """Parse all markdown files in the rules directory"""
         rules_dir = self.rulebook_dir / self.rules_subdir
 
@@ -90,8 +88,8 @@ class RulebookParser:
             raise FileNotFoundError(f"Rules directory not found: {rules_dir}")
 
         # Parse all markdown files in the rules directory (no filtering needed)
-        md_files = sorted(list(rules_dir.glob("*.md")))
-        md_files.extend(sorted(list(rules_dir.glob("*/*.md"))))
+        md_files = sorted(rules_dir.glob("*.md"))
+        md_files.extend(sorted(rules_dir.glob("*/*.md")))
 
         if not md_files:
             raise FileNotFoundError(f"No markdown files found in {rules_dir}")
@@ -111,13 +109,13 @@ class RulebookParser:
         return {
             "rules": [asdict(rule) for rule in self.rules],
             "total_rules": len(self.rules),
-            "documents": list(set(rule.document for rule in self.rules)),
+            "documents": list({rule.document for rule in self.rules}),
             "language": self.language
         }
 
     def parse_file(self, filepath: Path):
         """Parse a single markdown file"""
-        with open(filepath, 'r', encoding='utf-8') as f:
+        with open(filepath, encoding='utf-8') as f:
             lines = f.readlines()
 
         # Extract weapon type and variant from filename
@@ -150,9 +148,7 @@ class RulebookParser:
                 if level == 1:
                     current_section = title
                     current_subsection = ""
-                elif level == 2:
-                    current_subsection = title
-                elif level == 3:
+                elif level in (2, 3):
                     current_subsection = title
 
                 continue
@@ -202,7 +198,7 @@ class RulebookParser:
                 rule_start_line, weapon_type, variant
             )
 
-    def _save_rule(self, rule_id: str, text_lines: List[str], section: str,
+    def _save_rule(self, rule_id: str, text_lines: list[str], section: str,
                    subsection: str, document: str, anchor: str, line_num: int,
                    weapon_type: str, variant: str) -> None:
         """Save a parsed rule, detecting variant from text if present"""
@@ -257,18 +253,14 @@ class RulebookParser:
         if match:
             variant_name = match.group(1).upper()
             # Normalize variant names
-            if variant_name == 'VOR':
-                return 'VOR'
-            elif variant_name == 'COMBAT':
-                return 'COMBAT'
-            elif variant_name == 'AFTERBLOW':
-                return 'AFTERBLOW'
+            if variant_name in {'VOR', 'COMBAT', 'AFTERBLOW'}:
+                return variant_name
 
         return ''
 
     def _extract_variant_subrules(self, parent_rule_id: str, text: str, section: str,
                                    subsection: str, document: str, anchor: str, line_num: int,
-                                   weapon_type: str) -> List[Rule]:
+                                   weapon_type: str) -> list[Rule]:
         """
         Extract variant-specific sub-rules from text containing Vor/Combat/Afterblow sections.
         Returns a list of extracted sub-rules, or empty list if no variants found.
@@ -306,8 +298,8 @@ class RulebookParser:
             # Find all rule IDs in bold (**GEN-...**) mentioned in this rule's text
             matches = self.reference_pattern.findall(rule.text)
             # Remove duplicates and self-references
-            references = set(m for m in matches if m != rule.rule_id)
-            rule.references_to = sorted(list(references))
+            references = {m for m in matches if m != rule.rule_id}
+            rule.references_to = sorted(references)
 
         # Second pass: build reverse references (references_from)
         rule_by_id = {rule.rule_id: rule for rule in self.rules}
@@ -322,7 +314,7 @@ class RulebookParser:
 
         # Remove duplicates and sort
         for rule in self.rules:
-            rule.references_from = sorted(list(set(rule.references_from)))
+            rule.references_from = sorted(set(rule.references_from))
 
     def _build_hierarchy_metadata(self) -> None:
         """Build parent-child hierarchy metadata for all rules"""
@@ -343,7 +335,7 @@ class RulebookParser:
         # Assign child_ids and is_leaf to each rule (convert sets to sorted lists)
         for rule in self.rules:
             child_set = parent_to_children.get(rule.rule_id, set())
-            rule.child_ids = sorted(list(child_set))
+            rule.child_ids = sorted(child_set)
             rule.is_leaf = len(rule.child_ids) == 0
 
         # Third pass: find siblings for each rule (using sets to avoid duplicates)
@@ -351,7 +343,7 @@ class RulebookParser:
             if rule.parent_id:
                 # Siblings are all children of parent except self (using set difference)
                 sibling_set = parent_to_children.get(rule.parent_id, set()) - {rule.rule_id}
-                rule.sibling_ids = sorted(list(sibling_set))
+                rule.sibling_ids = sorted(sibling_set)
             else:
                 rule.sibling_ids = []
 

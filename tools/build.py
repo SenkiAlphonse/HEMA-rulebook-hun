@@ -6,9 +6,9 @@ Rebuilds the rules_index.json for search functionality
 Run this at deployment time to generate static rulebook
 """
 
-import sys
 import logging
 import shutil
+import sys
 from pathlib import Path
 
 # Allow running `python tools/build.py` without installing the package
@@ -62,7 +62,7 @@ def build_rulebook():
     """Generate pre-rendered rulebook HTML for all languages (hun + eng)"""
     try:
         # Import shared utilities
-        from app.utils import create_mistune_markdown, preprocess_rulebook_markdown, read_rulebook_markdown_content
+        from app.utils import create_mistune_markdown, preprocess_rulebook_markdown, read_rulebook_markdown_content  # noqa: I001
 
         # Create dist directory
         dist_dir = get_dist_dir()

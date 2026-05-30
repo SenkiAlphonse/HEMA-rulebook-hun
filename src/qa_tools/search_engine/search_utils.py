@@ -2,7 +2,7 @@
 Shared utilities for HEMA rulebook search functionality
 """
 
-from typing import List, Dict, Any
+from typing import Any
 
 
 def get_rule_depth(rule_id: str) -> int:
@@ -32,7 +32,7 @@ def get_rule_depth(rule_id: str) -> int:
     return numeric_part.count('.') + 1
 
 
-def get_rule_lineage(rule_id: str) -> List[str]:
+def get_rule_lineage(rule_id: str) -> list[str]:
     """
     Get list of parent rule IDs for a given rule
 
@@ -68,7 +68,7 @@ def get_rule_lineage(rule_id: str) -> List[str]:
     return lineage[:-1]
 
 
-def get_children_rules(rule_id: str, all_rules: List[Dict[str, Any]]) -> List[str]:
+def get_children_rules(rule_id: str, all_rules: list[dict[str, Any]]) -> list[str]:
     """
     Get direct child rule IDs for a given rule
 

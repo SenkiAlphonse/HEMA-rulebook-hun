@@ -3,7 +3,6 @@ Input validation utilities for HEMA rulebook search engine
 """
 
 import re
-from typing import Optional, Tuple
 
 
 # Validation constraints
@@ -13,7 +12,7 @@ RULE_ID_PATTERN = re.compile(r'^[A-Z]+(?:-[A-Z]+)*-[\d.]+$')
 MAX_RESULTS = 100
 
 
-def validate_query(query: str) -> Tuple[bool, Optional[str]]:
+def validate_query(query: str) -> tuple[bool, str | None]:
     """
     Validate search query.
 
@@ -39,7 +38,7 @@ def validate_query(query: str) -> Tuple[bool, Optional[str]]:
     return True, None
 
 
-def validate_rule_id(rule_id: str) -> Tuple[bool, Optional[str]]:
+def validate_rule_id(rule_id: str) -> tuple[bool, str | None]:
     """
     Validate rule ID format.
 
@@ -63,7 +62,7 @@ def validate_rule_id(rule_id: str) -> Tuple[bool, Optional[str]]:
     return True, None
 
 
-def validate_filter(value: Optional[str], allowed_values: list) -> Tuple[bool, Optional[str]]:
+def validate_filter(value: str | None, allowed_values: list) -> tuple[bool, str | None]:
     """
     Validate filter value against allowed list.
 
@@ -91,7 +90,7 @@ def validate_filter(value: Optional[str], allowed_values: list) -> Tuple[bool, O
     return True, None
 
 
-def validate_max_results(max_results: int, max_allowed: int = MAX_RESULTS) -> Tuple[bool, Optional[str]]:
+def validate_max_results(max_results: int, max_allowed: int = MAX_RESULTS) -> tuple[bool, str | None]:
     """
     Validate max_results parameter.
 

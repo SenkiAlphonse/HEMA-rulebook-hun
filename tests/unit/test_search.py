@@ -3,7 +3,9 @@ Unit tests for RulebookSearch class
 """
 
 import json
+
 import pytest
+
 from qa_tools.search_engine import AliasAwareSearch, SearchResult
 
 
@@ -108,6 +110,7 @@ class TestRulebookSearch:
         """Test that searching for 'özbetám' finds all GEN-3.2.5.x rules (substring, regardless of formatting)"""
         # Use the real rules index (not the sample fixture) to test actual rules
         from pathlib import Path
+
         from qa_tools.search_engine import AliasAwareSearch
 
         real_index = Path(__file__).parent.parent.parent / 'data' / 'search' / 'rules_index.json'

@@ -5,6 +5,7 @@ Usage: python qa_tools/tools/demo_search.py "your query here"
 
 import sys
 from pathlib import Path
+
 from qa_tools.search_engine.search import RulebookSearch, format_result
 
 def main():

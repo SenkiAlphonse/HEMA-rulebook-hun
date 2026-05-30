@@ -4,9 +4,10 @@ Pytest configuration and shared fixtures
 
 import json
 import sys
-import pytest
 from pathlib import Path
-from typing import Dict, List, Any
+from typing import Any
+
+import pytest
 
 # Ensure imports work even when pytest-pythonpath plugin is not installed (e.g., CI)
 project_root = Path(__file__).parent.parent
@@ -17,7 +18,7 @@ for _path in (str(project_root), str(src_root)):
 
 
 @pytest.fixture
-def sample_rules() -> List[Dict[str, Any]]:
+def sample_rules() -> list[dict[str, Any]]:
     """Sample rules for testing"""
     return [
         {

@@ -7,11 +7,11 @@ from pathlib import Path
 current_dir = Path(__file__).parent.parent / "data"
 
 # Load aliases
-with open(current_dir / 'aliases.json', 'r', encoding='utf-8') as f:
+with open(current_dir / 'aliases.json', encoding='utf-8') as f:
     aliases = json.load(f)
 
 # Load current index
-with open(current_dir / 'rules_index.json', 'r', encoding='utf-8') as f:
+with open(current_dir / 'rules_index.json', encoding='utf-8') as f:
     data = json.load(f)
 
 # Add aliases to each rule

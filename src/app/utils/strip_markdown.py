@@ -1,4 +1,4 @@
-import re
+import re  # noqa: I001
 
 def strip_markdown(text: str) -> str:
     """

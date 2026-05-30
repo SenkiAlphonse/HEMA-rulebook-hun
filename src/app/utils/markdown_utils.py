@@ -129,7 +129,7 @@ class RuleIDRenderer(mistune.HTMLRenderer):
     def list(self, text: str, ordered: bool, **kwargs) -> str:
         """Override list rendering to add bullet-list CSS class"""
         # Extract known parameters, ignore others
-        start = kwargs.get('start', None)
+        start = kwargs.get('start')
 
         if ordered:
             tag = 'ol'

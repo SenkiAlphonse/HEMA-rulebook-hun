@@ -4,14 +4,15 @@ Enhanced HEMA Rulebook Search Engine with Alias Support
 
 
 import json
-import re
 import logging
+import re
 import unicodedata
-from pathlib import Path
-from typing import List, Dict, Any, Tuple, Optional
 from dataclasses import dataclass
-from qa_tools.search_engine.search_utils import get_rule_depth, get_rule_lineage, get_children_rules
+from pathlib import Path
+from typing import Any
+
 from qa_tools.search_engine import search_config
+from qa_tools.search_engine.search_utils import get_children_rules, get_rule_depth, get_rule_lineage
 
 # Configure logging
 logger = logging.getLogger(__name__)
@@ -33,7 +34,7 @@ class SearchResult:
 class AliasAwareSearch:
     """Search engine with alias support for HEMA rulebook"""
 
-    def __init__(self, index_path: str, aliases_path: str = None):
+    def __init__(self, index_path: str, aliases_path: str | None = None):
         self.index_path = Path(index_path)
         self.rules = []
         self.aliases = {}
@@ -56,7 +57,7 @@ class AliasAwareSearch:
             Logs warning if file not found, logs error if JSON is invalid
         """
         try:
-            with open(aliases_path, 'r', encoding='utf-8') as f:
+            with open(aliases_path, encoding='utf-8') as f:
                 self.aliases = json.load(f)
         except FileNotFoundError:
             logger.warning(f"Aliases file not found at {aliases_path}, using empty aliases")
@@ -88,7 +89,7 @@ class AliasAwareSearch:
             raise FileNotFoundError(f"Index not found: {self.index_path}")
 
         try:
-            with open(self.index_path, 'r', encoding='utf-8') as f:
+            with open(self.index_path, encoding='utf-8') as f:
                 data = json.load(f)
                 loaded_rules = data['rules']
                 self.rules = self._deduplicate_rules_by_id(loaded_rules)
@@ -98,7 +99,7 @@ class AliasAwareSearch:
 
         logger.info(f"Loaded {len(self.rules)} rules with alias support")
 
-    def _deduplicate_rules_by_id(self, rules: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    def _deduplicate_rules_by_id(self, rules: list[dict[str, Any]]) -> list[dict[str, Any]]:
         """Return rules with unique rule IDs, preserving first occurrence order."""
         deduplicated = []
         seen_rule_ids = set()
@@ -120,7 +121,7 @@ class AliasAwareSearch:
 
         return deduplicated
 
-    def _deduplicate_results_by_rule_id(self, results: List[SearchResult]) -> List[SearchResult]:
+    def _deduplicate_results_by_rule_id(self, results: list[SearchResult]) -> list[SearchResult]:
         """Return results with unique rule IDs, preserving ranking order."""
         deduplicated = []
         seen_rule_ids = set()
@@ -133,7 +134,7 @@ class AliasAwareSearch:
 
         return deduplicated
 
-    def _expand_query(self, query: str) -> Tuple[str, Optional[str], Optional[str], List[str], str]:
+    def _expand_query(self, query: str) -> tuple[str, str | None, str | None, list[str], str]:
         """Expand query based on aliases, extracting filters and concept terms.
 
         Analyzes query words to detect variant/weapon filters and concept expansions.
@@ -195,8 +196,8 @@ class AliasAwareSearch:
         normalized = unicodedata.normalize("NFKD", text)
         return "".join(ch for ch in normalized if not unicodedata.combining(ch)).lower()
 
-    def search(self, query: str, max_results: int = None,
-               variant_filter: str = None, weapon_filter: str = None) -> List[SearchResult]:
+    def search(self, query: str, max_results: int | None = None,
+               variant_filter: str | None = None, weapon_filter: str | None = None) -> list[SearchResult]:
         """
         Search with alias awareness and query expansion
 
@@ -231,17 +232,12 @@ class AliasAwareSearch:
             rule_weapon = rule.get('weapon_type', 'general')
             rule_variant = rule.get('variant', '')
 
-            # If weapon filter is specified
-            if weapon_filter:
-                # Exclude if rule is for different weapon (unless rule is general)
-                if rule_weapon != 'general' and rule_weapon != weapon_filter:
-                    continue
+            if weapon_filter and rule_weapon != 'general' and rule_weapon != weapon_filter:
+                continue
 
             # If variant filter is specified
-            if variant_filter:
-                # Include if: rule is general, OR rule is weapon-general, OR rule matches the variant
-                if rule_weapon != 'general' and rule_variant and rule_variant != variant_filter:
-                    continue
+            if variant_filter and rule_weapon != 'general' and rule_variant and rule_variant != variant_filter:
+                continue
 
             # Require all base query terms to appear somewhere
             if required_terms:
@@ -278,7 +274,7 @@ class AliasAwareSearch:
         # Group results and return
         return self._group_and_return_results(results, max_results)
 
-    def _group_and_return_results(self, results: List[SearchResult], max_results: int) -> List[SearchResult]:
+    def _group_and_return_results(self, results: list[SearchResult], max_results: int) -> list[SearchResult]:
         """Group level 4-5 results with their parents and children"""
         grouped_results = []
         seen_root_ids = set()
@@ -334,7 +330,7 @@ class AliasAwareSearch:
         grouped_results = self._deduplicate_results_by_rule_id(grouped_results)
         return grouped_results[:max_results * grouping_multiplier]
 
-    def _build_rule_family(self, result: SearchResult, lineage: List[str]) -> List[SearchResult]:
+    def _build_rule_family(self, result: SearchResult, lineage: list[str]) -> list[SearchResult]:
         """Build a family of rules: parents + matched rule + children.
 
         For hierarchical display, gathers parent rules (up to level 3),
@@ -388,7 +384,7 @@ class AliasAwareSearch:
 
         return family
 
-    def _extract_terms(self, query: str) -> List[str]:
+    def _extract_terms(self, query: str) -> list[str]:
         """Extract meaningful search terms from query.
 
         Filters out Hungarian and English stop words and short terms.
@@ -399,14 +395,13 @@ class AliasAwareSearch:
         Returns:
             List of extracted terms (> 2 chars, excluding stop words)
         """
-        stop_words = {'a', 'az', 'és', 'vagy', 'de', 'ha', 'hogy', 'mi', 'van', 'volt',
-                     'the', 'a', 'an', 'and', 'or', 'but', 'if', 'is'}
+        stop_words = {'a', 'an', 'and', 'az', 'but', 'de', 'és', 'ha', 'hogy', 'if', 'is', 'mi', 'or', 'the', 'van', 'vagy', 'volt'}
         terms = re.findall(r'\w+', query)
         return [t for t in terms if t not in stop_words and len(t) > 2]
 
-    def _calculate_score_with_aliases(self, rule: Dict[str, Any],
-                                      query: str, query_norm: str, terms: List[str],
-                                      concept_terms: List[str] = None) -> float:
+    def _calculate_score_with_aliases(self, rule: dict[str, Any],
+                                      query: str, query_norm: str, terms: list[str],
+                                      concept_terms: list[str] | None = None) -> float:
         """Calculate score including alias matches"""
         score = 0.0
 
@@ -478,7 +473,7 @@ class AliasAwareSearch:
         """
         return get_rule_depth(rule_id)
 
-    def get_rule_lineage(self, rule_id: str) -> List[str]:
+    def get_rule_lineage(self, rule_id: str) -> list[str]:
         """Get list of parent rule IDs for a given rule.
 
         Examples:
@@ -486,11 +481,11 @@ class AliasAwareSearch:
         """
         return get_rule_lineage(rule_id)
 
-    def get_children_rules(self, rule_id: str) -> List[str]:
+    def get_children_rules(self, rule_id: str) -> list[str]:
         """Get direct child rule IDs for a given rule."""
         return get_children_rules(rule_id, self.rules)
 
-    def get_rule_by_id(self, rule_id: str) -> Optional[Dict[str, Any]]:
+    def get_rule_by_id(self, rule_id: str) -> dict[str, Any] | None:
         """Get a rule by its ID (case-insensitive)."""
         for rule in self.rules:
             if rule.get('rule_id') == rule_id:

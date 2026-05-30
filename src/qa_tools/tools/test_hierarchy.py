@@ -3,7 +3,7 @@
 
 import json
 
-with open('rules_index.json', 'r', encoding='utf-8') as f:
+with open('rules_index.json', encoding='utf-8') as f:
     data = json.load(f)
     rules = data['rules']
 

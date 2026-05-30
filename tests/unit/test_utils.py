@@ -3,10 +3,11 @@ Unit tests for app/utils.py functions
 """
 
 import pytest
+
 from app.utils import (
+    build_document_order,
     normalize_filter,
     preprocess_rulebook_markdown,
-    build_document_order
 )
 from qa_tools.search_engine.search_utils import get_rule_depth
 

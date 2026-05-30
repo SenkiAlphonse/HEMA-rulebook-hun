@@ -29,10 +29,10 @@ from __future__ import annotations
 
 import argparse
 import re
+from collections.abc import Iterable
 from dataclasses import dataclass
 from difflib import SequenceMatcher
 from pathlib import Path
-from typing import Iterable
 
 
 RE_HEMA_RULE_ID_LINE = re.compile(r"^\*\*([A-Z]{2,10}-[0-9]+(?:\.[0-9]+)*)\*\*\s*$")

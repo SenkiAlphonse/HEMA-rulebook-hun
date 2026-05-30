@@ -4,7 +4,6 @@ Quick setup and test script for the HEMA Rulebook Search app
 Run this to verify everything is set up correctly
 """
 
-import os
 import json
 import sys
 from pathlib import Path
@@ -50,7 +49,7 @@ def check_index():
 
     try:
         from app.config import get_rules_index_path
-        with open(str(get_rules_index_path()), "r", encoding="utf-8") as f:
+        with open(str(get_rules_index_path()), encoding="utf-8") as f:
             data = json.load(f)
 
         rules = data.get("rules", data) if isinstance(data, dict) else data
@@ -65,11 +64,11 @@ def check_index():
             weapons[w] = weapons.get(w, 0) + 1
             variants[f] = variants.get(f, 0) + 1
 
-        print(f"\nBy weapon type:")
+        print("\nBy weapon type:")
         for w in sorted(weapons.keys()):
             print(f"  - {w}: {weapons[w]} rules")
 
-        print(f"\nBy variant:")
+        print("\nBy variant:")
         for f in sorted(variants.keys()) or ["general"]:
             print(f"  - {f or 'general'}: {variants[f]} rules")
 
@@ -86,21 +85,21 @@ def check_aliases():
 
     try:
         from app.config import get_aliases_path
-        with open(str(get_aliases_path()), "r", encoding="utf-8") as f:
+        with open(str(get_aliases_path()), encoding="utf-8") as f:
             aliases = json.load(f)
 
         if "variants" in aliases:
-            print(f"✓ Format aliases:")
+            print("\u2713 Format aliases:")
             for fmt, terms in aliases["variants"].items():
                 print(f"  - {fmt}: {len(terms)} aliases")
 
         if "weapons" in aliases:
-            print(f"\n✓ Weapon aliases:")
+            print("\n✓ Weapon aliases:")
             for weapon, terms in aliases["weapons"].items():
                 print(f"  - {weapon}: {len(terms)} aliases")
 
         if "concepts" in aliases:
-            print(f"\n✓ Concept aliases:")
+            print("\n✓ Concept aliases:")
             for concept, terms in aliases["concepts"].items():
                 print(f"  - {concept}: {len(terms)} aliases")
 
@@ -117,8 +116,9 @@ def test_search():
 
     try:
         # Import from qa_tools package (already in Python path)
+        from app.config import get_aliases_path, get_rules_index_path
+
         from qa_tools.search_engine.search_aliases import AliasAwareSearch
-        from app.config import get_rules_index_path, get_aliases_path
 
         search = AliasAwareSearch(str(get_rules_index_path()), str(get_aliases_path()))
 
@@ -138,7 +138,7 @@ def test_search():
                 for r in results[:2]:
                     print(f"    - {r.rule_id} (score={r.score:.1f})")
             else:
-                print(f"  No results")
+                print("  No results")
 
         return True
     except Exception as e:
