@@ -35,7 +35,7 @@ A vívóidő egy egyszerű akció kivitelezésének időtartama.
 Támadó akciók (a támadás, a riposzt (visszaszúrás/visszavágás) és a kontrariposzt)  
 
 **GEN-3.2.1.1**  
-**Támadás** - az a kitörést vagy a lerohanást, vagy más fegyverspecifikus támadó lábmunka megindítását megelőző, kezdeményező támadó akció, amelyet a kar nyújtásával és az ellenfél érvényes találati felületének állandó fenyegetésével hajtanak végre. 
+**Támadás** - az, a kitörést vagy a lerohanást, vagy más fegyverspecifikus támadó lábmunka megindítását megelőző, kezdeményező támadó akció, amelyet a kar nyújtásával és az ellenfél érvényes találati felületének állandó fenyegetésével, megállás nélkül hajtanak végre. 
 
 **GEN-3.2.1.2**  
 **Riposzt (visszaszúrás, -vágás)** - annak a vívónak támadó akciója, aki a támadást kivédte.  
@@ -369,7 +369,7 @@ Ha egy lábbal a hátsó határvonalon belül állt, akkor újrafelállításkor
 A vívók a versenybíró "állás!" vezényszavára vívóállásba felállnak. Ezután a versenybíró megkérdezi: "készen?"; igenlő válasz esetén vagy nemleges válasz hiányában megadja a jelet a küzdelem megkezdésére: "rajta!" vezényszóval.  
 
 **GEN-6.2.10**  
-A versenybíró "rajta!" vezényszaváig a vívók kötelesek megfelelő vívóállásban állni és teljes mozdulatlanságban maradni.  
+A versenybíró "rajta!" vezényszaváig a vívók kötelesek megfelelő vívóállásban állni és teljes mozdulatlanságban maradni. Az a vívó, aki nem marad mozdulatlan, vagy bármilyen akciót kezdeményez "Rajta" vezényszó előtt, az első csoportba tartozó vétséget követ el, el és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
 
 **GEN-6.2.11**  
 Vor szabály alkalmazásakor a felállás nem történhet vonal helyzetben.  
@@ -398,7 +398,7 @@ Ha valamelyik vívó az "állj!" vezényszó előtt megáll, és találatot kap,
 Akkor is "állj!"-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók [GEN-6.9]), vagy ha kilép a pástról.  
 
 **GEN-6.3.7**  
-Kivételes körülményektől eltekintve a versenybíró nem adhat engedélyt a vívónak a pást elhagyására. Ha a vívó ezt engedély nélkül megteszi, akkor vele szemben az első csoportba tartozó vétségekre vonatkozó büntető rendelkezéseket kell alkalmazni (vö: [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19]).  
+Kivételes körülményektől eltekintve a versenybíró nem adhat engedélyt a vívónak a pást elhagyására. Ha a vívó ezt engedély nélkül megteszi, akkor vele szemben az első csoportba tartozó vétségekre vonatkozó büntető rendelkezéseket kell alkalmazni (vö: [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18]).  
 
 ### Közelharc  
 <span id="GEN-6.4"></span>  
@@ -413,7 +413,7 @@ A közelharc megengedhető mindaddig, amíg a vívók fegyverüket szabályosan 
 A testérintkezés az a helyzet, amikor a két vívó egymással érintkezésbe kerül. Ha a közelharc nem engedélyezett, ekkor a versenybíró a küzdelmet köteles megállítani (Vö. [GEN-6.6]; [GEN-6.10.2]).
 
 **GEN-6.5.2**  
-Tilos szándékosan testérintkezést okozni találat elkerülése vagy az ellenfél fellökése céljából, kivéve abban az esetben, amikor a felek a meccs előtt a fogásos és birkózó akciók használatát jóváhagyták. Ilyen vétség esetén a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban előírt, az első csoportba tartozó vétségekre vonatkozó büntetéseket alkalmazza és a vétkes vívó által esetleg adott találatot megsemmisíti.  
+Tilos szándékosan testérintkezést okozni találat elkerülése vagy az ellenfél fellökése céljából, kivéve abban az esetben, amikor a felek a meccs előtt a fogásos és birkózó akciók használatát jóváhagyták. Ilyen vétség esetén a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban előírt, az első csoportba tartozó vétségekre vonatkozó büntetéseket alkalmazza és a vétkes vívó által esetleg adott találatot megsemmisíti.  
 
 **GEN-6.5.3**  
 Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: [GEN-6.10])  
@@ -422,7 +422,7 @@ Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha 
 <span id="GEN-6.6"></span>  
 
 **GEN-6.6.1**  
-A jelen szakaszban hivatkozott rendszeresen testérintkezéssel végződő fless támadás nem összetévesztendő az ellenfelet meglökő összeütközést eredményező fless támadással amely szándékos brutalitásként értékelendő, és a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt büntetéseket kell alkalmazni minden fegyvernemben.  
+A jelen szakaszban hivatkozott rendszeresen testérintkezéssel végződő fless támadás nem összetévesztendő az ellenfelet meglökő összeütközést eredményező fless támadással amely szándékos brutalitásként értékelendő, és a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt büntetéseket kell alkalmazni minden fegyvernemben.  
 
 **GEN-6.6.2**  
 Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar "Állj"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást határát, találatot kapottnak tekintendő (V.ö.: [GEN-6.11]).  
@@ -434,7 +434,7 @@ Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül 
 A helyváltoztatás és elhajlás megengedett, beleértve az az esetet is, amikor a fegyvertelen kéz vagy a hátul lévő láb térde a földdel érintkezésbe kerül.  
 
 **GEN-6.7.2**  
-Tilos az ellenfélnek hátat fordítani a küzdelem alatt. Ilyen vétség esetén a versenybíró az első csoportba tartozó vétségekre vonatkozó büntetéseket alkalmazza ([DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19]) és a vétkes vívó által esetleg adott találatot megsemmisíti.  
+Tilos az ellenfélnek hátat fordítani a küzdelem alatt. Ilyen vétség esetén a versenybíró az első csoportba tartozó vétségekre vonatkozó büntetéseket alkalmazza ([DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18]) és a vétkes vívó által esetleg adott találatot megsemmisíti.  
 <!-- TODO 
 **GEN-6.7.3**  
 Amikor a küzdelem folyamán egy vívó teljes mértékben elhalad az ellenfele mellett, a versenybírónak azonnal “állj!” vezényszót kell kiáltania, és a vívókat vissza kell állítani arra a helyre, amelyet a túlhaladás előtt elfoglaltak.  
@@ -446,10 +446,10 @@ Ha a túlhaladás közben találatok estek, ezek közül az azonnal bevitt talá
 <span id="GEN-6.8"></span>  
 
 **GEN-6.8.1**  
-A fegyvertelen kéz és kar használata támadó vagy védekező akciók végrehajtása során tilos -- ezalól kivételt képez, ha a birkózó akciók használatát engedélyezték. Az ilyen vétség elkövetése esetén a vétkes vívó által adott találatot meg kell semmisíteni és a második csoportba tartozó büntetéssel (piros lap) kell sújtani (V.ö.: [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19]).  
+A fegyvertelen kéz és kar használata támadó vagy védekező akciók végrehajtása során tilos -- ezalól kivételt képez, ha a birkózó akciók használatát engedélyezték. Az ilyen vétség elkövetése esetén a vétkes vívó által adott találatot meg kell semmisíteni és a második csoportba tartozó büntetéssel (piros lap) kell sújtani (V.ö.: [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18]).  
 
 **GEN-6.8.2**  
-Ha a vívó annak elfedésével vagy rendellenes mozdulattal érvényes találati felületét érvénytelennel helyettesíti, őt a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban írt, az első csoportba tartozó vétségekre vonatkozó büntetésekkel sújtja és az általa esetlegesen bevitt találatot megsemmisíti.  
+Ha a vívó annak elfedésével vagy rendellenes mozdulattal érvényes találati felületét érvénytelennel helyettesíti, őt a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt, az első csoportba tartozó vétségekre vonatkozó büntetésekkel sújtja és az általa esetlegesen bevitt találatot megsemmisíti.  
 <!-- TODO
 **GEN-6.8.3**  
 Ha a mérkőzés folyamán a versenybíró megállapítja, hogy az egyik vívó a fegyvertelen karját és/vagy a kezét használva, takarja vagy védi az érvényes találati felületét, kérheti két semleges oldalbíró beállítását, akiket a Szervező Team (DT) jelöl ki.
@@ -467,7 +467,7 @@ Fogásos küzdelem és birkózás (megfogás/kontroll/dobás/földrevitel) egy m
 
 **GEN-6.9.2**  
 Birkózó akciónak számít minden közelharci akció, amit nem fegyverrel hajtanak végre (kézzel/lábbal/fejjel/stb. végzett technikák, fogások, lefegyverzések, ütések), illetve amik fegyverrel a közvetlen találatadás helyett az ellenfél testrészeinek manipulálását szolgálják.  
-Amennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, úgy bármilyen birkózó akció kezdeményezője a fegyelmi vétségek első csoportjába tartozó szabálytalanságot követ el és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
+Amennyiben valamelyik ellenfél nem egyezett bele birkózásba a mérkőzésen, úgy bármilyen birkózó akció kezdeményezője a fegyelmi vétségek első csoportjába tartozó szabálytalanságot követ el és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
 
 **GEN-6.9.3**  
 A bíró megállíthatja a mérkőzést huzamosabb idejű sikertelen közelharc vagy birkózás után (ezt a bíró saját hatáskörében ítéli meg).  
@@ -656,7 +656,7 @@ Ha az utolsó fordulóra irányadó idő lejártakor pontegyenlőség áll fenn,
 Minden alkalommal amikor a küzdelem megszakad, a vívóknak lehetőségük van megkérdezni, hogy mennyi idejük maradt még vívni.  
 
 **GEN-6.14.2**  
-Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
+Az a vívó, aki a mérkőzés indokolatlan megszakítására vagy a megszakítások elnyújtására tesz kísérletet, az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
 
 **GEN-6.14.3**  
 A szabályos idő letelte után, az időmérőnek "állj!"-t kell kiáltania (vagy hangjelzést kell működtetnie), amely a küzdelmet megállítja és a már elindított, de az idő lejárta után esett találat sem érvényes.  
@@ -683,7 +683,7 @@ az ügyeletes orvos az öt perces szünet letelte előtt megállapítja, hogy a 
 Ugyanazon a napon újabb megszakítást ugyanannak a vívónak csak akkor lehet engedélyezni, ha az egy másik sérülés vagy másik egyéb egészségügyi ok miatt válik szükségessé.  
 
 **GEN-6.15.3**  
-Amennyiben a vívó megszakításra irányuló kérelme az orvos megállapítása szerint megalapozatlan, a versenybíró a vétkes vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt, második csoportba tartozó vétségként bünteti.  
+Amennyiben a vívó megszakításra irányuló kérelme az orvos megállapítása szerint megalapozatlan, a versenybíró a vétkes vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, második csoportba tartozó vétségként bünteti.  
 
 **GEN-6.15.4**  
 A csapatversenyeken az a versenyző, aki az ügyeletes orvos véleménye alapján nem folytathatta a mérkőzést, ugyanazon orvos véleménye alapján ugyanazon a napon, későbbi csapatmérkőzéseken ismét versenyezhet.  
@@ -705,7 +705,7 @@ Tilos a túlzott erőkifejtés, brutalitás és a szükségtelen erőszak.
 Tilos eltalálni a fej hátulját, a gerincet, a térdhajlatot és a lábfejet.  
 
 **GEN-6.16.4**  
-A távolság vagy a mozdulat szükséges mértékének helytelen felmérése miatt a padló eltalálása első csoportba tartozó szabálytalanság  és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban írt szakaszokban előírt büntetést alkalmazza. (A bíró figyelmen kívül hagyhatja az ellenfél akciója következtében, az ellenfél eltalálása után, vagy véletlenül eső könnyed padló érintéseket).  
+A távolság vagy a mozdulat szükséges mértékének helytelen felmérése miatt a padló eltalálása első csoportba tartozó szabálytalanság  és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt szakaszokban előírt büntetést alkalmazza. (A bíró figyelmen kívül hagyhatja az ellenfél akciója következtében, az ellenfél eltalálása után, vagy véletlenül eső könnyed padló érintéseket).  
 
 **GEN-6.16.5**  
 Tilos keresztvassal vagy kosárral ütni.  
@@ -793,7 +793,7 @@ Az esés közben vagy után adott találatot meg kell semmisíteni.
 
 **GEN-7.6.4**  
 **GEN-7.6.4**  
-Az a versenyző, aki fegyverét a vívómenet közben szándékosan elejti, a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt, második csoportba tartozó vétségként büntetendő. Az ellenfél által adott találat azonban érvényes amennyiben az akció az „Állj!” vezényszó előtt indult.  
+Az a versenyző, aki fegyverét a vívómenet közben szándékosan elejti, a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, második csoportba tartozó vétségként büntetendő. Az ellenfél által adott találat azonban érvényes amennyiben az akció az „Állj!” vezényszó előtt indult.  
 
 **GEN-7.6.5**  
 **GEN-7.6.5**  
@@ -922,7 +922,7 @@ Ha a vívó a páston:
 <!-- - összesen egy szabályos fegyverrel (vö. t.114,115); vagy -->
 - hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy  
 <!-- - hónaljvédő nélkül (Vö. t.64.5.), vagy -->  
-- a szabályoknak nem megfelelő ruhában jelenik meg, a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban előírt, az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
+- a szabályoknak nem megfelelő ruhában jelenik meg, a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban előírt, az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
 **GEN-7.8.3**
 Amennyiben a mérkőzés során a felszerelésben olyan rendellenességet állapítanak meg, amely a küzdelem következtében állhatott elő:  
@@ -934,7 +934,7 @@ Például:
 - a fegyver veszélyesen deformálódik vagy eltörik,  
 
 akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, és megadja a meghibásodott fegyverrel adott szabályos találatot.
-<!-- Ugyanakkor, a mérkőzés során is ha a vívóállásba helyezkedő, vívásra készen álló vívó pengéjének hajlása meghaladja az előírásokban írtakat (Vö. m.8.6, m.16.2, m.23.4), ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszokban írt szakaszokban előírt büntetést alkalmazza.   -->  
+<!-- Ugyanakkor, a mérkőzés során is ha a vívóállásba helyezkedő, vívásra készen álló vívó pengéjének hajlása meghaladja az előírásokban írtakat (Vö. m.8.6, m.16.2, m.23.4), ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt szakaszokban előírt büntetést alkalmazza.   -->  
 <!-- Ehhez hasonlóan, ha a vívóállásba helyezkedő, vívásra készen álló vívó maszkja nincs megfelelően rögzítve a fején a második biztonsági eszközzel, ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162,
 t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->
 
@@ -943,10 +943,10 @@ t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->
 
   1. nélkülözi a hitelesítő jelzést. Ilyenkor a versenybíró:  
     - megsemmisíti a vétkes vívó által esetleg adott utolsó találatot,  
-    - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
+    - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
   1. az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró:
-  1. a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.19] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
+  1. a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
   1. átment az előzetes hitelesítésen, de csalásra alkalmas  
 
