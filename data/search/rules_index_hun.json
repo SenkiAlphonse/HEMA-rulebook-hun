@@ -14317,13 +14317,13 @@
   ],
   "total_rules": 419,
   "documents": [
-    "01-altalanos.md",
-    "02-hosszukard.md",
-    "02.a-hosszukard-VOR.md",
     "02.b-hosszukard-COMBAT.md",
-    "02.c-hosszukard-AFTERBLOW.md",
+    "04-szervezes.md",
     "03-etikett_fegyelem.md",
-    "04-szervezes.md"
+    "01-altalanos.md",
+    "02.c-hosszukard-AFTERBLOW.md",
+    "02-hosszukard.md",
+    "02.a-hosszukard-VOR.md"
   ],
   "language": "hun"
 }
