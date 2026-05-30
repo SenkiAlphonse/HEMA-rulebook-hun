@@ -6,7 +6,12 @@ import logging
 
 from flask import Flask
 
-from app.config import get_aliases_path, get_prerendered_rulebook_path, get_rules_index_path, get_templates_dir
+from app.config import (
+    get_aliases_path,
+    get_prerendered_rulebook_path,
+    get_rules_index_path,
+    get_templates_dir,
+)
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -27,11 +32,12 @@ def create_app() -> Flask:
     # Load search engine (shared across blueprints) with error handling
     try:
         from qa_tools.search_engine import AliasAwareSearch
+
         app.search_engines = {}
         for lang in ("hun", "eng"):
             app.search_engines[lang] = AliasAwareSearch(
                 str(get_rules_index_path(lang=lang, legacy_fallback=(lang == "hun"))),
-                str(get_aliases_path(lang=lang))
+                str(get_aliases_path(lang=lang)),
             )
 
         # Backward compatibility alias: default search engine is Hungarian
@@ -39,7 +45,9 @@ def create_app() -> Flask:
         logger.info("Search engines initialized successfully (hun + eng)")
     except FileNotFoundError as e:
         logger.error(f"Search engine initialization failed: {e}")
-        logger.error("Ensure that build.py has been run to generate rules_index_hun.json, rules_index_eng.json, and aliases")
+        logger.error(
+            "Ensure that build.py has been run to generate rules_index_hun.json, rules_index_eng.json, and aliases"
+        )
         raise RuntimeError("Search engine files not found. Run build.py first.") from e
     except Exception as e:
         logger.error(f"Unexpected error initializing search engine: {e}")
@@ -49,12 +57,14 @@ def create_app() -> Flask:
         prerendered_rulebook = get_prerendered_rulebook_path(_lang)
         if not prerendered_rulebook.exists():
             logger.error(f"Pre-rendered rulebook is missing: {prerendered_rulebook}")
-            logger.error("Ensure that build.py has been run to generate dist/rulebook_hun.html and dist/rulebook_eng.html")
+            logger.error(
+                "Ensure that build.py has been run to generate dist/rulebook_hun.html and dist/rulebook_eng.html"
+            )
             raise RuntimeError(f"Pre-rendered rulebook ({_lang}) is missing. Run build.py first.")
 
     # Configuration
-    app.config['VARIANTS'] = ["VOR", "COMBAT", "AFTERBLOW"]
-    app.config['WEAPONS'] = ["longsword", "rapier", "padded_weapons"]
+    app.config["VARIANTS"] = ["VOR", "COMBAT", "AFTERBLOW"]
+    app.config["WEAPONS"] = ["longsword", "rapier", "padded_weapons"]
 
     # Register blueprints
     from app.blueprints.rulebook import rulebook_bp
@@ -76,9 +86,7 @@ def create_app() -> Flask:
             return redirect(url_for("index", ui_lang="hun", rules_lang="hun"), code=302)
 
         return render_template(
-            "index.html",
-            variants=app.config['VARIANTS'],
-            weapons=app.config['WEAPONS']
+            "index.html", variants=app.config["VARIANTS"], weapons=app.config["WEAPONS"]
         )
 
     @app.route("/hu")
@@ -105,10 +113,10 @@ def create_app() -> Flask:
         from flask import send_file
 
         # Security: only allow .html files and prevent directory traversal
-        if not filename.endswith('.html'):
+        if not filename.endswith(".html"):
             return {"error": "Only HTML files are allowed"}, 403
 
-        if '..' in filename or '/' in filename:
+        if ".." in filename or "/" in filename:
             return {"error": "Invalid filename"}, 403
 
         handout_dir = Path(__file__).resolve().parent.parent.parent / "docs" / "handouts"
@@ -117,6 +125,6 @@ def create_app() -> Flask:
         if not filepath.exists():
             return {"error": f"Handout not found: {filename}"}, 404
 
-        return send_file(str(filepath), mimetype='text/html')
+        return send_file(str(filepath), mimetype="text/html")
 
     return app

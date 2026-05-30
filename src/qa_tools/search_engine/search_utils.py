@@ -20,16 +20,16 @@ def get_rule_depth(rule_id: str) -> int:
     Returns:
         Depth level (1-5), or 0 if invalid
     """
-    if not rule_id or '-' not in rule_id:
+    if not rule_id or "-" not in rule_id:
         return 0
 
     # The numeric part is always the last part after splitting by '-'
     # This handles multi-part prefixes like "LS-AB"
-    parts = rule_id.split('-')
+    parts = rule_id.split("-")
     numeric_part = parts[-1]
 
     # Count dots in numeric part + 1 gives the depth
-    return numeric_part.count('.') + 1
+    return numeric_part.count(".") + 1
 
 
 def get_rule_lineage(rule_id: str) -> list[str]:
@@ -46,22 +46,22 @@ def get_rule_lineage(rule_id: str) -> list[str]:
     Returns:
         List of parent rule IDs (excluding the rule itself)
     """
-    if not rule_id or '-' not in rule_id:
+    if not rule_id or "-" not in rule_id:
         return []
 
     # Split to get prefix and numeric parts
-    parts = rule_id.split('-')
+    parts = rule_id.split("-")
 
     # Prefix could be multi-part (e.g., "LS-AB")
-    prefix = '-'.join(parts[:-1])
+    prefix = "-".join(parts[:-1])
     numeric = parts[-1]
-    numeric_parts = numeric.split('.')
+    numeric_parts = numeric.split(".")
 
     lineage = [prefix]  # Start with just the prefix (e.g., "GEN" or "LS-AB")
 
     # Build up the hierarchy
     for i in range(len(numeric_parts)):
-        parent_numeric = '.'.join(numeric_parts[:i+1])
+        parent_numeric = ".".join(numeric_parts[: i + 1])
         lineage.append(f"{prefix}-{parent_numeric}")
 
     # Remove the rule itself from lineage (we only want parents)
@@ -79,15 +79,15 @@ def get_children_rules(rule_id: str, all_rules: list[dict[str, Any]]) -> list[st
     Returns:
         List of direct child rule IDs
     """
-    if not rule_id or '-' not in rule_id:
+    if not rule_id or "-" not in rule_id:
         return []
 
     current_depth = get_rule_depth(rule_id)
     children = []
 
     for rule in all_rules:
-        child_id = rule.get('rule_id', '')
-        if child_id.startswith(rule_id + '.'):
+        child_id = rule.get("rule_id", "")
+        if child_id.startswith(rule_id + "."):
             child_depth = get_rule_depth(child_id)
             if child_depth == current_depth + 1:
                 children.append(child_id)

@@ -10,9 +10,9 @@ class TestSearchAPI:
 
     def test_api_search_basic(self, client):
         """Test basic search request"""
-        response = client.post('/api/search',
-                              data=json.dumps({"query": "meeting"}),
-                              content_type='application/json')
+        response = client.post(
+            "/api/search", data=json.dumps({"query": "meeting"}), content_type="application/json"
+        )
 
         assert response.status_code == 200
         data = response.get_json()
@@ -22,12 +22,11 @@ class TestSearchAPI:
 
     def test_api_search_with_variant_filter(self, client):
         """Test search with variant filter"""
-        response = client.post('/api/search',
-                              data=json.dumps({
-                                  "query": "longsword",
-                                  "variant_filter": "VOR"
-                              }),
-                              content_type='application/json')
+        response = client.post(
+            "/api/search",
+            data=json.dumps({"query": "longsword", "variant_filter": "VOR"}),
+            content_type="application/json",
+        )
 
         assert response.status_code == 200
         data = response.get_json()
@@ -37,12 +36,11 @@ class TestSearchAPI:
 
     def test_api_search_with_weapon_filter(self, client):
         """Test search with weapon filter"""
-        response = client.post('/api/search',
-                              data=json.dumps({
-                                  "query": "rules",
-                                  "weapon_filter": "longsword"
-                              }),
-                              content_type='application/json')
+        response = client.post(
+            "/api/search",
+            data=json.dumps({"query": "rules", "weapon_filter": "longsword"}),
+            content_type="application/json",
+        )
 
         assert response.status_code == 200
         data = response.get_json()
@@ -51,30 +49,27 @@ class TestSearchAPI:
 
     def test_api_search_empty_query(self, client):
         """Test search with empty query"""
-        response = client.post('/api/search',
-                              data=json.dumps({"query": ""}),
-                              content_type='application/json')
+        response = client.post(
+            "/api/search", data=json.dumps({"query": ""}), content_type="application/json"
+        )
 
         # Should handle empty query gracefully
         assert response.status_code in [200, 400]
 
     def test_api_search_missing_query(self, client):
         """Test search without query parameter"""
-        response = client.post('/api/search',
-                              data=json.dumps({}),
-                              content_type='application/json')
+        response = client.post("/api/search", data=json.dumps({}), content_type="application/json")
 
         # Should return error for missing query
         assert response.status_code == 400
 
     def test_api_search_max_results(self, client):
         """Test search with max_results parameter"""
-        response = client.post('/api/search',
-                              data=json.dumps({
-                                  "query": "rules",
-                                  "max_results": 3
-                              }),
-                              content_type='application/json')
+        response = client.post(
+            "/api/search",
+            data=json.dumps({"query": "rules", "max_results": 3}),
+            content_type="application/json",
+        )
 
         assert response.status_code == 200
         data = response.get_json()
@@ -90,14 +85,14 @@ class TestRuleByIdAPI:
 
     def test_api_rule_by_id_found(self, client):
         """Test getting existing rule by ID"""
-        response = client.get('/api/rule/GEN-1')
+        response = client.get("/api/rule/GEN-1")
 
         # Rule might not exist in test environment
         assert response.status_code in [200, 404]
 
     def test_api_rule_by_id_not_found(self, client):
         """Test getting non-existent rule"""
-        response = client.get('/api/rule/NONEXISTENT-99')
+        response = client.get("/api/rule/NONEXISTENT-99")
 
         assert response.status_code == 404
 
@@ -107,7 +102,7 @@ class TestStatsAPI:
 
     def test_api_stats(self, client):
         """Test getting statistics"""
-        response = client.get('/api/stats')
+        response = client.get("/api/stats")
 
         assert response.status_code == 200
         data = response.get_json()
@@ -121,20 +116,17 @@ class TestExtractAPI:
 
     def test_api_extract_basic(self, client):
         """Test extract without filters"""
-        response = client.post('/api/extract',
-                              data=json.dumps({}),
-                              content_type='application/json')
+        response = client.post("/api/extract", data=json.dumps({}), content_type="application/json")
 
         # Should return some content
         assert response.status_code == 200
 
     def test_api_extract_with_filters(self, client):
         """Test extract with weapon and variant filters"""
-        response = client.post('/api/extract',
-                              data=json.dumps({
-                                  "weapon_filter": "longsword",
-                                  "variant_filter": "VOR"
-                              }),
-                              content_type='application/json')
+        response = client.post(
+            "/api/extract",
+            data=json.dumps({"weapon_filter": "longsword", "variant_filter": "VOR"}),
+            content_type="application/json",
+        )
 
         assert response.status_code == 200

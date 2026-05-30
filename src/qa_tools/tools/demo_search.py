@@ -8,6 +8,7 @@ from pathlib import Path
 
 from qa_tools.search_engine.search import RulebookSearch, format_result
 
+
 def main():
     if len(sys.argv) < 2:
         print("Usage: python demo_search.py 'your query'")
@@ -35,6 +36,7 @@ def main():
 
     for result in results:
         print(format_result(result))
+
 
 if __name__ == "__main__":
     main()

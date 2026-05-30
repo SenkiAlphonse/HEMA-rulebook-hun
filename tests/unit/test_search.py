@@ -37,14 +37,18 @@ class TestRulebookSearch:
         results = search_engine.search("longsword", variant_filter="COMBAT")
         # Should only return COMBAT or general rules
         for result in results:
-            assert result.variant in ["COMBAT", ""], f"Expected COMBAT or empty, got {result.variant}"
+            assert result.variant in ["COMBAT", ""], (
+                f"Expected COMBAT or empty, got {result.variant}"
+            )
 
     def test_variant_filter_afterblow(self, search_engine):
         """Test AFTERBLOW variant filtering"""
         results = search_engine.search("longsword", variant_filter="AFTERBLOW")
         # Should only return AFTERBLOW or general rules
         for result in results:
-            assert result.variant in ["AFTERBLOW", ""], f"Expected AFTERBLOW or empty, got {result.variant}"
+            assert result.variant in ["AFTERBLOW", ""], (
+                f"Expected AFTERBLOW or empty, got {result.variant}"
+            )
 
     def test_rule_by_id(self, search_engine):
         """Test get_rule_by_id lookup"""
@@ -76,7 +80,9 @@ class TestRulebookSearch:
         results = search_engine.search("rules", weapon_filter="longsword")
         # Should only return longsword or general rules
         for result in results:
-            assert result.weapon_type in ["longsword", "general"], f"Expected longsword or general, got {result.weapon_type}"
+            assert result.weapon_type in ["longsword", "general"], (
+                f"Expected longsword or general, got {result.weapon_type}"
+            )
 
     def test_search_by_rule_id(self, search_engine):
         """Test searching by exact rule ID"""
@@ -97,7 +103,9 @@ class TestRulebookSearch:
         if len(results) > 1:
             # Scores should be in descending order
             for i in range(len(results) - 1):
-                assert results[i].score >= results[i + 1].score, "Results should be ordered by score (descending)"
+                assert results[i].score >= results[i + 1].score, (
+                    "Results should be ordered by score (descending)"
+                )
 
     # Note: test_detect_variant_in_query removed - method was in legacy search.py
     # Variant detection is now handled by AliasAwareSearch._expand_query() via aliases
@@ -113,7 +121,7 @@ class TestRulebookSearch:
 
         from qa_tools.search_engine import AliasAwareSearch
 
-        real_index = Path(__file__).parent.parent.parent / 'data' / 'search' / 'rules_index.json'
+        real_index = Path(__file__).parent.parent.parent / "data" / "search" / "rules_index.json"
         if not real_index.exists():
             pytest.skip(f"Real rules index not found at {real_index}")
 
@@ -136,7 +144,7 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": ""
+                    "variant": "",
                 },
                 {
                     "rule_id": "GEN-6.11.2",
@@ -145,7 +153,7 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": ""
+                    "variant": "",
                 },
                 {
                     "rule_id": "GEN-6.11.2.1",
@@ -154,11 +162,11 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": ""
-                }
+                    "variant": "",
+                },
             ],
             "total_rules": 3,
-            "documents": ["01-altalanos.md"]
+            "documents": ["01-altalanos.md"],
         }
 
         index_file = tmp_path / "rules_index_dupe.json"

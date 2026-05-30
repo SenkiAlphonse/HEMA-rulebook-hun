@@ -1,6 +1,7 @@
 """
 Rule extraction and formatting utilities for HEMA rulebook app.
 """
+
 from typing import Any
 
 
@@ -29,25 +30,25 @@ def read_rulebook_markdown_content(lang: str = "hun") -> str:
     """
     if lang == "eng":
         from app.config import get_rulebook_markdown_files_en
+
         md_files = get_rulebook_markdown_files_en()
     else:
         from app.config import get_rulebook_markdown_files
+
         md_files = get_rulebook_markdown_files()
 
     content = ""
 
     for md_file in md_files:
         if md_file.exists():
-            with open(md_file, encoding='utf-8') as f:
+            with open(md_file, encoding="utf-8") as f:
                 content += f.read() + "\n\n---\n\n"
 
     return content
 
 
 def filter_rules_for_extract(
-    rules: list[dict[str, Any]],
-    weapon_filter: str | None,
-    variant_filter: str | None
+    rules: list[dict[str, Any]], weapon_filter: str | None, variant_filter: str | None
 ) -> list[dict[str, Any]]:
     """Filter rules by weapon type and variant"""
     filtered = []
@@ -66,9 +67,7 @@ def filter_rules_for_extract(
 
 
 def format_extract_text(
-    rules: list[dict[str, Any]],
-    weapon_filter: str | None,
-    variant_filter: str | None
+    rules: list[dict[str, Any]], weapon_filter: str | None, variant_filter: str | None
 ) -> str:
     """Format filtered rules into markdown extract"""
     title_parts = ["Rulebook Extract"]
@@ -83,8 +82,8 @@ def format_extract_text(
         key=lambda r: (
             doc_order.get(r.get("document", ""), 9999),
             int(r.get("line_number", 0)),
-            r.get("rule_id", "")
-        )
+            r.get("rule_id", ""),
+        ),
     )
 
     output_lines = []

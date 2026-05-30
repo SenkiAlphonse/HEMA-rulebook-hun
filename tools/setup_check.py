@@ -13,6 +13,7 @@ SRC_DIR = Path(__file__).resolve().parents[1] / "src"
 if SRC_DIR.is_dir():
     sys.path.insert(0, str(SRC_DIR))
 
+
 def check_files():
     """Check if all required files exist"""
     print("=" * 60)
@@ -41,6 +42,7 @@ def check_files():
 
     return all_exist
 
+
 def check_index():
     """Check rule index"""
     print("\n" + "=" * 60)
@@ -49,6 +51,7 @@ def check_index():
 
     try:
         from app.config import get_rules_index_path
+
         with open(str(get_rules_index_path()), encoding="utf-8") as f:
             data = json.load(f)
 
@@ -77,6 +80,7 @@ def check_index():
         print(f"✗ Error loading index: {e}")
         return False
 
+
 def check_aliases():
     """Check aliases configuration"""
     print("\n" + "=" * 60)
@@ -85,6 +89,7 @@ def check_aliases():
 
     try:
         from app.config import get_aliases_path
+
         with open(str(get_aliases_path()), encoding="utf-8") as f:
             aliases = json.load(f)
 
@@ -108,6 +113,7 @@ def check_aliases():
         print(f"✗ Error loading aliases: {e}")
         return False
 
+
 def test_search():
     """Test the search engine"""
     print("\n" + "=" * 60)
@@ -117,7 +123,6 @@ def test_search():
     try:
         # Import from qa_tools package (already in Python path)
         from app.config import get_aliases_path, get_rules_index_path
-
         from qa_tools.search_engine.search_aliases import AliasAwareSearch
 
         search = AliasAwareSearch(str(get_rules_index_path()), str(get_aliases_path()))
@@ -144,8 +149,10 @@ def test_search():
     except Exception as e:
         print(f"✗ Error: {e}")
         import traceback
+
         traceback.print_exc()
         return False
+
 
 def main():
     print("\n")
@@ -167,6 +174,7 @@ def main():
         except Exception as e:
             print(f"\n✗ {name} check failed: {e}")
             import traceback
+
             traceback.print_exc()
             results[name] = False
 
@@ -195,6 +203,7 @@ def main():
         sys.exit(1)
 
     print()
+
 
 if __name__ == "__main__":
     main()

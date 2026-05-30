@@ -10,7 +10,11 @@ def _find_project_root(start: Path) -> Path:
     start = start.resolve()
     for candidate in [start, *list(start.parents)]:
         # Heuristics: these directories/files are expected at repo root.
-        if (candidate / "rules").is_dir() and (candidate / "templates").is_dir() and (candidate / "requirements.txt").exists():
+        if (
+            (candidate / "rules").is_dir()
+            and (candidate / "templates").is_dir()
+            and (candidate / "requirements.txt").exists()
+        ):
             return candidate
     # Fallback: src/app/config.py -> repo root is 2 parents up (app -> src -> root)
     try:
@@ -22,38 +26,47 @@ def _find_project_root(start: Path) -> Path:
 # Project root directory (works with `src/` layout)
 PROJECT_ROOT = _find_project_root(Path(__file__))
 
+
 # Common path getters
 def get_project_root() -> Path:
     """Get the project root directory"""
     return PROJECT_ROOT
 
+
 def get_qa_tools_dir() -> Path:
     """Get qa_tools package directory path (developer convenience)."""
     return PROJECT_ROOT / "src" / "qa_tools"
+
 
 def get_data_dir() -> Path:
     """Get top-level data directory"""
     return PROJECT_ROOT / "data"
 
+
 def get_search_data_dir() -> Path:
     """Get directory containing search index + aliases"""
     return get_data_dir() / "search"
+
 
 def get_templates_dir() -> Path:
     """Get templates directory path"""
     return PROJECT_ROOT / "templates"
 
+
 def get_dist_dir() -> Path:
     """Get dist directory path (for pre-rendered files)"""
     return PROJECT_ROOT / "dist"
+
 
 def get_rulebook_dir() -> Path:
     """Get rulebook directory (root directory with markdown files)"""
     return PROJECT_ROOT / "rules"
 
+
 def get_rulebook_en_dir() -> Path:
     """Get English rulebook directory with markdown files"""
     return PROJECT_ROOT / "rules_en"
+
 
 def get_rules_index_path(lang: str = "hun", legacy_fallback: bool = False) -> Path:
     """Get path to language-specific rules index.
@@ -71,9 +84,11 @@ def get_rules_index_path(lang: str = "hun", legacy_fallback: bool = False) -> Pa
         return get_legacy_rules_index_path()
     return hun_path
 
+
 def get_legacy_rules_index_path() -> Path:
     """Get legacy monolingual index path for backward compatibility."""
     return get_search_data_dir() / "rules_index.json"
+
 
 def get_aliases_path(lang: str = "hun") -> Path:
     """Get path to aliases file for a language, with fallback to shared aliases.json."""
@@ -82,6 +97,7 @@ def get_aliases_path(lang: str = "hun") -> Path:
     if lang_alias_path.exists():
         return lang_alias_path
     return search_dir / "aliases.json"
+
 
 def get_rulebook_markdown_files() -> list[Path]:
     """Get all numbered markdown rulebook files from root directory"""
@@ -93,12 +109,14 @@ def get_rulebook_markdown_files() -> list[Path]:
 
     return md_files
 
+
 def get_rulebook_markdown_files_en() -> list[Path]:
     """Get all numbered English markdown rulebook files"""
     rulebook_dir = get_rulebook_en_dir()
     md_files = sorted(rulebook_dir.glob("[0-9][0-9]*.md"))
     md_files = [f for f in md_files if f.name != "README.md"]
     return md_files
+
 
 def get_prerendered_rulebook_path(lang: str = "hun") -> Path:
     """Get path to pre-rendered rulebook HTML.
@@ -109,4 +127,3 @@ def get_prerendered_rulebook_path(lang: str = "hun") -> Path:
     if lang == "eng":
         return get_dist_dir() / "rulebook_eng.html"
     return get_dist_dir() / "rulebook_hun.html"
-

@@ -34,7 +34,6 @@ from dataclasses import dataclass
 from difflib import SequenceMatcher
 from pathlib import Path
 
-
 RE_HEMA_RULE_ID_LINE = re.compile(r"^\*\*([A-Z]{2,10}-[0-9]+(?:\.[0-9]+)*)\*\*\s*$")
 RE_FIE_ARTICLE_LINE = re.compile(r"^t\.(\d+)\s*$")
 RE_T_REF_ANYWHERE = re.compile(r"\bt\.(\d+)\b")
@@ -159,9 +158,19 @@ def choose_mapping(
 ) -> MappingDecision:
     # Hard exclusions: if HEMA is clearly weapon-specific HEMA (longsword/HEMA org), skip mapping.
     hu_norm = normalize_hu(hema_block_hu)
-    if any(w in hu_norm for w in [
-        "hosszúkard", "hosszukard", "birkó", "birkózás", "mhs", "hemaratings", "bandázs", "gambeson",
-    ]):
+    if any(
+        w in hu_norm
+        for w in [
+            "hosszúkard",
+            "hosszukard",
+            "birkó",
+            "birkózás",
+            "mhs",
+            "hemaratings",
+            "bandázs",
+            "gambeson",
+        ]
+    ):
         # Still allow mapping if there is an explicit candidate and similarity is very high.
         pass
 
@@ -205,13 +214,24 @@ def choose_mapping(
     # - If only similarity: accept at >= 0.62
     if explicit_candidates:
         if best_score >= 0.50:
-            return MappingDecision(status="mapped", fie_id=best_id, score=best_score, reason=f"{best_kind}")
-        return MappingDecision(status="not_applicable", fie_id=best_id, score=best_score, reason="explicit but low similarity")
+            return MappingDecision(
+                status="mapped", fie_id=best_id, score=best_score, reason=f"{best_kind}"
+            )
+        return MappingDecision(
+            status="not_applicable",
+            fie_id=best_id,
+            score=best_score,
+            reason="explicit but low similarity",
+        )
 
     if best_score >= 0.62:
-        return MappingDecision(status="mapped", fie_id=best_id, score=best_score, reason=f"{best_kind}")
+        return MappingDecision(
+            status="mapped", fie_id=best_id, score=best_score, reason=f"{best_kind}"
+        )
 
-    return MappingDecision(status="no_match", fie_id=best_id, score=best_score, reason="similarity below threshold")
+    return MappingDecision(
+        status="no_match", fie_id=best_id, score=best_score, reason="similarity below threshold"
+    )
 
 
 def format_fie_en_article(fie_id: int, fie_en_articles: dict[int, str]) -> str | None:
@@ -251,7 +271,9 @@ def rewrite_hema_file(
             fie_id = decision.fie_id
             fie_en = format_fie_en_article(fie_id, fie_en_articles)
             if fie_en:
-                new_block.append(f"<!-- FIE: t.{fie_id} | score={decision.score:.3f} | {decision.reason} -->\n")
+                new_block.append(
+                    f"<!-- FIE: t.{fie_id} | score={decision.score:.3f} | {decision.reason} -->\n"
+                )
                 new_block.append(fie_en + "\n")
                 new_block.append("\n")
             else:
@@ -259,13 +281,17 @@ def rewrite_hema_file(
                 new_block.append("\n")
                 new_block.append(block_hu + "\n\n")
         elif decision.status == "not_applicable" and decision.fie_id is not None:
-            new_block.append(f"[[FIE_RULE_NOT_DIRECTLY_APPLICABLE t.{decision.fie_id} | score={decision.score:.3f}]]\n")
+            new_block.append(
+                f"[[FIE_RULE_NOT_DIRECTLY_APPLICABLE t.{decision.fie_id} | score={decision.score:.3f}]]\n"
+            )
             new_block.append("\n")
             new_block.append(block_hu + "\n\n")
         else:
             new_block.append("[[NO_MATCHING_FIE_RULE]]\n\n")
             if decision.fie_id is not None and decision.score is not None:
-                new_block.append(f"<!-- best_candidate: t.{decision.fie_id} | score={decision.score:.3f} | {decision.reason} -->\n\n")
+                new_block.append(
+                    f"<!-- best_candidate: t.{decision.fie_id} | score={decision.score:.3f} | {decision.reason} -->\n\n"
+                )
             new_block.append(block_hu + "\n\n")
 
         # Replace the *content after* the rule ID line.

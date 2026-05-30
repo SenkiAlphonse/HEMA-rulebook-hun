@@ -13,7 +13,7 @@ from app.validation import sanitize_query, validate_filter, validate_max_results
 # Configure logging
 logger = logging.getLogger(__name__)
 
-search_bp = Blueprint('search', __name__, url_prefix='/api')
+search_bp = Blueprint("search", __name__, url_prefix="/api")
 
 VALID_RULESET_LANGS = {"hun", "eng"}
 
@@ -33,7 +33,7 @@ def _get_engine_for_lang(lang: str):
     return getattr(current_app, "search_engines", {}).get(lang, current_app.search_engine)
 
 
-@search_bp.route('/search', methods=['POST'])
+@search_bp.route("/search", methods=["POST"])
 def api_search() -> Any:
     """Search for rules by keyword
 
@@ -71,12 +71,12 @@ def api_search() -> Any:
 
         # Validate filters
         variant_filter = data.get("variant_filter")
-        is_valid, error_msg = validate_filter(variant_filter, current_app.config['VARIANTS'])
+        is_valid, error_msg = validate_filter(variant_filter, current_app.config["VARIANTS"])
         if not is_valid:
             return jsonify({"error": error_msg}), 400
 
         weapon_filter = data.get("weapon_filter")
-        is_valid, error_msg = validate_filter(weapon_filter, current_app.config['WEAPONS'])
+        is_valid, error_msg = validate_filter(weapon_filter, current_app.config["WEAPONS"])
         if not is_valid:
             return jsonify({"error": error_msg}), 400
 
@@ -85,7 +85,7 @@ def api_search() -> Any:
             query,
             max_results=max_results,
             variant_filter=variant_filter,
-            weapon_filter=weapon_filter
+            weapon_filter=weapon_filter,
         )
 
         # Convert results to JSON with depth and grouping info
@@ -105,27 +105,31 @@ def api_search() -> Any:
                 # For levels 1-3, the rule itself is a group anchor
                 current_group = r.rule_id
 
-            results_data.append({
-                "rule_id": r.rule_id,
-                "text": r.text,
-                "section": r.section,
-                "subsection": r.subsection,
-                "document": r.document,
-                "weapon_type": r.weapon_type,
-                "variant": r.variant or "general",
-                "score": r.score,
-                "depth": depth,
-                "group_root": current_group
-            })
+            results_data.append(
+                {
+                    "rule_id": r.rule_id,
+                    "text": r.text,
+                    "section": r.section,
+                    "subsection": r.subsection,
+                    "document": r.document,
+                    "weapon_type": r.weapon_type,
+                    "variant": r.variant or "general",
+                    "score": r.score,
+                    "depth": depth,
+                    "group_root": current_group,
+                }
+            )
 
-        return jsonify({
-            "success": True,
-            "query": query,
-            "rules_lang": rules_lang,
-            "count": len(results_data),
-            "results": results_data,
-            "note": "Results grouped by rule hierarchy. Level 4-5 rules include parent rules (up to level 3) and direct child rules."
-        })
+        return jsonify(
+            {
+                "success": True,
+                "query": query,
+                "rules_lang": rules_lang,
+                "count": len(results_data),
+                "results": results_data,
+                "note": "Results grouped by rule hierarchy. Level 4-5 rules include parent rules (up to level 3) and direct child rules.",
+            }
+        )
 
     except ValueError as e:
         logger.warning(f"Invalid search request parameters: {e}")
@@ -135,7 +139,7 @@ def api_search() -> Any:
         return jsonify({"error": "Search failed"}), 500
 
 
-@search_bp.route('/stats', methods=['GET'])
+@search_bp.route("/stats", methods=["GET"])
 def api_stats() -> Any:
     """Get rulebook statistics"""
     try:
@@ -147,20 +151,22 @@ def api_stats() -> Any:
         ab_rules = sum(1 for r in search_engine.rules if r.get("variant") == "AFTERBLOW")
         longsword_rules = sum(1 for r in search_engine.rules if r.get("weapon_type") == "longsword")
 
-        return jsonify({
-            "rules_lang": rules_lang,
-            "total_rules": total_rules,
-            "vor_rules": vor_rules,
-            "combat_rules": combat_rules,
-            "afterblow_rules": ab_rules,
-            "longsword_rules": longsword_rules
-        })
+        return jsonify(
+            {
+                "rules_lang": rules_lang,
+                "total_rules": total_rules,
+                "vor_rules": vor_rules,
+                "combat_rules": combat_rules,
+                "afterblow_rules": ab_rules,
+                "longsword_rules": longsword_rules,
+            }
+        )
     except Exception as e:
         logger.error(f"Stats error: {type(e).__name__}: {e}")
         return jsonify({"error": "Failed to get statistics"}), 500
 
 
-@search_bp.route('/extract', methods=['POST'])
+@search_bp.route("/extract", methods=["POST"])
 def api_extract() -> Any:
     """Generate rulebook extract filtered by weapon and variant"""
     try:
@@ -168,20 +174,16 @@ def api_extract() -> Any:
         rules_lang = _resolve_rules_lang(data)
         search_engine = _get_engine_for_lang(rules_lang)
 
-        weapon_filter = normalize_filter(data.get("weapon_filter"), current_app.config['WEAPONS'])
-        variant_filter = normalize_filter(data.get("variant_filter"), current_app.config['VARIANTS'])
+        weapon_filter = normalize_filter(data.get("weapon_filter"), current_app.config["WEAPONS"])
+        variant_filter = normalize_filter(
+            data.get("variant_filter"), current_app.config["VARIANTS"]
+        )
 
         filtered_rules = filter_rules_for_extract(
-            search_engine.rules,
-            weapon_filter,
-            variant_filter
+            search_engine.rules, weapon_filter, variant_filter
         )
 
-        extract_text = format_extract_text(
-            filtered_rules,
-            weapon_filter,
-            variant_filter
-        )
+        extract_text = format_extract_text(filtered_rules, weapon_filter, variant_filter)
 
         weapon_label = weapon_filter or "all-weapons"
         variant_label = variant_filter or "all-variants"
@@ -190,7 +192,7 @@ def api_extract() -> Any:
         return Response(
             extract_text,
             mimetype="text/markdown; charset=utf-8",
-            headers={"Content-Disposition": f"attachment; filename={filename}"}
+            headers={"Content-Disposition": f"attachment; filename={filename}"},
         )
     except ValueError as e:
         logger.warning(f"Invalid extract request parameters: {e}")
@@ -200,7 +202,7 @@ def api_extract() -> Any:
         return jsonify({"error": "Failed to generate extract"}), 500
 
 
-@search_bp.route('/rule/<rule_id>', methods=['GET'])
+@search_bp.route("/rule/<rule_id>", methods=["GET"])
 def api_rule(rule_id: str) -> Any:
     """Get a specific rule by ID"""
     try:
@@ -208,26 +210,29 @@ def api_rule(rule_id: str) -> Any:
         search_engine = _get_engine_for_lang(rules_lang)
         # Validate rule ID format
         from app.validation import validate_rule_id
+
         is_valid, error_msg = validate_rule_id(rule_id)
         if not is_valid:
             return jsonify({"error": error_msg}), 400
 
         rule = search_engine.get_rule_by_id(rule_id)
         if rule:
-            return jsonify({
-                "success": True,
-                "rules_lang": rules_lang,
-                "rule": {
-                    "rule_id": rule["rule_id"],
-                    "text": rule["text"],
-                    "section": rule.get("section", ""),
-                    "subsection": rule.get("subsection", ""),
-                    "document": rule.get("document", ""),
-                    "weapon_type": rule.get("weapon_type", ""),
-                    "variant": rule.get("variant", ""),
-                    "anchor_id": rule.get("anchor_id", "")
+            return jsonify(
+                {
+                    "success": True,
+                    "rules_lang": rules_lang,
+                    "rule": {
+                        "rule_id": rule["rule_id"],
+                        "text": rule["text"],
+                        "section": rule.get("section", ""),
+                        "subsection": rule.get("subsection", ""),
+                        "document": rule.get("document", ""),
+                        "weapon_type": rule.get("weapon_type", ""),
+                        "variant": rule.get("variant", ""),
+                        "anchor_id": rule.get("anchor_id", ""),
+                    },
                 }
-            })
+            )
         return jsonify({"error": "Rule not found"}), 404
     except Exception as e:
         logger.error(f"Get rule error: {type(e).__name__}: {e}")

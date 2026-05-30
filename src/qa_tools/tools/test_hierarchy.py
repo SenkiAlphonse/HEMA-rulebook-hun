@@ -3,20 +3,20 @@
 
 import json
 
-with open('rules_index.json', encoding='utf-8') as f:
+with open("rules_index.json", encoding="utf-8") as f:
     data = json.load(f)
-    rules = data['rules']
+    rules = data["rules"]
 
 # Find and display sample rules
 print("=" * 80)
 print("HIERARCHY METADATA TEST")
 print("=" * 80)
 
-samples = ['GEN-3.2.1.1', 'GEN-3.2.1', 'GEN-3.2', 'GEN-3', 'GEN']
+samples = ["GEN-3.2.1.1", "GEN-3.2.1", "GEN-3.2", "GEN-3", "GEN"]
 for rule_id in samples:
     found = None
     for r in rules:
-        if r['rule_id'] == rule_id:
+        if r["rule_id"] == rule_id:
             found = r
             break
 
@@ -36,13 +36,13 @@ print("Summary Statistics")
 print("=" * 80)
 depths = {}
 for r in rules:
-    d = r.get('depth', 0)
+    d = r.get("depth", 0)
     depths[d] = depths.get(d, 0) + 1
 
 for depth in sorted(depths.keys()):
     print(f"Depth {depth}: {depths[depth]} rules")
 
-leaves = sum(1 for r in rules if r.get('is_leaf'))
+leaves = sum(1 for r in rules if r.get("is_leaf"))
 non_leaves = len(rules) - leaves
 print(f"\nLeaf rules: {leaves}")
 print(f"Parent rules (non-leaf): {non_leaves}")

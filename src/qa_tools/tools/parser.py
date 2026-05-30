@@ -16,6 +16,7 @@ from app.utils.strip_markdown import strip_markdown
 @dataclass
 class Rule:
     """Represents a single rule in the rulebook"""
+
     rule_id: str  # e.g., "GEN-1.1.1"
     text: str  # Full rule text (markdown-formatted)
     section: str  # Parent section heading
@@ -53,6 +54,7 @@ class Rule:
 @dataclass
 class Section:
     """Represents a section in the rulebook"""
+
     title: str
     anchor_id: str
     level: int  # 1 for #, 2 for ##, etc.
@@ -71,14 +73,13 @@ class RulebookParser:
         self.sections: list[Section] = []
 
         # Patterns
-        self.rule_id_pattern = re.compile(r'\*\*([A-Z]+(?:-[A-Z]+)*-[\d.]+)\*\*')
+        self.rule_id_pattern = re.compile(r"\*\*([A-Z]+(?:-[A-Z]+)*-[\d.]+)\*\*")
         self.anchor_pattern = re.compile(r'<span id="([^"]+)"></span>')
-        self.heading_pattern = re.compile(r'^(#{1,6})\s+(.+)$')
-        self.comment_pattern = re.compile(r'<!--.*?-->', re.DOTALL)
+        self.heading_pattern = re.compile(r"^(#{1,6})\s+(.+)$")
+        self.comment_pattern = re.compile(r"<!--.*?-->", re.DOTALL)
         # Pattern to find rule references in text (e.g., [GEN-6.2.4], [DIS-3.3.9])
         # Matches: [PREFIX-NUM] or [PREFIX-NUM.NUM] or [PREFIX-NUM.NUM.NUM], etc.
-        self.reference_pattern = re.compile(r'\[([A-Z]+(?:-[A-Z]+)*(?:-\d+(?:\.\d+)*)?)\]')
-
+        self.reference_pattern = re.compile(r"\[([A-Z]+(?:-[A-Z]+)*(?:-\d+(?:\.\d+)*)?)\]")
 
     def parse_all(self) -> dict[str, Any]:
         """Parse all markdown files in the rules directory"""
@@ -110,12 +111,12 @@ class RulebookParser:
             "rules": [asdict(rule) for rule in self.rules],
             "total_rules": len(self.rules),
             "documents": list({rule.document for rule in self.rules}),
-            "language": self.language
+            "language": self.language,
         }
 
     def parse_file(self, filepath: Path):
         """Parse a single markdown file"""
-        with open(filepath, encoding='utf-8') as f:
+        with open(filepath, encoding="utf-8") as f:
             lines = f.readlines()
 
         # Extract weapon type and variant from filename
@@ -135,9 +136,15 @@ class RulebookParser:
                 # Save any pending rule
                 if current_rule_id and rule_text_lines:
                     self._save_rule(
-                        current_rule_id, rule_text_lines, current_section,
-                        current_subsection, filepath.name, current_anchor,
-                        rule_start_line, weapon_type, variant
+                        current_rule_id,
+                        rule_text_lines,
+                        current_section,
+                        current_subsection,
+                        filepath.name,
+                        current_anchor,
+                        rule_start_line,
+                        weapon_type,
+                        variant,
                     )
                     current_rule_id = ""
                     rule_text_lines = []
@@ -161,14 +168,22 @@ class RulebookParser:
 
             # Check for rule ID (only at start of line after stripping)
             stripped_line = line.strip()
-            rule_id_match = self.rule_id_pattern.match(stripped_line)  # Use match() to require start of string
+            rule_id_match = self.rule_id_pattern.match(
+                stripped_line
+            )  # Use match() to require start of string
             if rule_id_match:
                 # Save previous rule if exists
                 if current_rule_id and rule_text_lines:
                     self._save_rule(
-                        current_rule_id, rule_text_lines, current_section,
-                        current_subsection, filepath.name, current_anchor,
-                        rule_start_line, weapon_type, variant
+                        current_rule_id,
+                        rule_text_lines,
+                        current_section,
+                        current_subsection,
+                        filepath.name,
+                        current_anchor,
+                        rule_start_line,
+                        weapon_type,
+                        variant,
                     )
 
                 # Start new rule
@@ -180,27 +195,42 @@ class RulebookParser:
             # Accumulate rule text
             if current_rule_id:
                 stripped = line.strip()
-                if stripped and not stripped.startswith('---'):
+                if stripped and not stripped.startswith("---"):
                     # Preserve leading whitespace for indented list items so
                     # multilevel nested lists keep their nesting depth
                     if line.lstrip() != line:
-                        cleaned = self.comment_pattern.sub('', line.rstrip())
+                        cleaned = self.comment_pattern.sub("", line.rstrip())
                     else:
-                        cleaned = self.comment_pattern.sub('', stripped).strip()
+                        cleaned = self.comment_pattern.sub("", stripped).strip()
                     if cleaned.strip():  # Only add if there's content after removing comments
                         rule_text_lines.append(cleaned)
 
         # Save last rule if exists
         if current_rule_id and rule_text_lines:
             self._save_rule(
-                current_rule_id, rule_text_lines, current_section,
-                current_subsection, filepath.name, current_anchor,
-                rule_start_line, weapon_type, variant
+                current_rule_id,
+                rule_text_lines,
+                current_section,
+                current_subsection,
+                filepath.name,
+                current_anchor,
+                rule_start_line,
+                weapon_type,
+                variant,
             )
 
-    def _save_rule(self, rule_id: str, text_lines: list[str], section: str,
-                   subsection: str, document: str, anchor: str, line_num: int,
-                   weapon_type: str, variant: str) -> None:
+    def _save_rule(
+        self,
+        rule_id: str,
+        text_lines: list[str],
+        section: str,
+        subsection: str,
+        document: str,
+        anchor: str,
+        line_num: int,
+        weapon_type: str,
+        variant: str,
+    ) -> None:
         """Save a parsed rule, detecting variant from text if present"""
         # Join text lines preserving structure:
         # - Lines starting with "- " (bullets) keep newlines
@@ -208,13 +238,13 @@ class RulebookParser:
         formatted_lines = []
         for line in text_lines:
             # If line starts with "- ", mark it as a bullet point
-            if line.startswith('- '):
+            if line.startswith("- "):
                 formatted_lines.append(line)
             else:
                 formatted_lines.append(line)
 
         # Join with newlines to preserve all line breaks
-        text = '\n'.join(formatted_lines).strip()
+        text = "\n".join(formatted_lines).strip()
         text_plain = strip_markdown(text)
 
         if text:
@@ -233,7 +263,7 @@ class RulebookParser:
                 line_number=line_num,
                 weapon_type=weapon_type,
                 variant=variant,
-                language=self.language
+                language=self.language,
             )
             self.rules.append(rule)
             self.rule_id_index[rule_id] = rule  # Add to O(1) lookup index
@@ -247,20 +277,28 @@ class RulebookParser:
         text_strip = text.strip()
 
         # Pattern: **Word**: at the start (handles both **Word**: and **Word:**)
-        variant_start_pattern = re.compile(r'^\*\*(Vor|Combat|Afterblow)\*\*:?', re.IGNORECASE)
+        variant_start_pattern = re.compile(r"^\*\*(Vor|Combat|Afterblow)\*\*:?", re.IGNORECASE)
         match = variant_start_pattern.match(text_strip)
 
         if match:
             variant_name = match.group(1).upper()
             # Normalize variant names
-            if variant_name in {'VOR', 'COMBAT', 'AFTERBLOW'}:
+            if variant_name in {"VOR", "COMBAT", "AFTERBLOW"}:
                 return variant_name
 
-        return ''
+        return ""
 
-    def _extract_variant_subrules(self, parent_rule_id: str, text: str, section: str,
-                                   subsection: str, document: str, anchor: str, line_num: int,
-                                   weapon_type: str) -> list[Rule]:
+    def _extract_variant_subrules(
+        self,
+        parent_rule_id: str,
+        text: str,
+        section: str,
+        subsection: str,
+        document: str,
+        anchor: str,
+        line_num: int,
+        weapon_type: str,
+    ) -> list[Rule]:
         """
         Extract variant-specific sub-rules from text containing Vor/Combat/Afterblow sections.
         Returns a list of extracted sub-rules, or empty list if no variants found.
@@ -350,6 +388,7 @@ class RulebookParser:
     def _get_rule_depth(self, rule_id: str) -> int:
         """Calculate nesting depth from rule ID (delegates to shared utils)"""
         from qa_tools.search_engine.search_utils import get_rule_depth
+
         return get_rule_depth(rule_id)
 
     def _get_parent_id(self, rule_id: str) -> str:
@@ -360,19 +399,19 @@ class RulebookParser:
     def _get_rule_lineage(self, rule_id: str) -> list:
         """Get list of parent rule IDs (delegates to shared utils)"""
         from qa_tools.search_engine.search_utils import get_rule_lineage
+
         return get_rule_lineage(rule_id)
 
     def save_index(self, output_path: Path) -> None:
         """Save parsed rules to JSON index"""
         index_data = self.parse_all()
 
-        with open(output_path, 'w', encoding='utf-8') as f:
+        with open(output_path, "w", encoding="utf-8") as f:
             json.dump(index_data, f, ensure_ascii=False, indent=2)
 
         print(f"\nIndex saved to {output_path}")
         print(f"Total rules indexed: {index_data['total_rules']}")
         print(f"Documents processed: {len(index_data['documents'])}")
-
 
 
 def main() -> None:

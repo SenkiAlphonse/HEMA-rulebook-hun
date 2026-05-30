@@ -4,11 +4,10 @@ Input validation utilities for HEMA rulebook search engine
 
 import re
 
-
 # Validation constraints
 MAX_QUERY_LENGTH = 1000
 MIN_QUERY_LENGTH = 1
-RULE_ID_PATTERN = re.compile(r'^[A-Z]+(?:-[A-Z]+)*-[\d.]+$')
+RULE_ID_PATTERN = re.compile(r"^[A-Z]+(?:-[A-Z]+)*-[\d.]+$")
 MAX_RESULTS = 100
 
 
@@ -57,7 +56,10 @@ def validate_rule_id(rule_id: str) -> tuple[bool, str | None]:
         return False, "Rule ID cannot be empty"
 
     if not RULE_ID_PATTERN.match(rule_id):
-        return False, f"Invalid rule ID format: {rule_id}. Expected format: PREFIX-1.2.3 or PREFIX-SUB-1.2.3"
+        return (
+            False,
+            f"Invalid rule ID format: {rule_id}. Expected format: PREFIX-1.2.3 or PREFIX-SUB-1.2.3",
+        )
 
     return True, None
 
@@ -90,7 +92,9 @@ def validate_filter(value: str | None, allowed_values: list) -> tuple[bool, str 
     return True, None
 
 
-def validate_max_results(max_results: int, max_allowed: int = MAX_RESULTS) -> tuple[bool, str | None]:
+def validate_max_results(
+    max_results: int, max_allowed: int = MAX_RESULTS
+) -> tuple[bool, str | None]:
     """
     Validate max_results parameter.
 
@@ -127,6 +131,6 @@ def sanitize_query(query: str) -> str:
     query = query.strip()
 
     # Collapse multiple spaces into single space
-    query = re.sub(r'\s+', ' ', query)
+    query = re.sub(r"\s+", " ", query)
 
     return query

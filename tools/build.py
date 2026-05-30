@@ -17,14 +17,15 @@ if SRC_DIR.is_dir():
     sys.path.insert(0, str(SRC_DIR))
 
 from app.config import (
-    get_project_root, get_dist_dir,
-    get_prerendered_rulebook_path,
-    get_rules_index_path,
+    get_dist_dir,
     get_legacy_rules_index_path,
+    get_prerendered_rulebook_path,
+    get_project_root,
+    get_rules_index_path,
 )
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(message)s')
+logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
 
 
@@ -44,7 +45,9 @@ def build_search_index():
             output_path = get_rules_index_path(lang=lang)
             output_path.parent.mkdir(parents=True, exist_ok=True)
             logger.info(f"Building {lang} index from {rules_subdir}/ ...")
-            RulebookParser(project_root, rules_subdir=rules_subdir, language=lang).save_index(output_path)
+            RulebookParser(project_root, rules_subdir=rules_subdir, language=lang).save_index(
+                output_path
+            )
 
         # Keep legacy monolingual file for backward compatibility (maps to Hungarian index)
         legacy_output_path = get_legacy_rules_index_path()
@@ -62,7 +65,11 @@ def build_rulebook():
     """Generate pre-rendered rulebook HTML for all languages (hun + eng)"""
     try:
         # Import shared utilities
-        from app.utils import create_mistune_markdown, preprocess_rulebook_markdown, read_rulebook_markdown_content  # noqa: I001
+        from app.utils import (
+            create_mistune_markdown,
+            preprocess_rulebook_markdown,
+            read_rulebook_markdown_content,
+        )
 
         # Create dist directory
         dist_dir = get_dist_dir()
@@ -85,7 +92,7 @@ def build_rulebook():
 
             # Write to dist
             output_path = get_prerendered_rulebook_path(lang=lang)
-            with open(output_path, 'w', encoding='utf-8') as f:
+            with open(output_path, "w", encoding="utf-8") as f:
                 f.write(html_content)
 
             logger.info(f"✓ Rulebook ({lang}) pre-rendered to {output_path}")
@@ -106,4 +113,3 @@ if __name__ == "__main__":
 
     # Exit with success only if both succeed
     sys.exit(0 if (index_success and rulebook_success) else 1)
-

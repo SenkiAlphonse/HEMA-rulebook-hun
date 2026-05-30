@@ -1,39 +1,40 @@
 """
 Update existing index with aliases
 """
+
 import json
 from pathlib import Path
 
 current_dir = Path(__file__).parent.parent / "data"
 
 # Load aliases
-with open(current_dir / 'aliases.json', encoding='utf-8') as f:
+with open(current_dir / "aliases.json", encoding="utf-8") as f:
     aliases = json.load(f)
 
 # Load current index
-with open(current_dir / 'rules_index.json', encoding='utf-8') as f:
+with open(current_dir / "rules_index.json", encoding="utf-8") as f:
     data = json.load(f)
 
 # Add aliases to each rule
-for rule in data['rules']:
-    weapon_type = rule.get('weapon_type', 'general')
-    variant = rule.get('variant', '')
+for rule in data["rules"]:
+    weapon_type = rule.get("weapon_type", "general")
+    variant = rule.get("variant", "")
 
     # Add weapon aliases
-    weapon_aliases = aliases.get('weapons', {}).get(weapon_type, [])
-    rule['weapon_aliases'] = weapon_aliases
+    weapon_aliases = aliases.get("weapons", {}).get(weapon_type, [])
+    rule["weapon_aliases"] = weapon_aliases
 
     # Add variant aliases
-    variant_aliases = aliases.get('variants', {}).get(variant, []) if variant else []
-    rule['variant_aliases'] = variant_aliases# Save updated index
-with open(current_dir / 'rules_index.json', 'w', encoding='utf-8') as f:
+    variant_aliases = aliases.get("variants", {}).get(variant, []) if variant else []
+    rule["variant_aliases"] = variant_aliases  # Save updated index
+with open(current_dir / "rules_index.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
-print(f'Updated {len(data["rules"])} rules with aliases')
-if data['rules']:
-    sample = data['rules'][0]
-    print(f'\nSample rule: {sample["rule_id"]}')
-    print(f'  Weapon: {sample.get("weapon_type")}')
-    print(f'  Weapon aliases: {sample.get("weapon_aliases", [])}')
-    print(f'  Variant: {sample.get("variant")}')
-    print(f'  Variant aliases: {sample.get("variant_aliases", [])}')
+print(f"Updated {len(data['rules'])} rules with aliases")
+if data["rules"]:
+    sample = data["rules"][0]
+    print(f"\nSample rule: {sample['rule_id']}")
+    print(f"  Weapon: {sample.get('weapon_type')}")
+    print(f"  Weapon aliases: {sample.get('weapon_aliases', [])}")
+    print(f"  Variant: {sample.get('variant')}")
+    print(f"  Variant aliases: {sample.get('variant_aliases', [])}")

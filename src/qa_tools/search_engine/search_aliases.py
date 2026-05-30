@@ -2,7 +2,6 @@
 Enhanced HEMA Rulebook Search Engine with Alias Support
 """
 
-
 import json
 import logging
 import re
@@ -21,6 +20,7 @@ logger = logging.getLogger(__name__)
 @dataclass
 class SearchResult:
     """Represents a search result"""
+
     rule_id: str
     text: str
     section: str
@@ -57,7 +57,7 @@ class AliasAwareSearch:
             Logs warning if file not found, logs error if JSON is invalid
         """
         try:
-            with open(aliases_path, encoding='utf-8') as f:
+            with open(aliases_path, encoding="utf-8") as f:
                 self.aliases = json.load(f)
         except FileNotFoundError:
             logger.warning(f"Aliases file not found at {aliases_path}, using empty aliases")
@@ -69,19 +69,19 @@ class AliasAwareSearch:
     def _build_alias_lookup(self):
         """Build reverse lookup from alias to its category and key"""
         # Map variant aliases
-        for key, aliases in self.aliases.get('variants', {}).items():
+        for key, aliases in self.aliases.get("variants", {}).items():
             for alias in aliases:
-                self.alias_to_key[alias.lower()] = ('variant', key)
+                self.alias_to_key[alias.lower()] = ("variant", key)
 
         # Map weapon aliases
-        for key, aliases in self.aliases.get('weapons', {}).items():
+        for key, aliases in self.aliases.get("weapons", {}).items():
             for alias in aliases:
-                self.alias_to_key[alias.lower()] = ('weapon', key)
+                self.alias_to_key[alias.lower()] = ("weapon", key)
 
         # Map concept aliases - store all aliases in concept group
-        for concept_key, aliases in self.aliases.get('concepts', {}).items():
+        for concept_key, aliases in self.aliases.get("concepts", {}).items():
             for alias in aliases:
-                self.alias_to_key[alias.lower()] = ('concept', concept_key)
+                self.alias_to_key[alias.lower()] = ("concept", concept_key)
 
     def load_index(self) -> None:
         """Load the rules index"""
@@ -89,9 +89,9 @@ class AliasAwareSearch:
             raise FileNotFoundError(f"Index not found: {self.index_path}")
 
         try:
-            with open(self.index_path, encoding='utf-8') as f:
+            with open(self.index_path, encoding="utf-8") as f:
                 data = json.load(f)
-                loaded_rules = data['rules']
+                loaded_rules = data["rules"]
                 self.rules = self._deduplicate_rules_by_id(loaded_rules)
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse index JSON: {e}")
@@ -105,7 +105,7 @@ class AliasAwareSearch:
         seen_rule_ids = set()
 
         for rule in rules:
-            rule_id = rule.get('rule_id')
+            rule_id = rule.get("rule_id")
             if not rule_id or rule_id in seen_rule_ids:
                 continue
             seen_rule_ids.add(rule_id)
@@ -157,30 +157,36 @@ class AliasAwareSearch:
         remaining_terms = []
 
         # Split query into words
-        words = re.findall(r'\w+', query_lower)
+        words = re.findall(r"\w+", query_lower)
 
         for word in words:
             if word in self.alias_to_key:
                 category, key = self.alias_to_key[word]
 
-                if category == 'variant':
+                if category == "variant":
                     variant_filter = key
-                elif category == 'weapon':
+                elif category == "weapon":
                     weapon_filter = key
-                elif category == 'concept':
+                elif category == "concept":
                     # Add all aliases from this concept to search terms
-                    concept_terms.extend(self.aliases['concepts'][key])
+                    concept_terms.extend(self.aliases["concepts"][key])
             else:
                 remaining_terms.append(word)
 
         # Build expanded query
-        base_query = ' '.join(remaining_terms)
+        base_query = " ".join(remaining_terms)
         expanded_query = base_query
         if concept_terms:
             # Add concept terms to search
-            expanded_query = expanded_query + ' ' + ' '.join(concept_terms)
+            expanded_query = expanded_query + " " + " ".join(concept_terms)
 
-        return expanded_query.strip(), variant_filter, weapon_filter, concept_terms, base_query.strip()
+        return (
+            expanded_query.strip(),
+            variant_filter,
+            weapon_filter,
+            concept_terms,
+            base_query.strip(),
+        )
 
     def _normalize_text(self, text: str) -> str:
         """Normalize text for matching by removing accents and converting to lowercase.
@@ -196,8 +202,13 @@ class AliasAwareSearch:
         normalized = unicodedata.normalize("NFKD", text)
         return "".join(ch for ch in normalized if not unicodedata.combining(ch)).lower()
 
-    def search(self, query: str, max_results: int | None = None,
-               variant_filter: str | None = None, weapon_filter: str | None = None) -> list[SearchResult]:
+    def search(
+        self,
+        query: str,
+        max_results: int | None = None,
+        variant_filter: str | None = None,
+        weapon_filter: str | None = None,
+    ) -> list[SearchResult]:
         """
         Search with alias awareness and query expansion
 
@@ -208,7 +219,9 @@ class AliasAwareSearch:
             weapon_filter: Filter by weapon (longsword, rapier, etc.) - can be overridden by query
         """
         # Expand query based on aliases
-        expanded_query, detected_variant, detected_weapon, concept_terms, base_query = self._expand_query(query)
+        expanded_query, detected_variant, detected_weapon, concept_terms, base_query = (
+            self._expand_query(query)
+        )
 
         # Use detected filters if not explicitly provided
         if not variant_filter and detected_variant:
@@ -229,41 +242,52 @@ class AliasAwareSearch:
             # - Weapon-general rules (no variant) apply to all variants of that weapon
             # - Format-specific rules apply only to that variant
 
-            rule_weapon = rule.get('weapon_type', 'general')
-            rule_variant = rule.get('variant', '')
+            rule_weapon = rule.get("weapon_type", "general")
+            rule_variant = rule.get("variant", "")
 
-            if weapon_filter and rule_weapon != 'general' and rule_weapon != weapon_filter:
+            if weapon_filter and rule_weapon != "general" and rule_weapon != weapon_filter:
                 continue
 
             # If variant filter is specified
-            if variant_filter and rule_weapon != 'general' and rule_variant and rule_variant != variant_filter:
+            if (
+                variant_filter
+                and rule_weapon != "general"
+                and rule_variant
+                and rule_variant != variant_filter
+            ):
                 continue
 
             # Require all base query terms to appear somewhere
             if required_terms:
-                combined_text = " ".join([
-                    rule.get('text_plain', rule.get('text', '')),
-                    rule.get('section', ''),
-                    rule.get('subsection', '')
-                ])
+                combined_text = " ".join(
+                    [
+                        rule.get("text_plain", rule.get("text", "")),
+                        rule.get("section", ""),
+                        rule.get("subsection", ""),
+                    ]
+                )
                 combined_norm = self._normalize_text(combined_text)
                 if any(term not in combined_norm for term in required_terms):
                     continue
 
             # Calculate score including aliases
-            score = self._calculate_score_with_aliases(rule, query_lower, query_norm, query_terms, concept_terms)
+            score = self._calculate_score_with_aliases(
+                rule, query_lower, query_norm, query_terms, concept_terms
+            )
 
             if score > 0:
-                results.append(SearchResult(
-                    rule_id=rule['rule_id'],
-                    text=rule['text'],
-                    section=rule.get('section', ''),
-                    subsection=rule.get('subsection', ''),
-                    document=rule.get('document', ''),
-                    weapon_type=rule.get('weapon_type', ''),
-                    variant=rule.get('variant', ''),
-                    score=score
-                ))
+                results.append(
+                    SearchResult(
+                        rule_id=rule["rule_id"],
+                        text=rule["text"],
+                        section=rule.get("section", ""),
+                        subsection=rule.get("subsection", ""),
+                        document=rule.get("document", ""),
+                        weapon_type=rule.get("weapon_type", ""),
+                        variant=rule.get("variant", ""),
+                        score=score,
+                    )
+                )
 
         results.sort(key=lambda x: x.score, reverse=True)
         results = self._deduplicate_results_by_rule_id(results)
@@ -274,11 +298,13 @@ class AliasAwareSearch:
         # Group results and return
         return self._group_and_return_results(results, max_results)
 
-    def _group_and_return_results(self, results: list[SearchResult], max_results: int) -> list[SearchResult]:
+    def _group_and_return_results(
+        self, results: list[SearchResult], max_results: int
+    ) -> list[SearchResult]:
         """Group level 4-5 results with their parents and children"""
         grouped_results = []
         seen_root_ids = set()
-        grouping_multiplier = getattr(search_config, 'GROUPING_MULTIPLIER', 3)
+        grouping_multiplier = getattr(search_config, "GROUPING_MULTIPLIER", 3)
 
         for result in results[:max_results]:
             depth = self.get_rule_depth(result.rule_id)
@@ -286,15 +312,21 @@ class AliasAwareSearch:
             if depth >= 4:
                 lineage = self.get_rule_lineage(result.rule_id)
                 # Determine the root of this group (the level 2 parent if it exists)
-                root_id = lineage[1] if len(lineage) > 1 else lineage[0] if lineage else result.rule_id
+                root_id = (
+                    lineage[1] if len(lineage) > 1 else lineage[0] if lineage else result.rule_id
+                )
                 # Skip if we've already processed this family
                 if root_id in seen_root_ids:
                     continue
                 seen_root_ids.add(root_id)
 
                 # Collect ALL matched results with the same root (all siblings that matched)
-                siblings = [r for r in results if self.get_rule_lineage(r.rule_id)[1] == root_id
-                           if len(self.get_rule_lineage(r.rule_id)) > 1]
+                siblings = [
+                    r
+                    for r in results
+                    if self.get_rule_lineage(r.rule_id)[1] == root_id
+                    if len(self.get_rule_lineage(r.rule_id)) > 1
+                ]
 
                 # Collect the family: parents + all matched siblings + children
                 family = []
@@ -305,16 +337,18 @@ class AliasAwareSearch:
                     if parent_depth <= 3:
                         parent_rule = self.get_rule_by_id(parent_id)
                         if parent_rule:
-                            family.append(SearchResult(
-                                rule_id=parent_rule['rule_id'],
-                                text=parent_rule['text'],
-                                section=parent_rule.get('section', ''),
-                                subsection=parent_rule.get('subsection', ''),
-                                document=parent_rule.get('document', ''),
-                                weapon_type=parent_rule.get('weapon_type', ''),
-                                variant=parent_rule.get('variant', ''),
-                                score=result.score  # Inherit score from matched rule
-                            ))
+                            family.append(
+                                SearchResult(
+                                    rule_id=parent_rule["rule_id"],
+                                    text=parent_rule["text"],
+                                    section=parent_rule.get("section", ""),
+                                    subsection=parent_rule.get("subsection", ""),
+                                    document=parent_rule.get("document", ""),
+                                    weapon_type=parent_rule.get("weapon_type", ""),
+                                    variant=parent_rule.get("variant", ""),
+                                    score=result.score,  # Inherit score from matched rule
+                                )
+                            )
 
                 # Add all matched siblings (up to 5 deep)
                 for sibling in siblings:
@@ -328,7 +362,7 @@ class AliasAwareSearch:
                 # Level 1-3 rules: just add them directly
                 grouped_results.append(result)
         grouped_results = self._deduplicate_results_by_rule_id(grouped_results)
-        return grouped_results[:max_results * grouping_multiplier]
+        return grouped_results[: max_results * grouping_multiplier]
 
     def _build_rule_family(self, result: SearchResult, lineage: list[str]) -> list[SearchResult]:
         """Build a family of rules: parents + matched rule + children.
@@ -351,16 +385,18 @@ class AliasAwareSearch:
             if parent_depth <= 3:
                 parent_rule = self.get_rule_by_id(parent_id)
                 if parent_rule:
-                    family.append(SearchResult(
-                        rule_id=parent_rule['rule_id'],
-                        text=parent_rule['text'],
-                        section=parent_rule.get('section', ''),
-                        subsection=parent_rule.get('subsection', ''),
-                        document=parent_rule.get('document', ''),
-                        weapon_type=parent_rule.get('weapon_type', ''),
-                        variant=parent_rule.get('variant', ''),
-                        score=result.score  # Inherit score from matched rule
-                    ))
+                    family.append(
+                        SearchResult(
+                            rule_id=parent_rule["rule_id"],
+                            text=parent_rule["text"],
+                            section=parent_rule.get("section", ""),
+                            subsection=parent_rule.get("subsection", ""),
+                            document=parent_rule.get("document", ""),
+                            weapon_type=parent_rule.get("weapon_type", ""),
+                            variant=parent_rule.get("variant", ""),
+                            score=result.score,  # Inherit score from matched rule
+                        )
+                    )
 
         # Add the matched rule itself
         family.append(result)
@@ -371,16 +407,18 @@ class AliasAwareSearch:
             for child_id in children:
                 child_rule = self.get_rule_by_id(child_id)
                 if child_rule:
-                    family.append(SearchResult(
-                        rule_id=child_rule['rule_id'],
-                        text=child_rule['text'],
-                        section=child_rule.get('section', ''),
-                        subsection=child_rule.get('subsection', ''),
-                        document=child_rule.get('document', ''),
-                        weapon_type=child_rule.get('weapon_type', ''),
-                        variant=child_rule.get('variant', ''),
-                        score=result.score  # Inherit score
-                    ))
+                    family.append(
+                        SearchResult(
+                            rule_id=child_rule["rule_id"],
+                            text=child_rule["text"],
+                            section=child_rule.get("section", ""),
+                            subsection=child_rule.get("subsection", ""),
+                            document=child_rule.get("document", ""),
+                            weapon_type=child_rule.get("weapon_type", ""),
+                            variant=child_rule.get("variant", ""),
+                            score=result.score,  # Inherit score
+                        )
+                    )
 
         return family
 
@@ -395,23 +433,46 @@ class AliasAwareSearch:
         Returns:
             List of extracted terms (> 2 chars, excluding stop words)
         """
-        stop_words = {'a', 'an', 'and', 'az', 'but', 'de', 'és', 'ha', 'hogy', 'if', 'is', 'mi', 'or', 'the', 'van', 'vagy', 'volt'}
-        terms = re.findall(r'\w+', query)
+        stop_words = {
+            "a",
+            "an",
+            "and",
+            "az",
+            "but",
+            "de",
+            "és",
+            "ha",
+            "hogy",
+            "if",
+            "is",
+            "mi",
+            "or",
+            "the",
+            "van",
+            "vagy",
+            "volt",
+        }
+        terms = re.findall(r"\w+", query)
         return [t for t in terms if t not in stop_words and len(t) > 2]
 
-    def _calculate_score_with_aliases(self, rule: dict[str, Any],
-                                      query: str, query_norm: str, terms: list[str],
-                                      concept_terms: list[str] | None = None) -> float:
+    def _calculate_score_with_aliases(
+        self,
+        rule: dict[str, Any],
+        query: str,
+        query_norm: str,
+        terms: list[str],
+        concept_terms: list[str] | None = None,
+    ) -> float:
         """Calculate score including alias matches"""
         score = 0.0
 
         # Use text_plain for scoring (markdown-stripped version) to enable substring matches
         # but keep original text for display
-        text_plain = rule.get('text_plain', rule.get('text', ''))
+        text_plain = rule.get("text_plain", rule.get("text", ""))
         text_lower = text_plain.lower()
-        section_lower = rule.get('section', '').lower()
-        subsection_lower = rule.get('subsection', '').lower()
-        rule_id_lower = rule['rule_id'].lower()
+        section_lower = rule.get("section", "").lower()
+        subsection_lower = rule.get("subsection", "").lower()
+        rule_id_lower = rule["rule_id"].lower()
 
         text_norm = self._normalize_text(text_lower)
         section_norm = self._normalize_text(section_lower)
@@ -444,22 +505,24 @@ class AliasAwareSearch:
                     score += search_config.SCORE_CONCEPT_TERM
 
         # Check variant aliases (legacy scoring for non-expanded queries)
-        if rule.get('variant'):
-            for alias in rule.get('variant_aliases', []):
+        if rule.get("variant"):
+            for alias in rule.get("variant_aliases", []):
                 if alias in query:
                     score += search_config.SCORE_VARIANT_ALIAS
 
         # Check weapon aliases (legacy scoring for non-expanded queries)
-        for alias in rule.get('weapon_aliases', []):
+        for alias in rule.get("weapon_aliases", []):
             if alias in query:
                 score += search_config.SCORE_WEAPON_ALIAS
 
         # Apply length penalty for very long rules (e.g., large tables)
         # Rules > threshold chars get progressively lower scores to push them down rankings
-        text_length = len(rule['text'])
+        text_length = len(rule["text"])
         if text_length > search_config.LENGTH_PENALTY_THRESHOLD:
             # Exponential penalty: threshold chars = 1.5x, etc.
-            length_penalty = (text_length / float(search_config.LENGTH_PENALTY_THRESHOLD)) ** search_config.LENGTH_PENALTY_EXP
+            length_penalty = (
+                text_length / float(search_config.LENGTH_PENALTY_THRESHOLD)
+            ) ** search_config.LENGTH_PENALTY_EXP
             score = score / length_penalty
 
         return score
@@ -488,12 +551,12 @@ class AliasAwareSearch:
     def get_rule_by_id(self, rule_id: str) -> dict[str, Any] | None:
         """Get a rule by its ID (case-insensitive)."""
         for rule in self.rules:
-            if rule.get('rule_id') == rule_id:
+            if rule.get("rule_id") == rule_id:
                 return rule
         # Case-insensitive fallback
         rule_id_lower = rule_id.lower()
         for rule in self.rules:
-            if rule.get('rule_id', '').lower() == rule_id_lower:
+            if rule.get("rule_id", "").lower() == rule_id_lower:
                 return rule
         return None
 
@@ -501,11 +564,11 @@ class AliasAwareSearch:
 def format_result(result: SearchResult) -> str:
     """Format a result for display"""
     output = []
-    output.append(f"\n{'='*70}")
+    output.append(f"\n{'=' * 70}")
     output.append(f"Rule ID: {result.rule_id}")
     output.append(f"Document: {result.document}")
 
-    if result.weapon_type and result.weapon_type != 'general':
+    if result.weapon_type and result.weapon_type != "general":
         output.append(f"Weapon: {result.weapon_type}")
         if result.variant:
             output.append(f"Format: {result.variant}")
@@ -534,9 +597,9 @@ def main() -> None:
 
     search = AliasAwareSearch(str(index_path), str(aliases_path))
 
-    print("\n" + "="*70)
+    print("\n" + "=" * 70)
     print("HEMA Rulebook Search - Alias-Aware")
-    print("="*70)
+    print("=" * 70)
     print("\nExample queries:")
     print("  - 'right of way' (will find VOR rules)")
     print("  - 'longsword target area'")
@@ -547,13 +610,13 @@ def main() -> None:
     print("  - search VOR <query>")
     print("  - search longsword <query>")
     print("  - quit to exit")
-    print("-"*70)
+    print("-" * 70)
 
     while True:
         try:
             cmd = input("\nQuery: ").strip()
 
-            if not cmd or cmd.lower() in ['quit', 'exit', 'q']:
+            if not cmd or cmd.lower() in ["quit", "exit", "q"]:
                 print("Goodbye!")
                 break
 
@@ -563,20 +626,22 @@ def main() -> None:
             query = cmd
 
             # Check for filters
-            if parts[0].upper() in ['VOR', 'COMBAT', 'AFTERBLOW']:
+            if parts[0].upper() in ["VOR", "COMBAT", "AFTERBLOW"]:
                 variant_filter = parts[0].upper()
                 query = parts[1] if len(parts) > 1 else ""
-            elif parts[0].lower() in ['longsword', 'rapier', 'padded']:
-                weapon_filter = parts[0].lower() if parts[0].lower() != 'padded' else 'padded_weapons'
+            elif parts[0].lower() in ["longsword", "rapier", "padded"]:
+                weapon_filter = (
+                    parts[0].lower() if parts[0].lower() != "padded" else "padded_weapons"
+                )
                 query = parts[1] if len(parts) > 1 else ""
 
             if not query:
                 print("Please enter a query.")
                 continue
 
-            results = search.search(query, max_results=5,
-                                   variant_filter=variant_filter,
-                                   weapon_filter=weapon_filter)
+            results = search.search(
+                query, max_results=5, variant_filter=variant_filter, weapon_filter=weapon_filter
+            )
 
             if not results:
                 print("\nNo results found. Try different keywords or aliases.")
