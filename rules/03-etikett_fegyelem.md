@@ -61,7 +61,6 @@ A szabály megszegése esetén a versenybíró az 1. csoportba tartozó ([DIS-4.
 
 <!-- TODO  
 **DIS-1.3.5**  
-t.116.  
 A versenyzők semmilyen körülmények között nem öltözködhetnek vagy vetkőzhetnek nyilvánosan, kivéve az ügyeletes orvos vagy az Orvosi Bizottság küldötte által megállapított sérülés esetében. (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18]).  
 
 **DIS-1.3.6**    

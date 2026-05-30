@@ -759,10 +759,12 @@ Fő feladata a mérkőzés megfigyelése a bíró pozíciójával ellentétes ir
 <span id="GEN-7.4"></span>  
 
 **GEN-7.4.1**  
-Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akiknek feladata hogy közvetlenül, élőben figyeljék a mérkőzést, majd ha szükséges ezután tekintsék meg azt a képernyőn is és egyeztessenek a versenybíróval a [**GEN-7.6.9**]--[]<!--  a t.60-62, o105 szakaszokban írtaknakmegfelelően -->.
+Videóbíró alkalmazásakor erre kijelölt videó konzultánsok dolgoznak, akiknek feladata hogy közvetlenül, élőben figyeljék a mérkőzést, majd ha szükséges ezután tekintsék meg azt a képernyőn is és egyeztessenek a versenybíróval a [**GEN-7.6.9**]--[GEN-7.6.12]<!--  o105--> szakaszokban írtaknak megfelelően.
 <!-- Video-konzultáns akkor lehet valaki, ha:
 1. az adott szezonra érvényes versenybírói MHS licence-szel rendelkezik;
-2. videóbírói felkészítésen vett részt; -->
+2. videóbírói felkészítésen vett részt;
+3. nemzetisége eltér a páston lévő vívókéitól
+4. nemzetisége eltér a fő versenybíróétól -->
 
 ### A bírók és a videóbírók kijelölése  
 <span id="GEN-7.5"></span>  
@@ -880,14 +882,14 @@ A versenybíró az alábbi jelzéseket köteles használni:
 **GEN-7.7.1**  
 Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket: (Vö. [**GEN-7.2.2**])  
 
-- minden fegyvernemben, hogy a versenyzők hiánytalan felszerelésben és ruházatban jelentek-e meg.  
+1. minden fegyvernemben, hogy a versenyzők hiánytalan felszerelésben és ruházatban jelentek-e meg.  
 <!-- TODO ezt updatelni kell, ha fejlődik a standard -->
-- minden fegyvernemben a vívók felszerelésén a szabályos, a felszerelésre és fegyverekre vonatkozó szabályok által előírt 350N vagy FIE jelzés meglétét, és a fegyverellenőri jelzéseket.  
+1. minden fegyvernemben a vívók felszerelésén a szabályos, a felszerelésre és fegyverekre vonatkozó szabályok által előírt 350N vagy FIE jelzés meglétét, és a fegyverellenőri jelzéseket.  
 <!-- TODO lvl 2 legyen kötelező -->  
-- hogy mindenki **szabályszerű vívókabátot** visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.  
-- minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá (<!-- TODO -->jelenleg nem kötelező, későbbi szabálymódosításig erősen ajánlott, és ellenőrizendő).  
-- A fegyvereken fegyverellenőrzés jelzés meglétét.  
-- Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.  
+1. hogy mindenki **szabályszerű vívókabátot** visel-e.<!-- és öltözetének anyaga nem túl csúszós-e-->.  
+1. minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá (<!-- TODO -->jelenleg nem kötelező, későbbi szabálymódosításig erősen ajánlott, és ellenőrizendő).  
+1. A fegyvereken fegyverellenőrzés jelzés meglétét.  
+1. Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.  
 
 **GEN-7.7.2**  
 - A csoportmérkőzések során ezt az ellenőrzést a vívók gyülekezésre szólításakor kell elvégezni.  
@@ -914,9 +916,9 @@ Bármely helyzetben, ha egy versenyző (a Felszerelés Szabályzat értelmében)
 **GEN-7.8.2**  
 Ha a vívó a páston:  
 
-<!-- - összesen egy szabályos fegyverrel (vö. t.114,115); vagy -->
+<!-- - összesen egy szabályos fegyverrel (vö. [DIS-1.3.3],[DIS-1.3.4]); vagy -->
 - hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy  
-<!-- - hónaljvédő nélkül (Vö. t.64.5.), vagy -->  
+<!-- - hónaljvédő nélkül (Vö. [GEN-7.7.1] /4), vagy -->  
 - a szabályoknak nem megfelelő ruhában jelenik meg, a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban előírt, az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
 **GEN-7.8.3**
@@ -930,8 +932,7 @@ Például:
 
 akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, és megadja a meghibásodott fegyverrel adott szabályos találatot.
 <!-- Ugyanakkor, a mérkőzés során is ha a vívóállásba helyezkedő, vívásra készen álló vívó pengéjének hajlása meghaladja az előírásokban írtakat (Vö. m.8.6, m.16.2, m.23.4), ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt szakaszokban előírt büntetést alkalmazza.   -->  
-<!-- Ehhez hasonlóan, ha a vívóállásba helyezkedő, vívásra készen álló vívó maszkja nincs megfelelően rögzítve a fején a második biztonsági eszközzel, ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a t.158-162,
-t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->
+<!-- Ehhez hasonlóan, ha a vívóállásba helyezkedő, vívásra készen álló vívó maszkja nincs megfelelően rögzítve a fején a második biztonsági eszközzel, ezzel az első csoportba tartozó vétséget követ el és vele szemben a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban előírt büntetést alkalmazza.   -->
 
 **GEN-7.8.4**   
 1. Amennyiben a páston való jelentkezéskor vagy a mérkőzés során megállapítást nyer, hogy a vívó felszerelése:  
@@ -955,8 +956,8 @@ t.165 és a t.170 szakaszokban előírt büntetést alkalmazza.   -->
 
 A versenybíró a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek.  
 
-1. A szakértő <!--(az Olimpiákon és Világbajnokságokon a SEMI Bizottság tagja) -->tényeket megállapító véleményének beszerzését követően a [DIS-2.1.3]/[DIS-2.1.5] szakaszokban foglalt hátrányok alkalmazása nélkül a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza.  
+1. A szakértő <!--(Világbajnokságokon a SEMI Bizottság tagja) -->tényeket megállapító véleményének beszerzését követően a [DIS-2.1.3]/[DIS-2.1.5] szakaszokban foglalt hátrányok alkalmazása nélkül a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza.  
 
 1. A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.  
 
-<!-- t.74. és t.75. név, nemzetiség feltüntetése, ill. pótlása cserélt felszerelésen etc. -->
+<!-- TODO t.74. és t.75. név, nemzetiség feltüntetése, ill. pótlása cserélt felszerelésen etc. -->
