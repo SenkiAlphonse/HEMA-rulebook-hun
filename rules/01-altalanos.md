@@ -792,29 +792,24 @@ Az esés közben vagy után adott találatot meg kell semmisíteni.
 <!-- TODO is this true, when they can wrestle?  -->  
 
 **GEN-7.6.4**  
-**GEN-7.6.4**  
 Az a versenyző, aki fegyverét a vívómenet közben szándékosan elejti, a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, második csoportba tartozó vétségként büntetendő. Az ellenfél által adott találat azonban érvényes amennyiben az akció az „Állj!” vezényszó előtt indult.  
 
-**GEN-7.6.5**  
 **GEN-7.6.5**  
 Az általános szabályokkal összhangban <!--(vö.: t.23.5)-->, a versenybírónak meg kell állítania a mérkőzést, ha a vívás zavarodottá válik, és annak menetét a továbbiakban nem képes követni még akkor is ha nem esett találat.  
 
 #### A találat érvényessége vagy elsőbbsége  
 
 **GEN-7.6.6**  
-**GEN-7.6.6**  
 A küzdelem megállításakor a versenybíró röviden elemzi az utolsó vívómenetet képező akciókat.  
-**GEN-7.6.7**  
+
 **GEN-7.6.7**  
 A találat ténylegességének megállapításában hozott döntése után a versenybíró, a szabályok alkalmazásával megállapítja, hogy melyik vívó terhére kell találatot ítélni, esetleg mindkettő terhére, vagy azt, hogy érvényes találat nem esett  
 <!-- (Vö.t.82-, t.92., t.100.) -->  
 
 #### A videóbíróhoz fordulás lehetősége  
-<!-- TODO -->  
 
 **GEN-7.6.8**  
-Mind csapat, mind egyéni versenyeken csak a páston lévő vívó jogosult videó visszanézést
-kérvényezni.  
+Mind csapat, mind egyéni versenyeken csak a páston lévő vívó jogosult videó visszanézést kérvényezni.  
 
 #### Videobíráskodás
 
