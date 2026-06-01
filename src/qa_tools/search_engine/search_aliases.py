@@ -250,7 +250,12 @@ class AliasAwareSearch:
                 continue
 
             # If variant filter is specified
-            if variant_filter and rule_weapon != "general" and rule_variant and rule_variant != variant_filter:
+            if (
+                variant_filter
+                and rule_weapon != "general"
+                and rule_variant
+                and rule_variant != variant_filter
+            ):
                 continue
 
             # Require all base query terms to appear somewhere
