@@ -44,7 +44,7 @@ jobs:
         run: pytest tests/
       - name: Check code compiles
         run: |
-          python -m py_compile wsgi.py build.py tools/build.py tools/setup_check.py
+          python -m py_compile wsgi.py build.py tools/build.py tools/setup_check.py tools/check_integrity.py
           python -m py_compile src/qa_tools/tools/*.py
 
   build:
@@ -68,6 +68,8 @@ jobs:
           test -f data/search/rules_index_eng.json
           test -f dist/rulebook_hun.html
           test -f dist/rulebook_eng.html
+      - name: Check rule integrity
+        run: python tools/check_integrity.py
       - name: Commit build artifacts
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         run: |
