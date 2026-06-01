@@ -146,7 +146,7 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": ""
+                    "variant": "",
                 },
                 {
                     "rule_id": "GEN-6.11.2",
@@ -155,7 +155,7 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": ""
+                    "variant": "",
                 },
                 {
                     "rule_id": "GEN-6.11.2.1",
@@ -164,11 +164,11 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": ""
-                }
+                    "variant": "",
+                },
             ],
             "total_rules": 3,
-            "documents": ["01-altalanos.md"]
+            "documents": ["01-altalanos.md"],
         }
 
         index_file = tmp_path / "rules_index_dupe.json"
