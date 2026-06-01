@@ -10,8 +10,7 @@ services:
       test -f dist/rulebook_hun.html && \
       test -f dist/rulebook_eng.html && \
       test -f data/search/rules_index_hun.json && \
-      test -f data/search/rules_index_eng.json && \
-      test -f data/search/rules_index.json
+      test -f data/search/rules_index_eng.json
     healthCheckPath: /healthz
     startCommand: gunicorn --bind 0.0.0.0:${PORT:-10000} --workers 1 --timeout 120 wsgi:app
     envVars:
