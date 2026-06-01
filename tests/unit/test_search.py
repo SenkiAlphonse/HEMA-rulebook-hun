@@ -121,7 +121,9 @@ class TestRulebookSearch:
 
         from qa_tools.search_engine import AliasAwareSearch
 
-        real_index = Path(__file__).parent.parent.parent / "data" / "search" / "rules_index.json"
+        real_index = (
+            Path(__file__).parent.parent.parent / "data" / "search" / "rules_index_hun.json"
+        )
         if not real_index.exists():
             pytest.skip(f"Real rules index not found at {real_index}")
 
@@ -144,7 +146,7 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": "",
+                    "variant": ""
                 },
                 {
                     "rule_id": "GEN-6.11.2",
@@ -153,7 +155,7 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": "",
+                    "variant": ""
                 },
                 {
                     "rule_id": "GEN-6.11.2.1",
@@ -162,11 +164,11 @@ class TestRulebookSearch:
                     "subsection": "",
                     "document": "01-altalanos.md",
                     "weapon_type": "general",
-                    "variant": "",
-                },
+                    "variant": ""
+                }
             ],
             "total_rules": 3,
-            "documents": ["01-altalanos.md"],
+            "documents": ["01-altalanos.md"]
         }
 
         index_file = tmp_path / "rules_index_dupe.json"

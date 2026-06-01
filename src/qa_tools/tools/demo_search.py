@@ -21,7 +21,9 @@ def main():
     query = " ".join(sys.argv[1:])
 
     # Initialize search
-    index_path = Path(__file__).parent / "rules_index.json"
+    index_path = (
+        Path(__file__).parent.parent.parent.parent / "data" / "search" / "rules_index_hun.json"
+    )
     search_engine = RulebookSearch(str(index_path))
 
     # Search

@@ -2,8 +2,12 @@
 """Test script to verify hierarchy metadata"""
 
 import json
+from pathlib import Path
 
-with open("rules_index.json", encoding="utf-8") as f:
+with open(
+    Path(__file__).resolve().parents[3] / "data" / "search" / "rules_index_hun.json",
+    encoding="utf-8",
+) as f:
     data = json.load(f)
     rules = data["rules"]
 

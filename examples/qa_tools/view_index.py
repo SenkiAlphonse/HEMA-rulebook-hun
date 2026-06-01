@@ -3,8 +3,8 @@
 import json
 from pathlib import Path
 
-data_dir = Path(__file__).parent.parent / "data"
-with open(data_dir / "rules_index.json", encoding="utf-8") as f:
+data_dir = Path(__file__).parent.parent / "data" / "search"
+with open(data_dir / "rules_index_hun.json", encoding="utf-8") as f:
     data = json.load(f)
 
 print(f"Total rules extracted: {data['total_rules']}")

@@ -395,7 +395,7 @@ Az "állj!" vezényszó elhangzása után a vívó nem kezdhet új akciót; csak
 Ha valamelyik vívó az "állj!" vezényszó előtt megáll, és találatot kap, az a találat érvényes.  
 
 **GEN-6.3.6**  
-Akkor is "állj!"-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók [GEN-6.9]), vagy ha kilép a pástról.  
+Akkor is "állj!"-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók [GEN-6.9.1]--[GEN-6.9.7]), vagy ha kilép a pástról.  
 
 **GEN-6.3.7**  
 Kivételes körülményektől eltekintve a versenybíró nem adhat engedélyt a vívónak a pást elhagyására. Ha a vívó ezt engedély nélkül megteszi, akkor vele szemben az első csoportba tartozó vétségekre vonatkozó büntető rendelkezéseket kell alkalmazni (vö: [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18]).  
@@ -410,13 +410,13 @@ A közelharc megengedhető mindaddig, amíg a vívók fegyverüket szabályosan 
 <span id="GEN-6.5"></span>  
 
 **GEN-6.5.1**  
-A testérintkezés az a helyzet, amikor a két vívó egymással érintkezésbe kerül. Ha a közelharc nem engedélyezett, ekkor a versenybíró a küzdelmet köteles megállítani (Vö. [GEN-6.6]; [GEN-6.10.2]).
+A testérintkezés az a helyzet, amikor a két vívó egymással érintkezésbe kerül. Ha a közelharc nem engedélyezett, ekkor a versenybíró a küzdelmet köteles megállítani (Vö. [GEN-6.6.1]--[GEN-6.6.2]; [GEN-6.10.2]).
 
 **GEN-6.5.2**  
 Tilos szándékosan testérintkezést okozni találat elkerülése vagy az ellenfél fellökése céljából, kivéve abban az esetben, amikor a felek a meccs előtt a fogásos és birkózó akciók használatát jóváhagyták. Ilyen vétség esetén a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban előírt, az első csoportba tartozó vétségekre vonatkozó büntetéseket alkalmazza és a vétkes vívó által esetleg adott találatot megsemmisíti.  
 
 **GEN-6.5.3**  
-Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: [GEN-6.10])  
+Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: [GEN-6.10.1]--[GEN-6.10.2])  
 
 ### Testérintkezés és lerohanás (fless)  
 <span id="GEN-6.6"></span>  
@@ -425,7 +425,7 @@ Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha 
 A jelen szakaszban hivatkozott rendszeresen testérintkezéssel végződő fless támadás nem összetévesztendő az ellenfelet meglökő összeütközést eredményező fless támadással amely szándékos brutalitásként értékelendő, és a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt büntetéseket kell alkalmazni minden fegyvernemben.  
 
 **GEN-6.6.2**  
-Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar "Állj"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást határát, találatot kapottnak tekintendő (V.ö.: [GEN-6.11]).  
+Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar "Állj"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást határát, találatot kapottnak tekintendő (V.ö.: <!--[GEN-6.11.1]-- -->[GEN-6.11.5]).  
 
 ### A találati felület elmozdítása és túlhaladás  
 <span id="GEN-6.7"></span>  
@@ -542,7 +542,7 @@ A küzdelem időtartamán a tényleges küzdelem idejét, tehát a "rajta!" és 
 A küzdelem időtartamát a versenybíró vagy egy időmérő méri. Minden olyan mérkőzésen (a hivatalos versenyek döntőin kiemelten javasolt), amelyen a nézők számára látható az időmérés, az időmérő órát úgy kell elhelyezni, hogy azt a páston levő két vívó és a versenybíró is láthassa.  
 
 **GEN-6.12.3**  
-A befejezett mérkőzés vagy váltás nem kezdhető újra, még akkor sem, ha formális hiba történt. (V.ö.: [DIS-1.3.7])  
+befejezett mérkőzés vagy váltás nem kezdhető újra a [DIS-1.3.11] szakasszal összhangban, még akkor sem, ha formális hiba történt 
    
 #### Egyéni csoportmérkőzések keretei  
 
@@ -621,7 +621,7 @@ A két, egyperces pihenőidőkkel elválasztott három perces periódus (6 percn
 A több találatot elért vívót kell győztesnek kihirdetni.  
 
 **GEN-6.12.5.4**  
-Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.    
+Ha az idő lejártakor pontegyenlőség áll fenn, a vívók legfeljebb egy percen keresztül döntő találatért vívnak. A vívás újrakezdése előtt a versenybíró sorsolással eldönti, hogy ki lesz a győztes, ha az egyperces idő elteltével továbbra is pontegyenlőség áll fenn.  
 
 **GEN-6.12.5.5**  
 Az egyperces pihenőidő alatt egy, a mérkőzés előtt megnevezett személy mehet a versenyző közvetlen közelébe.  
@@ -829,6 +829,8 @@ Csapatversenyeken váltásonként egy alkalommal van joguk a versenyzőknek a vi
 Videóbíróhoz fordulás esetén a versenybíró odasétál a videóbíróhoz, együtt visszanézik a videót és az akció kielemzése után a versenybíró közli a végleges döntését.  
 
 **GEN-7.6.12**
+A videóbíráskodás folyamata és a döntéshozatal szabályai.  
+
 **GEN-7.6.12.1**  
 <!-- Legfeljebb 4 alkalommal lehet a videót visszanézni.  -->A versenybíró választása szerint valós-időben vagy lassított felvételen az általa választott sebességben nézi vissza az akciót.  
 
@@ -942,7 +944,8 @@ akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, 
     - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
   1. az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró:
-  1. a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
+
+    - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.  
 
   1. átment az előzetes hitelesítésen, de csalásra alkalmas  
 
@@ -954,9 +957,9 @@ akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, 
 
   1. elektronikus kommunikációt lehetővé tevő felszerelést tartalmaz, amely lehetővé teszi, hogy a vívó a páston kívüli személlyel kommunikáljon.  
 
-A versenybíró a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek.  
+A versenybíró a /3, 4, 5 és 6<!--TODO change to 7 if electric is added--> esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek.  
 
-1. A szakértő <!--(Világbajnokságokon a SEMI Bizottság tagja) -->tényeket megállapító véleményének beszerzését követően a [DIS-2.1.3]/[DIS-2.1.5] szakaszokban foglalt hátrányok alkalmazása nélkül a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza.  
+1. A szakértő <!--(Világbajnokságokon a SEMI Bizottság tagja) -->tényeket megállapító véleményének beszerzését követően a [DIS-2.4.1] /2, 4 szakaszokban foglalt hátrányok alkalmazása nélkül az /1.3, 1.4, 1.5 és 1.6<!--TODO change to 1.7 if electric is added--> esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza (vö: [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.14]--[DIS-4.1.15], [DIS-4.1.18]).  
 
 1. A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.  
 

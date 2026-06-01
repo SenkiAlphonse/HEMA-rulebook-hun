@@ -589,7 +589,7 @@ def format_result(result: SearchResult) -> str:
 def main() -> None:
     """Interactive search CLI"""
     current_dir = Path(__file__).parent.parent / "data"
-    index_path = current_dir / "rules_index.json"
+    index_path = current_dir / "rules_index_hun.json"
     aliases_path = current_dir / "aliases.json"
 
     if not index_path.exists():

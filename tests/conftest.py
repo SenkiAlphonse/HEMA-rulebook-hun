@@ -32,7 +32,7 @@ def sample_rules() -> list[dict[str, Any]]:
             "anchor_id": "GEN-1",
             "line_number": 10,
             "references_to": [],
-            "references_from": [],
+            "references_from": []
         },
         {
             "rule_id": "GEN-1.1",
@@ -45,7 +45,7 @@ def sample_rules() -> list[dict[str, Any]]:
             "anchor_id": "GEN-1.1",
             "line_number": 15,
             "references_to": ["GEN-1"],
-            "references_from": [],
+            "references_from": []
         },
         {
             "rule_id": "LS-VOR-1",
@@ -58,7 +58,7 @@ def sample_rules() -> list[dict[str, Any]]:
             "anchor_id": "LS-VOR-1",
             "line_number": 20,
             "references_to": [],
-            "references_from": [],
+            "references_from": []
         },
         {
             "rule_id": "LS-VOR-1.1",
@@ -71,7 +71,7 @@ def sample_rules() -> list[dict[str, Any]]:
             "anchor_id": "LS-VOR-1.1",
             "line_number": 25,
             "references_to": ["LS-VOR-1"],
-            "references_from": [],
+            "references_from": []
         },
         {
             "rule_id": "LS-COMBAT-1",
@@ -84,7 +84,7 @@ def sample_rules() -> list[dict[str, Any]]:
             "anchor_id": "LS-COMBAT-1",
             "line_number": 30,
             "references_to": [],
-            "references_from": [],
+            "references_from": []
         },
         {
             "rule_id": "LS-COMBAT-1.1.1.1",
@@ -97,7 +97,7 @@ def sample_rules() -> list[dict[str, Any]]:
             "anchor_id": "LS-COMBAT-1.1.1.1",
             "line_number": 40,
             "references_to": ["LS-COMBAT-1"],
-            "references_from": [],
+            "references_from": []
         },
         {
             "rule_id": "LS-AB-1",
@@ -110,8 +110,8 @@ def sample_rules() -> list[dict[str, Any]]:
             "anchor_id": "LS-AB-1",
             "line_number": 50,
             "references_to": [],
-            "references_from": [],
-        },
+            "references_from": []
+        }
     ]
 
 
@@ -129,7 +129,7 @@ def sample_rules_index(tmp_path, sample_rules) -> Path:
         ],
     }
 
-    index_file = tmp_path / "rules_index.json"
+    index_file = tmp_path / "rules_index_hun.json"
     with open(index_file, "w", encoding="utf-8") as f:
         json.dump(index_data, f, ensure_ascii=False, indent=2)
 

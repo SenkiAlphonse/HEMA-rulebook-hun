@@ -11,7 +11,7 @@
 **ORG-1.1.1**  
 A verseny 18. (különös esetekben 16.) életévüket betöltött személyek számára nyitott.  
 
-**ORG-1.1.1**  
+**ORG-1.1.2**  
 Tilos a versenyen való részvétel alkohol, illetve teljesítményfokozó drogok befolyása alatt (beleértve a rekreációs és orvos által felírt készítményeket is).  
 
 ## A versenyek szervezése és minősítése  
@@ -164,7 +164,7 @@ Ha mind a vívó, mind a tartalék (ha van ilyen) kénytelen visszalépni, és e
 Ha egy vívót csapatmérkőzés közben kizárnak, akkor csapata elvesztette a mérkőzést, és a csapatot végső helyezés nélkül kizárják a versenyből. Vö. [DIS-4.1.3]  
 
 **ORG-2.3.17**  
-Ha egy csapat bármilyen okból nem fejezi be azt az eseményt, amelyen részt vesz, a Szervezőcsapat azokra a versenyzőkre vonatkozó szabályokat alkalmazza, akik nem teljesítenek egy eseményt egyéni versenyen, minden csapatot teljes egészében úgy kezelve, mintha egyetlen versenyző lenne. Vö. [DIS-4.3.20]  
+Ha bármilyen okból egy csapat nem fejezi be megkezdett versenyét, a DT köteles az egyéni versenyek szabályait alkalmazni, azaz minden csapatot úgy tekinteni, mint egy egyéni versenyzőt. Vö. <!--passzivitás [t.124.3.b]-->[DIS-4.1.18]  
 
 **ORG-2.3.18**  
 Ha egy csapat nem jelenik meg egy másik csapat ellen, akkor a következőként kell eljárni:  
