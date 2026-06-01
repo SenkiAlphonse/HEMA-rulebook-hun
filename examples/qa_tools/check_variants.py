@@ -1,6 +1,10 @@
 import json
+from pathlib import Path
 
-with open("rules_index.json", encoding="utf-8") as f:
+with open(
+    Path(__file__).resolve().parents[2] / "data" / "search" / "rules_index_hun.json",
+    encoding="utf-8",
+) as f:
     data = json.load(f)
 
 # Find all GEN-6.10.4 and GEN-6.10.5 variants

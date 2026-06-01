@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 """
 Build script for pre-rendering rulebook HTML and regenerating search index
-Converts all markdown rulebook files to HTML and saves to dist/rulebook.html
-Rebuilds the rules_index.json for search functionality
+Converts all markdown rulebook files to HTML and saves to dist/rulebook_hun.html and dist/rulebook_eng.html
+Rebuilds the rules_index_hun.json and rules_index_eng.json for search functionality
 Run this at deployment time to generate static rulebook
 """
 
 import logging
-import shutil
 import sys
 from pathlib import Path
 
@@ -18,7 +17,6 @@ if SRC_DIR.is_dir():
 
 from app.config import (
     get_dist_dir,
-    get_legacy_rules_index_path,
     get_prerendered_rulebook_path,
     get_project_root,
     get_rules_index_path,
@@ -48,11 +46,6 @@ def build_search_index():
             RulebookParser(project_root, rules_subdir=rules_subdir, language=lang).save_index(
                 output_path
             )
-
-        # Keep legacy monolingual file for backward compatibility (maps to Hungarian index)
-        legacy_output_path = get_legacy_rules_index_path()
-        shutil.copyfile(get_rules_index_path(lang="hun"), legacy_output_path)
-        logger.info(f"✓ Legacy index updated at {legacy_output_path}")
 
         logger.info("✓ Search index rebuilt successfully")
         return True

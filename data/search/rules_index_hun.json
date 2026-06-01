@@ -3035,17 +3035,18 @@
     },
     {
       "rule_id": "GEN-6.3.6",
-      "text": "Akkor is \"állj!\"-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók [GEN-6.9]), vagy ha kilép a pástról.",
+      "text": "Akkor is \"állj!\"-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók [GEN-6.9.1]--[GEN-6.9.7]), vagy ha kilép a pástról.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A mérkőzés megkezdése, megállítása és újrakezdése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.3",
       "line_number": 397,
-      "text_plain": "Akkor is \"állj!\"-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók [GEN-6.9]), vagy ha kilép a pástról.",
+      "text_plain": "Akkor is \"állj!\"-t kell elrendelni, ha a vívók küzdelme veszélyes, zavaros vagy ellentétes a szabályzattal, ha valamelyik vívó fegyvertelenné válik (kivéve birkózás esetén, v.ö.: Fogásos és birkózó akciók [GEN-6.9.1]--[GEN-6.9.7]), vagy ha kilép a pástról.",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
-        "GEN-6.9"
+        "GEN-6.9.1",
+        "GEN-6.9.7"
       ],
       "references_from": [],
       "parent_id": "GEN-6.3",
@@ -3134,18 +3135,19 @@
     },
     {
       "rule_id": "GEN-6.5.1",
-      "text": "A testérintkezés az a helyzet, amikor a két vívó egymással érintkezésbe kerül. Ha a közelharc nem engedélyezett, ekkor a versenybíró a küzdelmet köteles megállítani (Vö. [GEN-6.6]; [GEN-6.10.2]).",
+      "text": "A testérintkezés az a helyzet, amikor a két vívó egymással érintkezésbe kerül. Ha a közelharc nem engedélyezett, ekkor a versenybíró a küzdelmet köteles megállítani (Vö. [GEN-6.6.1]--[GEN-6.6.2]; [GEN-6.10.2]).",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Testérintkezés",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.5",
       "line_number": 412,
-      "text_plain": "A testérintkezés az a helyzet, amikor a két vívó egymással érintkezésbe kerül. Ha a közelharc nem engedélyezett, ekkor a versenybíró a küzdelmet köteles megállítani (Vö. [GEN-6.6]; [GEN-6.10.2]).",
+      "text_plain": "A testérintkezés az a helyzet, amikor a két vívó egymással érintkezésbe kerül. Ha a közelharc nem engedélyezett, ekkor a versenybíró a küzdelmet köteles megállítani (Vö. [GEN-6.6.1]--[GEN-6.6.2]; [GEN-6.10.2]).",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
         "GEN-6.10.2",
-        "GEN-6.6"
+        "GEN-6.6.1",
+        "GEN-6.6.2"
       ],
       "references_from": [],
       "parent_id": "GEN-6.5",
@@ -3201,17 +3203,18 @@
     },
     {
       "rule_id": "GEN-6.5.3",
-      "text": "Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: [GEN-6.10])",
+      "text": "Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: [GEN-6.10.1]--[GEN-6.10.2])",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Testérintkezés",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.5",
       "line_number": 418,
-      "text_plain": "Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: [GEN-6.10])",
+      "text_plain": "Nem szegi meg a vívás alapvető szabályait és nem büntetendő a vívó, ha fless támadással vagy gyors előrehaladásával, akár többször egymás után is testérintkezést idéz elő (erőszak vagy brutalitás nélkül) (V.ö.: [GEN-6.10.1]--[GEN-6.10.2])",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
-        "GEN-6.10"
+        "GEN-6.10.1",
+        "GEN-6.10.2"
       ],
       "references_from": [],
       "parent_id": "GEN-6.5",
@@ -3246,7 +3249,9 @@
         "DIS-4.1.18",
         "DIS-4.1.5"
       ],
-      "references_from": [],
+      "references_from": [
+        "GEN-6.5.1"
+      ],
       "parent_id": "GEN-6.6",
       "child_ids": [],
       "lineage": [
@@ -3263,19 +3268,21 @@
     },
     {
       "rule_id": "GEN-6.6.2",
-      "text": "Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar \"Állj\"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást határát, találatot kapottnak tekintendő (V.ö.: [GEN-6.11]).",
+      "text": "Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar \"Állj\"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást határát, találatot kapottnak tekintendő (V.ö.: [GEN-6.11.5]).",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Testérintkezés és lerohanás (fless)",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.6",
       "line_number": 427,
-      "text_plain": "Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar \"Állj\"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást határát, találatot kapottnak tekintendő (V.ö.: [GEN-6.11]).",
+      "text_plain": "Ezzel ellentétben, a futással (akár az ellenfélen testérintkezés nélkül túlhaladva) végrehajtott fless támadás nem tilos. A versenybírónak nem szabad túl hamar \"Állj\"-t kiáltania, hogy az esetleges riposzt érvényes maradhasson. Ilyen, az ellenfelet el nem találó, futással végrehajtott fless támadás esetén ha a flesst végrehajtó vívó átlépi a pást határát, találatot kapottnak tekintendő (V.ö.: [GEN-6.11.5]).",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
-        "GEN-6.11"
+        "GEN-6.11.5"
       ],
-      "references_from": [],
+      "references_from": [
+        "GEN-6.5.1"
+      ],
       "parent_id": "GEN-6.6",
       "child_ids": [],
       "lineage": [
@@ -3582,7 +3589,9 @@
       "weapon_type": "general",
       "variant": "",
       "references_to": [],
-      "references_from": [],
+      "references_from": [
+        "GEN-6.3.6"
+      ],
       "parent_id": "GEN-6.9",
       "child_ids": [],
       "lineage": [
@@ -3871,7 +3880,9 @@
       "weapon_type": "general",
       "variant": "",
       "references_to": [],
-      "references_from": [],
+      "references_from": [
+        "GEN-6.3.6"
+      ],
       "parent_id": "GEN-6.9",
       "child_ids": [],
       "lineage": [
@@ -3903,7 +3914,9 @@
       "weapon_type": "general",
       "variant": "",
       "references_to": [],
-      "references_from": [],
+      "references_from": [
+        "GEN-6.5.3"
+      ],
       "parent_id": "GEN-6.10",
       "child_ids": [],
       "lineage": [
@@ -3931,7 +3944,8 @@
       "variant": "",
       "references_to": [],
       "references_from": [
-        "GEN-6.5.1"
+        "GEN-6.5.1",
+        "GEN-6.5.3"
       ],
       "parent_id": "GEN-6.10",
       "child_ids": [],
@@ -4085,6 +4099,7 @@
       "references_to": [],
       "references_from": [
         "DIS-3.2.2",
+        "GEN-6.6.2",
         "LS-COMBAT-1.1.6"
       ],
       "parent_id": "GEN-6.11",
@@ -4257,17 +4272,17 @@
     },
     {
       "rule_id": "GEN-6.12.3",
-      "text": "A befejezett mérkőzés vagy váltás nem kezdhető újra, még akkor sem, ha formális hiba történt. (V.ö.: [DIS-1.3.7])",
+      "text": "befejezett mérkőzés vagy váltás nem kezdhető újra a [DIS-1.3.11] szakasszal összhangban, még akkor sem, ha formális hiba történt",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "A küzdelem időtartama",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-6.12",
       "line_number": 544,
-      "text_plain": "A befejezett mérkőzés vagy váltás nem kezdhető újra, még akkor sem, ha formális hiba történt. (V.ö.: [DIS-1.3.7])",
+      "text_plain": "befejezett mérkőzés vagy váltás nem kezdhető újra a [DIS-1.3.11] szakasszal összhangban, még akkor sem, ha formális hiba történt",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
-        "DIS-1.3.7"
+        "DIS-1.3.11"
       ],
       "references_from": [],
       "parent_id": "GEN-6.12",
@@ -4714,7 +4729,9 @@
       "weapon_type": "general",
       "variant": "COMBAT",
       "references_to": [],
-      "references_from": [],
+      "references_from": [
+        "LS-COMBAT-1.2.1.1"
+      ],
       "parent_id": "GEN-6.12.5.1",
       "child_ids": [],
       "lineage": [
@@ -4867,7 +4884,9 @@
       "weapon_type": "general",
       "variant": "",
       "references_to": [],
-      "references_from": [],
+      "references_from": [
+        "LS-COMBAT-1.2.1.1"
+      ],
       "parent_id": "GEN-6.12.5",
       "child_ids": [],
       "lineage": [
@@ -5794,6 +5813,7 @@
       "sibling_ids": [
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -5832,6 +5852,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.3",
         "GEN-7.6.4",
@@ -5869,6 +5890,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.4",
@@ -5911,6 +5933,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -5948,6 +5971,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -5985,6 +6009,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -6022,6 +6047,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -6061,6 +6087,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -6098,6 +6125,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -6134,6 +6162,7 @@
       "sibling_ids": [
         "GEN-7.6.1",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -6171,6 +6200,53 @@
       "sibling_ids": [
         "GEN-7.6.1",
         "GEN-7.6.10",
+        "GEN-7.6.12",
+        "GEN-7.6.13",
+        "GEN-7.6.2",
+        "GEN-7.6.3",
+        "GEN-7.6.4",
+        "GEN-7.6.5",
+        "GEN-7.6.6",
+        "GEN-7.6.7",
+        "GEN-7.6.8",
+        "GEN-7.6.9"
+      ],
+      "language": "hun"
+    },
+    {
+      "rule_id": "GEN-7.6.12",
+      "text": "A videóbíráskodás folyamata és a döntéshozatal szabályai.",
+      "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
+      "subsection": "A találatok elbírálása",
+      "document": "01-altalanos.md",
+      "anchor_id": "GEN-7.6",
+      "line_number": 831,
+      "text_plain": "A videóbíráskodás folyamata és a döntéshozatal szabályai.",
+      "weapon_type": "general",
+      "variant": "",
+      "references_to": [],
+      "references_from": [
+        "GEN-7.4.1"
+      ],
+      "parent_id": "GEN-7.6",
+      "child_ids": [
+        "GEN-7.6.12.1",
+        "GEN-7.6.12.2",
+        "GEN-7.6.12.3",
+        "GEN-7.6.12.4",
+        "GEN-7.6.12.5"
+      ],
+      "lineage": [
+        "GEN",
+        "GEN-7",
+        "GEN-7.6"
+      ],
+      "depth": 3,
+      "is_leaf": false,
+      "sibling_ids": [
+        "GEN-7.6.1",
+        "GEN-7.6.10",
+        "GEN-7.6.11",
         "GEN-7.6.13",
         "GEN-7.6.2",
         "GEN-7.6.3",
@@ -6190,7 +6266,7 @@
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.6",
-      "line_number": 832,
+      "line_number": 834,
       "text_plain": "A versenybíró választása szerint valós-időben vagy lassított felvételen az általa választott sebességben nézi vissza az akciót.",
       "weapon_type": "general",
       "variant": "",
@@ -6221,7 +6297,7 @@
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.6",
-      "line_number": 835,
+      "line_number": 837,
       "text_plain": "A versenybíró minden fegyvernemben bármikor dönthet úgy, hogy a döntése meghozatalát megelőzően megtekinti a képernyőjét.",
       "weapon_type": "general",
       "variant": "",
@@ -6252,7 +6328,7 @@
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.6",
-      "line_number": 838,
+      "line_number": 840,
       "text_plain": "A mérkőzés végén, ha az állás egyenlő, a döntő találat megítélése előtt a versenybírónak kötelező alkalmaznia a video bíráskodást.",
       "weapon_type": "general",
       "variant": "",
@@ -6283,7 +6359,7 @@
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.6",
-      "line_number": 841,
+      "line_number": 843,
       "text_plain": "A videóbíró bármikor kérheti a versenybírót, hogy alkalmazzon videóbíráskodást.",
       "weapon_type": "general",
       "variant": "",
@@ -6314,7 +6390,7 @@
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.6",
-      "line_number": 844,
+      "line_number": 846,
       "text_plain": "Ha a versenybíró a videóbíróval közösen kielemezte az akciót, függetlenül attól, hogy arra - a versenybíró kezdeményezésére, - a versenyző kérésére, - a döntő találat előtti pontegyenlőségnél, vagy - a videóbíró kérésére került sor, a versenybíró döntése végleges, és ugyanannak az akciónak további visszanézését kérni nem lehet.",
       "weapon_type": "general",
       "variant": "",
@@ -6345,7 +6421,7 @@
       "subsection": "A találatok elbírálása",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.6",
-      "line_number": 861,
+      "line_number": 863,
       "text_plain": "A versenybíró az alábbi jelzéseket köteles használni:",
       "weapon_type": "general",
       "variant": "",
@@ -6366,6 +6442,7 @@
         "GEN-7.6.1",
         "GEN-7.6.10",
         "GEN-7.6.11",
+        "GEN-7.6.12",
         "GEN-7.6.2",
         "GEN-7.6.3",
         "GEN-7.6.4",
@@ -6384,7 +6461,7 @@
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.7",
-      "line_number": 882,
+      "line_number": 884,
       "text_plain": "Minden csoportmérkőzés, csapatmérkőzés vagy egyenes kiesés mérkőzés kezdete előtt, a versenybíró összehívja a versenyzőket, hogy ellenőrizze a következőket: (Vö. [GEN-7.2.2]) 1. minden fegyvernemben, hogy a versenyzők hiánytalan felszerelésben és ruházatban jelentek-e meg. 1. minden fegyvernemben a vívók felszerelésén a szabályos, a felszerelésre és fegyverekre vonatkozó szabályok által előírt 350N vagy FIE jelzés meglétét, és a fegyverellenőri jelzéseket. 1. hogy mindenki szabályszerű vívókabátot visel-e.. 1. minden fegyvernemben, hogy mindenki felvett-e szabályszerű, 800 Newton ellenállású hónaljvédőt a ruha alá (jelenleg nem kötelező, későbbi szabálymódosításig erősen ajánlott, és ellenőrizendő). 1. A fegyvereken fegyverellenőrzés jelzés meglétét. 1. Minden fegyvernemben, hogy a vívók nincsenek felszerelve olyan elektronikus kommunikációs eszközzel, amely lehetővé teszi, hogy a küzdelem során egy páston kívüli személy kapcsolatot létesítsen a vívóval.",
       "weapon_type": "general",
       "variant": "",
@@ -6416,7 +6493,7 @@
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.7",
-      "line_number": 894,
+      "line_number": 896,
       "text_plain": "- A csoportmérkőzések során ezt az ellenőrzést a vívók gyülekezésre szólításakor kell elvégezni. - Az egyenes kieséses mérkőzések és a döntők előtt az ellenőrzést a gyülekező területen végzik el.",
       "weapon_type": "general",
       "variant": "",
@@ -6448,7 +6525,7 @@
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.7",
-      "line_number": 899,
+      "line_number": 901,
       "text_plain": "A fenti ellenőrzéseken túlmenően, a mérkőzést vezető bíró, saját elhatározásából, vagy a vívó, vagy a csapatkapitány kérésére, bármikor ellenőrzést végezhet, továbbá ellenőrizheti a már elvégzett hitelesítést vagy újabb ellenőrzéseket végezhet illetve végeztethet. (vö: [GEN-7.2.2])",
       "weapon_type": "general",
       "variant": "",
@@ -6480,7 +6557,7 @@
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.7",
-      "line_number": 902,
+      "line_number": 904,
       "text_plain": "Minden esetben a mérkőzés előtt megállapítja a ruhán, a pengén és a maszkon a fegyverellenőri jelzés meglétét.",
       "weapon_type": "general",
       "variant": "",
@@ -6510,7 +6587,7 @@
       "subsection": "Szabályos felszerelés és a felszerelés versenybíróbíró általi ellenőrzése",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.7",
-      "line_number": 906,
+      "line_number": 908,
       "text_plain": "A leellenőrzött tartalék felszereléseket a versenybíró a mérkőzés kezdetén a pást mellé helyezi a megfelelő vívó oldalára.",
       "weapon_type": "general",
       "variant": "",
@@ -6540,7 +6617,7 @@
       "subsection": "Szabálytalan felszerelés",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.8",
-      "line_number": 913,
+      "line_number": 915,
       "text_plain": "Bármely helyzetben, ha egy versenyző (a Felszerelés Szabályzat értelmében) szabályellenes vagy hibás felszerelés birtokában van , a versenybíró elkobozza azt, és vizsgálatra átadja a szolgálatban lévő szakembernek. A tulajdonos a felszerelést csak akkor kaphatja vissza, ha a szükséges ellenőrzéseket már elvégezték és ha a hiba kijavítása kapcsán esetlegesen felmerülő költségeket megtérítette. A felszerelést az ismételt használatba vétel előtt újból ellenőrizni kell.",
       "weapon_type": "general",
       "variant": "",
@@ -6571,7 +6648,7 @@
       "subsection": "Szabálytalan felszerelés",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.8",
-      "line_number": 916,
+      "line_number": 918,
       "text_plain": "Ha a vívó a páston: - hibás, vagy a szabályoknak nem megfelelő fegyverrel vagy - a szabályoknak nem megfelelő ruhában jelenik meg, a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban előírt, az első csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.",
       "weapon_type": "general",
       "variant": "",
@@ -6606,7 +6683,7 @@
       "subsection": "Szabálytalan felszerelés",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.8",
-      "line_number": 924,
+      "line_number": 926,
       "text_plain": "Amennyiben a mérkőzés során a felszerelésben olyan rendellenességet állapítanak meg, amely a küzdelem következtében állhatott elő: Például: - a ruházaton lyuk található, - merev védőfelszerelés vagy kesztyű eltört vagy szétesett, - a maszk deformálódott, - a fegyver veszélyesen deformálódik vagy eltörik, akkor a versenybíróbíró nem alkalmaz sem figyelmeztetést, sem büntetést, és megadja a meghibásodott fegyverrel adott szabályos találatot.",
       "weapon_type": "general",
       "variant": "",
@@ -6630,26 +6707,23 @@
     },
     {
       "rule_id": "GEN-7.8.4",
-      "text": "1. Amennyiben a páston való jelentkezéskor vagy a mérkőzés során megállapítást nyer, hogy a vívó felszerelése:\n  1. nélkülözi a hitelesítő jelzést. Ilyenkor a versenybíró:\n    - megsemmisíti a vétkes vívó által esetleg adott utolsó találatot,\n    - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.\n  1. az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró:\n  1. a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.\n  1. átment az előzetes hitelesítésen, de csalásra alkalmas\n  1. viseli a hitelesítő jelet, de az utánzat vagy máshonnan áthelyezett\n  1. olyan módon szándékosan (tehát nem véletlenből fakadóan vagy a mérkőzés során a körülmények következtében) módosított, hogy az nem menne át az előzetes hitelesítésen\n<!--\n  1. úgy került módosításra, hogy akaratlagosan találatjelzést vagy a találatjelző gép működésképtelenségét lehet vele kiváltani -->\n  1. elektronikus kommunikációt lehetővé tevő felszerelést tartalmaz, amely lehetővé teszi, hogy a vívó a páston kívüli személlyel kommunikáljon.\nA versenybíró a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek.\n1. A szakértő tényeket megállapító véleményének beszerzését követően a [DIS-2.1.3]/[DIS-2.1.5] szakaszokban foglalt hátrányok alkalmazása nélkül a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza.\n1. A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.",
+      "text": "1. Amennyiben a páston való jelentkezéskor vagy a mérkőzés során megállapítást nyer, hogy a vívó felszerelése:\n  1. nélkülözi a hitelesítő jelzést. Ilyenkor a versenybíró:\n    - megsemmisíti a vétkes vívó által esetleg adott utolsó találatot,\n    - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.\n  1. az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró:\n    - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza.\n  1. átment az előzetes hitelesítésen, de csalásra alkalmas\n  1. viseli a hitelesítő jelet, de az utánzat vagy máshonnan áthelyezett\n  1. olyan módon szándékosan (tehát nem véletlenből fakadóan vagy a mérkőzés során a körülmények következtében) módosított, hogy az nem menne át az előzetes hitelesítésen\n<!--\n  1. úgy került módosításra, hogy akaratlagosan találatjelzést vagy a találatjelző gép működésképtelenségét lehet vele kiváltani -->\n  1. elektronikus kommunikációt lehetővé tevő felszerelést tartalmaz, amely lehetővé teszi, hogy a vívó a páston kívüli személlyel kommunikáljon.\nA versenybíró a /3, 4, 5 és 6 esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek.\n1. A szakértő tényeket megállapító véleményének beszerzését követően a [DIS-2.4.1] /2, 4 szakaszokban foglalt hátrányok alkalmazása nélkül az /1.3, 1.4, 1.5 és 1.6 esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza (vö: [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.14]--[DIS-4.1.15], [DIS-4.1.18]).\n1. A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.",
       "section": "Általános rendelkezések és a fegyvernemek közös szabályai",
       "subsection": "Szabálytalan felszerelés",
       "document": "01-altalanos.md",
       "anchor_id": "GEN-7.8",
-      "line_number": 937,
-      "text_plain": "1. Amennyiben a páston való jelentkezéskor vagy a mérkőzés során megállapítást nyer, hogy a vívó felszerelése: 1. nélkülözi a hitelesítő jelzést. Ilyenkor a versenybíró: - megsemmisíti a vétkes vívó által esetleg adott utolsó találatot, - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza. 1. az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró: 1. a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza. 1. átment az előzetes hitelesítésen, de csalásra alkalmas 1. viseli a hitelesítő jelet, de az utánzat vagy máshonnan áthelyezett 1. olyan módon szándékosan (tehát nem véletlenből fakadóan vagy a mérkőzés során a körülmények következtében) módosított, hogy az nem menne át az előzetes hitelesítésen 1. elektronikus kommunikációt lehetővé tevő felszerelést tartalmaz, amely lehetővé teszi, hogy a vívó a páston kívüli személlyel kommunikáljon. A versenybíró a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek. 1. A szakértő tényeket megállapító véleményének beszerzését követően a [DIS-2.1.3]/[DIS-2.1.5] szakaszokban foglalt hátrányok alkalmazása nélkül a [GEN-7.8.4.3], [GEN-7.8.4.4], [GEN-7.8.4.5], és [GEN-7.8.4.7] esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza. 1. A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.",
+      "line_number": 939,
+      "text_plain": "1. Amennyiben a páston való jelentkezéskor vagy a mérkőzés során megállapítást nyer, hogy a vívó felszerelése: 1. nélkülözi a hitelesítő jelzést. Ilyenkor a versenybíró: - megsemmisíti a vétkes vívó által esetleg adott utolsó találatot, - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza. 1. az előzetes hitelesítés során nem ellenőrzött részében hibás. Ebben az esetben a versenybíró: - a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.11], [DIS-4.1.18] szakaszokban írt, a második csoportba tartozó vétségekre vonatkozó büntetést alkalmazza. 1. átment az előzetes hitelesítésen, de csalásra alkalmas 1. viseli a hitelesítő jelet, de az utánzat vagy máshonnan áthelyezett 1. olyan módon szándékosan (tehát nem véletlenből fakadóan vagy a mérkőzés során a körülmények következtében) módosított, hogy az nem menne át az előzetes hitelesítésen 1. elektronikus kommunikációt lehetővé tevő felszerelést tartalmaz, amely lehetővé teszi, hogy a vívó a páston kívüli személlyel kommunikáljon. A versenybíró a /3, 4, 5 és 6 esetekben nyomban elkobozza a felszerelést (fegyver, és amennyiben szükséges kabát, maszk, hónaljvédő, nadrág, stb.) és átadja a szolgálatban lévő szakembernek. 1. A szakértő tényeket megállapító véleményének beszerzését követően a [DIS-2.4.1] /2, 4 szakaszokban foglalt hátrányok alkalmazása nélkül az /1.3, 1.4, 1.5 és 1.6 esetekben a negyedik csoportba tartozó vétségeknek megfelelő büntetést alkalmazza (vö: [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.14]--[DIS-4.1.15], [DIS-4.1.18]). 1. A versenybíró döntéségig az adott mérkőzés felfüggesztésre kerül, de a csoport további mérkőzései folytatódhatnak.",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
-        "DIS-2.1.3",
-        "DIS-2.1.5",
+        "DIS-2.4.1",
         "DIS-4.1.1",
         "DIS-4.1.11",
+        "DIS-4.1.14",
+        "DIS-4.1.15",
         "DIS-4.1.18",
-        "DIS-4.1.5",
-        "GEN-7.8.4.3",
-        "GEN-7.8.4.4",
-        "GEN-7.8.4.5",
-        "GEN-7.8.4.7"
+        "DIS-4.1.5"
       ],
       "references_from": [
         "DIS-3.2.1"
@@ -6736,19 +6810,19 @@
     },
     {
       "rule_id": "LS-1.1.3",
-      "text": "Tilos a kard keresztvasával találatot bevinni. A kard kosarával végrehajtott minden találatot meg kell semmisíteni és az ilyen találatot adó vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszok szerint kell büntetni.",
+      "text": "Tilos a kard keresztvasával találatot bevinni. A kard kosarával végrehajtott minden találatot meg kell semmisíteni és az ilyen találatot adó vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszok szerint kell büntetni.",
       "section": "Hosszúkard",
       "subsection": "A találatadás módja",
       "document": "02-hosszukard.md",
       "anchor_id": "LS-1.1",
       "line_number": 16,
-      "text_plain": "Tilos a kard keresztvasával találatot bevinni. A kard kosarával végrehajtott minden találatot meg kell semmisíteni és az ilyen találatot adó vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszok szerint kell büntetni.",
+      "text_plain": "Tilos a kard keresztvasával találatot bevinni. A kard kosarával végrehajtott minden találatot meg kell semmisíteni és az ilyen találatot adó vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszok szerint kell büntetni.",
       "weapon_type": "longsword",
       "variant": "",
       "references_to": [
         "DIS-4.1.1",
         "DIS-4.1.10",
-        "DIS-4.1.19",
+        "DIS-4.1.18",
         "DIS-4.1.5",
         "DIS-4.1.9"
       ],
@@ -6928,7 +7002,8 @@
         "LS-1.2.2",
         "LS-1.2.3",
         "LS-1.2.4",
-        "LS-1.2.5"
+        "LS-1.2.5",
+        "LS-1.2.6"
       ],
       "language": "hun"
     },
@@ -6958,7 +7033,8 @@
         "LS-1.2.1",
         "LS-1.2.3",
         "LS-1.2.4",
-        "LS-1.2.5"
+        "LS-1.2.5",
+        "LS-1.2.6"
       ],
       "language": "hun"
     },
@@ -6991,7 +7067,8 @@
         "LS-1.2.1",
         "LS-1.2.2",
         "LS-1.2.4",
-        "LS-1.2.5"
+        "LS-1.2.5",
+        "LS-1.2.6"
       ],
       "language": "hun"
     },
@@ -7052,7 +7129,7 @@
       "language": "hun"
     },
     {
-      "rule_id": "LS-1.2.3",
+      "rule_id": "LS-1.2.4",
       "text": "Ha egy találat az érvényes találati felületen kívülre érkezik, nem számít találatnak; nem állítja meg a vívómenetet és nem semmisíti meg a későbbi találatokat. Ugyanakkor a találat amelyet vívóhibát követően adtak be, nem számít érvényes találatnak, azonban megállítja a vívómenetet és megsemmisít minden azt követő találatot.",
       "section": "Hosszúkard",
       "subsection": "Érvényes találati felület",
@@ -7065,27 +7142,25 @@
       "references_to": [],
       "references_from": [],
       "parent_id": "LS-1.2",
-      "child_ids": [
-        "LS-1.2.3.1",
-        "LS-1.2.3.2"
-      ],
+      "child_ids": [],
       "lineage": [
         "LS",
         "LS-1",
         "LS-1.2"
       ],
       "depth": 3,
-      "is_leaf": false,
+      "is_leaf": true,
       "sibling_ids": [
         "LS-1.2.1",
         "LS-1.2.2",
-        "LS-1.2.4",
-        "LS-1.2.5"
+        "LS-1.2.3",
+        "LS-1.2.5",
+        "LS-1.2.6"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-1.2.4",
+      "rule_id": "LS-1.2.5",
       "text": "Érvénytelen találati felületre érkező vágások és szúrások erősségének megítélése és a szükséges büntetések kiszabása a versenybíró feladata.",
       "section": "Hosszúkard",
       "subsection": "Érvényes találati felület",
@@ -7110,12 +7185,13 @@
         "LS-1.2.1",
         "LS-1.2.2",
         "LS-1.2.3",
-        "LS-1.2.5"
+        "LS-1.2.4",
+        "LS-1.2.6"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-1.2.5",
+      "rule_id": "LS-1.2.6",
       "text": "A mérkőzést vezető bírónak büntetni kell azt a vívót, aki érvényes találati felületet érvénytelen találati felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, fegyelmi vétségek első csoportjának megfelelően.",
       "section": "Hosszúkard",
       "subsection": "Érvényes találati felület",
@@ -7140,7 +7216,8 @@
         "LS-1.2.1",
         "LS-1.2.2",
         "LS-1.2.3",
-        "LS-1.2.4"
+        "LS-1.2.4",
+        "LS-1.2.5"
       ],
       "language": "hun"
     },
@@ -7356,7 +7433,9 @@
         "LS-VOR-1.1.2",
         "LS-VOR-1.1.3",
         "LS-VOR-1.1.4",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.5",
+        "LS-VOR-1.1.6",
+        "LS-VOR-1.1.7"
       ],
       "language": "hun"
     },
@@ -7374,24 +7453,21 @@
       "references_to": [],
       "references_from": [],
       "parent_id": "LS-VOR-1.1",
-      "child_ids": [
-        "LS-VOR-1.1.2.1",
-        "LS-VOR-1.1.2.2",
-        "LS-VOR-1.1.2.3",
-        "LS-VOR-1.1.2.4"
-      ],
+      "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1"
       ],
       "depth": 3,
-      "is_leaf": false,
+      "is_leaf": true,
       "sibling_ids": [
         "LS-VOR-1.1.1",
         "LS-VOR-1.1.3",
         "LS-VOR-1.1.4",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.5",
+        "LS-VOR-1.1.6",
+        "LS-VOR-1.1.7"
       ],
       "language": "hun"
     },
@@ -7426,7 +7502,9 @@
         "LS-VOR-1.1.1",
         "LS-VOR-1.1.2",
         "LS-VOR-1.1.4",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.5",
+        "LS-VOR-1.1.6",
+        "LS-VOR-1.1.7"
       ],
       "language": "hun"
     },
@@ -7551,7 +7629,7 @@
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.2",
+      "rule_id": "LS-VOR-1.1.4",
       "text": "A vívómenet elemzésekor támadás elsőbbségének megítéléséhez az alábbi tényezőket kell figyelembe venni:",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7565,10 +7643,10 @@
       "references_from": [],
       "parent_id": "LS-VOR-1.1",
       "child_ids": [
-        "LS-VOR-1.1.2.1",
-        "LS-VOR-1.1.2.2",
-        "LS-VOR-1.1.2.3",
-        "LS-VOR-1.1.2.4"
+        "LS-VOR-1.1.4.1",
+        "LS-VOR-1.1.4.2",
+        "LS-VOR-1.1.4.3",
+        "LS-VOR-1.1.4.4"
       ],
       "lineage": [
         "LS-VOR",
@@ -7579,14 +7657,16 @@
       "is_leaf": false,
       "sibling_ids": [
         "LS-VOR-1.1.1",
+        "LS-VOR-1.1.2",
         "LS-VOR-1.1.3",
-        "LS-VOR-1.1.4",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.5",
+        "LS-VOR-1.1.6",
+        "LS-VOR-1.1.7"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.2.1",
+      "rule_id": "LS-VOR-1.1.4.1",
       "text": "Ha a támadás akkor indul, amikor **az ellenfél \"vonal\" helyzetben van** (azaz nyújtott karral, az érvényes találati felületet fenyegető heggyel - hosszúhegy/langort), akkor a támadónak először ki kell térítenie az ellenfél fegyverét. A mérkőzést vezető bírónak figyelnie kell arra, hogy a pengék puszta érintkezése nem tekinthető elégségesnek az ellenfél fegyverének kitérítésére.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7598,25 +7678,25 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.2",
+      "parent_id": "LS-VOR-1.1.4",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.2"
+        "LS-VOR-1.1.4"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.2.2",
-        "LS-VOR-1.1.2.3",
-        "LS-VOR-1.1.2.4"
+        "LS-VOR-1.1.4.2",
+        "LS-VOR-1.1.4.3",
+        "LS-VOR-1.1.4.4"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.2.2",
+      "rule_id": "LS-VOR-1.1.4.2",
       "text": "Ha az ellenfél pengéjének kitérítésére irányuló kísérlet nem talál pengét (**kitérés**), a támadás joga az ellenfélre száll át.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7628,25 +7708,25 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.2",
+      "parent_id": "LS-VOR-1.1.4",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.2"
+        "LS-VOR-1.1.4"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.2.1",
-        "LS-VOR-1.1.2.3",
-        "LS-VOR-1.1.2.4"
+        "LS-VOR-1.1.4.1",
+        "LS-VOR-1.1.4.3",
+        "LS-VOR-1.1.4.4"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.2.3",
+      "rule_id": "LS-VOR-1.1.4.3",
       "text": "Ha a támadás akkor indul, amikor az ellenfél nincs vonal helyzetben, akkor a támadást végre lehet hajtani közvetlenül vagy kerüléssel, áthúzással, vagy egyébként cselek bemutatásával , amelyek esetén az ellenfél védeni kényszerül.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7658,25 +7738,25 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.2",
+      "parent_id": "LS-VOR-1.1.4",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.2"
+        "LS-VOR-1.1.4"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.2.1",
-        "LS-VOR-1.1.2.2",
-        "LS-VOR-1.1.2.4"
+        "LS-VOR-1.1.4.1",
+        "LS-VOR-1.1.4.2",
+        "LS-VOR-1.1.4.4"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.2.4",
+      "rule_id": "LS-VOR-1.1.4.4",
       "text": "**A lábak keresztezésével végrehajtott folytonos előrelépés** előkészítésnek minősül és ezzel az előkészítéssel szemben minden egyszerű támadásnak elsőbbsége van.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7688,25 +7768,25 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.2",
+      "parent_id": "LS-VOR-1.1.4",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.2"
+        "LS-VOR-1.1.4"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.2.1",
-        "LS-VOR-1.1.2.2",
-        "LS-VOR-1.1.2.3"
+        "LS-VOR-1.1.4.1",
+        "LS-VOR-1.1.4.2",
+        "LS-VOR-1.1.4.3"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.3",
+      "rule_id": "LS-VOR-1.1.5",
       "text": "Összetett támadásoknál a cseleket helyesen kell kivitelezni, tehát:",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7720,10 +7800,10 @@
       "references_from": [],
       "parent_id": "LS-VOR-1.1",
       "child_ids": [
-        "LS-VOR-1.1.3.1",
-        "LS-VOR-1.1.3.2",
-        "LS-VOR-1.1.3.3",
-        "LS-VOR-1.1.3.4"
+        "LS-VOR-1.1.5.1",
+        "LS-VOR-1.1.5.2",
+        "LS-VOR-1.1.5.3",
+        "LS-VOR-1.1.5.4"
       ],
       "lineage": [
         "LS-VOR",
@@ -7735,13 +7815,15 @@
       "sibling_ids": [
         "LS-VOR-1.1.1",
         "LS-VOR-1.1.2",
+        "LS-VOR-1.1.3",
         "LS-VOR-1.1.4",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.6",
+        "LS-VOR-1.1.7"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.3.1",
+      "rule_id": "LS-VOR-1.1.5.1",
       "text": "a szúrócselt a kar nyújtásával, az érvényes találati felület heggyel való folyamatos fenyegetése mellett;",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7753,25 +7835,25 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.3",
+      "parent_id": "LS-VOR-1.1.5",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.3"
+        "LS-VOR-1.1.5"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.3.2",
-        "LS-VOR-1.1.3.3",
-        "LS-VOR-1.1.3.4"
+        "LS-VOR-1.1.5.2",
+        "LS-VOR-1.1.5.3",
+        "LS-VOR-1.1.5.4"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.3.2",
+      "rule_id": "LS-VOR-1.1.5.2",
       "text": "a vágócselt a kar nyújtásával úgy, hogy a penge és a kar mintegy 135º-os tompaszöget alkot és a penge éle fenyegeti az érvényes találati felületet.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7783,25 +7865,25 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.3",
+      "parent_id": "LS-VOR-1.1.5",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.3"
+        "LS-VOR-1.1.5"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.3.1",
-        "LS-VOR-1.1.3.3",
-        "LS-VOR-1.1.3.4"
+        "LS-VOR-1.1.5.1",
+        "LS-VOR-1.1.5.3",
+        "LS-VOR-1.1.5.4"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.3.3",
+      "rule_id": "LS-VOR-1.1.5.3",
       "text": "Ha egy összetett támadás végrehajtása közben az ellenfél valamelyik csel közben megfogja a támadó pengéjét, joga van a riposzthoz.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7813,25 +7895,25 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.3",
+      "parent_id": "LS-VOR-1.1.5",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.3"
+        "LS-VOR-1.1.5"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.3.1",
-        "LS-VOR-1.1.3.2",
-        "LS-VOR-1.1.3.4"
+        "LS-VOR-1.1.5.1",
+        "LS-VOR-1.1.5.2",
+        "LS-VOR-1.1.5.4"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.3.3",
+      "rule_id": "LS-VOR-1.1.5.4",
       "text": "Összetett támadásnál az ellenfélnek joga van közbetámadást végrehajtani; ahhoz azonban, hogy az érvényes legyen, a közbetámadásnak a támadás befejezését egy vívóidővel meg kell előznie, azaz a **közbetámadásnak** találnia kell mielőtt a támadó megkezdené támadása utolsó mozdulatát.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7843,25 +7925,25 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.3",
+      "parent_id": "LS-VOR-1.1.5",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.3"
+        "LS-VOR-1.1.5"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.3.1",
-        "LS-VOR-1.1.3.2",
-        "LS-VOR-1.1.3.4"
+        "LS-VOR-1.1.5.1",
+        "LS-VOR-1.1.5.2",
+        "LS-VOR-1.1.5.3"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.4",
+      "rule_id": "LS-VOR-1.1.6",
       "text": "Támadás pengeütéssel vagy -kötéssel:",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7875,8 +7957,8 @@
       "references_from": [],
       "parent_id": "LS-VOR-1.1",
       "child_ids": [
-        "LS-VOR-1.1.4.1",
-        "LS-VOR-1.1.4.2"
+        "LS-VOR-1.1.6.1",
+        "LS-VOR-1.1.6.2"
       ],
       "lineage": [
         "LS-VOR",
@@ -7889,12 +7971,14 @@
         "LS-VOR-1.1.1",
         "LS-VOR-1.1.2",
         "LS-VOR-1.1.3",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.4",
+        "LS-VOR-1.1.5",
+        "LS-VOR-1.1.7"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.4.1",
+      "rule_id": "LS-VOR-1.1.6.1",
       "text": "Pengeütéses vagy -kötéses támadás akkor tekinthető helyesen végrehajtottnak és akkor részesül elsőbbségben, amikor a pengeütés az **ellenfél pengéjének gyengéjére**, azaz a keresztvastól távolabb eső 1/2 részére esik.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7906,23 +7990,23 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.4",
+      "parent_id": "LS-VOR-1.1.6",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.4"
+        "LS-VOR-1.1.6"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.4.2"
+        "LS-VOR-1.1.6.2"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.4.2",
+      "rule_id": "LS-VOR-1.1.6.2",
       "text": "Pengeütéses vagy -kötéses támadásnál, amikor a pengeütés az ellenfél pengéjének erősére esik, azaz a keresztvashoz legközelebb eső 1/2 részére üt, a támadást rosszul végrehajtottnak (védettnek) kell tekinteni és ez a pengeütés elsőbbséget ad az ellenfél azonnali riposztjának.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7934,23 +8018,23 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.4",
+      "parent_id": "LS-VOR-1.1.6",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.4"
+        "LS-VOR-1.1.6"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.4.1"
+        "LS-VOR-1.1.6.1"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.5",
+      "rule_id": "LS-VOR-1.1.7",
       "text": "Védés:",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7964,9 +8048,9 @@
       "references_from": [],
       "parent_id": "LS-VOR-1.1",
       "child_ids": [
-        "LS-VOR-1.1.5.1",
-        "LS-VOR-1.1.5.2",
-        "LS-VOR-1.1.5.3"
+        "LS-VOR-1.1.7.1",
+        "LS-VOR-1.1.7.2",
+        "LS-VOR-1.1.7.3"
       ],
       "lineage": [
         "LS-VOR",
@@ -7979,12 +8063,14 @@
         "LS-VOR-1.1.1",
         "LS-VOR-1.1.2",
         "LS-VOR-1.1.3",
-        "LS-VOR-1.1.4"
+        "LS-VOR-1.1.4",
+        "LS-VOR-1.1.5",
+        "LS-VOR-1.1.6"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.5.1",
+      "rule_id": "LS-VOR-1.1.7.1",
       "text": "A védés (illetve a támadás elkerülése) jogot ad a riposztra: az egyszerű visszavágás (-szúrás) lehet közvetlen vagy közvetett, azonban ahhoz, hogy a támadó minden további akcióját érvénytelenítse, azt azonnal, határozatlanság vagy késedelem nélkül kell végrehajtani.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -7996,24 +8082,24 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.5",
+      "parent_id": "LS-VOR-1.1.7",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.7"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.5.2",
-        "LS-VOR-1.1.5.3"
+        "LS-VOR-1.1.7.2",
+        "LS-VOR-1.1.7.3"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.5.2",
+      "rule_id": "LS-VOR-1.1.7.2",
       "text": "Szúrások elleni védésnek az a célja, hogy az megakadályozza a hegy beérkezését a találati felületre, amely ellen a szúrás irányul.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -8025,24 +8111,24 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.5",
+      "parent_id": "LS-VOR-1.1.7",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.7"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.5.1",
-        "LS-VOR-1.1.5.3"
+        "LS-VOR-1.1.7.1",
+        "LS-VOR-1.1.7.3"
       ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-VOR-1.1.5.3",
+      "rule_id": "LS-VOR-1.1.7.3",
       "text": "A vágások elleni védésnek az a célja, hogy megakadályozza a találat beérkezését arra a találati felületre, amely ellen az ellenfél vágása irányul.\n- a védés végrehajtása akkor helyes, amikor a támadó akció befejezése előtt meggátolja az ellenfél találatának beérkezését, lezárva azt a vonalat, amelyben a támadás befejeződne;\n- ha egy védést helyesen hajtottak végre, az ellenfél támadását kivédettnek kell minősíteni és ekként kell megítélni még akkor is, ha a támadó pengéjének hajlékonysága miatt annak hegye eléri a találati felületet.",
       "section": "",
       "subsection": "A találatok érvényessége vagy elsőbbsége",
@@ -8054,19 +8140,19 @@
       "variant": "VOR",
       "references_to": [],
       "references_from": [],
-      "parent_id": "LS-VOR-1.1.5",
+      "parent_id": "LS-VOR-1.1.7",
       "child_ids": [],
       "lineage": [
         "LS-VOR",
         "LS-VOR-1",
         "LS-VOR-1.1",
-        "LS-VOR-1.1.5"
+        "LS-VOR-1.1.7"
       ],
       "depth": 4,
       "is_leaf": true,
       "sibling_ids": [
-        "LS-VOR-1.1.5.1",
-        "LS-VOR-1.1.5.2"
+        "LS-VOR-1.1.7.1",
+        "LS-VOR-1.1.7.2"
       ],
       "language": "hun"
     },
@@ -8558,17 +8644,18 @@
     },
     {
       "rule_id": "LS-COMBAT-1.2.1.1",
-      "text": "Amennyiben egy **egyenes kieséses mérkőzésen EGYMÁST KÖVETŐEN 5 egyidejű találat esett**\n- a bíró sorshúzással (pénzfeldobással) kiválasztja azt a vívót, aki a következő asszóban kedvezményezett\n- ha a következő asszó eredménye egyidejű találat, csak a kedvezményezett vívó kap egy pontot, ellenfelének a találatát érvényteleníteni kell.\n- a kedvezményezett személye asszónként változik, függetlenül az előző asszó kimenetelétől, a mérkőzés végéig.\n- Ha az idő lejártakor pontegyenlőség áll fenn, ezt a kedvezményezettséget el kell törölni, és az általános szabályokban foglaltak szerint kell eljárni (vö.: [GEN-6.10.4.5.2])\n- csoportmérkőzéseken ez a szabály nem alkalmazandó.",
+      "text": "Amennyiben egy **egyenes kieséses mérkőzésen EGYMÁST KÖVETŐEN 5 egyidejű találat esett**\n- a bíró sorshúzással (pénzfeldobással) kiválasztja azt a vívót, aki a következő asszóban kedvezményezett\n- ha a következő asszó eredménye egyidejű találat, csak a kedvezményezett vívó kap egy pontot, ellenfelének a találatát érvényteleníteni kell.\n- a kedvezményezett személye asszónként változik, függetlenül az előző asszó kimenetelétől, a mérkőzés végéig.\n- Ha együttes találatokkal egyszerre érik el a 10 találatot, vagy az idő lejártakor pontegyenlőség áll fenn, ezt a kedvezményezettséget el kell törölni, és az általános szabályokban foglaltak szerint kell eljárni (vö.: [GEN-6.12.5.1.2], [GEN-6.12.5.4])\n- csoportmérkőzéseken ez a szabály nem alkalmazandó.",
       "section": "",
       "subsection": "Opcionális szabályok",
       "document": "02.b-hosszukard-COMBAT.md",
       "anchor_id": "LS-COMBAT-1.2",
       "line_number": 36,
-      "text_plain": "Amennyiben egy egyenes kieséses mérkőzésen EGYMÁST KÖVETŐEN 5 egyidejű találat esett - a bíró sorshúzással (pénzfeldobással) kiválasztja azt a vívót, aki a következő asszóban kedvezményezett - ha a következő asszó eredménye egyidejű találat, csak a kedvezményezett vívó kap egy pontot, ellenfelének a találatát érvényteleníteni kell. - a kedvezményezett személye asszónként változik, függetlenül az előző asszó kimenetelétől, a mérkőzés végéig. - Ha az idő lejártakor pontegyenlőség áll fenn, ezt a kedvezményezettséget el kell törölni, és az általános szabályokban foglaltak szerint kell eljárni (vö.: [GEN-6.10.4.5.2]) - csoportmérkőzéseken ez a szabály nem alkalmazandó.",
+      "text_plain": "Amennyiben egy egyenes kieséses mérkőzésen EGYMÁST KÖVETŐEN 5 egyidejű találat esett - a bíró sorshúzással (pénzfeldobással) kiválasztja azt a vívót, aki a következő asszóban kedvezményezett - ha a következő asszó eredménye egyidejű találat, csak a kedvezményezett vívó kap egy pontot, ellenfelének a találatát érvényteleníteni kell. - a kedvezményezett személye asszónként változik, függetlenül az előző asszó kimenetelétől, a mérkőzés végéig. - Ha együttes találatokkal egyszerre érik el a 10 találatot, vagy az idő lejártakor pontegyenlőség áll fenn, ezt a kedvezményezettséget el kell törölni, és az általános szabályokban foglaltak szerint kell eljárni (vö.: [GEN-6.12.5.1.2], [GEN-6.12.5.4]) - csoportmérkőzéseken ez a szabály nem alkalmazandó.",
       "weapon_type": "longsword",
       "variant": "COMBAT",
       "references_to": [
-        "GEN-6.10.4.5.2"
+        "GEN-6.12.5.1.2",
+        "GEN-6.12.5.4"
       ],
       "references_from": [],
       "parent_id": "LS-COMBAT-1.2.1",
@@ -8636,11 +8723,13 @@
       ],
       "depth": 3,
       "is_leaf": true,
-      "sibling_ids": [],
+      "sibling_ids": [
+        "LS-AB-1.1.2"
+      ],
       "language": "hun"
     },
     {
-      "rule_id": "LS-AB-1.1.1",
+      "rule_id": "LS-AB-1.1.2",
       "text": "A találatok helyességének elbírálásánál a következőket kell figyelembe venni:\n- A szabályosan (két kézzel) fogott fegyverrel adott találat 2 pontot ér,\n- Egy kézzel fogott fegyverrel adott találat 1 pontot ér.",
       "section": "",
       "subsection": "A találat érvényessége és súlyozása",
@@ -8661,7 +8750,9 @@
       ],
       "depth": 3,
       "is_leaf": true,
-      "sibling_ids": [],
+      "sibling_ids": [
+        "LS-AB-1.1.1"
+      ],
       "language": "hun"
     },
     {
@@ -8691,6 +8782,7 @@
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
@@ -8728,6 +8820,7 @@
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
@@ -8764,6 +8857,7 @@
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.5",
         "LS-AB-1.2.6",
@@ -8805,6 +8899,7 @@
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.6",
@@ -8897,6 +8992,7 @@
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
@@ -8933,6 +9029,7 @@
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
@@ -8969,6 +9066,7 @@
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
@@ -9011,6 +9109,7 @@
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
@@ -9241,6 +9340,7 @@
         "LS-AB-1.2.10",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
@@ -9277,6 +9377,7 @@
         "LS-AB-1.2.10",
         "LS-AB-1.2.11",
         "LS-AB-1.2.13",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
@@ -9313,6 +9414,7 @@
         "LS-AB-1.2.10",
         "LS-AB-1.2.11",
         "LS-AB-1.2.12",
+        "LS-AB-1.2.14",
         "LS-AB-1.2.2",
         "LS-AB-1.2.3",
         "LS-AB-1.2.5",
@@ -9323,7 +9425,7 @@
       "language": "hun"
     },
     {
-      "rule_id": "LS-AB-1.2.11",
+      "rule_id": "LS-AB-1.2.14",
       "text": "Ha az eredeti találat érvénytelen (érvénytelen felületre esett, vagy amelyet a pást elhagyásaután adtak, stb.), az ezt követő után-találat nem pontszerző akció, meg kell semmisíteni, és a vívókat vissza kell állítani vívóállásba a felállási vonalra.",
       "section": "",
       "subsection": "A találatok elbírálása",
@@ -9347,6 +9449,7 @@
       "sibling_ids": [
         "LS-AB-1.2.1",
         "LS-AB-1.2.10",
+        "LS-AB-1.2.11",
         "LS-AB-1.2.12",
         "LS-AB-1.2.13",
         "LS-AB-1.2.2",
@@ -9419,19 +9522,18 @@
     },
     {
       "rule_id": "DIS-1.2.2",
-      "text": "A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. [DIS-2.1.1]--[DIS-2.1.3]).\nAki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a negyedik csoportba tartozó\nvétséget követ el, és a [DIS-4.1.14]--[DIS-4.1.15] szakaszban foglaltak szerint büntetendő.",
+      "text": "A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. [DIS-2.4.1] /1-3). Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a negyedik csoportba tartozó vétséget követ el, és a [DIS-4.1.14]--[DIS-4.1.15] szakaszban foglaltak szerint büntetendő.\n<!-- TODO\nHa a jelenlávők közül bárki az MHS Etikai Szabályzatának Szabályzatának megsértését észleli, köteles ezt az MHS ellenőrnek vagy a Szervező Teamnek jelezni. -->",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Rend és Fegyelem fenntartása",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-1.2",
       "line_number": 22,
-      "text_plain": "A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. [DIS-2.1.1]--[DIS-2.1.3]). Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a negyedik csoportba tartozó vétséget követ el, és a [DIS-4.1.14]--[DIS-4.1.15] szakaszban foglaltak szerint büntetendő.",
+      "text_plain": "A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. [DIS-2.4.1] /1-3). Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a negyedik csoportba tartozó vétséget követ el, és a [DIS-4.1.14]--[DIS-4.1.15] szakaszban foglaltak szerint büntetendő.",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
         "DIS-1.3.14",
-        "DIS-2.1.1",
-        "DIS-2.1.3",
+        "DIS-2.4.1",
         "DIS-4.1.14",
         "DIS-4.1.15"
       ],
@@ -9960,7 +10062,8 @@
         "DIS-4.1.5"
       ],
       "references_from": [
-        "DIS-3.1.2"
+        "DIS-3.1.2",
+        "GEN-6.12.3"
       ],
       "parent_id": "DIS-1.3",
       "child_ids": [],
@@ -10219,7 +10322,9 @@
       "weapon_type": "general",
       "variant": "",
       "references_to": [],
-      "references_from": [],
+      "references_from": [
+        "DIS-1.3.6"
+      ],
       "parent_id": "DIS-1.4",
       "child_ids": [],
       "lineage": [
@@ -10229,11 +10334,13 @@
       ],
       "depth": 3,
       "is_leaf": true,
-      "sibling_ids": [],
+      "sibling_ids": [
+        "DIS-1.4.2"
+      ],
       "language": "hun"
     },
     {
-      "rule_id": "DIS-1.4.1",
+      "rule_id": "DIS-1.4.2",
       "text": "A csapatmérkőzések során ki kell jelölni a csapatok részére fenntartott helyet. Csak a csapatkapitánynak és egy edzőnek van joga a csapattagok részére kijelölt zónában tartózkodni, amely helyet egyértelműen kell kijelölni.\n1. A csapatmérkőzés során az éppen nem vívó csapattagoknak a csapatuk számára kijelölt zónán belül kell tartózkodniuk.\n1. A csapatversenyek során a versenybíró engedélye nélkül senki nem léphet be a csapattagok részére kijelölt zónába. Ilyen vétség elkövetése esetén a versenybíró a vétkes csapatot a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban szereplő büntetésekkel sújtja. A csapatra kirótt figyelmeztetés érvényes a teljes csapatmérkőzésen. Ha egy vívó ugyanazon találkozó során az első csoportba tartozó újabb vétséget követ el, a versenybíró minden esetben piros lapot ad neki.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Edzők és kísérő személyzet",
@@ -10250,9 +10357,7 @@
         "DIS-4.1.5",
         "DIS-4.1.9"
       ],
-      "references_from": [
-        "DIS-1.3.6"
-      ],
+      "references_from": [],
       "parent_id": "DIS-1.4",
       "child_ids": [],
       "lineage": [
@@ -10262,7 +10367,9 @@
       ],
       "depth": 3,
       "is_leaf": true,
-      "sibling_ids": [],
+      "sibling_ids": [
+        "DIS-1.4.1"
+      ],
       "language": "hun"
     },
     {
@@ -10310,9 +10417,7 @@
       "weapon_type": "general",
       "variant": "",
       "references_to": [],
-      "references_from": [
-        "DIS-1.2.2"
-      ],
+      "references_from": [],
       "parent_id": "DIS-2.1",
       "child_ids": [],
       "lineage": [
@@ -10406,11 +10511,13 @@
         "GEN-7.2.2"
       ],
       "references_from": [
+        "DIS-1.2.2",
         "DIS-2.2.1",
         "DIS-3.2.1",
         "DIS-3.2.2",
         "DIS-3.3.3",
-        "DIS-5.2.1"
+        "DIS-5.2.1",
+        "GEN-7.8.4"
       ],
       "parent_id": "DIS-2.4",
       "child_ids": [],
@@ -10460,7 +10567,7 @@
       "subsection": "A Organising Team / Szervező Csapat az MHS hivatalos versenyein<!-- (vö.: o.15-22)-->",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-2.5",
-      "line_number": 195,
+      "line_number": 194,
       "text_plain": "1. A Szervező Teamnek, a Versenyíró Bizottság küldötteinek illetve az MHS ellenőrnek hatásköre van minden olyan versenyző felett, aki részt vesz vagy jelen van az általuk irányított vívóversenyen. 1. Szükség esetén saját kezdeményezésre bármilyen vitába beavatkozhat. 1. A verseny folyamán fenn kell tartaniuk a rendet és fegyelmet is, és a szabályzatban előírt büntetéseket alkalmazhatják. 1. A Szervező Team köteles az MHS központi irodájának továbbítja a versenyek folyamán hozott fegyelmi büntetéseket, valamint az esetleges megrovásra, eltiltásra illetve végleges eltiltásra, büntetés kiterjesztésére, valamint végső fellebbezésre vonatkozó kérelmeket. 1. A Szervező Team felel a kiszabott büntetések végrehajtásáért, ha azok ellen fellebbezésnek nincs helye, vagy annak a végrehajtásra nincs halasztó hatálya (Vö. [DIS-2.3.1]).",
       "weapon_type": "general",
       "variant": "",
@@ -10495,7 +10602,7 @@
       "subsection": "A Organising Team / Szervező Csapat az MHS hivatalos versenyein<!-- (vö.: o.15-22)-->",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-2.5",
-      "line_number": 206,
+      "line_number": 205,
       "text_plain": "A SzT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr spontán módon hozott, vagy (elsőfokú hatóságként) saját jogon hozott fegyelmi döntése ellen az MHS Fegyelmi Bizottságához lehet fellebbezni.",
       "weapon_type": "general",
       "variant": "",
@@ -10525,7 +10632,7 @@
       "subsection": "A Organising Team / Szervező Csapat az MHS hivatalos versenyein<!-- (vö.: o.15-22)-->",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-2.5",
-      "line_number": 209,
+      "line_number": 208,
       "text_plain": "A SzT, a Versenyíró Bizottság küldötte, illetve az MHS ellenőr minden döntése azonnal végrehajtható. A verseny során semmilyen fellebbezésnek nincs halasztó hatálya a döntés végrehajtására.",
       "weapon_type": "general",
       "variant": "",
@@ -10555,7 +10662,7 @@
       "subsection": "Az MHS Központi Iroda, Fegyelmi Bizottság, Végrehajtó Bizottság, Sportdöntőbíróság",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-2.6",
-      "line_number": 215,
+      "line_number": 214,
       "text_plain": "- Az MHS Fegyelmi Bizottsága az MHS ítélkező szerve: eldönti az MHS hatáskörét nem meghaladó valamennyi az MHS-nek megküldött fegyelmi ügyet és elbírálja a Szervező Team, a Versenybíró Bizottság hivatalos kiküldötte, vagy az MHS ellenőr (ha nincs kiküldött) határozatai ellen benyújtott valamennyi fellebbezést. - Sürgős esetben az MHS Irodája tehet adminisztratív lépéseket, hogy a Fegyelmi Szabályzattal összhangban, a vétkes versenyzési engedélyét (licencét) felfüggesszék. - A Végrehajtó Bizottság felel a Fegyelmi Bizottság határozatainak tiszteletben tartásáért és végrehajtásáért. Lásd az MHS Fegyelmi Kódexét.",
       "weapon_type": "general",
       "variant": "",
@@ -10582,7 +10689,7 @@
       "subsection": "A büntetések osztályozása",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.1",
-      "line_number": 230,
+      "line_number": 229,
       "text_plain": "A különböző vétségeket különböző fajtájú büntetésekkel kell büntetni (vö.: [DIS-4.1.1]ss.)",
       "weapon_type": "general",
       "variant": "",
@@ -10614,7 +10721,7 @@
       "subsection": "A büntetések osztályozása",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.1",
-      "line_number": 233,
+      "line_number": 232,
       "text_plain": "Víváshoz kötődő büntetések, amelyek a vívás közben elkövetett vétségek esetén alkalmazhatóak: - területvesztés - a ténylegesen elért találat meg nem adása, - a ténylegesen nem kapott találat megítélése, - a versenyszámból való kizárás.",
       "weapon_type": "general",
       "variant": "",
@@ -10642,7 +10749,7 @@
       "subsection": "A büntetések osztályozása",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.1",
-      "line_number": 241,
+      "line_number": 240,
       "text_plain": "Fegyelmi büntetések, amelyek a rend, a fegyelem és a sportszellem ellen elkövetett vétségek esetén alkalmazhatóak: - Ténylegesen nem kapott találat megítélése - kizárás a versenyszámból, - kizárás a versenyből, - kiutasítás a verseny helyszínéről, - határozott idejű eltiltás, - végleges eltiltás.",
       "weapon_type": "general",
       "variant": "",
@@ -10670,7 +10777,7 @@
       "subsection": "A büntetések osztályozása",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.1",
-      "line_number": 255,
+      "line_number": 254,
       "text_plain": "- A felsorolt büntetések mindegyikét —a végleges eltiltást kivéve— alkalmazhatják a versenyen az erre feljogosított hatóságok: a Versenybíró és a szervezőcsapat. - A határozott idejű eltiltás büntetést csak akkor alkalmazhatják a fenti szervek, ha a versenyző megtagadja az üdvözlést. (Vö. [DIS-1.3.11], [DIS-4.1.18]). Lásd az MHS Fegyelmi Kódexét.",
       "weapon_type": "general",
       "variant": "",
@@ -10700,7 +10807,7 @@
       "subsection": "Víváshoz kötődő büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.2",
-      "line_number": 266,
+      "line_number": 265,
       "text_plain": "Meg lehet tagadni az érvényes találati felületre bevitt találat megadását, ha az nem a küzdelmi idő alatt történt; ha a vívó a pástról lelépett; ha a találat bevitele közben erőszak történt, vagy a szabályokban rögzített bármely más ok miatt (Vö. [GEN-6.5.2], [GEN-6.8.1]--[GEN-6.8.2], [GEN-6.14.3], [GEN-7.8.4], [LS-VOR-1.3.4], [LS-COMBAT-1.1.6], [LS-1.1.3], [DIS-1.3.10.2], [DIS-2.4.1] /2, [DIS-4.1.4], [DIS-4.1.18]).",
       "weapon_type": "general",
       "variant": "",
@@ -10741,7 +10848,7 @@
       "subsection": "Víváshoz kötődő büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.2",
-      "line_number": 272,
+      "line_number": 271,
       "text_plain": "A vívót találattal lehet büntetni, annak ellenére, hogy ténylegesen találat rajta nem esett, ha a vívó mindkét lábával átlépte a határvonalat, (Vö. [GEN-6.11.5] ), vagy ha ellenfelét meg nem engedett módon akadályozza a vívásban (ütközéssel párosult lerohanás, fegyvertelen kéz használata, fogásos vagy birkózó akciók használata amikor az nem megengedett stb.) (Vö. [DIS-2.4.1] /2, [DIS-4.1.5.1]--[DIS-4.1.5.2], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.11], [DIS-4.1.12] /1, [DIS-4.1.18]).",
       "weapon_type": "general",
       "variant": "",
@@ -10779,7 +10886,7 @@
       "subsection": "Víváshoz kötődő büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.2",
-      "line_number": 277,
+      "line_number": 276,
       "text_plain": "- A versenyszámból kizárható az a vívó, aki durván erőszakos vagy bosszúálló akciót hajt végre, aki nem a legjobb képességei szerint vív, vagy aki hasznot húz az ellenféllel kötött csalárd megállapodásból. - A versenyszámból kizárt versenyző nem folytathatja a vívást még abban az esetben sem, ha már továbbjutott a következő fordulóba. Elveszti az egyéni versenyben elért helyezését és a kizárt versenyzőnél rosszabb helyezést elérő vívók egy hellyel feljebb kerülnek. Ha szükséges, a két harmadik helyezett helyezését a tábla összeállításánál használt rangszámuk figyelembevételével kell megállapítani. Minden esetben csak a versenyen pontot szerzett vívók kerülhetnek egy hellyel előrébb.",
       "weapon_type": "general",
       "variant": "",
@@ -10810,7 +10917,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 287,
+      "line_number": 286,
       "text_plain": "- A vívót a versenyszámból ki lehet zárni fegyelmi okok miatt is (nem jelenik meg megfelelően a páston; fegyverei nem szabályszerűek; helytelenül viselkedik hivatalos személlyel szemben, stb.). - A [DIS-3.2.3] szakaszban részletezett, kizárásra vonatkozó következményeket megfelelően alkalmazni kell.",
       "weapon_type": "general",
       "variant": "",
@@ -10846,7 +10953,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 293,
+      "line_number": 292,
       "text_plain": "- A versenyző, akit az egész versenyből kizártak, a továbbiakban nem vehet részt ezen a versenyen semmilyen versenyszámban sem ugyanabban, sem más fegyvernemben. - Ha a kizárás egy egész csapatra vonatkozik, külön-külön kell megvizsgálni a csapat minden egyes tagjának az esetét és büntetésük a körülmények alapján különböző lehet (Vö. [DIS-1.3.18]).",
       "weapon_type": "general",
       "variant": "",
@@ -10882,7 +10989,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 297,
+      "line_number": 296,
       "text_plain": "Minden résztvevőt vagy nem vívó kísérőt, aki részt vesz vagy jelen van a versenyen (edzőt, technikust, szurkolót, hivatalos személyt, nézőt stb.) ki lehet utasítani. A kiutasítás azzal jár, hogy a verseny vagy a versenyszám időtartama alatt annak helyszínén a kiutasított személy nem tartózkodhat (Vö. [DIS-1.5.1], [DIS-2.4.1] /3, [[DIS-4.1.18]]). Ez az intézkedés semmilyen körülmények között nem fellebbezhető.",
       "weapon_type": "general",
       "variant": "",
@@ -10920,7 +11027,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 302,
+      "line_number": 301,
       "text_plain": "Egy vívó diszkvalifikálása jóhiszeműsége esetén nem szükségszerűen jár határozott vagy végleges eltiltásával; csalárd szándék esetén ugyanakkor további büntetés kiszabása kérhető ellene.",
       "weapon_type": "general",
       "variant": "",
@@ -10954,7 +11061,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 305,
+      "line_number": 304,
       "text_plain": "Az a csapat, amely olyan versenyzővel állt ki, akit diszkvalifikáltak, maga is a vívó sorsára jut és diszkvalifikálják.",
       "weapon_type": "general",
       "variant": "",
@@ -10988,7 +11095,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 308,
+      "line_number": 307,
       "text_plain": "A kizárásra vonatkozó következményeket megfelelően alkalmazni kell a diszkvalifikálásra is (ld.: [DIS-3.2.3] szakasz)",
       "weapon_type": "general",
       "variant": "",
@@ -11024,7 +11131,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 313,
+      "line_number": 312,
       "text_plain": "Ha súlyosabb büntetés kiszabása nem indokolt, a vívót vagy a hivatalos személyt megrovásban kell részesíteni.",
       "weapon_type": "general",
       "variant": "",
@@ -11058,7 +11165,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 318,
+      "line_number": 317,
       "text_plain": "- Az eltiltott versenyző a határozott idejű eltiltás tartama alatt nem vehet részt az MHS hivatalos versenyein. - Az egyéb (nem versenyző) eltiltott személyek nem gyakorolhatják hivatásukat az eltiltás területi hatálya és időtartama alatt.",
       "weapon_type": "general",
       "variant": "",
@@ -11092,7 +11199,7 @@
       "subsection": "Fegyelmi büntetések",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.3",
-      "line_number": 325,
+      "line_number": 324,
       "text_plain": "A végleges eltiltás következményei megegyeznek a határozott idejű eltiltás következményeivel, de határozatlan ideig tartanak.",
       "weapon_type": "general",
       "variant": "",
@@ -11126,7 +11233,7 @@
       "subsection": "A büntetések kihirdetése",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-3.4",
-      "line_number": 332,
+      "line_number": 331,
       "text_plain": "A Szervező csapat haladéktalanul köteles tájékoztatni az MHS Irodáját a versenyek alatt kiszabott büntetésekről és kiszabásuk okáról (Vö. [DIS-2.5.1] /4).",
       "weapon_type": "general",
       "variant": "",
@@ -11153,7 +11260,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 342,
+      "line_number": 341,
       "text_plain": "Három fajta büntetés alkalmazható a [DIS-4.1.18] szakasz táblázatában szereplő esetekben. Ha a versenybíró olyan vívót büntet, aki egyidejűleg több vétséget követett el, először a kevésbé súlyos hiba büntetését kell kiszabni.",
       "weapon_type": "general",
       "variant": "",
@@ -11174,7 +11281,7 @@
         "DIS-1.3.5",
         "DIS-1.3.6",
         "DIS-1.3.9",
-        "DIS-1.4.1",
+        "DIS-1.4.2",
         "DIS-1.5.1",
         "DIS-2.4.1",
         "DIS-3.1.1",
@@ -11229,18 +11336,16 @@
     },
     {
       "rule_id": "DIS-4.1.2",
-      "text": "A büntetések **halmozódnak és egy mérkőzésre érvényesek**, a **FEKETE LAP** kivételével, amely a versenyszámból való kizárást, felfüggesztést a verseny további részéből (vö.: [DIS-4.1.14] /2).",
+      "text": "A büntetések **halmozódnak és egy mérkőzésre érvényesek**, a **FEKETE LAP** kivételével, amely a versenyszámból való kizárást, felfüggesztést a verseny további részéből.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 345,
-      "text_plain": "A büntetések halmozódnak és egy mérkőzésre érvényesek, a FEKETE LAP kivételével, amely a versenyszámból való kizárást, felfüggesztést a verseny további részéből (vö.: [DIS-4.1.14] /2).",
+      "line_number": 344,
+      "text_plain": "A büntetések halmozódnak és egy mérkőzésre érvényesek, a FEKETE LAP kivételével, amely a versenyszámból való kizárást, felfüggesztést a verseny további részéből.",
       "weapon_type": "general",
       "variant": "",
-      "references_to": [
-        "DIS-4.1.14"
-      ],
+      "references_to": [],
       "references_from": [
         "DIS-4.1.3"
       ],
@@ -11281,7 +11386,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 348,
+      "line_number": 347,
       "text_plain": "Ugyanakkor, ha a csapatot egy versenyen kizárják, mert egyik tagja fekete lapot kapott, a csapat a további versenyekből nincs kizárva. Csak a megbüntetett vívó kerül a [DIS-4.1.2] szakasszal összhangban eltiltásra és az eltiltás hatálya alatt semmilyen csapatnak nem lehet tagja (vö: [ORG-2.3.16]).",
       "weapon_type": "general",
       "variant": "",
@@ -11329,7 +11434,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 351,
+      "line_number": 350,
       "text_plain": "Bizonyos vétségek maguk után vonhatják a vétkes vívó által adott találat megsemmisítését. A küzdelem folyamán csak a vétséggel érintett találatok semmisítendők meg (Vö. [DIS-4.1.18]).",
       "weapon_type": "general",
       "variant": "",
@@ -11376,7 +11481,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 354,
+      "line_number": 353,
       "text_plain": "A büntetések a következők:",
       "weapon_type": "general",
       "variant": "",
@@ -11394,7 +11499,7 @@
         "DIS-1.3.5",
         "DIS-1.3.6",
         "DIS-1.3.9",
-        "DIS-1.4.1",
+        "DIS-1.4.2",
         "DIS-1.5.1",
         "DIS-2.4.1",
         "DIS-5.1.1",
@@ -11458,7 +11563,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 357,
+      "line_number": 356,
       "text_plain": "a figyelmeztetés, melyet a versenybíró SÁRGA LAP felmutatásával fejez ki, megjelölve a vétkes vívót. A vétkes vívó tudomásul veszi, hogy részéről bármilyen újabb vétség elkövetése büntető találatot von maga után.",
       "weapon_type": "general",
       "variant": "",
@@ -11490,7 +11595,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 360,
+      "line_number": 359,
       "text_plain": "a büntető találat, melyet PIROS LAP felmutatásával fejez ki a versenybíró, megjelölve a vétkes vívót. Ebben az esetben az ellenfél adott találataihoz egy találatot hozzá kell adni, ami ha az utolsó találatról van szó maga után vonhatja a mérkőzés elvesztését. Ezen felül minden PIROS LAP felmutatását csak újabb PIROS LAP vagy FEKETE LAP követheti a második vétség természetétől függően (vö: [DIS-4.1.18]).",
       "weapon_type": "general",
       "variant": "",
@@ -11524,7 +11629,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 363,
+      "line_number": 362,
       "text_plain": "a versenyszámból való kizárás, felfüggesztés a verseny további részéből, melyet a FEKETE LAP felmutatásával fejez ki a versenybíró, megjelölve a vétkes vívót.",
       "weapon_type": "general",
       "variant": "",
@@ -11554,7 +11659,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 366,
+      "line_number": 365,
       "text_plain": "a verseny helyszínéről való kitiltás (bármely, a verseny rendjét zavaró személy ellen alkalmazható)",
       "weapon_type": "general",
       "variant": "",
@@ -11584,7 +11689,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 369,
+      "line_number": 368,
       "text_plain": "Minden figyelmeztetést (sárga lap), büntető találatot (piros lap) és kizárást (fekete lap), valamint azt, hogy azok melyik csoportba (Vö. [DIS-4.1.18]) tartoznak, fel kell tüntetni a mérkőzés, a csoportmérkőzés vagy csapatmérkőzés jegyzőkönyvében.",
       "weapon_type": "general",
       "variant": "",
@@ -11629,7 +11734,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 372,
+      "line_number": 371,
       "text_plain": "Minden figyelmeztetést (SÁRGA LAP), büntető találatot (PIROS LAP) és kizárást (FEKETE LAP) fel kell jegyezni a mérkőzés, vagy a körmérkőzés pontozólapjára, a fegyelmi csoporttal együtt, amelyhez tartoznak.",
       "weapon_type": "general",
       "variant": "",
@@ -11672,7 +11777,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 377,
+      "line_number": 376,
       "text_plain": "A versenyszabályzat különböző szakaszaiban található vétségek és büntetések összefoglalását a [DIS-4.1.18] szakasz táblázata tartalmazza. Ezek négy csoportba oszlanak (vö. [DIS-4.1.9] – [DIS-4.1.14]). A büntetések mindegyike a versenybíró hatáskörébe tartozik, ugyanakkor a Szervező Team fenntartja magának a saját kezdeményezésre történő beavatkozás jogát. (Vö. [DIS-2.5.1] /1-3).",
       "weapon_type": "general",
       "variant": "",
@@ -11720,7 +11825,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 382,
+      "line_number": 381,
       "text_plain": "Az első csoportba tartozó vétség első elkövetése SÁRGA LAP felmutatásával (figyelmeztetéssel) jár. Ha a vívó ezután ugyanazon mérkőzés folyamán ebbe a csoportba tartozó ugyanolyan vagy másik vétséget követ el, a versenybíró minden alkalommal PIROS LAPPAL (büntető találattal) bünteti. Ha a vétkes vívó már valamely, a 2. vagy 3. csoportba tartozó vétségért PIROS LAP büntetést kapott, abban az esetben az 1. csoportba tartozó bármely vétség első elkövetése esetén is egyből PIROS LAPPAL büntetendő.",
       "weapon_type": "general",
       "variant": "",
@@ -11731,7 +11836,7 @@
         "DIS-1.3.5",
         "DIS-1.3.6",
         "DIS-1.3.9",
-        "DIS-1.4.1",
+        "DIS-1.4.2",
         "DIS-3.2.2",
         "DIS-4.1.8",
         "DIS-5.2.1",
@@ -11784,7 +11889,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 386,
+      "line_number": 385,
       "text_plain": "Csapatmérkőzéseken belül az első csoportba tartozó vétségek számítása az egyes meccsek kezdetével újraindul (minden egyes fordulóban az első vétségért SÁRGA LAP jár), kivéve a táblázatban megjelölt, egész csapatra vonatkozó figyemeztetések, amelyek után a mérkőzés hátralevő részében bármely, az első csoportba tartozó vétség elkövetése PIROS LAPPAL büntetendő.",
       "weapon_type": "general",
       "variant": "",
@@ -11795,7 +11900,7 @@
         "DIS-1.3.5",
         "DIS-1.3.6",
         "DIS-1.3.9",
-        "DIS-1.4.1",
+        "DIS-1.4.2",
         "DIS-3.2.2",
         "DIS-5.2.1",
         "DIS-5.2.4",
@@ -11847,7 +11952,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 391,
+      "line_number": 390,
       "text_plain": "A második csoportba tartozó összes vétség az első elkövetéstől kezdve PIROS LAPPAL (büntető találattal) büntetendő.",
       "weapon_type": "general",
       "variant": "",
@@ -11897,7 +12002,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 396,
+      "line_number": 395,
       "text_plain": "1. A harmadik csoportba tartozó vétségek első elkövetése PIROS LAPPAL (büntető találattal) büntetendő, akkor is, ha a vétkes vívó korábban már az első illetve a második csoportba tartozó vétség elkövetéséért PIROS LAPOT kapott. 1. Ha a vívó ugyanazon mérkőzés során ismételten a harmadik a csoportba tartozó azonos vagy másik vétséget követ el, büntetése FEKETE LAP (a versenyszámból való kizárás, felfüggesztés a verseny további részéből).",
       "weapon_type": "general",
       "variant": "",
@@ -11945,7 +12050,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 402,
+      "line_number": 401,
       "text_plain": "A páston kívüli személy rendzavarása esetén: 1. első alkalommal SÁRGA LAPOS figyelmeztetés jár, amely a verseny egészére vonatkozik. Ezt a mérkőzés jegyzőkönyvén fel kell tüntetni, és a szervező teamnek rögzítenie kell. 1. A verseny ideje alatt második elkövetéskor FEKETE LAP a büntetés. 1. A páston vagy a páston kívül elkövetett különösen jelentős súlyú rendzavarás esetén a versenybíró a vétkes személyt azonnal kizárhatja vagy kitilthatja.",
       "weapon_type": "general",
       "variant": "",
@@ -11992,7 +12097,7 @@
       "subsection": "Büntetések fajtái (csoportjai)",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 411,
+      "line_number": 410,
       "text_plain": "1. A negyedik csoportba tartozó vétség elkövetése nyomban FEKETE LAPPAL (a versenyszámból való kizárás, felfüggesztés a verseny további részéből ) büntetendő.",
       "weapon_type": "general",
       "variant": "",
@@ -12004,8 +12109,8 @@
         "DIS-1.3.12",
         "DIS-1.3.16",
         "DIS-1.3.2",
-        "DIS-4.1.2",
-        "DIS-4.1.8"
+        "DIS-4.1.8",
+        "GEN-7.8.4"
       ],
       "parent_id": "DIS-4.1",
       "child_ids": [],
@@ -12044,7 +12149,7 @@
       "subsection": "Találat megsemmisítése szabályszegés miatt",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 417,
+      "line_number": 416,
       "text_plain": "Egy találatot meg kell semmisíteni, ha a versenybíró megállapítja, hogy a találatot olyan szabályszegés útján érték el, amely közvetlenül és oksági kapcsolatban állt a találathoz vezető vívóakcióval.",
       "weapon_type": "general",
       "variant": "",
@@ -12055,7 +12160,8 @@
         "DIS-1.3.11",
         "DIS-1.3.12",
         "DIS-1.3.16",
-        "DIS-1.3.2"
+        "DIS-1.3.2",
+        "GEN-7.8.4"
       ],
       "parent_id": "DIS-4.1",
       "child_ids": [],
@@ -12094,7 +12200,7 @@
       "subsection": "Találat megsemmisítése szabályszegés miatt",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 420,
+      "line_number": 419,
       "text_plain": "Egy szabályszegés akkor tekinthető közvetlen és oksági kapcsolatban állónak, ha a versenybíró megítélése szerint a találat azonos módon vagy azonos időpillanatban nem jöhetett volna létre a szabályszegés elkövetése nélkül.",
       "weapon_type": "general",
       "variant": "",
@@ -12137,7 +12243,7 @@
       "subsection": "Találat megsemmisítése szabályszegés miatt",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 423,
+      "line_number": 422,
       "text_plain": "Egy találat nem semmisíthető meg pusztán amiatt, hogy szabályszegés történt, ha: 1. a szabályszegés nem vett közvetlenül részt a pontszerző akció végrehajtásában (a szabálytalanság elkövetése és a találat közt a vívószerepek újraértékelődtek); 1. a szabályszegés nem állt összefüggésben azokkal a taktikai vagy fizikai feltételekkel, amelyek a találat létrejöttét lehetővé tették.",
       "weapon_type": "general",
       "variant": "",
@@ -12180,7 +12286,7 @@
       "subsection": "Vétségek és büntetések táblázata.",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-4.1",
-      "line_number": 429,
+      "line_number": 428,
       "text_plain": "A táblázat célja a megfelelő összefoglalás: nem helyettesíti a vonatkozó rendelkezések szövegét, amelyek kétség esetén irányadók. A táblázatot lásd: OFFENCE ART. PENALTY Non-presentation 0.1 Non presentation when called by the referee ten minutes before the time indicated for start of pool/bouts of direct elimination Elimination from the tournament 0.2 Non presentation on the arena ready to fence when ordered by the referee. Three calls, with one minute intervals. 1st call 2nd call Elim. 1ST GROUP 1st offence 2nd offence 3rd offence and subs. 1.1 Leaving the arena without permission YELLOW RED RED 1.2 Turning back on opponent 1.3 Covering/substitution of valid target 1.4 Interruption of the bout without valid reason 1.5 Attacking forbidden targets (back of the head, spine, foot, back of the knee). Hit with crossguard. Attack with the dagger in rapier. Wrestling in rapier. 1.6 Clothing/equipment nonconforming. Absence of regulation weapon 1.7 Hitting the arena floor with an uncontrolled action 1.8 Refusal to obey the referee (including actions before “Fence!” or after “Halt!”) 1.9 Disorderly fencing ; taking off mask before the Referee calls 'Halt!'; dressing or undressing in the arena 1.10 Irregular moves in the arena ; throwing the opponent by lifting their both of their feet off the ground 1.11 Initiating wrestling/grappling actions when the opponent did not agree to wrestle in the match 1.12 Unjustified appeal 1.13 Hitting with the fists (or any other bodyparts O.o ) and kicking 1.14 Removing the opponent‘s mask or any other protective equipment. 1.15 Losing or dropping the cloak during a rapier bout 1.15 Entering the Arena enclosure without the Referee’s permission + 2ND GROUP 1st offence 2nd offence 3rd offence and subs. 2.1 Throwing the weapon RED RED RED 2.2 Demanding a break for claimed injury/cramp unjustified by the doctor 2.3 Absence of equipment control marks 2.4 Dangerous, violent or vindictive action. Attack with the dagger in rapier bouts. 3RD GROUP 1st offence 2nd offence 3.1 Fencer disturbing order when in the arena. In the most serious cases the Referee may award a black card immediately. RED4 (even if the fencer at fault has already received a Red Card as a result of offenses in the 1st or 2nd groups) BLACK1 (only after the fencer has committed another offence in this third group.) 3.2 Dishonest fencing RED 3.3 Any person not in arena disturbing order. In the most serious cases the Referee may award a black card immediately. YELLOW4 (valid for the whole of the competition) BLACK3 Offence against sportsmanship - In the most serious cases the Referee may award a black card immediately. YELLOW BLACK 1 or 2 4TH GROUP 1st offence 4.1 Deliberate brutality. Throwing the opponent onto their head . Neck-wrenching and small-joint manipulation techniques. Failing to stop dangerous submission holds before full application (both competitors may be penalised, the victim as well if he/she did not submit). Throwing the dagger at the opponent in rapier bouts BLACK 4.2 Causing injury or threat of injury with equipment non-conforming to the Rules without or with imitated / transferred weapon control marks. 4.3 Offence against sportsmanship 4.4 Refusal of a fencer to fence another competitor properly entered 4.5 Profiting from collusion, favouring an opponent EXPLANATIONS Annulling of any hit scored by the competitor at fault + Special YELLOW CARD for the whole team and valid for the whole team match. If, during the same team match, a fencer commits an offence of the 1st group the Referee penalises with a RED CARD each time. YELLOW CARD Warning valid for the bout. If a competitor commits an offence of the 1st group after having been penalized with a RED CARD, for whatever reason, he/she receives a further RED CARD. RED CARD Penalty hit BLACK CARD Exclusion from the competition, suspension from the remainder of the tournament. Possible suspension from future events organised by the Federation or the Organiser. A competitor only receives a BLACK CARD in the 3rd group if the offender previously committed an offence in this Third Group (demonstrated by a RED CARD). 1. Exclusion from competition 2. Exclusion from tournament 3. Expulsion from venue 4. In serious cases, the referee may exclude/expel immediately",
       "weapon_type": "general",
       "variant": "",
@@ -12199,7 +12305,7 @@
         "DIS-1.3.5",
         "DIS-1.3.6",
         "DIS-1.3.9",
-        "DIS-1.4.1",
+        "DIS-1.4.2",
         "DIS-1.5.1",
         "DIS-2.4.1",
         "DIS-3.1.2",
@@ -12212,6 +12318,7 @@
         "DIS-4.1.6",
         "DIS-4.1.8",
         "DIS-5.2.1",
+        "DIS-5.2.4",
         "GEN-6.14.2",
         "GEN-6.15.3",
         "GEN-6.16.4",
@@ -12225,7 +12332,9 @@
         "GEN-6.9.2",
         "GEN-7.6.4",
         "GEN-7.8.2",
-        "GEN-7.8.4"
+        "GEN-7.8.4",
+        "LS-1.1.3",
+        "ORG-2.3.17"
       ],
       "parent_id": "DIS-4.1",
       "child_ids": [],
@@ -12264,7 +12373,7 @@
       "subsection": "Alapelvek",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-5.1",
-      "line_number": 914,
+      "line_number": 913,
       "text_plain": "Az egyes büntetések kiszabása az arra illetékes hatóságok feladata, akik minden esetben az elkövetés körülményeinek megfelelő figyelembevételével, a vétség súlyával arányos, méltányos döntést hoznak. (Vö. [DIS-2.2.1] ss, [DIS-4.1.1]--[DIS-4.1.5], [DIS-5.2.6]-[DIS-5.3.1]).",
       "weapon_type": "general",
       "variant": "",
@@ -12295,7 +12404,7 @@
       "subsection": "Óvás és fellebbezés",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-5.2",
-      "line_number": 922,
+      "line_number": 921,
       "text_plain": "1. A versenybíró ténykérdésben hozott döntése ellen nincs helye fellebbezésnek, kivéve a [GEN-7.6.8]--[GEN-7.6.13] szerinti megengedett esetekben videóbíráskodás esetén. (vö. [DIS-2.3.1] /1-2, [DIS-2.4.1] /2) 1. Ha a vívó ezt az alapelvet megsérti, és a mérkőzés során kétségbe vonja a versenybíró ténykérdésben hozott döntését, a szabályzat szerint, az első csoportba tartozó vétségként büntetendő (Vö. [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18]). Ha azonban a versenybíró a konkrét szabályozás rendelkezését figyelmen kívül hagyja, félreértelmezi vagy azt nem a szabályzattal összhangban alkalmazza, az ügyben fellebbezés terjeszthető elő. Ténymegállapítás különösen, de nem kizárólagosan a versenybíró megállapítása a páston történtekről, úgy mint a találat érvényességének vagy elsőbbségének kérdése, hogy a vívó elhagyta-e a pástot vagy hogy valakinek a viselkedése harmadik vagy negyedik csoportba tartozó vétség-e.",
       "weapon_type": "general",
       "variant": "",
@@ -12340,7 +12449,7 @@
       "subsection": "Óvás és fellebbezés",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-5.2",
-      "line_number": 927,
+      "line_number": 926,
       "text_plain": "Ilyen (vö.: [DIS-5.2.1]) fellebbezés előterjesztésére - egyéni versenyszámban a versenyző, - csapat versenyszámban a versenyző vagy a csapatkapitány jogosult. A fellebbezés nincs alakszerűséghez kötve, az azonnali és udvarias formában, szóban terjeszthető a versenybíró elé a soron következő találatra vonatkozó döntés meghozatalát megelőzően.",
       "weapon_type": "general",
       "variant": "",
@@ -12368,22 +12477,22 @@
     },
     {
       "rule_id": "DIS-5.2.4",
-      "text": "Amennyiben a versenybíró **fenntartja** álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHS ellenőr jogosult a fellebbezés elbírálására (vö. [DIS-2.5.3]). Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.3.20] szakaszokkal összhangban büntetendő.",
+      "text": "Amennyiben a versenybíró **fenntartja** álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHS ellenőr jogosult a fellebbezés elbírálására (vö. [DIS-2.5.3]). Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokkal összhangban büntetendő.",
       "section": "A versenyek fegyelmi szabályzata",
       "subsection": "Óvás és fellebbezés",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-5.2",
-      "line_number": 935,
-      "text_plain": "Amennyiben a versenybíró fenntartja álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHS ellenőr jogosult a fellebbezés elbírálására (vö. [DIS-2.5.3]). Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.3.20] szakaszokkal összhangban büntetendő.",
+      "line_number": 934,
+      "text_plain": "Amennyiben a versenybíró fenntartja álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHS ellenőr jogosult a fellebbezés elbírálására (vö. [DIS-2.5.3]). Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokkal összhangban büntetendő.",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
         "DIS-2.5.3",
         "DIS-4.1.1",
         "DIS-4.1.10",
+        "DIS-4.1.18",
         "DIS-4.1.5",
-        "DIS-4.1.9",
-        "DIS-4.3.20"
+        "DIS-4.1.9"
       ],
       "references_from": [],
       "parent_id": "DIS-5.2",
@@ -12411,7 +12520,7 @@
       "subsection": "Óvás és fellebbezés",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-5.2",
-      "line_number": 940,
+      "line_number": 939,
       "text_plain": "Azok a panaszok és óvások, amelyek nem a versenybíró döntésével kapcsolatosak, haladéktalanul írásban, a szervező teamnek címezve terjeszthetők elő.",
       "weapon_type": "general",
       "variant": "",
@@ -12442,7 +12551,7 @@
       "subsection": "Óvás és fellebbezés",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-5.2",
-      "line_number": 943,
+      "line_number": 942,
       "text_plain": "Ha a panasz vagy óvás a szervező team vagy a hivatalos MHS küldött döntését vonja kétségbe, azt az MHS Irodájának kell címezni a [DIS-2.5.2] szakasszal összhangban.",
       "weapon_type": "general",
       "variant": "",
@@ -12478,7 +12587,7 @@
       "subsection": "Óvás és fellebbezés",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-5.2",
-      "line_number": 948,
+      "line_number": 947,
       "text_plain": "A döntéshozó hatóság döntéseit testületként, egyszerű szótöbbséggel hozza. Szavazategyenlőség esetén az elnök szavazata dönt.",
       "weapon_type": "general",
       "variant": "",
@@ -12509,7 +12618,7 @@
       "subsection": "Ismétlődő vétség",
       "document": "03-etikett_fegyelem.md",
       "anchor_id": "DIS-5.3",
-      "line_number": 954,
+      "line_number": 953,
       "text_plain": "1. A sportszellem, a rend vagy a fegyelem ellen elkövetett vétségek esetében ismétlődés áll elő, ha a vívót előzőleg megrovással, kizárással, diszkvalifikálással, eltiltással sújtották és a vívó két éven belül újabb vétséget követ el, amely nem küzdelmi vétség. 1. Ismétlődő vétkesség esetében a kiszabni rendelt büntetés a következő: - Versenyszámból való kizárás, ha a korábbi büntetés megrovás volt. - Diszkvalifikálás a teljes versenyből, ha a korábbi büntetés versenyszámból való diszkvalifikálás vagy kizárás volt.",
       "weapon_type": "general",
       "variant": "",
@@ -12551,11 +12660,13 @@
       ],
       "depth": 3,
       "is_leaf": true,
-      "sibling_ids": [],
+      "sibling_ids": [
+        "ORG-1.1.2"
+      ],
       "language": "hun"
     },
     {
-      "rule_id": "ORG-1.1.1",
+      "rule_id": "ORG-1.1.2",
       "text": "Tilos a versenyen való részvétel alkohol, illetve teljesítményfokozó drogok befolyása alatt (beleértve a rekreációs és orvos által felírt készítményeket is).",
       "section": "A verseny szervezése",
       "subsection": "Feltételek",
@@ -12576,7 +12687,9 @@
       ],
       "depth": 3,
       "is_leaf": true,
-      "sibling_ids": [],
+      "sibling_ids": [
+        "ORG-1.1.1"
+      ],
       "language": "hun"
     },
     {
@@ -14010,17 +14123,17 @@
     },
     {
       "rule_id": "ORG-2.3.17",
-      "text": "Ha egy csapat bármilyen okból nem fejezi be azt az eseményt, amelyen részt vesz, a Szervezőcsapat azokra a versenyzőkre vonatkozó szabályokat alkalmazza, akik nem teljesítenek egy eseményt egyéni versenyen, minden csapatot teljes egészében úgy kezelve, mintha egyetlen versenyző lenne. Vö. [DIS-4.3.20]",
+      "text": "Ha bármilyen okból egy csapat nem fejezi be megkezdett versenyét, a DT köteles az egyéni versenyek szabályait alkalmazni, azaz minden csapatot úgy tekinteni, mint egy egyéni versenyzőt. Vö. [DIS-4.1.18]",
       "section": "A verseny szervezése",
       "subsection": "Csapatversenyek",
       "document": "04-szervezes.md",
       "anchor_id": "ORG-2.3",
       "line_number": 166,
-      "text_plain": "Ha egy csapat bármilyen okból nem fejezi be azt az eseményt, amelyen részt vesz, a Szervezőcsapat azokra a versenyzőkre vonatkozó szabályokat alkalmazza, akik nem teljesítenek egy eseményt egyéni versenyen, minden csapatot teljes egészében úgy kezelve, mintha egyetlen versenyző lenne. Vö. [DIS-4.3.20]",
+      "text_plain": "Ha bármilyen okból egy csapat nem fejezi be megkezdett versenyét, a DT köteles az egyéni versenyek szabályait alkalmazni, azaz minden csapatot úgy tekinteni, mint egy egyéni versenyzőt. Vö. [DIS-4.1.18]",
       "weapon_type": "general",
       "variant": "",
       "references_to": [
-        "DIS-4.3.20"
+        "DIS-4.1.18"
       ],
       "references_from": [],
       "parent_id": "ORG-2.3",
@@ -14315,15 +14428,15 @@
       "language": "hun"
     }
   ],
-  "total_rules": 419,
+  "total_rules": 420,
   "documents": [
-    "03-etikett_fegyelem.md",
-    "02.a-hosszukard-VOR.md",
-    "02-hosszukard.md",
-    "01-altalanos.md",
     "02.c-hosszukard-AFTERBLOW.md",
     "04-szervezes.md",
-    "02.b-hosszukard-COMBAT.md"
+    "02.b-hosszukard-COMBAT.md",
+    "02-hosszukard.md",
+    "02.a-hosszukard-VOR.md",
+    "01-altalanos.md",
+    "03-etikett_fegyelem.md"
   ],
   "language": "hun"
 }

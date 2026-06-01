@@ -12,7 +12,7 @@ with open(current_dir / "aliases.json", encoding="utf-8") as f:
     aliases = json.load(f)
 
 # Load current index
-with open(current_dir / "rules_index.json", encoding="utf-8") as f:
+with open(current_dir / "rules_index_hun.json", encoding="utf-8") as f:
     data = json.load(f)
 
 # Add aliases to each rule
@@ -27,7 +27,7 @@ for rule in data["rules"]:
     # Add variant aliases
     variant_aliases = aliases.get("variants", {}).get(variant, []) if variant else []
     rule["variant_aliases"] = variant_aliases  # Save updated index
-with open(current_dir / "rules_index.json", "w", encoding="utf-8") as f:
+with open(current_dir / "rules_index_hun.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=2)
 
 print(f"Updated {len(data['rules'])} rules with aliases")

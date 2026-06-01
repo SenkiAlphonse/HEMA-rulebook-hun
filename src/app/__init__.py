@@ -36,7 +36,7 @@ def create_app() -> Flask:
         app.search_engines = {}
         for lang in ("hun", "eng"):
             app.search_engines[lang] = AliasAwareSearch(
-                str(get_rules_index_path(lang=lang, legacy_fallback=(lang == "hun"))),
+                str(get_rules_index_path(lang=lang)),
                 str(get_aliases_path(lang=lang)),
             )
 

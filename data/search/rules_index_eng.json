@@ -13764,12 +13764,12 @@
   ],
   "total_rules": 414,
   "documents": [
-    "03-etiquette_discipline.en.md",
     "01-general.en.md",
-    "02-longsword.en.md",
     "02.c-longsword-AFTERBLOW.en.md",
     "02.a-longsword-VOR.en.md",
-    "04-organisation.en.md"
+    "02-longsword.en.md",
+    "04-organisation.en.md",
+    "03-etiquette_discipline.en.md"
   ],
   "language": "eng"
 }
