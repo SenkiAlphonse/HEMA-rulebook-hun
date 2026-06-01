@@ -369,7 +369,7 @@ Ha egy lábbal a hátsó határvonalon belül állt, akkor újrafelállításkor
 A vívók a versenybíró "állás!" vezényszavára vívóállásba felállnak. Ezután a versenybíró megkérdezi: "készen?"; igenlő válasz esetén vagy nemleges válasz hiányában megadja a jelet a küzdelem megkezdésére: "rajta!" vezényszóval.  
 
 **GEN-6.2.10**  
-A versenybíró "rajta!" vezényszaváig a vívók kötelesek megfelelő vívóállásban állni és teljes mozdulatlanságban maradni. Az a vívó, aki nem marad mozdulatlan, vagy bármilyen akciót kezdeményez "Rajta" vezényszó előtt, az első csoportba tartozó vétséget követ el, el és vele szemben a versenybíró a a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
+A versenybíró "rajta!" vezényszaváig a vívók kötelesek megfelelő vívóállásban állni és teljes mozdulatlanságban maradni. Az a vívó, aki nem marad mozdulatlan, vagy bármilyen akciót kezdeményez "Rajta" vezényszó előtt, az első csoportba tartozó vétséget követ el, el és vele szemben a versenybíró a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban írt szakaszokban előírt büntetést alkalmazza.  
 
 **GEN-6.2.11**  
 Vor szabály alkalmazásakor a felállás nem történhet vonal helyzetben.  

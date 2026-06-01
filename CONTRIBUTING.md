@@ -65,7 +65,8 @@ HEMA-rulebook-hun/
 │   │   ├── demo_search.py       # Interactive search demo
 │   │   └── __init__.py
 │   ├── data/                     # Index and configuration files
-│   │   ├── rules_index.json
+│   │   ├── rules_index_hun.json
+│   │   ├── rules_index_eng.json
 │   │   └── aliases.json
 │   └── __init__.py
 │

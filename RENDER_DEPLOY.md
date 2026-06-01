@@ -92,8 +92,8 @@ To update rules and re-deploy:
 - Check logs for Python errors
 
 ### Search not working
-- Verify `rules_index.json` exists in `qa-tools/`
-- Check `aliases.json` is present
+- Verify `data/search/rules_index_hun.json` and `data/search/rules_index_eng.json` exist
+- Check `data/search/aliases.json` is present
 - Run `python setup_check.py` locally to test
 
 ## Render Free Tier Limits

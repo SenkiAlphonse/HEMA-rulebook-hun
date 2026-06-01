@@ -38,7 +38,6 @@ A Flask web application for searching the Hungarian Historical European Martial 
   - `dist/rulebook_eng.html`
   - `data/search/rules_index_hun.json`
   - `data/search/rules_index_eng.json`
-  - `data/search/rules_index.json`
 - Use **Manual Deploy → Deploy latest commit** (or push a commit) for content updates. A simple **Restart Service** does not deploy new code and should not be used as a rebuild trigger.
 
 ## Local Development
@@ -73,11 +72,13 @@ HEMA-rulebook-hun/
 ├── wsgi.py                # Flask application entrypoint
 ├── templates/
 │   └── index.html        # Web interface
-├── qa-tools/
-│   ├── parser.py         # Rule parser
-│   ├── search_aliases.py # Smart search engine
-│   ├── rules_index.json  # 359+ indexed rules
-│   └── aliases.json      # Search aliases
+├── src/qa_tools/
+│   ├── tools/parser.py        # Rule parser
+│   └── search_engine/         # Smart search engine
+├── data/search/
+│   ├── rules_index_hun.json   # Hungarian indexed rules
+│   ├── rules_index_eng.json   # English indexed rules
+│   └── aliases.json           # Search aliases
 ├── requirements.txt      # Python dependencies
 ├── render.yaml          # Render.com config
 ├── Procfile             # Optional generic process file
@@ -178,8 +179,8 @@ python add_aliases.py
 - View Render logs for details
 
 ### Search Not Working
-- Verify `rules_index.json` exists and is valid JSON
-- Check `aliases.json` is in `qa-tools/`
+- Verify `data/search/rules_index_hun.json` and `data/search/rules_index_eng.json` exist and are valid JSON
+- Check `data/search/aliases.json` is present
 - Restart the app: `python wsgi.py`
 
 ### Slow Search
