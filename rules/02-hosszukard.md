@@ -14,7 +14,7 @@ A hosszúkard szúró- és vágófegyver.
 A penge lapjával, hosszú és rövid élével, illetve hegyével végrehajtott minden vágás illetve a szúrás megfelelő, amennyiben úgy hajtják végre, hogy az, éles fegyvert feltételezve, egy védőruházat nélküli ellenfélnek sérülést okozna. A lappal végrehajtott találat érvényesnek tekinthető, ha koordinált és hatásos akció eredménye.  
 
 **LS-1.1.3**  
-Tilos a kard keresztvasával találatot bevinni. A kard kosarával végrehajtott minden találatot meg kell semmisíteni és az ilyen találatot adó vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.19] szakaszok szerint kell büntetni.
+Tilos a kard keresztvasával találatot bevinni. A kard kosarával végrehajtott minden találatot meg kell semmisíteni és az ilyen találatot adó vívót a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszok szerint kell büntetni.
 
 **LS-1.1.4**  
 A pengén keresztül történő vágások, amelyek egyidejűleg találják a test érvényes találati felületét és az ellenfél fegyverét, érvényesek olyankor amikor tisztán az érvényes találati felületre érkeznek.  
@@ -52,13 +52,13 @@ Ha a vívómenet során valamelyik vívó az érvényes találati felületét fe
 Ha a vívómenet során egy megfelelően beadott találat fedés vagy helyettesítés miatt érvénytelenként talál, a vétkes vívót az első csoportba tartozó vétségekre vonatkozó büntetéssel kell sújtani és a találatot meg kell adni.  
  <!-- (vö.: t 158, t.165, t.170) -->  
 
-**LS-1.2.3**  
+**LS-1.2.4**  
 Ha egy találat az érvényes találati felületen kívülre érkezik, nem számít találatnak; nem állítja meg a vívómenetet és nem semmisíti meg a későbbi találatokat. Ugyanakkor a találat amelyet vívóhibát követően<!-- illetve a pást határának két lábbal történő átlépését követően--> adtak be, nem számít érvényes találatnak, azonban megállítja a vívómenetet és megsemmisít minden azt követő találatot.  
 
-**LS-1.2.4**  
+**LS-1.2.5**  
 Érvénytelen találati felületre érkező vágások és szúrások erősségének megítélése és a szükséges büntetések kiszabása a versenybíró feladata.  
 
-**LS-1.2.5**  
+**LS-1.2.6**  
 A mérkőzést vezető bírónak büntetni kell azt a vívót, aki érvényes találati felületet érvénytelen találati felülettel helyettesít, akár fedéssel, akár pedig rendellenes mozgással, fegyelmi vétségek első csoportjának megfelelően.  
 
 ### A találatok megállapítása vagy érvénytelenítése  

@@ -20,10 +20,10 @@
 - Kifejezetten alávetik magukat a rend, a fegyelem és a sportszerűség elveinek alapulvételével az alábbi előírásoknak. Ezek megsértése esetén, a tényállástól és a körülményektől függően az illetékes fegyelmi hatóság figyelmeztetést követően, vagy akár anélkül is az előírt büntetéseket (vö: [DIS-4.1.1]-tól [DIS-4.1.18]-ig) alkalmazza.  
 
 **DIS-1.2.2**  
-A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát<!--TODO , ide értve de nem kizárólagosan a FIE Etikai Kódexet és a Safeguarding Szabályzatot is-->. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. [DIS-2.1.1]--[DIS-2.1.3]).  
+A vívóversenyen résztvevő vagy jelenlévő valamennyi személy köteles tiszteletben tartani az MHS Alapszabályát<!--TODO , ide értve de nem kizárólagosan a FIE Etikai Kódexet és a Safeguarding Szabályzatot is-->. Mindenki köteles a rendet tiszteletben tartani és senki nem zavarhatja meg a verseny gördülékeny lebonyolítását. A mérkőzések alatt senki sem jogosult a pást közelébe menni, a vívóknak tanácsot adni, a versenybírót vagy az oldalbírókat kritizálni vagy sértegetni vagy befolyásolásukra bármilyen módon kísérletet tenni. Még a csapatkapitánynak is az erre kijelölt helyen kell maradnia és ő is csak a [DIS-1.3.14] szakaszban leírt esetekben és módon avatkozhat be. A versenybíró köteles azonnal leállítani minden olyan cselekményt, amely az általa vezetett mérkőzés gördülékeny lefolytatását zavarja (Vö. [DIS-2.4.1] /1-3). Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a negyedik csoportba tartozó vétséget követ el, és a [DIS-4.1.14]--[DIS-4.1.15] szakaszban foglaltak szerint büntetendő.  
+<!-- TODO
+Ha a jelenlávők közül bárki az MHS Etikai Szabályzatának Szabályzatának megsértését észleli, köteles ezt az MHS ellenőrnek vagy a Szervező Teamnek jelezni. -->
 
-Aki hivatalos személyt bármilyen okból megfenyeget vagy sérteget a negyedik csoportba tartozó  
-vétséget követ el, és a [DIS-4.1.14]--[DIS-4.1.15] szakaszban foglaltak szerint büntetendő.  
 
 **DIS-1.2.3**  
 A verseny helyszínéül szolgáló termekben tilos dohányozni. A dohányzás a verseny rendje megzavarásának tekintendő (Vö. [DIS-1.2.4]).  
@@ -131,7 +131,7 @@ Azok a csapattagok, akik pontosan betartották a csapatkapitány rendelkezéseit
 - A versenybíró szükség esetén feljogosíthat egy személyt arra, hogy pillanatnyi segítséget nyújtson egy vívónak.  
 <!-- - Minden nemzet, melynek vívója részt vesz a folyamatban levő fordulóban, kijelölhet két személyt, akiknek joga van a pástok területének közelében (de azon kívül) elhelyezkedni, közel egy bejárathoz. A rendezőknek biztosítaniuk kell a szükséges helyet ezen személyek számára.   -->  
 
-**DIS-1.4.1**  
+**DIS-1.4.2**  
 A csapatmérkőzések során ki kell jelölni a csapatok részére fenntartott helyet. Csak a csapatkapitánynak és egy edzőnek van joga a csapattagok részére kijelölt zónában tartózkodni, amely helyet egyértelműen kell kijelölni.  
 1. A csapatmérkőzés során az éppen nem vívó csapattagoknak a csapatuk számára kijelölt zónán belül kell tartózkodniuk.  
 1. A csapatversenyek során a versenybíró engedélye nélkül senki nem léphet be a csapattagok részére kijelölt zónába. Ilyen vétség elkövetése esetén a versenybíró a vétkes csapatot a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokban szereplő büntetésekkel sújtja. A csapatra kirótt figyelmeztetés érvényes a teljes csapatmérkőzésen. Ha egy vívó ugyanazon találkozó során az első csoportba tartozó újabb vétséget követ el, a versenybíró minden esetben piros lapot ad neki.  
@@ -187,7 +187,6 @@ A következők bírnak fegyelmi hatáskörrel:
 
 **DIS-2.4.2**  
 A versenybíró döntéseivel kapcsolatos fellebbviteli szerv a Versenybírói Bizottság küldötte, vagy az MHS ellenőr (ha nincs küldött).  
-
 
 ### A Organising Team / Szervező Csapat az MHS hivatalos versenyein<!-- (vö.: o.15-22)-->  
 <span id="DIS-2.5"></span>  
@@ -343,7 +342,7 @@ A Szervező csapat haladéktalanul köteles tájékoztatni az MHS Irodáját a v
 **Három fajta büntetés** alkalmazható a [DIS-4.1.18] szakasz táblázatában szereplő esetekben. Ha a versenybíró olyan vívót büntet, aki egyidejűleg több vétséget követett el, először a kevésbé súlyos hiba büntetését kell kiszabni.  
 
 **DIS-4.1.2**  
-A büntetések **halmozódnak és egy mérkőzésre érvényesek**, a **FEKETE LAP** kivételével, amely a versenyszámból való kizárást, felfüggesztést a verseny további részéből<!--, és további 60 napos eltiltás az aktív vívóévadból (szeptember 1-től a Világbajnokságig tart junioroknál, és szeptember 1-től a Világbajnokságig tart felnőtteknél) amely érintheti a folyamatban lévő, a következő vagy mindkét évadot--> (vö.: [DIS-4.1.14] /2).  
+A büntetések **halmozódnak és egy mérkőzésre érvényesek**, a **FEKETE LAP** kivételével, amely a versenyszámból való kizárást, felfüggesztést a verseny további részéből<!--, és további 60 napos eltiltás az aktív vívóévadból (szeptember 1-től a Világbajnokságig tart junioroknál, és szeptember 1-től a Világbajnokságig tart felnőtteknél) amely érintheti a folyamatban lévő, a következő vagy mindkét évadot (vö.: [DIS-4.1.14] /2)-->.  
 
 **DIS-4.1.3**  
 Ugyanakkor, ha a csapatot egy versenyen kizárják, mert egyik tagja fekete lapot kapott, a csapat a további versenyekből nincs kizárva. Csak a megbüntetett vívó kerül a [DIS-4.1.2] szakasszal összhangban eltiltásra és az eltiltás hatálya alatt semmilyen csapatnak nem lehet tagja (vö: [ORG-2.3.16]).  
@@ -409,7 +408,7 @@ A **páston kívüli** személy rendzavarása esetén:
 #### A negyedik csoportba tartozó vétségek  
 
 **DIS-4.1.14**  
-1. A negyedik csoportba tartozó vétség elkövetése nyomban FEKETE LAPPAL (a versenyszámból való kizárás, felfüggesztés a verseny további részéből <!--és 60 napos eltiltás az aktív évadból-->) büntetendő.  
+1. A negyedik csoportba tartozó vétség elkövetése nyomban FEKETE LAPPAL (a versenyszámból való kizárás, felfüggesztés a verseny további részéből <!--TODO és 60 napos eltiltás az aktív évadból-->) büntetendő.  
   
 <!-- TODO 1. Továbbá az MHS versenyein illetve a MHS fegyelmi kódexének magát alávető konföderáció által szervezett minden kiosztott fekete lapot 10 napon belül jelenteni kell az MHS elnökének, aki kiértékeli hogy a vétség súlyossága indokolja-e az MHS ellenőr vagy a Szervező Team jelentésének továbbküldését a Jogi Bizottság elnöke felé azzal a kéréssel, hogy az Fegyelmi Bíróságot állítson fel annak megállapítására, hogy a versenyen kiszabott büntetés mellett további kell-e további büntetést kiszabni.  -->
 ### Találat megsemmisítése szabályszegés miatt  
@@ -933,7 +932,7 @@ Ilyen (vö.: [DIS-5.2.1]) fellebbezés előterjesztésére
 A fellebbezés nincs alakszerűséghez kötve, az **azonnali** és udvarias formában, **szóban** terjeszthető a versenybíró elé a soron következő találatra vonatkozó döntés meghozatalát megelőzően.  
 
 **DIS-5.2.4**  
-Amennyiben a versenybíró **fenntartja** álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHS ellenőr jogosult a fellebbezés elbírálására (vö. [DIS-2.5.3]). Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.3.20] szakaszokkal összhangban büntetendő.  
+Amennyiben a versenybíró **fenntartja** álláspontját, a Versenybírói Bizottság hivatalos küldötte vagy (küldött hiányában) az MHS ellenőr jogosult a fellebbezés elbírálására (vö. [DIS-2.5.3]). Ha a fellebbezésről megállapítható, hogy az megalapozatlan, a vívó a [DIS-4.1.1]--[DIS-4.1.5], [DIS-4.1.9]--[DIS-4.1.10], [DIS-4.1.18] szakaszokkal összhangban büntetendő.  
 
 #### Egyéb óvás és fellebbezés  
 
