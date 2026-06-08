@@ -14,15 +14,18 @@ The longsword is a thrusting and cutting weapon.
 Any cut delivered with the flat, the long or the short edge of the blade, as well as any thrust, is acceptable provided it is executed in such a way that—assuming a sharp weapon—it would cause injury to an unarmoured opponent. A hit with the flat may be considered valid if it is the result of a coordinated and effective action.  
 
 **LS-1.1.3**  
-Cuts delivered “through the blade” which simultaneously contact the opponent’s valid target area and the opponent’s weapon are valid when they land cleanly on the valid target area.  
-
-**LS-1.1.3**  
-Pommel hits are valid if they strike the uncovered part of the mask grille in a clearly demonstrative way (including with the pommel covered by the glove) and are executed safely. Pommel actions delivered with unnecessary force must be penalised under the second group of offences.  
+It is forbidden to score a hit with the crossguard of the sword. Any hit delivered with the basket/guard must be annulled and the fencer responsible must be penalised in accordance with [DIS-4.1.1][DIS-4.1.5], [DIS-4.1.9][DIS-4.1.10], [DIS-4.1.18].
 
 **LS-1.1.4**  
-In all three weapon categories, defensive actions may only be executed with the weapon, except where the fighters have explicitly allowed gripping and wrestling actions (see: close-quarter and wrestling rules).  
+Cuts delivered “through the blade” which simultaneously contact the opponent’s valid target area and the opponent’s weapon are valid when they land cleanly on the valid target area.  
 
 **LS-1.1.5**  
+Pommel hits are valid if they strike the uncovered part of the mask grille in a clearly demonstrative way (including with the pommel covered by the glove) and are executed safely. Pommel actions delivered with unnecessary force must be penalised under the second group of offences.  
+
+**LS-1.1.6**  
+In all three weapon categories, defensive actions may only be executed with the weapon, except where the fighters have explicitly allowed gripping and wrestling actions (see: close-quarter and wrestling rules).  
+
+**LS-1.1.7**  
 The weapon may not be used—permanently or temporarily, openly or disguised—as a throwing weapon. The weapon must be handled such that at least one hand remains on the grip at all times.  
 
 ### Valid target  
@@ -47,13 +50,13 @@ If during the fencing phrase a fencer covers or substitutes their valid target, 
 **LS-1.2.3.2**  
 If during the fencing phrase a properly delivered hit is registered as off-target due to covering/substitution, the fencer at fault must be penalised under the first group of offences and the hit must be awarded.  
 
-**LS-1.2.3**  
+**LS-1.2.4**  
 If a hit lands outside the valid target area, it does not count as a hit; it does not stop the fencing phrase and it does not annul subsequent hits. However, a hit delivered after a fencing fault does not count as a valid hit, but it stops the fencing phrase and annuls all hits that follow it.  
 
-**LS-1.2.4**  
+**LS-1.2.5**  
 Judging the force of cuts and thrusts that land on non-valid target areas, and imposing any necessary penalties, is the Referee’s responsibility.  
 
-**LS-1.2.5**  
+**LS-1.2.6**  
 The Referee must penalise any fencer who substitutes a non-valid target area for a valid one—either by covering or by abnormal movement—according to the first group of disciplinary offences.  
 
 ### Establishing or annulling hits  

@@ -1,0 +1,109 @@
+========================================================================
+HU -> EN SYNC REPORT
+========================================================================
+
+Rules missing from EN (need translation): 0
+Rules orphaned in EN (deleted from HU):   0
+Rules with likely text changes:           73
+
+------------------------------------------------------------------------
+SECTION 1: MISSING FROM EN (translate these)
+------------------------------------------------------------------------
+
+  [OK] No missing rules.
+
+------------------------------------------------------------------------
+SECTION 2: ORPHANED IN EN (no HU counterpart -- review/delete)
+------------------------------------------------------------------------
+
+  [OK] No orphaned rules.
+
+------------------------------------------------------------------------
+SECTION 3: LIKELY CHANGED (text length differs >20% -- review)
+------------------------------------------------------------------------
+
+[01-altalanos.md]
+  GEN-1.2                         HU=203ch  EN=149ch
+  GEN-3.2.1                       HU=82ch  EN=53ch
+  GEN-3.2.4.1                     HU=233ch  EN=181ch
+  GEN-3.2.4.3                     HU=383ch  EN=273ch
+  GEN-4.2                         HU=43ch  EN=80ch
+  GEN-5.1.3                       HU=437ch  EN=239ch
+  GEN-5.2.2.1                     HU=370ch  EN=260ch
+  GEN-5.2.2.4                     HU=64ch  EN=49ch
+  GEN-5.2.5.1                     HU=325ch  EN=258ch
+  GEN-5.2.5.11                    HU=52ch  EN=34ch
+  GEN-5.2.5.12                    HU=74ch  EN=38ch
+  GEN-5.2.5.13                    HU=72ch  EN=40ch
+  GEN-5.2.5.2                     HU=151ch  EN=120ch
+  GEN-5.2.5.6                     HU=280ch  EN=180ch
+  GEN-5.2.5.8                     HU=166ch  EN=104ch
+  GEN-5.3.1.5                     HU=123ch  EN=81ch
+  GEN-5.3.2.1                     HU=14ch  EN=10ch
+  GEN-5.3.2.2                     HU=44ch  EN=33ch
+  GEN-5.3.2.3                     HU=46ch  EN=34ch
+  GEN-5.3.2.5                     HU=54ch  EN=42ch
+  GEN-6.10.1                      HU=278ch  EN=185ch
+  GEN-6.11.5                      HU=178ch  EN=141ch
+  GEN-6.11.6                      HU=173ch  EN=134ch
+  GEN-6.12.2                      HU=279ch  EN=210ch
+  GEN-6.12.3                      HU=128ch  EN=88ch
+  GEN-6.12.4.1.4                  HU=136ch  EN=81ch
+  GEN-6.12.4.2.1                  HU=382ch  EN=273ch
+  GEN-6.12.5                      HU=55ch  EN=87ch
+  GEN-6.14.1                      HU=123ch  EN=78ch
+  GEN-6.14.2                      HU=305ch  EN=202ch
+  GEN-6.14.4                      HU=231ch  EN=173ch
+  GEN-6.15.1                      HU=799ch  EN=626ch
+  GEN-6.15.2                      HU=170ch  EN=115ch
+  GEN-6.15.3                      HU=243ch  EN=181ch
+  GEN-6.15.5                      HU=115ch  EN=87ch
+  GEN-6.16.3                      HU=73ch  EN=94ch
+  GEN-6.16.4                      HU=437ch  EN=339ch
+  GEN-6.16.5                      HU=39ch  EN=51ch
+  GEN-6.2.10                      HU=422ch  EN=292ch
+  GEN-6.2.11                      HU=69ch  EN=102ch
+  GEN-6.2.2                       HU=231ch  EN=141ch
+  GEN-6.2.8                       HU=398ch  EN=298ch
+  GEN-6.3.5                       HU=94ch  EN=62ch
+  GEN-6.3.7                       HU=318ch  EN=229ch
+  GEN-6.6.2                       HU=410ch  EN=309ch
+  GEN-6.7.1                       HU=153ch  EN=122ch
+  GEN-6.7.2                       HU=288ch  EN=217ch
+  GEN-6.8.2                       HU=340ch  EN=270ch
+  GEN-6.9.2                       HU=619ch  EN=417ch
+  GEN-6.9.4.3                     HU=356ch  EN=261ch
+  GEN-7.3.1                       HU=29ch  EN=86ch
+  GEN-7.4.1                       HU=292ch  EN=187ch
+  GEN-7.6.2                       HU=230ch  EN=142ch
+
+[02-hosszukard.md]
+  LS-1.1.1                        HU=35ch  EN=48ch
+  LS-1.2.1                        HU=79ch  EN=55ch
+  LS-1.2.3.1                      HU=181ch  EN=137ch
+  LS-1.3.6                        HU=94ch  EN=66ch
+
+[02.a-hosszukard-VOR.md]
+  LS-VOR-1.1.4.3                  HU=230ch  EN=183ch
+
+[02.c-hosszukard-AFTERBLOW.md]
+  LS-AB-1.1.1                     HU=112ch  EN=83ch
+  LS-AB-1.2.10                    HU=18ch  EN=29ch
+  LS-AB-1.2.12                    HU=416ch  EN=319ch
+  LS-AB-1.2.5                     HU=14ch  EN=10ch
+
+[03-etikett_fegyelem.md]
+  DIS-1.3.10.1                    HU=218ch  EN=167ch
+  DIS-4.1.6                       HU=247ch  EN=191ch
+
+[04-szervezes.md]
+  ORG-2.1.10                      HU=309ch  EN=237ch
+  ORG-2.1.4                       HU=904ch  EN=596ch
+  ORG-2.1.7                       HU=288ch  EN=223ch
+  ORG-2.1.8                       HU=288ch  EN=223ch
+  ORG-2.2.8                       HU=127ch  EN=97ch
+  ORG-2.3.18                      HU=333ch  EN=264ch
+  ORG-2.3.3                       HU=689ch  EN=543ch
+  ORG-2.3.7                       HU=284ch  EN=202ch
+  ORG-2.4.1                       HU=437ch  EN=340ch
+

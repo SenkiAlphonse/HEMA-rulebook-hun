@@ -1,11 +1,15 @@
 """
-app.utils - Re-export public API for backward compatibility.
+app.utils - Re-export public API.
 
-All utilities have been moved to submodules:
-- markdown_utils: Markdown preprocessing and rendering
-- filter_utils: Filter validation and normalization
-- extract_utils: Rule extraction and formatting
+Submodules:
+- markdown_utils: Markdown preprocessing, rendering, and plain-text stripping
+- extract_utils: Rule extraction and formatting helpers
+
+Note: ``normalize_filter`` lives in ``app.validation`` (it is input validation,
+not a generic utility). It is re-exported here for backward compatibility.
 """
+
+from app.validation import normalize_filter
 
 from .extract_utils import (
     build_document_order,
@@ -13,8 +17,12 @@ from .extract_utils import (
     format_extract_text,
     read_rulebook_markdown_content,
 )
-from .filter_utils import normalize_filter
-from .markdown_utils import RuleIDRenderer, create_mistune_markdown, preprocess_rulebook_markdown
+from .markdown_utils import (
+    RuleIDRenderer,
+    create_mistune_markdown,
+    preprocess_rulebook_markdown,
+    strip_markdown,
+)
 
 __all__ = [
     "RuleIDRenderer",
@@ -25,4 +33,5 @@ __all__ = [
     "normalize_filter",
     "preprocess_rulebook_markdown",
     "read_rulebook_markdown_content",
+    "strip_markdown",
 ]

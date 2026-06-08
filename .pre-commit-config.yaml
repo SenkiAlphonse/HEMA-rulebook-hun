@@ -1,0 +1,99 @@
+# Pre-commit hooks for the HEMA rulebook project.
+# Install: pip install pre-commit && pre-commit install
+# Run on demand: pre-commit run --all-files
+#
+# Ruff hooks use language: system so they work offline (local venv or CI pip install).
+# The ruff-pre-commit remote repo is intentionally NOT used here because the
+# corporate network blocks github.com:443 during local commits.
+# CI installs ruff via requirements-dev.txt before running pre-commit.
+repos:
+  - repo: local
+    hooks:
+      - id: ruff
+        name: ruff (lint)
+        entry: .venv/Scripts/python.exe
+        args: [-m, ruff, check, --fix]
+        language: system
+        types: [python]
+
+      - id: ruff-format
+        name: ruff (format)
+        entry: .venv/Scripts/python.exe
+        args: [-m, ruff, format]
+        language: system
+        types: [python]
+
+      - id: trailing-whitespace
+        name: trailing whitespace
+        entry: python
+        args:
+          - -c
+          - |
+            import sys, re
+            failed = []
+            for path in sys.argv[1:]:
+                text = open(path, 'rb').read().decode('utf-8', errors='replace')
+                lines = text.splitlines(keepends=True)
+                fixed = [re.sub(r'[ \t]+(\r?\n|$)', r'\1', l) for l in lines]
+                if lines != fixed:
+                    open(path, 'wb').write(''.join(fixed).encode('utf-8'))
+                    failed.append(path)
+            if failed:
+                print('Fixed trailing whitespace in:', *failed, sep='\n  ')
+                sys.exit(1)
+        language: system
+        types: [text]
+        exclude: '\.md$'
+
+      - id: end-of-file-fixer
+        name: end of file fixer
+        entry: python
+        args:
+          - -c
+          - |
+            import sys
+            failed = []
+            for path in sys.argv[1:]:
+                raw = open(path, 'rb').read()
+                if raw and not raw.endswith(b'\n'):
+                    open(path, 'ab').write(b'\n')
+                    failed.append(path)
+            if failed:
+                print('Fixed end-of-file newline in:', *failed, sep='\n  ')
+                sys.exit(1)
+        language: system
+        types: [text]
+
+      - id: check-yaml
+        name: check yaml
+        entry: python
+        args: [-c, "import sys, yaml; [yaml.safe_load(open(f)) for f in sys.argv[1:]]"]
+        language: system
+        types: [yaml]
+
+      - id: check-json
+        name: check json
+        entry: python
+        args: [-c, "import sys, json; [json.load(open(f)) for f in sys.argv[1:]]"]
+        language: system
+        types: [json]
+
+      - id: check-merge-conflict
+        name: check merge conflict
+        entry: python
+        args:
+          - -c
+          - |
+            import sys, re
+            # Match true conflict markers: exactly 7 chars at line start
+            pattern = re.compile(r'^(?:<{7} |={7}$|>{7} )', re.MULTILINE)
+            failed = []
+            for path in sys.argv[1:]:
+                text = open(path, 'rb').read().decode('utf-8', errors='replace')
+                if pattern.search(text):
+                    failed.append(path)
+            if failed:
+                print('Merge conflict markers found in:', *failed, sep='\n  ')
+                sys.exit(1)
+        language: system
+        types: [text]

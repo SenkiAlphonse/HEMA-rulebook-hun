@@ -2,6 +2,9 @@
 Unit tests for RulebookParser class
 """
 
+import tempfile
+from pathlib import Path
+
 import pytest
 
 from qa_tools.tools.parser import RulebookParser
@@ -126,3 +129,40 @@ class TestRulebookParser:
         assert "GEN-1.1" in matches
         assert "GEN-2.3.4" in matches
         assert len(matches) == 2
+
+    def test_multiline_comments_excluded_from_index(self):
+        """Rule IDs inside multi-line HTML comment blocks must not be indexed."""
+        content = """\
+# Test Section
+
+**GEN-1.1**
+Active rule text.
+
+<!-- TODO
+**GEN-1.2**
+This rule is commented out and must not appear in the index.
+
+**GEN-1.3**
+Also commented out.
+-->
+
+**GEN-1.4**
+Another active rule.
+"""
+        with tempfile.NamedTemporaryFile(
+            mode="w", suffix=".md", encoding="utf-8", delete=False
+        ) as f:
+            f.write(content)
+            tmp_path = Path(f.name)
+
+        try:
+            parser = RulebookParser(".")
+            parser.parse_file(tmp_path)
+            indexed_ids = {r.rule_id for r in parser.rules}
+        finally:
+            tmp_path.unlink()
+
+        assert "GEN-1.1" in indexed_ids
+        assert "GEN-1.4" in indexed_ids
+        assert "GEN-1.2" not in indexed_ids, "Commented-out rule must not be indexed"
+        assert "GEN-1.3" not in indexed_ids, "Commented-out rule must not be indexed"

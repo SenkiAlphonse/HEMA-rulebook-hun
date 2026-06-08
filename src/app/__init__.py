@@ -7,6 +7,8 @@ import logging
 from flask import Flask
 
 from app.config import (
+    RULESET_LAST_UPDATED,
+    RULESET_VERSION,
     get_aliases_path,
     get_prerendered_rulebook_path,
     get_rules_index_path,
@@ -65,6 +67,16 @@ def create_app() -> Flask:
     # Configuration
     app.config["VARIANTS"] = ["VOR", "COMBAT", "AFTERBLOW"]
     app.config["WEAPONS"] = ["longsword", "rapier", "padded_weapons"]
+    app.config["RULESET_VERSION"] = RULESET_VERSION
+    app.config["RULESET_LAST_UPDATED"] = RULESET_LAST_UPDATED
+
+    # Inject ruleset metadata into every template render
+    @app.context_processor
+    def _inject_ruleset_meta():
+        return {
+            "ruleset_version": RULESET_VERSION,
+            "ruleset_last_updated": RULESET_LAST_UPDATED,
+        }
 
     # Register blueprints
     from app.blueprints.rulebook import rulebook_bp
@@ -126,5 +138,38 @@ def create_app() -> Flask:
             return {"error": f"Handout not found: {filename}"}, 404
 
         return send_file(str(filepath), mimetype="text/html")
+
+    # Error handlers — return JSON for API routes, HTML otherwise
+    from flask import jsonify
+    from werkzeug.exceptions import HTTPException
+
+    def _wants_json() -> bool:
+        if request.path.startswith("/api/"):
+            return True
+        accept = request.accept_mimetypes
+        return accept.best == "application/json" and accept[accept.best] >= accept["text/html"]
+
+    @app.errorhandler(404)
+    def _not_found(err):
+        if _wants_json():
+            return jsonify(error="not_found", message=str(err.description)), 404
+        # Browsers visiting an unknown URL: redirect to canonical home rather
+        # than re-rendering the full app shell with a 404 status.
+        return redirect(url_for("index", ui_lang="hun", rules_lang="hun"), code=302)
+
+    @app.errorhandler(500)
+    def _server_error(err):
+        logger.exception("Unhandled server error")
+        if _wants_json():
+            return jsonify(error="server_error", message="Internal server error."), 500
+        return "Internal Server Error", 500
+
+    @app.errorhandler(HTTPException)
+    def _http_error(err: HTTPException):
+        if _wants_json():
+            return jsonify(
+                error=err.name.lower().replace(" ", "_"), message=err.description
+            ), err.code or 500
+        return err
 
     return app

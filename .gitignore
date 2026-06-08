@@ -24,5 +24,6 @@ data/fie_extracted/
 
 data/search/rules_index_hun.json
 data/search/rules_index_eng.json
+data/search/ruleset_meta.json
 dist/rulebook_hun.html
 dist/rulebook_eng.html

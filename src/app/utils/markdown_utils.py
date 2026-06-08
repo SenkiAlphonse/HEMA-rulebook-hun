@@ -9,6 +9,22 @@ import mistune
 from qa_tools.search_engine.search_utils import get_rule_depth
 
 
+def strip_markdown(text: str) -> str:
+    """Remove markdown formatting (bold, italics, inline code, links, HTML) for plain-text indexing.
+
+    Leaves rule IDs and plain text intact.
+    """
+    # Remove bold/italic/underline/code markers
+    text = re.sub(r"(\*\*|__|\*|`)", "", text)
+    # Replace markdown links [text](url) with their text
+    text = re.sub(r"\[([^\]]+)\]\([^\)]+\)", r"\1", text)
+    # Strip HTML tags
+    text = re.sub(r"<[^>]+>", "", text)
+    # Collapse whitespace
+    text = re.sub(r"\s+", " ", text)
+    return text.strip()
+
+
 def preprocess_rulebook_markdown(text: str) -> str:
     """
     Preprocess markdown before Mistune conversion to handle:

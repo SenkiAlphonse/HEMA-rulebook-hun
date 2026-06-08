@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any
 
 from app.config import get_project_root, get_rules_index_path
-from app.utils.strip_markdown import strip_markdown
+from app.utils.markdown_utils import strip_markdown
 
 
 @dataclass
@@ -117,7 +117,12 @@ class RulebookParser:
     def parse_file(self, filepath: Path):
         """Parse a single markdown file"""
         with open(filepath, encoding="utf-8") as f:
-            lines = f.readlines()
+            content = f.read()
+
+        # Strip multi-line HTML comment blocks before line processing so that
+        # rule IDs inside <!-- ... --> blocks are never indexed.
+        content = self.comment_pattern.sub("", content)
+        lines = content.splitlines(keepends=True)
 
         # Extract weapon type and variant from filename
         weapon_type, variant = self._extract_weapon_info(filepath.name)

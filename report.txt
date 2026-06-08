@@ -1,0 +1,15 @@
+========================================================================
+HU -> EN SYNC REPORT
+========================================================================
+
+Rules missing from EN (need translation): 0
+Rules orphaned in EN (deleted from HU):   0
+Rules with likely text changes:           89
+(COMBAT excluded -- run with --include-combat to include)
+
+------------------------------------------------------------------------
+SECTION 1: MISSING FROM EN (translate these)
+------------------------------------------------------------------------
+
+  [OK] No missing rules.
+

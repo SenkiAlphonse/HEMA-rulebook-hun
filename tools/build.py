@@ -6,8 +6,11 @@ Rebuilds the rules_index_hun.json and rules_index_eng.json for search functional
 Run this at deployment time to generate static rulebook
 """
 
+import json
 import logging
+import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 # Allow running `python tools/build.py` without installing the package
@@ -20,11 +23,44 @@ from app.config import (
     get_prerendered_rulebook_path,
     get_project_root,
     get_rules_index_path,
+    get_search_data_dir,
 )
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(message)s")
 logger = logging.getLogger(__name__)
+
+
+def _last_rules_change_date(project_root: Path) -> str:
+    """Return the date (YYYY-MM-DD) of the most recent commit touching the
+    rule chapters. Falls back to today if git is unavailable (e.g. running
+    from a tarball) so the meta file is always written.
+    """
+    try:
+        result = subprocess.run(
+            ["git", "log", "-1", "--format=%cs", "--", "rules", "rules_en"],
+            cwd=project_root,
+            capture_output=True,
+            text=True,
+            check=False,
+            timeout=5,
+        )
+        out = result.stdout.strip()
+        if result.returncode == 0 and out:
+            return out
+    except (FileNotFoundError, OSError, subprocess.TimeoutExpired) as e:
+        logger.warning(f"git log failed for ruleset date ({e}); using today")
+    return date.today().isoformat()
+
+
+def _write_ruleset_meta(project_root: Path) -> None:
+    """Stamp last-updated date so the running app can show it in the footer."""
+    meta = {"last_updated": _last_rules_change_date(project_root)}
+    meta_path = get_search_data_dir() / "ruleset_meta.json"
+    meta_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, ensure_ascii=False, indent=2)
+    logger.info(f"Ruleset metadata: last_updated={meta['last_updated']}")
 
 
 def build_search_index():
@@ -48,6 +84,7 @@ def build_search_index():
             )
 
         logger.info("✓ Search index rebuilt successfully")
+        _write_ruleset_meta(project_root)
         return True
     except Exception as e:
         logger.error(f"✗ Search index build error: {type(e).__name__}: {e}")

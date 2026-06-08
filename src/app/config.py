@@ -2,7 +2,58 @@
 
 from __future__ import annotations
 
+import json
+import logging
+import os
 from pathlib import Path
+
+logger = logging.getLogger(__name__)
+
+# ---------------------------------------------------------------------------
+# Ruleset versioning (visible to users in footer; bump on each rule revision).
+# ---------------------------------------------------------------------------
+# RULESET_VERSION is a hand-curated label that bumps when the published rules
+# change in a meaningful way.
+#
+# RULESET_LAST_UPDATED is computed at *build time* from the latest git commit
+# touching `rules/` or `rules_en/` and stamped into `data/search/ruleset_meta.json`
+# by `tools/build.py`. The runtime container does not have `.git`, so we read
+# from that file at startup. Override priority:
+#     1. HEMA_RULESET_LAST_UPDATED env var (manual override)
+#     2. ruleset_meta.json (set by build)
+#     3. "unknown" (build never ran or stamp file missing)
+# ---------------------------------------------------------------------------
+RULESET_VERSION: str = os.environ.get("HEMA_RULESET_VERSION", "2026.1")
+
+
+def _resolve_ruleset_last_updated() -> str:
+    env = os.environ.get("HEMA_RULESET_LAST_UPDATED")
+    if env:
+        return env
+    # ruleset_meta.json sits beside the search indexes; its location depends on
+    # PROJECT_ROOT, which is computed below. Re-derive it cheaply here.
+    meta_path = _project_root_for_meta() / "data" / "search" / "ruleset_meta.json"
+    try:
+        with open(meta_path, encoding="utf-8") as f:
+            meta = json.load(f)
+        value = str(meta.get("last_updated", "")).strip()
+        if value:
+            return value
+    except (FileNotFoundError, json.JSONDecodeError, OSError) as e:
+        logger.debug("ruleset_meta.json unavailable (%s); using fallback", e)
+    return "unknown"
+
+
+def _project_root_for_meta() -> Path:
+    """Lightweight project-root resolver used before PROJECT_ROOT is set."""
+    here = Path(__file__).resolve()
+    for candidate in [here.parent, *here.parents]:
+        if (candidate / "rules").is_dir() and (candidate / "templates").is_dir():
+            return candidate
+    return here.parents[2]
+
+
+RULESET_LAST_UPDATED: str = _resolve_ruleset_last_updated()
 
 
 def _find_project_root(start: Path) -> Path:

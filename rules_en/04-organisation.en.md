@@ -11,7 +11,7 @@
 **ORG-1.1.1**  
 The competition is open to persons who are 18 years old (in special cases 16 years old).  
 
-**ORG-1.1.1**  
+**ORG-1.1.2**  
 Participation while under the influence of alcohol or performance-enhancing drugs is forbidden (including recreational substances and doctor-prescribed medications).  
 
 <!-- [[FIE_TEXT_NOT_DIRECTLY_APPLICABLE]] FIE age/eligibility rules and anti-doping frameworks are not directly transferable to this HEMA competition context; apply the HEMA organiser’s eligibility policy as written here. -->
@@ -62,7 +62,8 @@ If a fencer would withdraw only from their last pool bout, results are handled a
 
 **ORG-2.1.11**  
 Exclusion: a fencer who is excluded during the pools is removed from the pool; their results are annulled as if they had not participated. In the final ranking they are recorded without placement as “Excluded”.  
-
+**ORG-2.1.12**  
+In the event of equipment failure during a bout, the Referee may grant a 5-minute break (which begins once the Referee has confirmed the malfunction). This time may be used to repair, replace, or re-certify the affected equipment. If the fencer is unable to continue by the end of the break, the Referee may exclude the fencer from that bout. Cf. [ORG-2.3.13].  
 ### Individual direct elimination bouts  
 <span id="ORG-2.2"></span>  
 
@@ -161,7 +162,7 @@ If both the fencer and the reserve (if any) must withdraw and the team is theref
 If a fencer is excluded during a team match, their team loses the match and is excluded from the event without final placement. See [DIS-4.1.3].  
 
 **ORG-2.3.17**  
-If a team does not finish the event for any reason, the Organising Team applies the same rules as for an individual fencer failing to complete an event, treating the team as if it were a single competitor. See [DIS-4.3.20].  
+If a team does not finish the event for any reason, the Organising Team applies the same rules as for an individual fencer failing to complete an event, treating the team as if it were a single competitor. See [DIS-4.1.18].  
 
 **ORG-2.3.18**  
 If a team does not appear to fence against another team:  

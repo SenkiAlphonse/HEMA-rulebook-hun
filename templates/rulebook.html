@@ -90,6 +90,69 @@
             text-decoration: none;
         }
 
+        /* Copy-link button injected next to each rule-id paragraph */
+        .rule-copy-link {
+            border: 0;
+            background: transparent;
+            color: #95a5a6;
+            cursor: pointer;
+            margin-left: 0.4em;
+            padding: 0 0.3em;
+            font-size: 0.85em;
+            line-height: 1;
+            opacity: 0;
+            transition: opacity 0.15s ease, color 0.15s ease;
+            vertical-align: middle;
+        }
+        .rule-id:hover .rule-copy-link,
+        .rule-copy-link:focus,
+        .rule-copy-link.copied {
+            opacity: 1;
+        }
+        .rule-copy-link:hover {
+            color: #2980b9;
+        }
+        .rule-copy-link.copied {
+            color: #27ae60;
+        }
+        @media (pointer: coarse) {
+            /* Touch-primary devices: always-visible icon, ≥44px tap area, centered. */
+            .rule-copy-link {
+                opacity: 0.6;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 44px;
+                min-height: 44px;
+                padding: 0.4em 0.5em;
+            }
+        }
+        @media print {
+            /* Print stylesheet — optimised for printing the rulebook on paper */
+            @page { margin: 1.5cm; }
+            html, body { background: #ffffff !important; color: #000 !important; }
+            body { font-size: 11pt; line-height: 1.45; }
+            .container { box-shadow: none !important; border: none !important; max-width: 100% !important; margin: 0 !important; }
+            .header { background: #ffffff !important; color: #000 !important; padding: 0 0 0.6cm 0 !important; border-bottom: 1px solid #000 !important; }
+            .header h1, .header p { color: #000 !important; }
+            .header h1 { font-size: 16pt; }
+            /* Hide interactive chrome */
+            .search-box, .back-to-top, .rule-copy-link { display: none !important; }
+            /* Keep rule blocks together when possible */
+            .rule, p.rule-id { page-break-inside: avoid; break-inside: avoid; }
+            p.rule-id { page-break-after: avoid; break-after: avoid; }
+            h1, h2, h3, h4 { page-break-after: avoid; break-after: avoid; }
+            /* Plain ink for links + badges */
+            .rule-text a, a.rule-ref, .ref-link {
+                color: #000 !important;
+                background: none !important;
+                border-bottom: none !important;
+                text-decoration: underline;
+            }
+            .meta-badge { background: none !important; color: #000 !important; border: 1px solid #999 !important; }
+            .content { padding: 0 !important; }
+        }
+
         .rule-metadata {
             font-size: 0.8em;
             color: #7f8c8d;
@@ -706,6 +769,10 @@
         <div class="content" id="ruleContent">
             {{ markdown_content|safe }}
         </div>
+
+        <footer style="margin-top: 3rem; padding: 1.5rem 0; text-align: center; font-size: 0.85em; opacity: 0.7; border-top: 1px solid rgba(0,0,0,0.1);">
+            Ruleset {{ ruleset_version }}{% if ruleset_last_updated and ruleset_last_updated != "unknown" %} &middot; updated {{ ruleset_last_updated }}{% endif %}
+        </footer>
     </div>
 
     <button class="back-to-top" id="backToTop" onclick="scrollToTop()">↑</button>
@@ -861,6 +928,55 @@
 
         window.addEventListener('resize', updateAnchorScrollOffsetVar);
         window.addEventListener('hashchange', () => alignToHashTarget('smooth'));
+
+        // ---------------------------------------------------------------
+        // Per-rule "copy link" buttons
+        // ---------------------------------------------------------------
+        (function attachCopyLinkButtons() {
+            const ruleParagraphs = document.querySelectorAll('p.rule-id[id]');
+            ruleParagraphs.forEach(p => {
+                if (p.querySelector('.rule-copy-link')) return;
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'rule-copy-link';
+                btn.title = 'Copy link to this rule';
+                btn.setAttribute('aria-label', 'Copy link to ' + p.id);
+                btn.textContent = '🔗';
+                btn.addEventListener('click', async (ev) => {
+                    ev.preventDefault();
+                    ev.stopPropagation();
+                    // Preserve current query string (e.g. ?lang=eng) so the copied
+                    // link opens in the same language the reader is currently viewing.
+                    const url = window.location.origin + window.location.pathname + window.location.search + '#' + p.id;
+                    try {
+                        if (navigator.clipboard && window.isSecureContext) {
+                            await navigator.clipboard.writeText(url);
+                        } else {
+                            // Fallback for non-HTTPS / older browsers
+                            const ta = document.createElement('textarea');
+                            ta.value = url;
+                            ta.setAttribute('readonly', '');
+                            ta.style.position = 'absolute';
+                            ta.style.left = '-9999px';
+                            document.body.appendChild(ta);
+                            ta.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(ta);
+                        }
+                        btn.classList.add('copied');
+                        const originalText = btn.textContent;
+                        btn.textContent = '✓';
+                        setTimeout(() => {
+                            btn.classList.remove('copied');
+                            btn.textContent = originalText;
+                        }, 1200);
+                    } catch (err) {
+                        console.warn('Copy failed:', err);
+                    }
+                });
+                p.appendChild(btn);
+            });
+        })();
     </script>
 </body>
 </html>

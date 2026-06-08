@@ -7,6 +7,7 @@ import logging
 import re
 import unicodedata
 from dataclasses import dataclass
+from difflib import get_close_matches
 from pathlib import Path
 from typing import Any
 
@@ -29,6 +30,25 @@ class SearchResult:
     weapon_type: str
     variant: str
     score: float
+
+
+@dataclass
+class ExpandedQuery:
+    """Result of expanding a raw user query through the alias dictionary.
+
+    Attributes:
+        expanded_query: Base query plus any concept-alias terms appended.
+        variant_filter: Detected rule variant (VOR/COMBAT/AFTERBLOW) or None.
+        weapon_filter: Detected weapon type (longsword/rapier/...) or None.
+        concept_terms: Concept-alias terms that were appended to the query.
+        base_query: Original query stripped of recognised filter/concept tokens.
+    """
+
+    expanded_query: str
+    variant_filter: str | None
+    weapon_filter: str | None
+    concept_terms: list[str]
+    base_query: str
 
 
 class AliasAwareSearch:
@@ -134,7 +154,7 @@ class AliasAwareSearch:
 
         return deduplicated
 
-    def _expand_query(self, query: str) -> tuple[str, str | None, str | None, list[str], str]:
+    def _expand_query(self, query: str) -> ExpandedQuery:
         """Expand query based on aliases, extracting filters and concept terms.
 
         Analyzes query words to detect variant/weapon filters and concept expansions.
@@ -143,18 +163,14 @@ class AliasAwareSearch:
             query: Original search query
 
         Returns:
-            Tuple of (expanded_query, variant_filter, weapon_filter, concept_terms, base_query)
-            - expanded_query: Query with concept terms added
-            - variant_filter: Detected variant (VOR/COMBAT/AFTERBLOW) or None
-            - weapon_filter: Detected weapon type or None
-            - concept_terms: List of concept alias terms
-            - base_query: Original query without aliases
+            ExpandedQuery with the expanded query, detected filters, concept terms,
+            and the original query stripped of recognised tokens.
         """
         query_lower = query.lower()
-        variant_filter = None
-        weapon_filter = None
-        concept_terms = []
-        remaining_terms = []
+        variant_filter: str | None = None
+        weapon_filter: str | None = None
+        concept_terms: list[str] = []
+        remaining_terms: list[str] = []
 
         # Split query into words
         words = re.findall(r"\w+", query_lower)
@@ -177,15 +193,14 @@ class AliasAwareSearch:
         base_query = " ".join(remaining_terms)
         expanded_query = base_query
         if concept_terms:
-            # Add concept terms to search
             expanded_query = expanded_query + " " + " ".join(concept_terms)
 
-        return (
-            expanded_query.strip(),
-            variant_filter,
-            weapon_filter,
-            concept_terms,
-            base_query.strip(),
+        return ExpandedQuery(
+            expanded_query=expanded_query.strip(),
+            variant_filter=variant_filter,
+            weapon_filter=weapon_filter,
+            concept_terms=concept_terms,
+            base_query=base_query.strip(),
         )
 
     def _normalize_text(self, text: str) -> str:
@@ -219,20 +234,22 @@ class AliasAwareSearch:
             weapon_filter: Filter by weapon (longsword, rapier, etc.) - can be overridden by query
         """
         # Expand query based on aliases
-        expanded_query, detected_variant, detected_weapon, concept_terms, base_query = (
-            self._expand_query(query)
-        )
+        expanded = self._expand_query(query)
 
         # Use detected filters if not explicitly provided
-        if not variant_filter and detected_variant:
-            variant_filter = detected_variant
-        if not weapon_filter and detected_weapon:
-            weapon_filter = detected_weapon
+        if not variant_filter and expanded.variant_filter:
+            variant_filter = expanded.variant_filter
+        if not weapon_filter and expanded.weapon_filter:
+            weapon_filter = expanded.weapon_filter
 
-        query_lower = expanded_query.lower() if expanded_query else query.lower()
+        query_lower = expanded.expanded_query.lower() if expanded.expanded_query else query.lower()
         query_norm = self._normalize_text(query_lower)
         query_terms = self._extract_terms(query_norm)
-        required_terms = self._extract_terms(self._normalize_text(base_query)) if base_query else []
+        required_terms = (
+            self._extract_terms(self._normalize_text(expanded.base_query))
+            if expanded.base_query
+            else []
+        )
 
         results = []
 
@@ -273,7 +290,7 @@ class AliasAwareSearch:
 
             # Calculate score including aliases
             score = self._calculate_score_with_aliases(
-                rule, query_lower, query_norm, query_terms, concept_terms
+                rule, query_lower, query_norm, query_terms, expanded.concept_terms
             )
 
             if score > 0:
@@ -560,6 +577,52 @@ class AliasAwareSearch:
             if rule.get("rule_id", "").lower() == rule_id_lower:
                 return rule
         return None
+
+    def suggest(self, query: str, max_suggestions: int = 5) -> list[str]:
+        """Return near-match suggestions for a query that produced zero results.
+
+        Strategy:
+        1. If the query looks like a rule ID, suggest similar rule IDs.
+        2. Otherwise, tokenise and suggest closest known alias keys for each
+           token using difflib's ratio.
+
+        Args:
+            query: The original (non-empty) user query.
+            max_suggestions: Cap on returned suggestions.
+
+        Returns:
+            Ordered list of suggestion strings, best matches first. May be empty.
+        """
+        q = (query or "").strip()
+        if not q:
+            return []
+
+        # Heuristic: looks like a rule ID (contains '-' and digits)
+        if "-" in q and any(ch.isdigit() for ch in q):
+            ids = [r.get("rule_id", "") for r in self.rules if r.get("rule_id")]
+            return get_close_matches(q.upper(), ids, n=max_suggestions, cutoff=0.6)
+
+        # Otherwise: per-token nearest alias key
+        tokens = re.findall(r"\w+", q.lower())
+        if not tokens:
+            return []
+
+        candidates = list(self.alias_to_key.keys())
+        if not candidates:
+            return []
+
+        suggestions: list[str] = []
+        seen: set[str] = set()
+        for tok in tokens:
+            if tok in self.alias_to_key:
+                continue  # already a known term, no suggestion needed
+            for match in get_close_matches(tok, candidates, n=2, cutoff=0.7):
+                if match not in seen:
+                    seen.add(match)
+                    suggestions.append(match)
+                    if len(suggestions) >= max_suggestions:
+                        return suggestions
+        return suggestions
 
 
 def format_result(result: SearchResult) -> str:

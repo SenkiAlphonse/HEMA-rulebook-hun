@@ -7,6 +7,7 @@ from typing import Any
 
 from flask import Blueprint, Response, current_app, jsonify, request
 
+from app.query_log import log_search
 from app.utils import filter_rules_for_extract, format_extract_text, normalize_filter
 from app.validation import sanitize_query, validate_filter, validate_max_results, validate_query
 
@@ -120,6 +121,22 @@ def api_search() -> Any:
                 }
             )
 
+        # Log only successful, validated searches — keeps the dataset clean
+        # for later alias-audit / curated-landing work. Validation failures and
+        # exceptions are intentionally not logged. Wrapped so any logging error
+        # cannot affect the response.
+        try:
+            log_search(
+                query=query,
+                rules_lang=rules_lang,
+                result_count=len(results_data),
+                top_rule_id=results_data[0]["rule_id"] if results_data else None,
+                variant_filter=variant_filter,
+                weapon_filter=weapon_filter,
+            )
+        except Exception:
+            logger.exception("log_search failed (non-fatal)")
+
         return jsonify(
             {
                 "success": True,
@@ -127,6 +144,7 @@ def api_search() -> Any:
                 "rules_lang": rules_lang,
                 "count": len(results_data),
                 "results": results_data,
+                "suggestions": (search_engine.suggest(query) if not results_data else []),
                 "note": "Results grouped by rule hierarchy. Level 4-5 rules include parent rules (up to level 3) and direct child rules.",
             }
         )

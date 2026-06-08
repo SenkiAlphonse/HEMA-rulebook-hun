@@ -442,6 +442,32 @@
             font-family: "Courier New", monospace;
         }
 
+        .result-copy-link {
+            border: 0;
+            background: transparent;
+            color: #95a5a6;
+            cursor: pointer;
+            margin-left: 0.4em;
+            padding: 2px 6px;
+            font-size: 0.95em;
+            line-height: 1;
+            border-radius: 4px;
+            transition: color 0.15s ease, background 0.15s ease;
+        }
+        .result-copy-link:hover { color: #2980b9; background: #ecf0f1; }
+        .result-copy-link.copied { color: #27ae60; }
+        @media (pointer: coarse) {
+            .result-copy-link {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                min-width: 44px;
+                min-height: 44px;
+                padding: 0.5em 0.6em;
+            }
+        }
+        @media print { .result-copy-link { display: none; } }
+
         .result-score {
             background: #ecf0f1;
             padding: 5px 12px;
@@ -647,7 +673,7 @@
     <div class="site-header">
         <div class="header-content">
             <div class="logo" id="logoText">HEMA Rulebook</div>
-            
+
             <!-- ⚠︎ TEMPORARY: Prominent AFTERBLOW Infographic Button -->
             <div class="header-center-button">
                 <a href="/handouts/afterblow-infographic-hu.html" target="_blank" rel="noopener noreferrer" class="btn-afterblow-handout">
@@ -655,7 +681,7 @@
                     <span id="afterblowButtonText">AFTERBLOW Quick Guide</span>
                 </a>
             </div>
-            
+
             <div class="header-buttons">
                 <div class="header-control">
                     <label class="header-control-label" id="siteLanguageMenuLabel" for="siteLanguageMenu">Site Language</label>
@@ -695,10 +721,10 @@
                     </div>
                     <div class="form-group">
                         <label for="query" id="labelQuery">Search Query</label>
-                        <input 
-                            type="text" 
-                            id="query" 
-                            name="query" 
+                        <input
+                            type="text"
+                            id="query"
+                            name="query"
                             placeholder="e.g., 'right of way target', 'longsword strike'"
                             required
                         >
@@ -772,6 +798,13 @@
 
         <footer>
             <p id="footerText">HEMA Rulebook Search | Powered by Flask</p>
+            <p class="ruleset-version" style="font-size: 0.85em; opacity: 0.75; margin-top: 0.4em;">
+                Ruleset {{ ruleset_version }}{% if ruleset_last_updated and ruleset_last_updated != "unknown" %} &middot; updated {{ ruleset_last_updated }}{% endif %}
+                &middot;
+                <a id="changelogLink" href="https://github.com/SenkiAlphonse/HEMA-rulebook-hun/blob/main/CHANGELOG.md"
+                   target="_blank" rel="noopener noreferrer"
+                   style="color: inherit; text-decoration: underline;">What's new</a>
+            </p>
         </footer>
     </div>
 
@@ -825,6 +858,10 @@
                 pleaseEnterQueryFirst: 'Please enter a search query first.',
                 noResultsTitle: 'No rules found matching your search.',
                 noResultsHint: 'Try different keywords or remove filters.',
+                didYouMean: 'Did you mean:',
+                copyLink: 'Copy link to rule',
+                linkCopied: 'Link copied!',
+                whatsNew: "What's new",
                 resultsHeader: 'Results',
                 errorPrefix: 'Error',
                 statsTotal: 'Total Rules',
@@ -881,6 +918,10 @@
                 pleaseEnterQueryFirst: 'Először adj meg egy keresőkifejezést.',
                 noResultsTitle: 'Nem található szabály a kereséshez.',
                 noResultsHint: 'Próbálj más kulcsszavakat, vagy vedd le a szűrőket.',
+                didYouMean: 'Talán erre gondoltál:',
+                copyLink: 'Hivatkozás másolása',
+                linkCopied: 'Hivatkozás vágólapra másolva!',
+                whatsNew: 'Újdonságok',
                 resultsHeader: 'Találatok',
                 errorPrefix: 'Hiba',
                 statsTotal: 'Összes szabály',
@@ -942,6 +983,7 @@
             setText('loadingText', t('loadingText'));
             setText('extractHint', t('extractHint'));
             setText('footerText', t('footerText'));
+            setText('changelogLink', t('whatsNew'));
             setText('siteLanguageMenuLabel', t('siteLanguageMenuLabel'));
             setText('rulebookLanguageMenuLabel', t('rulebookLanguageMenuLabel'));
 
@@ -1001,7 +1043,7 @@
             try {
             const response = await fetch(`/api/stats?rules_lang=${encodeURIComponent(rulesLang)}`);
                 const data = await response.json();
-                
+
                 const statsDiv = document.getElementById('stats');
                 statsDiv.innerHTML = `
                     <div class="stat-item">
@@ -1093,13 +1135,29 @@
                 }
 
                 if (data.count === 0) {
+                    const suggestions = Array.isArray(data.suggestions) ? data.suggestions : [];
+                    const suggestionsHtml = suggestions.length
+                        ? `<p style="font-size: 0.95em; margin-top: 14px;">${t('didYouMean')}
+                                ${suggestions.map(s =>
+                                    `<a href="#" class="suggestion-link" data-suggestion="${s.replace(/"/g, '&quot;')}" style="margin: 0 6px; text-decoration: underline;">${s}</a>`
+                                ).join(' &middot; ')}
+                            </p>`
+                        : '';
                     resultsDiv.innerHTML = `
                         <div class="no-results">
                             <div class="no-results-icon">🔍</div>
                             <p>${t('noResultsTitle')}</p>
                             <p style="font-size: 0.9em; margin-top: 10px;">${t('noResultsHint')}</p>
+                            ${suggestionsHtml}
                         </div>
                     `;
+                    resultsDiv.querySelectorAll('.suggestion-link').forEach(link => {
+                        link.addEventListener('click', (ev) => {
+                            ev.preventDefault();
+                            queryInput.value = link.dataset.suggestion;
+                            search();
+                        });
+                    });
                     return;
                 }
 
@@ -1166,6 +1224,7 @@
                     <div class="result-item">
                         <div class="result-header">
                             <a class="result-id" href="/rulebook?lang=${searchLanguageSelect.value}#${result.rule_id}" target="_blank" title="${t('fullRulebook')}">${result.rule_id}</a>
+                            <button type="button" class="result-copy-link" data-rule-id="${result.rule_id}" data-lang="${searchLanguageSelect.value}" title="${t('copyLink')}" aria-label="${t('copyLink')}">🔗</button>
                             <span class="result-score">${t('scoreLabel')}: ${result.score.toFixed(1)}</span>
                         </div>
                         <div class="result-tags">
@@ -1237,23 +1296,23 @@
         function renderMarkdownText(text) {
             // Basic markdown rendering for search results with line break preservation
             let html = text;
-            
+
             // First escape all HTML to prevent XSS
             html = html.replace(/&/g, '&amp;')
                        .replace(/</g, '&lt;')
                        .replace(/>/g, '&gt;')
                        .replace(/"/g, '&quot;')
                        .replace(/'/g, '&#39;');
-            
+
             // Split by double newlines to identify paragraphs/sections
             const lines = html.split(/\n/);
             const result = [];
             let inBulletList = false;
             let inOrderedList = false;
-            
+
             for (let i = 0; i < lines.length; i++) {
                 let line = lines[i];
-                
+
                 // Check if this line starts a numbered list item (1. 2. 3. … or all-1. style)
                 if (line.match(/^\d+\. /)) {
                     // Close bullet list if switching
@@ -1292,7 +1351,7 @@
                         result.push('</ol>');
                         inOrderedList = false;
                     }
-                    
+
                     // Skip empty lines within the text
                     if (line.trim()) {
                         // Apply markdown formatting to non-list lines
@@ -1301,7 +1360,7 @@
                     }
                 }
             }
-            
+
             // Close any open list
             if (inBulletList) {
                 result.push('</ul>');
@@ -1309,17 +1368,17 @@
             if (inOrderedList) {
                 result.push('</ol>');
             }
-            
+
             return result.join('<br>');
         }
-        
+
         function convertMarkdownFormatting(text) {
             // Convert **bold** to <strong> (already HTML-escaped)
             text = text.replace(/\*\*([^*]+?)\*\*/g, '<strong>$1</strong>');
-            
+
             // Convert *italic* to <em> (already HTML-escaped, avoid matching markdown-escaped asterisks)
             text = text.replace(/(?<!\*)\*([^*]+?)\*(?!\*)/g, '<em>$1</em>');
-            
+
             return text;
         }
 
@@ -1337,6 +1396,41 @@
             if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
                 e.preventDefault();
                 search();
+            }
+        });
+
+        // Delegated click handler for per-result "copy link" buttons
+        document.addEventListener('click', async (e) => {
+            const btn = e.target.closest('.result-copy-link');
+            if (!btn) return;
+            e.preventDefault();
+            const ruleId = btn.dataset.ruleId;
+            const lang = btn.dataset.lang || 'hun';
+            if (!ruleId) return;
+            const url = `${window.location.origin}/rulebook?lang=${lang}#${ruleId}`;
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(url);
+                } else {
+                    const ta = document.createElement('textarea');
+                    ta.value = url;
+                    ta.setAttribute('readonly', '');
+                    ta.style.position = 'absolute';
+                    ta.style.left = '-9999px';
+                    document.body.appendChild(ta);
+                    ta.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(ta);
+                }
+                btn.classList.add('copied');
+                const originalText = btn.textContent;
+                btn.textContent = '✓';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.textContent = originalText;
+                }, 1200);
+            } catch (err) {
+                console.warn('Copy failed:', err);
             }
         });
     </script>
