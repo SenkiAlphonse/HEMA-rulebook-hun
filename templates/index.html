@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HEMA Rulebook Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,20 +16,23 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", sans-serif;
-            background: #f8f9fa;
+            background: #f5f2eb;
             min-height: 100vh;
             color: #2c3e50;
             line-height: 1.6;
         }
 
         .site-header {
-            background: #ffffff;
-            border-bottom: 1px solid #e8eaed;
+            background: #1a1f2e;
+            background-image:
+                repeating-linear-gradient(45deg, rgba(201,162,39,0.07) 0px, rgba(201,162,39,0.07) 1px, transparent 1px, transparent 14px),
+                repeating-linear-gradient(-45deg, rgba(201,162,39,0.07) 0px, rgba(201,162,39,0.07) 1px, transparent 1px, transparent 14px);
+            border-bottom: 3px solid #c9a227;
             padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.28);
         }
 
         .header-content {
@@ -77,9 +83,11 @@
 
         .logo {
             font-size: 1.3em;
-            font-weight: 700;
-            color: #1a3a4a;
-            letter-spacing: -0.5px;
+            font-weight: 600;
+            color: #e8d5a0;
+            letter-spacing: 0.5px;
+            font-family: 'Cinzel', Georgia, serif;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.35);
         }
 
         .header-buttons {
@@ -97,16 +105,16 @@
         .header-control-label {
             font-size: 0.7em;
             font-weight: 700;
-            color: #7f8c8d;
+            color: #a09878;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             line-height: 1;
         }
 
         .header-select {
-            background: #ffffff;
-            color: #34495e;
-            border: 1.5px solid #bdc3c7;
+            background: #252d40;
+            color: #e8d5a0;
+            border: 1.5px solid #3d4f6b;
             padding: 8px 10px;
             border-radius: 5px;
             font-size: 0.85em;
@@ -117,9 +125,9 @@
         }
 
         .btn-rulebook {
-            background: #ffffff;
-            color: #34495e;
-            border: 1.5px solid #bdc3c7;
+            background: transparent;
+            color: #e8d5a0;
+            border: 1.5px solid #4a5a7a;
             padding: 8px 16px;
             border-radius: 5px;
             font-size: 0.85em;
@@ -133,21 +141,22 @@
         }
 
         .btn-rulebook:hover {
-            border-color: #34495e;
-            background: #f8fbfd;
+            border-color: #c9a227;
+            background: rgba(201,162,39,0.12);
             transform: none;
         }
 
         .btn-rulebook.is-active {
-            background: #34495e;
-            color: #ffffff;
-            border-color: #2c3e50;
-            box-shadow: 0 0 0 2px rgba(52, 73, 94, 0.18);
+            background: #c9a227;
+            color: #1a1f2e;
+            border-color: #c9a227;
+            box-shadow: 0 0 0 2px rgba(201,162,39,0.28);
+            font-weight: 700;
         }
 
         .btn-rulebook.is-active:hover {
-            background: #2c3e50;
-            border-color: #2c3e50;
+            background: #b8963e;
+            border-color: #b8963e;
         }
 
         .btn-rulebook .flag-icon {
@@ -169,10 +178,21 @@
 
         .page-title h1 {
             font-size: 2.2em;
-            color: #1a3a4a;
+            color: #1a1f2e;
             margin-bottom: 8px;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: 1px;
+            font-family: 'Cinzel', Georgia, serif;
+        }
+
+        .page-title h1::after {
+            content: '';
+            display: block;
+            width: 64px;
+            height: 3px;
+            background: linear-gradient(90deg, #c9a227, #e8d5a0, #c9a227);
+            margin: 14px auto 0;
+            border-radius: 2px;
         }
 
         .page-title p {
@@ -186,7 +206,7 @@
             border-radius: 8px;
             padding: 32px;
             margin-bottom: 28px;
-            border: 1px solid #e8eaed;
+            border: 1px solid #e0d8c8;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             transition: box-shadow 0.2s ease;
         }
@@ -196,12 +216,14 @@
         }
 
         .card-title {
-            font-size: 1.15em;
+            font-size: 1em;
             font-weight: 600;
-            color: #2c3e50;
+            color: #1a1f2e;
             margin-bottom: 20px;
             padding-bottom: 12px;
-            border-bottom: 2px solid #ecf0f1;
+            border-bottom: 2px solid #c9a227;
+            font-family: 'Cinzel', Georgia, serif;
+            letter-spacing: 0.5px;
         }
 
         .form-grid {
@@ -387,7 +409,7 @@
         .stat-number {
             font-size: 1.9em;
             font-weight: 700;
-            color: #34495e;
+            color: #9a7d1c;
         }
 
         .stat-label {
@@ -416,7 +438,7 @@
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 16px;
-            border-left: 3px solid #34495e;
+            border-left: 3px solid #c9a227;
             box-shadow: 0 2px 6px rgba(0,0,0,0.05);
             transition: all 0.2s ease;
         }
@@ -587,7 +609,7 @@
             color: #7f8c8d;
             margin-top: 60px;
             padding: 30px 20px;
-            border-top: 1px solid #e8eaed;
+            border-top: 1px solid #e0d8c8;
             font-size: 0.85em;
         }
 
