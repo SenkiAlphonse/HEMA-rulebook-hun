@@ -1,7 +1,6 @@
 services:
   - type: web
     name: hema-rulebook-search
-    branch: ai-agent
     runtime: python
     runtimeVersion: "3.11"
     buildCommand: |
