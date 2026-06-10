@@ -293,25 +293,6 @@ class RulebookParser:
 
         return ""
 
-    def _extract_variant_subrules(
-        self,
-        parent_rule_id: str,
-        text: str,
-        section: str,
-        subsection: str,
-        document: str,
-        anchor: str,
-        line_num: int,
-        weapon_type: str,
-    ) -> list[Rule]:
-        """
-        Extract variant-specific sub-rules from text containing Vor/Combat/Afterblow sections.
-        Returns a list of extracted sub-rules, or empty list if no variants found.
-        """
-
-    def _variant_to_subrule_index(self, variant: str) -> str:
-        """Map variant name to subrule index (1=Vor, 2=Combat, 3=Afterblow)"""
-
     def _extract_weapon_info(self, filename: str) -> tuple:  # tuple[str, str]
         """Extract weapon type and variant from filename"""
         weapon_type = "general"

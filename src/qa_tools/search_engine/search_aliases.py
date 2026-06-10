@@ -382,64 +382,6 @@ class AliasAwareSearch:
         grouped_results = self._deduplicate_results_by_rule_id(grouped_results)
         return grouped_results[: max_results * grouping_multiplier]
 
-    def _build_rule_family(self, result: SearchResult, lineage: list[str]) -> list[SearchResult]:
-        """Build a family of rules: parents + matched rule + children.
-
-        For hierarchical display, gathers parent rules (up to level 3),
-        the matched rule itself, and child rules (if at level 4).
-
-        Args:
-            result: The matched SearchResult
-            lineage: List of parent rule IDs from get_rule_lineage
-
-        Returns:
-            List of SearchResult objects forming the rule family
-        """
-        family = []
-
-        # Add parents (up to level 3)
-        for parent_id in lineage:
-            parent_depth = self.get_rule_depth(parent_id)
-            if parent_depth <= 3:
-                parent_rule = self.get_rule_by_id(parent_id)
-                if parent_rule:
-                    family.append(
-                        SearchResult(
-                            rule_id=parent_rule["rule_id"],
-                            text=parent_rule["text"],
-                            section=parent_rule.get("section", ""),
-                            subsection=parent_rule.get("subsection", ""),
-                            document=parent_rule.get("document", ""),
-                            weapon_type=parent_rule.get("weapon_type", ""),
-                            variant=parent_rule.get("variant", ""),
-                            score=result.score,  # Inherit score from matched rule
-                        )
-                    )
-
-        # Add the matched rule itself
-        family.append(result)
-
-        # Add children (level 5 if we're at level 4, nothing if we're at level 5)
-        if self.get_rule_depth(result.rule_id) == 4:
-            children = self.get_children_rules(result.rule_id)
-            for child_id in children:
-                child_rule = self.get_rule_by_id(child_id)
-                if child_rule:
-                    family.append(
-                        SearchResult(
-                            rule_id=child_rule["rule_id"],
-                            text=child_rule["text"],
-                            section=child_rule.get("section", ""),
-                            subsection=child_rule.get("subsection", ""),
-                            document=child_rule.get("document", ""),
-                            weapon_type=child_rule.get("weapon_type", ""),
-                            variant=child_rule.get("variant", ""),
-                            score=result.score,  # Inherit score
-                        )
-                    )
-
-        return family
-
     def _extract_terms(self, query: str) -> list[str]:
         """Extract meaningful search terms from query.
 

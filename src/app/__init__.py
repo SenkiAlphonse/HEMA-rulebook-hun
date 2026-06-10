@@ -124,15 +124,15 @@ def create_app() -> Flask:
 
         from flask import send_file
 
-        # Security: only allow .html files and prevent directory traversal
-        if not filename.endswith(".html"):
-            return {"error": "Only HTML files are allowed"}, 403
-
-        if ".." in filename or "/" in filename:
+        handout_dir = Path(__file__).resolve().parent.parent.parent / "docs" / "handouts"
+        # Resolve the full path and verify it stays inside handout_dir (prevents traversal)
+        filepath = (handout_dir / filename).resolve()
+        if not filepath.is_relative_to(handout_dir):
             return {"error": "Invalid filename"}, 403
 
-        handout_dir = Path(__file__).resolve().parent.parent.parent / "docs" / "handouts"
-        filepath = handout_dir / filename
+        # Only serve .html files
+        if filepath.suffix != ".html":
+            return {"error": "Only HTML files are allowed"}, 403
 
         if not filepath.exists():
             return {"error": f"Handout not found: {filename}"}, 404
