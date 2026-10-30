@@ -59,6 +59,8 @@ class AliasAwareSearch:
         self.rules = []
         self.aliases = {}
         self.alias_to_key = {}  # Reverse lookup: alias -> (category, key)
+        self.alias_token_lookup = {}
+        self.alias_token_lengths = []
 
         if aliases_path is None:
             aliases_path = self.index_path.parent / "aliases.json"
@@ -102,6 +104,14 @@ class AliasAwareSearch:
         for concept_key, aliases in self.aliases.get("concepts", {}).items():
             for alias in aliases:
                 self.alias_to_key[alias.lower()] = ("concept", concept_key)
+
+        for alias, value in self.alias_to_key.items():
+            tokens = tuple(re.findall(r"\w+", alias))
+            if tokens:
+                self.alias_token_lookup[tokens] = value
+        self.alias_token_lengths = sorted(
+            {len(tokens) for tokens in self.alias_token_lookup}, reverse=True
+        )
 
     def load_index(self) -> None:
         """Load the rules index"""
@@ -175,19 +185,31 @@ class AliasAwareSearch:
         # Split query into words
         words = re.findall(r"\w+", query_lower)
 
-        for word in words:
-            if word in self.alias_to_key:
-                category, key = self.alias_to_key[word]
+        word_index = 0
+        while word_index < len(words):
+            alias_match = None
+            alias_length = 0
+            for candidate_length in self.alias_token_lengths:
+                candidate = tuple(words[word_index : word_index + candidate_length])
+                if candidate in self.alias_token_lookup:
+                    alias_match = self.alias_token_lookup[candidate]
+                    alias_length = candidate_length
+                    break
 
-                if category == "variant":
-                    variant_filter = key
-                elif category == "weapon":
-                    weapon_filter = key
-                elif category == "concept":
-                    # Add all aliases from this concept to search terms
-                    concept_terms.extend(self.aliases["concepts"][key])
-            else:
-                remaining_terms.append(word)
+            if alias_match is None:
+                remaining_terms.append(words[word_index])
+                word_index += 1
+                continue
+
+            category, key = alias_match
+            if category == "variant":
+                variant_filter = key
+            elif category == "weapon":
+                weapon_filter = key
+            elif category == "concept":
+                # Add all aliases from this concept to search terms
+                concept_terms.extend(self.aliases["concepts"][key])
+            word_index += alias_length
 
         # Build expanded query
         base_query = " ".join(remaining_terms)

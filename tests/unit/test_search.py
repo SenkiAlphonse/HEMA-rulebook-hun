@@ -135,6 +135,28 @@ class TestRulebookSearch:
         expected = {"GEN-3.2.5.1", "GEN-3.2.5.2", "GEN-3.2.5.3"}
         assert expected.issubset(found_ids), f"Missing: {expected - found_ids}"
 
+    def test_search_multiword_variant_alias_english(self):
+        """Multiword variant aliases should filter English rules correctly."""
+        from pathlib import Path
+
+        project_root = Path(__file__).parent.parent.parent
+        index_path = project_root / "data" / "search" / "rules_index_eng.json"
+        aliases_path = project_root / "data" / "search" / "aliases.json"
+        if not index_path.exists():
+            pytest.skip(f"English rules index not found at {index_path}")
+
+        search_engine = AliasAwareSearch(str(index_path), str(aliases_path))
+        for query in ("right of way", "right-of-way"):
+            expanded = search_engine._expand_query(query)
+            results = search_engine.search(query, max_results=20)
+            result_variants = {result.variant for result in results}
+
+            assert expanded.variant_filter == "VOR"
+            assert expanded.base_query == ""
+            assert results
+            assert "VOR" in result_variants
+            assert result_variants <= {"VOR", ""}
+
     def test_search_deduplicates_rule_ids_in_results(self, tmp_path):
         """Search results should not contain duplicate rule IDs."""
         index_data = {
