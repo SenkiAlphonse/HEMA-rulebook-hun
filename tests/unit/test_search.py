@@ -157,6 +157,84 @@ class TestRulebookSearch:
             assert "VOR" in result_variants
             assert result_variants <= {"VOR", ""}
 
+    @pytest.mark.parametrize(
+        ("query", "expected_ids"),
+        [
+            ("right of way", {"GEN-2", "VOR-1"}),
+            ("right-of-way", {"GEN-2", "VOR-1"}),
+            ("priority", {"GEN-2", "VOR-1"}),
+            ("vor", {"GEN-2", "VOR-1"}),
+            ("right of way attack", {"GEN-2", "VOR-1"}),
+            ("right of way waits", set()),
+        ],
+    )
+    def test_variant_alias_matches_group_without_matching_individual_words(
+        self, tmp_path, query, expected_ids
+    ):
+        from pathlib import Path
+
+        rules = [
+            {"rule_id": "GEN-1", "text": "A right handed fencer waits.", "variant": ""},
+            {"rule_id": "GEN-2", "text": "Priority determines the attack.", "variant": ""},
+            {"rule_id": "GEN-3", "text": "The brown glove is required.", "variant": ""},
+            {"rule_id": "VOR-1", "text": "The attacker scores.", "variant": "VOR"},
+            {"rule_id": "CF-1", "text": "Priority is not used.", "variant": "COMBAT"},
+        ]
+        for rule in rules:
+            rule["weapon_type"] = "longsword"
+        index_file = tmp_path / "rules_index.json"
+        index_file.write_text(json.dumps({"rules": rules}), encoding="utf-8")
+        aliases_path = Path(__file__).parents[2] / "data" / "search" / "aliases.json"
+        engine = AliasAwareSearch(str(index_file), str(aliases_path))
+
+        assert {result.rule_id for result in engine.search(query)} == expected_ids
+
+    @pytest.mark.parametrize(
+        ("query", "expected_ids"),
+        [
+            ("target area", {"GEN-3", "GEN-5", "GEN-6"}),
+            ("target area head", {"GEN-3"}),
+            ("target area ready", set()),
+        ],
+    )
+    def test_concept_alias_matches_whole_alternatives(self, tmp_path, query, expected_ids):
+        rules = [
+            {"rule_id": "GEN-1", "text": "The target is ready."},
+            {"rule_id": "GEN-2", "text": "The competition area is clear."},
+            {"rule_id": "GEN-3", "text": "A valid target is the head."},
+            {"rule_id": "GEN-4", "text": "Protective equipment is required."},
+            {"rule_id": "GEN-5", "text": "The finding is recorded."},
+            {"rule_id": "GEN-6", "text": "Valid-target scoring applies."},
+            {"rule_id": "GEN-7", "text": "An invalid target does not score."},
+        ]
+        index_file = tmp_path / "rules_index.json"
+        index_file.write_text(json.dumps({"rules": rules}), encoding="utf-8")
+        aliases_file = tmp_path / "aliases.json"
+        aliases_file.write_text(
+            json.dumps({"concepts": {"target": ["target area", "valid target", "finding"]}}),
+            encoding="utf-8",
+        )
+        engine = AliasAwareSearch(str(index_file), str(aliases_file))
+
+        assert {result.rule_id for result in engine.search(query)} == expected_ids
+
+    @pytest.mark.parametrize("query", ["long sword", "longsword", "ls"])
+    def test_weapon_alias_matches_group_or_metadata(self, tmp_path, query):
+        from pathlib import Path
+
+        rules = [
+            {"rule_id": "GEN-1", "text": "Sword inspection.", "weapon_type": "general"},
+            {"rule_id": "GEN-2", "text": "Long-sword inspection.", "weapon_type": "general"},
+            {"rule_id": "LS-1", "text": "The attacker scores.", "weapon_type": "longsword"},
+            {"rule_id": "RP-1", "text": "The attacker scores.", "weapon_type": "rapier"},
+        ]
+        index_file = tmp_path / "rules_index.json"
+        index_file.write_text(json.dumps({"rules": rules}), encoding="utf-8")
+        aliases_path = Path(__file__).parents[2] / "data" / "search" / "aliases.json"
+        engine = AliasAwareSearch(str(index_file), str(aliases_path))
+
+        assert {result.rule_id for result in engine.search(query)} == {"GEN-2", "LS-1"}
+
     def test_search_deduplicates_rule_ids_in_results(self, tmp_path):
         """Search results should not contain duplicate rule IDs."""
         index_data = {

@@ -264,7 +264,8 @@ class AliasAwareSearch:
         if not weapon_filter and expanded.weapon_filter:
             weapon_filter = expanded.weapon_filter
 
-        query_lower = expanded.expanded_query.lower() if expanded.expanded_query else query.lower()
+        has_aliases = expanded.variant_filter or expanded.weapon_filter or expanded.concept_terms
+        query_lower = expanded.base_query if has_aliases else query.lower()
         query_norm = self._normalize_text(query_lower)
         query_terms = self._extract_terms(query_norm)
         required_terms = (
@@ -312,7 +313,13 @@ class AliasAwareSearch:
 
             # Calculate score including aliases
             score = self._calculate_score_with_aliases(
-                rule, query_lower, query_norm, query_terms, expanded.concept_terms
+                rule,
+                query_lower,
+                query_norm,
+                query_terms,
+                expanded.concept_terms,
+                expanded.variant_filter,
+                expanded.weapon_filter,
             )
 
             if score > 0:
@@ -495,6 +502,14 @@ class AliasAwareSearch:
         terms = re.findall(r"\w+", query)
         return [t for t in terms if t not in stop_words and len(t) > 2]
 
+    def _matches_alias(self, text: str, alias: str) -> bool:
+        """Match a whole alias, treating punctuation and whitespace as separators."""
+        alias_tokens = re.findall(r"\w+", self._normalize_text(alias))
+        if not alias_tokens:
+            return False
+        pattern = r"(?<!\w)" + r"\W+".join(re.escape(token) for token in alias_tokens) + r"(?!\w)"
+        return re.search(pattern, text) is not None
+
     def _calculate_score_with_aliases(
         self,
         rule: dict[str, Any],
@@ -502,6 +517,8 @@ class AliasAwareSearch:
         query_norm: str,
         terms: list[str],
         concept_terms: list[str] | None = None,
+        variant_query: str | None = None,
+        weapon_query: str | None = None,
     ) -> float:
         """Calculate score including alias matches"""
         score = 0.0
@@ -517,6 +534,28 @@ class AliasAwareSearch:
         text_norm = self._normalize_text(text_lower)
         section_norm = self._normalize_text(section_lower)
         subsection_norm = self._normalize_text(subsection_lower)
+
+        searchable_fields = (text_norm, section_norm, subsection_norm)
+        for category, key, metadata_field, match_score in (
+            ("concepts", None, None, search_config.SCORE_CONCEPT_TERM),
+            ("variants", variant_query, "variant", search_config.SCORE_VARIANT_ALIAS),
+            ("weapons", weapon_query, "weapon_type", search_config.SCORE_WEAPON_ALIAS),
+        ):
+            aliases = (
+                concept_terms
+                if category == "concepts"
+                else self.aliases.get(category, {}).get(key, [])
+            )
+            if not aliases:
+                continue
+            metadata_matches = metadata_field is not None and rule.get(metadata_field) == key
+            matching_aliases = sum(
+                any(self._matches_alias(field, alias) for field in searchable_fields)
+                for alias in dict.fromkeys(aliases)
+            )
+            if not metadata_matches and not matching_aliases:
+                return 0.0
+            score += match_score * (matching_aliases + int(metadata_matches))
 
         # Direct rule ID match (highest priority)
         if rule_id_lower in query:
@@ -537,23 +576,6 @@ class AliasAwareSearch:
 
             if term in section_norm or term in subsection_norm:
                 score += search_config.SCORE_TERM_SECTION
-
-        # Check concept terms (from alias expansion)
-        if concept_terms:
-            for concept_term in concept_terms:
-                if self._normalize_text(concept_term) in text_norm:
-                    score += search_config.SCORE_CONCEPT_TERM
-
-        # Check variant aliases (legacy scoring for non-expanded queries)
-        if rule.get("variant"):
-            for alias in rule.get("variant_aliases", []):
-                if alias in query:
-                    score += search_config.SCORE_VARIANT_ALIAS
-
-        # Check weapon aliases (legacy scoring for non-expanded queries)
-        for alias in rule.get("weapon_aliases", []):
-            if alias in query:
-                score += search_config.SCORE_WEAPON_ALIAS
 
         # Apply length penalty for very long rules (e.g., large tables)
         # Rules > threshold chars get progressively lower scores to push them down rankings

@@ -53,6 +53,17 @@ curl -X POST http://localhost:5000/api/search \
 
 Search for rules using natural language queries with automatic alias resolution.
 
+Registered aliases are matched as whole words or phrases, not as independent
+keywords. For example, `right of way` resolves to the VOR alias group: it finds
+VOR rules and applicable rules mentioning alternatives such as `priority`, but
+does not match `right handed` merely because it contains `right`. Quotes are
+not required. Hyphens and spaces are equivalent within aliases. Variant and
+weapon aliases also select the corresponding filters; general rules must
+still match the alias group rather than being included automatically.
+Additional non-alias keywords must all match the rule text or headings and
+retain substring matching. Alias recognition is case-insensitive; comparisons
+against rule text also ignore accents.
+
 **Request Body:**
 ```json
 {
