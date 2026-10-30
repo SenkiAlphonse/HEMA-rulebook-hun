@@ -97,14 +97,15 @@ HEMA-rulebook-hun/
 ```python
 from typing import List, Optional, Dict, Any
 
+
 def search_rules(query: str, max_results: int = 5) -> List[Dict[str, Any]]:
     """
     Search for rules matching the query.
-    
+
     Args:
         query: Search query string
         max_results: Maximum number of results to return
-    
+
     Returns:
         List of matching rule dictionaries
     """
@@ -166,14 +167,15 @@ pytest tests/ -m "not slow" -v
 import pytest
 from qa_tools.search_engine import AliasAwareSearch
 
+
 class TestNewFeature:
     """Test suite for new feature"""
-    
+
     def test_basic_functionality(self, search_engine):
         """Test basic functionality"""
         result = search_engine.search("query")
         assert len(result) > 0
-    
+
     def test_edge_case(self, search_engine):
         """Test edge case"""
         result = search_engine.search("")

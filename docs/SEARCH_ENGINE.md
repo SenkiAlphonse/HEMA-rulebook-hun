@@ -342,9 +342,10 @@ k = avg 300 characters per rule field
 # Instead of:
 def find_rule_slow(rule_id):
     for rule in all_rules:  # O(n)
-        if rule['rule_id'] == rule_id:
+        if rule["rule_id"] == rule_id:
             return rule
     return None
+
 
 # Use:
 def find_rule_fast(rule_id):
@@ -472,18 +473,19 @@ Where:
 def expand_query_with_aliases(query_tokens):
     """Expand query tokens with alias mappings."""
     expanded = list(query_tokens)  # Start with original tokens
-    
+
     for token in query_tokens:
         if token in self.aliases:
             alias_data = self.aliases[token]
             # Add primary terms if not already present
-            expanded.append(alias_data['primary_hu'])
-            expanded.append(alias_data['primary_en'])
+            expanded.append(alias_data["primary_hu"])
+            expanded.append(alias_data["primary_en"])
             # Add related aliases
-            expanded.extend(alias_data['aliases'])
-    
+            expanded.extend(alias_data["aliases"])
+
     # Remove duplicates while preserving order
     return list(dict.fromkeys(expanded))
+
 
 # Example:
 query = "szúrás rules"
@@ -511,14 +513,16 @@ def test_exact_match_rule_id():
     """Exact match should return rule immediately."""
     results = search_engine.search_rules("GEN-1.1.1")
     assert len(results) == 1
-    assert results[0]['score'] == 1.0
-    assert results[0]['rule_id'] == "GEN-1.1.1"
+    assert results[0]["score"] == 1.0
+    assert results[0]["rule_id"] == "GEN-1.1.1"
+
 
 def test_partial_match_in_title():
     """Partial match in title should score 0.7."""
     results = search_engine.search_rules("Target")
     assert len(results) > 0
-    assert any(r['score'] == 0.7 for r in results)
+    assert any(r["score"] == 0.7 for r in results)
+
 
 def test_fuzzy_match_with_typo():
     """Fuzzy match should handle typos."""
@@ -528,17 +532,20 @@ def test_fuzzy_match_with_typo():
     assert len(results_typo) > 0
     # Both should find the same rules
 
+
 def test_multi_token_query():
     """Multi-token queries should aggregate scores."""
     results = search_engine.search_rules("longsword target areas")
     assert len(results) > 0
     # Rules matching multiple tokens should score higher
 
+
 def test_threshold_filtering():
     """Results below threshold should be filtered."""
     results_high = search_engine.search_rules("x", threshold=0.9)
     results_low = search_engine.search_rules("x", threshold=0.1)
     assert len(results_low) >= len(results_high)
+
 
 def test_limit_parameter():
     """Limit parameter should cap results."""
@@ -555,25 +562,26 @@ def test_limit_parameter():
 ```python
 def test_api_search_endpoint():
     """Full API search should work end-to-end."""
-    response = client.post('/api/search', json={
-        "query": "longsword",
-        "limit": 10
-    })
+    response = client.post("/api/search", json={"query": "longsword", "limit": 10})
     assert response.status_code == 200
     data = response.get_json()
-    assert data['success'] is True
-    assert 'results' in data
-    assert len(data['results']) <= 10
+    assert data["success"] is True
+    assert "results" in data
+    assert len(data["results"]) <= 10
+
 
 def test_api_search_error_handling():
     """API should handle errors gracefully."""
-    response = client.post('/api/search', json={
-        "query": "x"  # Too short
-    })
+    response = client.post(
+        "/api/search",
+        json={
+            "query": "x"  # Too short
+        },
+    )
     assert response.status_code == 400
     data = response.get_json()
-    assert data['success'] is False
-    assert 'error' in data
+    assert data["success"] is False
+    assert "error" in data
 ```
 
 ---
@@ -591,12 +599,12 @@ def search_rules(self, query, debug=False):
         print(f"\n=== SEARCH DEBUG ===")
         print(f"Query: '{query}'")
         print(f"Query length: {len(query)}")
-    
+
     # PHASE 1: Preprocess
     tokens = self.tokenize(query)
     if debug:
         print(f"Tokens: {tokens}")
-    
+
     # PHASE 2: Exact match
     if query in self.rules:
         if debug:
@@ -604,7 +612,7 @@ def search_rules(self, query, debug=False):
         return [self.rules[query]]
     if debug:
         print("EXACT MATCH: None")
-    
+
     # PHASE 3 & 4: Partial + Fuzzy
     results = []
     for rule in self.rules.values():
@@ -612,16 +620,16 @@ def search_rules(self, query, debug=False):
             # ... matching logic ...
             if debug and score >= 0.5:
                 print(f"Match: {token} in {rule['rule_id']} (score: {score})")
-    
+
     # PHASE 6: Limit results
-    results = sorted(results, key=lambda r: r['score'], reverse=True)
+    results = sorted(results, key=lambda r: r["score"], reverse=True)
     results = results[:limit]
-    
+
     if debug:
         print(f"RESULTS: {len(results)} rules")
         for r in results:
             print(f"  {r['rule_id']}: {r['score']:.2f}")
-    
+
     return results
 ```
 

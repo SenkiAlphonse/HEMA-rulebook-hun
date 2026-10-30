@@ -324,24 +324,20 @@ def create_app():
 
 **Example**:
 ```python
-@search_bp.route('/api/search', methods=['POST'])
+@search_bp.route("/api/search", methods=["POST"])
 def search():
     data = request.get_json() or {}
-    query = data.get('query', '')
-    
+    query = data.get("query", "")
+
     # Validate
     if len(query) < 3:
         return error_response("Query too short", 400)
-    
+
     # Search
     results = search_engine.search_rules(query)
-    
+
     # Format & return
-    return success_response({
-        'query': query,
-        'results': results,
-        'result_count': len(results)
-    })
+    return success_response({"query": query, "results": results, "result_count": len(results)})
 ```
 
 ---
@@ -443,20 +439,20 @@ class AliasAwareSearch:
 
 ```python
 {
-    "rule_id": "GEN-1.1.1",           # Unique rule identifier
-    "title": "Rule Title",             # Short rule name
-    "content": "Full rule text...",    # Complete rule description
-    "section": "General Rules",        # Section name from markdown
+    "rule_id": "GEN-1.1.1",  # Unique rule identifier
+    "title": "Rule Title",  # Short rule name
+    "content": "Full rule text...",  # Complete rule description
+    "section": "General Rules",  # Section name from markdown
     "source_file": "03-altalanos.md",  # Source markdown file
-    "anchor_id": "GEN-1.1.1",          # HTML anchor ID for links
-    "weapon_type": "all",              # Applies to: all|longsword|rapier|etc
-    "variant": "all",                  # Variant: all|VOR|COMBAT|AFTERBLOW
-    "hierarchy": {                     # Hierarchical positioning
+    "anchor_id": "GEN-1.1.1",  # HTML anchor ID for links
+    "weapon_type": "all",  # Applies to: all|longsword|rapier|etc
+    "variant": "all",  # Variant: all|VOR|COMBAT|AFTERBLOW
+    "hierarchy": {  # Hierarchical positioning
         "chapter": "03",
         "section": "1",
         "subsection": "1.1",
-        "rule": "1"
-    }
+        "rule": "1",
+    },
 }
 ```
 
@@ -468,10 +464,10 @@ class AliasAwareSearch:
     "title": "Rule Title",
     "content": "Full rule text...",
     "section": "General Rules",
-    "score": 0.95,                 # Relevance score (0.0-1.0)
+    "score": 0.95,  # Relevance score (0.0-1.0)
     "source_file": "03-altalanos.md",
     "weapon_type": "all",
-    "anchor_id": "GEN-1.1.1"
+    "anchor_id": "GEN-1.1.1",
 }
 ```
 
@@ -479,18 +475,18 @@ class AliasAwareSearch:
 
 ```python
 {
-    "szúrás": {                    # Hungarian term
-        "primary_en": "thrust",    # Primary English term
-        "primary_hu": "szúrás",    # Primary Hungarian term
-        "aliases": [               # Related terms
+    "szúrás": {  # Hungarian term
+        "primary_en": "thrust",  # Primary English term
+        "primary_hu": "szúrás",  # Primary Hungarian term
+        "aliases": [  # Related terms
             "lunge",
             "poke",
-            "szúrások"  # plural
+            "szúrások",  # plural
         ],
-        "rules": [                 # Rules using this term
+        "rules": [  # Rules using this term
             "GEN-2.1.5",
-            "HOSSZU-1.3.2"
-        ]
+            "HOSSZU-1.3.2",
+        ],
     }
 }
 ```

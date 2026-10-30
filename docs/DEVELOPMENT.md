@@ -175,6 +175,7 @@ MAX_QUERY_LENGTH = 500
 MAX_RESULTS = 100
 MIN_RELEVANCE_SCORE = 0.3
 
+
 # Classes: PascalCase
 class AliasAwareSearch:
     pass
@@ -184,20 +185,21 @@ class AliasAwareSearch:
 ```python
 from typing import List, Dict, Any, Optional, Tuple
 
+
 def search_rules(
     query: str,
     max_results: int = 10,
     variant_filter: Optional[str] = None,
-    weapon_filter: Optional[str] = None
+    weapon_filter: Optional[str] = None,
 ) -> List[Dict[str, Any]]:
     """Search rulebook for matching rules.
-    
+
     Args:
         query: Search query (3-500 chars)
         max_results: Max results to return (1-100)
         variant_filter: Filter by variant (VOR, COMBAT, AFTERBLOW, or None)
         weapon_filter: Filter by weapon (longsword, rapier, armored, or None)
-    
+
     Returns:
         List of matching rule dicts, sorted by score
     """
@@ -279,43 +281,35 @@ Edit `app/blueprints/search.py`:
 from typing import Dict, Any
 from flask import request, jsonify
 
-@search_bp.route('/api/search/by-author', methods=['POST'])
+
+@search_bp.route("/api/search/by-author", methods=["POST"])
 def search_by_author() -> Dict[str, Any]:
     """Search rules by rule author.
-    
+
     Request body:
         {"author": "John Doe", "limit": 10}
-    
+
     Response:
         {"success": true, "results": [...]}
     """
     data = request.get_json() or {}
-    author = data.get('author', '')
-    limit = data.get('limit', 10)
-    
+    author = data.get("author", "")
+    limit = data.get("limit", 10)
+
     # Validate input
     if not author or len(author) < 2:
-        return jsonify({
-            "success": False,
-            "error": "Author name too short"
-        }), 400
-    
+        return jsonify({"success": False, "error": "Author name too short"}), 400
+
     if not (1 <= limit <= 50):
-        return jsonify({
-            "success": False,
-            "error": "Limit must be between 1-50"
-        }), 400
-    
+        return jsonify({"success": False, "error": "Limit must be between 1-50"}), 400
+
     # Business logic
     results = search_engine.find_by_author(author, limit)
-    
+
     # Return response
-    return jsonify({
-        "success": True,
-        "author": author,
-        "results": results,
-        "result_count": len(results)
-    }), 200
+    return jsonify(
+        {"success": True, "author": author, "results": results, "result_count": len(results)}
+    ), 200
 ```
 
 **2. Add business logic to search engine**
@@ -328,12 +322,12 @@ def find_by_author(self, author: str, limit: int = 10) -> List[Dict[str, Any]]:
     results = []
     for rule in self.rules.values():
         # Check if author matches (case-insensitive)
-        rule_author = rule.get('author', '').lower()
+        rule_author = rule.get("author", "").lower()
         if author.lower() in rule_author:
             results.append(rule)
             if len(results) >= limit:
                 break
-    
+
     return results
 ```
 
@@ -345,29 +339,33 @@ Create `tests/unit/test_search_by_author.py`:
 import pytest
 from qa_tools.search_aliases import AliasAwareSearch
 
+
 @pytest.fixture
 def search_engine_with_authors(sample_rules):
     """Search engine with author metadata."""
     # Add author to sample rule
-    sample_rules[0]['author'] = 'John Doe'
-    sample_rules[1]['author'] = 'Jane Smith'
+    sample_rules[0]["author"] = "John Doe"
+    sample_rules[1]["author"] = "Jane Smith"
     return AliasAwareSearch(sample_rules, {})
+
 
 def test_find_by_author(search_engine_with_authors):
     """Test finding rules by author."""
-    results = search_engine_with_authors.find_by_author('John', limit=10)
+    results = search_engine_with_authors.find_by_author("John", limit=10)
     assert len(results) == 1
-    assert results[0]['author'] == 'John Doe'
+    assert results[0]["author"] == "John Doe"
+
 
 def test_find_by_author_case_insensitive(search_engine_with_authors):
     """Test that search is case-insensitive."""
-    results = search_engine_with_authors.find_by_author('JANE', limit=10)
+    results = search_engine_with_authors.find_by_author("JANE", limit=10)
     assert len(results) == 1
-    assert results[0]['author'] == 'Jane Smith'
+    assert results[0]["author"] == "Jane Smith"
+
 
 def test_find_by_author_limit(search_engine_with_authors):
     """Test that limit is respected."""
-    results = search_engine_with_authors.find_by_author('', limit=1)
+    results = search_engine_with_authors.find_by_author("", limit=1)
     assert len(results) <= 1
 ```
 
@@ -378,15 +376,12 @@ Add to `tests/integration/test_api.py`:
 ```python
 def test_api_search_by_author(client):
     """Test /api/search/by-author endpoint."""
-    response = client.post(
-        '/api/search/by-author',
-        json={'author': 'John', 'limit': 10}
-    )
+    response = client.post("/api/search/by-author", json={"author": "John", "limit": 10})
     assert response.status_code == 200
     data = response.get_json()
-    assert data['success'] is True
-    assert 'results' in data
-    assert 'result_count' in data
+    assert data["success"] is True
+    assert "results" in data
+    assert "result_count" in data
 ```
 
 **5. Update documentation**
@@ -448,18 +443,21 @@ import pytest
 from app.blueprints.search import search_bp
 from qa_tools.search_aliases import AliasAwareSearch
 
+
 # Fixtures (shared setup)
 @pytest.fixture
 def sample_data():
     return {"key": "value"}
 
+
 # Test class (optional, for organization)
 class TestSearchEngine:
     def test_something(self, sample_data):
         assert True
-    
+
     def test_another_thing(self, sample_data):
         assert True
+
 
 # Top-level test functions
 def test_standalone_function():
@@ -474,23 +472,26 @@ def test_standalone_function():
 def test_search():
     results = search_engine.search("longsword")
     assert len(results) > 0
-    assert results[0]['score'] > 0.5
-    assert results[0]['rule_id'] is not None
+    assert results[0]["score"] > 0.5
+    assert results[0]["rule_id"] is not None
+
 
 # ✅ Good: Separate concerns
 def test_search_returns_results():
     results = search_engine.search("longsword")
     assert len(results) > 0
 
+
 def test_search_results_have_scores():
     results = search_engine.search("longsword")
     for result in results:
-        assert result['score'] > 0
+        assert result["score"] > 0
+
 
 def test_search_results_have_rule_ids():
     results = search_engine.search("longsword")
     for result in results:
-        assert result['rule_id'] is not None
+        assert result["rule_id"] is not None
 ```
 
 **2. Use Descriptive Names**
@@ -498,6 +499,7 @@ def test_search_results_have_rule_ids():
 # ❌ Bad
 def test_1():
     pass
+
 
 # ✅ Good
 def test_search_returns_empty_list_for_nonexistent_query():
@@ -510,6 +512,7 @@ def test_search_empty_query():
     with pytest.raises(ValueError):
         search_engine.search("")
 
+
 def test_search_very_long_query():
     long_query = "a" * 1000
     results = search_engine.search(long_query)
@@ -520,11 +523,9 @@ def test_search_very_long_query():
 ```python
 @pytest.fixture
 def populated_search_engine():
-    rules = [
-        {"rule_id": "TEST-1", "content": "test"},
-        {"rule_id": "TEST-2", "content": "example"}
-    ]
+    rules = [{"rule_id": "TEST-1", "content": "test"}, {"rule_id": "TEST-2", "content": "example"}]
     return AliasAwareSearch(rules, {})
+
 
 def test_search_finds_rule(populated_search_engine):
     results = populated_search_engine.search("test")
@@ -539,7 +540,9 @@ def test_search_finds_rule(populated_search_engine):
 
 ```python
 def search_rules(query):
-    import pdb; pdb.set_trace()  # Execution pauses here
+    import pdb
+
+    pdb.set_trace()  # Execution pauses here
     results = []
     # ... continue debugging with n (next), s (step), c (continue)
 ```
@@ -601,20 +604,21 @@ def search_rules(query, max_results=10):
 
 **Scenario 2: API endpoint returning 500 error**
 ```python
-@search_bp.route('/api/search', methods=['POST'])
+@search_bp.route("/api/search", methods=["POST"])
 def search():
     try:
         data = request.get_json() or {}
-        query = data.get('query', '')
+        query = data.get("query", "")
         print(f"Received query: {query}")  # Debug
-        
+
         results = search_engine.search(query, max_results=10)
         print(f"Search returned: {len(results)}")  # Debug
-        
+
         return jsonify({"success": True, "results": results})
     except Exception as e:
         print(f"ERROR: {e}")  # Print stack trace
         import traceback
+
         traceback.print_exc()
         return jsonify({"success": False, "error": str(e)}), 500
 ```
@@ -640,6 +644,7 @@ from typing import Any, Dict
 
 logger = logging.getLogger(__name__)
 
+
 def log_search(query: str, result_count: int, execution_time_ms: float):
     """Log search operation."""
     logger.info(
@@ -647,22 +652,21 @@ def log_search(query: str, result_count: int, execution_time_ms: float):
         extra={
             "query": query,
             "result_count": result_count,
-            "execution_time_ms": execution_time_ms
-        }
+            "execution_time_ms": execution_time_ms,
+        },
     )
+
 
 def log_error(error_type: str, error_message: str, context: Dict[str, Any]):
     """Log error with context."""
-    logger.error(
-        f"{error_type}: {error_message}",
-        extra=context
-    )
+    logger.error(f"{error_type}: {error_message}", extra=context)
 ```
 
 ### Usage
 
 ```python
 from app.utils.logging import log_search, log_error
+
 
 def search_endpoint(request):
     try:
@@ -708,11 +712,11 @@ envVars:
 ```python
 import os
 
-DEBUG = os.getenv('DEBUG', 'False') == 'True'
-LOG_LEVEL = os.getenv('LOG_LEVEL', 'INFO')
-API_KEY = os.getenv('API_KEY', '')
+DEBUG = os.getenv("DEBUG", "False") == "True"
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
+API_KEY = os.getenv("API_KEY", "")
 
-if not API_KEY and os.getenv('FLASK_ENV') == 'production':
+if not API_KEY and os.getenv("FLASK_ENV") == "production":
     raise RuntimeError("API_KEY must be set in production")
 ```
 
