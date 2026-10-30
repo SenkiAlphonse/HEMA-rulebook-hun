@@ -40,14 +40,11 @@ tests/
 ```python
 # test_search.py
 class TestRulebookSearch:
-    def test_basic_search_returns_results(self):
-        ...
-    
-    def test_search_empty_query_returns_empty_list(self):
-        ...
-    
-    def test_search_case_insensitive_lookup(self):
-        ...
+    def test_basic_search_returns_results(self): ...
+
+    def test_search_empty_query_returns_empty_list(self): ...
+
+    def test_search_case_insensitive_lookup(self): ...
 ```
 
 ### Test Categorization
@@ -71,20 +68,20 @@ Mark tests for selective execution:
 ```python
 import pytest
 
+
 # Mark slow tests
 @pytest.mark.slow
-def test_large_dataset_search():
-    ...
+def test_large_dataset_search(): ...
+
 
 # Mark integration tests
 @pytest.mark.integration
-def test_api_endpoint():
-    ...
+def test_api_endpoint(): ...
+
 
 # Mark expected failures
 @pytest.mark.xfail
-def test_known_issue():
-    ...
+def test_known_issue(): ...
 ```
 
 Run marked tests:
@@ -178,31 +175,32 @@ ptw tests/ -- --cov=app --cov=qa_tools
 import pytest
 from qa_tools.search_engine import AliasAwareSearch
 
+
 class TestRulebookSearch:
     """Test suite for RulebookSearch"""
-    
+
     @pytest.fixture
     def search_engine(self):
         """Provide search engine instance"""
         return AliasAwareSearch()
-    
+
     def test_basic_functionality(self, search_engine):
         """Test basic search functionality"""
         # Arrange
         query = "target areas"
-        
+
         # Act
         results = search_engine.search(query)
-        
+
         # Assert
         assert len(results) > 0
-        assert results[0]['id'] is not None
-    
+        assert results[0]["id"] is not None
+
     def test_edge_case_empty_query(self, search_engine):
         """Test search with empty query"""
         results = search_engine.search("")
         assert results == []
-    
+
     def test_case_sensitivity(self, search_engine):
         """Test case-insensitive search"""
         # Search should work with different cases
@@ -217,32 +215,33 @@ class TestRulebookSearch:
 import pytest
 from app import create_app
 
+
 class TestSearchAPI:
     """Test Flask search API endpoints"""
-    
+
     @pytest.fixture
     def app(self):
         """Create test app"""
         app = create_app()
-        app.config['TESTING'] = True
+        app.config["TESTING"] = True
         return app
-    
+
     @pytest.fixture
     def client(self, app):
         """Create test client"""
         return app.test_client()
-    
+
     def test_search_endpoint_returns_json(self, client):
         """Test search endpoint returns valid JSON"""
-        response = client.get('/api/search?query=target')
+        response = client.get("/api/search?query=target")
         assert response.status_code == 200
-        assert response.json['success'] is True
-    
+        assert response.json["success"] is True
+
     def test_rule_by_id_endpoint(self, client):
         """Test rule lookup endpoint"""
-        response = client.get('/api/rule/GEN-1.1.1')
+        response = client.get("/api/rule/GEN-1.1.1")
         assert response.status_code == 200
-        assert 'data' in response.json
+        assert "data" in response.json
 ```
 
 ### Parameterized Tests
@@ -252,29 +251,36 @@ Test multiple scenarios with less code:
 ```python
 import pytest
 
+
 class TestSearchVariants:
     """Test search with multiple scenarios"""
-    
-    @pytest.mark.parametrize("query,expected_count", [
-        ("target", 5),  # At least 5 results for "target"
-        ("GEN-1", 3),   # At least 3 GEN-1 rules
-        ("VOR", 2),     # At least 2 VOR-specific rules
-    ])
+
+    @pytest.mark.parametrize(
+        "query,expected_count",
+        [
+            ("target", 5),  # At least 5 results for "target"
+            ("GEN-1", 3),  # At least 3 GEN-1 rules
+            ("VOR", 2),  # At least 2 VOR-specific rules
+        ],
+    )
     def test_search_returns_expected_count(self, search_engine, query, expected_count):
         """Test search returns reasonable number of results"""
         results = search_engine.search(query)
         assert len(results) >= expected_count
-    
-    @pytest.mark.parametrize("rule_id", [
-        "GEN-1.1.1",
-        "GEN-1.2.1",
-        "VOR-1.1.1",
-    ])
+
+    @pytest.mark.parametrize(
+        "rule_id",
+        [
+            "GEN-1.1.1",
+            "GEN-1.2.1",
+            "VOR-1.1.1",
+        ],
+    )
     def test_get_rule_by_id(self, search_engine, rule_id):
         """Test getting rule by ID for multiple IDs"""
         rule = search_engine.get_rule_by_id(rule_id)
         assert rule is not None
-        assert rule['id'] == rule_id
+        assert rule["id"] == rule_id
 ```
 
 ### Testing Exceptions
@@ -283,14 +289,15 @@ class TestSearchVariants:
 import pytest
 from qa_tools.search_engine import AliasAwareSearch
 
+
 class TestErrorHandling:
     """Test error handling"""
-    
+
     def test_invalid_rule_id_raises_error(self, search_engine):
         """Test that invalid rule ID raises appropriate error"""
         with pytest.raises(ValueError):
             search_engine.get_rule_by_id("INVALID-99.99.99")
-    
+
     def test_malformed_query_handled_gracefully(self, search_engine):
         """Test graceful handling of malformed queries"""
         # Should not raise, should return empty or default
@@ -308,11 +315,13 @@ Fixtures provide reusable test data and setup/teardown:
 import pytest
 from qa_tools.search_engine import AliasAwareSearch
 
+
 # Function-scoped fixture (created for each test)
 @pytest.fixture
 def search_engine():
     """Provide search engine instance"""
     return AliasAwareSearch()
+
 
 # Session-scoped fixture (created once for entire test session)
 @pytest.fixture(scope="session")
@@ -347,22 +356,26 @@ import pytest
 from app import create_app
 from qa_tools.search_engine import AliasAwareSearch
 
+
 @pytest.fixture
 def app():
     """Create app for testing"""
     app = create_app()
-    app.config['TESTING'] = True
+    app.config["TESTING"] = True
     return app
+
 
 @pytest.fixture
 def client(app):
     """Create test client"""
     return app.test_client()
 
+
 @pytest.fixture
 def search_engine():
     """Create search engine instance"""
     return AliasAwareSearch()
+
 
 # Now available in any test file:
 class TestSomething:
@@ -387,18 +400,21 @@ See `tests/conftest.py` for all available fixtures:
 from unittest.mock import mock_open, patch
 import pytest
 
+
 class TestRuleParser:
     """Test rule parser with mocked file I/O"""
-    
-    @patch('builtins.open', new_callable=mock_open, read_data='# Test Rule\n**GEN-1.1.1** Test content')
+
+    @patch(
+        "builtins.open", new_callable=mock_open, read_data="# Test Rule\n**GEN-1.1.1** Test content"
+    )
     def test_parse_markdown_file(self, mock_file):
         """Test parsing markdown without hitting filesystem"""
         from qa_tools.tools.parser import parse_markdown
-        
+
         rules = parse_markdown("test.md")
-        
+
         # Verify file was opened
-        mock_file.assert_called_once_with("test.md", 'r')
+        mock_file.assert_called_once_with("test.md", "r")
         # Verify parsing worked
         assert len(rules) > 0
 ```
@@ -409,23 +425,25 @@ class TestRuleParser:
 from unittest.mock import patch, MagicMock
 import pytest
 
+
 class TestSearchWithDB:
     """Test search functionality with mocked database"""
-    
-    @patch('qa_tools.search_engine.load_rules_index')
+
+    @patch("qa_tools.search_engine.load_rules_index")
     def test_search_with_custom_index(self, mock_load):
         """Test search with custom mocked index"""
         # Setup mock index data
         mock_index = {
-            'rules': [
-                {'id': 'TEST-1', 'text': 'Test rule'},
+            "rules": [
+                {"id": "TEST-1", "text": "Test rule"},
             ]
         }
         mock_load.return_value = mock_index
-        
+
         from qa_tools.search_engine import AliasAwareSearch
+
         search = AliasAwareSearch()
-        
+
         results = search.search("test")
         assert len(results) > 0
 ```
@@ -440,6 +458,7 @@ def test_1():
     global shared_state
     shared_state = "initialized"
 
+
 def test_2():
     # Assumes test_1 ran first
     assert shared_state == "initialized"
@@ -451,8 +470,10 @@ def test_2():
 def setup():
     return "initialized"
 
+
 def test_1(setup):
     assert setup == "initialized"
+
 
 def test_2(setup):
     assert setup == "initialized"
@@ -481,23 +502,24 @@ def test_search_with_query():
     # ARRANGE: Set up test data
     search = AliasAwareSearch()
     query = "target areas"
-    
+
     # ACT: Execute the code being tested
     results = search.search(query)
-    
+
     # ASSERT: Verify the results
     assert len(results) > 0
-    assert all('id' in r for r in results)
+    assert all("id" in r for r in results)
 ```
 
 ### 4. Mock External Dependencies
 
 ```python
 # ✅ Good: Mock external resources
-@patch('builtins.open', new_callable=mock_open, read_data='{"rules": []}')
+@patch("builtins.open", new_callable=mock_open, read_data='{"rules": []}')
 def test_loader_with_mock_file(self, mock_file):
     result = load_index("any/path.json")
     assert result == {"rules": []}
+
 
 # ❌ Bad: Hitting the real filesystem / network in tests
 def test_loader_with_real_file():
@@ -513,27 +535,29 @@ def test_loader_with_real_file():
 @pytest.fixture
 def app():
     app = create_app()
-    app.config['TESTING'] = True
+    app.config["TESTING"] = True
     yield app
     # Cleanup happens automatically
+
 
 class TestAPI:
     def test_endpoint(self, app):
         client = app.test_client()
-        response = client.get('/api/search?query=test')
+        response = client.get("/api/search?query=test")
         assert response.status_code == 200
+
 
 # ❌ Bad: Manual setup in each test
 class TestAPI:
     def test_endpoint_1(self):
         app = create_app()
-        app.config['TESTING'] = True
+        app.config["TESTING"] = True
         client = app.test_client()
         # ... test code ...
-    
+
     def test_endpoint_2(self):
         app = create_app()  # Repeated setup
-        app.config['TESTING'] = True
+        app.config["TESTING"] = True
         client = app.test_client()
         # ... test code ...
 ```
@@ -544,15 +568,15 @@ class TestAPI:
 def test_comprehensive_search():
     """Test search handles various edge cases"""
     search = AliasAwareSearch()
-    
+
     # Normal case
     assert len(search.search("valid query")) > 0
-    
+
     # Edge cases
-    assert search.search("") == []           # Empty query
-    assert search.search("@#$%") == []       # Special chars
-    assert search.search(" " * 100) == []    # Whitespace only
-    assert len(search.search("a")) >= 0      # Single char
+    assert search.search("") == []  # Empty query
+    assert search.search("@#$%") == []  # Special chars
+    assert search.search(" " * 100) == []  # Whitespace only
+    assert len(search.search("a")) >= 0  # Single char
 ```
 
 ### 7. Test Error Conditions

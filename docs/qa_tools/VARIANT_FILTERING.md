@@ -54,15 +54,15 @@ The `parser.py` now includes intelligent variant detection:
 ```python
 @dataclass
 class Rule:
-    rule_id: str              # e.g., "GEN-6.10.4.1"
-    text: str                 # VOR-specific text only
+    rule_id: str  # e.g., "GEN-6.10.4.1"
+    text: str  # VOR-specific text only
     section: str
     subsection: str
     document: str
     anchor_id: str
     line_number: int
-    weapon_type: str = ""     # e.g., "longsword", "general"
-    variant: str = ""        # e.g., "VOR", "COMBAT", "AFTERBLOW"
+    weapon_type: str = ""  # e.g., "longsword", "general"
+    variant: str = ""  # e.g., "VOR", "COMBAT", "AFTERBLOW"
 ```
 
 ## Searching with Variant Filters
@@ -88,23 +88,13 @@ from qa_tools.search_engine import AliasAwareSearch
 search = AliasAwareSearch("data/search/rules_index.json")
 
 # Search VOR variant only
-vor_results = search.search(
-    "mérkőzés",
-    variant_filter="VOR"
-)
+vor_results = search.search("mérkőzés", variant_filter="VOR")
 
 # Search COMBAT + longsword only
-combat_longsword = search.search(
-    "támadás",
-    weapon_filter="longsword",
-    variant_filter="COMBAT"
-)
+combat_longsword = search.search("támadás", weapon_filter="longsword", variant_filter="COMBAT")
 
 # Search AFTERBLOW variant only
-afterblow_results = search.search(
-    "pontok",
-    variant_filter="AFTERBLOW"
-)
+afterblow_results = search.search("pontok", variant_filter="AFTERBLOW")
 ```
 
 ## Search Query Examples
@@ -204,26 +194,16 @@ This will:
 
 ```python
 search = AliasAwareSearch("data/search/rules_index.json")
-results = search.search(
-    "időlimit limit timeout",
-    variant_filter="VOR",
-    max_results=10
-)
+results = search.search("időlimit limit timeout", variant_filter="VOR", max_results=10)
 ```
 
 ### Example 2: Compare COMBAT vs AFTERBLOW scoring rules
 
 ```python
-combat_scoring = search.search(
-    "pontok scoring points",
-    variant_filter="COMBAT",
-    max_results=5
-)
+combat_scoring = search.search("pontok scoring points", variant_filter="COMBAT", max_results=5)
 
 afterblow_scoring = search.search(
-    "pontok scoring points", 
-    variant_filter="AFTERBLOW",
-    max_results=5
+    "pontok scoring points", variant_filter="AFTERBLOW", max_results=5
 )
 ```
 
@@ -237,7 +217,7 @@ base_rule = search.get_rule_by_id("GEN-6.10.4")
 variants = {
     "VOR": search.get_rule_by_id("GEN-6.10.4.1"),
     "COMBAT": search.get_rule_by_id("GEN-6.10.4.2"),
-    "AFTERBLOW": search.get_rule_by_id("GEN-6.10.4.3")
+    "AFTERBLOW": search.get_rule_by_id("GEN-6.10.4.3"),
 }
 
 for variant_name, rule in variants.items():
