@@ -139,7 +139,7 @@ HEMA-rulebook-hun/
 
 | Component | Technology |
 |-----------|-----------|
-| Backend | Python 3.9+, Flask |
+| Backend | Python 3.10+, Flask |
 | Search | Custom hierarchical indexing |
 | Database | JSON indexes |
 | Testing | pytest, pytest-cov |
@@ -168,7 +168,7 @@ HEMA-rulebook-hun/
 ## Development
 
 ### Requirements
-- Python 3.9+
+- Python 3.10+
 - pip
 - Virtual environment (recommended)
 

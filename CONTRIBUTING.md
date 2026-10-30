@@ -13,7 +13,7 @@ Thank you for your interest in contributing! This guide will help you get starte
 ## Development Setup
 
 ### Prerequisites
-- Python 3.9+
+- Python 3.10+
 - pip
 - Virtual environment (recommended)
 
@@ -50,38 +50,53 @@ HEMA-rulebook-hun/
 │   ├── blueprints/               # Flask blueprints
 │   │   ├── search.py            # Search API endpoints
 │   │   └── rulebook.py          # Rulebook display endpoints
-│   ├── config.py                # Centralized configuration
-│   ├── utils/                   # Shared utilities (no utils.py shim)
+│   ├── config.py                # Centralized configuration (data paths, etc.)
+│   ├── query_log.py             # Search query logging
+│   ├── static/                  # Static assets
+│   ├── utils/                   # Shared utilities (e.g. markdown_utils.py)
 │   └── validation.py            # Input validation
 │
 ├── src/qa_tools/                   # Search and indexing package
 │   ├── search_engine/            # Search implementations
 │   │   ├── search_aliases.py    # AliasAwareSearch (production)
+│   │   ├── search_scoring.py    # Result scoring
+│   │   ├── search_config.py     # Scoring weights and constants
 │   │   ├── search_utils.py      # Shared search utilities
 │   │   └── __init__.py
 │   ├── tools/                    # Utility scripts
 │   │   ├── parser.py            # Rule parser
 │   │   ├── add_aliases.py       # Alias management
 │   │   ├── demo_search.py       # Interactive search demo
+│   │   ├── test_hierarchy.py    # Hierarchy inspection script
 │   │   └── __init__.py
-│   ├── data/                     # Index and configuration files
-│   │   ├── rules_index_hun.json
-│   │   ├── rules_index_eng.json
-│   │   └── aliases.json
+│   ├── output/                   # Generated output (git-kept placeholder)
 │   └── __init__.py
+│
+├── data/search/                   # Built indexes and alias dictionary (not inside src/)
+│   ├── rules_index_hun.json
+│   ├── rules_index_eng.json
+│   ├── aliases.json             # Shared aliases (aliases_<lang>.json overrides per language)
+│   └── ruleset_meta.json
 │
 ├── tests/                         # Test suite
 │   ├── conftest.py              # Pytest fixtures
 │   ├── unit/                    # Unit tests
 │   │   ├── test_search.py
+│   │   ├── test_search_scoring.py
 │   │   ├── test_parser.py
 │   │   └── test_utils.py
 │   └── integration/             # Integration tests
-│       └── test_api.py
+│       ├── test_api.py
+│       └── test_rulebook_scroll.py
 │
+├── tools/                         # Build and maintenance scripts (build.py, check_integrity.py, ...)
+├── build.py                       # Builds indexes and pre-rendered rulebooks
+├── dist/                          # Pre-rendered HTML rulebooks (build artifact)
 ├── templates/                     # Jinja2 templates for Flask
 ├── docs/                         # Documentation
-├── rules/                        # Markdown rulebook files
+├── examples/                     # Demo scripts for the qa_tools package
+├── rules/                        # Hungarian markdown rulebook files
+├── rules_en/                     # English markdown rulebook files
 └── fuggelek/                     # Appendices (glossary, penalties, etc.)
 ```
 
@@ -274,7 +289,7 @@ git commit -m "update"
 
 ### Configuration Over Hardcoding
 - All configurable values in `src/app/config.py`
-- Environment variables for secrets (API keys)
+- Environment variables for secrets (none are currently required)
 - No magic numbers in code
 
 ### Error Handling

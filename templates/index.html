@@ -268,6 +268,72 @@
             color: #95a5a6;
         }
 
+        .label-row {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            align-self: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .label-row label {
+            margin-bottom: 0;
+        }
+
+        .info-btn {
+            width: 18px;
+            height: 18px;
+            padding: 0;
+            border: 1.5px solid #7f8c8d;
+            border-radius: 50%;
+            background: #ffffff;
+            color: #34495e;
+            font: italic 700 11px/1 Georgia, serif;
+            cursor: pointer;
+        }
+
+        .info-btn:hover,
+        .info-btn:focus-visible,
+        .info-btn[aria-expanded="true"] {
+            background: #34495e;
+            border-color: #34495e;
+            color: #ffffff;
+        }
+
+        .info-panel {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 20;
+            width: min(360px, 85vw);
+            padding: 12px 14px;
+            border: 1px solid #dfe1e4;
+            border-radius: 6px;
+            background: #ffffff;
+            box-shadow: 0 6px 18px rgba(44, 62, 80, 0.18);
+            color: #2c3e50;
+            font-size: 0.85em;
+            line-height: 1.45;
+            text-transform: none;
+            letter-spacing: normal;
+            font-weight: 400;
+        }
+
+        .info-panel p {
+            margin: 0;
+        }
+
+        .info-panel p + p {
+            margin-top: 8px;
+        }
+
+        .label-row:hover .info-panel,
+        .info-panel.open {
+            display: block;
+        }
+
         .form-group input:focus,
         .form-group select:focus {
             outline: none;
@@ -770,11 +836,19 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="query" id="labelQuery">Search Query</label>
+                        <div class="label-row">
+                            <label for="query" id="labelQuery">Search Query</label>
+                            <button type="button" class="info-btn" id="queryHelpBtn" aria-expanded="false" aria-controls="queryHelp">i</button>
+                            <div class="info-panel" id="queryHelp" role="note">
+                                <p id="queryHelpKeywords"></p>
+                                <p id="queryHelpSynonyms"></p>
+                            </div>
+                        </div>
                         <input
                             type="text"
                             id="query"
                             name="query"
+                            aria-describedby="queryHelp"
                             placeholder="e.g., 'right of way target', 'longsword strike'"
                             required
                         >
@@ -887,6 +961,9 @@
                 extractCardTitle: 'Download Rulebook Extract',
                 labelLanguage: 'Language',
                 labelQuery: 'Search Query',
+                queryHelpLabel: 'How search works',
+                queryHelpKeywords: 'Every search word must appear in the same rule, but not necessarily next to each other or in order. Partial words match too: "left hand" finds "left-hander".',
+                queryHelpSynonyms: 'Known terms and synonyms are recognised automatically (for now, based on a static list). For example, "right of way" also finds "priority".',
                 labelVariant: 'Variant',
                 labelWeapon: 'Weapon',
                 labelExtractVariant: 'Extract Variant',
@@ -949,6 +1026,9 @@
                 extractCardTitle: 'Szabálykivonat letöltése',
                 labelLanguage: 'Nyelv',
                 labelQuery: 'Keresőkifejezés',
+                queryHelpLabel: 'Hogyan működik a keresés',
+                queryHelpKeywords: 'Minden keresőszónak szerepelnie kell ugyanabban a szabályban, de nem feltétlenül egymás mellett vagy ebben a sorrendben. Szórészletre is kereshetsz: a „közbetám” megtalálja a „közbetámadás” szót.',
+                queryHelpSynonyms: 'Az ismert kifejezéseket és szinonimákat a kereső automatikusan (egyelőre egy statikus lista alapján) felismeri. Például a „tilos” keresés a „szabálytalan” szót tartalmazó szabályokat is megtalálja.',
                 labelVariant: 'Változat',
                 labelWeapon: 'Fegyvernem',
                 labelExtractVariant: 'Kivonat változat',
@@ -1027,6 +1107,9 @@
             setText('extractCardTitle', t('extractCardTitle'));
             setText('labelSearchLanguage', t('labelLanguage'));
             setText('labelQuery', t('labelQuery'));
+            setText('queryHelpKeywords', t('queryHelpKeywords'));
+            setText('queryHelpSynonyms', t('queryHelpSynonyms'));
+            document.getElementById('queryHelpBtn')?.setAttribute('aria-label', t('queryHelpLabel'));
             setText('labelVariant', t('labelVariant'));
             setText('labelWeapon', t('labelWeapon'));
             setText('labelExtractLanguage', t('labelLanguage'));
@@ -1457,8 +1540,25 @@
         applyUiLanguage(initialUiLang === 'hun' ? 'hun' : 'eng');
         applyRulesLanguage(initialRulesLang);
 
+        const queryHelpBtn = document.getElementById('queryHelpBtn');
+        const queryHelpPanel = document.getElementById('queryHelp');
+        function setQueryHelpOpen(open) {
+            queryHelpPanel.classList.toggle('open', open);
+            queryHelpBtn.setAttribute('aria-expanded', String(open));
+        }
+        queryHelpBtn.addEventListener('click', () => {
+            setQueryHelpOpen(!queryHelpPanel.classList.contains('open'));
+        });
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.label-row')) setQueryHelpOpen(false);
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setQueryHelpOpen(false);
+        });
+
         // Allow Enter key to search from any field
         document.addEventListener('keypress', (e) => {
+            if (e.target.closest('.info-btn')) return;
             if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
                 e.preventDefault();
                 search();
