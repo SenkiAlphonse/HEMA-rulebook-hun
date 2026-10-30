@@ -962,8 +962,8 @@
                 labelLanguage: 'Language',
                 labelQuery: 'Search Query',
                 queryHelpLabel: 'How search works',
-                queryHelpKeywords: 'Every search word must appear in the same rule, but not necessarily next to each other or in order. Partial words match too: "left hand" finds "left-hander".',
-                queryHelpSynonyms: 'Known terms and synonyms are recognised automatically (for now, based on a static list). For example, "right of way" also finds "priority".',
+                queryHelpKeywords: 'Every search word must appear in the same rule (or its heading), but not necessarily next to each other or in order. Words of four or more letters also match inside longer words: "left hand" finds "left-hander"; shorter words must match whole. One- and two-character words (such as "of" or "5") and common words like "the" or "and" are ignored.',
+                queryHelpSynonyms: 'Known terms and synonyms are recognised automatically (for now, based on a static list). For example, "right of way" also finds "priority". Typing a variant or weapon name only searches the rule text; to restrict results, use the Variant and Weapon filters.',
                 labelVariant: 'Variant',
                 labelWeapon: 'Weapon',
                 labelExtractVariant: 'Extract Variant',
@@ -991,6 +991,7 @@
                 whatsNew: "What's new",
                 resultsHeader: 'Results',
                 parentContext: 'Parent context',
+                citedBy: 'Rules citing this rule',
                 groupsRemaining: 'groups remaining',
                 errorPrefix: 'Error',
                 statsTotal: 'Total Rules',
@@ -1027,8 +1028,8 @@
                 labelLanguage: 'Nyelv',
                 labelQuery: 'Keresőkifejezés',
                 queryHelpLabel: 'Hogyan működik a keresés',
-                queryHelpKeywords: 'Minden keresőszónak szerepelnie kell ugyanabban a szabályban, de nem feltétlenül egymás mellett vagy ebben a sorrendben. Szórészletre is kereshetsz: a „közbetám” megtalálja a „közbetámadás” szót.',
-                queryHelpSynonyms: 'Az ismert kifejezéseket és szinonimákat a kereső automatikusan (egyelőre egy statikus lista alapján) felismeri. Például a „tilos” keresés a „szabálytalan” szót tartalmazó szabályokat is megtalálja.',
+                queryHelpKeywords: 'Minden keresőszónak szerepelnie kell ugyanabban a szabályban (vagy annak címében), de nem feltétlenül egymás mellett vagy ebben a sorrendben. A legalább négybetűs szavakra szórészletként is rákereshetsz: a „közbetám” megtalálja a „közbetámadás” szót; a rövidebbeknek teljes szóként kell szerepelniük. Az egy-két karakteres szavakat (pl. „5”) és az olyan gyakori szavakat, mint az „és” vagy a „vagy”, a kereső figyelmen kívül hagyja.',
+                queryHelpSynonyms: 'Az ismert kifejezéseket és szinonimákat a kereső automatikusan (egyelőre egy statikus lista alapján) felismeri. Például a „tilos” keresés a „szabálytalan” szót tartalmazó szabályokat is megtalálja. Egy változat vagy fegyvernem nevének beírása csak a szabályok szövegében keres; a találatok szűkítéséhez használd a Változat és a Fegyvernem szűrőt.',
                 labelVariant: 'Változat',
                 labelWeapon: 'Fegyvernem',
                 labelExtractVariant: 'Kivonat változat',
@@ -1056,6 +1057,7 @@
                 whatsNew: 'Újdonságok',
                 resultsHeader: 'Találatok',
                 parentContext: 'Szabály kontextusa',
+                citedBy: 'Erre a szabályra hivatkozó szabályok',
                 groupsRemaining: 'csoport van hátra',
                 errorPrefix: 'Hiba',
                 statsTotal: 'Összes szabály',
@@ -1381,7 +1383,8 @@
 
             let html = '';
             groupsToShow.forEach(group => {
-                const isGrouped = group.context.length > 0 || group.matches.length > 1;
+                const citedBy = group.cited_by || [];
+                const isGrouped = group.context.length > 0 || group.matches.length > 1 || citedBy.length > 0;
                 html += `<section class="result-group${isGrouped ? ' is-grouped' : ''}">`;
                 if (group.context.length) {
                     html += `<div class="result-context"><div class="result-context-label">${t('parentContext')}</div>`;
@@ -1389,6 +1392,11 @@
                     html += '</div>';
                 }
                 html += group.matches.map(result => renderResultItem(result)).join('');
+                if (citedBy.length) {
+                    html += `<div class="result-context"><div class="result-context-label">${t('citedBy')}</div>`;
+                    html += citedBy.map(result => renderResultItem(result, true)).join('');
+                    html += '</div>';
+                }
                 html += '</section>';
             });
 

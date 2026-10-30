@@ -9,10 +9,12 @@ Your Q&A system now supports **intelligent alias matching** to make searches mor
 ### 1. **Variant Aliases** (Változat Aliasok)
 Map alternative names to competition rule variants:
 - **VOR** → "right of way", "row", "right-of-way", "priority", "prio"
-- **COMBAT** → "free fencing", "combat", "cf", "free-fencing"
+- **COMBAT** → "free fencing", "combat", "free-fencing"
 - **AFTERBLOW** → "afterblow", "after-blow", "ab", "after blow"
 
-**Example:** Query `"right of way rules"` will find all VOR format rules
+**Example:** Query `"right of way rules"` finds rules that contain "rules" and any of the VOR
+phrases (e.g. "priority"). It does not restrict results to the VOR ruleset; use the Variant
+filter for that.
 
 ### 2. **Weapon Aliases** (Fegyvernem Aliasok)
 Map alternative names to weapons:
@@ -20,7 +22,8 @@ Map alternative names to weapons:
 - **rapier** → "rapier", "rp", "rapira", "rapier sword"
 - **padded_weapons** → "padded", "padded weapons", "padded weapon", "párnázott"
 
-**Example:** Query `"sword target areas"` finds longsword rules
+**Example:** Query `"sword target areas"` finds rules that mention any of the longsword terms and
+"target areas". Use the Weapon filter to restrict results to one weapon.
 
 ### 3. **Concept Aliases** (Koncepció Aliasok)
 Map related terms to important concepts:
@@ -29,38 +32,46 @@ Map related terms to important concepts:
 - **equipment** → "gear", "felszerelés", "protective gear"
 - **illegal** → "forbidden", "not allowed", "prohibited", "tilos"
 
-**Example:** Query `"illegal techniques"` boosts scoring for rules about prohibited actions
+**Example:** Query `"illegal techniques"` finds rules that contain "techniques" and any of the
+terms above, such as "prohibited" or "tilos"
+
+### How Matching Works
+
+The three categories are only a way to organise `aliases.json`: every list is a group of
+interchangeable phrases. A rule matches when each alias group named in the query is found in the
+rule's own text or one of its headings, as a whole word or phrase, and every remaining keyword is
+found too. A rule's variant or weapon metadata never makes it a match.
 
 ## How to Use
 
 ### Basic Search
 ```
 Query: longsword target areas
-→ Returns longsword rules about targets
+→ Returns rules that mention a longsword term and a target-area term
 ```
 
 ### With Format Filter
 ```
-Query: VOR equipment
+Query: equipment, variant_filter="VOR"
 → Returns only general + VOR-specific equipment rules
 ```
 
 ### With Weapon Filter
 ```
-Query: longsword strike
-→ Returns longsword-specific strike rules
+Query: strike, weapon_filter="longsword"
+→ Returns longsword-specific and general strike rules
 ```
 
 ### Using Aliases
 ```
 Query: right of way priority
-→ Finds VOR rules (aliases: "right of way", "priority")
+→ Finds rules that mention "right of way", "priority" or the other VOR terms
 
 Query: free fencing cut
-→ Finds COMBAT format rules (alias: "free fencing")
+→ Finds rules that mention "free fencing" or "combat", and "cut"
 
 Query: padded weapon target
-→ Finds padded weapons rules (alias: "padded")
+→ Finds rules that mention "padded" or "padded weapon", and "target"
 ```
 
 ## Customizing Aliases
@@ -85,11 +96,10 @@ Then restart the search tool—changes take effect immediately!
 
 ## How Scoring Works
 
-Alias matches get bonus points:
-- Format alias match: +40 points
-- Weapon alias match: +20 points
-- Concept alias match: +15 points
-- Direct rule ID match: +100 points (still highest priority)
+Each alias group named in the query adds one bonus per search, not one per alias:
+- Group found in the rule text: +40 points
+- Group found only in a heading: +20 points
+- Exact rule ID match: ranked in its own tier above all other results
 
 Results are sorted by total relevance score.
 

@@ -54,15 +54,27 @@ curl -X POST http://localhost:5000/api/search \
 Search for rules using natural language queries with automatic alias resolution.
 
 Registered aliases are matched as whole words or phrases, not as independent
-keywords. For example, `right of way` resolves to the VOR alias group: it finds
-VOR rules and applicable rules mentioning alternatives such as `priority`, but
-does not match `right handed` merely because it contains `right`. Quotes are
-not required. Hyphens and spaces are equivalent within aliases. Variant and
-weapon aliases also select the corresponding filters; general rules must
-still match the alias group rather than being included automatically.
+keywords. For example, `right of way` resolves to a group of interchangeable
+phrases (`right of way`, `priority`, ...): a rule matches when its own text or
+one of its headings contains any of them, but not merely because it contains
+`right`. Quotes are not required, and hyphens and spaces are equivalent within
+aliases.
+
+Aliases never select a variant or weapon, and a rule's own variant or weapon
+never makes it a match; use `variant_filter` and `weapon_filter` for that.
 Additional non-alias keywords must all match the rule text or headings and
-retain substring matching. Alias recognition is case-insensitive; comparisons
-against rule text also ignore accents.
+retain substring matching. When a query names several alias groups, each group
+must match. Matches in rule text rank above matches only in a heading. Alias
+recognition is case-insensitive; comparisons against rule text also ignore
+accents.
+
+Rule IDs in the query (such as `GEN-6.2.1`, in any case, optionally followed by
+punctuation) are looked up as IDs and are not searched as keywords, so that
+rule is returned first (it is ranked above every other result) without unrelated
+rules that merely mention `GEN-...`. An ID that does not exist returns no
+results and triggers suggestions. Rule IDs written inside rule text (cross-references
+like `[LS-VOR-1.3.4]`) are ignored when matching keywords and aliases, so their parts
+(`LS`, `VOR`, `AB`) never match as words.
 
 **Request Body:**
 ```json
@@ -121,6 +133,7 @@ Search responses also retain the flat `results` array and include additive hiera
 - `match_count` counts ranked rule matches; `group_count` counts result groups.
 - Each flat result has a consistent `group_root` and an `is_match` flag. Context rows have `is_match: false`.
 - `groups` contains each `group_root`, its unmatched ancestor `context`, and its ranked `matches`. Matched ancestors appear once in `matches`, not again as context.
+- Each group also has `cited_by`: when the query names a rule by ID, the rules that cite it (from the index's `references_from`), filtered by `variant_filter`/`weapon_filter` and without rules already shown in the response. These rows have `is_match: false`, are not counted in `match_count`, and are not part of the flat `results` array. For other queries `cited_by` is empty.
 
 The numeric `score` is a relative ranking value for a search, not a probability or confidence measure.
 
@@ -226,11 +239,15 @@ curl "http://localhost:5000/api/stats?rules_lang=eng"
 
 ---
 
-### 4. Resolve Alias
+### 4. Download Extract
 
 **Endpoint:** `POST /api/extract`
 
 Download a markdown extract filtered by weapon + variant from selected language index.
+The body is optional; without filters the whole ruleset is returned. Filter values are
+matched case-insensitively (`"Rapier"` works) and must be one of the allowed values
+(weapons: `longsword`, `rapier`, `padded_weapons`; variants: `VOR`, `COMBAT`, `AFTERBLOW`).
+The extract contains the general rules plus the rules of the chosen weapon/variant.
 
 **Request Body:**
 ```json
@@ -244,6 +261,9 @@ Download a markdown extract filtered by weapon + variant from selected language 
 **Response (200 OK):**
 - `text/markdown` attachment
 - Filename format: `rulebook-extract_<rules_lang>_<weapon>_<variant>.md`
+
+**Response (400 Bad Request):** an unknown or non-string filter value, an invalid
+`rules_lang`, or a body that is not a JSON object.
 
 **Example:**
 ```bash

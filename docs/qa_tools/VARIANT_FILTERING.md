@@ -67,17 +67,18 @@ class Rule:
 
 ## Searching with Variant Filters
 
-### Automatic Detection
+### Choosing a Variant
 
-Simply include the variant name in your query:
+Variants are selected only through the `variant_filter` argument (the Variant dropdown in the
+web UI). Typing a variant name in the query is an ordinary text search:
 
 ```
 Query: VOR mérkőzés
-→ Results automatically filtered to VOR-only rules
-  with bonus scoring for variant matches
+→ Rules whose text or headings contain a VOR term ("vor", "right of way", "priority", ...)
+  and "mérkőzés"; the rule's own variant tag is not considered
 
-Query: COMBAT 5 találat
-→ Returns only COMBAT variant rules
+Query: mérkőzés, variant_filter="COMBAT"
+→ COMBAT and general rules containing "mérkőzés"
 ```
 
 ### Explicit Filtering (API)
@@ -101,21 +102,23 @@ afterblow_results = search.search("pontok", variant_filter="AFTERBLOW")
 
 ### Hungarian Examples
 
-| Query | Returns |
-|-------|---------|
-| `VOR 5 találat` | Only VOR variant rules about reaching 5 hits |
-| `COMBAT döntő` | Only COMBAT variant rules about deciding hits |
-| `AFTERBLOW 7 pont` | Only AFTERBLOW variant rules about scoring 7+ points |
-| `hosszúkard COMBAT` | COMBAT rules specifically for longsword |
+Use the Variant filter (or `variant_filter=`) together with the query:
+
+| Query | Variant filter | Returns |
+|-------|----------------|---------|
+| `5 találat` | `VOR` | VOR and general rules about reaching 5 hits |
+| `döntő` | `COMBAT` | COMBAT and general rules about deciding hits |
+| `7 pont` | `AFTERBLOW` | AFTERBLOW and general rules about scoring 7+ points |
+| `hosszúkard` | `COMBAT` | COMBAT rules that mention longsword |
 
 ### English Examples
 
-| Query | Returns |
-|-------|---------|
-| `VOR match` | Only VOR variant rules |
-| `COMBAT decisive` | Only COMBAT variant rules |
-| `AFTERBLOW scoring` | Only AFTERBLOW variant rules |
-| `longsword COMBAT` | COMBAT rules for longsword |
+| Query | Variant filter | Returns |
+|-------|----------------|---------|
+| `match` | `VOR` | VOR and general rules about a match |
+| `decisive` | `COMBAT` | COMBAT and general rules about a decisive hit |
+| `scoring` | `AFTERBLOW` | AFTERBLOW and general rules about scoring |
+| `longsword` | `COMBAT` | COMBAT rules that mention longsword |
 
 ### Rule ID Lookup
 
@@ -152,27 +155,30 @@ Text:
 
 ## Scoring Algorithm
 
-The search engine now includes variant-aware scoring:
+A rule must first match: every keyword and every alias group in the query has to occur in its
+text or headings. Matching rules are then scored (see `search_config.py` for the weights):
 
-1. **Exact Rule ID Match**: +100.0 points
-2. **Exact Text Match**: +50.0 points
-3. **Exact Section Match**: +30.0 points
-4. **Term Frequency**: +10.0 per occurrence
-5. **Variant Match** (NEW): +25.0 bonus if query variant matches rule variant
-6. **Section/Subsection Terms**: +5.0 bonus
-7. **Weapon-Specific Rule**: +10.0 bonus if weapon detected in query
+1. **Exact Rule ID Match**: ranked in its own tier above all other results
+2. **Exact Phrase in Text**: +50.0 points
+3. **Exact Phrase in Section**: +30.0 points
+4. **Keyword in Text**: +10.0 per distinct keyword
+5. **Keyword in Section/Subsection**: +5.0 per distinct keyword
+6. **Alias Group in Text**: +40.0 per group; **in a heading only**: +20.0 per group
 
-## Supported Variant Keywords
+A rule's `variant` tag is never a scoring signal; it only matters for `variant_filter`.
+
+## Variant Terms
+
+The words below are search aliases (see `data/search/aliases.json`), matched against rule text:
 
 ### English
-- `VOR` → VOR variant
-- `COMBAT` → COMBAT variant
-- `AFTERBLOW` → AFTERBLOW variant
+- VOR: `VOR`, `right of way`, `priority`
+- COMBAT: `COMBAT`, `free fencing`
+- AFTERBLOW: `AFTERBLOW`, `after blow`
 
-### Hungarian (Extended Support)
-- `VOR`, `VORBEIGEHEN` → VOR variant
-- `COMBAT`, `SZABADHARC` → COMBAT variant
-- `AFTERBLOW`, `UTÁN` → AFTERBLOW variant
+### Hungarian
+- VOR: `VOR`, `előny`, `támadási jog`
+- AFTERBLOW: `utánvágás`, `utánakció`
 
 ## Regenerating the Index
 
@@ -245,8 +251,8 @@ for variant_name, rule in variants.items():
 
 Check that:
 1. Index was regenerated after parser.py updates
-2. Query includes exact variant name (VOR, COMBAT, or AFTERBLOW)
-3. Variant name is spelled correctly (case-insensitive, but must match)
+2. The variant is selected with `variant_filter` (typing its name only searches the text)
+3. Every keyword really occurs in the same rule, in its text or headings
 
 ### Results include unrelated rules
 

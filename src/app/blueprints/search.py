@@ -34,6 +34,31 @@ def _get_engine_for_lang(lang: str):
     return getattr(current_app, "search_engines", {}).get(lang, current_app.search_engine)
 
 
+def _read_json_object(*, optional: bool = False) -> tuple[dict[str, Any] | None, Any]:
+    """Read the request body as a JSON object; return (payload, error_response).
+
+    A missing body counts as an empty object when optional; any other unusable body is a 400.
+    """
+    data = request.get_json(silent=True)
+    if data is None and optional and not request.get_data():
+        return {}, None
+    if not isinstance(data, dict):
+        return None, (jsonify({"error": "Request body must be a JSON object"}), 400)
+    return data, None
+
+
+def _extract_filter(
+    data: dict[str, Any], key: str, allowed: list[str]
+) -> tuple[str | None, str | None]:
+    """Return (canonical filter value or None, error message or None) for an optional filter."""
+    raw = data.get(key)
+    value = normalize_filter(raw, allowed)
+    if value is None:
+        is_valid, error_msg = validate_filter(raw, allowed)
+        return None, (None if is_valid else error_msg)
+    return value, None
+
+
 @search_bp.route("/search", methods=["POST"])
 def api_search() -> Any:
     """Search for rules by keyword
@@ -41,14 +66,14 @@ def api_search() -> Any:
     Returns ranked flat results for compatibility and hierarchy-aware groups for display.
     """
     try:
-        data = request.get_json()
-        if not data:
-            return jsonify({"error": "Request body must be JSON"}), 400
+        data, error_response = _read_json_object()
+        if error_response:
+            return error_response
 
         rules_lang = _resolve_rules_lang(data)
         search_engine = _get_engine_for_lang(rules_lang)
 
-        query = data.get("query", "").strip()
+        query = data.get("query", "")
 
         # Validate query
         is_valid, error_msg = validate_query(query)
@@ -116,6 +141,10 @@ def api_search() -> Any:
                 serialize_result(match, group.group_root, True, score=match.score)
                 for match in group.matches
             ]
+            cited_by_data = [
+                serialize_result(citing, group.group_root, False, score=None)
+                for citing in group.cited_by
+            ]
             match_count += len(matches_data)
             context_score = max((match.score for match in group.matches), default=0.0)
             results_data.extend(
@@ -132,6 +161,7 @@ def api_search() -> Any:
                     "group_root": group.group_root,
                     "context": context_data,
                     "matches": matches_data,
+                    "cited_by": cited_by_data,
                 }
             )
 
@@ -162,7 +192,7 @@ def api_search() -> Any:
                 "group_count": len(groups_data),
                 "groups": groups_data,
                 "suggestions": (search_engine.suggest(query) if not match_count else []),
-                "note": "Flat results are retained for compatibility; groups separate matched rules from hierarchy context.",
+                "note": "Flat results are retained for compatibility; groups separate matched rules from hierarchy context and from rules citing a rule named by ID.",
             }
         )
 
@@ -205,14 +235,24 @@ def api_stats() -> Any:
 def api_extract() -> Any:
     """Generate rulebook extract filtered by weapon and variant"""
     try:
-        data = request.get_json() or {}
+        data, error_response = _read_json_object(optional=True)
+        if error_response:
+            return error_response
+
         rules_lang = _resolve_rules_lang(data)
         search_engine = _get_engine_for_lang(rules_lang)
 
-        weapon_filter = normalize_filter(data.get("weapon_filter"), current_app.config["WEAPONS"])
-        variant_filter = normalize_filter(
-            data.get("variant_filter"), current_app.config["VARIANTS"]
+        weapon_filter, error_msg = _extract_filter(
+            data, "weapon_filter", current_app.config["WEAPONS"]
         )
+        if error_msg:
+            return jsonify({"error": error_msg}), 400
+
+        variant_filter, error_msg = _extract_filter(
+            data, "variant_filter", current_app.config["VARIANTS"]
+        )
+        if error_msg:
+            return jsonify({"error": error_msg}), 400
 
         filtered_rules = filter_rules_for_extract(
             search_engine.rules, weapon_filter, variant_filter

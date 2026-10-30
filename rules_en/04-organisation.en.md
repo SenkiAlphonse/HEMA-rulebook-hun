@@ -150,7 +150,7 @@ If, consequently, the opposing team captain has also requested a substitution, t
 If a team member must withdraw during a match due to an accident properly recognised by the Organising Team’s medical representative, the team captain may request the reserve to enter the match at the point where the withdrawing fencer withdrew, even during an ongoing relay bout.  
 
 **ORG-2.3.13**  
-The same applies if a team member must be removed from the match due to equipment failure. See [GEN-6.2.13].  
+The same applies if a team member must be removed from the match due to equipment failure. See [ORG-2.1.12].  
 
 **ORG-2.3.14**  
 A fencer substituted in this manner may not take their place again in the team in the same match.  

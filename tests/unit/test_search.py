@@ -135,9 +135,11 @@ class TestRulebookSearch:
         expected = {"GEN-3.2.5.1", "GEN-3.2.5.2", "GEN-3.2.5.3"}
         assert expected.issubset(found_ids), f"Missing: {expected - found_ids}"
 
-    def test_search_multiword_variant_alias_english(self):
-        """Multiword variant aliases should filter English rules correctly."""
+    def test_search_multiword_alias_resolves_to_one_group_english(self):
+        """A multiword alias is one alias group, and every result mentions it in text or heading."""
         from pathlib import Path
+
+        from qa_tools.search_engine.search_scoring import has_alias_match
 
         project_root = Path(__file__).parent.parent.parent
         index_path = project_root / "data" / "search" / "rules_index_eng.json"
@@ -146,31 +148,23 @@ class TestRulebookSearch:
             pytest.skip(f"English rules index not found at {index_path}")
 
         search_engine = AliasAwareSearch(str(index_path), str(aliases_path))
+        vor_aliases = search_engine.aliases["variants"]["VOR"]
         for query in ("right of way", "right-of-way"):
             expanded = search_engine._expand_query(query)
-            results = search_engine.search(query, max_results=20)
-            result_variants = {result.variant for result in results}
+            groups = search_engine.search_grouped(query, max_results=20)
+            matches = [match for group in groups for match in group.matches]
 
-            assert expanded.variant_filter == "VOR"
+            assert expanded.alias_groups == [vor_aliases]
             assert expanded.base_query == ""
-            assert results
-            assert "VOR" in result_variants
-            assert result_variants <= {"VOR", ""}
+            assert matches
+            for match in matches:
+                rule = search_engine.get_rule_by_id(match.rule_id)
+                fields = (rule.get("text_plain", rule["text"]), match.section, match.subsection)
+                assert has_alias_match(fields, vor_aliases)
 
-    @pytest.mark.parametrize(
-        ("query", "expected_ids"),
-        [
-            ("right of way", {"GEN-2", "VOR-1"}),
-            ("right-of-way", {"GEN-2", "VOR-1"}),
-            ("priority", {"GEN-2", "VOR-1"}),
-            ("vor", {"GEN-2", "VOR-1"}),
-            ("right of way attack", {"GEN-2", "VOR-1"}),
-            ("right of way waits", {"GEN-1"}),
-        ],
-    )
-    def test_variant_alias_matches_group_without_matching_individual_words(
-        self, tmp_path, query, expected_ids
-    ):
+    @pytest.fixture
+    def alias_engine(self, tmp_path):
+        """Engine over a tiny index using the real alias dictionary."""
         from pathlib import Path
 
         rules = [
@@ -179,15 +173,49 @@ class TestRulebookSearch:
             {"rule_id": "GEN-3", "text": "The brown glove is required.", "variant": ""},
             {"rule_id": "VOR-1", "text": "The attacker scores.", "variant": "VOR"},
             {"rule_id": "CF-1", "text": "Priority is not used.", "variant": "COMBAT"},
+            {
+                "rule_id": "HEAD-1",
+                "text": "The referee validates hits.",
+                "subsection": "Validity or priority of hits",
+                "variant": "",
+            },
         ]
         for rule in rules:
-            rule["weapon_type"] = "longsword"
+            rule.setdefault("weapon_type", "longsword")
         index_file = tmp_path / "rules_index.json"
         index_file.write_text(json.dumps({"rules": rules}), encoding="utf-8")
         aliases_path = Path(__file__).parents[2] / "data" / "search" / "aliases.json"
-        engine = AliasAwareSearch(str(index_file), str(aliases_path))
+        return AliasAwareSearch(str(index_file), str(aliases_path))
 
-        assert {result.rule_id for result in engine.search(query)} == expected_ids
+    @pytest.mark.parametrize(
+        ("query", "expected_ids"),
+        [
+            ("right of way", {"GEN-2", "CF-1", "HEAD-1"}),
+            ("right-of-way", {"GEN-2", "CF-1", "HEAD-1"}),
+            ("priority", {"GEN-2", "CF-1", "HEAD-1"}),
+            ("vor", {"GEN-2", "CF-1", "HEAD-1"}),
+            ("right of way attack", {"GEN-2"}),
+            ("right of way waits", set()),
+        ],
+    )
+    def test_variant_alias_matches_text_or_heading_not_metadata(
+        self, alias_engine, query, expected_ids
+    ):
+        # VOR-1 belongs to the VOR variant but never mentions an alias, so it must not match.
+        assert {result.rule_id for result in alias_engine.search(query)} == expected_ids
+
+    def test_heading_match_ranks_below_text_match(self, alias_engine):
+        scores = {result.rule_id: result.score for result in alias_engine.search("right of way")}
+
+        assert scores["GEN-2"] > scores["HEAD-1"] > 0
+
+    def test_alias_does_not_apply_a_variant_filter(self, alias_engine):
+        assert "CF-1" in {result.rule_id for result in alias_engine.search("right of way")}
+
+    def test_explicit_variant_filter_still_applies_to_alias_search(self, alias_engine):
+        results = alias_engine.search("right of way", variant_filter="VOR")
+
+        assert {result.rule_id for result in results} == {"GEN-2", "HEAD-1"}
 
     @pytest.mark.parametrize(
         ("query", "expected_ids"),
@@ -218,22 +246,133 @@ class TestRulebookSearch:
 
         assert {result.rule_id for result in engine.search(query)} == expected_ids
 
+    def test_multiple_alias_groups_must_all_match(self, tmp_path):
+        rules = [
+            {"rule_id": "GEN-1", "text": "A valid target is penalised."},
+            {"rule_id": "GEN-2", "text": "A valid target is scored."},
+            {"rule_id": "GEN-3", "text": "A punishment applies."},
+        ]
+        index_file = tmp_path / "rules_index.json"
+        index_file.write_text(json.dumps({"rules": rules}), encoding="utf-8")
+        aliases_file = tmp_path / "aliases.json"
+        aliases_file.write_text(
+            json.dumps(
+                {
+                    "concepts": {
+                        "target": ["valid target"],
+                        "penalty": ["penalised", "punishment"],
+                    }
+                }
+            ),
+            encoding="utf-8",
+        )
+        engine = AliasAwareSearch(str(index_file), str(aliases_file))
+
+        assert {result.rule_id for result in engine.search("valid target punishment")} == {"GEN-1"}
+        assert {result.rule_id for result in engine.search("punishment")} == {"GEN-1", "GEN-3"}
+
     @pytest.mark.parametrize("query", ["long sword", "longsword", "ls"])
-    def test_weapon_alias_matches_group_or_metadata(self, tmp_path, query):
+    def test_weapon_alias_matches_text_not_weapon_metadata(self, tmp_path, query):
         from pathlib import Path
 
         rules = [
             {"rule_id": "GEN-1", "text": "Sword inspection.", "weapon_type": "general"},
             {"rule_id": "GEN-2", "text": "Long-sword inspection.", "weapon_type": "general"},
             {"rule_id": "LS-1", "text": "The attacker scores.", "weapon_type": "longsword"},
-            {"rule_id": "RP-1", "text": "The attacker scores.", "weapon_type": "rapier"},
+            {"rule_id": "RP-1", "text": "Longsword rules apply.", "weapon_type": "rapier"},
         ]
         index_file = tmp_path / "rules_index.json"
         index_file.write_text(json.dumps({"rules": rules}), encoding="utf-8")
         aliases_path = Path(__file__).parents[2] / "data" / "search" / "aliases.json"
         engine = AliasAwareSearch(str(index_file), str(aliases_path))
 
-        assert {result.rule_id for result in engine.search(query)} == {"GEN-2", "LS-1"}
+        assert {result.rule_id for result in engine.search(query)} == {"GEN-2", "RP-1"}
+        results = engine.search(query, weapon_filter="longsword")
+        assert {result.rule_id for result in results} == {"GEN-2"}
+
+    @pytest.fixture
+    def id_engine(self, tmp_path):
+        """Engine over a tiny index with cross-references between rules."""
+        from pathlib import Path
+
+        rules = [
+            {
+                "rule_id": "GEN-6.2.1",
+                "text": "The referee calls the fencers.",
+                "references_from": ["DIS-3.2.1", "LS-VOR-1.3.4", "LS-COMBAT-1.1.6"],
+            },
+            {"rule_id": "DIS-3.2.1", "text": "See [GEN-6.2.1] and [LS-VOR-1.3.4].", "variant": ""},
+            {
+                "rule_id": "LS-VOR-1.3.4",
+                "text": "A VOR rule that cites [GEN-6.2.1].",
+                "variant": "VOR",
+                "weapon_type": "longsword",
+            },
+            {
+                "rule_id": "LS-COMBAT-1.1.6",
+                "text": "A COMBAT rule that cites [GEN-6.2.1].",
+                "variant": "COMBAT",
+                "weapon_type": "longsword",
+            },
+            {"rule_id": "GEN-7.1", "text": "Another referee rule."},
+        ]
+        for rule in rules:
+            rule.setdefault("weapon_type", "general")
+            rule.setdefault("variant", "")
+        index_file = tmp_path / "rules_index.json"
+        index_file.write_text(json.dumps({"rules": rules}), encoding="utf-8")
+        aliases_path = Path(__file__).parents[2] / "data" / "search" / "aliases.json"
+        return AliasAwareSearch(str(index_file), str(aliases_path))
+
+    @pytest.mark.parametrize("query", ["GEN-6.2.1", "gen-6.2.1", "GEN-6.2.1.", "(GEN-6.2.1)"])
+    def test_rule_id_query_returns_only_that_rule(self, id_engine, query):
+        results = id_engine.search_grouped(query, max_results=20)
+
+        assert [m.rule_id for g in results for m in g.matches] == ["GEN-6.2.1"]
+
+    def test_unknown_rule_id_returns_nothing_instead_of_keyword_noise(self, id_engine):
+        assert id_engine.search_grouped("GEN-99", max_results=20) == []
+
+    def test_rule_id_with_keyword_requires_the_keyword_for_other_rules(self, id_engine):
+        results = id_engine.search_grouped("GEN-6.2.1 referee", max_results=20)
+        matched = {m.rule_id for g in results for m in g.matches}
+
+        assert matched == {"GEN-6.2.1", "GEN-7.1"}
+
+    def test_cross_references_do_not_make_rules_match_alias_words(self, id_engine):
+        # DIS-3.2.1 only mentions "LS-VOR-1.3.4"; the VOR alias must not match inside an ID.
+        results = id_engine.search_grouped("vor", max_results=20)
+
+        assert {m.rule_id for g in results for m in g.matches} == {"LS-VOR-1.3.4"}
+
+    def test_rule_id_query_lists_citing_rules_separately(self, id_engine):
+        (group,) = id_engine.search_grouped("GEN-6.2.1", max_results=20)
+
+        assert [r.rule_id for r in group.matches] == ["GEN-6.2.1"]
+        assert [r.rule_id for r in group.cited_by] == [
+            "DIS-3.2.1",
+            "LS-VOR-1.3.4",
+            "LS-COMBAT-1.1.6",
+        ]
+
+    def test_citing_rules_respect_explicit_filters(self, id_engine):
+        (group,) = id_engine.search_grouped("GEN-6.2.1", variant_filter="VOR")
+
+        assert [r.rule_id for r in group.cited_by] == ["DIS-3.2.1", "LS-VOR-1.3.4"]
+
+    def test_citing_rules_exclude_rules_that_are_already_matches(self, id_engine):
+        results = id_engine.search_grouped("GEN-6.2.1 cites", max_results=20)
+        matched = {m.rule_id for g in results for m in g.matches}
+        cited = {r.rule_id for g in results for r in g.cited_by}
+
+        assert "GEN-6.2.1" in matched
+        assert not matched & cited
+
+    def test_keyword_queries_have_no_citing_rules(self, id_engine):
+        results = id_engine.search_grouped("referee", max_results=20)
+
+        assert results
+        assert all(group.cited_by == [] for group in results)
 
     def test_search_deduplicates_rule_ids_in_results(self, tmp_path):
         """Search results should not contain duplicate rule IDs."""

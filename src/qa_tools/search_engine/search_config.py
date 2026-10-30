@@ -18,9 +18,8 @@ SCORE_EXACT_PHRASE_TEXT: Final[float] = 50.0  # Exact phrase found in rule text
 SCORE_EXACT_PHRASE_SECTION: Final[float] = 30.0  # Exact phrase in section/subsection
 SCORE_TERM_MATCH: Final[float] = 10.0  # Per distinct query term present in rule text
 SCORE_TERM_SECTION: Final[float] = 5.0  # Per distinct query term in section/subsection
-SCORE_CONCEPT_TERM: Final[float] = 15.0  # One boost for any matching concept alias
-SCORE_VARIANT_ALIAS: Final[float] = 40.0  # One boost for variant metadata or alias
-SCORE_WEAPON_ALIAS: Final[float] = 20.0  # One boost for weapon metadata or alias
+SCORE_ALIAS_TEXT: Final[float] = 40.0  # One boost per alias group found in rule text
+SCORE_ALIAS_SECTION: Final[float] = 20.0  # One boost per alias group found in a heading
 
 # Length penalty for very long rules (e.g., large tables)
 # Rules longer than threshold get exponentially lower scores

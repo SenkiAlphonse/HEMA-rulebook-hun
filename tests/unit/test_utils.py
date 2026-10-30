@@ -40,6 +40,15 @@ class TestNormalizeFilter:
         result = normalize_filter("VOR", [])
         assert result is None
 
+    @pytest.mark.parametrize("value", ["rapier", "Rapier", "RAPIER", "  rapier  "])
+    def test_normalize_filter_returns_canonical_lowercase_value(self, value):
+        """Allowed values are returned as listed, not upper-cased"""
+        assert normalize_filter(value, ["longsword", "rapier", "padded_weapons"]) == "rapier"
+
+    @pytest.mark.parametrize("value", ["", 5, ["VOR"], {}])
+    def test_normalize_filter_non_matching_values(self, value):
+        assert normalize_filter(value, ["VOR", "COMBAT"]) is None
+
 
 class TestPreprocessMarkdown:
     """Test preprocess_rulebook_markdown function"""

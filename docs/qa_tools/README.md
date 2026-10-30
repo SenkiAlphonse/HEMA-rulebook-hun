@@ -124,13 +124,13 @@ Minden mérkőzés meghatározott ideig vagy meghatározott számú találatig..
 
 ### Search Scoring
 
-Results are ranked using:
-- **Exact rule ID match**: +100 points (highest priority)
+Results are ranked using (weights in `search_config.py`):
+- **Exact rule ID match**: its own priority tier, always ranked above every other result (1000 + the rule's normal score)
 - **Exact phrase in text**: +50 points
 - **Exact phrase in section**: +30 points
-- **Keyword frequency**: +10 points per occurrence
-- **Section match**: +5 points
-- **Weapon-specific bonus**: +10 points when relevant
+- **Keyword in text**: +10 points per distinct keyword
+- **Keyword in section/subsection**: +5 points per distinct keyword
+- **Alias group**: +40 points when found in the rule text, +20 when found only in a heading
 
 ## Extending the System
 

@@ -137,9 +137,10 @@ def sanitize_query(query: str) -> str:
 
 
 def normalize_filter(value: str | None, allowed: list[str]) -> str | None:
-    """Validate and normalize filter values; return canonical form or None."""
-    if value:
-        value_upper = value.upper()
-        if value_upper in allowed:
-            return value_upper
+    """Match a filter value case-insensitively; return the canonical allowed value or None."""
+    if isinstance(value, str):
+        wanted = value.strip().casefold()
+        for candidate in allowed:
+            if candidate.casefold() == wanted:
+                return candidate
     return None

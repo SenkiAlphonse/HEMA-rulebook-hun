@@ -5,18 +5,13 @@ Enhanced HEMA Rulebook Search Engine with Alias Support
 import json
 import logging
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from difflib import get_close_matches
 from pathlib import Path
 from typing import Any
 
 from qa_tools.search_engine import search_config
-from qa_tools.search_engine.search_scoring import (
-    has_alias_match,
-    has_exact_rule_id_match,
-    normalize_text,
-    score_rule,
-)
+from qa_tools.search_engine.search_scoring import normalize_text, score_rule, split_rule_ids
 from qa_tools.search_engine.search_utils import get_children_rules, get_rule_depth, get_rule_lineage
 
 # Configure logging
@@ -39,30 +34,30 @@ class SearchResult:
 
 @dataclass
 class SearchResultGroup:
-    """Ranked matches with their shared hierarchy context."""
+    """Ranked matches with their shared hierarchy context.
+
+    cited_by lists rules that cite a rule the query named by ID; they are not matches.
+    """
 
     group_root: str
     context: list[SearchResult]
     matches: list[SearchResult]
+    cited_by: list[SearchResult] = field(default_factory=list)
 
 
 @dataclass
 class ExpandedQuery:
-    """Result of expanding a raw user query through the alias dictionary.
+    """Result of resolving a raw user query against the alias dictionary.
 
     Attributes:
-        expanded_query: Base query plus any concept-alias terms appended.
-        variant_filter: Detected rule variant (VOR/COMBAT/AFTERBLOW) or None.
-        weapon_filter: Detected weapon type (longsword/rapier/...) or None.
-        concept_terms: Concept-alias terms that were appended to the query.
-        base_query: Original query stripped of recognised filter/concept tokens.
+        alias_groups: One list of interchangeable phrases per alias group the query named.
+        base_query: Original query with the recognised alias phrases and rule IDs removed.
+        rule_ids: Lowercase rule IDs the query named, such as "gen-6.2.1".
     """
 
-    expanded_query: str
-    variant_filter: str | None
-    weapon_filter: str | None
-    concept_terms: list[str]
+    alias_groups: list[list[str]]
     base_query: str
+    rule_ids: list[str]
 
 
 class AliasAwareSearch:
@@ -72,6 +67,7 @@ class AliasAwareSearch:
         self.index_path = Path(index_path)
         self.rules = []
         self.aliases = {}
+        self.alias_groups = {}  # (category, key) -> interchangeable phrases
         self.alias_to_key = {}  # Reverse lookup: alias -> (category, key)
         self.alias_token_lookup = {}
         self.alias_token_lengths = []
@@ -103,21 +99,13 @@ class AliasAwareSearch:
             self.aliases = {"variants": {}, "weapons": {}, "concepts": {}}
 
     def _build_alias_lookup(self):
-        """Build reverse lookup from alias to its category and key"""
-        # Map variant aliases
-        for key, aliases in self.aliases.get("variants", {}).items():
-            for alias in aliases:
-                self.alias_to_key[alias.lower()] = ("variant", key)
-
-        # Map weapon aliases
-        for key, aliases in self.aliases.get("weapons", {}).items():
-            for alias in aliases:
-                self.alias_to_key[alias.lower()] = ("weapon", key)
-
-        # Map concept aliases - store all aliases in concept group
-        for concept_key, aliases in self.aliases.get("concepts", {}).items():
-            for alias in aliases:
-                self.alias_to_key[alias.lower()] = ("concept", concept_key)
+        """Index every alias phrase under the group it belongs to."""
+        for category in ("variants", "weapons", "concepts"):
+            for key, aliases in self.aliases.get(category, {}).items():
+                group_id = (category, key)
+                self.alias_groups[group_id] = list(aliases)
+                for alias in aliases:
+                    self.alias_to_key[alias.lower()] = group_id
 
         for alias, value in self.alias_to_key.items():
             tokens = tuple(re.findall(r"\w+", alias))
@@ -179,64 +167,46 @@ class AliasAwareSearch:
         return deduplicated
 
     def _expand_query(self, query: str) -> ExpandedQuery:
-        """Expand query based on aliases, extracting filters and concept terms.
-
-        Analyzes query words to detect variant/weapon filters and concept expansions.
+        """Split a query into rule IDs, the alias groups it names, and the remaining plain words.
 
         Args:
             query: Original search query
 
         Returns:
-            ExpandedQuery with the expanded query, detected filters, concept terms,
-            and the original query stripped of recognised tokens.
+            ExpandedQuery with the rule IDs, matched alias groups and unrecognised words.
         """
-        query_lower = query.lower()
-        variant_filter: str | None = None
-        weapon_filter: str | None = None
-        concept_terms: list[str] = []
+        alias_groups: list[list[str]] = []
+        seen_group_ids = set()
         remaining_terms: list[str] = []
 
-        # Split query into words
-        words = re.findall(r"\w+", query_lower)
+        query_without_ids, rule_ids = split_rule_ids(query)
+        words = re.findall(r"\w+", query_without_ids.lower())
 
         word_index = 0
         while word_index < len(words):
-            alias_match = None
+            group_id = None
             alias_length = 0
             for candidate_length in self.alias_token_lengths:
                 candidate = tuple(words[word_index : word_index + candidate_length])
                 if candidate in self.alias_token_lookup:
-                    alias_match = self.alias_token_lookup[candidate]
+                    group_id = self.alias_token_lookup[candidate]
                     alias_length = candidate_length
                     break
 
-            if alias_match is None:
+            if group_id is None:
                 remaining_terms.append(words[word_index])
                 word_index += 1
                 continue
 
-            category, key = alias_match
-            if category == "variant":
-                variant_filter = key
-            elif category == "weapon":
-                weapon_filter = key
-            elif category == "concept":
-                # Add all aliases from this concept to search terms
-                concept_terms.extend(self.aliases["concepts"][key])
+            if group_id not in seen_group_ids:
+                seen_group_ids.add(group_id)
+                alias_groups.append(self.alias_groups[group_id])
             word_index += alias_length
 
-        # Build expanded query
-        base_query = " ".join(remaining_terms)
-        expanded_query = base_query
-        if concept_terms:
-            expanded_query = expanded_query + " " + " ".join(concept_terms)
-
         return ExpandedQuery(
-            expanded_query=expanded_query.strip(),
-            variant_filter=variant_filter,
-            weapon_filter=weapon_filter,
-            concept_terms=concept_terms,
-            base_query=base_query.strip(),
+            alias_groups=alias_groups,
+            base_query=" ".join(remaining_terms),
+            rule_ids=rule_ids,
         )
 
     def _normalize_text(self, text: str) -> str:
@@ -307,99 +277,31 @@ class AliasAwareSearch:
         Args:
             query: Search query
             max_results: Max results to return (defaults to config)
-            variant_filter: Filter by variant (VOR, COMBAT, AFTERBLOW) - can be overridden by query
-            weapon_filter: Filter by weapon (longsword, rapier, etc.) - can be overridden by query
+            variant_filter: Only rules of this variant (VOR, COMBAT, AFTERBLOW) and general rules
+            weapon_filter: Only rules of this weapon (longsword, rapier, etc.) and general rules
         """
-        # Expand query based on aliases
         expanded = self._expand_query(query)
 
-        # Use detected filters if not explicitly provided
-        if not variant_filter and expanded.variant_filter:
-            variant_filter = expanded.variant_filter
-        if not weapon_filter and expanded.weapon_filter:
-            weapon_filter = expanded.weapon_filter
-
-        has_aliases = expanded.variant_filter or expanded.weapon_filter or expanded.concept_terms
-        query_lower = expanded.base_query if has_aliases else query.lower()
-        query_terms = self._extract_terms(self._normalize_text(query_lower))
-        required_terms = (
-            self._extract_terms(self._normalize_text(expanded.base_query))
-            if expanded.base_query
-            else []
-        )
+        # Alias phrases and rule IDs are matched on their own, so only the rest is a phrase query.
+        phrase_query = expanded.base_query
+        terms = self._extract_terms(self._normalize_text(phrase_query))
 
         results = []
 
         for rule in self.rules:
-            # Apply filters with hierarchy:
-            # - General rules (weapon_type='general') apply to everything
-            # - Weapon-general rules (no variant) apply to all variants of that weapon
-            # - Format-specific rules apply only to that variant
-
-            rule_weapon = rule.get("weapon_type", "general")
-            rule_variant = rule.get("variant", "")
-
-            # If weapon filter is specified
-            if weapon_filter and rule_weapon != "general" and rule_weapon != weapon_filter:
+            if not self._passes_filters(rule, variant_filter, weapon_filter):
                 continue
-
-            # If variant filter is specified
-            if (
-                variant_filter
-                and rule_weapon != "general"
-                and rule_variant
-                and rule_variant != variant_filter
-            ):
-                continue
-
-            rule_id_match = has_exact_rule_id_match(query, rule.get("rule_id", ""))
-
-            # Rule IDs are searchable directly, even if their tokens aren't in the text.
-            if required_terms and not rule_id_match:
-                combined_text = " ".join(
-                    [
-                        rule.get("text_plain", rule.get("text", "")),
-                        rule.get("section", ""),
-                        rule.get("subsection", ""),
-                    ]
-                )
-                combined_norm = self._normalize_text(combined_text)
-                if any(term not in combined_norm for term in required_terms):
-                    continue
-
-            if expanded.concept_terms and not rule_id_match:
-                concept_fields = (
-                    rule.get("text_plain", rule.get("text", "")),
-                    rule.get("section", ""),
-                    rule.get("subsection", ""),
-                )
-                if not has_alias_match(concept_fields, expanded.concept_terms):
-                    continue
 
             score = score_rule(
                 rule,
                 query=query,
-                phrase_query=query_lower,
-                terms=query_terms,
-                aliases=self.aliases,
-                concept_terms=expanded.concept_terms,
-                variant_query=expanded.variant_filter,
-                weapon_query=expanded.weapon_filter,
+                phrase_query=phrase_query,
+                terms=terms,
+                alias_groups=expanded.alias_groups,
             )
 
             if score > 0:
-                results.append(
-                    SearchResult(
-                        rule_id=rule["rule_id"],
-                        text=rule["text"],
-                        section=rule.get("section", ""),
-                        subsection=rule.get("subsection", ""),
-                        document=rule.get("document", ""),
-                        weapon_type=rule.get("weapon_type", ""),
-                        variant=rule.get("variant", ""),
-                        score=score,
-                    )
-                )
+                results.append(self._to_result(rule, score))
 
         results.sort(key=lambda x: x.score, reverse=True)
         results = self._deduplicate_results_by_rule_id(results)
@@ -407,7 +309,71 @@ class AliasAwareSearch:
         # Use default max results if not provided
         if max_results is None:
             max_results = search_config.DEFAULT_MAX_RESULTS
-        return self._group_search_results(results, max_results)
+        groups = self._group_search_results(results, max_results)
+        self._attach_citing_rules(groups, expanded.rule_ids, variant_filter, weapon_filter)
+        return groups
+
+    @staticmethod
+    def _passes_filters(
+        rule: dict[str, Any], variant_filter: str | None, weapon_filter: str | None
+    ) -> bool:
+        """Apply the explicit variant/weapon filters with their hierarchy.
+
+        - General rules (weapon_type='general') apply to everything
+        - Weapon-general rules (no variant) apply to all variants of that weapon
+        - Format-specific rules apply only to that variant
+        """
+        rule_weapon = rule.get("weapon_type", "general")
+        rule_variant = rule.get("variant", "")
+
+        if weapon_filter and rule_weapon != "general" and rule_weapon != weapon_filter:
+            return False
+        return not (
+            variant_filter
+            and rule_weapon != "general"
+            and rule_variant
+            and rule_variant != variant_filter
+        )
+
+    @staticmethod
+    def _to_result(rule: dict[str, Any], score: float) -> SearchResult:
+        return SearchResult(
+            rule_id=rule["rule_id"],
+            text=rule.get("text", ""),
+            section=rule.get("section", ""),
+            subsection=rule.get("subsection", ""),
+            document=rule.get("document", ""),
+            weapon_type=rule.get("weapon_type", ""),
+            variant=rule.get("variant", ""),
+            score=score,
+        )
+
+    def _attach_citing_rules(
+        self,
+        groups: list[SearchResultGroup],
+        queried_ids: list[str],
+        variant_filter: str | None,
+        weapon_filter: str | None,
+    ) -> None:
+        """Add the rules citing a rule the query named by ID to that rule's group."""
+        if not queried_ids:
+            return
+
+        shown_ids = {r.rule_id for group in groups for r in (*group.context, *group.matches)}
+        for group in groups:
+            for match in group.matches:
+                if match.rule_id.lower() not in queried_ids:
+                    continue
+                cited_rule = self.get_rule_by_id(match.rule_id) or {}
+                for citing_id in cited_rule.get("references_from", []):
+                    citing = self.get_rule_by_id(citing_id)
+                    if (
+                        citing
+                        and citing_id not in shown_ids
+                        and self._passes_filters(citing, variant_filter, weapon_filter)
+                    ):
+                        shown_ids.add(citing_id)
+                        group.cited_by.append(self._to_result(citing, 0.0))
 
     def _group_search_results(
         self, results: list[SearchResult], max_results: int
@@ -454,18 +420,7 @@ class AliasAwareSearch:
             for context_id in context_ids:
                 rule = self.get_rule_by_id(context_id)
                 if rule:
-                    group.context.append(
-                        SearchResult(
-                            rule_id=rule["rule_id"],
-                            text=rule.get("text", ""),
-                            section=rule.get("section", ""),
-                            subsection=rule.get("subsection", ""),
-                            document=rule.get("document", ""),
-                            weapon_type=rule.get("weapon_type", ""),
-                            variant=rule.get("variant", ""),
-                            score=0.0,
-                        )
-                    )
+                    group.context.append(self._to_result(rule, 0.0))
 
         return list(groups_by_root.values())
 
@@ -622,7 +577,7 @@ def main() -> None:
     print("HEMA Rulebook Search - Alias-Aware")
     print("=" * 70)
     print("\nExample queries:")
-    print("  - 'right of way' (will find VOR rules)")
+    print("  - 'right of way' (also finds 'priority' and related terms)")
     print("  - 'longsword target area'")
     print("  - 'combat priority'")
     print("  - 'rapier equipment'")
