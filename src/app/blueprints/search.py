@@ -38,8 +38,7 @@ def _get_engine_for_lang(lang: str):
 def api_search() -> Any:
     """Search for rules by keyword
 
-    For level 4-5 rules, returns grouped results with parent context and child rules.
-    Each result includes a depth indicator and group_root for hierarchical organization.
+    Returns ranked flat results for compatibility and hierarchy-aware groups for display.
     """
     try:
         data = request.get_json()
@@ -82,42 +81,57 @@ def api_search() -> Any:
             return jsonify({"error": error_msg}), 400
 
         # Perform search
-        results = search_engine.search(
+        result_groups = search_engine.search_grouped(
             query,
             max_results=max_results,
             variant_filter=variant_filter,
             weapon_filter=weapon_filter,
         )
 
-        # Convert results to JSON with depth and grouping info
+        def serialize_result(result, group_root, is_match, score):
+            return {
+                "rule_id": result.rule_id,
+                "text": result.text,
+                "section": result.section,
+                "subsection": result.subsection,
+                "document": result.document,
+                "weapon_type": result.weapon_type,
+                "variant": result.variant or "general",
+                "score": score,
+                "depth": search_engine.get_rule_depth(result.rule_id),
+                "group_root": group_root,
+                "is_match": is_match,
+            }
+
         results_data = []
-        current_group = None
+        groups_data = []
+        match_count = 0
 
-        for r in results:
-            depth = search_engine.get_rule_depth(r.rule_id)
-
-            # Determine group root for hierarchy visualization
-            if depth >= 4:
-                # For level 4-5 rules, find the main parent (depth 2)
-                lineage = search_engine.get_rule_lineage(r.rule_id)
-                # Take the second element if it exists (first is the prefix like "GEN")
-                current_group = lineage[1] if len(lineage) > 1 else r.rule_id
-            else:
-                # For levels 1-3, the rule itself is a group anchor
-                current_group = r.rule_id
-
-            results_data.append(
+        for group in result_groups:
+            context_data = [
+                serialize_result(context, group.group_root, False, score=None)
+                for context in group.context
+            ]
+            matches_data = [
+                serialize_result(match, group.group_root, True, score=match.score)
+                for match in group.matches
+            ]
+            match_count += len(matches_data)
+            context_score = max((match.score for match in group.matches), default=0.0)
+            results_data.extend(
+                [
+                    *[
+                        serialize_result(context, group.group_root, False, score=context_score)
+                        for context in group.context
+                    ],
+                    *matches_data,
+                ]
+            )
+            groups_data.append(
                 {
-                    "rule_id": r.rule_id,
-                    "text": r.text,
-                    "section": r.section,
-                    "subsection": r.subsection,
-                    "document": r.document,
-                    "weapon_type": r.weapon_type,
-                    "variant": r.variant or "general",
-                    "score": r.score,
-                    "depth": depth,
-                    "group_root": current_group,
+                    "group_root": group.group_root,
+                    "context": context_data,
+                    "matches": matches_data,
                 }
             )
 
@@ -129,8 +143,8 @@ def api_search() -> Any:
             log_search(
                 query=query,
                 rules_lang=rules_lang,
-                result_count=len(results_data),
-                top_rule_id=results_data[0]["rule_id"] if results_data else None,
+                result_count=match_count,
+                top_rule_id=(result_groups[0].matches[0].rule_id if result_groups else None),
                 variant_filter=variant_filter,
                 weapon_filter=weapon_filter,
             )
@@ -144,8 +158,11 @@ def api_search() -> Any:
                 "rules_lang": rules_lang,
                 "count": len(results_data),
                 "results": results_data,
-                "suggestions": (search_engine.suggest(query) if not results_data else []),
-                "note": "Results grouped by rule hierarchy. Level 4-5 rules include parent rules (up to level 3) and direct child rules.",
+                "match_count": match_count,
+                "group_count": len(groups_data),
+                "groups": groups_data,
+                "suggestions": (search_engine.suggest(query) if not match_count else []),
+                "note": "Flat results are retained for compatibility; groups separate matched rules from hierarchy context.",
             }
         )
 

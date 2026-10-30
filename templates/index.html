@@ -448,6 +448,34 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
+        .result-group {
+            margin-bottom: 24px;
+        }
+
+        .result-group.is-grouped {
+            border-left: 2px solid #d6c99f;
+            padding-left: 16px;
+        }
+
+        .result-context-label {
+            color: #806b38;
+            font-size: 0.78em;
+            font-weight: 700;
+            margin: 0 0 8px 2px;
+            text-transform: uppercase;
+        }
+
+        .result-item.result-item-context {
+            background: #f7f8f6;
+            border-left-color: #9aa3a4;
+            box-shadow: none;
+        }
+
+        .result-item.result-item-context:hover {
+            transform: none;
+            box-shadow: none;
+        }
+
         .result-header {
             display: flex;
             justify-content: space-between;
@@ -843,8 +871,8 @@
 
         let currentUiLang = 'eng';
 
-        let allResults = [];
-        let displayedCount = 0;
+        let allGroups = [];
+        let displayedGroupCount = 0;
         const RESULTS_PER_PAGE = 10;
 
         const UI_STRINGS = {
@@ -885,6 +913,8 @@
                 linkCopied: 'Link copied!',
                 whatsNew: "What's new",
                 resultsHeader: 'Results',
+                parentContext: 'Parent context',
+                groupsRemaining: 'groups remaining',
                 errorPrefix: 'Error',
                 statsTotal: 'Total Rules',
                 statsVor: 'VOR Rules',
@@ -945,6 +975,8 @@
                 linkCopied: 'Hivatkozás vágólapra másolva!',
                 whatsNew: 'Újdonságok',
                 resultsHeader: 'Találatok',
+                parentContext: 'Szülő szabály kontextusa',
+                groupsRemaining: 'csoport van hátra',
                 errorPrefix: 'Hiba',
                 statsTotal: 'Összes szabály',
                 statsVor: 'VOR szabályok',
@@ -1156,7 +1188,7 @@
                     return;
                 }
 
-                if (data.count === 0) {
+                if ((data.match_count ?? data.count) === 0) {
                     const suggestions = Array.isArray(data.suggestions) ? data.suggestions : [];
                     const suggestionsHtml = suggestions.length
                         ? `<p style="font-size: 0.95em; margin-top: 14px;">${t('didYouMean')}
@@ -1183,9 +1215,10 @@
                     return;
                 }
 
-                allResults = data.results;
-                displayedCount = 0;
-                resultsDiv.innerHTML = `<div class="results-header">${t('resultsHeader')} (${data.count})</div>`;
+                allGroups = Array.isArray(data.groups) ? data.groups : [];
+                displayedGroupCount = 0;
+                const matchCount = data.match_count ?? data.count;
+                resultsDiv.innerHTML = `<div class="results-header">${t('resultsHeader')} (${matchCount})</div>`;
                 displayResults();
             } catch (error) {
                 loadingDiv.classList.remove('show');
@@ -1233,36 +1266,47 @@
             }
         }
 
+        function renderResultItem(result, isContext = false) {
+            const variantLabel = result.variant === 'general' ? t('allVariantsTag') : result.variant;
+            const weaponLabel = result.weapon_type === 'general' ? t('allWeaponsTag') : result.weapon_type;
+            return `
+                <div class="result-item${isContext ? ' result-item-context' : ''}">
+                    <div class="result-header">
+                        <a class="result-id" href="/rulebook?lang=${searchLanguageSelect.value}#${result.rule_id}" target="_blank" title="${t('fullRulebook')}">${result.rule_id}</a>
+                        <button type="button" class="result-copy-link" data-rule-id="${result.rule_id}" data-lang="${searchLanguageSelect.value}" title="${t('copyLink')}" aria-label="${t('copyLink')}">🔗</button>
+                        ${isContext ? '' : `<span class="result-score">${t('scoreLabel')}: ${result.score.toFixed(1)}</span>`}
+                    </div>
+                    <div class="result-tags">
+                        <span class="tag weapon">${weaponLabel}</span>
+                        <span class="tag variant">${variantLabel}</span>
+                    </div>
+                    <div class="result-text">${renderMarkdownText(result.text)}</div>
+                    <div class="result-meta">
+                        <div class="section-info">
+                            <span class="section-label">${t('documentLabel')}:</span> ${escapeHtml(result.document)}
+                        </div>
+                        ${result.section ? `<div class="section-info"><span class="section-label">${t('sectionLabel')}:</span> ${escapeHtml(result.section)}</div>` : ''}
+                        ${result.subsection ? `<div class="section-info"><span class="section-label">${t('subsectionLabel')}:</span> ${escapeHtml(result.subsection)}</div>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
         function displayResults() {
-            const endIndex = Math.min(displayedCount + RESULTS_PER_PAGE, allResults.length);
-            const resultsToShow = allResults.slice(displayedCount, endIndex);
+            const endIndex = Math.min(displayedGroupCount + RESULTS_PER_PAGE, allGroups.length);
+            const groupsToShow = allGroups.slice(displayedGroupCount, endIndex);
 
             let html = '';
-            resultsToShow.forEach(result => {
-                const variantLabel = result.variant === 'general' ? t('allVariantsTag') : result.variant;
-                const weaponLabel = result.weapon_type === 'general' ? t('allWeaponsTag') : result.weapon_type;
-
-                html += `
-                    <div class="result-item">
-                        <div class="result-header">
-                            <a class="result-id" href="/rulebook?lang=${searchLanguageSelect.value}#${result.rule_id}" target="_blank" title="${t('fullRulebook')}">${result.rule_id}</a>
-                            <button type="button" class="result-copy-link" data-rule-id="${result.rule_id}" data-lang="${searchLanguageSelect.value}" title="${t('copyLink')}" aria-label="${t('copyLink')}">🔗</button>
-                            <span class="result-score">${t('scoreLabel')}: ${result.score.toFixed(1)}</span>
-                        </div>
-                        <div class="result-tags">
-                            <span class="tag weapon">${weaponLabel}</span>
-                            <span class="tag variant">${variantLabel}</span>
-                        </div>
-                        <div class="result-text">${renderMarkdownText(result.text)}</div>
-                        <div class="result-meta">
-                            <div class="section-info">
-                                <span class="section-label">${t('documentLabel')}:</span> ${escapeHtml(result.document)}
-                            </div>
-                            ${result.section ? `<div class="section-info"><span class="section-label">${t('sectionLabel')}:</span> ${escapeHtml(result.section)}</div>` : ''}
-                            ${result.subsection ? `<div class="section-info"><span class="section-label">${t('subsectionLabel')}:</span> ${escapeHtml(result.subsection)}</div>` : ''}
-                        </div>
-                    </div>
-                `;
+            groupsToShow.forEach(group => {
+                const isGrouped = group.context.length > 0 || group.matches.length > 1;
+                html += `<section class="result-group${isGrouped ? ' is-grouped' : ''}">`;
+                if (group.context.length) {
+                    html += `<div class="result-context"><div class="result-context-label">${t('parentContext')}</div>`;
+                    html += group.context.map(result => renderResultItem(result, true)).join('');
+                    html += '</div>';
+                }
+                html += group.matches.map(result => renderResultItem(result)).join('');
+                html += '</section>';
             });
 
             // Append new results into a stable content area (keeps header intact)
@@ -1274,7 +1318,7 @@
             }
             contentArea.insertAdjacentHTML('beforeend', html);
 
-            displayedCount = endIndex;
+            displayedGroupCount = endIndex;
 
             // Remove existing nav buttons
             ['loadMoreBtn', 'showLessBtn'].forEach(id => {
@@ -1282,16 +1326,16 @@
                 if (el) el.remove();
             });
 
-            if (displayedCount < allResults.length) {
+            if (displayedGroupCount < allGroups.length) {
                 const loadMoreBtn = document.createElement('button');
                 loadMoreBtn.id = 'loadMoreBtn';
                 loadMoreBtn.className = 'load-more-btn';
-                loadMoreBtn.textContent = `${t('loadMore')} (${allResults.length - displayedCount} ${t('remaining')})`;
+                loadMoreBtn.textContent = `${t('loadMore')} (${allGroups.length - displayedGroupCount} ${t('groupsRemaining')})`;
                 loadMoreBtn.onclick = displayResults;
                 resultsDiv.appendChild(loadMoreBtn);
             }
 
-            if (displayedCount > RESULTS_PER_PAGE) {
+            if (displayedGroupCount > RESULTS_PER_PAGE) {
                 const showLessBtn = document.createElement('button');
                 showLessBtn.id = 'showLessBtn';
                 showLessBtn.className = 'show-less-btn';
@@ -1304,7 +1348,7 @@
         function collapseResults() {
             const contentArea = document.getElementById('resultsContent');
             if (contentArea) contentArea.innerHTML = '';
-            displayedCount = 0;
+            displayedGroupCount = 0;
             displayResults();
             resultsDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }

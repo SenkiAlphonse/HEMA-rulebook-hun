@@ -116,6 +116,12 @@ against rule text also ignore accents.
 }
 ```
 
+Search responses also retain the flat `results` array and include additive hierarchy fields:
+
+- `match_count` counts ranked rule matches; `group_count` counts result groups.
+- Each flat result has a consistent `group_root` and an `is_match` flag. Context rows have `is_match: false`.
+- `groups` contains each `group_root`, its unmatched ancestor `context`, and its ranked `matches`. Matched ancestors appear once in `matches`, not again as context.
+
 **Response (400 Bad Request):**
 ```json
 {

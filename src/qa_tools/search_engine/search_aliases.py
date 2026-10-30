@@ -33,6 +33,15 @@ class SearchResult:
 
 
 @dataclass
+class SearchResultGroup:
+    """Ranked matches with their shared hierarchy context."""
+
+    group_root: str
+    context: list[SearchResult]
+    matches: list[SearchResult]
+
+
+@dataclass
 class ExpandedQuery:
     """Result of expanding a raw user query through the alias dictionary.
 
@@ -246,8 +255,51 @@ class AliasAwareSearch:
         variant_filter: str | None = None,
         weapon_filter: str | None = None,
     ) -> list[SearchResult]:
+        """Search and return a flat, deduplicated compatibility view."""
+        groups = self.search_grouped(
+            query,
+            max_results=max_results,
+            variant_filter=variant_filter,
+            weapon_filter=weapon_filter,
+        )
+        flattened = []
+        seen_rule_ids = set()
+
+        for group in groups:
+            context_score = max((match.score for match in group.matches), default=0.0)
+            for result in group.context:
+                if result.rule_id in seen_rule_ids:
+                    continue
+                seen_rule_ids.add(result.rule_id)
+                flattened.append(
+                    SearchResult(
+                        rule_id=result.rule_id,
+                        text=result.text,
+                        section=result.section,
+                        subsection=result.subsection,
+                        document=result.document,
+                        weapon_type=result.weapon_type,
+                        variant=result.variant,
+                        score=context_score,
+                    )
+                )
+            for result in group.matches:
+                if result.rule_id in seen_rule_ids:
+                    continue
+                seen_rule_ids.add(result.rule_id)
+                flattened.append(result)
+
+        return flattened
+
+    def search_grouped(
+        self,
+        query: str,
+        max_results: int | None = None,
+        variant_filter: str | None = None,
+        weapon_filter: str | None = None,
+    ) -> list[SearchResultGroup]:
         """
-        Search with alias awareness and query expansion
+        Search and group ranked hits with their relevant rule ancestry.
 
         Args:
             query: Search query
@@ -342,132 +394,67 @@ class AliasAwareSearch:
         # Use default max results if not provided
         if max_results is None:
             max_results = search_config.DEFAULT_MAX_RESULTS
-        # Group results and return
-        return self._group_and_return_results(results, max_results)
+        return self._group_search_results(results, max_results)
 
-    def _group_and_return_results(
+    def _group_search_results(
         self, results: list[SearchResult], max_results: int
-    ) -> list[SearchResult]:
-        """Group level 4-5 results with their parents and children"""
-        grouped_results = []
-        seen_root_ids = set()
-        grouping_multiplier = getattr(search_config, "GROUPING_MULTIPLIER", 3)
+    ) -> list[SearchResultGroup]:
+        """Group selected matches by their nearest level-3 ancestor."""
+        selected_matches = results[:max_results]
+        groups_by_root: dict[str, SearchResultGroup] = {}
 
-        for result in results[:max_results]:
+        for result in selected_matches:
             depth = self.get_rule_depth(result.rule_id)
-            # For level 4-5 rules, include parents (up to level 3) and children
+            group_root = result.rule_id
             if depth >= 4:
-                lineage = self.get_rule_lineage(result.rule_id)
-                # Determine the root of this group (the level 2 parent if it exists)
-                root_id = (
-                    lineage[1] if len(lineage) > 1 else lineage[0] if lineage else result.rule_id
+                group_root = next(
+                    (
+                        ancestor_id
+                        for ancestor_id in reversed(self.get_rule_lineage(result.rule_id))
+                        if self.get_rule_depth(ancestor_id) == 3
+                    ),
+                    result.rule_id,
                 )
-                # Skip if we've already processed this family
-                if root_id in seen_root_ids:
+
+            group = groups_by_root.setdefault(
+                group_root,
+                SearchResultGroup(group_root=group_root, context=[], matches=[]),
+            )
+            group.matches.append(result)
+
+        selected_ids = {result.rule_id for result in selected_matches}
+        for group in groups_by_root.values():
+            context_ids = []
+            seen_context_ids = set()
+            for match in group.matches:
+                if self.get_rule_depth(match.rule_id) < 4:
                     continue
-                seen_root_ids.add(root_id)
+                for ancestor_id in self.get_rule_lineage(match.rule_id):
+                    if (
+                        self.get_rule_depth(ancestor_id) in {3, 4}
+                        and ancestor_id not in selected_ids
+                        and ancestor_id not in seen_context_ids
+                    ):
+                        context_ids.append(ancestor_id)
+                        seen_context_ids.add(ancestor_id)
 
-                # Collect ALL matched results with the same root (all siblings that matched)
-                siblings = [
-                    r
-                    for r in results
-                    if self.get_rule_lineage(r.rule_id)[1] == root_id
-                    if len(self.get_rule_lineage(r.rule_id)) > 1
-                ]
-
-                # Collect the family: parents + all matched siblings + children
-                family = []
-
-                # Add parents (up to level 3)
-                for parent_id in lineage:
-                    parent_depth = self.get_rule_depth(parent_id)
-                    if parent_depth <= 3:
-                        parent_rule = self.get_rule_by_id(parent_id)
-                        if parent_rule:
-                            family.append(
-                                SearchResult(
-                                    rule_id=parent_rule["rule_id"],
-                                    text=parent_rule["text"],
-                                    section=parent_rule.get("section", ""),
-                                    subsection=parent_rule.get("subsection", ""),
-                                    document=parent_rule.get("document", ""),
-                                    weapon_type=parent_rule.get("weapon_type", ""),
-                                    variant=parent_rule.get("variant", ""),
-                                    score=result.score,  # Inherit score from matched rule
-                                )
-                            )
-
-                # Add all matched siblings (up to 5 deep)
-                for sibling in siblings:
-                    if sibling not in family:
-                        family.append(sibling)
-
-                # Sort family by depth and add to results
-                family.sort(key=lambda x: self.get_rule_depth(x.rule_id))
-                grouped_results.extend(family)
-            else:
-                # Level 1-3 rules: just add them directly
-                grouped_results.append(result)
-        grouped_results = self._deduplicate_results_by_rule_id(grouped_results)
-        return grouped_results[: max_results * grouping_multiplier]
-
-    def _build_rule_family(self, result: SearchResult, lineage: list[str]) -> list[SearchResult]:
-        """Build a family of rules: parents + matched rule + children.
-
-        For hierarchical display, gathers parent rules (up to level 3),
-        the matched rule itself, and child rules (if at level 4).
-
-        Args:
-            result: The matched SearchResult
-            lineage: List of parent rule IDs from get_rule_lineage
-
-        Returns:
-            List of SearchResult objects forming the rule family
-        """
-        family = []
-
-        # Add parents (up to level 3)
-        for parent_id in lineage:
-            parent_depth = self.get_rule_depth(parent_id)
-            if parent_depth <= 3:
-                parent_rule = self.get_rule_by_id(parent_id)
-                if parent_rule:
-                    family.append(
+            for context_id in context_ids:
+                rule = self.get_rule_by_id(context_id)
+                if rule:
+                    group.context.append(
                         SearchResult(
-                            rule_id=parent_rule["rule_id"],
-                            text=parent_rule["text"],
-                            section=parent_rule.get("section", ""),
-                            subsection=parent_rule.get("subsection", ""),
-                            document=parent_rule.get("document", ""),
-                            weapon_type=parent_rule.get("weapon_type", ""),
-                            variant=parent_rule.get("variant", ""),
-                            score=result.score,  # Inherit score from matched rule
+                            rule_id=rule["rule_id"],
+                            text=rule.get("text", ""),
+                            section=rule.get("section", ""),
+                            subsection=rule.get("subsection", ""),
+                            document=rule.get("document", ""),
+                            weapon_type=rule.get("weapon_type", ""),
+                            variant=rule.get("variant", ""),
+                            score=0.0,
                         )
                     )
 
-        # Add the matched rule itself
-        family.append(result)
-
-        # Add children (level 5 if we're at level 4, nothing if we're at level 5)
-        if self.get_rule_depth(result.rule_id) == 4:
-            children = self.get_children_rules(result.rule_id)
-            for child_id in children:
-                child_rule = self.get_rule_by_id(child_id)
-                if child_rule:
-                    family.append(
-                        SearchResult(
-                            rule_id=child_rule["rule_id"],
-                            text=child_rule["text"],
-                            section=child_rule.get("section", ""),
-                            subsection=child_rule.get("subsection", ""),
-                            document=child_rule.get("document", ""),
-                            weapon_type=child_rule.get("weapon_type", ""),
-                            variant=child_rule.get("variant", ""),
-                            score=result.score,  # Inherit score
-                        )
-                    )
-
-        return family
+        return list(groups_by_root.values())
 
     def _extract_terms(self, query: str) -> list[str]:
         """Extract meaningful search terms from query.

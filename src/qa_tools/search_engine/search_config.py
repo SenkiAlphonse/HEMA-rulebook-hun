@@ -25,7 +25,3 @@ SCORE_WEAPON_ALIAS: Final[float] = 20.0  # Weapon alias match (legacy)
 # Rules longer than threshold get exponentially lower scores
 LENGTH_PENALTY_THRESHOLD: Final[int] = 2000  # Character threshold
 LENGTH_PENALTY_EXP: Final[float] = 1.5  # Exponential penalty factor
-
-# Grouping multiplier for hierarchical results
-# Level 4-5 rules are grouped with parents/children, expanding result count
-GROUPING_MULTIPLIER: Final[int] = 3
