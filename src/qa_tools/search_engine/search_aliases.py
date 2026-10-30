@@ -5,13 +5,18 @@ Enhanced HEMA Rulebook Search Engine with Alias Support
 import json
 import logging
 import re
-import unicodedata
 from dataclasses import dataclass
 from difflib import get_close_matches
 from pathlib import Path
 from typing import Any
 
 from qa_tools.search_engine import search_config
+from qa_tools.search_engine.search_scoring import (
+    has_alias_match,
+    has_exact_rule_id_match,
+    normalize_text,
+    score_rule,
+)
 from qa_tools.search_engine.search_utils import get_children_rules, get_rule_depth, get_rule_lineage
 
 # Configure logging
@@ -243,10 +248,7 @@ class AliasAwareSearch:
         Returns:
             Normalized text without diacritics, in lowercase
         """
-        if not text:
-            return ""
-        normalized = unicodedata.normalize("NFKD", text)
-        return "".join(ch for ch in normalized if not unicodedata.combining(ch)).lower()
+        return normalize_text(text)
 
     def search(
         self,
@@ -289,6 +291,7 @@ class AliasAwareSearch:
                 seen_rule_ids.add(result.rule_id)
                 flattened.append(result)
 
+        flattened.sort(key=lambda result: result.score, reverse=True)
         return flattened
 
     def search_grouped(
@@ -318,8 +321,7 @@ class AliasAwareSearch:
 
         has_aliases = expanded.variant_filter or expanded.weapon_filter or expanded.concept_terms
         query_lower = expanded.base_query if has_aliases else query.lower()
-        query_norm = self._normalize_text(query_lower)
-        query_terms = self._extract_terms(query_norm)
+        query_terms = self._extract_terms(self._normalize_text(query_lower))
         required_terms = (
             self._extract_terms(self._normalize_text(expanded.base_query))
             if expanded.base_query
@@ -350,8 +352,10 @@ class AliasAwareSearch:
             ):
                 continue
 
-            # Require all base query terms to appear somewhere
-            if required_terms:
+            rule_id_match = has_exact_rule_id_match(query, rule.get("rule_id", ""))
+
+            # Rule IDs are searchable directly, even if their tokens aren't in the text.
+            if required_terms and not rule_id_match:
                 combined_text = " ".join(
                     [
                         rule.get("text_plain", rule.get("text", "")),
@@ -363,15 +367,24 @@ class AliasAwareSearch:
                 if any(term not in combined_norm for term in required_terms):
                     continue
 
-            # Calculate score including aliases
-            score = self._calculate_score_with_aliases(
+            if expanded.concept_terms and not rule_id_match:
+                concept_fields = (
+                    rule.get("text_plain", rule.get("text", "")),
+                    rule.get("section", ""),
+                    rule.get("subsection", ""),
+                )
+                if not has_alias_match(concept_fields, expanded.concept_terms):
+                    continue
+
+            score = score_rule(
                 rule,
-                query_lower,
-                query_norm,
-                query_terms,
-                expanded.concept_terms,
-                expanded.variant_filter,
-                expanded.weapon_filter,
+                query=query,
+                phrase_query=query_lower,
+                terms=query_terms,
+                aliases=self.aliases,
+                concept_terms=expanded.concept_terms,
+                variant_query=expanded.variant_filter,
+                weapon_query=expanded.weapon_filter,
             )
 
             if score > 0:
@@ -488,93 +501,6 @@ class AliasAwareSearch:
         }
         terms = re.findall(r"\w+", query)
         return [t for t in terms if t not in stop_words and len(t) > 2]
-
-    def _matches_alias(self, text: str, alias: str) -> bool:
-        """Match a whole alias, treating punctuation and whitespace as separators."""
-        alias_tokens = re.findall(r"\w+", self._normalize_text(alias))
-        if not alias_tokens:
-            return False
-        pattern = r"(?<!\w)" + r"\W+".join(re.escape(token) for token in alias_tokens) + r"(?!\w)"
-        return re.search(pattern, text) is not None
-
-    def _calculate_score_with_aliases(
-        self,
-        rule: dict[str, Any],
-        query: str,
-        query_norm: str,
-        terms: list[str],
-        concept_terms: list[str] | None = None,
-        variant_query: str | None = None,
-        weapon_query: str | None = None,
-    ) -> float:
-        """Calculate score including alias matches"""
-        score = 0.0
-
-        # Use text_plain for scoring (markdown-stripped version) to enable substring matches
-        # but keep original text for display
-        text_plain = rule.get("text_plain", rule.get("text", ""))
-        text_lower = text_plain.lower()
-        section_lower = rule.get("section", "").lower()
-        subsection_lower = rule.get("subsection", "").lower()
-        rule_id_lower = rule["rule_id"].lower()
-
-        text_norm = self._normalize_text(text_lower)
-        section_norm = self._normalize_text(section_lower)
-        subsection_norm = self._normalize_text(subsection_lower)
-
-        searchable_fields = (text_norm, section_norm, subsection_norm)
-        for category, key, metadata_field, match_score in (
-            ("concepts", None, None, search_config.SCORE_CONCEPT_TERM),
-            ("variants", variant_query, "variant", search_config.SCORE_VARIANT_ALIAS),
-            ("weapons", weapon_query, "weapon_type", search_config.SCORE_WEAPON_ALIAS),
-        ):
-            aliases = (
-                concept_terms
-                if category == "concepts"
-                else self.aliases.get(category, {}).get(key, [])
-            )
-            if not aliases:
-                continue
-            metadata_matches = metadata_field is not None and rule.get(metadata_field) == key
-            matching_aliases = sum(
-                any(self._matches_alias(field, alias) for field in searchable_fields)
-                for alias in dict.fromkeys(aliases)
-            )
-            if not metadata_matches and not matching_aliases:
-                return 0.0
-            score += match_score * (matching_aliases + int(metadata_matches))
-
-        # Direct rule ID match (highest priority)
-        if rule_id_lower in query:
-            score += search_config.SCORE_RULE_ID_MATCH
-
-        # Exact phrase in text
-        if query_norm and query_norm in text_norm:
-            score += search_config.SCORE_EXACT_PHRASE_TEXT
-
-        # Exact phrase in section
-        if query_norm and (query_norm in section_norm or query_norm in subsection_norm):
-            score += search_config.SCORE_EXACT_PHRASE_SECTION
-
-        # Term frequency in text
-        for term in terms:
-            count_in_text = text_norm.count(term)
-            score += count_in_text * search_config.SCORE_TERM_FREQUENCY
-
-            if term in section_norm or term in subsection_norm:
-                score += search_config.SCORE_TERM_SECTION
-
-        # Apply length penalty for very long rules (e.g., large tables)
-        # Rules > threshold chars get progressively lower scores to push them down rankings
-        text_length = len(rule["text"])
-        if text_length > search_config.LENGTH_PENALTY_THRESHOLD:
-            # Exponential penalty: threshold chars = 1.5x, etc.
-            length_penalty = (
-                text_length / float(search_config.LENGTH_PENALTY_THRESHOLD)
-            ) ** search_config.LENGTH_PENALTY_EXP
-            score = score / length_penalty
-
-        return score
 
     def get_rule_depth(self, rule_id: str) -> int:
         """Get depth of rule from its ID.

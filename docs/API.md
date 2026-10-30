@@ -122,6 +122,8 @@ Search responses also retain the flat `results` array and include additive hiera
 - Each flat result has a consistent `group_root` and an `is_match` flag. Context rows have `is_match: false`.
 - `groups` contains each `group_root`, its unmatched ancestor `context`, and its ranked `matches`. Matched ancestors appear once in `matches`, not again as context.
 
+The numeric `score` is a relative ranking value for a search, not a probability or confidence measure.
+
 **Response (400 Bad Request):**
 ```json
 {

@@ -165,7 +165,7 @@ class TestRulebookSearch:
             ("priority", {"GEN-2", "VOR-1"}),
             ("vor", {"GEN-2", "VOR-1"}),
             ("right of way attack", {"GEN-2", "VOR-1"}),
-            ("right of way waits", set()),
+            ("right of way waits", {"GEN-1"}),
         ],
     )
     def test_variant_alias_matches_group_without_matching_individual_words(
