@@ -69,7 +69,7 @@ A penge nélküli fegyverekkel (pl. pajzs, köpeny) nem lehet pontot elérni; ez
 **MIX-1.3.4**  
 A fegyvereket tilos eldobni. Ez alól az egyetlen kivétel a köpeny, amely eldobható az ellenfél zavarása céljából.  A fegyverek eldobás vagy elejtése büntetőlapot von maga után.
 
-### Pontozás és Afterblow (Utóvágás)  
+### Pontozás és Afterblow (Utántalálat)  
 <span id="MIX-1.4"></span>  
 
 **MIX-1.4.1**  
