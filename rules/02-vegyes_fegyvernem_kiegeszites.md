@@ -54,6 +54,21 @@ Ha egy fegyver a mérkőzés során megsérül, a vívó kicserélheti azt egy u
 **MIX-1.2.6**  
 Ha a vívó nem tudja kicserélni a fő fegyverét, folytathatja a küzdelmet a másodlagos fegyverével, feltéve, hogy az alkalmas pontszerzésre. Ha nem maradt pontszerzésre alkalmas fegyvere, és nem tud cserefegyvert szerezni az eredeti fegyverstílushoz, a vívó elveszíti minden pontját, nem folytathatja a küzdelmet, és az ellenfelet hirdetik ki győztesnek.  
 
+**MIX-1.2.7**  
+**Fegyvercsere azonos fegyverstíluson belül:** Az elsődleges fegyverstílus a verseny során nem változtatható meg (lásd MIX-1.2.1), a másodlagos fegyver pedig csak mérkőzések között cserélhető (lásd MIX-1.2.3). Két fegyver akkor tekinthető azonos fegyverstílusúnak, ha pengetípusuk, hosszuk és kezelésmódjuk lényegében megegyezik; a markolat vagy a kézvédő (szerelék) kialakításának eltérése önmagában nem jelent eltérő fegyverstílust.  
+
+Azonos fegyverstílusnak minősül (a csere megengedett), például:  
+- Söprőmarkolatú (Swepthilt) rapír = Csészemarkolatú (Cuphilt) rapír.  
+- egyenes egykezes oldalkard (sidesword) kengyellel és oldalgyűrűkkel ekvivalens egyenes egykezes oldalkard (swidesword) egyszerű ujjgyűrűkkel – a különbség csak a kézvédő szerelékében van.  
+
+Eltérő fegyverstílusnak minősül (a csere nem megengedett), például:  
+- Katanával nem ekvivalens fegyver szablya.  
+- Hosszúkarddal nem ekvivalens fegyverek Okatana / nodachi.  
+- Kengyeles (knucklebow) huszárszablya nem ekvivalens kosaras (bowlhilt) szablyával.  
+- Sidesword nem ekvivalens rapírral.  
+
+Határesetekben a vezetőbíró a szabályrendszer logikája alapján döntheti el, hogy engedélyezi-e a cserét.
+
 ### A találatadás módja és érvényes találati felület  
 <span id="MIX-1.3"></span>  
 
@@ -74,6 +89,9 @@ A penge nélküli fegyverekkel (pl. pajzs, köpeny) nem lehet pontot elérni; ez
 
 **MIX-1.3.6**  
 A fegyvereket tilos eldobni. Ez alól az egyetlen kivétel a köpeny, amely eldobható az ellenfél zavarása céljából.  A fegyverek eldobás vagy elejtése büntetőlapot von maga után.
+
+**MIX-1.3.7**  
+**Nagyon rövid pengéjű egykezes fegyverek (50 cm vagy annál rövidebb penge):** Ezekkel a fegyverekkel kizárólag szúrni szabad, ütni és vágni tilos. Mivel a kosár és a keresztvas túl közel van a penge vágóéléhez, az éllel történő támadás balesetveszélyes lenne. Érvényes találatot kizárólag a penge hegyével lehet elérni; a penge élével vagy lapjával elért érintés nem ér pontot.  
 
 ### Pontozás és Afterblow (Utántalálat)  
 <span id="MIX-1.4"></span>  
@@ -182,6 +200,18 @@ A pajzsokat lehet középen fogni vagy a karra szíjazni. Formájuk lehet kerek,
 A pajzzsal nem lehet pontot szerezni, és a pajzzsal történő ütés tilos.  
 
 **MIX-2.3.2**  
+**Pajzzsal végzett tolás:** A pajzzsal a kard vagy az ellenfél keze eltolható, az ezekkel történő ütés azonban tilos. A pajzzsal az ellenfél testének tolása nem megengedett.  
+
+**MIX-2.3.3**  
+Az ellenfél kezének karddal történő eltolása a megfogással azonos elbírálás alá esik (lásd MIX-2.4.6): a vezetőbíró megállítja a csörtét, és kizárólag a kéz eltolása után szinte azonnal induló találat tekinthető érvényesnek.  
+
+**MIX-2.3.4**  
+**Két hárítófegyver (pl. két pajzs, pajzs és köpeny, vagy két köpeny):** Két hárítófegyver egyidejű használata engedélyezett. Mivel hárítófegyverrel (pajzs, köpeny) pontot szerezni nem lehet, két hárítófegyver esetén pont kizárólag az ellenfél pástról való kiszorításával (kiüldözésével) érhető el. Az ellenfél erővel történő kitolása vagy kilökése a pástról tilos.  
+
+**MIX-2.3.5**  
+Amennyiben a két hárítófegyver egyike alkarra erősíthető (pl. alkarra szíjazott pajzs), a vívó mellé egy egykezes fegyvert is foghat. A kezelhetőség miatt ebben az esetben kizárólag rövid vagy nagyon rövid pengéjű egykezes fegyver (70 cm vagy annál rövidebb penge) használata engedélyezett.  
+
+**MIX-2.3.6**  
 **Köpeny:**  
 - **Anyaga:** Nehéz, tartós szövet, amely képes eltéríteni a vágásokat (bevarrt súlyok vagy kemény/éles tárgyak nem rögzíthetők rá).  
 - **Maximális hossz:** 150 cm  
@@ -215,3 +245,4 @@ A birkózás nem megengedett, de egy pillanatra megfogható a másik vívó karj
 
 **MIX-2.4.7**  
 A bíró testkontaktus esetében azonnal megállítja a csörtét. A bíró észlelése és az „Állj” parancs kiadása előtti, legkésőbb a kar vagy fegyver kontrolljának pillanatában induló találati akció tekinthető érvényesnek.
+
