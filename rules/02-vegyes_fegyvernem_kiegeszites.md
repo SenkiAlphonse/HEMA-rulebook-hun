@@ -61,12 +61,18 @@ Ha a vívó nem tudja kicserélni a fő fegyverét, folytathatja a küzdelmet a 
 Az egykezes fegyverekkel a penge hegyével, élével, gerincével és lapjával is lehet érvényes találatot elérni.  
 
 **MIX-1.3.2**  
-A kétkezes fegyverekkel a penge hegyével, élével, gerincével, lapjával, valamint a markolatgombbal is lehet érvényes találatot elérni.  
+A kétkezes fegyverekkel a penge hegyével, élével, gerincével, lapjával, valamint kizárólag a markolatgombbal (pommel) lehet érvényes találatot elérni. A markolatgomb alatt kizárólag a markolat végén elhelyezkedő, erre a célra szolgáló markolatgombot kell érteni; a fegyver egyéb szerelékei (markolat, keresztvas, kosár, kengyel/hárítóív, hárítógyűrű, csészevédő) nem minősülnek érvényes találófelületnek.  
 
 **MIX-1.3.3**  
+A fegyver szerelékét (keresztvas, kosár, kengyel/hárítóív, hárítógyűrű, csészevédő) elért érintés nem számít érvényes találatnak, és nem ér pontot. Az ilyen érintés a csörtét nem állítja meg és az akció folytatódik.
+
+**MIX-1.3.4**
+A fegyver markolatát érő érintés érvényes kézfej találatnak számít.
+
+**MIX-1.3.5**  
 A penge nélküli fegyverekkel (pl. pajzs, köpeny) nem lehet pontot elérni; ezek kizárólag védekezésre, figyelemelterelésre és az ellenfél fegyverének kontrollálására használhatók.  
 
-**MIX-1.3.4**  
+**MIX-1.3.6**  
 A fegyvereket tilos eldobni. Ez alól az egyetlen kivétel a köpeny, amely eldobható az ellenfél zavarása céljából.  A fegyverek eldobás vagy elejtése büntetőlapot von maga után.
 
 ### Pontozás és Afterblow (Utántalálat)  
@@ -124,7 +130,7 @@ Ezen kesztyűk használata a versenyen kizárólag speciális esetekben a fősze
 *Példák:* PBT Rapír kesztyűk, motoros kesztyűk.  
 
 **MIX-2.1.5**  
-A csuklót, a kézhátat, az ujjperceket, az ujjakat és az ujjbegyeket minden esetben kemény védelemnek kell fednie (akár a kesztyű, akár a fegyver kosara által). Egyetlen hárítóív (knucklebow) a markolaton önmagában nem számít elégséges védelemnek a minden szögből érkező vágásokkal szemben, kivéve, ha a fegyver csészevédővel (cuphilt) és rövid markolattal rendelkezik. A szablya kosár vagy a legalább két hárítóívből álló védelem elegendő vágás elleni védelmet nyújt a szablya szintű kesztyű használatához.  
+A csuklót, a kézhátat, az ujjperceket, az ujjakat és az ujjbegyeket minden esetben kemény védelemnek kell fednie (akár a kesztyű, akár a fegyver kosara által). Egyetlen markolatkengyel/hárítóív (knucklebow) a markolaton önmagában nem számít elégséges védelemnek a minden szögből érkező vágásokkal szemben, kivéve, ha a fegyver csészevédővel (cuphilt) és rövid markolattal rendelkezik. A szablya kosár vagy a legalább két hárítóívből álló védelem elegendő vágás elleni védelmet nyújt a szablya szintű kesztyű használatához.  
 
 **MIX-2.1.6** 
 Azon fegyvereket, amik nem felelnek meg a szablya szintű kesztyű használatának hosszúkard szintű kesztyűvel kötelező használni.
@@ -136,21 +142,27 @@ A fegyverek regisztrációja során azokat a fegyvereket, amelyek hosszúkard sz
 <span id="MIX-2.2"></span>  
 
 **MIX-2.2.1**  
-**Penge:** Egyenes és ívelt pengék egyaránt engedélyezettek. A pengéknek vastag, tompított éllel kell rendelkezniük. A penge hegyének visszahajlítottnak (rolled) vagy spatulásnak kell lennie.  
+**Penge:** Egyenes és ívelt pengék egyaránt engedélyezettek. A fegyvereknek szabadvívásra alkalmasnak, biztonságosnak kell lenniük. A pengéknek vastag, tompított éllel kell rendelkezniük. A penge hegyének visszahajlítottnak (rolled) vagy spatulásnak kell lennie.
 
 **MIX-2.2.2**  
-**Állapot:** A pengén nem lehetnek éles, kicsorbult részek, rozsda, és nem lehetnek repedések sem a pengén, sem a markolaton. Módosított fegyverek (pl. lefűrészelt alkatrészek, felragasztott vagy rászalagozott súlyok) használata tilos! A cserélhető alkatrészekkel rendelkező fegyverek nem minősülnek illegálisan módosított fegyvernek.  
+Módosított fegyverek (pl. lefűrészelt alkatrészek, felragasztott vagy rászalagozott súlyok) használata tilos! A cserélhető alkatrészekkel rendelkező fegyverek nem minősülnek illegálisan módosított fegyvernek.  
+
+**MIX-2.2.2**  
+**Állapot:** A pengén nem lehetnek éles, kicsorbult részek, sorja, rozsda, és nem lehetnek repedések sem a pengén, sem a feygver többi részén. 
 
 **MIX-2.2.3**  
+**Kontaktfelületek biztonsága:** A fegyver minden olyan részének, amely az ellenféllel érintkezhet – függetlenül attól, hogy az a pontrendszer szerint érvényes találófelületnek számít-e (pl. keresztvas, kosár, kengyel/hárítóív, hárítógyűrű, csészevédő, markolatgomb) –, tompának és sorjamentesnek kell lennie.  
+
+**MIX-2.2.4**  
 **Méretek és súly:**  
 - **Maximális teljes hossz:** 140 cm  
 - **Maximális pengehossz:** 101 cm (tisztán a penge hossza, komplex markolatú kardoknál a ricasso nélkül)  
 - **Maximális keresztvas hossz:** 32 cm  
-- **Oldalkarika / Komplex kosár / Csésze / Szablyakosár maximális átmérője:** 16 cm  
+- **Hárítógyűrű a ko / Komplex kosár / Csésze / Szablyakosár maximális átmérője:** 16 cm  
 - **Súlypont (PoB):** 5-15 cm között  
 - **Tömeg:** 700-1450 gramm  
 
-**MIX-2.2.4**  
+**MIX-2.2.5**  
 **Penge rugalmassága (flexibilitása):** (A keresztvastól számítva)  
 - **Kétkezes kard:** Max 15 kg  
 - **Egykezes kard (70 cm-nél rövidebb penge):** Max 19 kg (pl. Messerek, hárítótőrök flexibilitása 5-13 kg között mozoghat)  
@@ -173,3 +185,31 @@ A pajzzsal nem lehet pontot szerezni, és a pajzzsal történő ütés tilos.
 - **Maximális hossz:** 150 cm  
 A köpennyel nem lehet pontot szerezni; kizárólag védekezésre, figyelemelterelésre és az ellenfél fegyverének kontrollálására használható. 
 A köpeny eldobható az ellenfél zavarása és akadályozása céljából.  
+
+### Üres kézre vonatkozó szabályok  
+<span id="MIX-2.4"></span>  
+
+**MIX-2.4.1**  
+Üres kéz használata esetén hosszúkard szintű kesztyű viselése kötelező. Abban az esetben is, ha a másik fegyvert tartó kézre mobilisabb kesztyű használata engedélyezett a fegyver szereléke miatt.
+
+**MIX-2.4.2**  
+Mozgó (vágó vagy szúró) kardot megfogni, elütni vagy hárítani tilos. Kiemelt célpontot (Priority target) üres kézzel eltakarni nem szabad.  
+
+**MIX-2.4.3**  
+Amennyiben a vívó kitakar célpontot, ellene 2 pontot kell ítélni.
+
+**MIX-2.4.4**  
+Amennyiben a vívó csak belenyújt a kezébe (azaz üres kezét a pengébe nyújtja), 1 pontot kell ítélni ellene.  
+
+**MIX-2.4.5**  
+Álló, kötött (nem mozgó) fegyverre rá lehet fogni az alábbi helyeken:  
+- a markolaton,  
+- a kosáron, keresztvason, hárítógyűrűn vagy egyéb szereléken,  
+- a penge tövében, a szerelék közelében,  
+- hárítófegyverek (pajzs, köpeny) esetén a fegyver bármely felületén.  
+
+**MIX-2.4.6**  
+A birkózás nem megengedett, de egy pillanatra megfogható a másik vívó karja a találat könnyítése és/vagy védelem céljából. Amennyiben ez után nem születik szinte azonnal találat, a vezetőbírónak meg kell állítania a csörtét. A másik kezét csavarni, rántani vagy rángatni tilos. Kizárólag egyetlen kontrollált tolás, húzás vagy a kar lefogás általi akadályozása engedélyezett.  
+
+**MIX-2.4.7**  
+A bíró testkontaktus esetében azonnal megállítja a csörtét. A bíró észlelése és az „Állj” parancs kiadása előtti, legkésőbb a kar vagy fegyver kontrolljának pillanatában induló találati akció tekinthető érvényesnek.
