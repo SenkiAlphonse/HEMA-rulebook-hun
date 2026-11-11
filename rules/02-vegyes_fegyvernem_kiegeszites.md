@@ -8,13 +8,13 @@
 <span id="MIX-1.1"></span>  
 
 **MIX-1.1.1**  
-**Egykezes fegyverek:** Minden olyan fegyver, amely egykezes markolattal rendelkezik, egykezes fegyvernek minősül, a penge hosszától függetlenül. A markolat hossza rövidebb, mint 25 cm.  
+**Egykezes fegyverek:** Minden olyan fegyver, amely egykezes markolattal rendelkezik, egykezes fegyvernek minősül, a penge hosszától függetlenül. A markolat hossza 25 cm vagy annál rövidebb.  
 
 **MIX-1.1.2**  
 Az egykezes fegyvereket a vívó tetszése szerint foghatja a markolatuknál vagy a markolatgombjuknál fogva.  
 
 **MIX-1.1.3**  
-**Kétkezes fegyverek:** Olyan fegyverek, amelyek markolata alkalmas arra, hogy vívókesztyűben két kézzel fogják meg, és a pengehossz is a kétkezes használathoz igazodik. A markolat hossza 25 cm vagy annál hosszabb, a penge hossza pedig meghaladja a 90 cm-t.  
+**Kétkezes fegyverek:** Olyan fegyverek, amelyek markolata alkalmas arra, hogy vívókesztyűben két kézzel fogják meg, és a penge hosszától függetlenül. A markolat hossza hosszabb, mint 25 cm.  
 
 **MIX-1.1.4**  
 A kétkezes fegyvereket alapvetően két kézzel kell fogni. Ha egy kézzel használják, akkor a markolaton közvetlenül a keresztvas vagy a kosár alatt kell fogni. Kétkezes fegyvernél tilos kizárólag a markolatgombnál fogva találatot elérni. Az ilyen jellegű akció kísérlete sárga lapos büntetést von maga után.  
@@ -30,7 +30,7 @@ Egy vívó egyidejűleg a következő fegyverkombinációkat használhatja:
 - Egy darab kétkezes fegyver.  
 - Egy darab kétkezes fegyver és egy darab egykezes fegyver (különleges eset, pl. hosszúkard vagy másfélkezes kard pajzzsal együtt használva; vagy hosszúkard egy tőrrel, amennyiben a vívó mindkettőt biztonságosan tudja tartani). A fegyverek megfogása a mérkőzés közben változtatható (pl. hosszúkard egy kézbe vétele), mivel ez nem minősül fegyvercserének.  
 
-**MIX-1.1.6** 
+**MIX-1.1.7**  
 Fegyver elejtése sárga büntetőlapot von maga után.
 
 ### Fegyverkombinációs szabályok (A verseny menete)  
@@ -58,14 +58,14 @@ Ha a vívó nem tudja kicserélni a fő fegyverét, folytathatja a küzdelmet a 
 **Fegyvercsere azonos fegyverstíluson belül:** Az elsődleges fegyverstílus a verseny során nem változtatható meg (lásd MIX-1.2.1), a másodlagos fegyver pedig csak mérkőzések között cserélhető (lásd MIX-1.2.3). Két fegyver akkor tekinthető azonos fegyverstílusúnak, ha pengetípusuk, hosszuk és kezelésmódjuk lényegében megegyezik; a markolat vagy a kézvédő (szerelék) kialakításának eltérése önmagában nem jelent eltérő fegyverstílust.  
 
 Azonos fegyverstílusnak minősül (a csere megengedett), például:  
-- Söprőmarkolatú (Swepthilt) rapír = Csészemarkolatú (Cuphilt) rapír.  
-- egyenes egykezes oldalkard (sidesword) kengyellel és oldalgyűrűkkel ekvivalens egyenes egykezes oldalkard (swidesword) egyszerű ujjgyűrűkkel – a különbség csak a kézvédő szerelékében van.  
+- Söprőmarkolatú (swepthilt) rapír ↔ csészemarkolatú (cuphilt) rapír.  
+- Egyenes egykezes oldalkard (sidesword) kengyellel és oldalgyűrűkkel ↔ egyenes egykezes oldalkard egyszerű ujjgyűrűkkel – a különbség csak a kézvédő szerelékében van.  
 
 Eltérő fegyverstílusnak minősül (a csere nem megengedett), például:  
-- Katanával nem ekvivalens fegyver szablya.  
-- Hosszúkarddal nem ekvivalens fegyverek Okatana / nodachi.  
-- Kengyeles (knucklebow) huszárszablya nem ekvivalens kosaras (bowlhilt) szablyával.  
-- Sidesword nem ekvivalens rapírral.  
+- Katana ↔ szablya.  
+- Hosszúkard ↔ ókatana / nodachi.  
+- Kengyeles (knucklebow) huszárszablya ↔ kosaras (bowlhilt) szablya.  
+- Oldalkard (sidesword) ↔ rapír.  
 
 Határesetekben a vezetőbíró a szabályrendszer logikája alapján döntheti el, hogy engedélyezi-e a cserét.
 
@@ -82,7 +82,7 @@ A kétkezes fegyverekkel a penge hegyével, élével, gerincével, lapjával, va
 A fegyver szerelékét (keresztvas, kosár, kengyel/hárítóív, hárítógyűrű, csészevédő) elért érintés nem számít érvényes találatnak, és nem ér pontot. Az ilyen érintés a csörtét nem állítja meg és az akció folytatódik.
 
 **MIX-1.3.4**
-A fegyver markolatát érő érintés érvényes kézfej találatnak számít.
+A fegyver markolatát érő találat érvényes találatnak számít, ami kézfej találattal ekvivalens értékű.
 
 **MIX-1.3.5**  
 A penge nélküli fegyverekkel (pl. pajzs, köpeny) nem lehet pontot elérni; ezek kizárólag védekezésre, figyelemelterelésre és az ellenfél fegyverének kontrollálására használhatók.  
@@ -165,29 +165,32 @@ A fegyverek regisztrációja során azokat a fegyvereket, amelyek hosszúkard sz
 **MIX-2.2.2**  
 Módosított fegyverek (pl. lefűrészelt alkatrészek, felragasztott vagy rászalagozott súlyok) használata tilos! A cserélhető alkatrészekkel rendelkező fegyverek nem minősülnek illegálisan módosított fegyvernek.  
 
-**MIX-2.2.2**  
-**Állapot:** A pengén nem lehetnek éles, kicsorbult részek, sorja, rozsda, és nem lehetnek repedések sem a pengén, sem a feygver többi részén. 
-
 **MIX-2.2.3**  
-**Kontaktfelületek biztonsága:** A fegyver minden olyan részének, amely az ellenféllel érintkezhet – függetlenül attól, hogy az a pontrendszer szerint érvényes találófelületnek számít-e (pl. keresztvas, kosár, kengyel/hárítóív, hárítógyűrű, csészevédő, markolatgomb) –, tompának és sorjamentesnek kell lennie.  
+**Állapot:** A pengén nem lehetnek éles, kicsorbult részek, sorja, rozsda, és nem lehetnek repedések sem a pengén, sem a fegyver többi részén. 
 
 **MIX-2.2.4**  
+**Kontaktfelületek biztonsága:** A fegyver minden olyan részének, amely az ellenféllel érintkezhet – függetlenül attól, hogy az a pontrendszer szerint érvényes találófelületnek számít-e (pl. keresztvas, kosár, kengyel/hárítóív, hárítógyűrű, csészevédő, markolatgomb) –, tompának és sorjamentesnek kell lennie.  
+
+**MIX-2.2.5**  
 **Méretek és súly:**  
 - **Maximális teljes hossz:** 140 cm  
 - **Maximális pengehossz:** 101 cm (tisztán a penge hossza, komplex markolatú kardoknál a ricasso nélkül)  
 - **Maximális keresztvas hossz:** 32 cm  
-- **Hárítógyűrű a ko / Komplex kosár / Csésze / Szablyakosár maximális átmérője:** 16 cm  
+- **Hárítógyűrű / komplex kosár / csészevédő / szablyakosár maximális átmérője:** 16 cm  
 - **Súlypont (PoB):** 5-15 cm között  
 - **Tömeg:** 700-1450 gramm  
 
-**MIX-2.2.5**  
+**MIX-2.2.6**  
 **Penge rugalmassága (flexibilitása):** (A keresztvastól való nyomással számítva, a penge jelentős meghajlásáig)  
-A megengedett maximális hajlítóerő a penge hosszához igazodik: minél rövidebb a penge, a biztonságos szúráshoz annál rugalmasabbnak kell lennie, mivel rövidebb pengénél kevesebb hossz áll rendelkezésre a szúrás energiájának elnyeléséhez. A küszöbértékek kizárólag a penge hosszától függenek, nem az egyes fegyvertípusok nevétől; a zárójeles példák csak tájékoztató jellegűek.  
+A megengedett maximális hajlítóerő a penge hosszához és a tartományba eső fegyverek tipikus karakterisztikájához igazodik. A küszöbértékek kizárólag a penge hosszától függenek, nem az egyes fegyvertípusok nevétől; a zárójeles példák csak tájékoztató jellegűek.  
 - **Kétkezes kard:** Max 15 kg  
 - **Egykezes kard, nagyon rövid penge (50 cm vagy annál rövidebb):** Max 13 kg (pl. hárítótőrök; a biztonságos szúráshoz hajlékony pengére van szükség)  
 - **Egykezes kard, rövid penge (50–70 cm):** Max 19 kg (pl. Messerek; döntően vágófegyverek, ezért merevebb penge is megengedett)  
 - **Egykezes kard, közepes penge (70–90 cm közötti penge):** Max 15 kg  
-- **Egykezes kard, hosszú penge (90 cm-nél hosszabb penge):** Max 10 kg  
+- **Egykezes kard, hosszú penge (90 cm-nél hosszabb penge):** Max 10 kg
+
+A pontban hossz határra eső pengék esetében a rövidebb kategóriába tartozó fegyvernek kell minősíteni.
+(Például egy 70 cm hosszú penge a rövid kategóriába tartozik, és a 19 kg-os hajlítóerő-korlátozás vonatkozik rá.)
 
 ### Hárító fegyverek specifikációi  
 <span id="MIX-2.3"></span>  
@@ -203,10 +206,10 @@ A pajzzsal nem lehet pontot szerezni, és a pajzzsal történő ütés tilos.
 **Pajzzsal végzett tolás:** A pajzzsal a kard vagy az ellenfél keze eltolható, az ezekkel történő ütés azonban tilos. A pajzzsal az ellenfél testének tolása nem megengedett.  
 
 **MIX-2.3.3**  
-Az ellenfél kezének karddal történő eltolása a megfogással azonos elbírálás alá esik (lásd MIX-2.4.6): a vezetőbíró megállítja a csörtét, és kizárólag a kéz eltolása után szinte azonnal induló találat tekinthető érvényesnek.  
+Az ellenfél kezének karddal történő eltolása a megfogással azonos elbírálás alá esik (lásd MIX-2.4.6 és MIX-2.4.7): a vezetőbíró megállítja a csörtét, és kizárólag a kéz eltolása után szinte azonnal induló találat tekinthető érvényesnek.  
 
 **MIX-2.3.4**  
-**Két hárítófegyver (pl. két pajzs, pajzs és köpeny, vagy két köpeny):** Két hárítófegyver egyidejű használata engedélyezett. Mivel hárítófegyverrel (pajzs, köpeny) pontot szerezni nem lehet, két hárítófegyver esetén pont kizárólag az ellenfél pástról való kiszorításával (kiüldözésével) érhető el. Az ellenfél erővel történő kitolása vagy kilökése a pástról tilos.  
+**Két hárítófegyver (pl. két pajzs, pajzs és köpeny, vagy két köpeny):** Két hárítófegyver egyidejű használata engedélyezett. Mivel hárítófegyverrel (pajzs, köpeny) pontot szerezni nem lehet, két hárítófegyver esetén pont kizárólag akkor érhető el, ha az ellenfelet a vívó erőszakmentesen a pást határának teljes átlépésére kényszeríti (mindkét lábbal a páston kívülre). Ez 1 pontot ér. Az ellenfél erővel történő kitolása, kilökése vagy fellökése a pástról tilos.  
 
 **MIX-2.3.5**  
 Amennyiben a két hárítófegyver egyike alkarra erősíthető (pl. alkarra szíjazott pajzs), a vívó mellé egy egykezes fegyvert is foghat. A kezelhetőség miatt ebben az esetben kizárólag rövid vagy nagyon rövid pengéjű egykezes fegyver (70 cm vagy annál rövidebb penge) használata engedélyezett.  
@@ -228,7 +231,7 @@ A köpeny eldobható az ellenfél zavarása és akadályozása céljából.
 Mozgó (vágó vagy szúró) kardot megfogni, elütni vagy hárítani tilos. Kiemelt célpontot (Priority target) üres kézzel eltakarni nem szabad.  
 
 **MIX-2.4.3**  
-Amennyiben a vívó kitakar célpontot, ellene 2 pontot kell ítélni.
+Amennyiben a vívó üres kézzel kitakar egy kiemelt találati felületet (Priority target), ellene 2 pontot kell ítélni, függetlenül attól, hogy a kéz mely testrészt takarta ki. Egyszerű találati felület kitakarása esetén 1 pontot kell ítélni ellene.  
 
 **MIX-2.4.4**  
 Amennyiben a vívó csak belenyújt a kezébe (azaz üres kezét a pengébe nyújtja), 1 pontot kell ítélni ellene.  
