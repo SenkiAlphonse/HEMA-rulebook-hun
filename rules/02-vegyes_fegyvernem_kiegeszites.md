@@ -163,11 +163,13 @@ Módosított fegyverek (pl. lefűrészelt alkatrészek, felragasztott vagy rász
 - **Tömeg:** 700-1450 gramm  
 
 **MIX-2.2.5**  
-**Penge rugalmassága (flexibilitása):** (A keresztvastól számítva)  
+**Penge rugalmassága (flexibilitása):** (A keresztvastól való nyomással számítva, a penge jelentős meghajlásáig)  
+A megengedett maximális hajlítóerő a penge hosszához igazodik: minél rövidebb a penge, a biztonságos szúráshoz annál rugalmasabbnak kell lennie, mivel rövidebb pengénél kevesebb hossz áll rendelkezésre a szúrás energiájának elnyeléséhez. A küszöbértékek kizárólag a penge hosszától függenek, nem az egyes fegyvertípusok nevétől; a zárójeles példák csak tájékoztató jellegűek.  
 - **Kétkezes kard:** Max 15 kg  
-- **Egykezes kard (70 cm-nél rövidebb penge):** Max 19 kg (pl. Messerek, hárítótőrök flexibilitása 5-13 kg között mozoghat)  
-- **Egykezes kard (70-80 cm közötti penge):** Max 15 kg  
-- **Egykezes kard (80 cm-nél hosszabb penge):** Max 10 kg  
+- **Egykezes kard, nagyon rövid penge (50 cm vagy annál rövidebb):** Max 13 kg (pl. hárítótőrök; a biztonságos szúráshoz hajlékony pengére van szükség)  
+- **Egykezes kard, rövid penge (50–70 cm):** Max 19 kg (pl. Messerek; döntően vágófegyverek, ezért merevebb penge is megengedett)  
+- **Egykezes kard, közepes penge (70–90 cm közötti penge):** Max 15 kg  
+- **Egykezes kard, hosszú penge (90 cm-nél hosszabb penge):** Max 10 kg  
 
 ### Hárító fegyverek specifikációi  
 <span id="MIX-2.3"></span>  
