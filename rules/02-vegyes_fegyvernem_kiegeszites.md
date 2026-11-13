@@ -184,7 +184,7 @@ Módosított fegyverek (pl. lefűrészelt alkatrészek, felragasztott vagy rász
 **Penge rugalmassága (flexibilitása):** (A keresztvastól való nyomással számítva, a penge jelentős meghajlásáig)  
 A megengedett maximális hajlítóerő a penge hosszához és a tartományba eső fegyverek tipikus karakterisztikájához igazodik. A küszöbértékek kizárólag a penge hosszától függenek, nem az egyes fegyvertípusok nevétől; a zárójeles példák csak tájékoztató jellegűek.  
 - **Kétkezes kard:** Max 15 kg  
-- **Egykezes kard, nagyon rövid penge (50 cm-ig):** Max 13 kg (pl. hárítótőrök)  
+- **Egykezes kard, nagyon rövid penge (50 cm-ig):** Max 11 kg (pl. hárítótőrök)  
 - **Egykezes kard, rövid penge (50 cm felett – 70 cm-ig):** Max 19 kg (pl. messerek)  
 - **Egykezes kard, közepes penge (70 cm felett – 90 cm-ig):** Max 15 kg  
 - **Egykezes kard, hosszú penge (90 cm felett):** Max 10 kg
@@ -197,7 +197,9 @@ A pontban hossz határra eső pengék esetében a rövidebb kategóriába tartoz
 
 **MIX-2.3.1**  
 **Pajzsok:**  
-A pajzsokat lehet középen fogni vagy a karra szíjazni. Formájuk lehet kerek, ovális vagy háromszögletű. Hegyes végek vagy kiálló részek nem engedélyezettek rajta.  
+A pajzsokat lehet középen fogni vagy a karra szíjazni. Formájuk lehet kerek, ovális, hosszúkás vagy háromszögletű. Hegyes végek vagy kiálló részek nem engedélyezettek rajta. 
+A pajzs struktúrájának anyaga lehet: acél, fa, kemény műanyag. A pajzsot opcionálisan fedheti borítás, aminek az anyaga lehet: bőr, textil, szivacs.
+A pajzsnak markolata van és/vagy szíjakkal alkarra erősíthető.
 - **Maximális átmérő (legnagyobb kiterjedés):** 60 cm  
 - **Maximális tömeg:** 3 kg  
 A pajzzsal nem lehet pontot szerezni, és a pajzzsal történő ütés tilos.  
