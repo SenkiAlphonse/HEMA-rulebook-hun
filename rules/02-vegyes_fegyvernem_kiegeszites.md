@@ -120,6 +120,7 @@ Ha az egyik vívó mindkét fegyverével egyszerre talál, miközben az ellenfé
 
 ## Felszerelés  
 <span id="MIX-2"></span>  
+A felszerelések (védőfelszerelések és fegyverek) szabályai következnek az alábbiakban. Végsősoron minden felszerelés egyéni elbíráláson esik át, és amennyiben a verseny keretei között nem itéltetik biztonságosnak az adott felszerelés használata, az akkor is kizárható a versenyről, ha egyébként az a szabály megfogalmazásának megfelel.
 
 ### Kéz- és testvédelem  
 <span id="MIX-2.1"></span>  
@@ -160,8 +161,10 @@ A fegyverek regisztrációja során azokat a fegyvereket, amelyek hosszúkard sz
 <span id="MIX-2.2"></span>  
 
 **MIX-2.2.1**  
-**Penge:** Egyenes és ívelt pengék egyaránt engedélyezettek. A fegyvereknek szabadvívásra alkalmasnak, biztonságosnak kell lenniük. A pengéknek vastag, tompított éllel kell rendelkezniük. A penge hegyének visszahajlítottnak (rolled) vagy spatulásnak kell lennie.
-
+**Penge:** 
+- **Penge kialakítása:** Egyenes és ívelt pengék egyaránt engedélyezettek. A fegyvereknek szabadvívásra alkalmasnak, biztonságosnak kell lenniük. A pengéknek vastag, tompított éllel kell rendelkezniük. A penge hegyének visszahajlítottnak (rolled) vagy spatulásnak kell lennie.
+- **Penge anyaga:** Rugalmas szénacél és rugóacélből készült hőkezelt pengék engedélyezettek.
+ 
 **MIX-2.2.2**  
 Módosított fegyverek (pl. lefűrészelt alkatrészek, felragasztott vagy rászalagozott súlyok) használata tilos! A cserélhető alkatrészekkel rendelkező fegyverek nem minősülnek illegálisan módosított fegyvernek. Javított vagy kicserélt markolat bőrözéssel, zsinórozással rendelkező fegyverek sem minősülnek illegálisan módosított fegyvernek.
 
